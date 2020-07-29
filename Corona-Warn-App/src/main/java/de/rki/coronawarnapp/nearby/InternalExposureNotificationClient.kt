@@ -11,7 +11,7 @@ import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.storage.tracing.TracingIntervalRepository
 import de.rki.coronawarnapp.util.TimeAndDateExtensions.millisecondsToSeconds
 import java.io.File
-import java.util.Date
+import java.util.*
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
@@ -24,7 +24,8 @@ object InternalExposureNotificationClient {
 
     // reference to the client from the Google framework with the given application context
     private val exposureNotificationClient by lazy {
-        Nearby.getExposureNotificationClient(CoronaWarnApplication.getAppContext())
+        MockExposureNotificationClient()
+//        Nearby.getExposureNotificationClient(CoronaWarnApplication.getAppContext())
     }
 
     /****************************************************

@@ -12,6 +12,7 @@ import de.rki.coronawarnapp.exception.NoTokenException
 import de.rki.coronawarnapp.exception.WrongReceiverException
 import de.rki.coronawarnapp.exception.reporting.report
 import de.rki.coronawarnapp.nearby.ExposureStateUpdateWorker
+import de.rki.coronawarnapp.storage.LocalData
 
 /**
  * Receiver to listen to the Exposure Notification Exposure State Updated event. This event will be triggered from the
@@ -43,11 +44,14 @@ class ExposureStateUpdateReceiver : BroadcastReceiver() {
                 )
             }
 
-            val token =
-                intent.getStringExtra(ExposureNotificationClient.EXTRA_TOKEN)
-                    ?: throw NoTokenException(
-                        IllegalArgumentException("no token was found in the intent")
-                    )
+            //TODO: does not work with mock impl ?
+//            val token =
+//                intent.getStringExtra(ExposureNotificationClient.EXTRA_TOKEN)
+//                    ?: throw NoTokenException(
+//                        IllegalArgumentException("no token was found in the intent")
+//                    )
+
+            val token = LocalData.googleApiToken()
 
             val workManager = WorkManager.getInstance(context)
             workManager.enqueue(
