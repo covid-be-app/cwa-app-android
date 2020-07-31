@@ -58,7 +58,7 @@ class MobileTestId(val id: String, val checksum: String, registrationToken: Stri
         }
 
         @ExperimentalUnsignedTypes
-        fun calculateR1(info: String, k: SecretKey): String? {
+        private fun calculateR1(info: String, k: SecretKey): String? {
             val hmacSHA256: Mac = Mac.getInstance("hmacSHA256")
             hmacSHA256.init(k)
             val hash = hmacSHA256.doFinal(info.toByteArray(Charsets.UTF_8))
