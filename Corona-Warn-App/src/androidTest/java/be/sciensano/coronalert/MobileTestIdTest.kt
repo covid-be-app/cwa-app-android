@@ -2,12 +2,14 @@ package be.sciensano.coronalert
 
 import android.util.Base64
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import io.mockk.every
 import io.mockk.spyk
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.util.*
 import javax.crypto.spec.SecretKeySpec
 
 @RunWith(AndroidJUnit4::class)
@@ -22,7 +24,6 @@ class MobileTestIdTest {
 
     @Test
     fun testR1Calculation() {
-
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("bJxx/UPRKwPwdadwJTs76w==")
         every {
             mobileTestIdFactory["makeInfo"](
@@ -30,6 +31,7 @@ class MobileTestIdTest {
                 any<String>()
             )
         } returns "RNJ7XO0sP88xextu2020-07-21TEST REQUEST"
+
         Assert.assertEquals(
             mobileTestIdFactory.generate().id, "402570780892356"
         )
@@ -44,6 +46,7 @@ class MobileTestIdTest {
                 any<String>()
             )
         } returns "2nii5Uwaga2GAsiJ2020-07-21TEST REQUEST"
+
         Assert.assertEquals(
             mobileTestIdFactory.generate().id, "310169445554293"
         )
@@ -58,11 +61,33 @@ class MobileTestIdTest {
                 any<String>()
             )
         } returns "tlA1nDLx0PE0QlVN2020-07-21TEST REQUEST"
+
         Assert.assertEquals(
             mobileTestIdFactory.generate().id, "989250150432575"
         )
         Assert.assertEquals(
             mobileTestIdFactory.generate().checksum, "84"
+        )
+    }
+
+    @Test
+    fun testGenerateId() {
+        val mobileTestId = MobileTestId.generate()
+
+        Assert.assertEquals(
+            mobileTestId.id.length, 15
+        )
+        Assert.assertEquals(
+            mobileTestId.checksum.length, 2
+        )
+        Assert.assertEquals(
+            mobileTestId.registrationToken.split("|")[0], mobileTestId.id
+        )
+        Assert.assertEquals(
+            mobileTestId.registrationToken.split("|")[1], Date().toServerFormat()
+        )
+        Assert.assertEquals(
+            (mobileTestId.id.toLong() * 100 + mobileTestId.checksum.toInt()) % 97, 0
         )
     }
 
