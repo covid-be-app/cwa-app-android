@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+
+    <!-- ####################################
+               Preference Keys
+    ######################################
+    TODO: Check what is needed -->
+
+    <!-- NOTR -->
+    <string name="preference_name"><xliff:g id="preference">"shared_preferences_cwa"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_onboarding_completed"><xliff:g id="preference">"preference_onboarding_completed"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_onboarding_completed_timestamp"><xliff:g id="preference">"preference_onboarding_completed_timestamp"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_reset_app"><xliff:g id="preference">"preference_reset_app"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_only_wifi"><xliff:g id="preference">"preference_only_wifi"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_tracing"><xliff:g id="preference">"preference_tracing"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_timestamp_diagnosis_keys_fetch"><xliff:g id="preference">"preference_timestamp_diagnosis_keys_fetch"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_timestamp_manual_diagnosis_keys_retrieval"><xliff:g id="preference">"preference_timestamp_manual_diagnosis_keys_retrieval"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_string_google_api_token"><xliff:g id="preference">"preference_m_string_google_api_token"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_notification_enabled"><xliff:g id="preference">"preference_notification_enabled"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_notification_risk_enabled"><xliff:g id="preference">"preference_notification_risk_enabled"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_notification_test_enabled"><xliff:g id="preference">"preference_notification_test_enabled"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_background_job_allowed"><xliff:g id="preference">"preference_background_job_enabled"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_mobile_data_allowed"><xliff:g id="preference">"preference_mobile_data_enabled"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_registration_token"><xliff:g id="preference">"preference_registration_token"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_device_pairing_successful_time"><xliff:g id="preference">"preference_device_pairing_successful_time"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_initial_tracing_activation_time"><xliff:g id="preference">"preference_initial_tracing_activation_time"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_initial_result_received_time"><xliff:g id="preference">"preference_initial_result_received_time"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_risk_level_score"><xliff:g id="preference">"preference_risk_level_score"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_risk_level_score_successful"><xliff:g id="preference">"preference_risk_level_score_successful"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_timestamp_risk_level_calculation"><xliff:g id="preference">"preference_timestamp_risk_level_calculation"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_test_guid"><xliff:g id="preference">"preference_test_guid"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_is_allowed_to_submit_diagnosis_keys"><xliff:g id="preference">"preference_is_allowed_to_submit_diagnosis_keys"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_auth_code"><xliff:g id="preference">"preference_auth_code"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_database_password"><xliff:g id="preference">"preference_database_password"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_total_non_active_tracing"><xliff:g id="preference">"preference_total_non_active_tracing"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_last_non_active_tracing_timestamp"><xliff:g id="preference">"preference_last_non_active_tracing_timestamp"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_number_successful_submissions"><xliff:g id="preference">"preference_number_successful_submissions"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_teletan"><xliff:g id="preference">"preference_teletan"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_last_three_hours_from_server"><xliff:g id="preference">"preference_last_three_hours_from_server"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_polling_test_result_started"><xliff:g id="preference">"preference_polling_test_result_started"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_test_result_notification"><xliff:g id="preference">"preference_test_result_notification"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_risk_days_explanation_shown"><xliff:g id="preference">"preference_risk_days_explanation_shown"</xliff:g></string>
+
+    <!-- ####################################
+                     Generics
+    ###################################### -->
+
+    <!-- XACT: back description for screen readers -->
+    <string name="accessibility_back">"Terug"</string>
+    <!-- XACT: next description for screen readers -->
+    <string name="accessibility_next">"Volgende"</string>
+    <!-- XACT: menu description for screen readers -->
+    <string name="accessibility_menu">"Menu"</string>
+    <!-- XACT: menu description for screen readers -->
+    <string name="accessibility_close">"Sluiten"</string>
+    <!-- XACT: menu description for screen readers -->
+    <string name="accessibility_logo">"Coronalert-App"</string>
+    <!-- XACT: button description for screen readers to be appended at the end of content without focusable subcontent that are explored by touch -->
+    <string name="accessibility_button">"Button"</string>
+
+    <!-- ####################################
+                     Menu
+    ###################################### -->
+
+    <!-- XMIT: application overview -->
+    <string name="menu_help">"Overzicht"</string>
+    <!-- XMIT: application information -->
+    <string name="menu_information">"App Informatie"</string>
+    <!-- XMIT: application settings -->
+    <string name="menu_settings">"Instellingen"</string>
+
+    <!-- ####################################
+               Notification
+    ###################################### -->
+    <!-- NOTR -->
+    <string name="notification_channel_id"><xliff:g id="notification_channel_id">"de.rki.coronawarnapp.notification.exposureNotificationChannelId"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="notification_id"><xliff:g id="notification_id">"1"</xliff:g></string>
+    <!-- XTXT: Notification channel name for os settings -->
+    <string name="notification_name">"Coronalert-App"</string>
+    <!-- XTXT: Notification channel description for os settings -->
+    <string name="notification_description">"Mededelingen van de Coronalert-App"</string>
+    <!-- XHED: Notification title -->
+    <string name="notification_headline">"Coronalert-App"</string>
+    <!-- XTXT: Notification body -->
+    <string name="notification_body">"Je hebt nieuwe berichten van uw Coronalert-App."</string>
+
+    <!-- ####################################
+              App Auto Update
+    ###################################### -->
+
+    <!-- XHED: App Auto Update dialog title -->
+    <string name="update_dialog_title">"Update beschikbaar"</string>
+    <!-- XTXT: App Auto Update dialog message -->
+    <string name="update_dialog_message">"Let op, je kunt de Coronalert-App pas weer gebruiken als je de laatste update hebt geïnstalleerd."</string>
+    <!-- XBUT: App Auto Update button -->
+    <string name="update_dialog_button">"Update"</string>
+
+    <!-- ####################################
+                  Risk Card
+    ###################################### -->
+
+    <!-- XTXT: risk card - no contact yet -->
+    <string name="risk_card_body_contact">"Geen blootstelling tot nu toe"</string>
+    <!-- XTXT: risk card - number of contacts for one or more -->
+    <plurals name="risk_card_body_contact_value">
+        <item quantity="one">"%1$s blootstelling"</item>
+        <item quantity="other">"%1$s blootstellingen"</item>
+        <item quantity="zero">"%1$s blootstellingen"</item>
+        <item quantity="two">"%1$s blootstellingen"</item>
+        <item quantity="few">"%1$s blootstellingen"</item>
+        <item quantity="many">"%1$s blootstellingen"</item>
+    </plurals>
+    <!-- XTXT: risk card - tracing active for x out of 14 days -->
+    <string name="risk_card_body_saved_days">"Blootstellingsregistratie was actief voor %1$s van de afgelopen 14 dagen."</string>
+    <!-- XTXT: risk card- tracing active for 14 out of 14 days -->
+    <string name="risk_card_body_saved_days_full">"Blootstellingsregistratie permanent actief"</string>
+    <!-- XTXT; risk card - no update done yet -->
+    <string name="risk_card_body_not_yet_fetched">"Ontmoetingen werden nog niet gecontroleerd."</string>
+    <!-- XTXT: risk card - last successful update -->
+    <string name="risk_card_body_time_fetched">"Update: %1$s"</string>
+    <!-- XTXT: risk card - next update -->
+    <string name="risk_card_body_next_update">"Dagelijkse update"</string>
+    <!-- XBUT: risk card - update risk -->
+    <string name="risk_card_button_update">"Update"</string>
+    <!-- XBUT: risk card - update risk with time display -->
+    <string name="risk_card_button_cooldown">"Update in %1$s"</string>
+    <!-- XBUT: risk card - activate tracing -->
+    <string name="risk_card_button_enable_tracing">"Blootstellingsregistratie activeren"</string>
+    <!-- XTXT: risk card - tracing is off, user should activate to get an updated risk level -->
+    <string name="risk_card_body_tracing_off">"Activeer de blootstellingsregistratie om je risicostatus vandaag nog te evalueren."</string>
+    <!-- XHED: risk card - low risk headline -->
+    <string name="risk_card_low_risk_headline">"Laag risico"</string>
+    <!-- XHED: risk card - increased risk headline -->
+    <string name="risk_card_increased_risk_headline">"Hoog risico"</string>
+    <!-- XTXT: risk card - increased risk days since last contact -->
+    <plurals name="risk_card_increased_risk_body_contact_last">
+        <item quantity="one">"%1$s dag sinds de laatste blootstelling"</item>
+        <item quantity="other">"%1$s dagen sinds de laatste blootstelling"</item>
+        <item quantity="zero">"%1$s dagen sinds de laatste blootstelling"</item>
+        <item quantity="two">"%1$s dagen sinds de laatste blootstelling"</item>
+        <item quantity="few">"%1$s dagen sinds de laatste blootstelling"</item>
+        <item quantity="many">"%1$s dagen sinds de laatste blootstelling"</item>
+    </plurals>
+    <!-- XHED: risk card - unknown risk headline -->
+    <string name="risk_card_unknown_risk_headline">"Onbekend risico"</string>
+    <!-- XTXT: risk card - tracing isn't active long enough, so a new risk level can't be calculated -->
+    <string name="risk_card_unknown_risk_body">"Omdat je niet lang genoeg de blootstellingsregistratie hebt geactiveerd, konden we je infectierisico niet berekenen."</string>
+    <!-- XHED: risk card - tracing stopped headline, due to no possible calculation -->
+    <string name="risk_card_no_calculation_possible_headline">"Blootstellingsregistratie stopgezet"</string>
+    <!-- XTXT: risk card - last successfully calculated risk level -->
+    <string name="risk_card_no_calculation_possible_body_saved_risk">"Laatste blootstellingsregistratie:"<xliff:g id="line_break">"\n"</xliff:g>"%1$s"</string>
+    <!-- XHED: risk card -  outdated risk headline, calculation isn't possible -->
+    <string name="risk_card_outdated_risk_headline">"Blootstellingsregistratie is niet mogelijk"</string>
+    <!-- XTXT: risk card - outdated risk, calculation couldn't be updated in the last 24 hours -->
+    <string name="risk_card_outdated_risk_body">"Je blootstellingsregistratie kon niet meer dan 24 uur worden geüpdatet."</string>
+    <!-- XTXT: risk card - outdated risk manual, calculation couldn't be updated in the last 48 hours -->
+    <string name="risk_card_outdated_manual_risk_body">"Je blootstellingsregistratie kon niet meer dan 24 uur worden geüpdatet."</string>
+    <!-- XHED: risk card - loading headline, update is ongoing -->
+    <string name="risk_card_loading_headline">"De check is bezig…"</string>
+    <!-- XTXT: risk card - loading, data is downloaded and will be checked, this can take several minutes -->
+    <string name="risk_card_loading_body">"De huidige gegevens worden gedownload en gecontroleerd. Dit kan enkele minuten duren."</string>
+
+    <!-- ####################################
+                    Main
+    ###################################### -->
+
+    <!-- XHED: main, FAQ -->
+    <string name="main_about_headline">"FAQ"</string>
+    <!-- XTXT: main, explains faq on card -->
+    <string name="main_about_body">"Hier vindt je antwoorden op veelgestelde vragen over de Coronalert-App. Je zal naar een externe website doorgestuurd worden."</string>
+    <!-- XTXT: FAQ link, should be translated  -->
+    <string name="main_about_link">"https://www.bundesregierung.de/corona-warn-app-faq-englisch"</string>
+    <!-- XACT: Opens external webpage -->
+    <string name="hint_external_webpage">"Hier vindt je antwoorden op veelgestelde vragen over de Coronalert-App. Je zal naar een externe website doorgestuurd worden."</string>
+
+    <!-- ####################################
+               Main - Share
+    ###################################### -->
+
+    <!-- XHED: Share app link page title -->
+    <string name="main_share_title">"Deel de Coronalert-App"</string>
+    <!-- XHED: Share app link page subtitle -->
+    <string name="main_share_headline">"Laten we samen tegen het coronavirus vechten"</string>
+    <!-- YTXT: Share app link page body -->
+    <string name="main_share_body">"Hoe meer mensen deze app gebruiken, hoe sneller we de infectieketen kunnen doorbreken. Nodig je familie en vrienden uit om de app te downloaden."</string>
+    <!-- XBUT: Share app link page button -->
+    <string name="main_share_button">"Stuur download link"</string>
+    <!-- YMSG: Message when sharing is executed -->
+    <string name="main_share_message">"Samen vechten tegen het coronavirus"<xliff:g id="line_break">"\n"</xliff:g>"Ik doe mee, jij ook?"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="link_play_store">"https://www.corona-warn-app.de"</xliff:g>"\n"<xliff:g id="line_break">"\n"</xliff:g></string>
+    <!-- XACT: main (share) - illustraction description, explanation image -->
+    <string name="main_share_illustration_description">"Een man deeld de Coronalert-App met vier andere personen."</string>
+
+    <!-- ####################################
+                Main - Overview
+    ###################################### -->
+
+    <!-- XHED: App overview page title -->
+    <string name="main_overview_title">"Overzicht"</string>
+    <!-- XACT: main overview page title -->
+    <string name="main_overview_accessibility_title">"Overzicht"</string>
+    <!-- XHED: App overview subtitle for tracing explanation-->
+    <string name="main_overview_subtitle_tracing">"Blootstellingsregistratie"</string>
+    <!-- YTXT: App overview body text about tracing -->
+    <string name="main_overview_body_tracing">"Blootstellingsregistratie is één van de drie centrale kenmerken van de app. Als je het activeert, worden de ontmoetingen met de apparaten van mensen geregistreerd. Je hoeft niets anders te doen."</string>
+    <!-- XHED: App overview subtitle for risk explanation -->
+    <string name="main_overview_subtitle_risk">"Risico van infectie"</string>
+    <!-- YTXT: App overview body text about risk levels -->
+    <string name="main_overview_body_risk">"Als je in de afgelopen 14 dagen contact hebt gehad met een persoon bij wie COVID-19 is gediagnosticeerd, berekent de app je persoonlijke besmettingsrisico. Dit gebeurt door het meten van de duur en de nabijheid van de blootstelling."</string>
+    <!-- XHED: App overview subtitle for risk level list -->
+    <string name="main_overview_subtitle_risk_levels">"De volgende risicostatus kan worden getoond:"</string>
+    <!-- XTXT: App overview increased risk level -->
+    <string name="main_overview_subtitle_increased_risk">"Hoog risico"</string>
+    <!-- XTXT: App overview low risk level -->
+    <string name="main_overview_subtitle_low_risk">"Laag risico"</string>
+    <!-- XTXT: App overview unknown risk level -->
+    <string name="main_overview_subtitle_unknown_risk">"Onbekende risico"</string>
+    <!-- XHED: App overview subtitle for test procedure explanation -->
+    <string name="main_overview_headline_test">"Andere gebruikers op de hoogte brengen"</string>
+    <!-- YTXT: App overview body text about rest procedure -->
+    <string name="main_overview_body_test">"Een andere centrale functie is het registreren van je test en het ophalen van het resultaat. Als je de diagnose COVID-19 krijgt, kan je anderen op de hoogte stellen en de keten van de infectie doorbreken."</string>
+    <!-- XHED: App overview headline for glossary -->
+    <string name="main_overview_headline_glossary">"Definition of Terms:"</string>
+    <!-- XHED: App overview subtitle for glossary key storage -->
+    <string name="main_overview_subtitle_glossary_tracing">"Blootstellingsregistratie"</string>
+    <!-- YTXT: App overview body for glossary key storage -->
+    <string name="main_overview_body_glossary_tracing">"Lijst van ontvangen en tijdelijke willekeurige ID's die tijdelijk zijn opgeslagen in de opslag van de operating systemstorage. Deze lijst wordt gelezen wanneer de risicoblootstellingen worden gecontroleerd. Alle willekeurige ID's worden na 14 dagen automatisch gewist."</string>
+    <!-- XHED: App overview subtitle for glossary risk calculation  -->
+    <string name="main_overview_subtitle_glossary_calculation">"Risicoblootstelling Check"</string>
+    <!-- YTXT: App overview body for glossary risk calculation -->
+    <string name="main_overview_body_glossary_calculation">"Risicoblootstelling gegevens worden opgehaald en gesynchroniseerd met gerapporteerde infecties van andere gebruikers. De belichtingscontrole wordt ongeveer om de twee uur automatisch uitgevoerd."</string>
+    <!-- XHED: App overview subtitle for glossary contact  -->
+    <string name="main_overview_subtitle_glossary_contact">"Risicoblootstelling"</string>
+    <!-- YTXT: App overview body for glossary contact -->
+    <string name="main_overview_body_glossary_contact">"Contacten van een langere periode en in de nabijheid van mensen die gediagnosticeerd zijn met COVID-19."</string>
+    <!-- XHED: App overview subtitle for glossary notifications -->
+    <string name="main_overview_subtitle_glossary_notification">"Contact Mededeling"</string>
+    <!-- YTXT: App overview body for glossary notification -->
+    <string name="main_overview_body_glossary_notification">"De weergave van de blootstellingen in de Coronalert-App."</string>
+    <!-- XHED: App overview subtitle for glossary keys -->
+    <string name="main_overview_subtitle_glossary_keys">"Willekeurige IDs"</string>
+    <!-- YTXT: App overview body for glossary keys -->
+    <string name="main_overview_body_glossary_keys">"Willekeurige ID's zijn combinaties van cijfers en letters die willekeurig worden gegenereerd. Ze worden uitgewisseld tussen apparaten die dicht bij elkaar staan. Willekeurige ID's zijn niet te herleiden tot een bepaalde persoon en worden na 14 dagen automatisch gewist. Personen die gediagnosticeerd zijn met COVID-19 kunnen ervoor kiezen om hun willekeurige ID's van maximaal de laatste 14 dagen te delen met andere gebruikers van de app."</string>
+    <!-- XACT: main (overview) - illustraction description, explanation image -->
+    <string name="main_overview_illustration_description">"Een smartphone geeft diverse content weer, genummerd van 1 tot 3."</string>
+    <!-- XACT: App main page title -->
+    <string name="main_title">"Hoofdpagina van de Coronalert-App"</string>
+
+    <!-- ####################################
+               Risk Details
+    ###################################### -->
+
+    <!-- XHED: risk details - page title, in toolbar -->
+    <string name="risk_details_title">"Je risicostatus"</string>
+    <!-- XHED: risk details - headline, how a user should act -->
+    <string name="risk_details_headline_behavior">"Richtlijnen"</string>
+    <!-- XHED: risk details - multiline headline, bold, how to act correct -->
+    <string name="risk_details_subtitle_behavior">"Dit is wat je zou moeten doen"</string>
+    <!-- XMSG: risk details - go/stay home, something like a bullet point -->
+    <string name="risk_details_behavior_body_stay_home">"Indien mogelijk, ga naar huis en blijf thuis."</string>
+    <!-- XMSG: risk details - get in touch with the corresponding people, something like a bullet point -->
+    <string name="risk_details_behavior_body_contact_doctor">"Als je vragen hebt over de symptomen, het testen van de beschikbaarheid of de zelfisolatie, neem dan contact op met een van de volgende personen:"</string>
+    <!-- XMSG: risk details - wash your hands, something like a bullet point -->
+    <string name="risk_details_behavior_body_wash_hands">"Was je handen regelmatig."</string>
+    <!-- XMSG: risk details - wear a face mask, something like a bullet point -->
+    <string name="risk_details_behavior_body_wear_mask">"Wear a face mask when you encounter other people."</string>
+    <!-- XMSG: risk details - stay 1,5 away, something like a bullet point -->
+    <string name="risk_details_behavior_body_stay_away">"Draag een mondmasker als je andere mensen tegenkomt."</string>
+    <!-- XMSG: risk details - cough/sneeze, something like a bullet point -->
+    <string name="risk_details_behavior_body_cough_sneeze">"Niezen of hoesten in je elleboog of een papieren zakdoekje."</string>
+    <!-- XMSG: risk details - contact your doctor, bullet point -->
+    <string name="risk_details_behavior_increased_body_1">"Je huisarts"</string>
+    <!-- XMSG: risk details - panel doctor on-call service, bullet point -->
+    <string name="risk_details_behavior_increased_body_2">"Algemeen informatienummer van de FOD Volksgezondheid: 0800 14 689"</string>
+    <!-- XMSG: risk details - public health department, bullet point -->
+    <string name="risk_details_behavior_increased_body_3">"Je volksgezondheidsinstantie"</string>
+    <!-- XHED: risk details - infection risk headline, below behaviors -->
+    <string name="risk_details_headline_infection_risk">"Risico van infectie"</string>
+    <!-- XHED: risk details - infection period logged heading, below behaviors -->
+    <string name="risk_details_headline_period_logged">"Geregistreerde periode"</string>
+    <!-- XHED: risk details - infection period logged subtitle, below behaviors -->
+    <string name="risk_details_subtitle_period_logged">"Deze periode wordt meegenomen in de berekening."</string>
+    <!-- XHED: risk details - infection period logged information body, below behaviors -->
+    <string name="risk_details_information_body_period_logged">"Je besmettingsrisico kan alleen worden berekend voor perioden waarin de blootstellingsregistratie actief was. De registratie moet daarom permanent actief blijven."</string>
+    <!-- XHED: risk details - infection period logged information body, below behaviors -->
+    <string name="risk_details_information_body_period_logged_assessment">"De blootstellingsregistratie heeft betrekking op de afgelopen 14 dagen. Gedurende deze tijd was de registratie-functie op je toestel actief gedurende %1$s dagen. De app verwijdert automatisch oudere registraties, omdat deze niet langer relevant zijn voor de preventie van infecties."</string>
+    <!-- XHED: risk details - how your risk level was calculated, below behaviors -->
+    <string name="risk_details_subtitle_infection_risk_past">"Zo is je risico berekend"</string>
+    <!-- XHED: risk details - how your risk level will be calculated, below behaviors -->
+    <string name="risk_details_subtitle_infection_risk">"Zo is je risico berekend"</string>
+    <!-- XMSG: risk details - risk couldn't be calculated tracing wasn't enabled long enough, below behaviors -->
+    <string name="risk_details_information_body_unknown_risk">"Omdat je niet lang genoeg de blootstellingsregistratie hebt geactiveerd, konden we je infectierisico niet berekenen."</string>
+    <!-- XMSG: risk details - risk calculation wasn't possible for 24h, below behaviors -->
+    <string name="risk_details_information_body_outdated_risk">"Je blootstellingsregistratie kon niet meer dan 24 uur worden geüpdatet."</string>
+    <!-- YTXT: risk details - low risk explanation text -->
+    <string name="risk_details_information_body_low_risk">"Je hebt een laag risico op infectie omdat er geen contact was met mensen die later met COVID-19 werden gediagnosticeerd, of omdat je ontmoetingen slechts voor een korte tijd en op een grotere afstand waren."</string>
+    <!-- YTXT: risk details - increased risk explanation text with variable for day(s) since last contact -->
+    <plurals name="risk_details_information_body_increased_risk">
+        <item quantity="one">"Je hebt een hoger risico op infectie omdat je voor het laatst bent blootgesteld %1$s dag geleden over een langere periode en in de nabijheid van ten minste één persoon die gediagnosticeerd is met COVID-19"</item>
+        <item quantity="other">"Je hebt een hoger risico op infectie omdat je voor het laatst bent blootgesteld %1$s dagen geleden over een langere periode en in de nabijheid van ten minste één persoon die gediagnosticeerd is met COVID-19"</item>
+        <item quantity="zero">"Je hebt een hoger risico op infectie omdat je het laatst werd blootgesteld %1$s dagen geleden over een langere periode en in de nabijheid van ten minste één persoon die gediagnosticeerd is met COVID-19."</item>
+        <item quantity="two">"Je hebt een hoger risico op infectie omdat je het laatst werd blootgesteld %1$s dagen geleden over een langere periode en in de nabijheid van ten minste één persoon die gediagnosticeerd is met COVID-19."</item>
+        <item quantity="few">"Je hebt een hoger risico op infectie omdat je het laatst bent blootgesteld %1$s dagen geleden over een langere periode en in de nabijheid van ten minste één persoon die gediagnosticeerd is met COVID-19."</item>
+        <item quantity="many">"Je hebt een hoger risico op infectie omdat je het laatst bent blootgesteld %1$s dagen geleden over een langere periode en in de nabijheid van ten minste één persoon die gediagnosticeerd is met COVID-19."</item>
+    </plurals>
+    <!-- YTXT: risk details - risk calculation explanation -->
+    <string name="risk_details_information_body_notice">"YJe infectierisico wordt berekend aan de hand van de blootstellingsgegevens (duur en nabijheid) die lokaal op jouw apparaat worden bijgehouden. Je infectierisico kan niet worden gezien door, of worden doorgegeven aan iemand anders."</string>
+    <!-- NOTR -->
+    <string name="risk_details_button_update">@string/risk_card_button_update</string>
+    <!-- NOTR -->
+    <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
+    <!-- XACT: risk details page title -->
+    <string name="risk_details_accessibility_title">"Je risicostatus"</string>
+
+    <!-- XHED: one time risk explanation dialog title  -->
+    <string name="risk_details_explanation_dialog_title">"Informatie over de functionaliteit van de blootstellingsregistratie"</string>
+    <!-- YTXT: one time risk explanation dialog - pointing to the faq page for more information-->
+    <string name="risk_details_explanation_dialog_faq_body">"Voor meer informatie kan je terecht op onze FAQ-pagina."</string>
+
+    <!-- ####################################
+              Onboarding
+    ###################################### -->
+
+    <!-- XBUT: onboarding - forward and deny -->
+    <string name="onboarding_button_disable">"Niet activeren"</string>
+    <!-- XBUT: onboarding - forward and allow -->
+    <string name="onboarding_button_enable">"Activeren"</string>
+    <!-- XBUT: onboarding - back and cancel -->
+    <string name="onboarding_button_cancel">"Annuleren"</string>
+    <!-- XBUT: onboarding - next -->
+    <string name="onboarding_button_next">"Volgende"</string>
+    <!-- XBUT: onboarding - start -->
+    <string name="onboarding_button_start">"Laten we aan de slag gaan."</string>
+    <!-- XTXT: onboarding - back description for screen reader -->
+    <string name="onboarding_button_back_description">"Terug"</string>
+    <!-- XACT: Onboarding (together) page title -->
+    <string name="onboarding_onboarding_accessibility_title">"Onboarding pagina 1 op 5: Samen vechten tegen het coronavirus"</string>
+    <!-- XHED: onboarding(together) - fight corona -->
+    <string name="onboarding_headline">"Laten we samen tegen het coronavirus vechten..."</string>
+    <!-- XHED: onboarding(together) - two/three line headline under an illustration -->
+    <string name="onboarding_subtitle">"Meer bescherming voor jou en voor ons allemaal. Door gebruik te maken van de Coronalert-App kunnen we de infectieketens veel sneller doorbreken."</string>
+    <!-- YTXT: onboarding(together) - inform about the app -->
+    <string name="onboarding_body">"Maak van je apparaat een coronaviruswaarschuwingssysteem. Bekijk je risicostatus en kom erachter of je de afgelopen 14 dagen nauw contact hebt gehad met iemand die de diagnose COVID-19 heeft gesteld."</string>
+    <!-- YTXT: onboarding(together) - explain application -->
+    <string name="onboarding_body_emphasized">"De app registraties komen tussen mensen samen door het uitwisselen van gecodeerde, willekeurige ID's tussen hun apparaten, waarbij geen enkele persoonlijke gegevens worden gebruikt.."</string>
+    <!-- XACT: onboarding(together) - illustraction description, header image -->
+    <string name="onboarding_illustration_description">"Een groep personen gebruikt hun smartphones in de stad."</string>
+    <!-- XACT: Onboarding (privacy) page title -->
+    <string name="onboarding_privacy_accessibility_title">"Onboarding pagina 2 op 5: Gegevensprivacy. Er volgt een lange tekst. Gebruik de knop onderaan het scherm om op elk moment verder te gaan."</string>
+    <!-- XHED: onboarding(privacy) - title -->
+    <string name="onboarding_privacy_headline">"Gegevensprivacy"</string>
+
+    <!-- XACT: onboarding(privacy) - illustraction description, header image -->
+    <string name="onboarding_privacy_illustration_description">"Een vrouw gebruikt de Coronalert-App op haar smartphone. Een pictogram met een hangslot op de achtergrond van een schild symboliseert gecodeerde gegevens."</string>
+    <!-- XACT: Onboarding (tracing) page title -->
+    <string name="onboarding_tracing_accessibility_title">"Onboarding pagina 3 op 5: Hoe maak je een blootstellingsregistratie mogelijk?"</string>
+    <!-- XHED: onboarding(tracing) - how to enable tracing -->
+    <string name="onboarding_tracing_headline">"Hoe maak je een blootstellingsregistratie mogelijk?"</string>
+    <!-- XHED: onboarding(tracing) - two/three line headline under an illustration -->
+    <string name="onboarding_tracing_subtitle">"Om vast te stellen of je een risico op infectie loopt, moet je de blootstellingsregistratiefunctie activeren."</string>
+    <!-- YTXT: onboarding(tracing) - explain tracing -->
+    <string name="onboarding_tracing_body">"Blootstellingsregistratie werkt doordat jouw apparaat via Bluetooth gecodeerde willekeurige ID's van andere gebruikers ontvangt en je eigen willekeurige ID aan hun apparaten doorgeeft. Deze functie kan op elk moment worden uitgeschakeld."</string>
+    <!-- YTXT: onboarding(tracing) - explain tracing -->
+    <string name="onboarding_tracing_body_emphasized">"De gecodeerde willekeurige ID's geven alleen informatie over datum, duur en nabijheid (met behulp van signaalsterkte) door aan andere mensen. Persoonlijke gegevens zoals naam, adres, locatie worden nooit geregistreerd. Individuen kunnen niet worden geïdentificeerd."</string>
+    <!-- XHED: onboarding(tracing) - headline for consent information -->
+    <string name="onboarding_tracing_headline_consent">"Toestemmingsverklaring"</string>
+    <!-- YTXT: onboarding(tracing) - body for consent information -->
+    <string name="onboarding_tracing_body_consent">"Om erachter te komen of je in contact bent geweest met een geïnfecteerde persoon en of er een risico is dat je zelf geïnfecteerd bent, moet je de blootstellingsregistratiefunctie van de App inschakelen. Door op de knop " Activeren" te tikken, ga je akkoord met het inschakelen van de blootstellingsregistratiefunctie van de App en de bijbehorende dataverwerking."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Om de blootstellingsregistratiefunctie van de App te kunnen gebruiken, moet je de COVID-19 Blootstellingsregistratie functionaliteit van Google op je smartphone inschakelen en de Coronalert-App toestemming geven om dit te gebruiken."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Wanneer de exposure logging is ingeschakeld, genereert en verzendt je smartphone continu willekeurige ID's via Bluetooth, die andere Android- of Apple-smartphones in je omgeving kunnen ontvangen als de blootstellingsregistratie ook is ingeschakeld. Je smartphone ontvangt op zijn beurt de willekeurige ID's van de andere smartphones. Je eigen random ID's en die van andere smartphones worden opgenomen in het blootstellinglogboek gedurende 14 dagen."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Om je risico op infectie te identificeren, laadt de App een lijst - meerdere keren per dag of op verzoek - van de willekeurige ID's van alle gebruikers die de App hebben verteld dat ze zijn geïnfecteerd met het coronavirus. Deze lijst wordt vervolgens vergeleken met de willekeurige ID's die zijn opgeslagen in het blootstellingrelogboek. Als de App detecteert dat je mogelijk in contact bent geweest met een geïnfecteerde gebruiker, zal de App je hiervan op de hoogte stellen en je vertellen dat er een risico is dat je ook geïnfecteerd bent. In dit geval krijgt de App ook toegang tot andere gegevens die zijn opgeslagen in het blootstellinglogboek van je smartphone (datum, duur en Bluetooth-signaalsterkte van het contact)."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"De Bluetooth-signaalsterkte wordt gebruikt om de fysieke afstand af te leiden (hoe sterker het signaal, hoe kleiner de afstand). De App analyseert vervolgens deze informatie om de kans op besmetting met het coronavirus in te schatten en om je aanbevelingen te geven voor wat je vervolgens moet doen. Deze analyse wordt alleen lokaal uitgevoerd op je smartphone. Behalve jij weet niemand (zelfs de RKI niet) of je in contact bent geweest met een geïnfecteerde persoon en welk risico voor jou is vastgesteld."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Om je toestemming voor de blootstellingsregistratie in te trekken, kan je de functie uitschakelen met de tuimelschakelaar in de App of de App verwijderen. Als je besluit om de blootstellingsregistratie functie weer te gebruiken, kan je de functie weer aanzetten of de App opnieuw installeren. Als je de blootstellingsregistratiefunctie uitschakelt, zal de App niet langer controleren of je in contact bent geweest met een geïnfecteerde gebruiker. Als je ook het verzenden en ontvangen van willekeurige ID's op je apparaat wilt stoppen, moet je COVID-19 Blootstellingsregistratie in de instellingen van je smartphone uitschakelen. Houd er rekening mee dat je eigen willekeurige ID's en die van andere smartphones die zijn opgeslagen in het contaclogboek niet worden verwijderd in de App. Je kunt alleen de gegevens die zijn opgeslagen in het blootstellinglogboek in de instellingen van je smartphone permanent verwijderen."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"De privacyverklaring van de App (inclusief een uitleg van de gegevensverwerking voor de blootstellingsregistratiefunctie) is in het menu onder "Data Privacy Informatie » te vinden."</string>
+    <!-- XBUT: onboarding(tracing) - button enable tracing -->
+    <string name="onboarding_tracing_button_next">"Activeer Blootstellingsregistratie"</string>
+    <!-- XTXT: onboarding(tracing) - dialog about tracing permission declined -->
+    <string name="onboarding_tracing_dialog_headline">"Toestemming"</string>
+    <!-- YMSI: onboarding(tracing) - dialog about tracing -->
+    <string name="onboarding_tracing_dialog_body">"Dit betekent dat de Coronalert-App geen notificaties over je COVID-19-risicostatus kan verzenden of ontvangen. Je kunt deze functie op elk moment uitschakelen."</string>
+    <!-- XBUT: onboarding(tracing) - positive button (right) -->
+    <string name="onboarding_tracing_dialog_button_positive">"Niet activeren"</string>
+    <!-- XBUT: onboarding(tracing) - negative button (right) -->
+    <string name="onboarding_tracing_dialog_button_negative">"Terug"</string>
+    <!-- XACT: onboarding(tracing) - illustraction description, header image -->
+    <string name="onboarding_tracing_illustration_description">"Drie mensen hebben de blootstellingsregistratie op hun apparaten geactiveerd, waardoor hun ontmoetingen met elkaar worden geregistreerd."</string>
+    <!-- XHED: onboarding(tracing) - location explanation for bluetooth headline -->
+    <string name="onboarding_tracing_location_headline">"Toegang tot de locatie toestaan"</string>
+    <!-- XTXT: onboarding(tracing) - location explanation for bluetooth body text -->
+    <string name="onboarding_tracing_location_body">"YJe locatie is niet toegankelijk. Google en/of Android vereist toegang tot de locatie van je toestel om Bluetooth te kunnen gebruiken."</string>
+    <!-- XBUT: onboarding(tracing) - button enable tracing -->
+    <string name="onboarding_tracing_location_button">"Apparaatinstellingen openen"</string>
+    <!-- XACT: Onboarding (test) page title -->
+    <string name="onboarding_test_accessibility_title">"Onboarding pagina 4 op 5: Als je de diagnose COVID-19 krijgt..."</string>
+    <!-- XHED: onboarding(test) - about positive tests -->
+    <string name="onboarding_test_headline">"Als je de diagnose COVID-19 krijgt..."</string>
+    <!-- XHED: onboarding(test) - two/three line headline under an illustration -->
+    <string name="onboarding_test_subtitle">"…rapporteer dit in de Coronalert-App. Het delen van je testresultaten is vrijwillig en veilig. Doe dit alsjeblieft in het belang van ieders gezondheid..."</string>
+    <!-- YTXT: onboarding(test) - explain test -->
+    <string name="onboarding_test_body">"Je melding wordt veilig versleuteld en verwerkt op een beveiligde server. Mensen wiens gecodeerde willekeurige ID's je apparaat heeft verzameld, zullen nu een waarschuwing ontvangen samen met informatie over wat ze nu moeten doen."</string>
+    <!-- XACT: onboarding(test) - illustraction description, header image -->
+    <string name="onboarding_test_illustration_description">"Een gecodeerde positieve testdiagnose wordt naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen."</string>
+    <!-- XACT: Onboarding (datashare) page title -->
+    <string name="onboarding_notification_accessibility_title">"Onboarding pagina 5 op 5: Waarschuwingen ontvangen en risico's identificeren"</string>
+    <!-- XHED: onboarding(datashare) - about positive tests -->
+    <string name="onboarding_notification_headline">"Waarschuwingen ontvangen en risico's identificeren"</string>
+    <!-- XHED: onboarding(datashare) - two/three line headline under an illustration -->
+    <string name="onboarding_notification_subtitle">"De app kan je automatisch op de hoogte brengen van je risicostatus en je waarschuwen voor nieuwe infecties van mensen aan wie je bent blootgesteld. Laat de app je nu op de hoogte brengen."</string>
+    <!-- YTXT: onboarding(datashare) - explain test -->
+    <string name="onboarding_notification_body">"Je kunt dan zelf isoleren om anderen te beschermen en uit te zoeken waar je je kunt laten testen."</string>
+    <!-- XACT: onboarding(notification) - illustraction description, header image -->
+    <string name="onboarding_notification_illustration_description">"Een vrouw krijgt een notificatie van haar Coronalert-App."</string>
+
+    <!-- ####################################
+                  Settings
+    ###################################### -->
+
+    <!-- XHED: settings - settings overview page title -->
+    <string name="settings_title">"Instellingen"</string>
+    <!-- XTXT: settings - on, like a label next to a setting -->
+    <string name="settings_on">"On"</string>
+    <!-- XTXT: settings - off, like a label next to a setting -->
+    <string name="settings_off">"Off"</string>
+    <!-- XHED: settings(tracing) - page title -->
+    <string name="settings_tracing_title">"Blootstellingsregistratie"</string>
+    <!-- XHED: settings(tracing) - headline bellow illustration -->
+    <string name="settings_tracing_headline">"Zo werkt de blootstellingsregistratie"</string>
+    <!-- XTXT: settings(tracing) - explain text in settings overview under headline -->
+    <string name="settings_tracing_body_description">"Sta toe dat COVID-19 willekeurige ID's worden gegenereerd en gedeeld."</string>
+    <!-- XTXT: settings(tracing) - shows status under header in home, active -->
+    <string name="settings_tracing_body_active">"Blootstellingsregistratie actief"</string>
+    <!-- XTXT: settings(tracing) - shows status under header in home, inactive -->
+    <string name="settings_tracing_body_inactive">"Blootstellingsregistratie stopgezet"</string>
+    <!-- XTXT: settings(tracing) - shows status under header in home, inactive location -->
+    <string name="settings_tracing_body_inactive_location">"Locatie service uitgeschakeld"</string>
+    <!-- YTXT: settings(tracing) - explains tracings -->
+    <string name="settings_tracing_body_text">"Blootstellingsregistratie werkt doordat je apparaat via Bluetooth gecodeerde willekeurige ID's van andere gebruikers ontvangt en je willekeurige ID aan hun apparaten doorgeeft. Deze functie kan op elk moment worden uitgeschakeld. "<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Gecodeerde willekeurige ID's geven alleen informatie over datum, duur en nabijheid (berekend met behulp van signaalsterkte) door aan andere mensen. Persoonlijke gegevens zoals naam, adres en locatie worden nooit geregistreerd. Individuen kunnen niet worden geïdentificeerd."</string>
+    <!-- XTXT: settings(tracing) - status next to switch under title -->
+    <string name="settings_tracing_status_active">"Actief"</string>
+    <!-- XTXT: settings(tracing) - status next to switch under title -->
+    <string name="settings_tracing_status_inactive">"Stopgezet"</string>
+    <!-- XTXT: settings(tracing) - status next to switch under title -->
+    <string name="settings_tracing_status_restricted">"Beperkt"</string>
+    <!-- XTXT: settings(tracing) - shows status under header in home, no internet -->
+    <string name="settings_tracing_body_connection_inactive">"Geen internetverbinding"</string>
+    <!-- XTXT: settings(tracing) - shows status under header in home, no bluetooth -->
+    <string name="settings_tracing_body_bluetooth_inactive">"Bluetooth uitgeschakeld"</string>
+    <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
+    <string name="settings_tracing_status_bluetooth_headline">"Bluetooth inschakelen"</string>
+    <!-- XTXT: settings(tracing) - explains user what to do on card if bluetooth is disabled -->
+    <string name="settings_tracing_status_bluetooth_body">"Bluetooth moet ingeschakeld worden voor de blootstellingsregistratie om de ontmoetingen te kunnen opslaan. Zet Bluetooth aan in de instellingen van je toestel."</string>
+    <!-- XBUT: settings(tracing) - go to operating system settings button on card -->
+    <string name="settings_tracing_status_bluetooth_button">"Naar de apparaatinstellingen"</string>
+    <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
+    <string name="settings_tracing_status_connection_headline">"Open Internet verbinding"</string>
+    <!-- XTXT: settings(tracing) - explains user what to do on card if connection is disabled -->
+    <string name="settings_tracing_status_connection_body">"Blootstellingsregistratie vereist een internetverbinding om de belichting te berekenen. Zet WIFI of mobiele data aan in de instellingen van je toestel."</string>
+    <!-- XBUT: settings(tracing) - go to operating system settings button on card -->
+    <string name="settings_tracing_status_connection_button">"Naar de apparaatinstellingen"</string>
+    <!-- XTXT: settings(tracing) - explains the circle progress indicator to the right with the current value -->
+    <plurals name="settings_tracing_status_body_active">
+        <item quantity="one">"Blootstellingsregistratie is al een dag actief. Een contact check kan alleen betrouwbaar zijn als de blootstellingsregistratie permanent is ingeschakeld."</item>
+        <item quantity="other">"Blootstellingsregistratie is al %1$s dagen actief. Een contact check kan alleen betrouwbaar zijn als de blootstellingsregistratie permanent is ingeschakeld."</item>
+        <item quantity="zero">"Blootstellingsregistratie is al %1$s dagen actief. Een contact check kan alleen betrouwbaar zijn als de blootstellingsregistratie permanent is ingeschakeld."</item>
+        <item quantity="two">"Blootstellingsregistratie is al %1$s dagen actief. Een contact check kan alleen betrouwbaar zijn als de blootstellingsregistratie permanent is ingeschakeld."</item>
+        <item quantity="few">"Blootstellingsregistratie is al %1$s dagen actief. Een contact check kan alleen betrouwbaar zijn als de blootstellingsregistratie permanent is ingeschakeld."</item>
+        <item quantity="many">"Blootstellingsregistratie is al %1$s dagen actief. Een contact check kan alleen betrouwbaar zijn als de blootstellingsregistratie permanent is ingeschakeld."</item>
+    </plurals>
+    <!-- XACT: settings(tracing) - describes illustration -->
+    <string name="settings_tracing_illustration_description_active">Drie mensen hebben de blootstellingsregistratie op hun apparaten ingeschakeld, waardoor hun ontmoetingen met elkaar worden geregistreerd."</string>
+    <!-- XACT: settings(tracing) - describes illustration -->
+    <string name="settings_tracing_illustration_description_inactive">"Iemand heeft de blootstellingsregistratie op zijn smartphone uitgeschakeld, dus een ontmoeting met twee andere personen wordt niet geregistreerd."</string>
+    <!-- XACT: settings(tracing) - describes illustration -->
+    <string name="settings_tracing_bluetooth_illustration_description_inactive">"Iemand heeft Bluetooth op zijn smartphone uitgeschakeld, dus een ontmoeting met twee andere personen wordt niet gelogd."</string>
+    <!-- XACT: settings(tracing) - describes illustration -->
+    <string name="settings_tracing_connection_illustration_description_inactive">"Iemand heeft de internetverbinding op zijn smartphone uitgeschakeld, dus een ontmoeting met twee andere personen wordt niet gelogd."</string>
+
+    <!-- XHED: settings(notification) - notification page title -->
+    <string name="settings_notification_title">"Notificaties"</string>
+    <!-- XHED: settings(notification) - multiline headline below illustration, active -->
+    <string name="settings_notification_headline_active">"Wil je notificaties van je COVID-19-risicostatus activeren?"</string>
+    <!-- XHED: settings(notification) - multiline headline below illustration, inactive -->
+    <string name="settings_notification_headline_inactive">"Notificaties werden gedeactiveerd"</string>
+    <!-- XTXT: settings(notification) - text in row on settings overview -->
+    <string name="settings_notification_body_description">"Automatische notificaties van de COVID-19-risicostatus toestaan"</string>
+    <!-- YTXT: settings(notification) - description text when it notification are enabled -->
+    <string name="settings_notification_body_active">"Geef aan voor welke gebieden je notificaties wilt blijven ontvangen."</string>
+    <!-- XTXT: settings(notification) - explains what the user has to do to activate settings -->
+    <string name="settings_notification_body_inactive">"Om notificaties te activeren, moet je notificaties voor de Coronalert-App toestaan in de instellingen van je toestel."</string>
+    <!-- XHED: settings(notification) - card headline -->
+    <string name="settings_notification_headline_card">"Notificaties activeren"</string>
+    <!-- XHED: settings - notification headline on settings overview -->
+    <string name="settings_notification_subtitle_notification">"Notificaties"</string>
+    <!-- XTXT: settings(notification) - next to a switch -->
+    <string name="settings_notification_subtitle_update_risk">"Je infectierisico is veranderd"</string>
+    <!-- XTXT: settings(notification) - next to a switch -->
+    <string name="settings_notification_subtitle_update_test">"Status van je COVID-19 test"</string>
+    <!-- XBUT: settings(notification) - go to operating settings -->
+    <string name="settings_notification_button_open_settings">"Naar de apparaatinstellingen"</string>
+    <!-- XACT: main (overview) - illustraction description, explanation image, displays notificatin status, active -->
+    <string name="settings_notification_illustration_description_active">"Een vrouw krijgt een notificatie van de Coronalert-App."</string>
+    <!-- XACT: main (overview) - illustraction description, explanation image, displays notificatin status, inactive -->
+    <string name="settings_notification_illustration_description_inactive">"Een vrouw heeft de notificaties van de Coronalert-App uitgeschakeld."</string>
+    <!-- XBUT: settings - go to reset application -->
+    <string name="settings_reset_title">"Reset App"</string>
+    <!-- XTXT: settings(reset) - explains the user what do expect when he navigates to reset -->
+    <string name="settings_reset_body_description">"Verwijder al je gegevens in de app."</string>
+    <!-- XHED: settings(reset) - multiline headline below illustration -->
+    <string name="settings_reset_headline">"Weet je zeker dat je de app wilt resetten?"</string>
+    <!-- XTXT: settings(reset) - explains the consequences -->
+    <string name="settings_reset_body">"YJe wordt niet langer op de hoogte gesteld van je contacten en je zal niet langer in staat zijn andere gebruikers te waarschuwen."</string>
+    <!-- XHED: settings(reset) - on card, explains user to go to the operating system settings -->
+    <string name="settings_reset_headline_keys">"Blootstelling verwijderen"<xliff:g id="line_break">"\n"</xliff:g>"Registratie"</string>
+    <!-- XTXT: settings(reset) - on card -->
+    <string name="settings_reset_body_keys">"Het blootstellinglogboek moet apart worden verwijderd in de instellingen van je toestel."</string>
+    <!-- XBUT: settings(reset) - triggers reset -->
+    <string name="settings_reset_button_positive">"Reset App"</string>
+    <!-- XBUT: settings(reset) - cancel reset and navigates the suer back to the settings -->
+    <string name="settings_reset_button_negative">"Annuleren"</string>
+    <!-- XACT: main (overview) - illustraction description, explanation image -->
+    <string name="settings_reset_illustration_description">"Een hand houdt een smartphone vast met een symbool dat aangeeft dat de app wordt gereset."</string>
+    <!-- XHED: settings(reset) - dialog headline -->
+    <string name="settings_reset_dialog_headline">"Reset App"</string>
+    <!-- XTXT: settings(reset) - dialog content -->
+    <string name="settings_reset_dialog_body">"Je wordt niet langer op de hoogte gesteld van je blootstellingen en je kunt andere gebruikers niet langer waarschuwen. Deze procedure kan niet ongedaan worden gemaakt."</string>
+    <!-- XBUT: settings(reset) - dialog cancel -->
+    <string name="settings_reset_dialog_button_cancel">"Annuleren"</string>
+    <!-- XBUT: settings(reset) - dialog confirm -->
+    <string name="settings_reset_dialog_button_confirm">"Reset"</string>
+    <!-- XHED: settings(background priority) - notification page title -->
+    <string name="settings_background_priority_title">"Geprioriteerde achtergrondactiviteity"</string>
+    <!-- XTXT: settings(background priority) - text in row on settings overview -->
+    <string name="settings_background_priority_body_description">"Automatisch updaten van de risicostatus toestaan"</string>
+    <!-- XHED: settings(background priority) - multiline headline below illustration -->
+    <string name="settings_background_priority_headline">"Run Coronalert-App in de achtergrond"</string>
+    <!-- YTXT: settings(background priority) - description text -->
+    <string name="settings_background_priority_body">"Coronalert-App draait permanent op de achtergrond als je geprioriteerde achtergrondactiviteit activeert. Hierdoor kan de app te allen tijde je risicostatus bepalen."</string>
+    <!-- XACT: settings(background priority) - illustraction description -->
+    <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
+    <!-- XTXT: settings(background priority) - explains user what to do on card if background priority is enabled -->
+    <string name="settings_background_priority_card_body">Om de Prioritized Background Activity uit te schakelen, dient je deze uit te schakelen in de instellingen van je toestel.</string>
+    <!-- XBUT: settings(background priority) - go to operating system settings button on card -->
+    <string name="settings_background_priority_card_button">Naar de apparaatinstellingen</string>
+    <!-- XHED : settings(background priority) - headline on card about the current status and what to do -->
+    <string name="settings_background_priority_card_headline">Prioritaire achtergrondactiviteit uitschakeleny</string>
+
+    <!-- ####################################
+               App Information
+    ###################################### -->
+
+    <!-- XHED: Page title for menu information page -->
+    <string name="information_title">"App Informatie"</string>
+    <!-- XTXT: Version information text -->
+    <string name="information_version">"Version: %1s"</string>
+    <!-- XHED: Page title for about information page, also menu item / button text -->
+    <string name="information_about_title">"Over de App"</string>
+    <!-- XHED: Subtitle for about information page -->
+    <string name="information_about_headline">"Laten we samen tegen het coronavirus vechten..."</string>
+    <!-- YTXT: Body text for about information page -->
+    <string name="information_about_body_emphasized">"De FOD is de Belgische federale overheidsdienst voor volksgezondheid, veiligheid van de voedselketen en leefmilieu. De FOD publiceert namens de Bondsregering de Coronalert-App. De app is bedoeld als digitale aanvulling op de reeds ingevoerde maatregelen op het gebied van de volksgezondheid: sociale afstand, hygiëne en gezichtsmaskers."</string>
+    <!-- YTXT: Body text for about information page -->
+    <string name="information_about_body">"Wie de app gebruikt, helpt bij het opsporen en doorbreken van infectieketens. De app slaat ontmoetingen met andere mensen lokaal op je apparaat op. Je krijgt een melding als je mensen hebt ontmoet die later met COVID-19 zijn gediagnosticeerd. Je identiteit en privacy zijn altijd beschermd."</string>
+    <!-- XACT: describes illustration -->
+    <string name="information_about_illustration_description">"Een groep personen gebruikt hun smartphones in de stad."</string>
+    <!-- XHED: Page title for privacy information page, also menu item / button text -->
+    <string name="information_privacy_title">"Data Privacy"</string>
+    <!-- XACT: describes illustration -->
+    <string name="information_privacy_illustration_description">"Een vrouw gebruikt de Coronalert-App op haar smartphone. Een pictogram met een hangslot op de achtergrond van een schild symboliseert geëncrypteerde gegevens."</string>
+    <!-- XTXT: Path to the full blown privacy html, to translate it exchange "_de" to "_en" and provide the corresponding html file -->
+    <string name="information_privacy_html_path">"privacy_en.html"</string>
+    <!-- XHED: Page title for terms of use information page, also menu item / button text -->
+    <string name="information_terms_title">"Gebruiksvoorwaarden"</string>
+    <!-- XHED: Page headline for terms of use information page -->
+    <string name="information_terms_headline">"Inhoud"</string>
+    <!-- XACT: describes illustration -->
+    <string name="information_terms_illustration_description">"Een hand houdt een smartphone vast met een grote hoeveelheid tekst op het scherm. Naast de tekst staat een vinkje dat aangeeft dat de gebruiksvoorwaarden zijn geaccepteerd."</string>
+    <!-- XTXT: Path to the full blown terms html, to translate it exchange "_de" to "_en" and provide the corresponding html file -->
+    <string name="information_terms_html_path">"terms_en.html"</string>
+    <!-- XHED: Page title for technical contact and hotline information page, also menu item / button text -->
+    <string name="information_contact_title">"Technische hotline"</string>
+    <!-- XHED: Subtitle for technical contact and hotline information page -->
+    <string name="information_contact_headline">"Hoe kunnen we je helpen?"</string>
+    <!-- YTXT: Body text for technical contact and hotline information page -->
+    <string name="information_contact_body">"Voor technische vragen over de Coronalert-App kan je contact opnemen met onze hotline."</string>
+    <!-- XHED: Subtitle for technical contact and hotline information page -->
+    <string name="information_contact_subtitle_phone">"Technische hotline:"</string>
+    <!-- XLNK: Button / hyperlink to phone call for technical contact and hotline information page -->
+    <string name="information_contact_button_phone">"+32 000 000000"</string>
+    <!-- XBUT: CAUTION - ONLY UPDATE THE NUMBER IF NEEDED, ONLY NUMBERS AND NO SPECIAL CHARACTERS EXCEPT "+" and "space" ALLOWED IN THIS FIELD; -->
+    <string name="information_contact_phone_call_number">"+32 000 000000"</string>
+    <!-- XTXT: Body text for technical contact and hotline information page -->
+    <string name="information_contact_body_phone">"Onze dienst staat klaar om u te helpen."</string>
+    <!-- YTXT: Body text for technical contact and hotline information page -->
+    <string name="information_contact_body_open">"Talen: Nederlands, Frans, Duits, Engels, Turks, kantooruren.:"<xliff:g id="line_break">"\n"</xliff:g>"Maandag tot zaterdag: 7.00 - 22.00 uur"<xliff:g id="line_break">"\n(behalve op nationale feestdagen)"</xliff:g><xliff:g id="line_break">"\nThe oproep is gratis."</xliff:g></string>
+    <!-- YTXT: Body text for technical contact and hotline information page -->
+    <string name="information_contact_body_other">"Als je gezondheidsgerelateerde vragen heeft, neem dan contact op met je huisarts of met de hotline van de medische spoeddienst, telefoon: +32 000 000000 ."</string>
+    <!-- XACT: describes illustration -->
+    <string name="information_contact_illustration_description">"Een man draagt een koptelefoon terwijl hij een telefoontje pleegt."</string>
+    <!-- XLNK: Menu item / hyper link / button text for navigation to FAQ website -->
+    <string name="information_help_title">"FAQ"</string>
+    <!-- XACT: accessibility hint -->
+    <string name="information_help_title_accessibility">"Veelgestelde vragen. Je zal doorgestuurd worden naar een externe website."</string>
+    <!-- XHED: Page title for technical information page, also menu item / button text -->
+    <string name="information_technical_title">"Wettelijke vermeldingen"</string>
+    <!-- XACT: describes illustration -->
+    <string name="information_technical_illustration_description">"Een hand houdt een smartphone vast met een grote hoeveelheid tekst op het scherm. Naast de tekst staat een weegschaal die de wettelijke vermeldingen symboliseert."</string>
+    <!-- XTXT: Path to the full blown legal html, to translate it exchange "_de" to "_en" and provide the corresponding html file -->
+    <string name="information_technical_html_path">"technical_en.html"</string>
+    <!-- XHED: Page title for legal information page, also menu item / button text -->
+    <string name="information_legal_title">"Afdruk"</string>
+    <!-- XHED: Headline for legal information page, publisher section -->
+    <string name="information_legal_headline_publisher">"Gepubliceerd door"</string>
+    <!-- YTXT: subtitle for legal information page, publisher section -->
+    <string name="information_legal_subtitle_publisher">"(verantwoordelijk in overeenstemming met § 5, para. 1 TMG, § 55 para. 1 RStV, DS-GVO, BDSG)"</string>
+    <!-- YTXT: body for legal information page, publisher section -->
+    <string name="information_legal_body_publisher">"Robert Koch Institute"<xliff:g id="line_break">"\n"</xliff:g>"Nordufer 20"<xliff:g id="line_break">"\n"</xliff:g>"13353 Berlin"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"vertegenwoordigd door de voorzitter"</string>
+    <!-- XHED: Headline for legal information page, contact section -->
+    <string name="information_legal_headline_contact">"Contact"</string>
+    <!-- YTXT: subtitle for legal information page, contact section -->
+    <string name="information_legal_subtitle_contact">"E-Mail: CoronaWarnApp@rki.de"<xliff:g id="line_break">"\n"</xliff:g>"Telefoon: +32 000 000000"</string>
+    <!-- XHED: Headline for legal information page, tax section -->
+    <string name="information_legal_headline_taxid">"VAT identification number"</string>
+    <!-- YTXT: subtitle for legal information page, tax section -->
+    <string name="information_legal_subtitle_taxid">"BE 000 000 000"</string>
+    <!-- XACT: describes illustration -->
+    <string name="information_legal_illustration_description">"Een hand houdt een smartphone vast met een grote hoeveelheid tekst op het scherm. Naast de tekst staat een deelsymbool dat de afdruk weergeeft."</string>
+
+
+    <!-- ####################################
+             Submission
+    ###################################### -->
+
+    <!-- XHED: Dialog title for generic web request error -->
+    <string name="submission_error_dialog_web_generic_error_title">"Error"</string>
+    <!-- XMSG: Dialog body for generic web request network error with status code -->
+    <string name="submission_error_dialog_web_generic_network_error_body">"Er kon geen verbinding worden gemaakt (%1$d). Probeer het nog eens."</string>
+    <!-- XMSG: Dialog body for generic web request error without status code -->
+    <string name="submission_error_dialog_web_generic_error_body">"Er kon geen verbinding worden gemaakt. Probeer het nog eens."</string>
+    <!-- XBUT: Positive button for generic web request error -->
+    <string name="submission_error_dialog_web_generic_error_button_positive">"Terug"</string>
+
+    <!-- XHED: Dialog title for already paired test error -->
+    <string name="submission_error_dialog_web_test_paired_title">"Error"</string>
+    <!-- XMSG: Dialog body for already paired test error -->
+    <string name="submission_error_dialog_web_test_paired_body">"De QR-code/TAN is ongeldig of is al gebruikt. Probeer het opnieuw of neem contact op met de technische hotline via App Informatie -&gt; Technische Hotline."</string>
+    <!-- XBUT: Positive button for already paired test error -->
+    <string name="submission_error_dialog_web_test_paired_button_positive">"Terug"</string>
+
+    <!-- XHED: Dialog title for could not create submission tan -->
+    <string name="submission_error_dialog_web_paring_invalid_title">"Error"</string>
+    <!-- XMSG: Dialog body for could not create submission tan -->
+    <string name="submission_error_dialog_web_paring_invalid_body">"Een TAN voor indiening kon niet worden gegenereerd. Neem contact op met de technische hotline via App Informatie → Technische hotline."</string>
+    <!-- XBUT: Positive button for could not create submission tan -->
+    <string name="submission_error_dialog_web_paring_invalid_button_positive">"Terug"</string>
+
+    <!-- XHED: Dialog title for submission tan invalid -->
+    <string name="submission_error_dialog_web_tan_invalid_title">"Error"</string>
+    <!-- XMSG: Dialog body for submission tan invalid -->
+    <string name="submission_error_dialog_web_tan_invalid_body">"Een TAN voor indiening kon niet worden gegenereerd. Neem contact op met de technische hotline via App Informatie → Technische Hotline."</string>
+    <!-- XBUT: Positive button for submission tan invalid -->
+    <string name="submission_error_dialog_web_tan_invalid_button_positive">"Terug"</string>
+
+    <!-- Permission Rationale Dialog -->
+    <!-- XHED: Dialog headline QR Scan permission rationale  -->
+    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">"Toestemming voor het gebruik van de camera is vereist"</string>
+    <!-- YTXT: Dialog Body text for QR Scan permission rationale -->
+    <string name="submission_qr_code_scan_permission_rationale_dialog_body">"Laat de app de camera gebruiken om de QR-code te scannen."</string>
+    <!-- XBUT: Dialog(QR Scan permission rationale) - positive button (right) -->
+    <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">"Toestaan"</string>
+    <!-- XBUT: Dialog(QR Scan permission rationale) - negative button (left) -->
+    <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative">"Niet toestaanw"</string>
+
+    <!-- Permission Denied Dialog -->
+    <!-- XHED: Dialog headline QR Scan permission denied  -->
+    <string name="submission_qr_code_scan_permission_denied_dialog_headline">"Toegang tot de camera nodig"</string>
+    <!-- YTXT: Dialog Body text for QR Scan permission denied -->
+    <string name="submission_qr_code_scan_permission_denied_dialog_body">"Gelieve de app de camera laten gebruiken in de systeeminstellingen om de QR-code te scannen."</string>
+    <!-- XBUT: Dialog(QR Scan permission denied) - button -->
+    <string name="submission_qr_code_scan_permission_denied_dialog_button">"OK"</string>
+
+    <!-- QR Code Scan Invalid Dialog -->
+    <!-- XHED: Dialog headline for invalid QR code  -->
+    <string name="submission_qr_code_scan_invalid_dialog_headline">"Verkeerde QR-code"</string>
+    <!-- YTXT: Dialog Body text for invalid QR code -->
+    <string name="submission_qr_code_scan_invalid_dialog_body">"De QR-code is niet correct. Probeer het nog eens."</string>
+    <!-- XBUT: Dialog(Invalid QR code) - positive button (right) -->
+    <string name="submission_qr_code_scan_invalid_dialog_button_positive">"Probeer het nog eens."</string>
+    <!-- XBUT: Dialog(Invalid QR code) - negative button (left) -->
+    <string name="submission_qr_code_scan_invalid_dialog_button_negative">"Cancel"</string>
+
+    <!-- QR Code Scan Screen -->
+    <string name="submission_qr_code_scan_title">"Plaats de QR-code in het kader."</string>
+    <!-- YTXT: instruction text for QR code scanning  -->
+    <string name="submission_qr_code_scan_body">"Plaats de QR-code in het kader."</string>
+
+    <!-- Submission Test Result -->
+    <!-- XHED: Page headline for test result  -->
+    <string name="submission_test_result_headline">"Testresultaat"</string>
+    <!-- XHED: Page subheadline for test result  -->
+    <string name="submission_test_result_subtitle">"Hoe dit werkt:"</string>
+    <!-- XHED: Page headline for results next steps  -->
+    <string name="submission_test_result_steps_added_heading">"Test met succes toegevoegd"</string>
+    <!-- YTXT: Body text for for results next steps  -->
+    <string name="submission_test_result_steps_added_body">"Je test is opgeslagen in de Coronalert-App."</string>
+    <!-- XHED: Page headline for pending test result next steps  -->
+    <string name="submission_test_result_pending_steps_waiting_heading">"Testresultaat is nog niet beschikbaar"</string>
+    <!-- YTXT: Body text for next steps section of waiting test result page -->
+    <string name="submission_test_result_pending_steps_waiting_body">"Je testresultaat is nog niet beschikbaar."</string>
+    <!-- XBUT: test result pending : refresh button -->
+    <string name="submission_test_result_pending_refresh_button">"Update"</string>
+    <!-- XBUT: test result pending : remove the test button -->
+    <string name="submission_test_result_pending_remove_test_button">"Test verwijderen"</string>
+    <!-- XHED: Page headline for negative test result next steps  -->
+    <string name="submission_test_result_negative_steps_negative_heading">"Jouw testresultaat"</string>
+    <!-- YTXT: Body text for next steps section of test negative result -->
+    <string name="submission_test_result_negative_steps_negative_body">"Het laboratoriumresultaat geeft niet aan dat je coronavirus SARS-CoV-2 hebt. Verwijder de test uit de Coronalert-App, zodat je een nieuwe testcode kunt opslaan als dat nodig is."</string>
+    <!-- XBUT: negative test result : remove the test button -->
+    <string name="submission_test_result_negative_remove_test_button">"Test verwijderen"</string>
+    <!-- XHED: Page headline for positive test result screen  -->
+    <string name="submission_test_result_positive_steps_positive_heading">"Jouw testresultaat"</string>
+    <!-- YTXT: Body text for next steps section of test positive result-->
+    <string name="submission_test_result_positive_steps_positive_body">"Je testresultaat werd gecontroleerd als positief."</string>
+    <!-- XHED: Page headline for other warnings screen  -->
+    <string name="submission_test_result_positive_steps_warning_others_heading">"Anderen waarschuwen"</string>
+    <!-- YTXT: Body text for for other warnings screen-->
+    <string name="submission_test_result_positive_steps_warning_others_body">"Deel je willekeurige ID's van de laatste 14 dagen om anderen te beschermen en de keten van de infectie te doorbreken."</string>
+    <!-- XBUT: positive test result : continue button -->
+    <string name="submission_test_result_positive_continue_button">"Volgende"</string>
+    <!-- XHED: Page headline for invalid test result screen  -->
+    <string name="submission_test_result_invalid_steps_invalid_heading">"Jouw testresultaat"</string>
+    <!-- YTXT: Body text for next steps section of invalid test result-->
+    <string name="submission_test_result_invalid_steps_invalid_body">Er was een probleem met de evaluatie van je test. Neem contact op met de volksgezondheidsdienst om te weten te komen hoe je te werk gaat. Verwijder de test uit je Coronalert-App, zodat je daar eventueel een nieuwe testcode kunt opslaan."</string>
+    <!-- XBUT: invalid test result : remove the test button -->
+    <string name="submission_test_result_invalid_remove_test_button">"Test verwijderen"</string>
+    <!-- XHED: Dialog title for tracing required dailog  -->
+    <string name="submission_test_result_dialog_tracing_required_title">"Blootstellingsregistratie vereist"</string>
+    <!-- YTXT: Dialog text for tracing required dialog-->
+    <string name="submission_test_result_dialog_tracing_required_message">Activeer de blootstellingsregistratie om andere mensen te waarschuwen."</string>
+    <!-- XBUT: tracing required : OK button -->
+    <string name="submission_test_result_dialog_tracing_required_button">"OK"</string>
+    <!-- XHED: Dialog title for test removal  -->
+    <string name="submission_test_result_dialog_remove_test_title">"De test verwijderen?"</string>
+    <!-- YTXT: Dialog text for test removal -->
+    <string name="submission_test_result_dialog_remove_test_message">"De test wordt permanent verwijderd uit de Coronalert-App en kan niet opnieuw worden toegevoegd. Deze procedure kan niet ongedaan worden gemaakt."</string>
+    <!-- XBUT: Positive button for test removal -->
+    <string name="submission_test_result_dialog_remove_test_button_positive">"Verwijder"</string>
+    <!-- XBUT: Negative button for test removal -->
+    <string name="submission_test_result_dialog_remove_test_button_negative">"Annuleren"</string>
+    <!-- XHED: Title for test result card positive -->
+    <string name="submission_test_result_card_positive_title">"SARS-CoV-2 positief"</string>
+    <!-- YTXT: Body text for test result card positive -->
+    <string name="submission_test_result_card_positive_body">"Je bent gediagnosticeerd met het SARS-CoV-2 virus."</string>
+
+    <!-- Submission Tan -->
+    <!-- XHED: Page title for TAN submission pge -->
+    <string name="submission_tan_title">"Geef TAN in"</string>
+    <!-- YTXT: Body text for the tan submission page -->
+    <string name="submission_tan_body">"Voer de 10-cijferige TAN in die je hebt gekregen."</string>
+    <!-- XBUT: Submit TAN button -->
+    <string name="submission_tan_button_text">"Volgende"</string>
+    <!-- XACT: Submission Tan page title -->
+    <string name="submission_tan_accessibility_title">"Geef TAN in"</string>
+    <!-- YTXT: Error text for the tan submission page -->
+    <string name="submission_tan_error">"Ongeldige TAN, controleer je ingave."</string>
+    <!-- YTXT: Error text for the tan submission page (wrong characters) -->
+    <string name="submission_tan_character_error">"Ongeldige TAN, controleer je ingave."</string>
+
+    <!-- Submission Intro -->
+    <!-- XHED: Page title for menu at the start of the submission process  -->
+    <string name="submission_intro_title">"Werd je getest?"</string>
+    <!-- XHED: Page headline for menu the at start of the submission process  -->
+    <string name="submission_intro_headline">"Zo werkt de Coronalert-App"</string>
+    <!-- YTXT: submission introduction text -->
+    <string name="submission_intro_text">"Om de app goed te laten werken, vertrouwen we op de steun van mensen die gediagnosticeerd zijn met COVID-19. Aangezien alleen gecodeerde willekeurige ID's worden uitgewisseld, blijf je anoniem. Je kunt nu als volgt te werk gaan:"</string>
+    <!-- XBUT: Submission introduction next button-->
+    <string name="submission_intro_button_next">"Volgende"</string>
+    <!-- XACT: Submission intro - illustration description, explanation image -->
+    <string name="submission_intro_illustration_description">"Een gecodeerde positieve testdiagnose wordt naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen."</string>
+    <!-- YTXT: submission introduction bullet points -->
+    <string-array name="submission_intro_bullet_points">
+        <item>"Als je gediagnosticeerd bent met COVID-19, kun je anderen op de hoogte brengen."</item>
+        <item>"Als je een TAN hebt gekregen voor een positieve diagnose, kun je deze gebruiken om de test te registreren."</item>
+        <item>"Als je geen TAN hebt, kun je er een aanvragen via de telefoon."</item>
+    </string-array>
+    <!-- XACT: Submission Intro page title -->
+    <string name="submission_intro_accessibility_title">"Werd je getest? Dit is hoe de Coronalert-App werkt"</string>
+
+    <!-- Dispatcher -->
+    <!-- XHED: Page headline for dispatcher menu  -->
+    <string name="submission_dispatcher_headline">"Selectie"</string>
+    <!-- XHED: Page subheadline for dispatcher menu  -->
+    <string name="submission_dispatcher_subheadline">"Welke informatie heb je?"</string>
+    <!-- YTXT: Dispatcher text for QR code option -->
+    <string name="submission_dispatcher_card_qr">"Document met QR-code"</string>
+    <!-- YTXT: Body text for QR code dispatcher option -->
+    <string name="submission_dispatcher_qr_card_text">"Registreer je test door de QR-code van je testdocument te scannen."</string>
+    <!-- XHED: Dialog headline for dispatcher QR prviacy dialog  -->
+    <string name="submission_dispatcher_qr_privacy_dialog_headline">"Toestemmingsverklaring"</string>
+    <!-- YTXT: Dialog Body text for dispatcher QR privacy dialog -->
+    <string name="submission_dispatcher_qr_privacy_dialog_body">"Door op "Accepteren" te tikken, stem je ermee in dat de App de status van je coronavirus test opvraagt en in de App weergeeft. Deze functie is beschikbaar voor jou als je een QR code hebt ontvangen en toestemming hebt gegeven voor het verzenden van je testresultaat naar het serversysteem van de App. Zodra het testlaboratorium je testresultaat op de server heeft opgeslagen, kan je het resultaat in de App zien. Als je notificaties hebt ingeschakeld, ontvang je ook een notificatie buiten de App om dat je testresultaat is ontvangen. Om privacyredenen wordt het testresultaat zelf echter alleen in de App getoond. Je kunt deze toestemming te allen tijde intrekken door je testregistratie in de App te verwijderen. Het intrekken van je toestemming heeft geen invloed op de rechtmatigheid van de verwerking vóór de intrekking. Meer informatie vind je in het menu onder "Data Privacy Informatie"."</string>
+    <!-- XBUT: submission(dispatcher QR Dialog) - positive button (right) -->
+    <string name="submission_dispatcher_qr_privacy_dialog_button_positive">"Aanvaarden"</string>
+    <!-- XBUT: submission(dispatcher QR Dialog) - negative button (left) -->
+    <string name="submission_dispatcher_qr_privacy_dialog_button_negative">"Niet aanvaardent"</string>
+    <!-- YTXT: Dispatcher text for TAN code option -->
+    <string name="submission_dispatcher_card_tan_code">"TAN"</string>
+    <!-- YTXT: Body text for TAN code dispatcher option -->
+    <string name="submission_dispatcher_tan_code_card_text">"Registreer je test door je TAN handmatig in te geven."</string>
+    <!-- YTXT: Dispatcher text for TELE-TAN option -->
+    <string name="submission_dispatcher_card_tan_tele">"TAN aanvragen"</string>
+    <!-- YTXT: Body text for TELE_TAN dispatcher option -->
+    <string name="submission_dispatcher_tan_tele_card_text">"Bel ons als je gediagnosticeerd bent met COVID-19."</string>
+    <!-- XACT: Dispatcher Tan page title -->
+    <string name="submission_dispatcher_accessibility_title">"Welke informatie heb je?"</string>
+
+    <!-- Submission Positive Other Warning -->
+    <!-- XHED: Page title for the positive result additional warning page-->
+    <string name="submission_positive_other_warning_title">"Anderen waarschuwen"</string>
+    <!-- XHED: Page headline for the positive result additional warning page-->
+    <string name="submission_positive_other_warning_headline">"Help ons allemaal!"</string>
+    <!-- YTXT: Body text for the positive result additional warning page-->
+    <string name="submission_positive_other_warning_body">"Vervolgens kan je ervoor zorgen dat de Coronalert-App je willekeurige ID's van de laatste 14 dagen met anderen deelt. Door dit te doen, kan je andere mensen waarschuwen en helpen de infectieketen te doorbreken. Omdat alleen onpersoonlijke willekeurige ID's worden doorgegeven, blijft je identiteit anoniem."</string>
+    <!-- XHED: Title for the privacy card-->
+    <string name="submission_positive_other_warning_privacy_title">"Data Privacy"</string>
+    <!-- YTXT: Body text for the privacy card-->
+    <string name="submission_positive_other_warning_privacy_body">"Door op « Aanvaarden" te tikken, stem je ermee in dat de App je positieve testresultaat naar het serversysteem van de App stuurt samen met je willekeurige ID\'s van de laatste 14 dagen, zodat andere App-gebruikers die de blootstellingsregistratiefunctie hebben ingeschakeld automatisch op de hoogte kunnen worden gebracht dat ze mogelijk zijn blootgesteld aan een risico op infectie. De willekeurige ID\'s die voor dit doel worden verzonden, bevatten geen informatie op basis waarvan conclusies kunnen worden getrokken over je identiteit of je persoon. \n\nHet doorgeven van je testresultaat via de App is vrijwillig. Je wordt niet gestraft als je je testresultaat niet doorgeeft. Aangezien het niet mogelijk is om te traceren of te controleren of en hoe je de App gebruikt, weet niemand anders dan jij of je de informatie die je geïnfecteerd hebt verzonden hebt. Deze intrekking van je toestemming heeft geen invloed op de rechtmatigheid van de verwerking die op basis van de toestemming voorafgaand aan de intrekking is uitgevoerd. Meer informatie kan je terug vinden in het menu onder "Informatie over Data Privacy".."</string>
+    <!-- XBUT: other warning continue button -->
+    <string name="submission_positive_other_warning_button">"Volgende"</string>
+    <!-- XACT: other warning - illustration description, explanation image -->
+    <string name="submission_positive_other_illustration_description">"Een apparaat zendt een gecodeerde positieve testdiagnose naar het systeem."</string>
+
+
+    <!-- Submission Done -->
+    <!-- XHED: Page title for completed submission page -->
+    <string name="submission_done_title">"Bedankt"</string>
+    <!-- YTXT: Body text for completed submission page -->
+    <string name="submission_done_body">"Je hebt een waardevolle bijdrage geleverd. Dankzij jouw steun kunnen andere mensen nu gewaarschuwd worden en adequaat reageren."</string>
+    <!-- XHED: Page subtitle for completed submission page -->
+    <string name="submission_done_subtitle">"Let op:"</string>
+    <!-- YTXT: text after submission: contagious -->
+    <string name="submission_done_contagious">"Je bent besmettelijk."</string>
+    <!-- YTXT: text after submission: isolate -->
+    <string name="submission_done_isolate">"Isoleer jezelf alsjeblieft van andere mensen."</string>
+    <!-- XHED: Title for further info -->
+    <string name="submission_done_further_info_title">"Other information:"</string>
+    <!-- YTXT: submission done further info bullet points -->
+    <string-array name="submission_done_further_info_bullet_points">
+        <item>"Je quarantaineperiode is meestal 14 dagen. Neem je symptomen in acht en hou in de gaten hoe ze zich ontwikkelen."</item>
+        <item>"Je wordt door je volksgezondheidsinstantie gevraagd een lijst op te stellen van mensen met wie je contact hebt gehad. Dit moet alle mensen bevatten met wie je nauw contact hebt gehad (minder dan 2 meter, face-to-face gesprek) gedurende meer dan 15 minuten in de twee dagen voordat je symptomen kreeg.."</item>
+        <item>"Denk vooral aan mensen die niet direct door de app op de hoogte worden gesteld omdat ze geen smartphone hebben, of de app niet hebben geïnstalleerd."</item>
+        <item>"Zelfs als je geen symptomen meer hebt en je je weer goed voelt, kun je nog steeds besmettelijk zijn."</item>
+    </string-array>
+    <!-- XBUT: submission finished button -->
+    <string name="submission_done_button_done">"Gedaan"</string>
+    <!-- XACT: submission finished - illustration description, explanation image -->
+    <string name="submission_done_illustration_description">"Iedereen in de groep juicht omdat iemand het resultaat van de test heeft gedeeld."</string>
+
+    <!-- Submission Contact -->
+    <!-- XHED: Page title for contact page in submission flow -->
+    <string name="submission_contact_title">"TAN aanvragen"</string>
+    <!-- XHED: Page headline for contact page in submission flow -->
+    <string name="submission_contact_headline">"Hoe dit werkt:"</string>
+    <!-- YTXT: Body text for contact page in submission flow-->
+    <string name="submission_contact_body">"Houd je testresultaat (indien beschikbaar) en je telefoonnummer klaar om een TAN aan te vragen."</string>
+    <!-- XBUT: submission contact call button -->
+    <string name="submission_contact_button_call">"Bellen"</string>
+    <!-- XBUT: submission contact enter tan button -->
+    <string name="submission_contact_button_enter">"TAN ingeven"</string>
+    <!-- YTXT: Body text for step 1 of contact page -->
+    <string name="submission_contact_step_1_body">"Bel de hotline en vraag een TAN aan:"</string>
+    <!-- XLNK: Button / hyperlink to phone call for TAN contact page -->
+    <string name="submission_contact_number_display">"+32 000 000000"</string>
+    <!-- XLNK: Technical number which is called when the user clicks on the display number -->
+    <string name="submission_contact_number_dial">"+32 000 0000002"</string>
+    <!-- YTXT: Body text for step 2 of contact page-->
+    <string name="submission_contact_step_2_body">"Registreer de test door de TAN in de app in te vullen."</string>
+    <!-- YTXT: Body text for operating hours in contact page-->
+    <string name="submission_contact_operating_hours_body">"Talen: Nederlands, Frans, Duits, Engels, Turks\n\Kantooruren:\nMaandag tot zaterdag: 7.00 - 22.00 uu: 24 hours\n\nDe oproep is gratis."</string>
+
+    <!-- XACT: Submission contact page title -->
+    <string name="submission_contact_accessibility_title">"Bel de hotline en vraag een TAN aan"</string>
+    <!-- XACT: Content Description for submission contact step 1, number has to sync with the display number -->
+    <string name="submission_contact_step_1_content">"In de eerste stap bel je de hotline en vraag je je TAN aan. Je kan de hotline bereiken op +32 000 000000. De kantooruren zijn maandag tot en met vrijdag van 8 tot 22 uur en zaterdag en zondag van 10 tot 22 uur. Het telefoontje is gratis."</string>
+    <!-- XACT: Content Description for submission contact step 2 -->
+    <string name="submission_contact_step_2_content">"In de tweede stap registreer je je test met je TAN in de app."</string>
+
+    <!-- Submission Status Card -->
+    <!-- XHED: Page title for the various submission status: fetching -->
+    <string name="submission_status_card_title_fetching">"Gegevens worden verzameld..."</string>
+    <!-- XHED: Page title for the various submission status: unregistered -->
+    <string name="submission_status_card_title_unregistered">Werd je getest?"</string>
+    <!-- XHED: Page title for the various submission status: pending -->
+    <string name="submission_status_card_title_pending">"Je resultaat is nog niet beschikbaar"</string>
+    <!-- XHED: Page title for the various submission status: available -->
+    <string name="submission_status_card_title_available">"Je resultaat is beschikbaar"</string>
+    <!-- XHED: Page title for the various submission status: positive -->
+    <string name="submission_status_card_title_positive">"Positieve diagnose"</string>
+    <!-- XHED: Subtitle for the submission status card: invalid -->
+    <string name="submission_status_card_subtitle_invalid">"Ongeldige test"</string>
+    <!-- XHED: Subtitle for the submission status card: negative -->
+    <string name="submission_status_card_subtitle_negative">"Negatieve diagnose"</string>
+    <!-- YTXT: Body text for submission status: fetching -->
+    <string name="submission_status_card_body_fetching">"Je resultaat wordt geüpdatet"</string>
+    <!-- YTXT: Body text for submission status: unregistered -->
+    <string name="submission_status_card_body_unregistered">"Help de infectieketen te doorbreken door anderen op de hoogte te stellen."</string>
+    <!-- YTXT: Body text for submission status: pending -->
+    <string name="submission_status_card_body_pending">"De evaluatie van je test is nog niet gedaan."</string>
+    <!-- YTXT: Body text for submission status: invalid -->
+    <string name="submission_status_card_body_invalid">"Je test kon niet geëvalueerd worden."</string>
+    <!-- YTXT: Body text for submission status: positive -->
+    <string name="submission_status_card_body_positive">"Je bent positief gediagnosticeerd voor SARS-CoV-2."</string>
+    <!-- YTXT: Body text for submission status: negative -->
+    <string name="submission_status_card_body_negative">"Je bent negatief gediagnosticeerd voor SARS-CoV-2."</string>
+    <!-- XBUT: submission status card unregistered button -->
+    <string name="submission_status_card_button_unregistered">"Meer informatie en hulp"</string>
+    <!-- XBUT: submission status card show results button -->
+    <string name="submission_status_card_button_show_results">"Toon de test"</string>
+    <!-- XHED: submission status card positive result subtitle -->
+    <string name="submission_status_card_positive_result_subtitle">"Let op:"</string>
+    <!-- YTXT: text for contagious card -->
+    <string name="submission_status_card_positive_result_contagious">"Je bent besmettelijk. Jezelf isoleren van andere mensen."</string>
+    <!-- YTXT: text for contact card -->
+    <string name="submission_status_card_positive_result_contact">"De volksgezondheidsdienst neemt binnen enkele dagen telefonisch of per brief contact met je op."</string>
+    <!-- YTXT: text for share result card-->
+    <string name="submission_status_card_positive_result_share">"Deel je willekeurige ID's zodat anderen gewaarschuwd kunnen worden."</string>
+
+    <!-- Test Result Card -->
+    <string name="test_result_card_headline">"Jouw diagnose:"</string>
+    <!-- YTXT: virus name text -->
+    <string name="test_result_card_virus_name_text">"SARS-CoV-2"</string>
+    <!-- YTXT: registered at text -->
+    <string name="test_result_card_registered_at_text">"Geregistreerd op %s"</string>
+    <!-- YTXT: negative status text -->
+    <string name="test_result_card_status_negative">"Negatief"</string>
+    <!-- YTXT: positive status text -->
+    <string name="test_result_card_status_positive">"Positief"</string>
+    <!-- YTXT: invalid status text -->
+    <string name="test_result_card_status_invalid">"Evaluatie is niet mogelijk"</string>
+    <!-- YTXT: pending status text -->
+    <string name="test_result_card_status_pending">"Je resultaat is nog niet beschikbaar"</string>
+    <!-- XHED: Title for further info of test result negative -->
+    <string name="test_result_card_negative_further_info_title">"Andere informatie:"</string>
+    <!-- YTXT: Content for further info of test result negative -->
+    <string-array name="test_result_card_negative_further_info_bullet_points">
+        <item>"Voel je je nog steeds niet lekker? Als je je erg slecht voelt en/of je klachten zijn verergerd, neem dan contact op met je huisarts."</item>
+        <item>"Blijf thuis tot je je weer goed voelt. Als je besmet zou raken met het coronavirus (SARS-CoV-2) terwijl je verzwakt bent door een andere infectie, kan dit leiden tot een ernstige ziekte."</item>
+        <item>"Ga niet naar je werk als je je onwel voelt om ervoor te zorgen dat je andere mensen niet in gevaar brengt. Als je symptomen verergeren, heb je misschien nog een SARS-CoV-2-test nodig."</item>
+    </string-array>
+
+    <!-- ####################################
+          Button Tooltips for Accessibility
+    ###################################### -->
+    <!-- XACT: back button-->
+    <string name="button_back">"Terug naar de vorige pagina"</string>
+    <!-- XACT: proceed button-->
+    <string name="button_proceed">"Doorgaan Knop"</string>
+    <!-- XACT: share button-->
+    <string name="button_share">"Delen"</string>
+    <!-- XACT: menu button-->
+    <string name="button_menu">"Menu"</string>
+    <!-- XACT: Accessibility needs a suffix to strings, to reduce the amount of manual translations this string is appended to accessibility button strings, e.g. "Zurück Taste", "Taste" is the default used by android in german -->
+    <string name="suffix_button">"Knop"</string>
+    <!-- XACT: Accessibility needs a suffix to strings, to reduce the amount of manual translations this string is appended to accessibility content description strings for images, e.g. "Eine Gruppe von... Bild" -->
+    <string name="suffix_image">"Afbeelding"</string>
+
+    <!-- ####################################
+               Business Error Messages
+        ###################################### -->
+    <!-- XTXT: error dialog - detailed text if device is offline  -->
+    <string name="errors_no_network">"Je bent niet verbonden met het internet."</string>
+    <!-- XTXT: error dialog - detailed text if device has not enough device space  -->
+    <string name="errors_not_enough_device_storage">"Je hebt niet voldoende vrij geheugen."</string>
+    <!-- XTXT: error dialog - detailed text if there is error with Google API  -->
+    <string name="errors_communication_with_api">"Error tijdens de communicatie met Google-interface"</string>
+    <!-- XTXT: error dialog - detailed text if there is an error during external navigation / external action -->
+    <string name="errors_external_action">"Je kan deze actie niet uitvoeren. Neem contact op met de hotline."</string>
+    <!-- XTXT: error dialog - phone still needs Google Play Services or Google Mobile Services update -->
+    <string name="errors_google_update_needed">"Je Coronalert-App is correct geïnstalleerd, maar de "COVID-19 blootstelling notificaties" service is niet beschikbaar op het operating systeem van je smartphone. Dit betekent dat je de Coronalert-App niet kunt gebruiken. Voor meer informatie, zie onze FAQ pagina: https://www.coronalert.be/nl/faq/"</string>
+    <!-- XTXT: error dialog - either Google API Error (10) or reached request limit per day -->
+    <string name="errors_google_api_error">"De Coronalert-App loopt correct, maar we kunnen je huidige risicostatus niet actualiseren. Blootstellingsregistratie blijft actief en werkt correct. Zie voor meer informatie onze FAQ-pagina: https://www.coronalert.be/nl/faq/ \n"</string>
+
+    <!-- ####################################
+               Generic Error Messages
+        ###################################### -->
+    <!-- XHED: error dialog - headline -->
+    <string name="errors_generic_headline">"Something went wrong."</string>
+    <!-- XTXT: error dialog - short text for error reason -->
+    <string name="errors_generic_details_headline">"Oorzaak"</string>
+    <!-- XBUT: error dialog - button close -->
+    <string name="errors_generic_button_positive">"OK"</string>
+    <!-- XBUT: error dialog - button show details -->
+    <string name="errors_generic_button_negative">"Details"</string>
+    <!-- XTXT: error dialog - text when no error description is available  -->
+    <string name="errors_generic_text_unknown_error_cause">"Er is een onbekende fout opgetreden."</string>
+
+    <!-- ####################################
+           Just for Development
+    ###################################### -->
+    <!-- NOTR -->
+    <string name="lorem_ipsum">"Lorem Ipsum"</string>
+    <!-- NOTR -->
+    <string name="menu_test_api">"Test API"</string>
+    <!-- NOTR -->
+    <string name="menu_test_risk_level">"Test risiconiveau"</string>
+    <!-- NOTR -->
+    <string name="menu_test_notification">"Test notificaties"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_api_launch">"Android API Test(Manual Test)"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_start">"Start (Broadcast/Receive Bluetooth)"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_get_exposure_keys">"Ontvang Belichtingssleutels (mijn key geschiedenis van api)"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_share_my_keys">"Deel mijn keys via Email"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_enter_other_keys">"Blootstellingskey doorgeven"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_show_qr_code">"QR Code tonen"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_submit_keys">"Keys verzenden naar de server"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_scan_qr_code">"Scan blootstellingskey"</string>
+    <!-- NOTR -->
+    <string name="test_api_switch_last_three_hours_from_server">"De laatste 3 uur"</string>
+    <!-- NOTR -->
+    <string name="test_api_button_check_exposure">"Check blootstellingsoverzicht"</string>
+    <!-- NOTR -->
+    <string name="test_api_exposure_summary_headline">"blootstellingsoverzicht"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_daysSinceLastExposure">"Dagen sinds de laatste blootstelling: %1$s"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_attenuation">"Attenuatie termijnen in minuten: %1$s"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_summation_risk">"Samenvatting Risicoscore: %1$s"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_matchedKeyCount">"Bijpassende key count: %1$s"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_maximumRiskScore">"Maximale risicoscore %1$s"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_my_keys">"Mijn keys (count: %1$d)"</string>
+    <!-- NOTR -->
+    <string name="test_api_body_other_keys">"Andere key"</string>
+    <!-- NOTR -->
+    <string name="test_api_calculate_risk_level">"Bereken het risiconiveau"</string>
+
+</resources>

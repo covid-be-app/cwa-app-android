@@ -35,9 +35,9 @@
     <color name="colorSemanticUnknownRiskPressed">#E7E8E8</color>
 
     <!-- Accent -->
-    <color name="colorAccentTintButton">#007FAD</color>
-    <color name="colorAccentTintButtonPressed">#02759E</color>
-    <color name="colorAccentTintIcon">#007FAD</color>
+    <color name="colorAccentTintButton">#25ba6c</color>
+    <color name="colorAccentTintButtonPressed">#25ba6c</color>
+    <color name="colorAccentTintIcon">#25ba6c</color>
 
     <!-- Misc -->
     <color name="colorTransparent">#00FFFFFF</color>
