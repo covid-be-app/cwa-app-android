@@ -79,10 +79,14 @@ android {
 
     signingConfigs {
         release {
-            storeFile file(RELEASE_STORE_FILE)
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
+            def propertiesFile = project.rootProject.file('local.properties')
+            Properties properties = new Properties()
+            properties.load(propertiesFile.newDataInputStream())
+
+            storeFile file(properties["RELEASE_STORE_FILE"])
+            storePassword properties["RELEASE_STORE_PASSWORD"]
+            keyAlias properties["RELEASE_KEY_ALIAS"]
+            keyPassword properties["RELEASE_KEY_PASSWORD"]
 
             v1SigningEnabled true
             v2SigningEnabled true
