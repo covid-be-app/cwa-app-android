@@ -9,7 +9,7 @@ import javax.crypto.KeyGenerator
 import javax.crypto.Mac
 import javax.crypto.SecretKey
 
-class MobileTestId(val id: String, val checksum: String, registrationToken: String) {
+class MobileTestId(val id: String, val checksum: String, val registrationToken: String) {
 
     override fun toString(): String {
         val part1 = id.substring(0..4)
@@ -21,8 +21,9 @@ class MobileTestId(val id: String, val checksum: String, registrationToken: Stri
 
     companion object {
         fun generate(
+            date: Date
         ): MobileTestId {
-            val t0 = Date().toServerFormat()
+            val t0 = date.toServerFormat()
             Timber.d("t0: %s", t0)
 
             var r1: String? = null

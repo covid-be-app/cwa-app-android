@@ -33,10 +33,10 @@ class MobileTestIdTest {
         } returns "RNJ7XO0sP88xextu2020-07-21TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate().id, "402570780892356"
+            mobileTestIdFactory.generate(Date()).id, "402570780892356"
         )
         Assert.assertEquals(
-            mobileTestIdFactory.generate().checksum, "96"
+            mobileTestIdFactory.generate(Date()).checksum, "96"
         )
 
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("8FQZ4I4BT66ClgTmnM1Alw==")
@@ -48,10 +48,10 @@ class MobileTestIdTest {
         } returns "2nii5Uwaga2GAsiJ2020-07-21TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate().id, "310169445554293"
+            mobileTestIdFactory.generate(Date()).id, "310169445554293"
         )
         Assert.assertEquals(
-            mobileTestIdFactory.generate().checksum, "22"
+            mobileTestIdFactory.generate(Date()).checksum, "22"
         )
 
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("j9EWWBZYt9CWsGtTpPNUrg==")
@@ -63,16 +63,16 @@ class MobileTestIdTest {
         } returns "tlA1nDLx0PE0QlVN2020-07-21TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate().id, "989250150432575"
+            mobileTestIdFactory.generate(Date()).id, "989250150432575"
         )
         Assert.assertEquals(
-            mobileTestIdFactory.generate().checksum, "84"
+            mobileTestIdFactory.generate(Date()).checksum, "84"
         )
     }
 
     @Test
     fun testGenerateId() {
-        val mobileTestId = MobileTestId.generate()
+        val mobileTestId = MobileTestId.generate(Date())
 
         Assert.assertEquals(
             mobileTestId.id.length, 15
