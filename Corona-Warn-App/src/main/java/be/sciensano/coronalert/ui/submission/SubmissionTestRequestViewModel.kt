@@ -1,9 +1,11 @@
 package be.sciensano.coronalert.ui.submission
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import be.sciensano.coronalert.MobileTestId
+import be.sciensano.coronalert.storage.r0
+import be.sciensano.coronalert.storage.t0
+import de.rki.coronawarnapp.storage.LocalData
 import java.util.*
 
 class SubmissionTestRequestViewModel : ViewModel() {
@@ -24,8 +26,12 @@ class SubmissionTestRequestViewModel : ViewModel() {
         return testId
     }
 
-    fun saveTestId(): LiveData<MobileTestId> {
-        return _mobileTestId
-    }
+    fun saveTestId() =
+        _mobileTestId.value?.let { mobileTestId ->
+            LocalData.t0(mobileTestId.t0)
+            LocalData.r0(mobileTestId.r0)
+            LocalData.registrationToken(mobileTestId.registrationToken())
+        }
+
 }
 

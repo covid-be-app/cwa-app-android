@@ -249,7 +249,13 @@
         android:id="@+id/submissionTestRequestSaveFragment"
         android:name="be.sciensano.coronalert.ui.submission.SubmissionTestRequestSaveFragment"
         android:label="fragment_submission_test_request_save"
-        tools:layout="@layout/fragment_submission_test_request_save"></fragment>
+        tools:layout="@layout/fragment_submission_test_request_save">
+        <action
+            android:id="@+id/action_submissionTestRequestSaveFragment_to_submissionResultFragment"
+            app:destination="@id/submissionResultFragment"
+            app:popUpTo="@id/submissionResultFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/submissionIntroFragment"
         android:name="de.rki.coronawarnapp.ui.submission.SubmissionIntroFragment"

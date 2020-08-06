@@ -8,13 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.google.zxing.qrcode.QRCodeWriter
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestRequestSaveBinding
+import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.ui.main.MainActivity
-import de.rki.coronawarnapp.ui.submission.ApiRequestState
+import timber.log.Timber
 import java.text.DateFormat
 
 
@@ -40,7 +41,7 @@ class SubmissionTestRequestSaveFragment : Fragment() {
         _binding = null
     }
 
-    private fun generateQrCode(code: String) {
+    private fun showQrCode(code: String) {
         val writer = QRCodeWriter()
         try {
             val bitMatrix = writer.encode(code, BarcodeFormat.QR_CODE, 512, 512)
@@ -54,7 +55,7 @@ class SubmissionTestRequestSaveFragment : Fragment() {
             }
             binding.submissionTestRequestSaveQrImage.setImageBitmap(bmp)
         } catch (e: WriterException) {
-            e.printStackTrace()
+            Timber.e(e)
         }
     }
 
@@ -64,10 +65,13 @@ class SubmissionTestRequestSaveFragment : Fragment() {
 
         val mobileTestId = viewModel.generateTestId()
 
-        binding.submissionTestRequestSaveDate.text =
-            DateFormat.getDateInstance(DateFormat.FULL).format(viewModel.submissionDate.value)
+        viewModel.submissionDate.value?.let {
+            binding.submissionTestRequestSaveDate.text =
+                DateFormat.getDateInstance(DateFormat.FULL).format(it)
 
-        generateQrCode(mobileTestId.toString())
+        }
+
+        showQrCode(mobileTestId.toString())
         binding.submissionTestRequestSaveCode.text = mobileTestId.toString()
 
         binding.submissionTestRequestSaveHeader.headerButtonBack.buttonIcon.setOnClickListener {
@@ -75,7 +79,10 @@ class SubmissionTestRequestSaveFragment : Fragment() {
         }
 
         binding.submissionTestRequestSaveButtonSave.setOnClickListener {
-
+            viewModel.saveTestId()
+            findNavController().doNavigate(
+                SubmissionTestRequestSaveFragmentDirections.actionSubmissionTestRequestSaveFragmentToSubmissionResultFragment()
+            )
 
         }
 

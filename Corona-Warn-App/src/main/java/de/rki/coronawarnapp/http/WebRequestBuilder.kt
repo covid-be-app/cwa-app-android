@@ -20,11 +20,13 @@
 package de.rki.coronawarnapp.http
 
 import KeyExportFormat
+import be.sciensano.coronalert.http.requests.TestResultRequest
+import be.sciensano.coronalert.http.responses.TestResultResponse
 import com.google.protobuf.InvalidProtocolBufferException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationCorruptException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationInvalidException
-import de.rki.coronawarnapp.http.requests.RegistrationTokenRequest
 import de.rki.coronawarnapp.http.requests.RegistrationRequest
+import de.rki.coronawarnapp.http.requests.RegistrationTokenRequest
 import de.rki.coronawarnapp.http.requests.TanRequestBody
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
@@ -41,12 +43,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.io.File
-import java.util.Date
-import java.util.UUID
+import java.util.*
+import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
+import be.sciensano.coronalert.service.submission.SubmissionConstants as BeSubmissionConstants
 
 class WebRequestBuilder(
     private val distributionService: DistributionService,
     private val verificationService: VerificationService,
+    private val beVerificationService: BeVerificationService,
     private val submissionService: SubmissionService,
     private val verificationKeys: VerificationKeys
 ) {
@@ -69,6 +73,7 @@ class WebRequestBuilder(
             return WebRequestBuilder(
                 serviceFactory.distributionService(),
                 serviceFactory.verificationService(),
+                serviceFactory.beVerificationService(),
                 serviceFactory.submissionService(),
                 VerificationKeys()
             )
@@ -188,5 +193,17 @@ class WebRequestBuilder(
             submissionPayload
         )
         return@withContext
+    }
+
+    /**
+     * Belgium
+     */
+    suspend fun beAsyncGetTestResult(
+        pollingToken: String
+    ): TestResultResponse = withContext(Dispatchers.IO) {
+        beVerificationService.getTestResult(
+            BeSubmissionConstants.TEST_RESULT_URL,
+            TestResultRequest(pollingToken)
+        )
     }
 }

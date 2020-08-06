@@ -12,6 +12,9 @@ import org.junit.runner.RunWith
 import java.util.*
 import javax.crypto.spec.SecretKeySpec
 
+/**
+ * Require at least android P: https://github.com/mockk/mockk/issues/182
+ */
 @RunWith(AndroidJUnit4::class)
 class MobileTestIdTest {
 
@@ -28,45 +31,48 @@ class MobileTestIdTest {
         every {
             mobileTestIdFactory["makeInfo"](
                 any<String>(),
+                any<String>(),
                 any<String>()
             )
         } returns "RNJ7XO0sP88xextu2020-07-21TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate(Date()).id, "402570780892356"
+            mobileTestIdFactory.generate(Date()).r1, "402570780892356"
         )
         Assert.assertEquals(
-            mobileTestIdFactory.generate(Date()).checksum, "96"
+            mobileTestIdFactory.generate(Date()).checksum(), "96"
         )
 
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("8FQZ4I4BT66ClgTmnM1Alw==")
         every {
             mobileTestIdFactory["makeInfo"](
                 any<String>(),
+                any<String>(),
                 any<String>()
             )
         } returns "2nii5Uwaga2GAsiJ2020-07-21TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate(Date()).id, "310169445554293"
+            mobileTestIdFactory.generate(Date()).r1, "310169445554293"
         )
         Assert.assertEquals(
-            mobileTestIdFactory.generate(Date()).checksum, "22"
+            mobileTestIdFactory.generate(Date()).checksum(), "22"
         )
 
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("j9EWWBZYt9CWsGtTpPNUrg==")
         every {
             mobileTestIdFactory["makeInfo"](
                 any<String>(),
+                any<String>(),
                 any<String>()
             )
         } returns "tlA1nDLx0PE0QlVN2020-07-21TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate(Date()).id, "989250150432575"
+            mobileTestIdFactory.generate(Date()).r1, "989250150432575"
         )
         Assert.assertEquals(
-            mobileTestIdFactory.generate(Date()).checksum, "84"
+            mobileTestIdFactory.generate(Date()).checksum(), "84"
         )
     }
 
@@ -75,19 +81,19 @@ class MobileTestIdTest {
         val mobileTestId = MobileTestId.generate(Date())
 
         Assert.assertEquals(
-            mobileTestId.id.length, 15
+            mobileTestId.r1.length, 15
         )
         Assert.assertEquals(
-            mobileTestId.checksum.length, 2
+            mobileTestId.checksum().length, 2
         )
         Assert.assertEquals(
-            mobileTestId.registrationToken.split("|")[0], mobileTestId.id
+            mobileTestId.registrationToken().split("|")[0], mobileTestId.r1
         )
         Assert.assertEquals(
-            mobileTestId.registrationToken.split("|")[1], Date().toServerFormat()
+            mobileTestId.registrationToken().split("|")[1], Date().toServerFormat()
         )
         Assert.assertEquals(
-            (mobileTestId.id.toLong() * 100 + mobileTestId.checksum.toInt()) % 97, 0
+            (mobileTestId.r1.toLong() * 100 + mobileTestId.checksum().toInt()) % 97, 0
         )
     }
 

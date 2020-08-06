@@ -9,38 +9,51 @@ import javax.crypto.KeyGenerator
 import javax.crypto.Mac
 import javax.crypto.SecretKey
 
-class MobileTestId(val id: String, val checksum: String, val registrationToken: String) {
+class MobileTestId(
+    val r0: String,
+    val t0: String,
+    val r1: String
+) {
 
     override fun toString(): String {
-        val part1 = id.substring(0..4)
-        val part2 = id.substring(5..9)
-        val part3 = id.substring(10..14)
+        val part1 = r1.substring(0..4)
+        val part2 = r1.substring(5..9)
+        val part3 = r1.substring(10..14)
 
-        return "$part1-$part2-$part3-$checksum"
+        return "$part1-$part2-$part3-${checksum()}"
+    }
+
+    fun registrationToken(): String {
+        return "$r1|$t0"
+    }
+
+
+    fun checksum(): String {
+        return String.format("%02d", 97 - (r1.toLong() * 100 % 97))
     }
 
     companion object {
         fun generate(
-            date: Date
+            date: Date, infoSuffix: String = ""
         ): MobileTestId {
             val t0 = date.toServerFormat()
             Timber.d("t0: %s", t0)
 
             var r1: String? = null
+            var r0: String? = null
             while (r1 == null) {
                 val k = generateK()
                 Timber.d("k: %s", Base64.encodeToString(k.encoded, Base64.DEFAULT))
-                val r0 = generateR0()
+                r0 = generateR0()
                 Timber.d("r0: %s", r0)
-                val info = makeInfo(r0, t0)
+                val info = makeInfo(r0, t0, infoSuffix)
                 Timber.d("info: %s", info)
                 r1 = calculateR1(info, k)
                 Timber.d("r1: %s", r1)
+
             }
 
-            val checksum = calculateChecksum(r1.toLong())
-
-            return MobileTestId(r1, checksum, "$r1|$t0")
+            return MobileTestId(r0!!, t0, r1)
         }
 
         private fun generateK(): SecretKey {
@@ -54,19 +67,16 @@ class MobileTestId(val id: String, val checksum: String, val registrationToken: 
             return List(16) { (('a'..'z') + ('A'..'Z') + ('0'..'9')).random() }.joinToString("")
         }
 
-        private fun makeInfo(r0: String, t0: String): String {
-            return r0 + t0 + "TEST REQUEST"
+        private fun makeInfo(r0: String, t0: String, suffix: String = ""): String {
+            return r0 + t0 + suffix
         }
 
-        @ExperimentalUnsignedTypes
         private fun calculateR1(info: String, k: SecretKey): String? {
             val hmacSHA256: Mac = Mac.getInstance("hmacSHA256")
             hmacSHA256.init(k)
             val hash = hmacSHA256.doFinal(info.toByteArray(Charsets.UTF_8))
 
             val b7 = hash.copyOfRange(hash.size - 7, hash.size).toUByteArray()
-
-            Timber.d("hash size: %s", hash.size)
 
             val n1 = b7[0].toULong() + (b7[1].toULong() shl 8) + ((b7[2].toULong() and 15u) shl 16)
             val n2 = (b7[2].toULong() shr 4) + (b7[3].toULong() shl 4) + (b7[4].toULong() shl 12)
@@ -83,11 +93,6 @@ class MobileTestId(val id: String, val checksum: String, val registrationToken: 
             return r1
         }
 
-        private fun calculateChecksum(r1: Long): String {
-            return String.format("%02d", 97 - (r1 * 100 % 97))
-        }
     }
-
-
 }
 
