@@ -196,7 +196,7 @@ class WebRequestBuilder(
     }
 
     /**
-     * Belgium
+     * Belgium web requests
      */
     suspend fun beAsyncGetTestResult(
         pollingToken: String
@@ -205,5 +205,15 @@ class WebRequestBuilder(
             BeSubmissionConstants.TEST_RESULT_URL,
             TestResultRequest(pollingToken)
         )
+    }
+
+    suspend fun beAsyncAckTestResult(
+        pollingToken: String
+    ): Unit = withContext(Dispatchers.IO) {
+        beVerificationService.ackResult(
+            BeSubmissionConstants.TEST_RESULT_ACK_URL,
+            TestResultRequest(pollingToken)
+        )
+        return@withContext
     }
 }

@@ -4,4 +4,6 @@ import de.rki.coronawarnapp.service.submission.SubmissionConstants as DeSubmissi
 
 object SubmissionConstants {
     val TEST_RESULT_URL = "${DeSubmissionConstants.TEST_RESULT_URL}/poll"
+    val TEST_RESULT_ACK_URL = "${DeSubmissionConstants.TEST_RESULT_URL}/ack"
+
 }
