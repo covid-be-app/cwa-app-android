@@ -17,7 +17,8 @@ import de.rki.coronawarnapp.ui.submission.ScanStatus
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.Event
 import kotlinx.coroutines.launch
-import java.util.Date
+import java.util.*
+import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 class SubmissionViewModel : ViewModel() {
     private val _scanStatus = MutableLiveData(Event(ScanStatus.STARTED))
@@ -114,7 +115,7 @@ class SubmissionViewModel : ViewModel() {
 
     fun deregisterTestFromDevice() {
         deleteTestGUID()
-        SubmissionService.deleteRegistrationToken()
+        BeSubmissionService.deleteRegistrationToken()
         LocalData.isAllowedToSubmitDiagnosisKeys(false)
         LocalData.initialTestResultReceivedTimestamp(0L)
     }
