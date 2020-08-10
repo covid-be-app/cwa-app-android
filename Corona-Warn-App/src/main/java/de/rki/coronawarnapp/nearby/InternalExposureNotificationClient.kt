@@ -1,5 +1,6 @@
 package de.rki.coronawarnapp.nearby
 
+import com.google.android.gms.nearby.Nearby
 import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration.ExposureConfigurationBuilder
 import com.google.android.gms.nearby.exposurenotification.ExposureSummary
@@ -23,8 +24,7 @@ object InternalExposureNotificationClient {
 
     // reference to the client from the Google framework with the given application context
     private val exposureNotificationClient by lazy {
-        MockExposureNotificationClient()
-//        Nearby.getExposureNotificationClient(CoronaWarnApplication.getAppContext())
+        Nearby.getExposureNotificationClient(CoronaWarnApplication.getAppContext())
     }
 
     /****************************************************
