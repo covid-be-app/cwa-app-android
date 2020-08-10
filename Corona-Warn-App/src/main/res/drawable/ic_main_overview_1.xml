@@ -1,18 +1,21 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
     android:width="40dp"
     android:height="42dp"
     android:viewportWidth="40"
     android:viewportHeight="42">
-    <path
-        android:fillColor="#E9F6FF"
-        android:fillType="evenOdd"
-        android:pathData="M20,21m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0"
-        android:strokeWidth="1"
-        android:strokeColor="#00000000" />
-    <path
-        android:fillColor="#17191A"
-        android:fillType="nonZero"
-        android:pathData="M21,26C20.45,26 20,25.55 20,25L20,18L19,18C18.45,18 18,17.55 18,17C18,16.45 18.45,16 19,16L21,16C21.55,16 22,16.45 22,17L22,25C22,25.55 21.55,26 21,26Z"
-        android:strokeWidth="1"
-        android:strokeColor="#00000000" />
+    <group android:name="group">
+        <path
+            android:name="path"
+            android:pathData="M 20 1 C 15.777 1 11.661 2.337 8.244 4.82 C 4.828 7.302 2.284 10.803 0.979 14.82 C -0.326 18.836 -0.326 23.164 0.979 27.18 C 2.284 31.197 4.828 34.698 8.244 37.18 C 11.661 39.663 15.777 41 20 41 C 24.223 41 28.339 39.663 31.756 37.18 C 35.172 34.698 37.716 31.197 39.021 27.18 C 40.326 23.164 40.326 18.836 39.021 14.82 C 37.716 10.803 35.172 7.302 31.756 4.82 C 28.339 2.337 24.223 1 20 1 Z"
+            android:fillColor="#d7f4e3"
+            android:strokeWidth="1"
+            android:fillType="evenOdd"/>
+        <path
+            android:name="path_1"
+            android:pathData="M 20 29.8 C 19.6 29.8 19.3 29.7 19 29.6 C 18.7 29.4 18.5 29.2 18.5 28.9 L 18.5 16.9 L 17.8 17.6 C 17.7 17.7 17.6 17.7 17.5 17.7 C 17.4 17.7 17.3 17.8 17.3 17.8 C 17 17.8 16.8 17.7 16.6 17.4 C 16.4 17.2 16.3 16.9 16.3 16.6 C 16.3 16.4 16.3 16.2 16.4 16 C 16.5 15.8 16.6 15.7 16.8 15.5 L 19.5 13.5 C 19.6 13.4 19.7 13.4 19.8 13.3 C 19.9 13.2 20 13.2 20.1 13.2 C 20.4 13.2 20.7 13.3 21 13.5 C 21.3 13.7 21.4 13.9 21.4 14.2 L 21.4 28.8 C 21.4 29.1 21.2 29.4 20.9 29.5 C 20.7 29.7 20.3 29.8 20 29.8 Z"
+            android:fillColor="#25ba6c"
+            android:strokeWidth="1"/>
+    </group>
 </vector>

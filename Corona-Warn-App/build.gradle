@@ -33,12 +33,12 @@ android {
         applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 35
-        versionName "1.2.0"
+        versionCode 39
+        versionName "1.2.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        resConfigs "de", "en", "tr", "bg", "pl", "ro"
+        resConfigs "de", "en", "tr", "bg", "pl", "ro", "fr", "nl"
 
         buildConfigField "String", "DOWNLOAD_CDN_URL", "\"$DOWNLOAD_CDN_URL\""
         buildConfigField "String", "SUBMISSION_CDN_URL", "\"$SUBMISSION_CDN_URL\""
@@ -48,7 +48,6 @@ android {
         //override URLs. Use local.properties if exist.
         // If environment.properties also exist, override local.properties
         def propertiesFile = project.rootProject.file('local.properties')
-
 
         if (propertiesFile.exists()) {
             Properties overridingProperties = new Properties()
@@ -78,11 +77,28 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            def propertiesFile = project.rootProject.file('local.properties')
+            Properties properties = new Properties()
+            properties.load(propertiesFile.newDataInputStream())
+
+            storeFile file(properties["RELEASE_STORE_FILE"])
+            storePassword properties["RELEASE_STORE_PASSWORD"]
+            keyAlias properties["RELEASE_KEY_ALIAS"]
+            keyPassword properties["RELEASE_KEY_PASSWORD"]
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
@@ -162,6 +178,13 @@ android {
         exclude 'CODEOWNERS'
         exclude 'README.md'
         exclude 'CODE_OF_CONDUCT.md'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 
     sourceSets {

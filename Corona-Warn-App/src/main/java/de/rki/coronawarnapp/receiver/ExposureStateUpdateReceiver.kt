@@ -44,13 +44,6 @@ class ExposureStateUpdateReceiver : BroadcastReceiver() {
                 )
             }
 
-            //TODO: does not work with mock impl ?
-//            val token =
-//                intent.getStringExtra(ExposureNotificationClient.EXTRA_TOKEN)
-//                    ?: throw NoTokenException(
-//                        IllegalArgumentException("no token was found in the intent")
-//                    )
-
             val token = LocalData.googleApiToken()
 
             val workManager = WorkManager.getInstance(context)
