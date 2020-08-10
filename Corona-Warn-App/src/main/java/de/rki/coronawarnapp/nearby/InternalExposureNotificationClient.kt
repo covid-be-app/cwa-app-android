@@ -1,6 +1,5 @@
 package de.rki.coronawarnapp.nearby
 
-import com.google.android.gms.nearby.Nearby
 import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration.ExposureConfigurationBuilder
 import com.google.android.gms.nearby.exposurenotification.ExposureSummary
@@ -11,7 +10,7 @@ import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.storage.tracing.TracingIntervalRepository
 import de.rki.coronawarnapp.util.TimeAndDateExtensions.millisecondsToSeconds
 import java.io.File
-import java.util.*
+import java.util.Date
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine

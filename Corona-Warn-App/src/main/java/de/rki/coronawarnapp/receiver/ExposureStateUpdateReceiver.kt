@@ -44,7 +44,7 @@ class ExposureStateUpdateReceiver : BroadcastReceiver() {
                 )
             }
 
-            //TODO: does not work with mock impl ?
+            // TODO: does not work with mock impl ?
 //            val token =
 //                intent.getStringExtra(ExposureNotificationClient.EXTRA_TOKEN)
 //                    ?: throw NoTokenException(
