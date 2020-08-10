@@ -557,7 +557,8 @@
     <string name="settings_tracing_status_location_body">Your location cannot be accessed. Google and/or Android requires access to your device\'s location to use Bluetooth.</string>
     <string name="settings_tracing_status_location_button">Open Device Settings</string>
     <string name="settings_tracing_location_illustration_description_inactive"></string>
-  
+
+
     <!-- ####################################
          Coronalert
     ##################################### -->
