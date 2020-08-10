@@ -522,7 +522,8 @@ style:
       '**/*.Spek.kt',
       '**/CwaWebException.kt',
       '**/HttpErrorParser.kt',
-      '**/ErrorCodes.kt'
+      '**/ErrorCodes.kt',
+      '**/MobileTestId.kt'
     ]
     ignoreNumbers: ['-1', '0', '1', '2']
     ignoreHashCodeFunction: true

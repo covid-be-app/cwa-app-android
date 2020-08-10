@@ -50,8 +50,11 @@ class SubmissionIntroFragment : Fragment() {
             )
         }
         binding.submissionIntroButtonNext.setOnClickListener {
+//            findNavController().doNavigate(
+//                SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionDispatcherFragment()
+//            )
             findNavController().doNavigate(
-                SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionDispatcherFragment()
+                SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionTestRequestFragment()
             )
         }
     }
