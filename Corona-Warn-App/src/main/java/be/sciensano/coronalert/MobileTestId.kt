@@ -4,7 +4,7 @@ import android.security.keystore.KeyProperties
 import android.util.Base64
 import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import timber.log.Timber
-import java.util.*
+import java.util.Date
 import javax.crypto.KeyGenerator
 import javax.crypto.Mac
 import javax.crypto.SecretKey
@@ -95,4 +95,3 @@ class MobileTestId(
 
     }
 }
-

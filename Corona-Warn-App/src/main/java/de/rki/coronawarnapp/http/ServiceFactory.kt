@@ -11,7 +11,13 @@ import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
 import de.rki.coronawarnapp.http.service.VerificationService
 import de.rki.coronawarnapp.risk.TimeVariables
-import okhttp3.*
+import okhttp3.Cache
+import okhttp3.CipherSuite
+import okhttp3.ConnectionPool
+import okhttp3.ConnectionSpec
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.TlsVersion
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -61,7 +61,8 @@ class SubmissionTestRequestFragment : Fragment() {
         binding.submissionTestRequestButtonNext.setOnClickListener {
 
             findNavController().doNavigate(
-                SubmissionTestRequestFragmentDirections.actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
+                SubmissionTestRequestFragmentDirections
+                    .actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
             )
 
         }

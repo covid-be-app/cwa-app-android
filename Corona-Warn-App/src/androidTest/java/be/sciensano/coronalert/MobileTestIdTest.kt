@@ -9,7 +9,7 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.*
+import java.util.Date
 import javax.crypto.spec.SecretKeySpec
 
 /**
@@ -101,5 +101,4 @@ class MobileTestIdTest {
         val testDecodedK = Base64.decode(value, Base64.DEFAULT)
         return SecretKeySpec(testDecodedK, 0, testDecodedK.size, "AES")
     }
-
 }

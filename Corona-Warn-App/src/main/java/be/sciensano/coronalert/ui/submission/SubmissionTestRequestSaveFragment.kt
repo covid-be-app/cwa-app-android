@@ -81,7 +81,8 @@ class SubmissionTestRequestSaveFragment : Fragment() {
         binding.submissionTestRequestSaveButtonSave.setOnClickListener {
             viewModel.saveTestId()
             findNavController().doNavigate(
-                SubmissionTestRequestSaveFragmentDirections.actionSubmissionTestRequestSaveFragmentToSubmissionResultFragment()
+                SubmissionTestRequestSaveFragmentDirections
+                    .actionSubmissionTestRequestSaveFragmentToSubmissionResultFragment()
             )
 
         }
