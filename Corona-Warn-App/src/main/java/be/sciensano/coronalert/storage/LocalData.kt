@@ -38,6 +38,22 @@ fun LocalData.r0(value: String?) {
     }
 }
 
+fun LocalData.k(): String? = getSharedPreferenceInstance().getString(
+    CoronaWarnApplication.getAppContext()
+        .getString(R.string.preference_k),
+    null
+)
+
+fun LocalData.k(value: String?) {
+    getSharedPreferenceInstance().edit(true) {
+        putString(
+            CoronaWarnApplication.getAppContext()
+                .getString(R.string.preference_k),
+            value
+        )
+    }
+}
+
 fun LocalData.t3(): String? = getSharedPreferenceInstance().getString(
     CoronaWarnApplication.getAppContext()
         .getString(R.string.preference_t3),
@@ -50,6 +66,22 @@ fun LocalData.t3(value: String?) {
             CoronaWarnApplication.getAppContext()
                 .getString(R.string.preference_t3),
             value
+        )
+    }
+}
+
+fun LocalData.resultChannel(): Int = getSharedPreferenceInstance().getInt(
+    CoronaWarnApplication.getAppContext()
+        .getString(R.string.preference_result_channel),
+    -1
+)
+
+fun LocalData.resultChannel(value: Int) {
+    getSharedPreferenceInstance().edit(true) {
+        putInt(
+            CoronaWarnApplication.getAppContext()
+                .getString(R.string.preference_result_channel),
+            -1
         )
     }
 }

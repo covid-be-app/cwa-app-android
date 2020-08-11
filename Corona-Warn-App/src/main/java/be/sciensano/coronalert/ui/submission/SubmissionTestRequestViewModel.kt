@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import be.sciensano.coronalert.MobileTestId
 import be.sciensano.coronalert.storage.r0
+import be.sciensano.coronalert.storage.k
 import be.sciensano.coronalert.storage.t0
 import de.rki.coronawarnapp.storage.LocalData
 import java.util.*
@@ -30,6 +31,7 @@ class SubmissionTestRequestViewModel : ViewModel() {
         _mobileTestId.value?.let { mobileTestId ->
             LocalData.t0(mobileTestId.t0)
             LocalData.r0(mobileTestId.r0)
+            LocalData.k(mobileTestId.k)
             LocalData.registrationToken(mobileTestId.registrationToken())
         }
 
