@@ -45,7 +45,7 @@ class MobileTestId(
             var kEncoded: String? = null
             while (r1 == null) {
                 val k = generateK()
-                kEncoded = Base64.encodeToString(k.encoded, Base64.DEFAULT)
+                kEncoded = Base64.encodeToString(k.encoded, Base64.NO_WRAP)
                 Timber.d("k: %s", kEncoded)
                 r0 = generateR0()
                 Timber.d("r0: %s", r0)

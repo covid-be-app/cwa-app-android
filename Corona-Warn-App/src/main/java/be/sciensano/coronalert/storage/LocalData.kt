@@ -69,3 +69,19 @@ fun LocalData.t3(value: String?) {
         )
     }
 }
+
+fun LocalData.resultChannel(): Int = getSharedPreferenceInstance().getInt(
+    CoronaWarnApplication.getAppContext()
+        .getString(R.string.preference_result_channel),
+    -1
+)
+
+fun LocalData.resultChannel(value: Int) {
+    getSharedPreferenceInstance().edit(true) {
+        putInt(
+            CoronaWarnApplication.getAppContext()
+                .getString(R.string.preference_result_channel),
+            -1
+        )
+    }
+}

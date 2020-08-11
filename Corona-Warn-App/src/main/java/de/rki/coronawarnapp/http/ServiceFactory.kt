@@ -24,7 +24,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.protobuf.ProtoConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
+import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
 import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
+
 
 class ServiceFactory {
     companion object {
@@ -213,5 +215,16 @@ class ServiceFactory {
             .addConverterFactory(gsonConverterFactory)
             .build()
             .create(BeVerificationService::class.java)
+    }
+
+    fun beSubmissionService(): BeSubmissionService = beSubmissionService
+    private val beSubmissionService by lazy {
+        Retrofit.Builder()
+            .client(okHttpClient.buildClientWithNewSpecs(getRestrictedSpecs()))
+            .baseUrl("${submissionCdnUrl}/submission-api/")
+            .addConverterFactory(protoConverterFactory)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+            .create(BeSubmissionService::class.java)
     }
 }
