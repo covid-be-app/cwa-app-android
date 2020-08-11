@@ -7,12 +7,12 @@ import androidx.work.WorkerParameters
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.notification.NotificationHelper
-import de.rki.coronawarnapp.service.submission.SubmissionService
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.util.TimeAndDateExtensions
 import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler.stop
 import timber.log.Timber
+import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 /**
  * Diagnosis Test Result Periodic retrieval
@@ -56,7 +56,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                     System.currentTimeMillis()
                 ) < BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
             ) {
-                val testResult = SubmissionService.asyncRequestTestResult()
+                val testResult = BeSubmissionService.asyncRequestTestResult()
                 initiateNotification(testResult)
             } else {
                 stopWorker()
@@ -85,7 +85,8 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
             if (!CoronaWarnApplication.isAppInForeground) {
                 NotificationHelper.sendNotification(
                     CoronaWarnApplication.getAppContext()
-                        .getString(R.string.notification_name), CoronaWarnApplication.getAppContext()
+                        .getString(R.string.notification_name),
+                    CoronaWarnApplication.getAppContext()
                         .getString(R.string.notification_body),
                     NotificationCompat.PRIORITY_HIGH
                 )
