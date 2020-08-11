@@ -566,6 +566,7 @@
     <string name="preference_r0"><xliff:g id="preference">"preference_r0"</xliff:g></string>
     <string name="preference_t0"><xliff:g id="preference">"preference_t0"</xliff:g></string>
     <string name="preference_t3"><xliff:g id="preference">"preference_t3"</xliff:g></string>
+    <string name="preference_k"><xliff:g id="preference">"preference_k"</xliff:g></string>
 
     <string name="submission_test_request_headline">Get tested</string>
     <string name="submission_test_request_text">Select the date on which you became contagious. This will be communicated to you by the person doing the test.</string>

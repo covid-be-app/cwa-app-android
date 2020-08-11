@@ -12,7 +12,8 @@ import javax.crypto.SecretKey
 class MobileTestId(
     val r0: String,
     val t0: String,
-    val r1: String
+    val r1: String,
+    val k: String
 ) {
 
     override fun toString(): String {
@@ -41,9 +42,11 @@ class MobileTestId(
 
             var r1: String? = null
             var r0: String? = null
+            var kEncoded: String? = null
             while (r1 == null) {
                 val k = generateK()
-                Timber.d("k: %s", Base64.encodeToString(k.encoded, Base64.DEFAULT))
+                kEncoded = Base64.encodeToString(k.encoded, Base64.DEFAULT)
+                Timber.d("k: %s", kEncoded)
                 r0 = generateR0()
                 Timber.d("r0: %s", r0)
                 val info = makeInfo(r0, t0, infoSuffix)
@@ -53,7 +56,7 @@ class MobileTestId(
 
             }
 
-            return MobileTestId(r0!!, t0, r1)
+            return MobileTestId(r0!!, t0, r1, kEncoded!!)
         }
 
         private fun generateK(): SecretKey {

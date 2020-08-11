@@ -1,5 +1,6 @@
 package be.sciensano.coronalert.service.submission
 
+import be.sciensano.coronalert.storage.k
 import be.sciensano.coronalert.storage.r0
 import be.sciensano.coronalert.storage.t0
 import be.sciensano.coronalert.storage.t3
@@ -8,7 +9,7 @@ import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import de.rki.coronawarnapp.util.formatter.TestResult
-import java.util.*
+import java.util.Date
 import de.rki.coronawarnapp.service.submission.SubmissionService as DeSubmissionService
 
 object SubmissionService {
@@ -24,6 +25,7 @@ object SubmissionService {
 
         if (testResultStatus === TestResult.POSITIVE) {
             LocalData.t3(Date().toServerFormat())
+            LocalData.resultChannel(testResult.resultChannel)
         }
 
         if (testResultStatus !== TestResult.PENDING) {
@@ -37,5 +39,7 @@ object SubmissionService {
         DeSubmissionService.deleteRegistrationToken()
         LocalData.t0(null)
         LocalData.r0(null)
+        LocalData.k(null)
+
     }
 }

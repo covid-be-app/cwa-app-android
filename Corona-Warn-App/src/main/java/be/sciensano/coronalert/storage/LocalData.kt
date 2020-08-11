@@ -38,6 +38,22 @@ fun LocalData.r0(value: String?) {
     }
 }
 
+fun LocalData.k(): String? = getSharedPreferenceInstance().getString(
+    CoronaWarnApplication.getAppContext()
+        .getString(R.string.preference_k),
+    null
+)
+
+fun LocalData.k(value: String?) {
+    getSharedPreferenceInstance().edit(true) {
+        putString(
+            CoronaWarnApplication.getAppContext()
+                .getString(R.string.preference_k),
+            value
+        )
+    }
+}
+
 fun LocalData.t3(): String? = getSharedPreferenceInstance().getString(
     CoronaWarnApplication.getAppContext()
         .getString(R.string.preference_t3),
