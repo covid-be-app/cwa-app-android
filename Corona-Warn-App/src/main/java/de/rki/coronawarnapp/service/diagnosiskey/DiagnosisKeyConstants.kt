@@ -48,7 +48,7 @@ object DiagnosisKeyConstants {
 
     /** resource variables but non-static context */
     private var CURRENT_VERSION = "v1"
-    private var CURRENT_COUNTRY = "DE"
+    private var CURRENT_COUNTRY = "BE"
 
     /** Distribution URL built from CDN URL's and REST resources */
     private var VERSIONED_DISTRIBUTION_CDN_URL = "/$VERSION/$CURRENT_VERSION"

@@ -16,8 +16,8 @@ class DiagnosisKeyConstantsTest {
         Assert.assertEquals(DiagnosisKeyConstants.APPCONFIG_COUNTRY_DOWNLOAD_URL, "/version/v1/configuration/country")
         Assert.assertEquals(
             DiagnosisKeyConstants.COUNTRY_APPCONFIG_DOWNLOAD_URL,
-            "/version/v1/configuration/country/DE/app_config"
+            "/version/v1/configuration/country/BE/app_config"
         )
-        Assert.assertEquals(DiagnosisKeyConstants.AVAILABLE_DATES_URL, "/version/v1/diagnosis-keys/country/DE/date")
+        Assert.assertEquals(DiagnosisKeyConstants.AVAILABLE_DATES_URL, "/version/v1/diagnosis-keys/country/BE/date")
     }
 }
