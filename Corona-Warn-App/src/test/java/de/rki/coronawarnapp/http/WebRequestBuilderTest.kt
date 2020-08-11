@@ -17,16 +17,24 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import java.util.Date
+import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
+import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
 
 class WebRequestBuilderTest {
     @MockK
     private lateinit var verificationService: VerificationService
 
     @MockK
+    private lateinit var beVerificationService: BeVerificationService
+
+    @MockK
     private lateinit var distributionService: DistributionService
 
     @MockK
     private lateinit var submissionService: SubmissionService
+
+    @MockK
+    private lateinit var beSubmissionService: BeSubmissionService
 
     @MockK
     private lateinit var verificationKeys: VerificationKeys
@@ -39,7 +47,9 @@ class WebRequestBuilderTest {
         webRequestBuilder = WebRequestBuilder(
             distributionService,
             verificationService,
+            beVerificationService,
             submissionService,
+            beSubmissionService,
             verificationKeys
         )
     }

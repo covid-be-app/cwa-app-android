@@ -2,11 +2,11 @@ package de.rki.coronawarnapp.storage
 
 import androidx.lifecycle.MutableLiveData
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
-import de.rki.coronawarnapp.service.submission.SubmissionService
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
-import java.util.Date
+import java.util.*
+import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 object SubmissionRepository {
     private val TAG: String? = SubmissionRepository::class.simpleName
@@ -34,7 +34,7 @@ object SubmissionRepository {
 
     private suspend fun fetchTestResult(): DeviceUIState {
         try {
-            val testResult = SubmissionService.asyncRequestTestResult()
+            val testResult = BeSubmissionService.asyncRequestTestResult()
 
             if (testResult == TestResult.POSITIVE) {
                 LocalData.isAllowedToSubmitDiagnosisKeys(true)

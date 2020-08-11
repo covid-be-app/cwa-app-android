@@ -30,15 +30,15 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId 'de.rki.coronawarnapp'
+        applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 35
-        versionName "1.2.0"
+        versionCode 40
+        versionName "1.2.3-test"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        
-        resConfigs "de", "en", "tr"
+
+        resConfigs "de", "en", "tr", "bg", "pl", "ro", "fr", "nl"
 
         buildConfigField "String", "DOWNLOAD_CDN_URL", "\"$DOWNLOAD_CDN_URL\""
         buildConfigField "String", "SUBMISSION_CDN_URL", "\"$SUBMISSION_CDN_URL\""
@@ -48,7 +48,6 @@ android {
         //override URLs. Use local.properties if exist.
         // If environment.properties also exist, override local.properties
         def propertiesFile = project.rootProject.file('local.properties')
-
 
         if (propertiesFile.exists()) {
             Properties overridingProperties = new Properties()
@@ -92,12 +91,12 @@ android {
         device {
             dimension "version"
             buildConfigField "String", "BUILD_VARIANT", "\"device\""
-            resValue "string", "app_name", "Corona-Warn"
+            resValue "string", "app_name", "Coronalert"
         }
         deviceForTesters {
             dimension "version"
             buildConfigField "String", "BUILD_VARIANT", "\"deviceForTesters\""
-            resValue "string", "app_name", "CWA TEST"
+            resValue "string", "app_name", "Coronalert TEST"
             applicationIdSuffix '.dev'
 
             def environmentPropertiesFile = project.rootProject.file('environment.properties')
@@ -164,6 +163,13 @@ android {
         exclude 'CODE_OF_CONDUCT.md'
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
     sourceSets {
         deviceForTesters {
             kotlin {
@@ -205,10 +211,10 @@ task jacocoTestReportDeviceRelease(type: JacocoReport, dependsOn: 'testDeviceRel
     ]
 
     def classPaths = [
-        "**/intermediates/classes/deviceRelease/**",
-        "**/intermediates/javac/deviceRelease/*/classes/**", // Android Gradle Plugin 3.2.x support.
-        "**/intermediates/javac/deviceRelease/classes/**", // Android Gradle Plugin 3.4 and 3.5 support.
-        "**/tmp/kotlin-classes/deviceRelease/**"
+            "**/intermediates/classes/deviceRelease/**",
+            "**/intermediates/javac/deviceRelease/*/classes/**", // Android Gradle Plugin 3.2.x support.
+            "**/intermediates/javac/deviceRelease/classes/**", // Android Gradle Plugin 3.4 and 3.5 support.
+            "**/tmp/kotlin-classes/deviceRelease/**"
     ]
 
     def debugTree = fileTree(dir: "$buildDir", includes: classPaths, excludes: excludes)

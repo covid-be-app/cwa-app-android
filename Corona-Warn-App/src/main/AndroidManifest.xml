@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="LockedOrientationActivity"
-    package="de.rki.coronawarnapp">
+    package="de.rki.coronawarnapp"
+    tools:ignore="LockedOrientationActivity">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        tools:node="remove" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"

@@ -1,1079 +1,559 @@
-<?xml version="1.0" encoding="UTF-8"?><resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
-
-    <!-- ####################################
-               Preference Keys
-    ######################################
-    TODO: Check what is needed -->
-
-    <!-- NOTR -->
-    <string name="preference_name"><xliff:g id="preference">"shared_preferences_cwa"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_onboarding_completed"><xliff:g id="preference">"preference_onboarding_completed"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_onboarding_completed_timestamp"><xliff:g id="preference">"preference_onboarding_completed_timestamp"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_reset_app"><xliff:g id="preference">"preference_reset_app"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_only_wifi"><xliff:g id="preference">"preference_only_wifi"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_tracing"><xliff:g id="preference">"preference_tracing"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_timestamp_diagnosis_keys_fetch"><xliff:g id="preference">"preference_timestamp_diagnosis_keys_fetch"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_timestamp_manual_diagnosis_keys_retrieval"><xliff:g id="preference">"preference_timestamp_manual_diagnosis_keys_retrieval"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_string_google_api_token"><xliff:g id="preference">"preference_m_string_google_api_token"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_notifications_enabled"><xliff:g id="preference">"preference_notifications_enabled"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_notifications_risk_enabled"><xliff:g id="preference">"preference_notifications_risk_enabled"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_notifications_test_enabled"><xliff:g id="preference">"preference_notifications_test_enabled"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_background_job_allowed"><xliff:g id="preference">"preference_background_job_enabled"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_mobile_data_allowed"><xliff:g id="preference">"preference_mobile_data_enabled"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_registration_token"><xliff:g id="preference">"preference_registration_token"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_device_pairing_successful_time"><xliff:g id="preference">"preference_device_pairing_successful_time"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_initial_tracing_activation_time"><xliff:g id="preference">"preference_initial_tracing_activation_time"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_initial_result_received_time"><xliff:g id="preference">"preference_initial_result_received_time"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_risk_level_score"><xliff:g id="preference">"preference_risk_level_score"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_risk_level_score_successful"><xliff:g id="preference">"preference_risk_level_score_successful"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_timestamp_risk_level_calculation"><xliff:g id="preference">"preference_timestamp_risk_level_calculation"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_test_guid"><xliff:g id="preference">"preference_test_guid"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_is_allowed_to_submit_diagnosis_keys"><xliff:g id="preference">"preference_is_allowed_to_submit_diagnosis_keys"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_auth_code"><xliff:g id="preference">"preference_auth_code"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_database_password"><xliff:g id="preference">"preference_database_password"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_total_non_active_tracing"><xliff:g id="preference">"preference_total_non_active_tracing"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_last_non_active_tracing_timestamp"><xliff:g id="preference">"preference_last_non_active_tracing_timestamp"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_number_successful_submissions"><xliff:g id="preference">"preference_number_successful_submissions"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_teletan"><xliff:g id="preference">"preference_teletan"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_last_three_hours_from_server"><xliff:g id="preference">"preference_last_three_hours_from_server"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_polling_test_result_started"><xliff:g id="preference">"preference_polling_test_result_started"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_test_result_notification"><xliff:g id="preference">"preference_test_result_notification"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="preference_risk_days_explanation_shown"><xliff:g id="preference">"preference_risk_days_explanation_shown"</xliff:g></string>
-
-    <!-- ####################################
-                     Generics
-    ###################################### -->
-
-    <!-- XACT: back description for screen readers -->
-    <string name="accessibility_back">"Zurück"</string>
-    <!-- XACT: next description for screen readers -->
-    <string name="accessibility_next">"Weiter"</string>
-    <!-- XACT: menu description for screen readers -->
-    <string name="accessibility_menu">"Menü"</string>
-    <!-- XACT: menu description for screen readers -->
-    <string name="accessibility_close">"Schließen"</string>
-    <!-- XACT: menu description for screen readers -->
-    <string name="accessibility_logo">"Corona-Warn-App"</string>
-    <!-- XACT: button description for screen readers to be appended at the end of content without focusable subcontent that are explored by touch -->
-    <string name="accessibility_button">"Button"</string>
-
-    <!-- ####################################
-                     Menu
-    ###################################### -->
-
-    <!-- XMIT: application overview -->
-    <string name="menu_help">"Überblick"</string>
-    <!-- XMIT: application information -->
-    <string name="menu_information">"App-Informationen"</string>
-    <!-- XMIT: application settings -->
-    <string name="menu_settings">"Einstellungen"</string>
-
-    <!-- ####################################
-               Notification
-    ###################################### -->
-    <!-- NOTR -->
-    <string name="notification_channel_id"><xliff:g id="notification_channel_id">"de.rki.coronawarnapp.notification.exposureNotificationChannelId"</xliff:g></string>
-    <!-- NOTR -->
-    <string name="notification_id"><xliff:g id="notification_id">"1"</xliff:g></string>
-    <!-- XTXT: Notification channel name for os settings -->
-    <string name="notification_name">"Corona-Warn-App"</string>
-    <!-- XTXT: Notification channel description for os settings -->
-    <string name="notification_description">"Benachrichtigungen aus der Corona-Warn-App"</string>
-    <!-- XHED: Notification title -->
-    <string name="notification_headline">"Corona-Warn-App"</string>
-    <!-- XTXT: Notification body -->
-    <string name="notification_body">"Es gibt Neuigkeiten von Ihrer Corona-Warn-App."</string>
-
-    <!-- ####################################
-              App Auto Update
-    ###################################### -->
-
-    <!-- XHED: App Auto Update dialog title -->
-    <string name="update_dialog_title">"Update verfügbar"</string>
-    <!-- XTXT: App Auto Update dialog message -->
-    <string name="update_dialog_message">"Bitte beachten Sie: Sie können die Corona-Warn-App erst wieder benutzen, wenn Sie das neueste Update installiert haben."</string>
-    <!-- XBUT: App Auto Update button -->
-    <string name="update_dialog_button">"Update"</string>
-
-    <!-- ####################################
-                  Risk Card
-    ###################################### -->
-
-    <!-- XTXT: risk card - no contact yet -->
-    <string name="risk_card_body_contact">"Bisher keine Risiko-Begegnungen"</string>
-    <!-- XTXT: risk card - number of contacts for one or more -->
-    <plurals name="risk_card_body_contact_value">
-        <item quantity="one">"%1$s Risiko-Begegnung"</item>
-        <item quantity="other">"%1$s Risiko-Begegnungen"</item>
-        <item quantity="zero">"%1$s Risiko-Begegnungen"</item>
-        <item quantity="two">"%1$s Risiko-Begegnungen"</item>
-        <item quantity="few">"%1$s Risiko-Begegnungen"</item>
-        <item quantity="many">"%1$s Risiko-Begegnungen"</item>
-    </plurals>
-    <!-- XTXT: risk card - tracing active for x out of 14 days -->
-    <string name="risk_card_body_saved_days">"Risiko-Ermittlung war für %1$s der letzten 14 Tage aktiv"</string>
-    <!-- XTXT: risk card- tracing active for 14 out of 14 days -->
-    <string name="risk_card_body_saved_days_full">"Risiko-Ermittlung dauerhaft aktiv"</string>
-    <!-- XTXT; risk card - no update done yet -->
-    <string name="risk_card_body_not_yet_fetched">"Begegnungen wurden noch nicht überprüft."</string>
-    <!-- XTXT: risk card - last successful update -->
-    <string name="risk_card_body_time_fetched">"Aktualisiert: %1$s"</string>
-    <!-- XTXT: risk card - next update -->
-    <string name="risk_card_body_next_update">"Tägliche Aktualisierung"</string>
-    <!-- XBUT: risk card - update risk -->
-    <string name="risk_card_button_update">"Aktualisieren"</string>
-    <!-- XBUT: risk card - update risk with time display -->
-    <string name="risk_card_button_cooldown">"Aktualisierung in %1$s"</string>
-    <!-- XBUT: risk card - activate tracing -->
-    <string name="risk_card_button_enable_tracing">"Risiko-Ermittlung einschalten"</string>
-    <!-- XTXT: risk card - tracing is off, user should activate to get an updated risk level -->
-    <string name="risk_card_body_tracing_off">"Aktivieren Sie die Risiko-Ermittlung, um Ihren heutigen Risikostatus zu berechnen."</string>
-    <!-- XHED: risk card - low risk headline -->
-    <string name="risk_card_low_risk_headline">"Niedriges Risiko"</string>
-    <!-- XHED: risk card - increased risk headline -->
-    <string name="risk_card_increased_risk_headline">"Erhöhtes Risiko"</string>
-    <!-- XTXT: risk card - increased risk days since last contact -->
-    <plurals name="risk_card_increased_risk_body_contact_last">
-        <item quantity="one">"%1$s Tag seit der letzten Begegnung"</item>
-        <item quantity="other">"%1$s Tage seit der letzten Begegnung"</item>
-        <item quantity="zero">"%1$s Tage seit der letzten Begegnung"</item>
-        <item quantity="two">"%1$s Tage seit der letzten Begegnung"</item>
-        <item quantity="few">"%1$s Tage seit der letzten Begegnung"</item>
-        <item quantity="many">"%1$s Tage seit der letzten Begegnung"</item>
-    </plurals>
-    <!-- XHED: risk card - unknown risk headline -->
-    <string name="risk_card_unknown_risk_headline">"Unbekanntes Risiko"</string>
-    <!-- XTXT: risk card - tracing isn't active long enough, so a new risk level can't be calculated -->
-    <string name="risk_card_unknown_risk_body">"Da Sie die Risiko-Ermittlung noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen."</string>
-    <!-- XHED: risk card - tracing stopped headline, due to no possible calculation -->
-    <string name="risk_card_no_calculation_possible_headline">"Risiko-Ermittlung gestoppt"</string>
-    <!-- XTXT: risk card - last successfully calculated risk level -->
-    <string name="risk_card_no_calculation_possible_body_saved_risk">"Letzte Risiko-Ermittlung:"<xliff:g id="line_break">"\n"</xliff:g>"%1$s"</string>
-    <!-- XHED: risk card -  outdated risk headline, calculation isn't possible -->
-    <string name="risk_card_outdated_risk_headline">"Risiko-Ermittlung nicht möglich"</string>
-    <!-- XTXT: risk card - outdated risk, calculation couldn't be updated in the last 24 hours -->
-    <string name="risk_card_outdated_risk_body">"Ihre Risiko-Ermittlung konnte seit mehr als 24 Stunden nicht aktualisiert werden."</string>
-    <!-- XTXT: risk card - outdated risk manual, calculation couldn't be updated in the last 48 hours -->
-    <string name="risk_card_outdated_manual_risk_body">"Ihr Risikostatus wurde seit mehr als 48 Stunden nicht aktualisiert. Bitte aktualisieren Sie Ihren Risikostatus."</string>
-    <!-- XHED: risk card - loading headline, update is ongoing -->
-    <string name="risk_card_loading_headline">"Prüfung läuft …"</string>
-    <!-- XTXT: risk card - loading, data is downloaded and will be checked, this can take several minutes -->
-    <string name="risk_card_loading_body">"Es werden aktuelle Daten heruntergeladen und geprüft. Dies kann mehrere Minuten dauern."</string>
-
-    <!-- ####################################
-                    Main
-    ###################################### -->
-
-    <!-- XHED: main, FAQ -->
-    <string name="main_about_headline">"Häufige Fragen"</string>
-    <!-- XTXT: main, explains faq on card -->
-    <string name="main_about_body">"Hier finden Sie Antworten auf häufig gestellte Fragen rund um die Corona-Warn-App. Sie werden auf eine externe Website weitergeleitet."</string>
-    <!-- XTXT: FAQ link, should be translated  -->
-    <string name="main_about_link">"https://www.bundesregierung.de/corona-warn-app-faq"</string>
-    <!-- XACT: Opens external webpage -->
-    <string name="hint_external_webpage">"Häufige Fragen, hier finden Sie Antworten auf häufig gestellte Fragen rund um die Corona-Warn-App. Sie werden auf eine externe Website weitergeleitet."</string>
-
-    <!-- ####################################
-               Main - Share
-    ###################################### -->
-
-    <!-- XHED: Share app link page title -->
-    <string name="main_share_title">"Corona-Warn-App teilen"</string>
-    <!-- XHED: Share app link page subtitle -->
-    <string name="main_share_headline">"Gemeinsam Corona bekämpfen"</string>
-    <!-- YTXT: Share app link page body -->
-    <string name="main_share_body">"Je mehr Menschen mitmachen, desto besser durchbrechen wir Infektionsketten. Laden Sie Familie, Freunde und Bekannte ein!"</string>
-    <!-- XBUT: Share app link page button -->
-    <string name="main_share_button">"Download-Link versenden"</string>
-    <!-- YMSG: Message when sharing is executed -->
-    <string name="main_share_message">"Gemeinsam Corona bekämpfen"<xliff:g id="line_break">"\n"</xliff:g>"Ich bin dabei. Du auch?"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="link_play_store">"https://www.corona-warn-app.de"</xliff:g>"\n"<xliff:g id="line_break">"\n"</xliff:g></string>
-    <!-- XACT: main (share) - illustraction description, explanation image -->
-    <string name="main_share_illustration_description">"Ein Mann teilt die Corona-Warn-App mit vier anderen Personen."</string>
-
-    <!-- ####################################
-                Main - Overview
-    ###################################### -->
-
-    <!-- XHED: App overview page title -->
-    <string name="main_overview_title">"Überblick"</string>
-    <!-- XACT: main overview page title -->
-    <string name="main_overview_accessibility_title">"Überblick"</string>
-    <!-- XHED: App overview subtitle for tracing explanation-->
-    <string name="main_overview_subtitle_tracing">"Risiko-Ermittlung"</string>
-    <!-- YTXT: App overview body text about tracing -->
-    <string name="main_overview_body_tracing">"Die Risiko-Ermittlung ist eine der drei zentralen Funktionen der App. Ist sie aktiv, werden Begegnungen aufgezeichnet. Sie brauchen sich um nichts mehr zu kümmern."</string>
-    <!-- XHED: App overview subtitle for risk explanation -->
-    <string name="main_overview_subtitle_risk">"Infektionsrisiko"</string>
-    <!-- YTXT: App overview body text about risk levels -->
-    <string name="main_overview_body_risk">"Sind Sie innerhalb der letzten 14 Tage einer Corona-positiv getesteten Person begegnet, berechnet die App Ihr persönliches Infektionsrisiko. Als Grundlage dafür misst sie, über welche Dauer und mit welchem Abstand eine Begegnung stattfand."</string>
-    <!-- XHED: App overview subtitle for risk level list -->
-    <string name="main_overview_subtitle_risk_levels">"Folgende Risikostatus können angezeigt werden:"</string>
-    <!-- XTXT: App overview increased risk level -->
-    <string name="main_overview_subtitle_increased_risk">"Erhöhtes Risiko"</string>
-    <!-- XTXT: App overview low risk level -->
-    <string name="main_overview_subtitle_low_risk">"Niedriges Risiko"</string>
-    <!-- XTXT: App overview unknown risk level -->
-    <string name="main_overview_subtitle_unknown_risk">"Unbekanntes Risiko"</string>
-    <!-- XHED: App overview subtitle for test procedure explanation -->
-    <string name="main_overview_headline_test">"Benachrichtigung anderer"</string>
-    <!-- YTXT: App overview body text about rest procedure -->
-    <string name="main_overview_body_test">"Eine weitere zentrale Funktion. Hier können Sie Ihren Test registrieren und seinen Status abfragen. Bei einem positiven Test können Sie andere warnen und damit Infektionsketten unterbrechen."</string>
-    <!-- XHED: App overview headline for glossary -->
-    <string name="main_overview_headline_glossary">"Wichtige Begriffe:"</string>
-    <!-- XHED: App overview subtitle for glossary key storage -->
-    <string name="main_overview_subtitle_glossary_tracing">"Begegnungs-Aufzeichnung"</string>
-    <!-- YTXT: App overview body for glossary key storage -->
-    <string name="main_overview_body_glossary_tracing">"Liste der empfangenen und vorübergehend im Betriebssystemspeicher abgelegten kurzlebigen Zufallscodes. Diese Liste wird bei der Risiko-Überprüfung gelesen. Alle Zufallscodes werden nach 14 Tagen automatisch gelöscht."</string>
-    <!-- XHED: App overview subtitle for glossary risk calculation  -->
-    <string name="main_overview_subtitle_glossary_calculation">"Risiko-Überprüfung"</string>
-    <!-- YTXT: App overview body for glossary risk calculation -->
-    <string name="main_overview_body_glossary_calculation">"Abfrage der Begegnungs-Aufzeichnung und Abgleich mit den gemeldeten Infektionen anderer Nutzerinnen und Nutzer. Die Risiko-Überprüfung erfolgt automatisch ungefähr alle zwei Stunden."</string>
-    <!-- XHED: App overview subtitle for glossary contact  -->
-    <string name="main_overview_subtitle_glossary_contact">"Risiko-Begegnungen"</string>
-    <!-- YTXT: App overview body for glossary contact -->
-    <string name="main_overview_body_glossary_contact">"Jene Begegnungen mit einer Corona-positiv getesteten Person, die über einen längeren Zeitraum und in geringer Distanz stattfanden."</string>
-    <!-- XHED: App overview subtitle for glossary notifications -->
-    <string name="main_overview_subtitle_glossary_notification">"Risiko-Benachrichtigung"</string>
-    <!-- YTXT: App overview body for glossary notifications -->
-    <string name="main_overview_body_glossary_notification">"Die Anzeige von Risiko-Begegnungen in der Corona-Warn-App."</string>
-    <!-- XHED: App overview subtitle for glossary keys -->
-    <string name="main_overview_subtitle_glossary_keys">"Zufallscode"</string>
-    <!-- YTXT: App overview body for glossary keys -->
-    <string name="main_overview_body_glossary_keys">"Die Zufallscodes sind zufällig erzeugte Zahlen- und Buchstabenkombinationen. Sie werden zwischen benachbarten Smartphones ausgetauscht. Zufallscodes lassen sich nicht einer bestimmten Person zuordnen und werden nach 14 Tagen automatisch gelöscht. Eine Corona-positiv getestete Person kann ihre Zufallscodes der letzten bis zu 14 Tage freiwillig mit anderen App-Nutzern teilen."</string>
-    <!-- XACT: main (overview) - illustraction description, explanation image -->
-    <string name="main_overview_illustration_description">"Ein Smartphone zeigt unterschiedliche Inhalte, die von eins bis drei nummeriert sind."</string>
-    <!-- XACT: App main page title -->
-    <string name="main_title">"Hauptseite der Corona-Warn-App"</string>
-
-    <!-- ####################################
-               Risk Details
-    ###################################### -->
-
-    <!-- XHED: risk details - page title, in toolbar -->
-    <string name="risk_details_title">"Ihr Risikostatus"</string>
-    <!-- XHED: risk details - headline, how a user should act -->
-    <string name="risk_details_headline_behavior">"Verhalten"</string>
-    <!-- XHED: risk details - multiline headline, bold, how to act correct -->
-    <string name="risk_details_subtitle_behavior">"So verhalten Sie sich richtig"</string>
-    <!-- XMSG: risk details - go/stay home, something like a bullet point -->
-    <string name="risk_details_behavior_body_stay_home">"Begeben Sie sich, wenn möglich, nach Hause bzw. bleiben Sie zu Hause."</string>
-    <!-- XMSG: risk details - get in touch with the corresponding people, something like a bullet point -->
-    <string name="risk_details_behavior_body_contact_doctor">"Für Fragen zu auftretenden Symptomen, Testmöglichkeiten und weiteren Isolationsmaßnahmen, wenden Sie sich bitte an eine der folgenden Stellen:"</string>
-    <!-- XMSG: risk details - wash your hands, something like a bullet point -->
-    <string name="risk_details_behavior_body_wash_hands">"Waschen Sie Ihre Hände regelmäßig."</string>
-    <!-- XMSG: risk details - wear a face mask, something like a bullet point -->
-    <string name="risk_details_behavior_body_wear_mask">"Tragen Sie einen Mundschutz bei Begegnungen mit anderen Personen."</string>
-    <!-- XMSG: risk details - stay 1,5 away, something like a bullet point -->
-    <string name="risk_details_behavior_body_stay_away">"Halten Sie mindestens 1,5 Meter Abstand zu anderen Personen."</string>
-    <!-- XMSG: risk details - cough/sneeze, something like a bullet point -->
-    <string name="risk_details_behavior_body_cough_sneeze">"Niesen oder husten Sie in die Armbeuge oder in ein Taschentuch."</string>
-    <!-- XMSG: risk details - contact your doctor, bullet point -->
-    <string name="risk_details_behavior_increased_body_1">"Ihre Hausarztpraxis"</string>
-    <!-- XMSG: risk details - panel doctor on-call service, bullet point -->
-    <string name="risk_details_behavior_increased_body_2">"Den kassenärztlichen Bereitschaftsdienst unter der Telefonnummer: 116117"</string>
-    <!-- XMSG: risk details - public health department, bullet point -->
-    <string name="risk_details_behavior_increased_body_3">"Ihr Gesundheitsamt"</string>
-    <!-- XHED: risk details - infection risk headline, below behaviors -->
-    <string name="risk_details_headline_infection_risk">"Infektionsrisiko"</string>
-    <!-- XHED: risk details - infection period logged headling, below behaviors -->
-    <string name="risk_details_headline_period_logged">"Ermittlungszeitraum"</string>
-    <!-- XHED: risk details - infection period logged headling, below behaviors -->
-    <string name="risk_details_subtitle_period_logged">"Dieser Zeitraum wird berücksichtigt"</string>
-    <!-- XHED: risk details - infection period logged information body, below behaviors -->
-    <string name="risk_details_information_body_period_logged">"Die Berechnung des Infektionsrisikos kann nur für die Zeiträume erfolgen, an denen die Risiko-Ermittlung aktiv war. Die Risiko-Ermittlung sollte daher dauerhaft aktiv sein"</string>
-    <!-- XHED: risk details - infection period logged information body, below behaviors -->
-    <string name="risk_details_information_body_period_logged_assessment">"Für Ihre Risiko-Ermittlung wird nur der Zeitraum der letzten 14 Tage betrachtet. In diesem Zeitraum war Ihre Risiko-Ermittlung für eine Gesamtdauer von %1$s Tagen aktiv. Ältere Tage werden automatisch gelöscht, da sie aus Sicht des Infektionsschutzes nicht mehr relevant sind."</string>
-    <!-- XHED: risk details - how your risk level was calculated, below behaviors -->
-    <string name="risk_details_subtitle_infection_risk_past">"So wurde Ihr Risiko ermittelt"</string>
-    <!-- XHED: risk details - how your risk level will be calculated, below behaviors -->
-    <string name="risk_details_subtitle_infection_risk">"So wird Ihr Risiko ermittelt"</string>
-    <!-- XMSG: risk details - risk couldn't be calculated tracing wasn't enabled long enough, below behaviors -->
-    <string name="risk_details_information_body_unknown_risk">"Da Sie die Risiko-Ermittlung noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen."</string>
-    <!-- XMSG: risk details - risk calculation wasn't possible for 24h, below behaviors -->
-    <string name="risk_details_information_body_outdated_risk">"Ihre Risiko-Ermittlung konnte seit mehr als 24 Stunden nicht aktualisiert werden."</string>
-    <!-- YTXT: risk details - low risk explanation text -->
-    <string name="risk_details_information_body_low_risk">"Sie haben ein niedriges Infektionsrisiko, da keine Begegnung mit nachweislich Corona-positiv getesteten Personen aufgezeichnet wurde oder sich Ihre Begegnung auf kurze Zeit und einen größeren Abstand beschränkt hat."</string>
-    <!-- YTXT: risk details - increased risk explanation text with variable for day(s) since last contact -->
-    <plurals name="risk_details_information_body_increased_risk">
-        <item quantity="one">"Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tag mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind."</item>
-        <item quantity="other">"Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind."</item>
-        <item quantity="zero">"Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind."</item>
-        <item quantity="two">"Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind."</item>
-        <item quantity="few">"Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind."</item>
-        <item quantity="many">"Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind."</item>
-    </plurals>
-    <!-- YTXT: risk details - risk calculation explanation -->
-    <string name="risk_details_information_body_notice">"Das Infektionsrisiko wird anhand der Daten der Risiko-Ermittlung unter Berücksichtigung von Abstand und Dauer lokal auf Ihrem Smartphone berechnet. Ihr Infektionsrisiko ist für niemanden einsehbar und wird nicht weitergegeben."</string>
-    <!-- NOTR -->
-    <string name="risk_details_button_update">@string/risk_card_button_update</string>
-    <!-- NOTR -->
-    <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
-    <!-- XACT: risk details page title -->
-    <string name="risk_details_accessibility_title">"Ihr Risikostatus"</string>
-
-    <!-- XHED: one time risk explanation dialog title  -->
-    <string name="risk_details_explanation_dialog_title">Information zur Funktionsweise der Risiko-Ermittlung</string>
-    <!-- YTXT: one time risk explanation dialog - pointing to the faq page for more information-->
-    <string name="risk_details_explanation_dialog_faq_body">Weitere Informationen finden Sie in den FAQ.</string>
-
-    <!-- ####################################
-              Onboarding
-    ###################################### -->
-
-    <!-- XBUT: onboarding - forward and deny -->
-    <string name="onboarding_button_disable">"Nicht aktivieren"</string>
-    <!-- XBUT: onboarding - forward and allow -->
-    <string name="onboarding_button_enable">"Aktivieren"</string>
-    <!-- XBUT: onboarding - back and cancel -->
-    <string name="onboarding_button_cancel">"Abbrechen"</string>
-    <!-- XBUT: onboarding - next -->
-    <string name="onboarding_button_next">"Weiter"</string>
-    <!-- XBUT: onboarding - start -->
-    <string name="onboarding_button_start">"Los geht’s"</string>
-    <!-- XTXT: onboarding - back description for screen reader -->
-    <string name="onboarding_button_back_description">"Zurück"</string>
-    <!-- XACT: Onboarding (together) page title -->
-    <string name="onboarding_onboarding_accessibility_title">"Einführung Seite 1 von 5: Gemeinsam Corona bekämpfen"</string>
-    <!-- XHED: onboarding(together) - fight corona -->
-    <string name="onboarding_headline">"Gemeinsam Corona bekämpfen"</string>
-    <!-- XHED: onboarding(together) - two/three line headline under an illustration -->
-    <string name="onboarding_subtitle">"Mehr Schutz für Sie und uns alle. Mit der Corona-Warn-App durchbrechen wir Infektionsketten schneller."</string>
-    <!-- YTXT: onboarding(together) - inform about the app -->
-    <string name="onboarding_body">"Machen Sie Ihr Smartphone zum Corona-Warn-System. Überblicken Sie Ihren Risikostatus und erfahren Sie, ob in den letzten 14 Tagen Corona-positiv getestete Personen in ihrer Nähe waren."</string>
-    <!-- YTXT: onboarding(together) - explain application -->
-    <string name="onboarding_body_emphasized">"Die App merkt sich Begegnungen zwischen Menschen, indem ihre Smartphones verschlüsselte Zufallscodes austauschen. Und zwar ohne dabei auf persönliche Daten zuzugreifen."</string>
-    <!-- XACT: onboarding(together) - illustraction description, header image -->
-    <string name="onboarding_illustration_description">"Eine vielfältige Gruppe in einer Stadt benutzt Smartphones."</string>
-    <!-- XACT: Onboarding (privacy) page title -->
-    <string name="onboarding_privacy_accessibility_title">"Einführung Seite 2 von 5. Datenschutz. Es folgt ein Langtext. Eine statische Weitertaste steht am unteren Rand des Bildschirms zur Verfügung."</string>
-    <!-- XHED: onboarding(privacy) - title -->
-    <string name="onboarding_privacy_headline">"Datenschutz"</string>
-
-    <!-- XACT: onboarding(privacy) - illustraction description, header image -->
-    <string name="onboarding_privacy_illustration_description">"Eine Frau mit einem Handy benutzt die Corona-Warn-App, ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten."</string>
-    <!-- XACT: Onboarding (tracing) page title -->
-    <string name="onboarding_tracing_accessibility_title">"Einführung Seite 3 von 5: Wie Sie die Risiko Ermittlung ermöglichen"</string>
-    <!-- XHED: onboarding(tracing) - how to enable tracing -->
-    <string name="onboarding_tracing_headline">"Wie Sie die Risiko-Ermittlung ermöglichen"</string>
-    <!-- XHED: onboarding(tracing) - two/three line headline under an illustration -->
-    <string name="onboarding_tracing_subtitle">"Um zu erkennen, ob für Sie ein Infektionsrisiko vorliegt, müssen Sie die Risiko-Ermittlung aktivieren."</string>
-    <!-- YTXT: onboarding(tracing) - explain tracing -->
-    <string name="onboarding_tracing_body">"Die Risiko-Ermittlung funktioniert, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzerinnen und Nutzer empfängt und Ihren eigenen Zufallscode an deren Smartphones weitergibt. Die Funktion lässt sich jederzeit wieder deaktivieren."</string>
-    <!-- YTXT: onboarding(tracing) - explain tracing -->
-    <string name="onboarding_tracing_body_emphasized">"Die verschlüsselten Zufallscodes geben nur Auskunft über das Datum, die Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen. Persönliche Daten wie Name, Adresse oder Aufenthaltsort werden zu keiner Zeit erfasst. Konkrete Rückschlüsse auf Personen sind nicht möglich."</string>
-    <!-- XHED: onboarding(tracing) - headline for consent information -->
-    <string name="onboarding_tracing_headline_consent">"Einwilligungserklärung"</string>
-    <!-- YTXT: onboarding(tracing) - body for consent information -->
-    <string name="onboarding_tracing_body_consent">"Um zu erfahren, ob Sie Kontakt mit einer infizierten Person hatten und für Sie ein Infektionsrisiko besteht, müssen Sie die Funktion Risiko-Ermittlung in der App aktivieren. Der Aktivierung der Risiko-Ermittlung und der damit im Zusammenhang stehenden Datenverarbeitung stimmen Sie mit Antippen des Buttons: Risiko-Ermittlung aktivieren zu."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Um die Risiko-Ermittlung nutzen zu können müssen Sie zudem auf Ihrem Smartphone die von Google bereitgestellte Kontaktaufzeichnungs-Funktion „Benachrichtigungen zu möglicher Begegnung mit COVID-19-Infizierten“ aktivieren und für die Corona-Warn-App freigeben."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Ihr Smartphone erzeugt und versendet bei aktivierter Kontaktaufzeichnung kontinuierlich Zufalls-IDs per Bluetooth, die von anderen Apple- und Android-Smartphones mit ebenfalls aktivierter Kontaktaufzeichnung in Ihrer Umgebung empfangen werden können. Umgekehrt empfängt Ihr Smartphone die Zufalls-IDs der anderen Smartphones. Die eigenen und die von anderen Smartphones empfangenen Zufalls-IDs werden im Kontaktprotokoll der Kontaktaufzeichnungs-Funktion aufgezeichnet und dort für 14 Tage gespeichert."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Zur Ermittlung Ihres Infektionsrisikos lädt die App mehrmals täglich oder auf Abfrage eine Liste mit den Zufalls-IDs aller Nutzer, die Ihre Infektion mit dem Corona-Virus in der App geteilt haben. Diese Liste wird dann mit den im Kontaktprotokoll der Kontaktaufzeichnungs-Funktion gespeicherten Zufalls-IDs verglichen. Wenn die App dabei feststellt, dass Sie möglicherweise Kontakt zu einem infizierten Nutzer gehabt haben, werden Sie von der App informiert, dass Sie mit einer infizierten Person in Kontakt waren und insoweit ein Infektionsrisiko besteht. In diesem Fall erhält die App außerdem Zugriff auf weitere im Kontaktprotokoll der Kontaktaufzeichnungs-Funktion Ihres Smartphones gespeicherte Daten (Datum und Dauer sowie Bluetooth-Signalstärke des Kontakts)."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Aus der Bluetooth-Signalstärke wird der räumliche Abstand abgeleitet (je stärker das Signal, desto geringer der Abstand). Diese Angaben werden von der App ausgewertet, um Ihr Gesundheitsrisiko durch eine Infektion mit dem Corona-Virus abzuschätzen und Ihnen Empfehlungen für die nächsten Schritte zu geben. Diese Auswertung wird ausschließlich lokal auf Ihrem Smartphone durchgeführt. Außer Ihnen erfährt niemand (auch nicht das RKI), ob Sie mit einer infizierten Person Kontakt hatten und welches Risiko für Sie ermittelt wird."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Zum Widerruf Ihrer Einwilligung in die Risiko-Ermittlung können Sie die Funktion über den Schieberegler innerhalb der App deaktivieren oder die App löschen. Wenn Sie die Risiko-Ermittlung wieder nutzen möchten, können Sie den Schieberegler erneut aktivieren oder die App erneut installieren. Wenn Sie die Risiko-Ermittlung deaktivieren, prüft die App nicht mehr, ob Sie Kontakt zu einem infizierten Nutzer gehabt haben. Um auch die Aussendung und den Empfang der Zufalls-IDs anzuhalten, müssen Sie das Kontaktprotokoll der Kontaktaufzeichnungs-Funktion in den Einstellungen Ihres Smartphones deaktivieren. Bitte beachten Sie, dass die im Kontaktprotokoll aufgezeichneten fremden und eigenen Zufalls-Kennungen nicht in der App gelöscht werden. Die im Kontaktprotokoll gespeicherten Daten können Sie nur in den Einstellungen Ihres Smartphones dauerhaft löschen."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Die Datenschutzhinweise der App (einschließlich Informationen zur Datenver1arbeitung für die Risiko-Ermittlung) finden Sie unter dem Menüpunkt „Datenschutzinformation“."</string>
-    <!-- XBUT: onboarding(tracing) - button enable tracing -->
-    <string name="onboarding_tracing_button_next">"Risiko-Ermittlung aktivieren"</string>
-    <!-- XTXT: onboarding(tracing) - dialog about tracing permission declined -->
-    <string name="onboarding_tracing_dialog_headline">"Berechtigung"</string>
-    <!-- YMSI: onboarding(tracing) - dialog about tracing -->
-    <string name="onboarding_tracing_dialog_body">"Corona-Warn-App kann dadurch keine Benachrichtigungen zum COVID-19-Risikostatus versenden und empfangen. Sie können die Funktion jederzeit ausschalten."</string>
-    <!-- XBUT: onboarding(tracing) - positive button (right) -->
-    <string name="onboarding_tracing_dialog_button_positive">"Nicht aktivieren"</string>
-    <!-- XBUT: onboarding(tracing) - negative button (right) -->
-    <string name="onboarding_tracing_dialog_button_negative">"Zurück"</string>
-    <!-- XACT: onboarding(tracing) - dialog about background jobs header text -->
-    <string name="onboarding_background_fetch_dialog_headline">"Hintergrundaktualisierung ausgeschaltet"</string>
-    <!-- YMSI: onboarding(tracing) - dialog about background jobs -->
-    <string name="onboarding_background_fetch_dialog_body">"Sie haben die Hintergrundaktualisierung für die Corona-Warn-App ausgeschaltet. Um die automatische Risiko-Ermittlung zu nutzen, müssen Sie die Hintergrundaktualisierung einschalten. Wenn Sie die Hintergrundaktualisierung nicht einschalten, können Sie Ihre Risiko-Ermittlung nur manuell in der App starten. Sie können die Hintergrundaktualisierung für die App jederzeit in den Geräteeinstellungen einschalten."</string>
-    <!-- XBUT: onboarding(tracing) - dialog about background jobs, open device settings -->
-    <string name="onboarding_background_fetch_dialog_button_positive">"Geräteeinstellungen öffnen"</string>
-    <!-- XBUT: onboarding(tracing) - dialog about background jobs, continue in app -->
-    <string name="onboarding_background_fetch_dialog_button_negative">"Risiko-Ermittlung manuell starten"</string>
-    <!-- XACT: onboarding(tracing) - illustraction description, header image -->
-    <string name="onboarding_tracing_illustration_description">"Drei Personen haben die Risiko-Ermittlung auf ihren Smartphones aktiviert, ihre Begegnung wird daher aufgezeichnet."</string>
-    <!-- XHED: onboarding(tracing) - location explanation for bluetooth headline -->
-    <string name="onboarding_tracing_location_headline">"Standort-Verwendung erlauben"</string>
-    <!-- XTXT: onboarding(tracing) - location explanation for bluetooth body text -->
-    <string name="onboarding_tracing_location_body">"Auf Ihren Standort wird nicht zugegriffen. Die Standort-Erlaubnis wird benötigt, da Google bzw. Android diese für die Verwendung von Bluetooth voraussetzt."</string>
-    <!-- XBUT: onboarding(tracing) - button enable tracing -->
-    <string name="onboarding_tracing_location_button">"Geräte-Einstellungen öffnen"</string>
-    <!-- XACT: Onboarding (test) page title -->
-    <string name="onboarding_test_accessibility_title">"Einführung Seite 4 von 5: Falls Sie positiv getestet wurden"</string>
-    <!-- XHED: onboarding(test) - about positive tests -->
-    <string name="onboarding_test_headline">"Falls Sie Corona-positiv getestet werden …"</string>
-    <!-- XHED: onboarding(test) - two/three line headline under an illustration -->
-    <string name="onboarding_test_subtitle">"… teilen Sie es bitte über die Corona-Warn-App mit. Freiwillig und sicher. Für die Gesundheit aller."</string>
-    <!-- YTXT: onboarding(test) - explain test -->
-    <string name="onboarding_test_body">"Ihre Mitteilung wird zuverlässig verschlüsselt über einen sicheren Server weiterverarbeitet. Die Personen, deren verschlüsselte Zufallscodes Sie gesammelt haben, erhalten nun eine Warnung und Informationen darüber, wie sie weiter vorgehen sollen."</string>
-    <!-- XACT: onboarding(test) - illustraction description, header image -->
-    <string name="onboarding_test_illustration_description">"Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzerinnen und Nutzer warnt."</string>
-    <!-- XACT: Onboarding (datashare) page title -->
-    <string name="onboarding_notifications_accessibility_title">"Einführung Seite 5 von 5: Warnungen erhalten und Risiken erkennen"</string>
-    <!-- XHED: onboarding(datashare) - about positive tests -->
-    <string name="onboarding_notifications_headline">"Warnungen erhalten, Risiken kennen"</string>
-    <!-- XHED: onboarding(datashare) - two/three line headline under an illustration -->
-    <string name="onboarding_notifications_subtitle">"Die App kann Sie automatisch über Ihren Risikostatus informieren und bei Neuinfektionen von Menschen, denen Sie begegnet sind, warnen. Erlauben Sie der App jetzt, Sie zu benachrichtigen."</string>
-    <!-- YTXT: onboarding(datashare) - explain test -->
-    <string name="onboarding_notifications_body">"Auf diese Weise können Sie sich zum Schutz Ihrer Mitmenschen in Isolation begeben und sich nach entsprechender Abklärung testen lassen."</string>
-    <!-- XACT: onboarding(notifications) - illustraction description, header image -->
-    <string name="onboarding_notifications_illustration_description">"Eine Frau erhält eine Mitteilung von ihrer Corona-Warn-App."</string>
-
-    <!-- ####################################
-                  Settings
-    ###################################### -->
-
-    <!-- XHED: settings - settings overview page title -->
-    <string name="settings_title">"Einstellungen"</string>
-    <!-- XTXT: settings - on, like a label next to a setting -->
-    <string name="settings_on">"An"</string>
-    <!-- XTXT: settings - off, like a label next to a setting -->
-    <string name="settings_off">"Aus"</string>
-    <!-- XHED: settings(tracing) - page title -->
-    <string name="settings_tracing_title">"Risiko-Ermittlung"</string>
-    <!-- XHED: settings(tracing) - headline bellow illustration -->
-    <string name="settings_tracing_headline">"So funktioniert die Begegnungs-Aufzeichnung"</string>
-    <!-- XTXT: settings(tracing) - explain text in settings overview under headline -->
-    <string name="settings_tracing_body_description">"Erlauben Sie Erfassung und Weitergabe von COVID-19-Zufallscodes."</string>
-    <!-- XTXT: settings(tracing) - shows status under header in home, active -->
-    <string name="settings_tracing_body_active">"Risiko-Ermittlung aktiv"</string>
-    <!-- XTXT: settings(tracing) - shows status under header in home, inactive -->
-    <string name="settings_tracing_body_inactive">"Risiko-Ermittlung gestoppt"</string>
-    <!-- XTXT: settings(tracing) - shows status under header in home, inactive location -->
-    <string name="settings_tracing_body_inactive_location">"Ortungsdienste deaktiviert"</string>
-    <!-- YTXT: settings(tracing) - explains tracings -->
-    <string name="settings_tracing_body_text">"Um zu erkennen, ob für Sie ein Infektionsrisiko vorliegt, müssen Sie die Risiko-Ermittlung aktivieren. Die Risiko-Ermittlung funktioniert, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzerinnen und Nutzer empfängt und Ihren eigenen Zufallscode an deren Smartphones weitergibt. Die Funktion lässt sich jederzeit wieder deaktivieren."<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Die verschlüsselten Zufallscodes geben nur Auskunft über das Datum, die Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen. Persönliche Daten wie Name, Adresse oder Aufenthaltsort werden zu keiner Zeit erfasst. Konkrete Rückschlüsse auf Personen sind nicht möglich."</string>
-    <!-- XTXT: settings(tracing) - status next to switch under title -->
-    <string name="settings_tracing_status_active">"Aktiv"</string>
-    <!-- XTXT: settings(tracing) - status next to switch under title -->
-    <string name="settings_tracing_status_inactive">"Gestoppt"</string>
-    <!-- XTXT: settings(tracing) - status next to switch under title -->
-    <string name="settings_tracing_status_restricted">"Eingeschränkt"</string>
-    <!-- XTXT: settings(tracing) - shows status under header in home, no internet -->
-    <string name="settings_tracing_body_connection_inactive">"Keine Internetverbindung"</string>
-    <!-- XTXT: settings(tracing) - shows status under header in home, no bluetooth -->
-    <string name="settings_tracing_body_bluetooth_inactive">"Bluetooth deaktiviert"</string>
-    <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
-    <string name="settings_tracing_status_bluetooth_headline">"Bluetooth aktivieren"</string>
-    <!-- XTXT: settings(tracing) - explains user what to do on card if bluetooth is disabled -->
-    <string name="settings_tracing_status_bluetooth_body">"Die Risiko-Ermittlung benötigt aktiviertes Bluetooth, um Begegnungen aufzuzeichnen. Bitte aktivieren Sie Bluetooth in Ihren Geräte-Einstellungen."</string>
-    <!-- XBUT: settings(tracing) - go to operating system settings button on card -->
-    <string name="settings_tracing_status_bluetooth_button">"Geräte-Einstellungen öffnen"</string>
-    <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
-    <string name="settings_tracing_status_connection_headline">"Internetverbindung herstellen"</string>
-    <!-- XTXT: settings(tracing) - explains user what to do on card if connection is disabled -->
-    <string name="settings_tracing_status_connection_body">"Die Risiko-Ermittlung benötigt eine Internetverbindung, um Risiko-Begegnungen berechnen zu können. Bitte aktivieren Sie WLAN oder mobile Daten in Ihren Geräte-Einstellungen."</string>
-    <!-- XBUT: settings(tracing) - go to operating system settings button on card -->
-    <string name="settings_tracing_status_connection_button">"Geräte-Einstellungen öffnen"</string>
-    <!-- XTXT: settings(tracing) - explains the circle progress indicator to the right with the current value -->
-    <plurals name="settings_tracing_status_body_active">
-        <item quantity="one">"Die Risiko-Ermittlung ist seit insgesamt einem Tag aktiv. Eine verlässliche Risiko-Überprüfung kann nur mit einer dauerhaft aktivierten Risiko-Ermittlung erfolgen."</item>
-        <item quantity="other">"Die Risiko-Ermittlung ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Risiko-Überprüfung kann nur mit einer dauerhaft aktivierten Risiko-Ermittlung erfolgen."</item>
-        <item quantity="zero">"Die Risiko-Ermittlung ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Risiko-Überprüfung kann nur mit einer dauerhaft aktivierten Risiko-Ermittlung erfolgen."</item>
-        <item quantity="two">"Die Risiko-Ermittlung ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Risiko-Überprüfung kann nur mit einer dauerhaft aktivierten Risiko-Ermittlung erfolgen."</item>
-        <item quantity="few">"Die Risiko-Ermittlung ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Risiko-Überprüfung kann nur mit einer dauerhaft aktivierten Risiko-Ermittlung erfolgen."</item>
-        <item quantity="many">"Die Risiko-Ermittlung ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Risiko-Überprüfung kann nur mit einer dauerhaft aktivierten Risiko-Ermittlung erfolgen."</item>
-    </plurals>
-    <!-- XACT: settings(tracing) - describes illustration -->
-    <string name="settings_tracing_illustration_description_active">"Drei Personen haben die Risiko-Ermittlung auf ihren Smartphones aktiviert, ihre Begegnung wird daher aufgezeichnet."</string>
-    <!-- XACT: settings(tracing) - describes illustration -->
-    <string name="settings_tracing_illustration_description_inactive">"Eine Person hat die Risiko-Ermittlung auf ihrem Smartphone ausgeschaltet, eine Begegnung mit zwei weiteren Personen wird daher nicht aufgezeichnet."</string>
-    <!-- XACT: settings(tracing) - describes illustration -->
-    <string name="settings_tracing_bluetooth_illustration_description_inactive">"Eine Person hat Bluetooth auf ihrem Smartphone ausgeschaltet, eine Begegnung mit zwei weiteren Personen wird daher nicht aufgezeichnet."</string>
-    <!-- XACT: settings(tracing) - describes illustration -->
-    <string name="settings_tracing_connection_illustration_description_inactive">"Eine Person hat die Internetverbindung auf ihrem Smartphone ausgeschaltet, eine Begegnung mit zwei weiteren Personen wird daher nicht aufgezeichnet."</string>
-
-    <!-- XHED: settings(notification) - notification page title -->
-    <string name="settings_notifications_title">"Mitteilungen"</string>
-    <!-- XHED: settings(notification) - multiline headline below illustration, active -->
-    <string name="settings_notifications_headline_active">"Möchten Sie Mitteilungen zu Ihrem COVID-19-Risikostatus aktivieren?"</string>
-    <!-- XHED: settings(notification) - multiline headline below illustration, inactive -->
-    <string name="settings_notifications_headline_inactive">"Mitteilungen sind deaktiviert"</string>
-    <!-- XTXT: settings(notification) - text in row on settings overview -->
-    <string name="settings_notifications_body_description">"Erlauben Sie automatische Benachrichtigungen zu COVID-19-Risikostatus."</string>
-    <!-- YTXT: settings(notification) - description text when it notifications are enabled -->
-    <string name="settings_notifications_body_active">"Legen Sie fest, zu welchen Themen Sie informiert bleiben möchten."</string>
-    <!-- XTXT: settings(notification) - explains what the user has to do to activate settings -->
-    <string name="settings_notifications_body_inactive">"Um Mitteilungen zu aktivieren, müssen Sie Mitteilungen für die Corona-Warn-App in Ihren Telefoneinstellungen zulassen."</string>
-    <!-- XHED: settings(notification) - card headline -->
-    <string name="settings_notifications_headline_card">"Mitteilungen aktivieren"</string>
-    <!-- XHED: settings - notification headline on settings overview -->
-    <string name="settings_notifications_subtitle_notification">"Mitteilungen"</string>
-    <!-- XTXT: settings(notification) - next to a switch -->
-    <string name="settings_notifications_subtitle_update_risk">"Ändern Ihres Infektionsrisikos"</string>
-    <!-- XTXT: settings(notification) - next to a switch -->
-    <string name="settings_notifications_subtitle_update_test">"Status Ihres COVID-19 Tests"</string>
-    <!-- XBUT: settings(notification) - go to operating settings -->
-    <string name="settings_notifications_button_open_settings">"Geräte-Einstellungen öffnen"</string>
-    <!-- XACT: main (overview) - illustraction description, explanation image, displays notificatin status, active -->
-    <string name="settings_notifications_illustration_description_active">"Eine Frau erhält eine Mitteilung von ihrer Corona-Warn-App."</string>
-    <!-- XACT: main (overview) - illustraction description, explanation image, displays notificatin status, inactive -->
-    <string name="settings_notifications_illustration_description_inactive">"Eine Frau hat die Mitteilungen ihrer Corona-Warn-App ausgeschaltet."</string>
-    <!-- XBUT: settings - go to reset application -->
-    <string name="settings_reset_title">"Anwendung zurücksetzen"</string>
-    <!-- XTXT: settings(reset) - explains the user what do expect when he navigates to reset -->
-    <string name="settings_reset_body_description">"Löschen Sie alle Ihre Daten in der App."</string>
-    <!-- XHED: settings(reset) - multiline headline below illustration -->
-    <string name="settings_reset_headline">"Sind Sie sicher, dass Sie die Anwendung zurücksetzen wollen?"</string>
-    <!-- XTXT: settings(reset) - explains the consequences -->
-    <string name="settings_reset_body">"Sie werden nicht mehr über Ihre Risiko-Begegnungen informiert und können andere Nutzerinnen und Nutzer nicht mehr warnen."</string>
-    <!-- XHED: settings(reset) - on card, explains user to go to the operating system settings -->
-    <string name="settings_reset_headline_keys">"Begegnungs-"<xliff:g id="line_break">"\n"</xliff:g>"Aufzeichnungen löschen"</string>
-    <!-- XTXT: settings(reset) - on card -->
-    <string name="settings_reset_body_keys">"Die Begegnungs-Aufzeichnung muss separat in den Geräte-Einstellungen gelöscht werden."</string>
-    <!-- XBUT: settings(reset) - triggers reset -->
-    <string name="settings_reset_button_positive">"Anwendung zurücksetzen"</string>
-    <!-- XBUT: settings(reset) - cancel reset and navigates the suer back to the settings -->
-    <string name="settings_reset_button_negative">"Abbrechen"</string>
-    <!-- XACT: main (overview) - illustraction description, explanation image -->
-    <string name="settings_reset_illustration_description">"Eine Hand hält ein Smartphone, auf dem das Zurücksetzen der Anwendung symbolisiert wird."</string>
-    <!-- XHED: settings(reset) - dialog headline -->
-    <string name="settings_reset_dialog_headline">"Anwendung zurücksetzen"</string>
-    <!-- XTXT: settings(reset) - dialog content -->
-    <string name="settings_reset_dialog_body">"Sie werden nicht mehr über Ihre Risiko-Begegnungen informiert und können andere Nutzerinnen und Nutzer nicht mehr warnen. Dieser Vorgang kann nicht rückgängig gemacht werden."</string>
-    <!-- XBUT: settings(reset) - dialog cancel -->
-    <string name="settings_reset_dialog_button_cancel">"Abbrechen"</string>
-    <!-- XBUT: settings(reset) - dialog confirm -->
-    <string name="settings_reset_dialog_button_confirm">"Zurücksetzen"</string>
-    <!-- XHED: settings(background priority) - notification page title -->
-    <string name="settings_background_priority_title">"Priorisierte Hintergrundaktivität"</string>
-    <!-- XTXT: settings(background priority) - text in row on settings overview -->
-    <string name="settings_background_priority_body_description">"Erlauben Sie die automatische Aktualisierung Ihres Risikostatus."</string>
-    <!-- XHED: settings(background priority) - multiline headline below illustration -->
-    <string name="settings_background_priority_headline">"Corona-Warn-App im Hintergrund ausführen"</string>
-    <!-- YTXT: settings(background priority) - description text -->
-    <string name="settings_background_priority_body">"Wenn Sie die Priorisierte Hintergrundaktivität anschalten, wird die Corona-Warn-App dauerhaft im Hintergrund ausgeführt. So kann die App jederzeit Ihren Risikostatus ermitteln."</string>
-    <!-- XACT: settings(background priority) - illustraction description -->
-    <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
-    <!-- XTXT: settings(background priority) - explains user what to do on card if background priority is enabled -->
-    <string name="settings_background_priority_card_body">Um die priorisierte Hintergrundaktivität auszuschalten, deaktivieren Sie sie bitte in den Geräte-Einstellungen.</string>
-    <!-- XBUT: settings(background priority) - go to operating system settings button on card -->
-    <string name="settings_background_priority_card_button">Geräte-Einstellungen öffnen</string>
-    <!-- XHED : settings(background priority) - headline on card about the current status and what to do -->
-    <string name="settings_background_priority_card_headline">Priorisierte Hintergrundaktivität ausschalten</string>
-
-    <!-- ####################################
-               App Information
-    ###################################### -->
-
-    <!-- XHED: Page title for menu information page -->
-    <string name="information_title">"App-Informationen"</string>
-    <!-- XTXT: Version information text -->
-    <string name="information_version">"Version: %1s"</string>
-    <!-- XHED: Page title for about information page, also menu item / button text -->
-    <string name="information_about_title">"Über die App"</string>
-    <!-- XHED: Subtitle for about information page -->
-    <string name="information_about_headline">"Gemeinsam Corona bekämpfen"</string>
-    <!-- YTXT: Body text for about information page -->
-    <string name="information_about_body_emphasized">"Das Robert Koch-Institut (RKI) als zentrale Einrichtung des Bundes im Bereich der Öffentlichen Gesundheit und als nationales Public-Health-Institut veröffentlicht die Corona-Warn-App für die gesamte Bundesregierung. Die App ist die digitale Ergänzung zu Abstandhalten, Hygiene und Alltagsmaske."</string>
-    <!-- YTXT: Body text for about information page -->
-    <string name="information_about_body">"Wer sie nutzt, hilft, Infektionsketten schnell nachzuverfolgen und zu durchbrechen. Die App speichert dezentral – auf Ihrem Smartphone – Begegnungen mit anderen. Sie werden informiert, wenn Sie Begegnungen mit nachweislich infizierten Personen hatten. Ihre Privatsphäre bleibt dabei bestens geschützt."</string>
-    <!-- XACT: describes illustration -->
-    <string name="information_about_illustration_description">"Eine vielfältige Gruppe in einer Stadt benutzt Smartphones."</string>
-    <!-- XHED: Page title for privacy information page, also menu item / button text -->
-    <string name="information_privacy_title">"Datenschutz"</string>
-    <!-- XACT: describes illustration -->
-    <string name="information_privacy_illustration_description">"Eine Frau mit einem Handy benutzt die Corona-Warn-App, ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten."</string>
-    <!-- XTXT: Path to the full blown privacy html, to translate it exchange "_de" to "_en" and provide the corresponding html file -->
-    <string name="information_privacy_html_path">"privacy_de.html"</string>
-    <!-- XHED: Page title for terms of use information page, also menu item / button text -->
-    <string name="information_terms_title">"Nutzungsbedingungen"</string>
-    <!-- XHED: Page headline for terms of use information page -->
-    <string name="information_terms_headline">"Inhalt"</string>
-    <!-- XACT: describes illustration -->
-    <string name="information_terms_illustration_description">"Eine Hand hält ein Smartphone mit viel Text, daneben ist ein Haken als Symbol für akzeptierte Nutzungsbedingungen."</string>
-    <!-- XTXT: Path to the full blown terms html, to translate it exchange "_de" to "_en" and provide the corresponding html file -->
-    <string name="information_terms_html_path">"terms_de.html"</string>
-    <!-- XHED: Page title for technical contact and hotline information page, also menu item / button text -->
-    <string name="information_contact_title">"Technische Hotline"</string>
-    <!-- XHED: Subtitle for technical contact and hotline information page -->
-    <string name="information_contact_headline">"Wie können wir Ihnen helfen?"</string>
-    <!-- YTXT: Body text for technical contact and hotline information page -->
-    <string name="information_contact_body">"Für technische Fragen rund um die Corona-Warn-App können Sie sich direkt an unsere technische Hotline wenden."</string>
-    <!-- XHED: Subtitle for technical contact and hotline information page -->
-    <string name="information_contact_subtitle_phone">"Technische Hotline:"</string>
-    <!-- XLNK: Button / hyperlink to phone call for technical contact and hotline information page -->
-    <string name="information_contact_button_phone">"+49 800 7540001"</string>
-    <!-- XBUT: CAUTION - ONLY UPDATE THE NUMBER IF NEEDED, ONLY NUMBERS AND NO SPECIAL CHARACTERS EXCEPT "+" and "space" ALLOWED IN THIS FIELD; -->
-    <string name="information_contact_phone_call_number">"+49 800 7540001"</string>
-    <!-- XTXT: Body text for technical contact and hotline information page -->
-    <string name="information_contact_body_phone">"Unser Kundenservice ist für Sie da."</string>
-    <!-- YTXT: Body text for technical contact and hotline information page -->
-    <string name="information_contact_body_open">"Sprachen: Deutsch, Englisch, Türkisch \nErreichbarkeit:"<xliff:g id="line_break">"\n"</xliff:g>"Mo - Sa: 07:00 - 22:00 Uhr"<xliff:g id="line_break">"\n(außer an bundesweiten Feiertagen)"</xliff:g><xliff:g id="line_break">"\nDer Anruf ist kostenfrei."</xliff:g></string>
-    <!-- YTXT: Body text for technical contact and hotline information page -->
-    <string name="information_contact_body_other">"Für gesundheitliche Fragen wenden Sie sich bitte an Ihre Hausarztpraxis oder die Hotline des ärztlichen Bereitschaftsdienstes 116 117."</string>
-    <!-- XACT: describes illustration -->
-    <string name="information_contact_illustration_description">"Ein Mann nutzt ein Headset zum Telefonieren."</string>
-    <!-- XLNK: Menu item / hyper link / button text for navigation to FAQ website -->
-    <string name="information_help_title">"Häufige Fragen"</string>
-    <!-- XACT: accessibility hint -->
-    <string name="information_help_title_accessibility">"Häufige Fragen. Sie werden auf eine externe Website weitergeleitet."</string>
-    <!-- XHED: Page title for technical information page, also menu item / button text -->
-    <string name="information_technical_title">"Rechtliche Hinweise"</string>
-    <!-- XACT: describes illustration -->
-    <string name="information_technical_illustration_description">"Eine Hand hält ein Smartphone mit viel Text, daneben ist eine Balkenwaage als Symbol für rechtliche Hinweise."</string>
-    <!-- XTXT: Path to the full blown legal html, to translate it exchange "_de" to "_en" and provide the corresponding html file -->
-    <string name="information_technical_html_path">"technical_de.html"</string>
-    <!-- XHED: Page title for legal information page, also menu item / button text -->
-    <string name="information_legal_title">"Impressum"</string>
-    <!-- XHED: Headline for legal information page, publisher section -->
-    <string name="information_legal_headline_publisher">"Herausgeber"</string>
-    <!-- YTXT: subtitle for legal information page, publisher section -->
-    <string name="information_legal_subtitle_publisher">"(verantwortlich nach § 5 Abs. 1 TMG, § 55 Abs. 1 RStV, DS-GVO, BDSG)"</string>
-    <!-- YTXT: body for legal information page, publisher section -->
-    <string name="information_legal_body_publisher">"Robert Koch-Institut"<xliff:g id="line_break">"\n"</xliff:g>"Nordufer 20"<xliff:g id="line_break">"\n"</xliff:g>"13353 Berlin"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"vertreten durch den Präsidenten"</string>
-    <!-- XHED: Headline for legal information page, contact section -->
-    <string name="information_legal_headline_contact">"Kontakt"</string>
-    <!-- YTXT: subtitle for legal information page, contact section -->
-    <string name="information_legal_subtitle_contact">"E-Mail: CoronaWarnApp@rki.de"<xliff:g id="line_break">"\n"</xliff:g>"Telefon: +49 30 18754 5100"</string>
-    <!-- XHED: Headline for legal information page, tax section -->
-    <string name="information_legal_headline_taxid">"Umsatzsteueridentifikationsnummer"</string>
-    <!-- YTXT: subtitle for legal information page, tax section -->
-    <string name="information_legal_subtitle_taxid">"DE 165 893 430"</string>
-    <!-- XACT: describes illustration -->
-    <string name="information_legal_illustration_description">"Eine Hand hält ein Smartphone mit viel Text, daneben ist ein Paragraphenzeichen als Symbol für das Impressum."</string>
-
-
-    <!-- ####################################
-             Submission
-    ###################################### -->
-
-    <!-- XHED: Dialog title for generic web request error -->
-    <string name="submission_error_dialog_web_generic_error_title">"Fehler"</string>
-    <!-- XMSG: Dialog body for generic web request network error with status code -->
-    <string name="submission_error_dialog_web_generic_network_error_body">"Es ist ein Verbindungsfehler aufgetreten (%1$d). Bitte versuchen Sie es erneut."</string>
-    <!-- XMSG: Dialog body for generic web request error without status code -->
-    <string name="submission_error_dialog_web_generic_error_body">"Es ist ein Verbindungsfehler aufgetreten. Bitte versuchen Sie es erneut."</string>
-    <!-- XBUT: Positive button for generic web request error -->
-    <string name="submission_error_dialog_web_generic_error_button_positive">"Zurück"</string>
-
-    <!-- XHED: Dialog title for already paired test error -->
-    <string name="submission_error_dialog_web_test_paired_title">"Fehler"</string>
-    <!-- XMSG: Dialog body for already paired test error -->
-    <string name="submission_error_dialog_web_test_paired_body">"Der QR-Code / Die TAN ist ungültig oder wurde schon verwendet. Bitte versuchen Sie es erneut oder kontaktieren Sie die technische Hotline über App-Informationen → Technische Hotline."</string>
-    <!-- XBUT: Positive button for already paired test error -->
-    <string name="submission_error_dialog_web_test_paired_button_positive">"Zurück"</string>
-
-    <!-- XHED: Dialog title for could not create submission tan -->
-    <string name="submission_error_dialog_web_paring_invalid_title">"Fehler"</string>
-    <!-- XMSG: Dialog body for could not create submission tan -->
-    <string name="submission_error_dialog_web_paring_invalid_body">"Es konnte keine Übermittlungs-TAN erstellt werden. Bitte kontaktieren Sie die technische Hotline über App-Informationen → Technische Hotline."</string>
-    <!-- XBUT: Positive button for could not create submission tan -->
-    <string name="submission_error_dialog_web_paring_invalid_button_positive">"Zurück"</string>
-
-    <!-- XHED: Dialog title for submission tan invalid -->
-    <string name="submission_error_dialog_web_tan_invalid_title">"Fehler"</string>
-    <!-- XMSG: Dialog body for submission tan invalid -->
-    <string name="submission_error_dialog_web_tan_invalid_body">"Es konnte keine Übermittlungs-TAN erstellt werden. Bitte kontaktieren Sie die technische Hotline über App-Informationen → Technische Hotline."</string>
-    <!-- XBUT: Positive button for submission tan invalid -->
-    <string name="submission_error_dialog_web_tan_invalid_button_positive">"Zurück"</string>
-
-    <!-- Permission Rationale Dialog -->
-    <!-- XHED: Dialog headline QR Scan permission rationale  -->
-    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">"Kamera-Zugriff benötigt"</string>
-    <!-- YTXT: Dialog Body text for QR Scan permission rationale -->
-    <string name="submission_qr_code_scan_permission_rationale_dialog_body">"Bitte erlauben Sie der App die Benutzung der Kamera, um den QR-Code zu scannen."</string>
-    <!-- XBUT: Dialog(QR Scan permission rationale) - positive button (right) -->
-    <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">"Erlauben"</string>
-    <!-- XBUT: Dialog(QR Scan permission rationale) - negative button (left) -->
-    <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative">"Nicht erlauben"</string>
-
-    <!-- Permission Denied Dialog -->
-    <!-- XHED: Dialog headline QR Scan permission denied  -->
-    <string name="submission_qr_code_scan_permission_denied_dialog_headline">"Kamerazugriff benötigt"</string>
-    <!-- YTXT: Dialog Body text for QR Scan permission denied -->
-    <string name="submission_qr_code_scan_permission_denied_dialog_body">"Bitte gehen Sie in die Systemeinstellungen und erlauben Sie der App die Benutzung der Kamera, um den QR-Code zu scannen."</string>
-    <!-- XBUT: Dialog(QR Scan permission denied) - button -->
-    <string name="submission_qr_code_scan_permission_denied_dialog_button">"OK"</string>
-
-    <!-- QR Code Scan Invalid Dialog -->
-    <!-- XHED: Dialog headline for invalid QR code  -->
-    <string name="submission_qr_code_scan_invalid_dialog_headline">"QR-Code nicht korrekt"</string>
-    <!-- YTXT: Dialog Body text for invalid QR code -->
-    <string name="submission_qr_code_scan_invalid_dialog_body">"Der QR-Code ist nicht korrekt. Bitte versuchen Sie es erneut."</string>
-    <!-- XBUT: Dialog(Invalid QR code) - positive button (right) -->
-    <string name="submission_qr_code_scan_invalid_dialog_button_positive">"Erneut versuchen"</string>
-    <!-- XBUT: Dialog(Invalid QR code) - negative button (left) -->
-    <string name="submission_qr_code_scan_invalid_dialog_button_negative">"Abbrechen"</string>
-
-    <!-- QR Code Scan Screen -->
-    <string name="submission_qr_code_scan_title">"Positionieren Sie den QR-Code in den Rahmen."</string>
-    <!-- YTXT: instruction text for QR code scanning  -->
-    <string name="submission_qr_code_scan_body">"Positionieren Sie den QR-Code in den Rahmen."</string>
-
-    <!-- Submission Test Result -->
-    <!-- XHED: Page headline for test result  -->
-    <string name="submission_test_result_headline">"Testergebnis"</string>
-    <!-- XHED: Page subheadline for test result  -->
-    <string name="submission_test_result_subtitle">"Info zum Ablauf:"</string>
-    <!-- XHED: Page headline for results next steps  -->
-    <string name="submission_test_result_steps_added_heading">"Test erfolgreich hinzugefügt"</string>
-    <!-- YTXT: Body text for for results next steps  -->
-    <string name="submission_test_result_steps_added_body">"Ihr Test wurde in der Corona-Warn-App registriert."</string>
-    <!-- XHED: Page headline for pending test result next steps  -->
-    <string name="submission_test_result_pending_steps_waiting_heading">"Testergebnis noch nicht verfügbar"</string>
-    <!-- YTXT: Body text for next steps section of waiting test result page -->
-    <string name="submission_test_result_pending_steps_waiting_body">"Ihr Testergebnis steht noch nicht zur Verfügung."</string>
-    <!-- XBUT: test result pending : refresh button -->
-    <string name="submission_test_result_pending_refresh_button">"Aktualisieren"</string>
-    <!-- XBUT: test result pending : remove the test button -->
-    <string name="submission_test_result_pending_remove_test_button">"Test entfernen"</string>
-    <!-- XHED: Page headline for negative test result next steps  -->
-    <string name="submission_test_result_negative_steps_negative_heading">"Ihr Testergebnis"</string>
-    <!-- YTXT: Body text for next steps section of test negative result -->
-    <string name="submission_test_result_negative_steps_negative_body">"Der Labortest hat keinen Nachweis für das Coronavirus SARS-CoV-2 bei Ihnen ergeben. \n\nBitte entfernen Sie den Test wieder aus der Corona-Warn-App, damit Sie bei Bedarf einen neuen Test hinterlegen können."</string>
-    <!-- XBUT: negative test result : remove the test button -->
-    <string name="submission_test_result_negative_remove_test_button">"Test entfernen"</string>
-    <!-- XHED: Page headline for positive test result screen  -->
-    <string name="submission_test_result_positive_steps_positive_heading">"Ihr Testergebnis"</string>
-    <!-- YTXT: Body text for next steps section of test positive result-->
-    <string name="submission_test_result_positive_steps_positive_body">"Ihr Testergebnis wurde als positiv verifiziert."</string>
-    <!-- XHED: Page headline for other warnings screen  -->
-    <string name="submission_test_result_positive_steps_warning_others_heading">"Andere warnen"</string>
-    <!-- YTXT: Body text for for other warnings screen-->
-    <string name="submission_test_result_positive_steps_warning_others_body">"Ihre Zufallscodes der letzten 14 Tage teilen, um andere zu schützen und die Infektionskette zu unterbrechen."</string>
-    <!-- XBUT: positive test result : continue button -->
-    <string name="submission_test_result_positive_continue_button">"Weiter"</string>
-    <!-- XHED: Page headline for invalid test result screen  -->
-    <string name="submission_test_result_invalid_steps_invalid_heading">"Ihr Testergebnis"</string>
-    <!-- YTXT: Body text for next steps section of invalid test result-->
-    <string name="submission_test_result_invalid_steps_invalid_body">"Es gab ein Problem bei der Auswertung Ihres Tests. Bitte kontaktieren Sie das Gesundheitsamt um Information zum weiteren Vorgehen zu erhalten.\n\nBitte entfernen Sie den Test wieder aus der Corona-Warn-App, damit Sie bei Bedarf einen neuen Test hinterlegen können."</string>
-    <!-- XBUT: invalid test result : remove the test button -->
-    <string name="submission_test_result_invalid_remove_test_button">"Test entfernen"</string>
-    <!-- XHED: Dialog title for tracing required dailog  -->
-    <string name="submission_test_result_dialog_tracing_required_title">"Risiko-Ermittlung erforderlich"</string>
-    <!-- YTXT: Dialog text for tracing required dialog-->
-    <string name="submission_test_result_dialog_tracing_required_message">"Bitte aktivieren Sie die Risiko-Ermittlung, um andere zu warnen."</string>
-    <!-- XBUT: tracing required : OK button -->
-    <string name="submission_test_result_dialog_tracing_required_button">"OK"</string>
-    <!-- XHED: Dialog title for test removal  -->
-    <string name="submission_test_result_dialog_remove_test_title">"Test entfernen?"</string>
-    <!-- YTXT: Dialog text for test removal -->
-    <string name="submission_test_result_dialog_remove_test_message">"Der Test wird endgültig aus der Corona-Warn-App entfernt und kann nicht wieder hinzugefügt werden. Dieser Vorgang kann nicht widerrufen werden."</string>
-    <!-- XBUT: Positive button for test removal -->
-    <string name="submission_test_result_dialog_remove_test_button_positive">"Entfernen"</string>
-    <!-- XBUT: Negative button for test removal -->
-    <string name="submission_test_result_dialog_remove_test_button_negative">"Abbrechen"</string>
-    <!-- XHED: Title for test result card positive -->
-    <string name="submission_test_result_card_positive_title">"SARS-CoV-2 positiv"</string>
-    <!-- YTXT: Body text for test result card positive -->
-    <string name="submission_test_result_card_positive_body">"Das Virus SARS-CoV-2 wurde bei Ihnen nachgewiesen."</string>
-
-    <!-- Submission Tan -->
-    <!-- XHED: Page title for TAN submission pge -->
-    <string name="submission_tan_title">"TAN-Eingabe"</string>
-    <!-- YTXT: Body text for the tan submission page -->
-    <string name="submission_tan_body">"Geben Sie bitte die 10-stellige TAN ein, die Ihnen mitgeteilt wurde."</string>
-    <!-- XBUT: Submit TAN button -->
-    <string name="submission_tan_button_text">"Weiter"</string>
-    <!-- XACT: Submission Tan page title -->
-    <string name="submission_tan_accessibility_title">"TAN-Eingabe"</string>
-    <!-- YTXT: Error text for the tan submission page -->
-    <string name="submission_tan_error">"Ungültige TAN, bitte überprüfen Sie Ihre Eingabe."</string>
-    <!-- YTXT: Error text for the tan submission page (wrong characters) -->
-    <string name="submission_tan_character_error">"Ungültige Eingabe, bitte überprüfen Sie das Zeichen."</string>
-
-    <!-- Submission Intro -->
-    <!-- XHED: Page title for menu at the start of the submission process  -->
-    <string name="submission_intro_title">"Wurden Sie getestet?"</string>
-    <!-- XHED: Page headline for menu the at start of the submission process  -->
-    <string name="submission_intro_headline">"So funktioniert das Corona-Warn-System"</string>
-    <!-- YTXT: submission introduction text -->
-    <string name="submission_intro_text">"Damit die Corona-Warn-App funktioniert, sind wir auf die Mithilfe von Corona-positiv getesteten Personen angewiesen.\n\nDa nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie unerkannt. Sie können jetzt wie folgt vorgehen:"</string>
-    <!-- XBUT: Submission introduction next button-->
-    <string name="submission_intro_button_next">"Weiter"</string>
-    <!-- XACT: Submission intro - illustration description, explanation image -->
-    <string name="submission_intro_illustration_description">"Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzerinnen und Nutzer warnt."</string>
-    <!-- YTXT: submission introduction bullet points -->
-    <string-array name="submission_intro_bullet_points">
-        <item>"Wenn Sie Corona-positiv getestet wurden, können Sie andere warnen."</item>
-        <item>"Wenn Ihnen für einen positiven Testbefund eine TAN mitgeteilt wurde, können Sie diese für die Registrierung des Tests nutzen."</item>
-        <item>"Wenn Sie keine TAN haben, können Sie diese telefonisch anfragen."</item>
-    </string-array>
-    <!-- XACT: Submission Intro page title -->
-    <string name="submission_intro_accessibility_title">"Wurden Sie getestet? So funktioniert das Corona-Warn-System"</string>
-
-    <!-- Dispatcher -->
-    <!-- XHED: Page headline for dispatcher menu  -->
-    <string name="submission_dispatcher_headline">"Auswahl"</string>
-    <!-- XHED: Page subheadline for dispatcher menu  -->
-    <string name="submission_dispatcher_subheadline">"Welche Informationen liegen Ihnen vor?"</string>
-    <!-- YTXT: Dispatcher text for QR code option -->
-    <string name="submission_dispatcher_card_qr">"Dokument mit QR-Code"</string>
-    <!-- YTXT: Body text for QR code dispatcher option -->
-    <string name="submission_dispatcher_qr_card_text">"Registrieren Sie Ihren Test, indem Sie den QR-Code ihres Test-Dokuments scannen."</string>
-    <!-- XHED: Dialog headline for dispatcher QR prviacy dialog  -->
-    <string name="submission_dispatcher_qr_privacy_dialog_headline">"Einwilligungserklärung"</string>
-    <!-- YTXT: Dialog Body text for dispatcher QR privacy dialog -->
-    <string name="submission_dispatcher_qr_privacy_dialog_body">"Durch Antippen von „Erlauben“ willigen Sie ein, dass die App den Status Ihres Corona-Virus-Tests abfragen und in der App anzeigen darf. Diese Funktion steht Ihnen zur Verfügung, wenn Sie einen QR-Code erhalten und eingewilligt haben, dass Ihr Testergebnis an das Serversystem der App übermittelt werden darf. Sobald das Testlabor Ihr Testergebnis auf dem Server hinterlegt hat, können Sie das Ergebnis in der App sehen. Falls Sie Mitteilungen aktiviert haben, werden Sie auch außerhalb der App über den Eingang des Testergebnis informiert. Das Testergebnis selbst wird aus Datenschutzgründen jedoch nur in der App angezeigt. Sie können diese Einwilligung jederzeit widerrufen, indem Sie die Testregistrierung in der App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“."</string>
-    <!-- XBUT: submission(dispatcher QR Dialog) - positive button (right) -->
-    <string name="submission_dispatcher_qr_privacy_dialog_button_positive">"Erlauben"</string>
-    <!-- XBUT: submission(dispatcher QR Dialog) - negative button (left) -->
-    <string name="submission_dispatcher_qr_privacy_dialog_button_negative">"Nicht erlauben"</string>
-    <!-- YTXT: Dispatcher text for TAN code option -->
-    <string name="submission_dispatcher_card_tan_code">"TAN"</string>
-    <!-- YTXT: Body text for TAN code dispatcher option -->
-    <string name="submission_dispatcher_tan_code_card_text">"Registrieren Sie Ihren Test per manueller TAN-Eingabe."</string>
-    <!-- YTXT: Dispatcher text for TELE-TAN option -->
-    <string name="submission_dispatcher_card_tan_tele">"TAN anfragen"</string>
-    <!-- YTXT: Body text for TELE_TAN dispatcher option -->
-    <string name="submission_dispatcher_tan_tele_card_text">"Bitte rufen Sie uns an, falls Sie Corona-positiv getestet wurden."</string>
-    <!-- XACT: Dispatcher Tan page title -->
-    <string name="submission_dispatcher_accessibility_title">"Welche Informationen liegen Ihnen vor?"</string>
-
-    <!-- Submission Positive Other Warning -->
-    <!-- XHED: Page title for the positive result additional warning page-->
-    <string name="submission_positive_other_warning_title">"Andere warnen"</string>
-    <!-- XHED: Page headline for the positive result additional warning page-->
-    <string name="submission_positive_other_warning_headline">"Helfen Sie mit!"</string>
-    <!-- YTXT: Body text for the positive result additional warning page-->
-    <string name="submission_positive_other_warning_body">"Als Nächstes können Sie dafür sorgen, dass das Corona-Warn-System Ihre lokal gespeicherten Zufallscodes der letzten 14 Tage an andere verteilt. So können Sie Ihre Mitmenschen warnen und helfen, die Infektionskette zu unterbrechen.\n\nDa nur unpersönliche Zufallscodes übertragen werden, bleibt Ihre Identität unbekannt."</string>
-    <!-- XHED: Title for the privacy card-->
-    <string name="submission_positive_other_warning_privacy_title">"Datenschutz"</string>
-    <!-- YTXT: Body text for the privacy card-->
-    <string name="submission_positive_other_warning_privacy_body">"Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktivierter Risiko-Ermittlung automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.\n\nDie Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.\n\nSie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“."</string>
-    <!-- XBUT: other warning continue button -->
-    <string name="submission_positive_other_warning_button">"Weiter"</string>
-    <!-- XACT: other warning - illustration description, explanation image -->
-    <string name="submission_positive_other_illustration_description">"Ein Smartphone übermittelt einen positiven Testbefund verschlüsselt ins System."</string>
-
-
-    <!-- Submission Done -->
-    <!-- XHED: Page title for completed submission page -->
-    <string name="submission_done_title">"Vielen Dank!"</string>
-    <!-- YTXT: Body text for completed submission page -->
-    <string name="submission_done_body">"Sie haben einen wichtigen Beitrag geleistet! Dank Ihrer Mithilfe können andere gewarnt werden und entsprechend reagieren."</string>
-    <!-- XHED: Page subtitle for completed submission page -->
-    <string name="submission_done_subtitle">"Bitte beachten Sie:"</string>
-    <!-- YTXT: text after submission: contagious -->
-    <string name="submission_done_contagious">"Sie sind ansteckend."</string>
-    <!-- YTXT: text after submission: isolate -->
-    <string name="submission_done_isolate">"Bitte isolieren Sie sich von anderen Personen."</string>
-    <!-- XHED: Title for further info -->
-    <string name="submission_done_further_info_title">"Weitere Infos:"</string>
-    <!-- YTXT: submission done further info bullet points -->
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="submission_done_further_info_bullet_points">
-        <item>"Ihre Quarantänezeit beträgt im Regelfall 14 Tage. Beobachten und erfassen Sie genau, wie sich Ihre Krankheitszeichen entwickeln."</item>
-        <item>"Sie werden von Ihrem Gesundheitsamt gebeten, eine Liste Ihrer Kontaktpersonen zu erstellen. Dabei sollen alle Personen erfasst werden, mit denen Sie in den zwei Tagen vor Erkrankungsbeginn engen Kontakt (unter 2 Meter, direktes Gespräch) über insgesamt 15 Minuten hatten."</item>
-        <item>"Bitte denken Sie hier auch besonders an Personen, die nicht automatisch durch die App informiert werden, da sie kein Smartphone besitzen oder die App nicht installiert haben."</item>
-        <item>"Auch wenn Sie keine Krankheitszeichen mehr haben und sich wieder gesund fühlen, könnten Sie noch ansteckend sein."</item>
+        <item>Ihre Quarantäne dauert meistens 14 Tage. Bitte beobachten und erfassen Sie den Verlauf Ihrer Symptome genau.</item>
+        <item>Ihre Gesundheitsbehörde wird Sie auffordern, eine Liste der Personen zu erstellen, mit denen Sie Kontakt gehabt haben, d.h., aller Personen, mit denen Sie in den zwei Tagen, bevor Symptome auftraten, länger als 15 Minuten engen Kontakt hatten (weniger als 2 Meter, Gespräch von Angesicht zu Angesicht).</item>
+        <item>Bitte berücksichtigen Sie vor allem Personen, die nicht von der App informiert werden, da sie kein Handy haben oder die App nicht installiert haben.</item>
+        <item>Selbst wenn Sie keine Symptome mehr haben und es Ihnen wieder gut geht, könnten Sie immer noch ansteckend sein.</item>
     </string-array>
-    <!-- XBUT: submission finished button -->
-    <string name="submission_done_button_done">"Fertig"</string>
-    <!-- XACT: submission finished - illustration description, explanation image -->
-    <string name="submission_done_illustration_description">"Eine vielfältige Gruppe begrüßt durch Jubel, dass jemand sein Testergebnis mit anderen geteilt hat."</string>
-
-    <!-- Submission Contact -->
-    <!-- XHED: Page title for contact page in submission flow -->
-    <string name="submission_contact_title">"TAN anfragen"</string>
-    <!-- XHED: Page headline for contact page in submission flow -->
-    <string name="submission_contact_headline">"Info zum Ablauf:"</string>
-    <!-- YTXT: Body text for contact page in submission flow-->
-    <string name="submission_contact_body">"Bitte halten Sie zur TAN-Abfrage Ihren Befundbrief (sofern vorhanden) und Ihre Telefonnummer bereit."</string>
-    <!-- XBUT: submission contact call button -->
-    <string name="submission_contact_button_call">"Anrufen"</string>
-    <!-- XBUT: submission contact enter tan button -->
-    <string name="submission_contact_button_enter">"TAN eingeben"</string>
-    <!-- YTXT: Body text for step 1 of contact page -->
-    <string name="submission_contact_step_1_body">"Hotline anrufen &amp; TAN erfragen:"</string>
-    <!-- XLNK: Button / hyperlink to phone call for TAN contact page -->
-    <string name="submission_contact_number_display">"+49 800 7540002"</string>
-    <!-- XLNK: Technical number which is called when the user clicks on the display number -->
-    <string name="submission_contact_number_dial">"+49 800 7540002"</string>
-    <!-- YTXT: Body text for step 2 of contact page-->
-    <string name="submission_contact_step_2_body">"Test per TAN-Eingabe in der App registrieren"</string>
-    <!-- YTXT: Body text for operating hours in contact page-->
-    <string name="submission_contact_operating_hours_body">"Sprachen:\nDeutsch, Englisch, Türkisch\n\nErreichbarkeit:\nMo - So: Täglich 24 Stunden\n\nDer Anruf ist kostenfrei."</string>
-
-    <!-- XACT: Submission contact page title -->
-    <string name="submission_contact_accessibility_title">"TAN-Anfrage per Telefonanruf"</string>
-    <!-- XACT: Content Description for submission contact step 1, number has to sync with the display number -->
-    <string name="submission_contact_step_1_content">"Im ersten Schritt Hotline anrufen und TAN erfragen, unter der Rufnummer +49 800 7540002. Die Erreichbarkeit ist Montag bis Freitag von 8 bis 22 Uhr sowie Samstag und Sonntag von 10 bis 22 Uhr. Der Anruf ist kostenfrei."</string>
-    <!-- XACT: Content Description for submission contact step 2 -->
-    <string name="submission_contact_step_2_content">"Im zweiten Schritt registrieren Sie den Test per TAN-Eingabe in der App."</string>
-
-    <!-- Submission Status Card -->
-    <!-- XHED: Page title for the various submission status: fetching -->
-    <string name="submission_status_card_title_fetching">"Datenabruf…"</string>
-    <!-- XHED: Page title for the various submission status: unregistered -->
-    <string name="submission_status_card_title_unregistered">"Wurden Sie getestet?"</string>
-    <!-- XHED: Page title for the various submission status: pending -->
-    <string name="submission_status_card_title_pending">"Ergebnis liegt noch nicht vor"</string>
-    <!-- XHED: Page title for the various submission status: available -->
-    <string name="submission_status_card_title_available">"Ihr Ergebnis liegt vor"</string>
-    <!-- XHED: Page title for the various submission status: positive -->
-    <string name="submission_status_card_title_positive">"Befund positiv"</string>
-    <!-- XHED: Subtitle for the submission status card: invalid -->
-    <string name="submission_status_card_subtitle_invalid">"Fehlerhafter Test"</string>
-    <!-- XHED: Subtitle for the submission status card: negative -->
-    <string name="submission_status_card_subtitle_negative">"Befund negativ"</string>
-    <!-- YTXT: Body text for submission status: fetching -->
-    <string name="submission_status_card_body_fetching">"Das Ergebnis wird aktualisiert"</string>
-    <!-- YTXT: Body text for submission status: unregistered -->
-    <string name="submission_status_card_body_unregistered">"Helfen Sie mit, die Infektionskette zu durchbrechen und informieren Sie andere."</string>
-    <!-- YTXT: Body text for submission status: pending -->
-    <string name="submission_status_card_body_pending">"Die Auswertung Ihres Tests ist noch nicht abgeschlossen."</string>
-    <!-- YTXT: Body text for submission status: invalid -->
-    <string name="submission_status_card_body_invalid">"Ihr Test konnte nicht ausgewertet werden."</string>
-    <!-- YTXT: Body text for submission status: positive -->
-    <string name="submission_status_card_body_positive">"Sie wurden positiv auf SARS-CoV-2 getestet."</string>
-    <!-- YTXT: Body text for submission status: negative -->
-    <string name="submission_status_card_body_negative">"Sie wurden negativ auf SARS-CoV-2 getestet."</string>
-    <!-- XBUT: submission status card unregistered button -->
-    <string name="submission_status_card_button_unregistered">"Informieren &amp; helfen"</string>
-    <!-- XBUT: submission status card show results button -->
-    <string name="submission_status_card_button_show_results">"Test anzeigen"</string>
-    <!-- XHED: submission status card positive result subtitle -->
-    <string name="submission_status_card_positive_result_subtitle">"Bitte beachten Sie:"</string>
-    <!-- YTXT: text for contagious card -->
-    <string name="submission_status_card_positive_result_contagious">"Sie sind ansteckend. Isolieren Sie sich von anderen Personen."</string>
-    <!-- YTXT: text for contact card -->
-    <string name="submission_status_card_positive_result_contact">"Das Gesundheitsamt wird sich in den nächsten Tagen telefonisch oder schriftlich bei Ihnen melden."</string>
-    <!-- YTXT: text for share result card-->
-    <string name="submission_status_card_positive_result_share">"Teilen Sie Ihre Zufallscodes, damit andere gewarnt werden können."</string>
-
-    <!-- Test Result Card -->
-    <string name="test_result_card_headline">"Ihr Befund:"</string>
-    <!-- YTXT: virus name text -->
-    <string name="test_result_card_virus_name_text">"SARS-CoV-2"</string>
-    <!-- YTXT: registered at text -->
-    <string name="test_result_card_registered_at_text">"Registriert am %s"</string>
-    <!-- YTXT: negative status text -->
-    <string name="test_result_card_status_negative">"Negativ"</string>
-    <!-- YTXT: positive status text -->
-    <string name="test_result_card_status_positive">"Positiv"</string>
-    <!-- YTXT: invalid status text -->
-    <string name="test_result_card_status_invalid">"Auswertung nicht möglich"</string>
-    <!-- YTXT: pending status text -->
-    <string name="test_result_card_status_pending">"Ergebnis liegt noch nicht vor"</string>
-    <!-- XHED: Title for further info of test result negative -->
-    <string name="test_result_card_negative_further_info_title">"Weitere Infos:"</string>
-    <!-- YTXT: Content for further info of test result negative -->
+    <string-array name="submission_intro_bullet_points">
+        <item>Wenn Sie Corona-positiv getestet wurden, können Sie andere warnen.</item>
+        <item>Wenn Ihnen für einen positiven Testbefund ein CODE mitgeteilt wurde, können Sie ihn zur Registrierung des Tests benutzen.</item>
+        <item>Wenn Sie keinen CODE haben, können Sie ihn telefonisch anfragen.</item>
+    </string-array>
     <string-array name="test_result_card_negative_further_info_bullet_points">
-        <item>"Sie haben trotzdem gesundheitliche Beschwerden? Wenn Sie sich sehr krank fühlen und/oder Ihre Beschwerden sich verschlechtert haben, wenden Sie sich bitte an Ihre Hausarztpraxis."</item>
-        <item>"Bleiben Sie bis zu Ihrer Genesung trotzdem zu Hause. Falls Sie sich durch eine andere Infektion geschwächt mit dem Coronavirus (SARS-CoV-2) infizieren, kann dies zu schwereren Krankheitsverläufen führen."</item>
-        <item>"Gehen Sie nicht krank zur Arbeit, um andere Personen nicht zu gefährden. Falls sich Ihre Symptome verschlechtern, kann die Notwendigkeit eines weiteren SARS-CoV-2-Tests bestehen."</item>
+        <item>Fühlen Sie sich noch angeschlagen? Fragen Sie Ihren Hausarzt, wenn Sie sich sehr krank fühlen und/oder Ihre Beschwerden sich verschlimmert haben.</item>
+        <item>Bleiben Sie bis zu Ihrer Genesung zu Hause. Wenn Sie sich Coronavirus (SARS-CoV-2) infizieren, wenn eine andere Infektion Sie schwächte, könnten Sie sehr krank werden.</item>
+        <item>Gehen Sie nicht krank zur Arbeit, um andere Personen nicht zu gefährden. Falls sich Ihre Symptome verschlechtern, kann die Notwendigkeit eines weiteren SARS-CoV-2-Tests bestehen.</item>
     </string-array>
-
-    <!-- ####################################
-          Button Tooltips for Accessibility
-    ###################################### -->
-    <!-- XACT: back button-->
-    <string name="button_back">"Zurück zur vorherigen Seite"</string>
-    <!-- XACT: proceed button-->
-    <string name="button_proceed">"Fortfahren Button"</string>
-    <!-- XACT: share button-->
-    <string name="button_share">"Teilen"</string>
-    <!-- XACT: menu button-->
-    <string name="button_menu">"Menü"</string>
-    <!-- XACT: Accessibility needs a suffix to strings, to reduce the amount of manual translations this string is appended to accessibility button strings, e.g. "Zurück Taste", "Taste" is the default used by android in german -->
-    <string name="suffix_button">"Taste"</string>
-    <!-- XACT: Accessibility needs a suffix to strings, to reduce the amount of manual translations this string is appended to accessibility content description strings for images, e.g. "Eine Gruppe von... Bild" -->
-    <string name="suffix_image">"Bild"</string>
-
-    <!-- ####################################
-               Business Error Messages
-        ###################################### -->
-    <!-- XTXT: error dialog - detailed text if device is offline  -->
-    <string name="errors_no_network">"Sie sind nicht mit dem Internet verbunden."</string>
-    <!-- XTXT: error dialog - detailed text if device has not enough device space  -->
-    <string name="errors_not_enough_device_storage">"Sie haben nicht genug Speicherplatz."</string>
-    <!-- XTXT: error dialog - detailed text if there is error with Google API  -->
-    <string name="errors_communication_with_api">"Fehler bei der Kommunikation mit der Google Schnittstelle"</string>
-    <!-- XTXT: error dialog - detailed text if there is an error during external navigation / external action -->
-    <string name="errors_external_action">"Diese Aktion ist aktuell leider nicht verfügbar. Bitte kontaktieren Sie die Hotline."</string>
-    <!-- XTXT: error dialog - phone still needs Google Play Services or Google Mobile Services update -->
-    <string name="errors_google_update_needed">"Ihre Corona-Warn-App ist korrekt installiert. Leider fehlt dem Betriebssystem Ihres Smartphones der Dienst „Benachrichtigungen zu möglicher Begegnung mit COVID-19-Infizierten“ und Sie können die Corona-Warn-App nicht nutzen. Weitere Informationen finden Sie in unseren FAQ: https://www.coronawarn.app/de/faq/"</string>
-    <!-- XTXT: error dialog - either Google API Error (10) or reached request limit per day -->
-    <string name="errors_google_api_error">"Ihre Corona-Warn-App läuft fehlerfrei. Leider können Sie Ihren Risikostatus im Moment nicht aktualisieren. Ihre Risiko-Ermittlung ist weiterhin aktiv und funktioniert. Weitere Informationen finden Sie in unseren FAQ: https://www.coronawarn.app/de/faq/ \n"</string>
-
-    <!-- ####################################
-               Generic Error Messages
-        ###################################### -->
-    <!-- XHED: error dialog - headline -->
-    <string name="errors_generic_headline">"Etwas ist schiefgelaufen."</string>
-    <!-- XTXT: error dialog - short text for error reason -->
-    <string name="errors_generic_details_headline">"Ursache"</string>
-    <!-- XBUT: error dialog - button close -->
-    <string name="errors_generic_button_positive">"Okay"</string>
-    <!-- XBUT: error dialog - button show details -->
-    <string name="errors_generic_button_negative">"Details"</string>
-    <!-- XTXT: error dialog - text when no error description is available  -->
-    <string name="errors_generic_text_unknown_error_cause">"Ein unbekannter Fehler ist aufgetreten."</string>
-
-    <!-- ####################################
-           Just for Development
-    ###################################### -->
-    <!-- NOTR -->
-    <string name="lorem_ipsum">"Lorem Ipsum"</string>
-    <!-- NOTR -->
-    <string name="menu_test_api">"Test API"</string>
-    <!-- NOTR -->
-    <string name="menu_test_risk_level">"Test Risk Level"</string>
-    <!-- NOTR -->
-    <string name="menu_test_notification">"Test Notification"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_api_launch">"Android API Test(Manual Test)"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_start">"Start (Broadcast/Receive Bluetooth)"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_get_exposure_keys">"Get Exposure keys (my keys history from api)"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_share_my_keys">"Share my keys via Email"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_enter_other_keys">"Submit Exposure Key"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_show_qr_code">"Show QR Code"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_submit_keys">"Submit keys to Server"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_scan_qr_code">"Scan Exposure Key"</string>
-    <!-- NOTR -->
-    <string name="test_api_switch_last_three_hours_from_server">"Last 3 Hours Mode"</string>
-    <!-- NOTR -->
-    <string name="test_api_button_check_exposure">"Check Exposure Summary"</string>
-    <!-- NOTR -->
-    <string name="test_api_exposure_summary_headline">"Exposure summary"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_daysSinceLastExposure">"Days since last exposure: %1$s"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_attenuation">"Attenuation Durations in Minutes: %1$s"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_summation_risk">"Summation Risk Score: %1$s"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_matchedKeyCount">"Matched key count: %1$s"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_maximumRiskScore">"Maximum risk score %1$s"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_my_keys">"My keys (count: %1$d)"</string>
-    <!-- NOTR -->
-    <string name="test_api_body_other_keys">"Other key"</string>
-    <!-- NOTR -->
-    <string name="test_api_calculate_risk_level">"Calculate Risk Level"</string>
-
+    <string name="preference_name">
+    <xliff:g id="preference">shared_preferences_cwa</xliff:g>
+  </string>
+    <string name="preference_onboarding_completed">
+    <xliff:g id="preference">preference_onboarding_completed</xliff:g>
+  </string>
+    <string name="preference_onboarding_completed_timestamp">
+    <xliff:g id="preference">preference_onboarding_completed_timestamp</xliff:g>
+  </string>
+    <string name="preference_reset_app">
+    <xliff:g id="preference">preference_reset_app</xliff:g>
+  </string>
+    <string name="preference_only_wifi">
+    <xliff:g id="preference">preference_only_wifi</xliff:g>
+  </string>
+    <string name="preference_tracing">
+    <xliff:g id="preference">preference_tracing</xliff:g>
+  </string>
+    <string name="preference_timestamp_diagnosis_keys_fetch">
+    <xliff:g id="preference">preference_timestamp_diagnosis_keys_fetch</xliff:g>
+  </string>
+    <string name="preference_timestamp_manual_diagnosis_keys_retrieval">
+    <xliff:g id="preference">preference_timestamp_manual_diagnosis_keys_retrieval</xliff:g>
+  </string>
+    <string name="preference_string_google_api_token">
+    <xliff:g id="preference">preference_m_string_google_api_token</xliff:g>
+  </string>
+    <string name="preference_notifications_enabled">
+    <xliff:g id="preference">preference_notifications_enabled</xliff:g>
+  </string>
+    <string name="preference_notifications_risk_enabled">
+    <xliff:g id="preference">preference_notifications_risk_enabled</xliff:g>
+  </string>
+    <string name="preference_notifications_test_enabled">
+    <xliff:g id="preference">preference_notifications_test_enabled</xliff:g>
+  </string>
+    <string name="preference_background_job_allowed">
+    <xliff:g id="preference">preference_background_job_enabled</xliff:g>
+  </string>
+    <string name="preference_mobile_data_allowed">
+    <xliff:g id="preference">preference_mobile_data_enabled</xliff:g>
+  </string>
+    <string name="preference_registration_token">
+    <xliff:g id="preference">preference_registration_token</xliff:g>
+  </string>
+    <string name="preference_device_pairing_successful_time">
+    <xliff:g id="preference">preference_device_pairing_successful_time</xliff:g>
+  </string>
+    <string name="preference_initial_tracing_activation_time">
+    <xliff:g id="preference">preference_initial_tracing_activation_time</xliff:g>
+  </string>
+    <string name="preference_initial_result_received_time">
+    <xliff:g id="preference">preference_initial_result_received_time</xliff:g>
+  </string>
+    <string name="preference_risk_level_score">
+    <xliff:g id="preference">preference_risk_level_score</xliff:g>
+  </string>
+    <string name="preference_risk_level_score_successful">
+    <xliff:g id="preference">preference_risk_level_score_successful</xliff:g>
+  </string>
+    <string name="preference_timestamp_risk_level_calculation">
+    <xliff:g id="preference">preference_timestamp_risk_level_calculation</xliff:g>
+  </string>
+    <string name="preference_test_guid">
+    <xliff:g id="preference">preference_test_guid</xliff:g>
+  </string>
+    <string name="preference_is_allowed_to_submit_diagnosis_keys">
+    <xliff:g id="preference">preference_is_allowed_to_submit_diagnosis_keys</xliff:g>
+  </string>
+    <string name="preference_auth_code">
+    <xliff:g id="preference">preference_auth_code</xliff:g>
+  </string>
+    <string name="preference_database_password">
+    <xliff:g id="preference">preference_database_password</xliff:g>
+  </string>
+    <string name="preference_total_non_active_tracing">
+    <xliff:g id="preference">preference_total_non_active_tracing</xliff:g>
+  </string>
+    <string name="preference_last_non_active_tracing_timestamp">
+    <xliff:g id="preference">preference_last_non_active_tracing_timestamp</xliff:g>
+  </string>
+    <string name="preference_number_successful_submissions">
+    <xliff:g id="preference">preference_number_successful_submissions</xliff:g>
+  </string>
+    <string name="preference_teletan">
+    <xliff:g id="preference">preference_teletan</xliff:g>
+  </string>
+    <string name="preference_last_three_hours_from_server">
+    <xliff:g id="preference">preference_last_three_hours_from_server</xliff:g>
+  </string>
+    <string name="preference_polling_test_result_started">
+    <xliff:g id="preference">preference_polling_test_result_started</xliff:g>
+  </string>
+    <string name="preference_test_result_notification">
+    <xliff:g id="preference">preference_test_result_notification</xliff:g>
+  </string>
+    <string name="preference_risk_days_explanation_shown">
+    <xliff:g id="preference">preference_risk_days_explanation_shown</xliff:g>
+  </string>
+    <string name="accessibility_back">Zurück</string>
+    <string name="accessibility_next">Weiter</string>
+    <string name="accessibility_menu">Menü</string>
+    <string name="accessibility_close">Schließen</string>
+    <string name="accessibility_logo">Coronalert-App</string>
+    <string name="accessibility_button">Taste</string>
+    <string name="menu_help">Übersicht</string>
+    <string name="menu_information">App-Informationen</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="notification_channel_id">
+    <xliff:g id="notification_channel_id">de.rki.coronawarnapp.notification.exposureNotificationChannelId</xliff:g>
+  </string>
+    <string name="notification_id">
+    <xliff:g id="notification_id">1</xliff:g>
+  </string>
+    <string name="notification_name">Coronalert-App</string>
+    <string name="notification_description">Meldungen er Coronalert-App</string>
+    <string name="notification_headline">Coronalert-App</string>
+    <string name="notification_body">Neue Berichte Ihrer Coronalert-App.</string>
+    <string name="update_dialog_title">Update verfügbar</string>
+    <string name="update_dialog_message">Achtung: Coronalert-App nur mit dem neuesten Update betriebsbereit.</string>
+    <string name="update_dialog_button">Aktualisieren</string>
+    <string name="risk_card_body_contact">Bisher keine Kontakte</string>
+    <plurals name="risk_card_body_contact_value">
+        <item quantity="one">%1$s Kontakt</item>
+        <item quantity="other">%1$s Kontakte</item>
+    </plurals>
+    <string name="risk_card_body_saved_days">Kontaktlogbuch an %1$s der letzten 14 Tage aktiv</string>
+    <string name="risk_card_body_saved_days_full">Kontaktlogbuch dauerhaft aktiv</string>
+    <string name="risk_card_body_not_yet_fetched">Begegnungen noch nicht überprüft.</string>
+    <string name="risk_card_body_time_fetched">Aktualisiert: %1$s</string>
+    <string name="risk_card_body_next_update">Tägliche Aktualisierung</string>
+    <string name="risk_card_button_update">Aktualisieren</string>
+    <string name="risk_card_button_cooldown">Aktualisierung in %1$s</string>
+    <string name="risk_card_button_enable_tracing">Kontaktlogbuch aktivieren</string>
+    <string name="risk_card_body_tracing_off">Aktivieren Sie das Kontaktlogbuch, um sofort Ihren Risikostatus zu berechnen.</string>
+    <string name="risk_card_low_risk_headline">Niedriges Risiko</string>
+    <string name="risk_card_increased_risk_headline">Erhöhtes Risiko</string>
+    <plurals name="risk_card_increased_risk_body_contact_last">
+        <item quantity="one">%1$s Tag seit der letzten Begegnung</item>
+        <item quantity="other">%1$s Tage seit der letzten Begegnung</item>
+    </plurals>
+    <string name="risk_card_unknown_risk_headline">Unbekanntes Risiko</string>
+    <string name="risk_card_unknown_risk_body">Da Sie das Kontaktlogbuch noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen.</string>
+    <string name="risk_card_no_calculation_possible_headline">Kontaktverfolgung angehalten</string>
+    <string name="risk_card_no_calculation_possible_body_saved_risk">Letzte Kontaktverfolgung:<xliff:g id="line_break">\n</xliff:g>%1$s</string>
+    <string name="risk_card_outdated_risk_headline">Kontaktverfolgung unmöglich</string>
+    <string name="risk_card_outdated_risk_body">Ihr Kontaktlogbuch konnte seit mehr als 24 Stunden nicht aktualisiert werden.</string>
+    <string name="risk_card_outdated_manual_risk_body">Ihr Risikostatus wurde seit mehr als 48 Stunden nicht aktualisiert. Bitte aktualisieren Sie Ihren Risikostatus.</string>
+    <string name="risk_card_loading_headline">Prüfung läuft…</string>
+    <string name="risk_card_loading_body">Aktuelle Daten werden heruntergeladen und geprüft.\n Das kann mehrere Minuten dauern.</string>
+    <string name="main_about_headline">Häufig gestellte Fragen</string>
+    <string name="main_about_body">Hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
+    <string name="main_about_link">https://www.coronalert.be</string>
+    <string name="hint_external_webpage">Häufige Fragen, hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
+    <string name="main_share_title">Coronalert-App teilen</string>
+    <string name="main_share_headline">Gemeinsam gegen Corona</string>
+    <string name="main_share_body">Je häufiger die App benutzt wird, desto eher gebieten wir der Infektion Einhalt. Bitten Sie Familie, Freunde und Bekannte, die App herunterzuladen!</string>
+    <string name="main_share_button">Download-Link versenden</string>
+    <string name="main_share_message">Gemeinsam gegen Corona<xliff:g id="line_break">\n</xliff:g>Ich bin dabei. Du auch?<xliff:g id="line_break">\n</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>\n<xliff:g id="line_break">\n</xliff:g></string>
+    <string name="main_share_illustration_description">Ein Mann teilt die Coronalert-App mit vier anderen Personen.</string>
+    <string name="main_overview_title">Übersicht</string>
+    <string name="main_overview_accessibility_title">Übersicht</string>
+    <string name="main_overview_subtitle_tracing">Kontaktlogbuch</string>
+    <string name="main_overview_body_tracing">Das Kontaktlogbuch ist eine der drei zentralen Funktionen der App. Ist es aktiv, werden Begegnungen aufgezeichnet. Sie brauchen sich um nichts mehr zu kümmern.</string>
+    <string name="main_overview_subtitle_risk">Infektionsrisiko</string>
+    <string name="main_overview_body_risk">Wenn Sie in den vergangenen 14 Tagen Kontakt mit einer mit COVID-19 infizierten Person hatten, errechnet die App Ihr persönliches Infektionsrisiko. Dazu misst sie die Dauer und die Nähe des Kontakts.</string>
+    <string name="main_overview_subtitle_risk_levels">Folgender Risikostatus möglich:</string>
+    <string name="main_overview_subtitle_increased_risk">Erhöhtes Risiko</string>
+    <string name="main_overview_subtitle_low_risk">Niedriges Risiko</string>
+    <string name="main_overview_subtitle_unknown_risk">Unbekanntes Risiko</string>
+    <string name="main_overview_headline_test">Andere Nutzer warnen</string>
+    <string name="main_overview_body_test">Eine weitere zentrale Funktion. Hier können Sie Ihren Test registrieren und seinen Status abfragen. Bei einem positiven Test können Sie andere warnen und damit Infektionsketten unterbrechen.</string>
+    <string name="main_overview_headline_glossary">Begriffsdefinitionen</string>
+    <string name="main_overview_subtitle_glossary_tracing">Kontaktlogbuch</string>
+    <string name="main_overview_body_glossary_tracing">Liste der empfangenen und vorübergehend im Betriebssystemspeicher abgelegten kurzlebigen Zufallscodes. Sie wird bei der Kontaktprüfung gelesen. Alle Zufallscodes werden nach 14 Tagen automatisch gelöscht.</string>
+    <string name="main_overview_subtitle_glossary_calculation">Kontaktprüfung</string>
+    <string name="main_overview_body_glossary_calculation">Kontaktlogbuchdaten werden abgerufen und mit gemeldeten Infektionen anderer Nutzer synchronisiert. Die Kontaktprüfung erfolgt automatisch ca. alle zwei Stunden.</string>
+    <string name="main_overview_subtitle_glossary_contact">Kontakte</string>
+    <string name="main_overview_body_glossary_contact">Begegnungen über einen längeren Zeitraum und in der Nähe von Menschen, bei denen COVID-19 diagnostiziert wurde.</string>
+    <string name="main_overview_subtitle_glossary_notification">Kontaktmeldung</string>
+    <string name="main_overview_body_glossary_notification">Anzeige der Kontakte in Coronalert.</string>
+    <string name="main_overview_subtitle_glossary_keys">Zufallscode</string>
+    <string name="main_overview_body_glossary_keys">Zufallscodes sind zufällig erzeugte Zahlen- und Buchstabenkombinationen. Sie werden zwischen benachbarten Handys ausgetauscht. Zufallscodes lassen sich nicht einer bestimmten Person zuordnen und werden nach 14 Tagen automatisch gelöscht. Eine Corona-positiv getestete Person kann ihre Zufallscodes von bis zu 14 Tage freiwillig mit anderen App-Nutzern teilen.</string>
+    <string name="main_overview_illustration_description">Ein Handy zeigt unterschiedliche Inhalte, die von eins bis drei nummeriert sind.</string>
+    <string name="main_title">Hauptseite der Coronalert-App</string>
+    <string name="risk_details_title">Ihr Risikostatus</string>
+    <string name="risk_details_headline_behavior">Richtlinien</string>
+    <string name="risk_details_subtitle_behavior">So verhalten Sie sich richtig</string>
+    <string name="risk_details_behavior_body_stay_home">Gehen Sie, wenn möglich, nach Hause bzw. bleiben Sie zu Hause.</string>
+    <string name="risk_details_behavior_body_contact_doctor">Bitte wenden Sie sich mit Fragen zu Symptomen, Testmöglichkeiten und weiteren Isolationsmaßnahmen, sich an eine der folgenden Stellen:</string>
+    <string name="risk_details_behavior_body_wash_hands">Waschen Sie Ihre Hände regelmäßig.</string>
+    <string name="risk_details_behavior_body_wear_mask">Tragen Sie einen Mundschutz bei Begegnungen mit anderen Personen.</string>
+    <string name="risk_details_behavior_body_stay_away">Halten Sie mindestens 1,5 Meter Abstand zu anderen Personen.</string>
+    <string name="risk_details_behavior_body_cough_sneeze">Niesen oder husten Sie in die Armbeuge oder in ein Taschentuch.</string>
+    <string name="risk_details_behavior_increased_body_1">Ihr Hausarzt</string>
+    <string name="risk_details_behavior_increased_body_2">Kassenärztlicher Bereitschaftsdienst unter der Telefonnummer: 112</string>
+    <string name="risk_details_behavior_increased_body_3">Ihr Gesundheitsamt</string>
+    <string name="risk_details_headline_infection_risk">Infektionsrisiko</string>
+    <string name="risk_details_headline_period_logged">Erfasste Periode</string>
+    <string name="risk_details_subtitle_period_logged">Diese Periode wird berücksichtigt</string>
+    <string name="risk_details_information_body_period_logged">Ihr Infektionsrisiko kann nur für Perioden errechnet werden, in denen das Kontaktlogbuch aktiv ist. Das Kontaktlogbuch sollte daher immer aktiv sein.</string>
+    <string name="risk_details_information_body_period_logged_assessment">Die Kontaktverfolgung umfasst nur die letzten 14 Tage. In dieser Zeit war Ihre Kontaktverfolgung insgesamt %1$s Tage aktiv. Ältere Aufzeichnungen werden automatisch gelöscht, da sie aus Sicht des Infektionsschutzes irrelevant sind.</string>
+    <string name="risk_details_subtitle_infection_risk_past">So wurde Ihr Risiko ermittelt</string>
+    <string name="risk_details_subtitle_infection_risk">So wird Ihr Risiko ermittelt</string>
+    <string name="risk_details_information_body_unknown_risk">Da Sie das Kontaktlogbuch noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen.</string>
+    <string name="risk_details_information_body_outdated_risk">Ihr Kontaktlogbuch konnte über 24 Stunden lang nicht aktualisiert werden.</string>
+    <string name="risk_details_information_body_low_risk">Sie haben ein niedriges Infektionsrisiko, da kein Kontakt zu nachweislich Corona-positiv getesteten Personen erfasst wurde oder sich Ihr Kontakt auf kurze Zeit und einen größeren Abstand beschränkt hat.</string>
+    <plurals name="risk_details_information_body_increased_risk">
+        <item quantity="one">Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tag mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind.</item>
+        <item quantity="other">Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind.</item>
+    </plurals>
+    <string name="risk_details_information_body_notice">Das Infektionsrisiko wird anhand der Daten im Kontaktlogbuch unter Berücksichtigung von Abstand und Dauer lokal auf Ihrem Handy berechnet. Ihr Infektionsrisiko ist für niemanden einsehbar und wird nicht weitergegeben.</string>
+    <string name="risk_details_button_update">@string/risk_card_button_update</string>
+    <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
+    <string name="risk_details_accessibility_title">Ihr Risikostatus</string>
+    <string name="risk_details_explanation_dialog_title">Information über die Funktionalität Kontaktlogbuch</string>
+    <string name="risk_details_explanation_dialog_faq_body">Weitere Informationen finden Sie in den FAQ.</string>
+    <string name="onboarding_button_disable">Nicht aktivieren</string>
+    <string name="onboarding_button_enable">Aktivieren</string>
+    <string name="onboarding_button_cancel">Abbrechen</string>
+    <string name="onboarding_button_next">Weiter</string>
+    <string name="onboarding_button_start">Los geht’s</string>
+    <string name="onboarding_button_back_description">Zurück</string>
+    <string name="onboarding_onboarding_accessibility_title">Einführung Seite 1 von 5: Gemeinsam gegen Corona</string>
+    <string name="onboarding_headline">Gemeinsam gegen Corona</string>
+    <string name="onboarding_subtitle">Mehr Schutz für Sie und uns alle. Mit der Coronalert-App durchbrechen wir Infektionsketten schneller.</string>
+    <string name="onboarding_body">Machen Sie Ihr Handy zum Corona-Warn-System. Erhalten Sie eine Übersicht über Ihren Risikostatus und erfahren Sie, ob in den letzten 14 Tagen Corona-Infizierte in Ihrer Nähe waren.</string>
+    <string name="onboarding_body_emphasized">Die App merkt sich Begegnungen zwischen Menschen, indem ihre Handys ohne Zugriff auf persönliche Daten verschlüsselte Zufallscodes austauschen.</string>
+    <string name="onboarding_illustration_description">Eine Personengruppe benutzt Handys in einer Stadt.</string>
+    <string name="onboarding_privacy_accessibility_title">Onboarding Seite 2 von 5: Datenschutz. Es folgt ein langer Text. Sie können jederzeit mit der Taste am unteren Bildschirmrand fortfahren.</string>
+    <string name="onboarding_privacy_headline">Datenschutz</string>
+    <string name="onboarding_privacy_illustration_description">Eine Frau mit einem Handy benutzt die Coronalert-App. Ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten.</string>
+    <string name="onboarding_tracing_accessibility_title">Einführung Seite 3 von 5: Das Kontaktlogbuch aktivieren</string>
+    <string name="onboarding_tracing_headline">Das Kontaktlogbuch aktivieren</string>
+    <string name="onboarding_tracing_subtitle">Um zu erkennen, ob Sie infektiongsgefährdet sind, müssen Sie das Kontaktlogbuch aktivieren.</string>
+    <string name="onboarding_tracing_body">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an ihr Handy weitergibt. Die Funktion kann jederzeit deaktiviert werden.</string>
+    <string name="onboarding_tracing_body_emphasized">Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
+    <string name="onboarding_tracing_headline_consent">Einwilligungserklärung</string>
+    <string name="onboarding_tracing_body_consent">Um zu erfahren, ob Sie Kontakt mit einer infizierten Person hatten und für Sie ein Infektionsrisiko besteht, müssen Sie die Funktion Kontaktlogbuch in der App aktivieren. Der Aktivierung des Kontaktlogbuchs und der damit im Zusammenhang stehenden Datenverarbeitung stimmen Sie mit Antippen des Buttons: Kontaktlogbuch aktivieren zu.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zur Nutzung des Kontaktlogbuchs müssen Sie zudem auf dem Handy die von Google bereitgestellte Kontaktverfolgungs-Funktion „Meldungen möglicher Begegnung mit COVID-19-Infizierten“ aktivieren und für die Coronalert-App freigeben.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Ihr Handy erzeugt und versendet bei aktivierter Kontaktverfolgung kontinuierlich Zufalls-IDs per Bluetooth, die von anderen Apple- und Android-Handys mit ebenfalls aktivierter Kontaktverfolgung in Ihrer Umgebung empfangen werden können. Umgekehrt empfängt Ihr Handy die Zufalls-IDs der anderen Handys. Die eigenen und die von anderen Handys empfangenen Zufalls-IDs werden im Kontaktprotokoll der Kontaktverfolgungs-Funktion aufgezeichnet und dort 14 Tage gespeichert.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zur Ermittlung Ihres Infektionsrisikos lädt die App mehrmals täglich oder auf Abfrage eine Liste mit den Zufalls-IDs aller Nutzer, die Ihre Infektion mit dem Corona-Virus in der App geteilt haben. Diese Liste wird dann mit den im Kontaktprotokoll der Kontaktverfolgungs-Funktion gespeicherten Zufalls-IDs verglichen. Wenn die App dabei feststellt, dass Sie möglicherweise Kontakt zu einem infizierten Nutzer hatten, warnt Sie die App dass Sie mit einer infizierten Person in Kontakt waren und insoweit ein Infektionsrisiko besteht. In diesem Fall erhält die App außerdem Zugriff auf weitere im Kontaktprotokoll der Kontaktverfolgungs-Funktion Ihres Smartphones gespeicherte Daten (Datum und Dauer sowie Bluetooth-Signalstärke des Kontakts).<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Aus der Bluetooth-Signalstärke wird der räumliche Abstand abgeleitet (je stärker das Signal, desto geringer der Abstand). Diese Angaben werden von der App ausgewertet, um Ihr Gesundheitsrisiko durch eine COVID-Infektion abzuschätzen und Ihnen Empfehlungen für die nächsten Schritte zu geben. Diese Auswertung wird ausschließlich lokal auf Ihrem Handy durchgeführt. Außer Ihnen erfährt niemand (auch nicht das RKI), ob Sie mit einer infizierten Person Kontakt hatten und welches Risiko für Sie ermittelt wird.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zum Widerruf Ihrer Einwilligung in die Kontaktverfolgung können Sie die Funktion über den Schieberegler innerhalb der App deaktivieren oder die App löschen. Wenn Sie die Kontaktverfolgung wieder nutzen möchten, können Sie den Schieberegler erneut aktivieren oder die App erneut installieren. Wenn Sie die Kontaktverfolgung deaktivieren, prüft die App nicht mehr, ob Sie Kontakt zu einem infizierten Nutzer hatten. Wenn keine weiteren Zufalls-IDs versendet/empfangen werden soll, müssen Sie das Kontaktprotokoll der Kontaktverfolgungs-Funktion in den Einstellungen Ihres Handys deaktivieren. Bitte beachten Sie, dass die im Kontaktprotokoll aufgezeichneten fremden und eigenen Zufalls-Kennungen nicht in der App gelöscht werden. Die im Kontaktprotokoll gespeicherten Daten können Sie nur in den Handy-Einstellungen endgültig löschen.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Die Datenschutzhinweise der App (einschließlich Informationen zur Datenverarbeitung für die Kontaktverfolgung) finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+    <string name="onboarding_tracing_button_next">Kontaktlogbuch aktivieren</string>
+    <string name="onboarding_tracing_dialog_headline">Genehmigung.</string>
+    <string name="onboarding_tracing_dialog_body">Coronalert-App kann dadurch keine Meldungen zum COVID-19-Risikostatus versenden und empfangen. Sie können die Funktion jederzeit ausschalten.</string>
+    <string name="onboarding_tracing_dialog_button_positive">Nicht aktivieren</string>
+    <string name="onboarding_tracing_dialog_button_negative">Zurück</string>
+    <string name="onboarding_tracing_illustration_description">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
+    <string name="onboarding_tracing_location_headline">Standortzugriff erlauben</string>
+    <string name="onboarding_tracing_location_body">Auf Ihren Standort kann nicht zugegriffen werden. Google und/oder Android erfordert für Bluetooth den Zugriff auf den Gerätestandort.</string>
+    <string name="onboarding_tracing_location_button">Geräteeinstellungen öffnen</string>
+    <string name="onboarding_test_accessibility_title">Einführung Seite 4 von 5: Wenn bei Ihnen COVID-19 diagnostiziert wird</string>
+    <string name="onboarding_test_headline">Wenn bei Ihnen COVID-19 diagnostiziert wird,</string>
+    <string name="onboarding_test_subtitle">… teilen Sie es bitte über die Coronalert-App mit. Freiwillig und sicher. Für die Gesundheit aller.</string>
+    <string name="onboarding_test_body">Ihre Meldung wird zuverlässig verschlüsselt über einen sicheren Server weiterverarbeitet. Die Personen, deren verschlüsselte Zufallscodes Sie gesammelt haben, erhalten nun eine Warnung und Informationen darüber, wie sie weiter vorgehen sollen.</string>
+    <string name="onboarding_test_illustration_description">Eine verschlüsselte positive Testdiagnose wird an das System übertragen, das nun andere Nutzer warnt.</string>
+    <string name="onboarding_notifications_accessibility_title">Einführung Seite 5 von 5: Warnungen erhalten und Risiken erkennen</string>
+    <string name="onboarding_notifications_headline">Warnungen erhalten, Risiken erkennen</string>
+    <string name="onboarding_notifications_subtitle">Die App kann Sie automatisch über Ihren Risikostatus informieren und Sie vor Neuinfektionen von Personen warnen, denen Sie begegnet sind. Lassen Sie sich jetzt von der App benachrichtigen.</string>
+    <string name="onboarding_notifications_body">Sie können sich dann selbst isolieren, um andere zu schützen und herausfinden, wo Sie sich testen lassen können.</string>
+    <string name="onboarding_notifications_illustration_description">Eine Frau erhält eine Meldung von ihrer Coronalert-App.</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_on">An</string>
+    <string name="settings_off">Aus</string>
+    <string name="settings_tracing_title">Kontaktverfolgung</string>
+    <string name="settings_tracing_headline">So funktioniert die Kontaktverfolgung</string>
+    <string name="settings_tracing_body_description">Aufzeichnung und Weitergabe von COVID-19-Zufallscodes zulassen.</string>
+    <string name="settings_tracing_body_active">Kontaktlogbuch aktiv</string>
+    <string name="settings_tracing_body_inactive">Kontaktverfolgung angehalten</string>
+    <string name="settings_tracing_body_inactive_location">Ortungsdienste deaktiviert</string>
+    <string name="settings_tracing_body_text">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an ihr Handy weitergibt. Die Funktion kann jederzeit wieder deaktiviert werden.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
+    <string name="settings_tracing_status_active">Aktiv</string>
+    <string name="settings_tracing_status_inactive">Angehalten</string>
+    <string name="settings_tracing_status_restricted">Eingeschränkt</string>
+    <string name="settings_tracing_body_connection_inactive">Keine Internetverbindung</string>
+    <string name="settings_tracing_body_bluetooth_inactive">Bluetooth deaktiviert</string>
+    <string name="settings_tracing_status_bluetooth_headline">Bluetooth aktivieren</string>
+    <string name="settings_tracing_status_bluetooth_body">Zur Kontaktverfolgung muss Bluetooth zur Erfassung von Begegnungen aktiviert werden. Bluetooth bitte in den Geräteeinstellungen aktivieren.</string>
+    <string name="settings_tracing_status_bluetooth_button">Geräteeinstellungen öffnen</string>
+    <string name="settings_tracing_status_connection_headline">Internetverbindung herstellen</string>
+    <string name="settings_tracing_status_connection_body">Zur Kontaktverfolgung bedarf es einer Internetverbindung zur Berechnung der Kontakte. Diese in Geräteeinstellungen WIFI oder Handydaten aktivieren.</string>
+    <string name="settings_tracing_status_connection_button">Geräteeinstellungen öffnen</string>
+    <plurals name="settings_tracing_status_body_active">
+        <item quantity="one">Die Risiko-Ermittlung ist seit insgesamt einem Tag aktiv. Eine verlässliche Kontaktverfolgung kann nur mit einem laufend aktivierten Kontaktlogbuch erfolgen.</item>
+        <item quantity="other">Das Kontaktlogbuch ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Kontaktverfolgung kann nur mit einem laufend aktivierten Kontaktlogbuch erfolgen.</item>
+    </plurals>
+    <string name="settings_tracing_illustration_description_active">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
+    <string name="settings_tracing_illustration_description_inactive">Weil jemand das Kontaktlogbuch auf dem Handy deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
+    <string name="settings_tracing_bluetooth_illustration_description_inactive">Weil jemand auf dem Handy Bluetooth deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
+    <string name="settings_tracing_connection_illustration_description_inactive">Weil jemand auf dem Handy die Internetverbindung deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
+    <string name="settings_notifications_title">Meldungen</string>
+    <string name="settings_notifications_headline_active">Die Meldungen zum COVID-19-Risikostatus aktivieren?</string>
+    <string name="settings_notifications_headline_inactive">Meldungen wurden deaktiviert</string>
+    <string name="settings_notifications_body_description">Automatische Meldungen zum COVID-19-Risikostatus zulassen.</string>
+    <string name="settings_notifications_body_active">Legen Sie fest, worüber Sie weiterhin informiert werden möchten.</string>
+    <string name="settings_notifications_body_inactive">Um Meldungen zu aktivieren, müssen Sie \'Meldungen für die Coronalert-App\' in Ihren Geräteeinstellungen zulassen.</string>
+    <string name="settings_notifications_headline_card">Meldungen aktivieren</string>
+    <string name="settings_notifications_subtitle_notification">Meldungen</string>
+    <string name="settings_notifications_subtitle_update_risk">Änderung Ihres Infektionsrisikos</string>
+    <string name="settings_notifications_subtitle_update_test">Status Ihres Coronavirus-Tests</string>
+    <string name="settings_notifications_button_open_settings">Geräteeinstellungen öffnen</string>
+    <string name="settings_notifications_illustration_description_active">Eine Frau erhält eine Meldung von ihrer Coronalert-App.</string>
+    <string name="settings_notifications_illustration_description_inactive">Eine Frau hat die Meldungen ihrer Coronalert-App deaktiviert.</string>
+    <string name="settings_reset_title">App zurücksetzen</string>
+    <string name="settings_reset_body_description">Ihre Daten in der App löschen.</string>
+    <string name="settings_reset_headline">Die App wirklich zurücksetzen?</string>
+    <string name="settings_reset_body">Sie werden nicht mehr über Ihre Kontakte informiert und können andere Nutzer nicht mehr warnen.</string>
+    <string name="settings_reset_headline_keys">Kontaktlogbuch<xliff:g id="line_break">\n</xliff:g>löschen</string>
+    <string name="settings_reset_body_keys">Das Kontaktlogbuch separat in den Geräteeinstellungen löschen.</string>
+    <string name="settings_reset_button_positive">App zurücksetzen</string>
+    <string name="settings_reset_button_negative">Abbrechen</string>
+    <string name="settings_reset_illustration_description">Eine Hand hält ein Handy mit dem Symbol, das das Zurücksetzen der App anzeigt.</string>
+    <string name="settings_reset_dialog_headline">App zurücksetzen</string>
+    <string name="settings_reset_dialog_body">Sie werden nicht mehr über Ihre Kontakte informiert und können andere Nutzer nicht mehr warnen. Dieses Verfahren kann nicht rückgängig gemacht werden.</string>
+    <string name="settings_reset_dialog_button_cancel">Abbrechen</string>
+    <string name="settings_reset_dialog_button_confirm">Zurücksetzen</string>
+    <string name="settings_background_priority_title">Priorisierte Hintergrundaktivität</string>
+    <string name="settings_background_priority_body_description">Automatische Aktualisierung Ihres Risikostatus erlauben.</string>
+    <string name="settings_background_priority_headline">Coronalert-App im Hintergrund ausführen</string>
+    <string name="settings_background_priority_body">Die Coronalert-App läuft ununterbrochen im Hintergrund, wenn Sie die priorisierte Hintergrundaktivität aktivieren. So kann die App jederzeit Ihren Risikostatus ermitteln.</string>
+    <string name="settings_background_priority_illustration_description"></string>
+    <string name="settings_background_priority_card_body">In den Geräteeinstellungen die priorisierte Hintergrundaktivität deaktivieren, um sie auszuschalten.</string>
+    <string name="settings_background_priority_card_button">Geräteeinstellungen öffnen</string>
+    <string name="settings_background_priority_card_headline">Priorisierte Hintergrundaktivität ausschalten</string>
+    <string name="information_title">App-Informationen</string>
+    <string name="information_version">Version: %1s</string>
+    <string name="information_about_title">Über die App</string>
+    <string name="information_about_headline">Gemeinsam gegen Corona</string>
+    <string name="information_about_body_emphasized">Das Sciensano veröffentlicht die Coronalert-App im Auftrag der Bundesregierung. Die App ist die digitale Ergänzung zu Abstandhalten, Hygiene und Mundschutz.</string>
+    <string name="information_about_body">Wer sie nutzt, hilft, Infektionsketten schnell nachzuverfolgen und zu durchbrechen. Die App speichert dezentral – auf Ihrem Handy – Begegnungen mit anderen. Sie werden informiert, wenn Sie Begegnungen mit nachweislich infizierten Personen hatten. Ihre Privatsphäre bleibt dabei bestens geschützt.</string>
+    <string name="information_about_illustration_description">Eine Personengruppe benutzt Handys in einer Stadt.</string>
+    <string name="information_privacy_title">Datenschutz</string>
+    <string name="information_privacy_illustration_description">Eine Frau mit einem Handy benutzt die Coronalert-App. Ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten.</string>
+    <string name="information_privacy_html_path">privacy_de.html</string>
+    <string name="information_terms_title">Nutzungsbedingungen</string>
+    <string name="information_terms_headline">Inhalt</string>
+    <string name="information_terms_illustration_description">Eine Hand hält ein Handy mit viel Text. Daneben ist ein Haken als Symbol für akzeptierte Nutzungsbedingungen.</string>
+    <string name="information_terms_html_path">terms_de.html</string>
+    <string name="information_contact_title">Technische Hotline</string>
+    <string name="information_contact_headline">Wie können wir Ihnen helfen?</string>
+    <string name="information_contact_body">Bitte mit technischen Fragen zur Coronalert-App unsere Hotline kontaktieren.</string>
+    <string name="information_contact_subtitle_phone">Technische Hotline:</string>
+    <string name="information_contact_button_phone">0800 14 689</string>
+    <string name="information_contact_phone_call_number">0800 14 689</string>
+    <string name="information_contact_body_phone">Unser Kundenservice ist für Sie da.</string>
+    <string name="information_contact_body_open">Sprachen: Niederländisch, Französisch, Deutsch, Englisch\nErreichbarkeit:<xliff:g id="line_break">\n</xliff:g>Mo - Fr: 09:00 - 17:00 Uhr<xliff:g id="line_break">\n(außer an nationalen Feiertagen)</xliff:g><xliff:g id="line_break">\nDer Anruf ist kostenfrei.</xliff:g></string>
+    <string name="information_contact_body_other">Für gesundheitliche Fragen wenden Sie sich bitte an Ihren Hausarzt oder die Hotline des ärztlichen Bereitschaftsdienstes 112.</string>
+    <string name="information_contact_illustration_description">Ein Mann trägt ein Headset beim Telefonieren.</string>
+    <string name="information_help_title">FAQ</string>
+    <string name="information_help_title_accessibility">Häufig gestellte Fragen. Sie werden an eine externe Website weitergeleitet.</string>
+    <string name="information_technical_title">Rechtliche Hinweise</string>
+    <string name="information_technical_illustration_description">Eine Hand hält ein Handy mit viel Text. Daneben ist eine Balkenwaage als Symbol für rechtliche Hinweise.</string>
+    <string name="information_technical_html_path">technical_de.html</string>
+    <string name="information_legal_title">Impressum</string>
+    <string name="information_legal_headline_publisher">Herausgeber</string>
+    <string name="information_legal_subtitle_publisher">(verantwortlich nach § 5 Abs. 1 TMG, § 55 Abs. 1 RStV, DS-GVO, BDSG)</string>
+    <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">\n</xliff:g>rue Juliette Wytsmanstraat 14<xliff:g id="line_break">\n</xliff:g>1050 Brüssel<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>vertreten durch den Präsidenten</string>
+    <string name="information_legal_headline_contact">Kontakt</string>
+    <string name="information_legal_subtitle_contact">E-Mail: hello@coronalert.be<xliff:g id="line_break">\n</xliff:g>Telefon: 0800 14 689</string>
+    <string name="information_legal_headline_taxid">USt.-Id-Nummer</string>
+    <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
+    <string name="information_legal_illustration_description">Eine Hand hält ein Handy, das eine große Textmenge auf dem Bildschirm anzeigt. Daneben steht ein Abschnittssymbol, das den Aufdruck darstellt.</string>
+    <string name="submission_error_dialog_web_generic_error_title">Fehler</string>
+    <string name="submission_error_dialog_web_generic_network_error_body">Verbindungsfehler (%1$d). Bitte erneut versuchen.</string>
+    <string name="submission_error_dialog_web_generic_error_body">Verbindungsfehler. Bitte erneut versuchen.</string>
+    <string name="submission_error_dialog_web_generic_error_button_positive">Zurück</string>
+    <string name="submission_error_dialog_web_test_paired_title">Fehler</string>
+    <string name="submission_error_dialog_web_test_paired_body">Der QR-Code / CODE ist ungültig oder wurde schon verwendet. Bitte erneut versuchen oder die technische Hotline unter \'App-Info → Technische Hotline\' kontaktieren.</string>
+    <string name="submission_error_dialog_web_test_paired_button_positive">Zurück</string>
+    <string name="submission_error_dialog_web_paring_invalid_title">Fehler</string>
+    <string name="submission_error_dialog_web_paring_invalid_body">Einreichungs-CODE konnte nicht erstellt werden. Kontaktaufnahme unter \'App-Info -&gt; Technische Hotline\'.</string>
+    <string name="submission_error_dialog_web_paring_invalid_button_positive">Zurück</string>
+    <string name="submission_error_dialog_web_tan_invalid_title">Fehler</string>
+    <string name="submission_error_dialog_web_tan_invalid_body">Einreichungs-CODE konnte nicht erstellt werden. Kontaktaufnahme unter \'App-Info -&gt; Technische Hotline\'.</string>
+    <string name="submission_error_dialog_web_tan_invalid_button_positive">Zurück</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">Kamerazugriff benötigt</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_body">Der App die Benutzung der Kamera erlauben, um den QR-Code zu scannen.</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">Erlauben</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative">Nicht erlauben</string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_headline">Kamerazugriff benötigt</string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_body">Systemeinstellungen abfragen und der App erlauben, die Kamera zum Scannen des QR-Codes zu verwenden.</string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_button">OK</string>
+    <string name="submission_qr_code_scan_invalid_dialog_headline">Falscher QR-Code</string>
+    <string name="submission_qr_code_scan_invalid_dialog_body">Falscher QR-Code. Bitte erneut versuchen.</string>
+    <string name="submission_qr_code_scan_invalid_dialog_button_positive">Erneut versuchen</string>
+    <string name="submission_qr_code_scan_invalid_dialog_button_negative">Abbrechen</string>
+    <string name="submission_qr_code_scan_title">Positionieren Sie den QR-Code in den Rahmen.</string>
+    <string name="submission_qr_code_scan_body">Positionieren Sie den QR-Code in den Rahmen.</string>
+    <string name="submission_test_result_headline">Testergebnis</string>
+    <string name="submission_test_result_subtitle">Info zum Ablauf:</string>
+    <string name="submission_test_result_steps_added_heading">Test erfolgreich hinzugefügt</string>
+    <string name="submission_test_result_steps_added_body">Ihr Test wurde in Coronalert gespeichert.</string>
+    <string name="submission_test_result_pending_steps_waiting_heading">Testergebnis noch nicht verfügbar</string>
+    <string name="submission_test_result_pending_steps_waiting_body">Testergebnis noch nicht verfügbar.</string>
+    <string name="submission_test_result_pending_refresh_button">Aktualisieren</string>
+    <string name="submission_test_result_pending_remove_test_button">Test löschen</string>
+    <string name="submission_test_result_negative_steps_negative_heading">Ihr Testergebnis</string>
+    <string name="submission_test_result_negative_steps_negative_body">Der Labortest hat keinen Nachweis für das Coronavirus SARS-CoV-2 bei Ihnen ergeben. \n\nBitte entfernen Sie den Test wieder aus der Coronalert-App, damit Sie bei Bedarf einen neuen Test hinterlegen können.</string>
+    <string name="submission_test_result_negative_remove_test_button">Test löschen</string>
+    <string name="submission_test_result_positive_steps_positive_heading">Ihr Testergebnis</string>
+    <string name="submission_test_result_positive_steps_positive_body">Ihr Testergebnis wurde als positiv verifiziert.</string>
+    <string name="submission_test_result_positive_steps_warning_others_heading">Andere warnen</string>
+    <string name="submission_test_result_positive_steps_warning_others_body">Ihre Zufallscodes der letzten 14 Tage teilen, um andere zu schützen und die Infektionskette zu unterbrechen.</string>
+    <string name="submission_test_result_positive_continue_button">Weiter</string>
+    <string name="submission_test_result_invalid_steps_invalid_heading">Ihr Testergebnis</string>
+    <string name="submission_test_result_invalid_steps_invalid_body">Es gab ein Problem bei der Auswertung Ihres Tests. Bitte kontaktieren Sie das Gesundheitsamt um Information zum weiteren Vorgehen zu erhalten.\n\nBitte entfernen Sie den Test wieder aus der Coronalert-App, damit Sie bei Bedarf einen neuen Test hinterlegen können.</string>
+    <string name="submission_test_result_invalid_remove_test_button">Test löschen</string>
+    <string name="submission_test_result_dialog_tracing_required_title">Kontaktlogbuch erforderlich</string>
+    <string name="submission_test_result_dialog_tracing_required_message">Bitte Kontaktlogbuch aktivieren, um andere zu warnen.</string>
+    <string name="submission_test_result_dialog_tracing_required_button">OK</string>
+    <string name="submission_test_result_dialog_remove_test_title">Test löschen?</string>
+    <string name="submission_test_result_dialog_remove_test_message">Der Test wird endgültig aus der Coronalert-App entfernt und kann nicht mehr eingefügt werden. Dieser Vorgang kann nicht widerrufen werden.</string>
+    <string name="submission_test_result_dialog_remove_test_button_positive">Entfernen</string>
+    <string name="submission_test_result_dialog_remove_test_button_negative">Abbrechen</string>
+    <string name="submission_test_result_card_positive_title">SARS-CoV-2 positiv</string>
+    <string name="submission_test_result_card_positive_body">Bei Ihnen wurde das SARS-CoV-2-Virus diagnostiziert.</string>
+    <string name="submission_tan_title">CODE-Eingabe</string>
+    <string name="submission_tan_body">Bitte den erhaltenen, 10-stelligen CODE eingeben.</string>
+    <string name="submission_tan_button_text">Weiter</string>
+    <string name="submission_tan_accessibility_title">CODE-Eingabe</string>
+    <string name="submission_tan_error">Ungültiger CODE, bitte Eingabe prüfen.</string>
+    <string name="submission_tan_character_error">Ungültige Eingabe, bitte Eingabe prüfen prüfen.</string>
+    <string name="submission_intro_title">Wurden Sie getestet?</string>
+    <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
+    <string name="submission_intro_text">Damit die Coronalert-App funktioniert, sind wir auf die Mithilfe von Corona-positiv getesteten Personen angewiesen.\n\nDa nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Gehen Sie wie folgt vor:</string>
+    <string name="submission_intro_button_next">Weiter</string>
+    <string name="submission_intro_illustration_description">Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzer warnt.</string>
+    <string name="submission_intro_accessibility_title">Wurden Sie getestet? So funktioniert die Coronalert-App</string>
+    <string name="submission_dispatcher_headline">Auswahl</string>
+    <string name="submission_dispatcher_subheadline">Welche Informationen haben Sie?</string>
+    <string name="submission_dispatcher_card_qr">Dokument mit QR-Code</string>
+    <string name="submission_dispatcher_qr_card_text">Registrieren Sie Ihren Test, indem Sie den QR-Code Ihres Test-Dokuments scannen.</string>
+    <string name="submission_dispatcher_qr_privacy_dialog_headline">Einwilligungserklärung</string>
+    <string name="submission_dispatcher_qr_privacy_dialog_body">Tippen Sie \'Erlauben\' an, willigen Sie ein, dass die App den Status Ihres Corona-Virus-Tests abfragt und in der App anzeigt. Diese Funktion ist aktiv, wenn Sie einen QR-Code erhalten und eingewilligt haben, dass Ihr Testergebnis an das Serversystem der App übermittelt wird. Hat das Testlabor Ihr Testergebnis auf dem Server gespeichert, sieht man das Ergebnis in der App. Haben Sie Meldungen aktiviert, erfahren Sie auch außerhalb der App über den Testergebniseingang. Aus Datenschutzgründen sehen Sie es nur in der App. Sie können diese Einwilligung jederzeit widerrufen, indem Sie die Testregistrierung in der App löschen. Der Widerruf der Einwilligung berührt die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung nicht. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+    <string name="submission_dispatcher_qr_privacy_dialog_button_positive">Erlauben</string>
+    <string name="submission_dispatcher_qr_privacy_dialog_button_negative">Nicht erlauben</string>
+    <string name="submission_dispatcher_card_tan_code">CODE</string>
+    <string name="submission_dispatcher_tan_code_card_text">Test per manueller CODE-Eingabe registrieren.</string>
+    <string name="submission_dispatcher_card_tan_tele">CODE anfragen</string>
+    <string name="submission_dispatcher_tan_tele_card_text">Bitte rufen Sie uns an, falls Sie Corona-positiv getestet wurden.</string>
+    <string name="submission_dispatcher_accessibility_title">Welche Informationen haben Sie?</string>
+    <string name="submission_positive_other_warning_title">Andere warnen</string>
+    <string name="submission_positive_other_warning_headline">Helfen Sie mit!</string>
+    <string name="submission_positive_other_warning_body">Als Nächstes können Sie dafür sorgen, dass das Corona-Warn-System Ihre lokal gespeicherten Zufallscodes der letzten 14 Tage an andere verteilt. So können Sie Ihre Mitmenschen warnen und helfen, die Infektionskette zu unterbrechen.\n\nDa nur unpersönliche Zufallscodes übertragen werden, bleibt Ihre Identität unbekannt.</string>
+    <string name="submission_positive_other_warning_privacy_title">Datenschutz</string>
+    <string name="submission_positive_other_warning_privacy_body">Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktiviertem Kontaktlogbuch automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.\n\nDie Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.\n\nSie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+    <string name="submission_positive_other_warning_button">Weiter</string>
+    <string name="submission_positive_other_illustration_description">Ein Handy übermittelt einen positiven Testbefund verschlüsselt ins System.</string>
+    <string name="submission_done_title">Vielen Dank!</string>
+    <string name="submission_done_body">Sie haben einen wichtigen Beitrag geleistet! Dank Ihrer Mithilfe können andere gewarnt werden und entsprechend reagieren.</string>
+    <string name="submission_done_subtitle">Bitte beachten:</string>
+    <string name="submission_done_contagious">Sie sind ansteckend.</string>
+    <string name="submission_done_isolate">Bitte isolieren Sie sich von anderen Personen.</string>
+    <string name="submission_done_further_info_title">Weitere Infos:</string>
+    <string name="submission_done_button_done">Fertig</string>
+    <string name="submission_done_illustration_description">Jeder in der Gruppe jubelt, weil jemand sein Testergebnis geteilt hat.</string>
+    <string name="submission_contact_title">CODE anfragen</string>
+    <string name="submission_contact_headline">Info zum Ablauf:</string>
+    <string name="submission_contact_body">Bitte halten Sie zur CODE-Abfrage Ihren Befundbrief (wenn vorhanden) und Ihre Telefonnummer bereit.</string>
+    <string name="submission_contact_button_call">Anrufen</string>
+    <string name="submission_contact_button_enter">CODE eingeben</string>
+    <string name="submission_contact_step_1_body">Hotline anrufen &amp; CODE erfragen:</string>
+    <string name="submission_contact_number_display">0800 14 689</string>
+    <string name="submission_contact_number_dial">0800 14 689</string>
+    <string name="submission_contact_step_2_body">Test per CODE-Eingabe in der App registrieren</string>
+    <string name="submission_contact_operating_hours_body">Sprachen:\nNiederländisch, Französisch, Deutsch, Englisch\n\nErreichbarkeit:\nMo - Fr: 9.00-17.00 Uhr\n\nDer Anruf ist kostenfrei.</string>
+    <string name="submission_contact_accessibility_title">CODE-Anfrage per Anruf</string>
+    <string name="submission_contact_step_1_content">Im ersten Schritt Hotline anrufen und unter der Rufnummer 0800 14 689 CODE erfragen. Sie hat Montag bis Freitag von 9 bis 17 Uhr geöffnet. Der Anruf ist kostenfrei.</string>
+    <string name="submission_contact_step_2_content">Im zweiten Schritt registrieren Sie den Test per CODE-Eingabe in der App.</string>
+    <string name="submission_status_card_title_fetching">Datenabruf…</string>
+    <string name="submission_status_card_title_unregistered">Wurden Sie getestet?</string>
+    <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
+    <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
+    <string name="submission_status_card_title_positive">Befund positiv</string>
+    <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
+    <string name="submission_status_card_subtitle_negative">Befund negativ</string>
+    <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
+    <string name="submission_status_card_body_unregistered">Helfen Sie mit, die Infektionskette zu durchbrechen, indem Sie andere warnen.</string>
+    <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
+    <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
+    <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
+    <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
+    <string name="submission_status_card_button_unregistered">Mehr erfahren &amp; helfen</string>
+    <string name="submission_status_card_button_show_results">Test anzeigen</string>
+    <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
+    <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
+    <string name="submission_status_card_positive_result_contact">Das Gesundheitsamt meldet sich demnächst telefonisch oder schriftlich bei Ihnen.</string>
+    <string name="submission_status_card_positive_result_share">Teilen Sie Ihre Zufallscodes, damit andere gewarnt werden können.</string>
+    <string name="test_result_card_headline">Ihre Diagnose</string>
+    <string name="test_result_card_virus_name_text">SARS-CoV-2</string>
+    <string name="test_result_card_registered_at_text">Registriert am %s</string>
+    <string name="test_result_card_status_negative">Negativ</string>
+    <string name="test_result_card_status_positive">Positiv</string>
+    <string name="test_result_card_status_invalid">Auswertung nicht möglich</string>
+    <string name="test_result_card_status_pending">Ergebnis liegt noch nicht vor</string>
+    <string name="test_result_card_negative_further_info_title">Weitere Infos:</string>
+    <string name="button_back">Zurück zur vorherigen Seite</string>
+    <string name="button_proceed">Weiter-Taste</string>
+    <string name="button_share">Teilen</string>
+    <string name="button_menu">Menü</string>
+    <string name="suffix_button">Taste</string>
+    <string name="suffix_image">Bild</string>
+    <string name="errors_no_network">Keine Internetverbindung</string>
+    <string name="errors_not_enough_device_storage">Freier Speicherplatz unzureichend.</string>
+    <string name="errors_communication_with_api">Fehler bei der Kommunikation mit der Google-Schnittstelle.</string>
+    <string name="errors_external_action">Diese Handlung ist derzeit unmöglich. Bitte kontaktieren Sie die Hotline.</string>
+    <string name="errors_google_update_needed">Ihre Coronalert-App ist korrekt installiert. Leider fehlt dem Betriebssystem Ihres Handys der Dienst „Meldungen Kontakt mit COVID-19-Infizierten“ und Sie können die Coronalert-App nicht nutzen. Weitere Informationen finden Sie in unseren FAQ: https://www.coronalert.be</string>
+    <string name="errors_google_api_error">Ihre Coronalert-App läuft fehlerfrei. Leider kann Ihr Risikostatus derzeit nicht aktualisiert werden. Ihr Kontaktlogbuch ist weiterhin aktiv und funktioniert. Weitere Informationen finden Sie in unseren FAQ: https://www.coronalert.be \n</string>
+    <string name="errors_generic_headline">Etwas ist schiefgelaufen.</string>
+    <string name="errors_generic_details_headline">Ursache</string>
+    <string name="errors_generic_button_positive">Okay</string>
+    <string name="errors_generic_button_negative">Details</string>
+    <string name="errors_generic_text_unknown_error_cause">Unbekannter Fehler</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="menu_test_api">API testen</string>
+    <string name="menu_test_risk_level">Risikograd testen</string>
+    <string name="menu_test_notification">Testmeldung.</string>
+    <string name="test_api_button_api_launch">Android-API-Test (manueller Test)</string>
+    <string name="test_api_button_start">Start (Senden/Empfangen von Bluetooth)</string>
+    <string name="test_api_button_get_exposure_keys">Exposure-Schlüssel erhalten (meine Schlüssel-Historie von api)</string>
+    <string name="test_api_button_share_my_keys">Meine Schlüssel per E-Mail teilen</string>
+    <string name="test_api_button_enter_other_keys">Kontaktschlüssel einreichen</string>
+    <string name="test_api_button_show_qr_code">QR-Code anzeigen</string>
+    <string name="test_api_button_submit_keys">Schlüssel an Server senden</string>
+    <string name="test_api_button_scan_qr_code">Kontaktschlüssel scannen</string>
+    <string name="test_api_switch_last_three_hours_from_server">Modus \'Letzte 3 Stunden\'</string>
+    <string name="test_api_button_check_exposure">Kontaktzusammenfassung prüfen</string>
+    <string name="test_api_exposure_summary_headline">Kontaktzusammenfassung</string>
+    <string name="test_api_body_daysSinceLastExposure">Tage seit letztem Kontakt: %1$s</string>
+    <string name="test_api_body_attenuation">Minderungsdauer in Minuten: %1$s</string>
+    <string name="test_api_body_summation_risk">Summation Risikobewertung: %1$s</string>
+    <string name="test_api_body_matchedKeyCount">Übereinstimmende Schlüsselzahl: %1$s</string>
+    <string name="test_api_body_maximumRiskScore">Maximale Risikobewertung %1$s</string>
+    <string name="test_api_body_my_keys">Meine Schlüssel (Anzahl: %1$d)</string>
+    <string name="test_api_body_other_keys">Anderer Schlüssel</string>
+    <string name="test_api_calculate_risk_level">Risikoniveau berechnen</string>
+    <string name="onboarding_background_fetch_dialog_headline">Hintergrund-Updates deaktiviert</string>
+    <string name="onboarding_background_fetch_dialog_body">Hintergrund-Updates wurden für die Corona-Warn-App deaktiviert. Zur Nutzung der automatischen Kontaktverfolgung bitte die Hintergrund-Update aktivieren. Bei deaktiviertem Hintergrund-Update lässt sich Ihre Kontaktverfolgung nur manuell in der App starten. Die Hintergrund-Update lässt sich für die App in den Geräteeinstellungen aktivieren.</string>
+    <string name="onboarding_background_fetch_dialog_button_positive">Geräteeinstellungen öffnen</string>
+    <string name="onboarding_background_fetch_dialog_button_negative">Kontaktverfolgung manuell starten</string>
+    <string name="settings_tracing_status_location_headline">Standortzugriff erlauben</string>
+    <string name="settings_tracing_status_location_body">Standortzugriff unmöglich. Für Google und/oder Android ist der Zugriff auf den Standort Ihres Geräts erforderlich, um Bluetooth verwenden zu können.</string>
+    <string name="settings_tracing_status_location_button">Geräteeinstellungen öffnen</string>
 </resources>

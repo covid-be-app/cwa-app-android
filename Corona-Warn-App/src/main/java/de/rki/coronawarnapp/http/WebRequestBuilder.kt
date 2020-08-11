@@ -20,11 +20,13 @@
 package de.rki.coronawarnapp.http
 
 import KeyExportFormat
+import be.sciensano.coronalert.http.requests.TestResultRequest
+import be.sciensano.coronalert.http.responses.TestResultResponse
 import com.google.protobuf.InvalidProtocolBufferException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationCorruptException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationInvalidException
-import de.rki.coronawarnapp.http.requests.RegistrationTokenRequest
 import de.rki.coronawarnapp.http.requests.RegistrationRequest
+import de.rki.coronawarnapp.http.requests.RegistrationTokenRequest
 import de.rki.coronawarnapp.http.requests.TanRequestBody
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
@@ -43,11 +45,17 @@ import timber.log.Timber
 import java.io.File
 import java.util.Date
 import java.util.UUID
+import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
+import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
+import be.sciensano.coronalert.service.diagnosiskey.DiagnosisKeyConstants as BeDiagnosisKeyConstants
+import be.sciensano.coronalert.service.submission.SubmissionConstants as BeSubmissionConstants
 
 class WebRequestBuilder(
     private val distributionService: DistributionService,
     private val verificationService: VerificationService,
+    private val beVerificationService: BeVerificationService,
     private val submissionService: SubmissionService,
+    private val beSubmissionService: BeSubmissionService,
     private val verificationKeys: VerificationKeys
 ) {
     companion object {
@@ -69,7 +77,9 @@ class WebRequestBuilder(
             return WebRequestBuilder(
                 serviceFactory.distributionService(),
                 serviceFactory.verificationService(),
+                serviceFactory.beVerificationService(),
                 serviceFactory.submissionService(),
+                serviceFactory.beSubmissionService(),
                 VerificationKeys()
             )
         }
@@ -185,6 +195,48 @@ class WebRequestBuilder(
             DiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
             authCode,
             fakeHeader,
+            submissionPayload
+        )
+        return@withContext
+    }
+
+    /**
+     * Belgium web requests
+     */
+    suspend fun beAsyncGetTestResult(
+        pollingToken: String
+    ): TestResultResponse = withContext(Dispatchers.IO) {
+        beVerificationService.getTestResult(
+            BeSubmissionConstants.TEST_RESULT_URL,
+            TestResultRequest(pollingToken)
+        )
+    }
+
+    suspend fun beAsyncAckTestResult(
+        pollingToken: String
+    ): Unit = withContext(Dispatchers.IO) {
+        beVerificationService.ackResult(
+            BeSubmissionConstants.TEST_RESULT_ACK_URL,
+            TestResultRequest(pollingToken)
+        )
+        return@withContext
+    }
+
+    suspend fun beAsyncSubmitKeysToServer(
+        k: String,
+        r0: String,
+        t0: String,
+        t3: String,
+        resultChannel: Int,
+        keyList: List<KeyExportFormat.TemporaryExposureKey>
+    ) = withContext(Dispatchers.IO) {
+        Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
+        val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
+            .addAllKeys(keyList)
+            .build()
+        beSubmissionService.submitKeys(
+            BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
+            k, r0, t0, t3, resultChannel,
             submissionPayload
         )
         return@withContext

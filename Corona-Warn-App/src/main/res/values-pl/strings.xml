@@ -69,6 +69,8 @@
     <string name="preference_polling_test_result_started"><xliff:g id="preference">"preference_polling_test_result_started"</xliff:g></string>
     <!-- NOTR -->
     <string name="preference_test_result_notification"><xliff:g id="preference">"preference_test_result_notification"</xliff:g></string>
+    <!-- NOTR -->
+    <string name="preference_risk_days_explanation_shown"><xliff:g id="preference">"preference_risk_days_explanation_shown"</xliff:g></string>
 
     <!-- ####################################
                      Generics
@@ -141,7 +143,9 @@
         <item quantity="many">"%1$s narażeń"</item>
     </plurals>
     <!-- XTXT: risk card - tracing active for x out of 14 days -->
-    <string name="risk_card_body_saved_days">"%1$s aktywne(-ych) z 14 dni"</string>
+    <string name="risk_card_body_saved_days">"Rejestrowanie narażenia było aktywne przez %1$s z ostatnich 14 dni."</string>
+    <!-- XTXT: risk card- tracing active for 14 out of 14 days -->
+    <string name="risk_card_body_saved_days_full">"Rejestrowanie narażenia stale aktywne"</string>
     <!-- XTXT; risk card - no update done yet -->
     <string name="risk_card_body_not_yet_fetched">"Kontakty nie zostały jeszcze sprawdzone."</string>
     <!-- XTXT: risk card - last successful update -->
@@ -303,6 +307,14 @@
     <string name="risk_details_behavior_increased_body_3">"Organ ds. zdrowia publicznego"</string>
     <!-- XHED: risk details - infection risk headline, below behaviors -->
     <string name="risk_details_headline_infection_risk">"Ryzyko zakażenia"</string>
+    <!-- XHED: risk details - infection period logged headling, below behaviors -->
+    <string name="risk_details_headline_period_logged">"Okres zarejestrowany"</string>
+    <!-- XHED: risk details - infection period logged headling, below behaviors -->
+    <string name="risk_details_subtitle_period_logged">"Ten okres jest uwzględniony w obliczeniu."</string>
+    <!-- XHED: risk details - infection period logged information body, below behaviors -->
+    <string name="risk_details_information_body_period_logged">"Ryzyko zakażenia można obliczyć tylko dla okresów, w których rejestrowanie narażenia było aktywne. Dlatego też funkcja rejestrowania powinna być stale aktywna."</string>
+    <!-- XHED: risk details - infection period logged information body, below behaviors -->
+    <string name="risk_details_information_body_period_logged_assessment">"Rejestrowanie narażenia obejmuje ostatnie 14 dni. W tym czasie funkcja rejestrowania w Twoim urządzeniu była aktywna przez %1$s dni. Aplikacja automatycznie usuwa starsze rejestry, ponieważ nie są one już istotne dla zapobiegania zakażeniom."</string>
     <!-- XHED: risk details - how your risk level was calculated, below behaviors -->
     <string name="risk_details_subtitle_infection_risk_past">"Sposób, w jaki obliczono Twoje ryzyko"</string>
     <!-- XHED: risk details - how your risk level will be calculated, below behaviors -->
@@ -330,6 +342,11 @@
     <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
     <!-- XACT: risk details page title -->
     <string name="risk_details_accessibility_title">"Twój status ryzyka"</string>
+
+    <!-- XHED: one time risk explanation dialog title  -->
+    <string name="risk_details_explanation_dialog_title">"Informacje o funkcjonalności rejestrowania narażenia"</string>
+    <!-- YTXT: one time risk explanation dialog - pointing to the faq page for more information-->
+    <string name="risk_details_explanation_dialog_faq_body">"Więcej informacji znajduje się na naszej stronie Często zadawane pytania."</string>
 
     <!-- ####################################
               Onboarding
@@ -390,6 +407,14 @@
     <string name="onboarding_tracing_dialog_button_positive">"Nie aktywuj"</string>
     <!-- XBUT: onboarding(tracing) - negative button (right) -->
     <string name="onboarding_tracing_dialog_button_negative">"Wstecz"</string>
+    <!-- XACT: onboarding(tracing) - dialog about background jobs header text -->
+    <string name="onboarding_background_fetch_dialog_headline">"Aktualizacje w tle dezaktywowane"</string>
+    <!-- YMSI: onboarding(tracing) - dialog about background jobs -->
+    <string name="onboarding_background_fetch_dialog_body">"Dezaktywowałeś(-aś) aktualizacje w tle dla aplikacji Corona-Warn-App. Aktywuj aktualizacje w tle, aby korzystać z automatycznego rejestrowania narażenia. Jeśli nie aktywujesz aktualizacji w tle, możliwe będzie tylko ręczne uruchomienie rejestrowania narażenia w aplikacji. Możesz aktywować aktualizacje w tle dla aplikacji w ustawieniach swojego urządzenia."</string>
+    <!-- XBUT: onboarding(tracing) - dialog about background jobs, open device settings -->
+    <string name="onboarding_background_fetch_dialog_button_positive">"Otwórz ustawienia urządzenia"</string>
+    <!-- XBUT: onboarding(tracing) - dialog about background jobs, continue in app -->
+    <string name="onboarding_background_fetch_dialog_button_negative">"Uruchom rejestrowanie narażenia ręcznie"</string>
     <!-- XACT: onboarding(tracing) - illustraction description, header image -->
     <string name="onboarding_tracing_illustration_description">"Trzy osoby aktywowały rejestrowanie narażenia na swoich urządzeniach, które będą rejestrować ich wzajemne kontakty."</string>
     <!-- XHED: onboarding(tracing) - location explanation for bluetooth headline -->
@@ -439,6 +464,8 @@
     <string name="settings_tracing_body_active">"Rejestrowanie narażenia aktywne"</string>
     <!-- XTXT: settings(tracing) - shows status under header in home, inactive -->
     <string name="settings_tracing_body_inactive">"Rejestrowanie narażenia zatrzymane"</string>
+    <!-- XTXT: settings(tracing) - shows status under header in home, inactive location -->
+    <string name="settings_tracing_body_inactive_location">"Usługa lokalizacji dezaktywowana"</string>
     <!-- YTXT: settings(tracing) - explains tracings -->
     <string name="settings_tracing_body_text">"Działanie funkcji rejestrowania narażenia polega na odbieraniu przez Twoje urządzenie za pomocą Bluetooth zaszyfrowanych, losowych identyfikatorów innych użytkowników i przekazywaniu Twoich losowych identyfikatorów do ich urządzeń. Funkcję tę można wyłączyć w dowolnym momencie. "<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\n"</xliff:g>"Zaszyfrowane losowe identyfikatory przekazują innym osobom jedynie informacje o dacie, czasie trwania i bliskości (przy wykorzystaniu mocy sygnału). Dane osobowe, takie jak nazwisko, adres, lokalizacja, nie są nigdy rejestrowane. Ustalenie tożsamości osób nie jest możliwe."</string>
     <!-- XTXT: settings(tracing) - status next to switch under title -->
@@ -457,6 +484,12 @@
     <string name="settings_tracing_status_bluetooth_body">"Należy włączyć Bluetooth, aby funkcja rejestrowania narażenia mogła rejestrować kontakty. Włącz Bluetooth w ustawieniach swojego urządzenia."</string>
     <!-- XBUT: settings(tracing) - go to operating system settings button on card -->
     <string name="settings_tracing_status_bluetooth_button">"Otwórz ustawienia urządzenia"</string>
+    <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
+    <string name="settings_tracing_status_location_headline">"Zezwól na dostęp do lokalizacji"</string>
+    <!-- XTXT: settings(tracing) - explains user what to do on card if location is disabled -->
+    <string name="settings_tracing_status_location_body">"Nie można uzyskać dostępu do Twojej lokalizacji. Google i/lub Android wymaga dostępu do lokalizacji Twojego urządzenia w celu użycia Bluetooth."</string>
+    <!-- XBUT: settings(tracing) - go to operating system settings button on card - location -->
+    <string name="settings_tracing_status_location_button">"Otwórz ustawienia urządzenia"</string>
     <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
     <string name="settings_tracing_status_connection_headline">"Otwórz połączenie z Internetem"</string>
     <!-- XTXT: settings(tracing) - explains user what to do on card if connection is disabled -->
@@ -478,6 +511,8 @@
     <string name="settings_tracing_illustration_description_inactive">"Jedna osoba dezaktywowała logowanie narażenia na swoim smartfonie, więc kontakt z dwiema pozostałymi osobami nie jest rejestrowany."</string>
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_bluetooth_illustration_description_inactive">"Jedna osoba wyłączyła Bluetooth na swoim smartfonie, więc kontakt z dwiema pozostałymi osobami nie jest rejestrowany."</string>
+    <!-- XACT: settings(tracing) - describes illustration -->
+    <string name="settings_tracing_location_illustration_description_inactive"/>
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_connection_illustration_description_inactive">"Jedna osoba wyłączyła połączenie z Internetem na swoim smartfonie, więc kontakt z dwiema pozostałymi osobami nie jest rejestrowany."</string>
 
@@ -542,13 +577,13 @@
     <!-- YTXT: settings(background priority) - description text -->
     <string name="settings_background_priority_body">"Aplikacja Corona-Warn-App będzie działać stale w tle, jeśli aktywujesz priorytetowe działanie w tle. Dzięki temu aplikacja będzie mogła w dowolnym momencie ustalić Twój status ryzyka."</string>
     <!-- XACT: settings(background priority) - illustraction description -->
-    <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
+    <string name="settings_background_priority_illustration_description"/>
     <!-- XTXT: settings(background priority) - explains user what to do on card if background priority is enabled -->
-    <string name="settings_background_priority_card_body">@string/lorem_ipsum</string>
+    <string name="settings_background_priority_card_body">"Aby dezaktywować priorytetowe działanie w tle, dezaktywuj je w ustawieniach urządzenia."</string>
     <!-- XBUT: settings(background priority) - go to operating system settings button on card -->
-    <string name="settings_background_priority_card_button">@string/lorem_ipsum</string>
+    <string name="settings_background_priority_card_button">"Otwórz ustawienia urządzenia"</string>
     <!-- XHED : settings(background priority) - headline on card about the current status and what to do -->
-    <string name="settings_background_priority_card_headline">@string/lorem_ipsum</string>
+    <string name="settings_background_priority_card_headline">"Dezaktywuj priorytetowe działanie w tle"</string>
 
     <!-- ####################################
                App Information
@@ -563,7 +598,7 @@
     <!-- XHED: Subtitle for about information page -->
     <string name="information_about_headline">"Pokonajmy koronawirusa razem"</string>
     <!-- YTXT: Body text for about information page -->
-    <string name="information_about_body_emphasized">"Instytut Roberta Kocha (RKI) to niemiecka federalna instytucja zdrowia publicznego. RKI publikuje aplikację Corona-Warn-App w imieniu rządu federalnego. Aplikacja stanowi cyfrowe rozszerzenie już wprowadzonych środków ochrony zdrowia publicznego: zachowanie dystansu społecznego, dbanie o higienę oraz noszenie maseczek."</string>
+    <string name="information_about_body_emphasized">"Instytut Roberta Kocha (RKI) to niemiecka federalna instytucja zdrowia publicznego. RKI publikuje aplikację Corona-Warn-App w imieniu rządu federalnego. Aplikacja ta służy jako cyfrowe uzupełnienie już wprowadzonych środków ochrony zdrowia publicznego, takich jak zachowanie dystansu społecznego, dbanie o higienę oraz noszenie maseczek."</string>
     <!-- YTXT: Body text for about information page -->
     <string name="information_about_body">"Wszystkie osoby korzystające z aplikacji pomagają w śledzeniu i przerwaniu łańcuchów zakażeń. Aplikacja zapisuje kontakty z innymi osobami lokalnie na Twoim urządzeniu. Otrzymasz powiadomienie, jeśli okaże się, że u osób, z którymi miałeś(-aś) kontakt, zdiagnozowano później COVID-19. Twoja tożsamość i prywatność są zawsze chronione."</string>
     <!-- XACT: describes illustration -->
@@ -662,7 +697,7 @@
     <!-- XHED: Dialog title for submission tan invalid -->
     <string name="submission_error_dialog_web_tan_invalid_title">"Błąd"</string>
     <!-- XMSG: Dialog body for submission tan invalid -->
-    <string name="submission_error_dialog_web_tan_invalid_body">"Nie można było wygenerować numeru TAN do przesłania. Skontaktuj się z techniczną infolinią, wybierając opcje: Informacje o aplikacji -&gt; Infolinia techniczna."</string>
+    <string name="submission_error_dialog_web_tan_invalid_body">"Wygenerowany numer TAN jest nieprawidłowy i nie można go przesłać. Skontaktuj się z techniczną infolinią, wybierając opcje: Informacje o aplikacji -&gt; Infolinia techniczna."</string>
     <!-- XBUT: Positive button for submission tan invalid -->
     <string name="submission_error_dialog_web_tan_invalid_button_positive">"Wstecz"</string>
 
@@ -983,7 +1018,7 @@
     <!-- XTXT: error dialog - phone still needs Google Play Services or Google Mobile Services update -->
     <string name="errors_google_update_needed">"Twoja aplikacja Corona-Warn-App jest poprawnie zainstalowana, ale usługa „Powiadomienia o narażeniu na COVID-19” nie jest dostępna w systemie operacyjnym Twojego smartfona. Oznacza to, że nie możesz korzystać z aplikacji Corona-Warn-App. Więcej informacji znajduje się na naszej stronie Często zadawane pytania: https://www.coronawarn.app/en/faq/."</string>
     <!-- XTXT: error dialog - either Google API Error (10) or reached request limit per day -->
-    <string name="errors_google_api_error">"Aplikacja Corona-Warn-App działa prawidłowo, ale nie możemy zaaktualizować Twojego aktualnego statusu ryzyka. Rejestrowanie narażenia pozostaje aktywne i działa prawidłowo. Więcej informacji można znaleźć na naszej stronie Często zadawane pytania: https://www.coronawarn.app/en/faq/ \n"</string>
+    <string name="errors_google_api_error">"Aplikacja Corona-Warn-App działa prawidłowo, ale nie możemy zaaktualizować Twojego aktualnego statusu ryzyka. Rejestrowanie narażenia pozostaje aktywne i działa prawidłowo. Więcej informacji można znaleźć na naszej stronie Często zadawane pytania: https://www.coronawarn.app/en/faq/"</string>
 
     <!-- ####################################
                Generic Error Messages
