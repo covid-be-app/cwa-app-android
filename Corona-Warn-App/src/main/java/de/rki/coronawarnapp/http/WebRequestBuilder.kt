@@ -232,6 +232,7 @@ class WebRequestBuilder(
     ) = withContext(Dispatchers.IO) {
         Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
+            .addCountries("BEL")
             .addAllKeys(keyList)
             .build()
         beSubmissionService.submitKeys(
