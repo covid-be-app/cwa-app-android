@@ -6,10 +6,6 @@
     <data>
 
         <import type="de.rki.coronawarnapp.util.formatter.FormatterSubmissionHelper" />
-
-        <variable
-            name="submissionViewModel"
-            type="be.sciensano.coronalert.ui.submission.SubmissionTestRequestViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/submission_test_request_save_header"
@@ -44,8 +41,11 @@
         <ImageView
             android:id="@+id/submission_test_request_save_qr_image"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="48dp"
             android:layout_marginTop="24dp"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toBottomOf="@+id/submission_test_request_save_date" />
@@ -95,7 +95,6 @@
         <include
             android:id="@+id/include"
             layout="@layout/merge_guidelines_side" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

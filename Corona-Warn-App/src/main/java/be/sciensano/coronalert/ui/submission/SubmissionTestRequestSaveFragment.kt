@@ -31,7 +31,6 @@ class SubmissionTestRequestSaveFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSubmissionTestRequestSaveBinding.inflate(inflater)
-        binding.submissionViewModel = viewModel
         binding.lifecycleOwner = this
         return binding.root
     }
@@ -61,14 +60,11 @@ class SubmissionTestRequestSaveFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         val mobileTestId = viewModel.generateTestId()
 
         viewModel.submissionDate.value?.let {
             binding.submissionTestRequestSaveDate.text =
                 DateFormat.getDateInstance(DateFormat.FULL).format(it)
-
         }
 
         showQrCode(mobileTestId.toString())

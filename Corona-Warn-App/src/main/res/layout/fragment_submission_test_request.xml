@@ -5,10 +5,6 @@
     <data>
 
         <import type="de.rki.coronawarnapp.util.formatter.FormatterSubmissionHelper" />
-
-        <variable
-            name="submissionViewModel"
-            type="be.sciensano.coronalert.ui.submission.SubmissionTestRequestViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

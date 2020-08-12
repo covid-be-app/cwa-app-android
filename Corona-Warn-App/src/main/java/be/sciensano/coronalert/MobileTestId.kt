@@ -17,11 +17,9 @@ class MobileTestId(
 ) {
 
     override fun toString(): String {
-        val part1 = r1.substring(0..4)
-        val part2 = r1.substring(5..9)
-        val part3 = r1.substring(10..14)
-
-        return "$part1-$part2-$part3-${checksum()}"
+        val compactT0 = compactT0()
+        return "${compactT0}$r1${checksum(compactT0.toLong() + r1.toLong())}".chunked(4)
+            .joinToString("-")
     }
 
     fun registrationToken(): String {
@@ -29,8 +27,12 @@ class MobileTestId(
     }
 
 
-    fun checksum(): String {
-        return String.format("%02d", 97 - (r1.toLong() * 100 % 97))
+    private fun checksum(value: Long): String {
+        return String.format("%02d", 97 - (value * 100 % 97))
+    }
+
+    private fun compactT0(): String {
+        return t0.replace("-", "").slice(2..7)
     }
 
     companion object {
