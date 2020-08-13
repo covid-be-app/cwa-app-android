@@ -1,9 +1,15 @@
 package de.rki.coronawarnapp.ui.viewmodel
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import be.sciensano.coronalert.storage.readCountries
+import be.sciensano.coronalert.storage.t0
+import be.sciensano.coronalert.storage.t3
+import be.sciensano.coronalert.ui.submission.Country
+import be.sciensano.coronalert.util.TemporaryExposureKeyExtensions.inT0T3Range
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.exception.ExceptionCategory
 import de.rki.coronawarnapp.exception.TransactionException
@@ -17,7 +23,7 @@ import de.rki.coronawarnapp.ui.submission.ScanStatus
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.Event
 import kotlinx.coroutines.launch
-import java.util.*
+import java.util.Date
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 class SubmissionViewModel : ViewModel() {
@@ -31,6 +37,8 @@ class SubmissionViewModel : ViewModel() {
 
     private val _submissionState = MutableLiveData(ApiRequestState.IDLE)
     private val _submissionError = MutableLiveData<Event<CwaWebException>>(null)
+
+    private val _keyPairs = MutableLiveData<List<Pair<TemporaryExposureKey, Country>>>()
 
     val scanStatus: LiveData<Event<ScanStatus>> = _scanStatus
 
@@ -49,6 +57,44 @@ class SubmissionViewModel : ViewModel() {
         SubmissionRepository.testResultReceivedDate
     val deviceUiState: LiveData<DeviceUIState> =
         SubmissionRepository.deviceUIState
+
+    val keyPairs: LiveData<List<Pair<TemporaryExposureKey, Country>>> = _keyPairs
+
+    fun getCountries(context: Context): List<Country> {
+        return readCountries(context)
+    }
+
+    fun setKeys(context: Context, keys: List<TemporaryExposureKey>) {
+        val t0 = LocalData.t0() ?: throw IllegalStateException()
+        val t3 = LocalData.t3() ?: throw IllegalStateException()
+
+        val countries = readCountries(context)
+        val belgium = countries.find { it.code3 == "BEL" }!!
+        val keyPairs = keys.inT0T3Range(t0, t3).map { key -> Pair(key, belgium) }
+        _keyPairs.postValue(keyPairs)
+    }
+
+    fun beSubmitDiagnosisKeys(keys: List<Pair<TemporaryExposureKey, Country>>) =
+        viewModelScope.launch {
+            try {
+                _submissionState.value = ApiRequestState.STARTED
+                BeSubmissionService.asyncSubmitExposureKeys(keys)
+                _submissionState.value = ApiRequestState.SUCCESS
+            } catch (err: CwaWebException) {
+                _submissionError.value = Event(err)
+                _submissionState.value = ApiRequestState.FAILED
+            } catch (err: TransactionException) {
+                if (err.cause is CwaWebException) {
+                    _submissionError.value = Event(err.cause)
+                } else {
+                    err.report(ExceptionCategory.INTERNAL)
+                }
+                _submissionState.value = ApiRequestState.FAILED
+            } catch (err: Exception) {
+                _submissionState.value = ApiRequestState.FAILED
+                err.report(ExceptionCategory.INTERNAL)
+            }
+        }
 
     fun submitDiagnosisKeys(keys: List<TemporaryExposureKey>) = viewModelScope.launch {
         try {

@@ -81,7 +81,7 @@ fun LocalData.resultChannel(value: Int) {
         putInt(
             CoronaWarnApplication.getAppContext()
                 .getString(R.string.preference_result_channel),
-            -1
+            value
         )
     }
 }

@@ -1,15 +1,16 @@
-package de.rki.coronawarnapp.transaction
+package be.sciensano.coronalert.transaction
 
+import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.CLOSE
+import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY
+import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.STORE_SUCCESS
+import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.SUBMIT_KEYS
+import be.sciensano.coronalert.ui.submission.Country
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
-import de.rki.coronawarnapp.service.diagnosiskey.DiagnosisKeyService
-import de.rki.coronawarnapp.service.submission.SubmissionService
-import de.rki.coronawarnapp.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.CLOSE
-import de.rki.coronawarnapp.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.RETRIEVE_TAN
-import de.rki.coronawarnapp.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY
-import de.rki.coronawarnapp.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.STORE_SUCCESS
-import de.rki.coronawarnapp.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.SUBMIT_KEYS
-import de.rki.coronawarnapp.util.ProtoFormatConverterExtensions.limitKeyCount
+import de.rki.coronawarnapp.transaction.Transaction
+import de.rki.coronawarnapp.transaction.TransactionState
 import de.rki.coronawarnapp.util.ProtoFormatConverterExtensions.transformKeyHistoryToExternalFormat
+import be.sciensano.coronalert.service.diagnosiskey.DiagnosisKeyService as BeDiagnosisKeyService
+import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 /**
  * The SubmitDiagnosisKeysTransaction is used to define an atomic Transaction for Key Reports. Its states allow an
@@ -41,7 +42,6 @@ object SubmitDiagnosisKeysTransaction : Transaction() {
     /** possible transaction states */
     private enum class SubmitDiagnosisKeysTransactionState :
         TransactionState {
-        RETRIEVE_TAN,
         RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY,
         SUBMIT_KEYS,
         STORE_SUCCESS,
@@ -49,34 +49,33 @@ object SubmitDiagnosisKeysTransaction : Transaction() {
     }
 
     /** initiates the transaction. This suspend function guarantees a successful transaction once completed. */
-    suspend fun start(registrationToken: String, keys: List<TemporaryExposureKey>) =
+    suspend fun start(keys: List<Pair<TemporaryExposureKey, Country>>) =
         lockAndExecuteUnique {
-
-            /****************************************************
-             * RETRIEVE TAN
-             ****************************************************/
-            val authCode = executeState(RETRIEVE_TAN) {
-                SubmissionService.asyncRequestAuthCode(registrationToken)
-            }
 
             /****************************************************
              * RETRIEVE TEMPORARY EXPOSURE KEY HISTORY
              ****************************************************/
             val temporaryExposureKeyList = executeState(RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY) {
-                keys.limitKeyCount()
-                    .transformKeyHistoryToExternalFormat()
+                keys.map { it.first }.transformKeyHistoryToExternalFormat()
+                    .mapIndexed { index, temporaryExposureKey ->
+                        Pair(
+                            temporaryExposureKey,
+                            keys[index].second.code3
+                        )
+                    }
             }
+
             /****************************************************
              * SUBMIT KEYS
              ****************************************************/
             executeState(SUBMIT_KEYS) {
-                DiagnosisKeyService.asyncSubmitKeys(authCode, temporaryExposureKeyList)
+                BeDiagnosisKeyService.asyncSubmitKeys(temporaryExposureKeyList)
             }
             /****************************************************
              * STORE SUCCESS
              ****************************************************/
             executeState(STORE_SUCCESS) {
-                SubmissionService.submissionSuccessful()
+                BeSubmissionService.submissionSuccessful()
             }
             /****************************************************
              * CLOSE TRANSACTION

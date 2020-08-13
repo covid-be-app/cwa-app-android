@@ -228,17 +228,19 @@ class WebRequestBuilder(
         t0: String,
         t3: String,
         resultChannel: Int,
-        keyList: List<KeyExportFormat.TemporaryExposureKey>
+        keyList: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
     ) = withContext(Dispatchers.IO) {
         Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
-        val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .addCountries("BEL")
-            .addAllKeys(keyList)
-            .build()
+        val submissionPayloadBuilder = KeyExportFormat.SubmissionPayload.newBuilder()
+        keyList.forEach {
+            submissionPayloadBuilder.addKeys(it.first)
+                .addCountries(it.second)
+        }
+
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
             k, r0, t0, t3, resultChannel,
-            submissionPayload
+            submissionPayloadBuilder.build()
         )
         return@withContext
     }

@@ -41,7 +41,7 @@ class SubmissionTestRequestFragment : Fragment() {
         val calendar = Calendar.getInstance()
         calendar.time = viewModel.submissionDate.value!!
 
-        //no date in future
+        // no date in future
         binding.submissionDatePicker.maxDate = Date().time
         binding.submissionDatePicker.init(
             calendar.get(Calendar.YEAR),
@@ -59,13 +59,10 @@ class SubmissionTestRequestFragment : Fragment() {
         }
 
         binding.submissionTestRequestButtonNext.setOnClickListener {
-
             findNavController().doNavigate(
                 SubmissionTestRequestFragmentDirections
                     .actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
             )
         }
-
     }
-
 }
