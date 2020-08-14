@@ -14,6 +14,7 @@ class SubmissionTestRequestViewModel : ViewModel() {
 
     companion object {
         private val TAG: String? = SubmissionTestRequestViewModel::class.simpleName
+        private const val DAYS_MINUS = 2
     }
 
     val submissionDate: MutableLiveData<Date> = MutableLiveData(Date())
@@ -25,7 +26,7 @@ class SubmissionTestRequestViewModel : ViewModel() {
     fun generateTestId(): MobileTestId {
         val cal = Calendar.getInstance()
         cal.time = submissionDate.value!!
-        cal.add(Calendar.DATE, -2)
+        cal.add(Calendar.DATE, -DAYS_MINUS)
         val submissionDateMinus2 = cal.time
 
         val testId = MobileTestId.generate(submissionDateMinus2)
