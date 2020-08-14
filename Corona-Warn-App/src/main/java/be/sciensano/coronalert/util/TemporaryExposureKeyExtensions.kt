@@ -6,6 +6,7 @@ import org.joda.time.chrono.GJChronology
 import org.joda.time.format.DateTimeFormat
 import java.util.Date
 
+@Suppress("MagicNumber")
 object TemporaryExposureKeyExtensions {
 
     fun List<TemporaryExposureKey>.inT0T3Range(t0: String, t3: String) = run {
