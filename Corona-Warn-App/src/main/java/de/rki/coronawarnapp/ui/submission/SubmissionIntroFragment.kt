@@ -71,13 +71,15 @@ class SubmissionIntroFragment : Fragment() {
                     true,
                     {
                         findNavController().doNavigate(
-                            SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionTestRequestFragment()
+                            SubmissionIntroFragmentDirections
+                                .actionSubmissionIntroFragmentToSubmissionTestRequestFragment()
                         )
                     },
                     {
                         viewModel.setSubmissionDate(Date())
                         findNavController().doNavigate(
-                            SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionTestRequestSaveFragment()
+                            SubmissionIntroFragmentDirections
+                                .actionSubmissionIntroFragmentToSubmissionTestRequestSaveFragment()
                         )
                     }
                 ))
