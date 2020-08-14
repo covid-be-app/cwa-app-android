@@ -10,7 +10,8 @@ import androidx.navigation.fragment.findNavController
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestRequestBinding
 import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.ui.main.MainActivity
-import java.util.*
+import java.util.Calendar
+import java.util.Date
 
 
 class SubmissionTestRequestFragment : Fragment() {
@@ -25,7 +26,6 @@ class SubmissionTestRequestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSubmissionTestRequestBinding.inflate(inflater)
-        binding.submissionViewModel = viewModel
         binding.lifecycleOwner = this
         return binding.root
     }
@@ -64,7 +64,6 @@ class SubmissionTestRequestFragment : Fragment() {
                 SubmissionTestRequestFragmentDirections
                     .actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
             )
-
         }
 
     }

@@ -6,9 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityEvent
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.ui.submission.SubmissionTestRequestViewModel
+import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSubmissionIntroBinding
 import de.rki.coronawarnapp.ui.doNavigate
+import de.rki.coronawarnapp.util.DialogHelper
+import java.util.Date
 
 /**
  * The [SubmissionIntroFragment] displays information about how the corona warning system works
@@ -17,6 +22,7 @@ class SubmissionIntroFragment : Fragment() {
 
     private var _binding: FragmentSubmissionIntroBinding? = null
     private val binding: FragmentSubmissionIntroBinding get() = _binding!!
+    private val viewModel: SubmissionTestRequestViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,12 +56,31 @@ class SubmissionIntroFragment : Fragment() {
             )
         }
         binding.submissionIntroButtonNext.setOnClickListener {
+
 //            findNavController().doNavigate(
 //                SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionDispatcherFragment()
 //            )
-            findNavController().doNavigate(
-                SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionTestRequestFragment()
-            )
+            // Be implementation
+            DialogHelper.showDialog(
+                DialogHelper.DialogInstance(
+                    requireActivity(),
+                    R.string.submission_intro_symptoms_dialog_title,
+                    R.string.submission_intro_symptoms_dialog_body,
+                    R.string.submission_intro_symptoms_dialog_positive,
+                    R.string.submission_intro_symptoms_dialog_negative,
+                    true,
+                    {
+                        findNavController().doNavigate(
+                            SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionTestRequestFragment()
+                        )
+                    },
+                    {
+                        viewModel.setSubmissionDate(Date())
+                        findNavController().doNavigate(
+                            SubmissionIntroFragmentDirections.actionSubmissionIntroFragmentToSubmissionTestRequestSaveFragment()
+                        )
+                    }
+                ))
         }
     }
 }

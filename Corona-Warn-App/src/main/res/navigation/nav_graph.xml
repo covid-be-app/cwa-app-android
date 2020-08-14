@@ -271,6 +271,9 @@
         <action
             android:id="@+id/action_submissionIntroFragment_to_submissionTestRequestFragment"
             app:destination="@id/submissionTestRequestFragment" />
+        <action
+            android:id="@+id/action_submissionIntroFragment_to_submissionTestRequestSaveFragment"
+            app:destination="@id/submissionTestRequestSaveFragment" />
     </fragment>
     <activity
         android:id="@+id/launcherActivity"
