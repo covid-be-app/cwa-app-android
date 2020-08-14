@@ -8,14 +8,14 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/submission_test_request_container"
+        android:id="@+id/submission_keys_list_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:accessibilityLiveRegion="assertive"
-        android:contentDescription="@string/submission_test_request_headline">
+        android:contentDescription="@string/submission_countries_selection_headline">
 
         <include
-            android:id="@+id/submission_test_request_header"
+            android:id="@+id/submission_keys_list_header"
             layout="@layout/include_header"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
@@ -23,35 +23,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="@{@string/submission_test_request_headline}" />
+            app:title="@{@string/submission_countries_selection_headline}" />
 
 
         <TextView
-            android:id="@+id/submission_test_request_text"
+            android:id="@+id/submission_keys_list_text"
             style="@style/subtitle"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:focusable="true"
-            android:text="@string/submission_test_request_text"
+            android:text="@string/submission_countries_selection_text"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toBottomOf="@+id/submission_test_request_header" />
+            app:layout_constraintTop_toBottomOf="@+id/submission_keys_list_header" />
 
-        <DatePicker
-            android:id="@+id/submission_date_picker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_normal"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/submission_keys_list_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_action"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submission_test_request_text" />
-
+            app:layout_constraintTop_toBottomOf="@+id/submission_keys_list_text" />
 
         <Button
-            android:id="@+id/submission_test_request_button_next"
+            android:id="@+id/submission_keys_list_button_submit"
             style="@style/buttonPrimary"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"

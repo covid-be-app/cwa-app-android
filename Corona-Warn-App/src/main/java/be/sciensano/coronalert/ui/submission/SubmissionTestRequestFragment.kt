@@ -10,7 +10,8 @@ import androidx.navigation.fragment.findNavController
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestRequestBinding
 import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.ui.main.MainActivity
-import java.util.*
+import java.util.Calendar
+import java.util.Date
 
 
 class SubmissionTestRequestFragment : Fragment() {
@@ -25,7 +26,6 @@ class SubmissionTestRequestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSubmissionTestRequestBinding.inflate(inflater)
-        binding.submissionViewModel = viewModel
         binding.lifecycleOwner = this
         return binding.root
     }
@@ -41,7 +41,7 @@ class SubmissionTestRequestFragment : Fragment() {
         val calendar = Calendar.getInstance()
         calendar.time = viewModel.submissionDate.value!!
 
-        //no date in future
+        // no date in future
         binding.submissionDatePicker.maxDate = Date().time
         binding.submissionDatePicker.init(
             calendar.get(Calendar.YEAR),
@@ -59,14 +59,10 @@ class SubmissionTestRequestFragment : Fragment() {
         }
 
         binding.submissionTestRequestButtonNext.setOnClickListener {
-
             findNavController().doNavigate(
                 SubmissionTestRequestFragmentDirections
                     .actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
             )
-
         }
-
     }
-
 }

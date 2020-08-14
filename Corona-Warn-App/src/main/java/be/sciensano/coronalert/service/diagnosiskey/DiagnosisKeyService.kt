@@ -33,7 +33,7 @@ object DiagnosisKeyService {
      * @param keysToReport - KeyList in the Server Format to submit to the Server
      */
     suspend fun asyncSubmitKeys(
-        keysToReport: List<KeyExportFormat.TemporaryExposureKey>
+        keysToReport: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
     ) {
         Timber.d("Diagnosis Keys will be submitted.")
         val k = LocalData.k() ?: throw IllegalStateException()
@@ -47,7 +47,7 @@ object DiagnosisKeyService {
 
         WebRequestBuilder.getInstance().beAsyncSubmitKeysToServer(
             k, r0, t0, t3, resultChannel,
-            keysToReport
+            keysToReport.map { Pair(it.first, it.second) }
         )
     }
 }
