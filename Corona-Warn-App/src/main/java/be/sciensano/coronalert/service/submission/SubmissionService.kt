@@ -5,6 +5,9 @@ import be.sciensano.coronalert.storage.r0
 import be.sciensano.coronalert.storage.resultChannel
 import be.sciensano.coronalert.storage.t0
 import be.sciensano.coronalert.storage.t3
+import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction
+import be.sciensano.coronalert.ui.submission.Country
+import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.storage.LocalData
@@ -35,8 +38,14 @@ object SubmissionService {
         return testResultStatus
     }
 
+    suspend fun asyncSubmitExposureKeys(keys: List<Pair<TemporaryExposureKey, Country>>) {
+        SubmitDiagnosisKeysTransaction.start(keys)
+    }
+
+
     fun submissionSuccessful() {
         BackgroundWorkScheduler.stopWorkScheduler()
+        deleteRegistrationToken()
         LocalData.numberOfSuccessfulSubmissions(1)
     }
 
