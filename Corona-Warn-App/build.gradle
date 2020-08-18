@@ -97,7 +97,6 @@ android {
             dimension "version"
             buildConfigField "String", "BUILD_VARIANT", "\"deviceForTesters\""
             resValue "string", "app_name", "Coronalert TEST"
-            applicationIdSuffix '.dev'
 
             def environmentPropertiesFile = project.rootProject.file('environment.properties')
             if (environmentPropertiesFile.exists()) {
