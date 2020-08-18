@@ -59,6 +59,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                 val testResult = BeSubmissionService.asyncRequestTestResult()
                 initiateNotification(testResult)
             } else {
+                BeSubmissionService.deleteRegistrationToken()
                 stopWorker()
             }
         } catch (e: Exception) {
