@@ -365,7 +365,7 @@
     <string name="information_help_title_accessibility">Häufig gestellte Fragen. Sie werden an eine externe Website weitergeleitet.</string>
     <string name="information_technical_title">Rechtliche Hinweise</string>
     <string name="information_technical_illustration_description">Eine Hand hält ein Handy mit viel Text. Daneben ist eine Balkenwaage als Symbol für rechtliche Hinweise.</string>
-    <string name="information_technical_html_path">technical_de.html</string>
+    <string name="information_technical_html_path">technical_en.html</string>
     <string name="information_legal_title">Impressum</string>
     <string name="information_legal_headline_publisher">Herausgeber</string>
     <string name="information_legal_subtitle_publisher">(verantwortlich nach § 5 Abs. 1 TMG, § 55 Abs. 1 RStV, DS-GVO, BDSG)</string>

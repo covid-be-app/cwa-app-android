@@ -346,11 +346,11 @@
     <string name="information_about_illustration_description">Un groupe de personnes utilisent leurs smartphones dans toute la ville.</string>
     <string name="information_privacy_title">Données de confidentialité</string>
     <string name="information_privacy_illustration_description">Une femme utilise l\'application Coronalert sur son smartphone. Une icône représentant un cadenas sur fond d\'un bouclier symbolise les données cryptées.</string>
-    <string name="information_privacy_html_path">privacy_en.html</string>
+    <string name="information_privacy_html_path">privacy_fr.html</string>
     <string name="information_terms_title">Conditions d\'utilisation</string>
     <string name="information_terms_headline">Contenu</string>
     <string name="information_terms_illustration_description">Une main tient un smartphone qui affiche un texte à l\'écran. À côté du texte se trouve une case cochée symbolisant l\'acceptation des conditions d\'utilisation.</string>
-    <string name="information_terms_html_path">terms_en.html</string>
+    <string name="information_terms_html_path">terms_fr.html</string>
     <string name="information_contact_title">Assistance technique</string>
     <string name="information_contact_headline">Comment pouvons-nous vous aider ?</string>
     <string name="information_contact_body">Pour les questions concernant l’application Coronalert, veuillez contacter notre numéro d\'information.</string>
