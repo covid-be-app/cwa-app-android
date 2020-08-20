@@ -36,14 +36,11 @@ class UpdateChecker(private val activity: LauncherActivity) {
             false
         }
 
-        // TODO: enable when server ready
-
-//        if (updateNeededFromServer) {
-//            showUpdateNeededDialog()
-//        } else {
-//            activity.navigateToActivities()
-//        }
-        activity.navigateToActivities()
+        if (updateNeededFromServer) {
+            showUpdateNeededDialog()
+        } else {
+            activity.navigateToActivities()
+        }
     }
 
     /**
