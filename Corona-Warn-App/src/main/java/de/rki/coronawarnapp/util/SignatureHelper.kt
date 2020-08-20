@@ -4,8 +4,8 @@ import KeyExportFormat.SignatureInfo
 
 object SignatureHelper {
     val clientSig: SignatureInfo = SignatureInfo.newBuilder()
-        .setAndroidPackage("de.rki.coronawarnapp")
-        .setAppBundleId("de.rki.coronawarnapp")
+        .setAndroidPackage("be.sciensano.coronalert")
+        .setAppBundleId("be.sciensano.coronalert")
         .setSignatureAlgorithm("ECDSA")
         .build()
 }
