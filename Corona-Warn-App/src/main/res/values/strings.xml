@@ -174,7 +174,7 @@
     <string name="main_share_headline">Let\'s fight coronavirus together</string>
     <string name="main_share_body">The more people who use the app, the faster we can break the infection chain. Please invite your family and friends to download the app.</string>
     <string name="main_share_button">Send Download Link</string>
-    <string name="main_share_message">Fighting coronavirus together<xliff:g id="line_break">\n</xliff:g>I\'m in on this, you too?<xliff:g id="line_break">\n</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>\n<xliff:g id="line_break">\n</xliff:g></string>
+    <string name="main_share_message">Download the Coronalert application via this link: http://onelink.to/j8nrvj</string>
     <string name="main_share_illustration_description">A man shares the Coronalert-App with four other persons.</string>
     <string name="main_overview_title">Overview</string>
     <string name="main_overview_accessibility_title">Overview</string>
