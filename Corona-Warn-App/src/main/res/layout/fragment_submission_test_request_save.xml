@@ -44,6 +44,7 @@
             android:layout_marginStart="48dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="48dp"
+            android:visibility="gone"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"

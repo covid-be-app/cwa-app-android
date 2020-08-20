@@ -67,7 +67,7 @@ class SubmissionTestRequestSaveFragment : Fragment() {
             DateFormat.getDateInstance(DateFormat.FULL)
                 .format(DateUtil.parseServerDate(mobileTestId.t0).toDate())
 
-        showQrCode(mobileTestId.toString())
+//        showQrCode(mobileTestId.toString())
         binding.submissionTestRequestSaveCode.text = mobileTestId.toString()
 
         binding.submissionTestRequestSaveHeader.headerButtonBack.buttonIcon.setOnClickListener {
