@@ -174,7 +174,7 @@
     <string name="main_share_headline">Samen krijgen we het coronavirus klein</string>
     <string name="main_share_body">Hoe meer mensen de app gebruiken, hoe sneller we de infectieketen kunnen doorbreken. Vraag uw familie en vrienden om de app te downloaden.</string>
     <string name="main_share_button">Downloadlink verzenden</string>
-    <string name="main_share_message">Samen krijgen we het coronavirus klein<xliff:g id="line_break">\n</xliff:g>Ik doe mee, u ook?<xliff:g id="line_break">\n</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>\n<xliff:g id="line_break">\n</xliff:g></string>
+    <string name="main_share_message">Download de Coronalert applicatie via deze link: http://onelink.to/j8nrvj</string>
     <string name="main_share_illustration_description">Een man deelt CoronAlert met vier andere mensen.</string>
     <string name="main_overview_title">Overzicht</string>
     <string name="main_overview_accessibility_title">Overzicht</string>
@@ -346,11 +346,11 @@
     <string name="information_about_illustration_description">Een groep mensen gebruikt hun smartphones in de stad.</string>
     <string name="information_privacy_title">Privacy van gegevens</string>
     <string name="information_privacy_illustration_description">Een vrouw gebruikt CoronAlert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
-    <string name="information_privacy_html_path">privacy_en.html</string>
+    <string name="information_privacy_html_path">privacy_nl.html</string>
     <string name="information_terms_title">Gebruiksvoorwaarden</string>
     <string name="information_terms_headline">Inhoud</string>
     <string name="information_terms_illustration_description">U ziet een hand met een smartphone met een grote hoeveelheid tekst op het schermpje. Het vinkje naast de tekst geeft aan dat de gebruiksvoorwaarden zijn aanvaard.</string>
-    <string name="information_terms_html_path">terms_en.html</string>
+    <string name="information_terms_html_path">terms_nl.html</string>
     <string name="information_contact_title">Technische hotline</string>
     <string name="information_contact_headline">Hoe kunnen we u helpen?</string>
     <string name="information_contact_body">Voor technische vragen over CoronAlert belt naar u naar onze hotline.</string>

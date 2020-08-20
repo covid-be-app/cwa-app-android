@@ -402,6 +402,8 @@ class TestForAPIFragment : Fragment(), InternalExposureNotificationPermissionHel
 
     private fun updateExposureSummaryDisplay(exposureSummary: ExposureSummary?) {
 
+        exposureSummary?.matchedKeyCount
+
         label_exposure_summary_matchedKeyCount.text = getString(
             R.string.test_api_body_matchedKeyCount,
             (exposureSummary?.matchedKeyCount ?: "-").toString()

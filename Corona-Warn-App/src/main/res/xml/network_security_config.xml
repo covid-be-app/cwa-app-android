@@ -2,12 +2,9 @@
 <network-security-config xmlns:tools="http://schemas.android.com/tools">
 
     <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">coronawarn.app</domain>
-        <domain includeSubdomains="true">main.px.t-online.de</domain>
-        <pin-set
-            expiration="2024-02-12"
-            tools:ignore="MissingBackupPin">
-            <pin digest="SHA-256">c3jf+L8VIAFQnJJDM6Mfb4MtI1JnhVS8JwZHMwJj28M=</pin>
+        <domain includeSubdomains="true">ixor.be</domain>
+        <pin-set tools:ignore="MissingBackupPin">
+            <pin digest="SHA-256">JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=</pin>
         </pin-set>
         <trust-anchors>
             <certificates

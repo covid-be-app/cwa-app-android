@@ -15,9 +15,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import de.rki.coronawarnapp.exception.reporting.ErrorReportReceiver
 import de.rki.coronawarnapp.exception.reporting.ReportingConstants.ERROR_REPORT_LOCAL_BROADCAST_CHANNEL
 import de.rki.coronawarnapp.notification.NotificationHelper
-import org.conscrypt.Conscrypt
 import timber.log.Timber
-import java.security.Security
 
 class CoronaWarnApplication : Application(), LifecycleObserver,
     Application.ActivityLifecycleCallbacks {
@@ -44,7 +42,7 @@ class CoronaWarnApplication : Application(), LifecycleObserver,
         instance = this
         NotificationHelper.createNotificationChannel()
         // Enable Conscrypt for TLS1.3 Support below API Level 29
-        Security.insertProviderAt(Conscrypt.newProvider(), 1)
+//        Security.insertProviderAt(Conscrypt.newProvider(), 1)
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
         registerActivityLifecycleCallbacks(this)
 
