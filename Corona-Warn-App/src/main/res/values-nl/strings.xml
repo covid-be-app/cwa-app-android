@@ -346,11 +346,11 @@
     <string name="information_about_illustration_description">Een groep mensen gebruikt hun smartphones in de stad.</string>
     <string name="information_privacy_title">Privacy van gegevens</string>
     <string name="information_privacy_illustration_description">Een vrouw gebruikt CoronAlert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
-    <string name="information_privacy_html_path">privacy_en.html</string>
+    <string name="information_privacy_html_path">privacy_nl.html</string>
     <string name="information_terms_title">Gebruiksvoorwaarden</string>
     <string name="information_terms_headline">Inhoud</string>
     <string name="information_terms_illustration_description">U ziet een hand met een smartphone met een grote hoeveelheid tekst op het schermpje. Het vinkje naast de tekst geeft aan dat de gebruiksvoorwaarden zijn aanvaard.</string>
-    <string name="information_terms_html_path">terms_en.html</string>
+    <string name="information_terms_html_path">terms_nl.html</string>
     <string name="information_contact_title">Technische hotline</string>
     <string name="information_contact_headline">Hoe kunnen we u helpen?</string>
     <string name="information_contact_body">Voor technische vragen over CoronAlert belt naar u naar onze hotline.</string>
