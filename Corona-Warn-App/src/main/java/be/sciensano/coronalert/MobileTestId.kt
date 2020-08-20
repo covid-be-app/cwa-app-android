@@ -17,8 +17,7 @@ class MobileTestId(
 ) {
 
     override fun toString(): String {
-        val compactT0 = compactT0()
-        return "${compactT0}$r1${checksum(compactT0.toLong() + r1.toLong())}".chunked(4)
+        return "$r1${checksum(r1.toLong())}".chunked(5)
             .joinToString("-")
     }
 
