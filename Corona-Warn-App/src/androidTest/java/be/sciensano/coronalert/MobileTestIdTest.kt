@@ -39,7 +39,7 @@ class MobileTestIdTest {
 
         Assert.assertEquals(
             mobileTestIdFactory.generate(newDate(2020, 7, 21)).toString(),
-            "2007-2140-2570-7808-9235-612"
+            "40257-07808-92356-96"
         )
 
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("8FQZ4I4BT66ClgTmnM1Alw==")
@@ -53,7 +53,7 @@ class MobileTestIdTest {
 
         Assert.assertEquals(
             mobileTestIdFactory.generate(newDate(2020, 7, 21)).toString(),
-            "2007-2131-0169-4455-5429-335"
+            "31016-94455-54293-22"
         )
 
         every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("j9EWWBZYt9CWsGtTpPNUrg==")
@@ -67,7 +67,7 @@ class MobileTestIdTest {
 
         Assert.assertEquals(
             mobileTestIdFactory.generate(newDate(2020, 7, 21)).toString(),
-            "2007-2198-9250-1504-3257-597"
+            "98925-01504-32575-84"
         )
     }
 
