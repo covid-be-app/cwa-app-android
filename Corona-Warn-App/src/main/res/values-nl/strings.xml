@@ -174,7 +174,7 @@
     <string name="main_share_headline">Samen krijgen we het coronavirus klein</string>
     <string name="main_share_body">Hoe meer mensen de app gebruiken, hoe sneller we de infectieketen kunnen doorbreken. Vraag uw familie en vrienden om de app te downloaden.</string>
     <string name="main_share_button">Downloadlink verzenden</string>
-    <string name="main_share_message">Samen krijgen we het coronavirus klein<xliff:g id="line_break">\n</xliff:g>Ik doe mee, u ook?<xliff:g id="line_break">\n</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>\n<xliff:g id="line_break">\n</xliff:g></string>
+    <string name="main_share_message">Download de Coronalert applicatie via deze link: http://onelink.to/j8nrvj</string>
     <string name="main_share_illustration_description">Een man deelt CoronAlert met vier andere mensen.</string>
     <string name="main_overview_title">Overzicht</string>
     <string name="main_overview_accessibility_title">Overzicht</string>

@@ -174,7 +174,7 @@
     <string name="main_share_headline">Gemeinsam gegen Corona</string>
     <string name="main_share_body">Je häufiger die App benutzt wird, desto eher gebieten wir der Infektion Einhalt. Bitten Sie Familie, Freunde und Bekannte, die App herunterzuladen!</string>
     <string name="main_share_button">Download-Link versenden</string>
-    <string name="main_share_message">Gemeinsam gegen Corona<xliff:g id="line_break">\n</xliff:g>Ich bin dabei. Du auch?<xliff:g id="line_break">\n</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>\n<xliff:g id="line_break">\n</xliff:g></string>
+    <string name="main_share_message">Laden Sie die Anwendung Coronalert über diesen Link herunter: http://onelink.to/j8nrvj</string>
     <string name="main_share_illustration_description">Ein Mann teilt die Coronalert-App mit vier anderen Personen.</string>
     <string name="main_overview_title">Übersicht</string>
     <string name="main_overview_accessibility_title">Übersicht</string>
