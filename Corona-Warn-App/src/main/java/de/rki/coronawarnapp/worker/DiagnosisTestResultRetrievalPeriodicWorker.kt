@@ -44,13 +44,15 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
 
         Timber.d("Background job started. Run attempt: $runAttemptCount")
         BackgroundWorkHelper.sendDebugNotification(
-            "TestResult Executing: Start", "TestResult started. Run attempt: $runAttemptCount ")
+            "TestResult Executing: Start", "TestResult started. Run attempt: $runAttemptCount "
+        )
 
         if (runAttemptCount > BackgroundConstants.WORKER_RETRY_COUNT_THRESHOLD) {
             Timber.d("Background job failed after $runAttemptCount attempts. Rescheduling")
 
             BackgroundWorkHelper.sendDebugNotification(
-                "TestResult Executing: Failure", "TestResult failed with $runAttemptCount attempts")
+                "TestResult Executing: Failure", "TestResult failed with $runAttemptCount attempts"
+            )
 
             BackgroundWorkScheduler.scheduleDiagnosisKeyPeriodicWork()
             return Result.failure()
@@ -63,7 +65,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                 ) < BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
             ) {
                 val testResult = BeSubmissionService.asyncRequestTestResult()
-                initiateNotification(testResult)
+                initiateNotification(TestResult.fromInt(testResult.result))
             } else {
                 BeSubmissionService.deleteRegistrationToken()
                 stopWorker()
@@ -73,7 +75,8 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
         }
 
         BackgroundWorkHelper.sendDebugNotification(
-            "TestResult Executing: End", "TestResult result: $result ")
+            "TestResult Executing: End", "TestResult result: $result "
+        )
 
         return result
     }
@@ -118,6 +121,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
         BackgroundWorkScheduler.WorkType.DIAGNOSIS_TEST_RESULT_PERIODIC_WORKER.stop()
 
         BackgroundWorkHelper.sendDebugNotification(
-            "TestResult Stopped", "TestResult Stopped")
+            "TestResult Stopped", "TestResult Stopped"
+        )
     }
 }
