@@ -160,7 +160,8 @@
     <string name="risk_card_unknown_risk_headline">Onbekend risico</string>
     <string name="risk_card_unknown_risk_body">U heeft de contacttracing niet lang genoeg aangezet. Daarom kunnen we uw risico op een besmetting niet berekenen.</string>
     <string name="risk_card_no_calculation_possible_headline">Contacttracing stopgezet</string>
-    <string name="risk_card_no_calculation_possible_body_saved_risk">Laatste contacttracing:<xliff:g id="line_break">\n</xliff:g>%1$s</string>
+    <string name="risk_card_no_calculation_possible_body_saved_risk">Laatste contacttracing:<xliff:g id="line_break">
+</xliff:g>%1$s</string>
     <string name="risk_card_outdated_risk_headline">Contacttracing is niet mogelijk</string>
     <string name="risk_card_outdated_risk_body">Uw contactlogboek kon gedurende meer dan 24 uur niet worden geüpdatet.</string>
     <string name="risk_card_outdated_manual_risk_body">Uw risicostatus is al meer dan 48 uur niet bijgewerkt. Werk uw risicostatus bij.</string>
@@ -174,7 +175,11 @@
     <string name="main_share_headline">Samen krijgen we het coronavirus klein</string>
     <string name="main_share_body">Hoe meer mensen de app gebruiken, hoe sneller we de infectieketen kunnen doorbreken. Vraag uw familie en vrienden om de app te downloaden.</string>
     <string name="main_share_button">Downloadlink verzenden</string>
-    <string name="main_share_message">Download de Coronalert applicatie via deze link: http://onelink.to/j8nrvj</string>
+    <string name="main_share_message">Samen krijgen we het coronavirus klein<xliff:g id="line_break">
+</xliff:g>Ik doe mee, u ook?<xliff:g id="line_break">
+</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>
+<xliff:g id="line_break">
+</xliff:g></string>
     <string name="main_share_illustration_description">Een man deelt CoronAlert met vier andere mensen.</string>
     <string name="main_overview_title">Overzicht</string>
     <string name="main_overview_accessibility_title">Overzicht</string>
@@ -254,7 +259,19 @@
     <string name="onboarding_tracing_body">Voor het registreren van contacten ontvangt uw toestel via Bluetooth gecodeerde willekeurige ID\'s van andere gebruikers en wordt uw eigen willekeurige ID aan hun toestellen doorgegeven. U kunt deze functie op elk moment uitschakelen.</string>
     <string name="onboarding_tracing_body_emphasized">De gecodeerde willekeurige ID\'s geven alleen informatie over datum, duur en nabijheid (via signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres of locatie worden nooit geregistreerd. U kunt niet worden geïdentificeerd.</string>
     <string name="onboarding_tracing_headline_consent">Toestemmingsverklaring</string>
-    <string name="onboarding_tracing_body_consent">Als u wilt weten of u in contact bent gekomen met een besmet persoon en of er een risico is dat u ook zelf besmet bent, schakelt u de contacttracing van de app in. Door op de knop Inschakelen te tikken, gaat u ermee akkoord dat de contacttracing van de app en de bijbehorende verwerking van gegevens ingeschakeld worden.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Om de contacttracing van de app te kunnen gebruiken, schakelt u de COVID-19-contacttracing die Google op uw smartphone heeft gezet, in en geeft u CoronAlert de toestemming om deze functie te gebruiken.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Wanneer de contacttracing is ingeschakeld, genereert en verzendt uw smartphone continu willekeurige ID\'s via Bluetooth, die andere Android- of Apple-smartphones in uw buurt kunnen ontvangen als de contacttracing ook bij hen is ingeschakeld. Uw smartphone ontvangt op zijn beurt de willekeurige ID\'s van de andere smartphones. Uw eigen willekeurige ID\'s en die van andere smartphones worden 14 dagen lang opgeslagen in het contactlogboek.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Om te bekijken welk risico u loopt, laadt de App - meerdere keren per dag of op verzoek - een lijst van de willekeurige ID\'s van alle gebruikers die in de app hebben geregistreerd dat ze besmet zijn met het coronavirus. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die zijn opgeslagen in het contactlogboek. Als de app detecteert dat u mogelijk in contact bent geweest met een besmette gebruiker, dan zal hij u hiervan op de hoogte brengen en u laten weten dat er een risico is dat u ook besmet bent. In dit geval krijgt de app ook toegang tot andere gegevens die zijn opgeslagen in het contactlogboek van uw smartphone (datum, duur en Bluetooth-signaalsterkte van het contact).<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>De Bluetooth-signaalsterkte wordt gebruikt om de fysieke afstand te berekenen (hoe sterker het signaal, hoe kleiner de afstand). De app analyseert vervolgens deze informatie en geeft een inschatting van hoe groot de kans is dat u besmet bent met het coronavirus. De app vertelt u ook wat u vervolgens moet doen. Deze analyse gebeurt alleen lokaal op uw smartphone. Behalve u weet niemand (zelfs de FOD volksgezondheid niet) of u in contact bent geweest met een besmet persoon en welk risico er voor u is vastgesteld.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Als u uw toestemming voor de contacttracing wilt intrekken, schakelt u de functie met de toggle uit in de app of verwijdert u de app. Als u de contacttracing weer wilt gebruiken, schakelt u de functie met de toggle weer in of installeert u de app opnieuw. Als u de contacttracing uitschakelt, controleert de app niet langer of u in contact bent geweest met een besmette gebruiker. Als u ook niet langer wilt dat uw toestel willekeurige ID\'s verstuurt en ontvangt, schakelt u de COVID-19-contacttracing in de instellingen van uw smartphone uit. Uw eigen willekeurige ID\'s en die van andere smartphones die zijn opgeslagen in het contactlogboek, worden niet verwijderd in de app. U kunt alleen de gegevens die zijn opgeslagen in het contactlogboek, permanent verwijderen in de instellingen van uw smartphone.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>De privacyverklaring van de app (inclusief uitleg over de gegevensverwerking voor de contacttracing) vindt u in het menu onder \'Informatie over privacy van gegevens\'.</string>
+    <string name="onboarding_tracing_body_consent">Als u wilt weten of u in contact bent gekomen met een besmet persoon en of er een risico is dat u ook zelf besmet bent, schakelt u de contacttracing van de app in. Door op de knop Inschakelen te tikken, gaat u ermee akkoord dat de contacttracing van de app en de bijbehorende verwerking van gegevens ingeschakeld worden.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Om de contacttracing van de app te kunnen gebruiken, schakelt u de COVID-19-contacttracing die Google op uw smartphone heeft gezet, in en geeft u CoronAlert de toestemming om deze functie te gebruiken.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Wanneer de contacttracing is ingeschakeld, genereert en verzendt uw smartphone continu willekeurige ID\'s via Bluetooth, die andere Android- of Apple-smartphones in uw buurt kunnen ontvangen als de contacttracing ook bij hen is ingeschakeld. Uw smartphone ontvangt op zijn beurt de willekeurige ID\'s van de andere smartphones. Uw eigen willekeurige ID\'s en die van andere smartphones worden 14 dagen lang opgeslagen in het contactlogboek.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Om te bekijken welk risico u loopt, laadt de App - meerdere keren per dag of op verzoek - een lijst van de willekeurige ID\'s van alle gebruikers die in de app hebben geregistreerd dat ze besmet zijn met het coronavirus. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die zijn opgeslagen in het contactlogboek. Als de app detecteert dat u mogelijk in contact bent geweest met een besmette gebruiker, dan zal hij u hiervan op de hoogte brengen en u laten weten dat er een risico is dat u ook besmet bent. In dit geval krijgt de app ook toegang tot andere gegevens die zijn opgeslagen in het contactlogboek van uw smartphone (datum, duur en Bluetooth-signaalsterkte van het contact).<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>De Bluetooth-signaalsterkte wordt gebruikt om de fysieke afstand te berekenen (hoe sterker het signaal, hoe kleiner de afstand). De app analyseert vervolgens deze informatie en geeft een inschatting van hoe groot de kans is dat u besmet bent met het coronavirus. De app vertelt u ook wat u vervolgens moet doen. Deze analyse gebeurt alleen lokaal op uw smartphone. Behalve u weet niemand (zelfs de FOD volksgezondheid niet) of u in contact bent geweest met een besmet persoon en welk risico er voor u is vastgesteld.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Als u uw toestemming voor de contacttracing wilt intrekken, schakelt u de functie met de toggle uit in de app of verwijdert u de app. Als u de contacttracing weer wilt gebruiken, schakelt u de functie met de toggle weer in of installeert u de app opnieuw. Als u de contacttracing uitschakelt, controleert de app niet langer of u in contact bent geweest met een besmette gebruiker. Als u ook niet langer wilt dat uw toestel willekeurige ID\'s verstuurt en ontvangt, schakelt u de COVID-19-contacttracing in de instellingen van uw smartphone uit. Uw eigen willekeurige ID\'s en die van andere smartphones die zijn opgeslagen in het contactlogboek, worden niet verwijderd in de app. U kunt alleen de gegevens die zijn opgeslagen in het contactlogboek, permanent verwijderen in de instellingen van uw smartphone.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>De privacyverklaring van de app (inclusief uitleg over de gegevensverwerking voor de contacttracing) vindt u in het menu onder \'Informatie over privacy van gegevens\'.</string>
     <string name="onboarding_tracing_button_next">Activeer contacttracing</string>
     <string name="onboarding_tracing_dialog_headline">Toestemming</string>
     <string name="onboarding_tracing_dialog_body">Dit betekent dat CoronAlert geen meldingen over uw COVID-19-risicostatus kan versturen of ontvangen. U kunt deze functie op eender welk moment uitschakelen.</string>
@@ -283,7 +300,9 @@
     <string name="settings_tracing_body_active">Contacttracing actief</string>
     <string name="settings_tracing_body_inactive">Contacttracing stopgezet</string>
     <string name="settings_tracing_body_inactive_location">Locatiefunctie uitgeschakeld</string>
-    <string name="settings_tracing_body_text">Voor de contacttracing ontvangt uw toestel via Bluetooth gecodeerde willekeurige ID\'s van andere gebruikers en geeft het uw willekeurige ID door aan hun toestellen. Deze functie kan op elk moment worden uitgeschakeld. 1\n11\n1Gecodeerde willekeurige ID\'s geven alleen informatie over datum, duur en nabijheid (berekend met behulp van signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres en locatie worden nooit geregistreerd. U kunt dan ook niet geïdentificeerd worden.</string>
+    <string name="settings_tracing_body_text">Voor de contacttracing ontvangt uw toestel via Bluetooth gecodeerde willekeurige ID\'s van andere gebruikers en geeft het uw willekeurige ID door aan hun toestellen. Deze functie kan op elk moment worden uitgeschakeld. 1
+11
+1Gecodeerde willekeurige ID\'s geven alleen informatie over datum, duur en nabijheid (berekend met behulp van signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres en locatie worden nooit geregistreerd. U kunt dan ook niet geïdentificeerd worden.</string>
     <string name="settings_tracing_status_active">Actief</string>
     <string name="settings_tracing_status_inactive">Stopgezet</string>
     <string name="settings_tracing_status_restricted">Beperkt</string>
@@ -320,7 +339,8 @@
     <string name="settings_reset_body_description">Verwijder al uw gegevens in de app.</string>
     <string name="settings_reset_headline">Weet u zeker dat u de app opnieuw wilt instellen?</string>
     <string name="settings_reset_body">Er wordt niet langer gemeld dat u contact heeft gehad en u kunt andere gebruikers niet langer waarschuwen. </string>
-    <string name="settings_reset_headline_keys">Contact<xliff:g id="line_break">\n</xliff:g>logboek verwijderen</string>
+    <string name="settings_reset_headline_keys">Contact<xliff:g id="line_break">
+</xliff:g>logboek verwijderen</string>
     <string name="settings_reset_body_keys">Het contactlogboek moet apart worden verwijderd in de instellingen van uw toestel.</string>
     <string name="settings_reset_button_positive">App opnieuw instellen</string>
     <string name="settings_reset_button_negative">Annuleren</string>
@@ -346,21 +366,21 @@
     <string name="information_about_illustration_description">Een groep mensen gebruikt hun smartphones in de stad.</string>
     <string name="information_privacy_title">Privacy van gegevens</string>
     <string name="information_privacy_illustration_description">Een vrouw gebruikt CoronAlert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
-    <string name="information_privacy_html_path">privacy_nl.html</string>
+    <string name="information_privacy_html_path">privacy_en.html</string>
     <string name="information_terms_title">Gebruiksvoorwaarden</string>
     <string name="information_terms_headline">Inhoud</string>
     <string name="information_terms_illustration_description">U ziet een hand met een smartphone met een grote hoeveelheid tekst op het schermpje. Het vinkje naast de tekst geeft aan dat de gebruiksvoorwaarden zijn aanvaard.</string>
-    <string name="information_terms_html_path">terms_nl.html</string>
-    <string name="information_contact_title">Technische hotline</string>
-    <string name="information_contact_headline">Hoe kunnen we u helpen?</string>
-    <string name="information_contact_body">Voor technische vragen over CoronAlert belt naar u naar onze hotline.</string>
-    <string name="information_contact_subtitle_phone">Technische hotline:</string>
-    <string name="information_contact_button_phone">0800 14 689</string>
-    <string name="information_contact_phone_call_number">0800 14 689</string>
-    <string name="information_contact_body_phone">Onze klantendienst is er om u te helpen.</string>
-    <string name="information_contact_body_open">Talen: Nederlands, Frans, Duits, Engels\n​Kantooruren.:<xliff:g id="line_break">\n</xliff:g>Ma.-vr.: 9.00 - 17.00 uur<xliff:g id="line_break">\n(behalve op feestdagen)</xliff:g><xliff:g id="line_break">\nDit is een gratis nummer.</xliff:g></string>
-    <string name="information_contact_body_other">Als u vragen heeft over uw gezondheid, neemt u contact op met uw huisarts of het algemene noodnummer op 112.</string>
-    <string name="information_contact_illustration_description">Een man met een koptelefoon telefoneert.</string>
+    <string name="information_terms_html_path">terms_en.html</string>
+    <string name="information_contact_title"></string>
+    <string name="information_contact_headline"></string>
+    <string name="information_contact_body"></string>
+    <string name="information_contact_subtitle_phone"></string>
+    <string name="information_contact_button_phone"></string>
+    <string name="information_contact_phone_call_number"></string>
+    <string name="information_contact_body_phone"></string>
+    <string name="information_contact_body_open"></string>
+    <string name="information_contact_body_other"></string>
+    <string name="information_contact_illustration_description"></string>
     <string name="information_help_title">FAQ</string>
     <string name="information_help_title_accessibility">Veelgestelde vragen. U wordt doorgestuurd naar een externe website.</string>
     <string name="information_technical_title">Wettelijke vermeldingen</string>
@@ -369,9 +389,14 @@
     <string name="information_legal_title">Colofon</string>
     <string name="information_legal_headline_publisher">Gepubliceerd door</string>
     <string name="information_legal_subtitle_publisher">(verantwoordelijk in overeenstemming met § 5, para. 1 TMG, § 55 para. 1 RStV, DS-GVO, BDSG)</string>
-    <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">\n</xliff:g>Juliette Wytsmanstraat 14<xliff:g id="line_break">\n</xliff:g>1050 Brussel<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>vertegenwoordigd door de voorzitter</string>
+    <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">
+</xliff:g>Juliette Wytsmanstraat 14<xliff:g id="line_break">
+</xliff:g>1050 Brussel<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>vertegenwoordigd door de voorzitter</string>
     <string name="information_legal_headline_contact">Contact</string>
-    <string name="information_legal_subtitle_contact">E-mail: hello@coronalert.be<xliff:g id="line_break">\n</xliff:g>Telefoon: 0800 14 689</string>
+    <string name="information_legal_subtitle_contact">E-mail: hello@coronalert.be<xliff:g id="line_break">
+</xliff:g>Telefoon: 0800 14 689</string>
     <string name="information_legal_headline_taxid">BTW-identificatienummer</string>
     <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
     <string name="information_legal_illustration_description">U ziet een hand met een smartphone met een grote hoeveelheid tekst op het schermpje. Het symbooltje naast de tekst verwijst naar het colofon.</string>
@@ -410,7 +435,9 @@
     <string name="submission_test_result_pending_refresh_button">Bijwerken</string>
     <string name="submission_test_result_pending_remove_test_button">Test verwijderen</string>
     <string name="submission_test_result_negative_steps_negative_heading">Uw testresultaat</string>
-    <string name="submission_test_result_negative_steps_negative_body">Het laboratoriumresultaat geeft niet aan dat u het coronavirus SARS-CoV-2 heeft.\n\nVerwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
+    <string name="submission_test_result_negative_steps_negative_body">Het laboratoriumresultaat geeft niet aan dat u het coronavirus SARS-CoV-2 heeft.
+
+Verwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
     <string name="submission_test_result_negative_remove_test_button">Test verwijderen</string>
     <string name="submission_test_result_positive_steps_positive_heading">Uw testresultaat</string>
     <string name="submission_test_result_positive_steps_positive_body">Uw testresultaat is positief.</string>
@@ -418,7 +445,9 @@
     <string name="submission_test_result_positive_steps_warning_others_body">Deel uw willekeurige ID\'s van de voorbije 14 dagen om anderen te beschermen en de infectieketen te doorbreken.</string>
     <string name="submission_test_result_positive_continue_button">Volgende</string>
     <string name="submission_test_result_invalid_steps_invalid_heading">Uw testresultaat</string>
-    <string name="submission_test_result_invalid_steps_invalid_body">Er was een probleem met de evaluatie van uw test. Neem contact op met de dienst volksgezondheid om te weten wat u nu moet doen.\n\nVerwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
+    <string name="submission_test_result_invalid_steps_invalid_body">Er was een probleem met de evaluatie van uw test. Neem contact op met de dienst volksgezondheid om te weten wat u nu moet doen.
+
+Verwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
     <string name="submission_test_result_invalid_remove_test_button">Test verwijderen</string>
     <string name="submission_test_result_dialog_tracing_required_title">Contacttracing vereist</string>
     <string name="submission_test_result_dialog_tracing_required_message">Activeer de contacttracing om andere mensen te waarschuwen.</string>
@@ -437,7 +466,9 @@
     <string name="submission_tan_character_error">Ongeldige ingave, controleer uw ingave.</string>
     <string name="submission_intro_title">Werd u getest?</string>
     <string name="submission_intro_headline">Zo werkt CoronAlert</string>
-    <string name="submission_intro_text">De app werkt alleen goed als mensen die een COVID-19-diagnose hebben gekregen, meewerken. Daarom rekenen we op u.\n\nEr worden alleen gecodeerde willekeurige ID\'s uitgewisseld. U blijft dus anoniem. U gaat als volgt te werk:</string>
+    <string name="submission_intro_text">De app werkt alleen goed als mensen die een COVID-19-diagnose hebben gekregen, meewerken. Daarom rekenen we op u.
+
+Er worden alleen gecodeerde willekeurige ID\'s uitgewisseld. U blijft dus anoniem. U gaat als volgt te werk:</string>
     <string name="submission_intro_button_next">Volgende</string>
     <string name="submission_intro_illustration_description">Er wordt een gecodeerde positieve diagnose naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen.</string>
     <string name="submission_intro_accessibility_title">Werd u getest? Zo werkt CoronAlert</string>
@@ -456,9 +487,13 @@
     <string name="submission_dispatcher_accessibility_title">Welke informatie heeft u?</string>
     <string name="submission_positive_other_warning_title">Anderen waarschuwen</string>
     <string name="submission_positive_other_warning_headline">We helpen elkaar!</string>
-    <string name="submission_positive_other_warning_body">Vervolgens kunt u ook aangeven dat CoronAlert uw willekeurige ID\'s van de voorbije 14 dagen met anderen deelt. Zo kunt u andere mensen waarschuwen en de infectieketen helpen doorbreken.\n\nEr worden alleen onpersoonlijke willekeurige ID\'s doorgegeven. U blijft anoniem.</string>
+    <string name="submission_positive_other_warning_body">Vervolgens kunt u ook aangeven dat CoronAlert uw willekeurige ID\'s van de voorbije 14 dagen met anderen deelt. Zo kunt u andere mensen waarschuwen en de infectieketen helpen doorbreken.
+
+Er worden alleen onpersoonlijke willekeurige ID\'s doorgegeven. U blijft anoniem.</string>
     <string name="submission_positive_other_warning_privacy_title">Privacy van gegevens</string>
-    <string name="submission_positive_other_warning_privacy_body">Door op \'Aanvaarden\' te tikken, stemt u ermee in dat de app uw positieve testresultaat samen met uw willekeurige ID\'s van de voorbije 14 dagen naar het serversysteem van de app stuurt, zodat andere app-gebruikers die de contacttracing hebben ingeschakeld, er automatisch van op de hoogte kunnen worden gebracht dat ze mogelijk zijn blootgesteld aan een risico op besmetting. De willekeurige ID\'s die hiervoor worden doorgestuurd, bevatten geen informatie op basis waarvan conclusies kunnen worden getrokken over uw identiteit of persoon. \n\nU geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u uw testresultaat niet doorgeeft. Aangezien het niet mogelijk is om te traceren of te controleren of en hoe u de app gebruikt, weet alleen u of u de informatie dat u besmet bent, heeft verzonden. U kunt uw toestemming op eender welk moment intrekken, hiervoor verwijdert u de app. Deze intrekking van uw toestemming heeft geen invloed op de rechtmatigheid van de verwerking op basis van de toestemming voorafgaand aan de intrekking. Meer informatie kunt u vinden in het menu onder \'Informatie over privacy van gegevens\'.</string>
+    <string name="submission_positive_other_warning_privacy_body">Door op \'Aanvaarden\' te tikken, stemt u ermee in dat de app uw positieve testresultaat samen met uw willekeurige ID\'s van de voorbije 14 dagen naar het serversysteem van de app stuurt, zodat andere app-gebruikers die de contacttracing hebben ingeschakeld, er automatisch van op de hoogte kunnen worden gebracht dat ze mogelijk zijn blootgesteld aan een risico op besmetting. De willekeurige ID\'s die hiervoor worden doorgestuurd, bevatten geen informatie op basis waarvan conclusies kunnen worden getrokken over uw identiteit of persoon.
+
+U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u uw testresultaat niet doorgeeft. Aangezien het niet mogelijk is om te traceren of te controleren of en hoe u de app gebruikt, weet alleen u of u de informatie dat u besmet bent, heeft verzonden. U kunt uw toestemming op eender welk moment intrekken, hiervoor verwijdert u de app. Deze intrekking van uw toestemming heeft geen invloed op de rechtmatigheid van de verwerking op basis van de toestemming voorafgaand aan de intrekking. Meer informatie kunt u vinden in het menu onder \'Informatie over privacy van gegevens\'.</string>
     <string name="submission_positive_other_warning_button">Volgende</string>
     <string name="submission_positive_other_illustration_description">Een toestel stuurt een gecodeerde positieve diagnose naar het systeem.</string>
     <string name="submission_done_title">Bedankt</string>
@@ -478,7 +513,11 @@
     <string name="submission_contact_number_display">0800 14 689</string>
     <string name="submission_contact_number_dial">0800 14 689</string>
     <string name="submission_contact_step_2_body">Geef de CODE in de app in en registreer de test.</string>
-    <string name="submission_contact_operating_hours_body">Talen: Nederlands, Frans, Duits, Engels\n\Kantooruren:\nMaandag tot vrijdag: 9.00 - 17.00 uur\n\nDit is een gratis oproep.</string>
+    <string name="submission_contact_operating_hours_body">Talen: Nederlands, Frans, Duits, Engels
+\Kantooruren:
+Maandag tot vrijdag: 9.00 - 17.00 uur
+
+Dit is een gratis oproep.</string>
     <string name="submission_contact_accessibility_title">Bel de hotline en vraag een CODE aan</string>
     <string name="submission_contact_step_1_content">Stap een: u belt de hotline en vraagt uw CODE aan. U kunt de hotline bereiken op het nummer 0800 14 689. De kantoren zijn geopend van maandag tot vrijdag van 9 tot 17 uur. Dit is een gratis nummer.</string>
     <string name="submission_contact_step_2_content">Stap twee: u registreert uw test met uw CODE in de app.</string>
@@ -520,7 +559,8 @@
     <string name="errors_communication_with_api">Fout tijdens de communicatie met Google-interface</string>
     <string name="errors_external_action">U kunt deze actie niet uitvoeren. Neem contact op met de hotline.</string>
     <string name="errors_google_update_needed">CoronAlert is correct geïnstalleerd, maar de functie Meldingen COVID-19-contacttracing is niet beschikbaar in het besturingssysteem van uw smartphone. Dat betekent dat u CoronAlert niet kunt gebruiken. Ga voor meer informatie naar onze FAQ-pagina: https://www.coronalert.be/nl/faq/</string>
-    <string name="errors_google_api_error">CoronAlert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De contacttracing blijft actief en werkt correct. Ga voor meer informatie naar onze FAQ-pagina: https://www.coronalert.be/nl/faq/ \n</string>
+    <string name="errors_google_api_error">CoronAlert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De contacttracing blijft actief en werkt correct. Ga voor meer informatie naar onze FAQ-pagina: https://www.coronalert.be/nl/faq/
+</string>
     <string name="errors_generic_headline">Er is iets fout gegaan.</string>
     <string name="errors_generic_details_headline">Oorzaak</string>
     <string name="errors_generic_button_positive">OK</string>
@@ -557,4 +597,30 @@
     <string name="settings_tracing_status_location_body">Uw locatie is niet toegankelijk. Google en/of Android heeft toegang tot de locatie van uw toestel nodig om Bluetooth te kunnen gebruiken.</string>
     <string name="settings_tracing_status_location_button">Open instellingen</string>
     <string name="settings_tracing_location_illustration_description_inactive"></string>
+    <string name="preference_r0">
+    <xliff:g id="preference">\"preference_r0\"</xliff:g>
+  </string>
+    <string name="preference_t0">
+    <xliff:g id="preference">\"preference_t0\"</xliff:g>
+  </string>
+    <string name="preference_t3">
+    <xliff:g id="preference">\"preference_t3\"</xliff:g>
+  </string>
+    <string name="preference_k">
+    <xliff:g id="preference">\"preference_k\"</xliff:g>
+  </string>
+    <string name="preference_result_channel">
+    <xliff:g id="preference">\"preference_result_channel\"</xliff:g>
+  </string>
+    <string name="submission_intro_symptoms_dialog_title">Symptomen</string>
+    <string name="submission_intro_symptoms_dialog_body">Heeft u op dit moment symptomen?</string>
+    <string name="submission_intro_symptoms_dialog_positive">Ja</string>
+    <string name="submission_intro_symptoms_dialog_negative">Neen</string>
+    <string name="submission_test_request_headline">Laat u testen</string>
+    <string name="submission_test_request_text">Kies de datum waarop u besmettelijk bent geworden. De persoon die de test afneemt, vertelt u welke dat is.</string>
+    <string name="submission_test_request_save_text">Laat dit cijfer zien aan de persoon die de test afneemt. Tik op \'Bewaar\', zodat u een melding krijgt zodra het testresultaat beschikbaar is.</string>
+    <string name="submission_test_request_save_button_save">Bewaar</string>
+    <string name="submission_countries_selection_headline">Kies landen</string>
+    <string name="submission_countries_selection_text">Als u op een van onderstaande data niet in België was en u deze informatie (anoniem) wilt doorgeven, kies dan de landen die u op die datum hebt bezocht. Tik op de lijn die u wilt wijzigen.</string>
+    <string name="submission_countries_selection_dialog_title">Kies een land</string>
 </resources>

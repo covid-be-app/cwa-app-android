@@ -160,7 +160,8 @@
     <string name="risk_card_unknown_risk_headline">Risque inconnu</string>
     <string name="risk_card_unknown_risk_body">Comme vous n\'avez pas activé l\'enregistrement de l\'exposition depuis suffisamment longtemps, nous n\'avons pas pu calculer votre risque d\'infection.</string>
     <string name="risk_card_no_calculation_possible_headline">Arrêt de l\'enregistrement de l\'exposition</string>
-    <string name="risk_card_no_calculation_possible_body_saved_risk">Dernier enregistrement d\'exposition :<xliff:g id="line_break">\n</xliff:g>%1$s</string>
+    <string name="risk_card_no_calculation_possible_body_saved_risk">Dernier enregistrement d\'exposition :<xliff:g id="line_break">
+</xliff:g>%1$s</string>
     <string name="risk_card_outdated_risk_headline">L\'enregistrement de l\'exposition n\'est pas possible</string>
     <string name="risk_card_outdated_risk_body">Votre enregistrement d\'exposition n\'a pas été mis à jour depuis plus de 24 heures.</string>
     <string name="risk_card_outdated_manual_risk_body">Votre statut de risque n\'a pas été mis à jour depuis plus de 48 heures. Veuillez mettre à jour votre statut de risque.</string>
@@ -174,7 +175,11 @@
     <string name="main_share_headline">Luttons ensemble contre le coronavirus !</string>
     <string name="main_share_body">Plus il y a de personnes qui utilisent l\'application, plus vite nous briserons la chaîne d\'infection. Veuillez inviter votre famille et vos amis à télécharger l\'application.</string>
     <string name="main_share_button">Envoyer le lien de téléchargement</string>
-    <string name="main_share_message">Télécharger l\'application Coronalert via ce lien: http://onelink.to/j8nrvj</string>
+    <string name="main_share_message">Luttons ensemble contre le coronavirus !<xliff:g id="line_break">
+</xliff:g>Je suis dans le coup, vous aussi ?<xliff:g id="line_break">
+</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>
+<xliff:g id="line_break">
+</xliff:g></string>
     <string name="main_share_illustration_description">Un homme partage l\'application Coronalert avec quatre autres personnes.</string>
     <string name="main_overview_title">Vue d\'ensemble</string>
     <string name="main_overview_accessibility_title">Vue d\'ensemble</string>
@@ -254,7 +259,19 @@
     <string name="onboarding_tracing_body">La journalisation de l\'exposition fonctionne en ce sens que votre appareil reçoit, via Bluetooth, les identifiants aléatoires cryptés des autres utilisateurs et transmet votre propre identifiant aléatoire à leurs appareils. Cette fonction peut être désactivée à tout moment.</string>
     <string name="onboarding_tracing_body_emphasized">Les identifiants aléatoires cryptés ne transmettent aux autres personnes que des informations sur la date, la durée et la proximité (en utilisant la force du signal). Les données personnelles telles que le nom, l\'adresse, le lieu ne sont jamais enregistrées. Les personnes ne peuvent pas être identifiées.</string>
     <string name="onboarding_tracing_headline_consent">Déclaration de consentement</string>
-    <string name="onboarding_tracing_body_consent">Pour savoir si vous avez été en contact avec une personne infectée et s\'il y a un risque que vous soyez vous-même infecté, vous devez activer la fonction d\'enregistrement de l\'exposition de l\'application. En appuyant sur le bouton Activer, vous acceptez l\'activation de la fonction de journalisation de l\'exposition et le traitement des données associées.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Pour pouvoir utiliser la fonction d\'enregistrement de l\'exposition de l\'application, vous devez activer la fonction d\'enregistrement de l\'exposition COVID-19 fournie par Google sur votre smartphone et autoriser l\'application Coronalert à l\'utiliser.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Lorsque la journalisation de l\'exposition est activée, votre smartphone génère et transmet en permanence des identifiants aléatoires via Bluetooth, que les autres smartphones Android ou Apple à proximité peuvent recevoir si la journalisation de l\'exposition est également activée chez eux. Votre smartphone, à son tour, reçoit les identifiants aléatoires des autres smartphones. Vos propres identifiants aléatoires et ceux reçus d\'autres smartphones sont enregistrés dans le journal d\'exposition et y sont conservés pendant 14 jours.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Pour identifier votre risque d\'infection, l\'application charge une liste - plusieurs fois par jour ou sur demande - des identifiants aléatoires de tous les utilisateurs qui ont déclaré à l\'application qu\'ils ont été infectés par le coronavirus. Cette liste est ensuite comparée aux identifiants aléatoires stockés dans le journal d\'exposition. Si l\'application détecte que vous avez pu être en contact avec un utilisateur infecté, elle vous en informe et vous dit qu\'il y a un risque que vous soyez également infecté. Dans ce cas, l\'application a également accès à d\'autres données stockées dans le journal d\'exposition de votre smartphone (date, durée et intensité du signal Bluetooth du contact).<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>La puissance du signal Bluetooth est utilisée pour calculer la distance physique (plus le signal est fort, plus la distance est faible). L\'application analyse ensuite ces informations afin d\'évaluer votre probabilité d\'avoir été infecté par le coronavirus et de vous donner des recommandations sur la marche à suivre. Cette analyse n\'est effectuée que localement sur votre smartphone. En dehors de vous, personne ne saura si vous avez été en contact avec une personne infectée et quel risque a été identifié pour vous.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Pour retirer votre consentement à la fonction d\'enregistrement de l\'exposition, vous pouvez désactiver la fonction en utilisant le commutateur à bascule dans l\'application ou supprimer l\'application. Si vous décidez d\'utiliser à nouveau la fonction d\'enregistrement de l\'exposition, vous pouvez réactiver la fonction ou réinstaller l\'application. Si vous désactivez la fonction de journalisation de l\'exposition, l\'application ne vérifiera plus si vous avez été en contact avec un utilisateur infecté. Si vous souhaitez également empêcher votre téléphone d\'envoyer et de recevoir des identifiants aléatoires, vous devrez désactiver la fonction Enregistrement de l\'exposition COVID-19  dans les paramètres de votre smartphone. Veuillez noter que vos propres identifiants aléatoires et ceux reçus d\'autres smartphones qui sont stockés dans le journal d\'exposition ne seront pas supprimés dans l\'application. Vous ne pouvez effacer définitivement les données stockées dans le journal d\'exposition que dans les réglages de votre smartphone.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>L\'avis de confidentialité de l\'application (comprenant une explication du traitement des données effectué pour la fonction d\'enregistrement des expositions) se trouve dans le menu sous Informations sur la confidentialité des données.</string>
+    <string name="onboarding_tracing_body_consent">Pour savoir si vous avez été en contact avec une personne infectée et s\'il y a un risque que vous soyez vous-même infecté, vous devez activer la fonction d\'enregistrement de l\'exposition de l\'application. En appuyant sur le bouton Activer, vous acceptez l\'activation de la fonction de journalisation de l\'exposition et le traitement des données associées.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Pour pouvoir utiliser la fonction d\'enregistrement de l\'exposition de l\'application, vous devez activer la fonction d\'enregistrement de l\'exposition COVID-19 fournie par Google sur votre smartphone et autoriser l\'application Coronalert à l\'utiliser.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Lorsque la journalisation de l\'exposition est activée, votre smartphone génère et transmet en permanence des identifiants aléatoires via Bluetooth, que les autres smartphones Android ou Apple à proximité peuvent recevoir si la journalisation de l\'exposition est également activée chez eux. Votre smartphone, à son tour, reçoit les identifiants aléatoires des autres smartphones. Vos propres identifiants aléatoires et ceux reçus d\'autres smartphones sont enregistrés dans le journal d\'exposition et y sont conservés pendant 14 jours.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Pour identifier votre risque d\'infection, l\'application charge une liste - plusieurs fois par jour ou sur demande - des identifiants aléatoires de tous les utilisateurs qui ont déclaré à l\'application qu\'ils ont été infectés par le coronavirus. Cette liste est ensuite comparée aux identifiants aléatoires stockés dans le journal d\'exposition. Si l\'application détecte que vous avez pu être en contact avec un utilisateur infecté, elle vous en informe et vous dit qu\'il y a un risque que vous soyez également infecté. Dans ce cas, l\'application a également accès à d\'autres données stockées dans le journal d\'exposition de votre smartphone (date, durée et intensité du signal Bluetooth du contact).<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>La puissance du signal Bluetooth est utilisée pour calculer la distance physique (plus le signal est fort, plus la distance est faible). L\'application analyse ensuite ces informations afin d\'évaluer votre probabilité d\'avoir été infecté par le coronavirus et de vous donner des recommandations sur la marche à suivre. Cette analyse n\'est effectuée que localement sur votre smartphone. En dehors de vous, personne ne saura si vous avez été en contact avec une personne infectée et quel risque a été identifié pour vous.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Pour retirer votre consentement à la fonction d\'enregistrement de l\'exposition, vous pouvez désactiver la fonction en utilisant le commutateur à bascule dans l\'application ou supprimer l\'application. Si vous décidez d\'utiliser à nouveau la fonction d\'enregistrement de l\'exposition, vous pouvez réactiver la fonction ou réinstaller l\'application. Si vous désactivez la fonction de journalisation de l\'exposition, l\'application ne vérifiera plus si vous avez été en contact avec un utilisateur infecté. Si vous souhaitez également empêcher votre téléphone d\'envoyer et de recevoir des identifiants aléatoires, vous devrez désactiver la fonction Enregistrement de l\'exposition COVID-19  dans les paramètres de votre smartphone. Veuillez noter que vos propres identifiants aléatoires et ceux reçus d\'autres smartphones qui sont stockés dans le journal d\'exposition ne seront pas supprimés dans l\'application. Vous ne pouvez effacer définitivement les données stockées dans le journal d\'exposition que dans les réglages de votre smartphone.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>L\'avis de confidentialité de l\'application (comprenant une explication du traitement des données effectué pour la fonction d\'enregistrement des expositions) se trouve dans le menu sous Informations sur la confidentialité des données.</string>
     <string name="onboarding_tracing_button_next">Activer l\'enregistrement de l\'exposition</string>
     <string name="onboarding_tracing_dialog_headline">Autorisation</string>
     <string name="onboarding_tracing_dialog_body">Cela signifie que le l\'application Coronalert ne peut pas envoyer ou recevoir de notifications concernant votre statut de risque COVID-19. Vous pouvez désactiver cette fonction à tout moment.</string>
@@ -283,7 +300,9 @@
     <string name="settings_tracing_body_active">Enregistrement de l\'exposition actif</string>
     <string name="settings_tracing_body_inactive">Arrêt de l\'enregistrement de l\'exposition</string>
     <string name="settings_tracing_body_inactive_location">Localisation désactivée</string>
-    <string name="settings_tracing_body_text">La journalisation de l\'exposition fonctionne ainsi : votre smartphone reçoit, via Bluetooth, des identifiants aléatoires cryptés d\'autres utilisateurs et transmet votre identifiant aléatoire à leurs téléphones. Cette fonction peut être désactivée à tout moment. <xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Les identifiants aléatoires cryptés ne transmettent que des informations sur la date, la durée et la proximité (calculées à l\'aide de la puissance du signal). Les données personnelles telles que le nom, l\'adresse et le lieu ne sont jamais enregistrées. Les personnes ne peuvent donc pas être identifiées.</string>
+    <string name="settings_tracing_body_text">La journalisation de l\'exposition fonctionne ainsi : votre smartphone reçoit, via Bluetooth, des identifiants aléatoires cryptés d\'autres utilisateurs et transmet votre identifiant aléatoire à leurs téléphones. Cette fonction peut être désactivée à tout moment. <xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Les identifiants aléatoires cryptés ne transmettent que des informations sur la date, la durée et la proximité (calculées à l\'aide de la puissance du signal). Les données personnelles telles que le nom, l\'adresse et le lieu ne sont jamais enregistrées. Les personnes ne peuvent donc pas être identifiées.</string>
     <string name="settings_tracing_status_active">Actif</string>
     <string name="settings_tracing_status_inactive">Arrêté</string>
     <string name="settings_tracing_status_restricted">Restreint</string>
@@ -320,7 +339,8 @@
     <string name="settings_reset_body_description">Supprimez toutes vos données dans l\'application.</string>
     <string name="settings_reset_headline">Êtes-vous sûr de vouloir réinitialiser l\'application ?</string>
     <string name="settings_reset_body">Vous ne serez plus informé de vos expositions et vous ne pourrez plus avertir les autres utilisateurs.</string>
-    <string name="settings_reset_headline_keys">Supprimer l\'exposition <xliff:g id="line_break">\n</xliff:g>Log</string>
+    <string name="settings_reset_headline_keys">Supprimer l\'exposition <xliff:g id="line_break">
+</xliff:g>Log</string>
     <string name="settings_reset_body_keys">Le journal d\'exposition doit être supprimé séparément dans les réglages de votre smartphone.</string>
     <string name="settings_reset_button_positive">Réinitialisation de l\'application</string>
     <string name="settings_reset_button_negative">Annuler</string>
@@ -346,21 +366,21 @@
     <string name="information_about_illustration_description">Un groupe de personnes utilisent leurs smartphones dans toute la ville.</string>
     <string name="information_privacy_title">Données de confidentialité</string>
     <string name="information_privacy_illustration_description">Une femme utilise l\'application Coronalert sur son smartphone. Une icône représentant un cadenas sur fond d\'un bouclier symbolise les données cryptées.</string>
-    <string name="information_privacy_html_path">privacy_fr.html</string>
+    <string name="information_privacy_html_path">privacy_en.html</string>
     <string name="information_terms_title">Conditions d\'utilisation</string>
     <string name="information_terms_headline">Contenu</string>
     <string name="information_terms_illustration_description">Une main tient un smartphone qui affiche un texte à l\'écran. À côté du texte se trouve une case cochée symbolisant l\'acceptation des conditions d\'utilisation.</string>
-    <string name="information_terms_html_path">terms_fr.html</string>
-    <string name="information_contact_title">Assistance technique</string>
-    <string name="information_contact_headline">Comment pouvons-nous vous aider ?</string>
-    <string name="information_contact_body">Pour les questions concernant l’application Coronalert, veuillez contacter notre numéro d\'information.</string>
-    <string name="information_contact_subtitle_phone">Assistance technique:</string>
-    <string name="information_contact_button_phone">0800 14 689</string>
-    <string name="information_contact_phone_call_number">0800 14 689</string>
-    <string name="information_contact_body_phone">Notre service clientèle est là pour vous aider.</string>
-    <string name="information_contact_body_open">Les langues : allemand, anglais, français, néerlandais\nHeures d\'ouverture:<xliff:g id="line_break">\n</xliff:g>Du lundi au vendredi : 9h - 17h<xliff:g id="line_break">\n(sauf les jours fériés nationaux)</xliff:g><xliff:g id="line_break">\nL\'appel est gratuit.</xliff:g></string>
-    <string name="information_contact_body_other">Si vous avez des questions relatives à la santé, veuillez contacter votre médecin généraliste ou la ligne d\'urgence médicale 112.</string>
-    <string name="information_contact_illustration_description">Un homme porte un casque lorsqu\'il passe un appel téléphonique.</string>
+    <string name="information_terms_html_path">terms_en.html</string>
+    <string name="information_contact_title"></string>
+    <string name="information_contact_headline"></string>
+    <string name="information_contact_body"></string>
+    <string name="information_contact_subtitle_phone"></string>
+    <string name="information_contact_button_phone"></string>
+    <string name="information_contact_phone_call_number"></string>
+    <string name="information_contact_body_phone"></string>
+    <string name="information_contact_body_open"></string>
+    <string name="information_contact_body_other"></string>
+    <string name="information_contact_illustration_description"></string>
     <string name="information_help_title">FAQ</string>
     <string name="information_help_title_accessibility">Foire aux questions. Vous serez dirigé vers un site web externe.</string>
     <string name="information_technical_title">Avis juridiques</string>
@@ -369,9 +389,14 @@
     <string name="information_legal_title">Mentions légales</string>
     <string name="information_legal_headline_publisher">Publié par</string>
     <string name="information_legal_subtitle_publisher">(responsable conformément au § 5, alinéa 1 TMG, article 55, paragraphe 1, de la loi sur les télécommunications). 1 RStV, DS-GVO, BDSG)</string>
-    <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">\n</xliff:g>14 rue Juliette Wytsman<xliff:g id="line_break">\n</xliff:g>1050 Bruxelles<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>représenté par son président</string>
+    <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">
+</xliff:g>14 rue Juliette Wytsman<xliff:g id="line_break">
+</xliff:g>1050 Bruxelles<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>représenté par son président</string>
     <string name="information_legal_headline_contact">Contact</string>
-    <string name="information_legal_subtitle_contact">E-Mail: hello@coronalert.be<xliff:g id="line_break">\n</xliff:g>Telephone: 0800 14 689</string>
+    <string name="information_legal_subtitle_contact">E-Mail: hello@coronalert.be<xliff:g id="line_break">
+</xliff:g>Telephone: 0800 14 689</string>
     <string name="information_legal_headline_taxid">Numéro d\'identification à la TVA</string>
     <string name="information_legal_subtitle_taxid">BE 234 123 678</string>
     <string name="information_legal_illustration_description">Une main tient un smartphone qui affiche un texte à l\'écran. À côté du texte se trouve un symbole de section représentant la marque.</string>
@@ -410,7 +435,9 @@
     <string name="submission_test_result_pending_refresh_button">Mise à jour</string>
     <string name="submission_test_result_pending_remove_test_button">Effacer le test</string>
     <string name="submission_test_result_negative_steps_negative_heading">Le résultat de votre test</string>
-    <string name="submission_test_result_negative_steps_negative_body">Le résultat du laboratoire indique que vous n\'êtes pas porteur du coronavirus SRAS-CoV-2.-\n\n. Veuillez supprimer le test de l\'application Coronalert, afin de pouvoir enregistrer un nouveau code de test ici si nécessaire.</string>
+    <string name="submission_test_result_negative_steps_negative_body">Le résultat du laboratoire indique que vous n\'êtes pas porteur du coronavirus SRAS-CoV-2.-
+
+. Veuillez supprimer le test de l\'application Coronalert, afin de pouvoir enregistrer un nouveau code de test ici si nécessaire.</string>
     <string name="submission_test_result_negative_remove_test_button">Effacer le test</string>
     <string name="submission_test_result_positive_steps_positive_heading">Le résultat de votre test</string>
     <string name="submission_test_result_positive_steps_positive_body">Le résultat de votre test a été vérifié comme étant positif.</string>
@@ -458,7 +485,9 @@
     <string name="submission_positive_other_warning_headline">Ensemble, luttons contre le virus !</string>
     <string name="submission_positive_other_warning_body">À présent, l\'application Coronalert partage vos identifiants aléatoires des 14 derniers jours avec d\'autres utilisateurs. En faisant cela, vous pouvez avertir d\'autres personnes et nous aider à briser la chaîne d\'infection. Puisque seules des identités aléatoires impersonnelles sont transmises, votre identité restera anonyme.</string>
     <string name="submission_positive_other_warning_privacy_title">Données de confidentialité</string>
-    <string name="submission_positive_other_warning_privacy_body">En appuyant sur Accepter, vous consentez à ce que l\'application envoie votre résultat de test positif au serveur de l\'application avec vos identifiants aléatoires des 14 derniers jours, afin que les autres utilisateurs de l\'application qui ont activé la fonction d\'enregistrement de l\'exposition puissent être automatiquement avertis qu\'ils ont pu être exposés à un risque d\'infection. Les identifiants aléatoires transmis à cette fin ne contiennent aucune information permettant de déceler votre identité. \n\nLa transmission de votre résultat de test via l\'application est volontaire. Vous ne serez pas pénalisé si vous ne transmettez pas votre résultat de test. Puisqu\'il n\'est pas possible de tracer ou de vérifier si et comment vous utilisez l\'application, personne d\'autre que vous ne saura si vous avez transmis l\'information de votre infection. Ce retrait de votre consentement n\'affectera pas la légalité du traitement effectué sur la base du consentement préalable au retrait. Vous trouverez de plus amples informations dans la rubrique Informations sur la protection des données.</string>
+    <string name="submission_positive_other_warning_privacy_body">En appuyant sur Accepter, vous consentez à ce que l\'application envoie votre résultat de test positif au serveur de l\'application avec vos identifiants aléatoires des 14 derniers jours, afin que les autres utilisateurs de l\'application qui ont activé la fonction d\'enregistrement de l\'exposition puissent être automatiquement avertis qu\'ils ont pu être exposés à un risque d\'infection. Les identifiants aléatoires transmis à cette fin ne contiennent aucune information permettant de déceler votre identité.
+
+La transmission de votre résultat de test via l\'application est volontaire. Vous ne serez pas pénalisé si vous ne transmettez pas votre résultat de test. Puisqu\'il n\'est pas possible de tracer ou de vérifier si et comment vous utilisez l\'application, personne d\'autre que vous ne saura si vous avez transmis l\'information de votre infection. Ce retrait de votre consentement n\'affectera pas la légalité du traitement effectué sur la base du consentement préalable au retrait. Vous trouverez de plus amples informations dans la rubrique Informations sur la protection des données.</string>
     <string name="submission_positive_other_warning_button">Suivant</string>
     <string name="submission_positive_other_illustration_description">Un appareil transmet un diagnostic positif crypté au système.</string>
     <string name="submission_done_title">Merci</string>
@@ -478,7 +507,12 @@
     <string name="submission_contact_number_display">0800 14 689</string>
     <string name="submission_contact_number_dial">0800 14 689</string>
     <string name="submission_contact_step_2_body">Enregistrez le test en entrant le CODE dans l\'application.</string>
-    <string name="submission_contact_operating_hours_body">Les langues : \nallemand, anglais, français, néerlandais\n\nHoraires d\'ouverture : du lundi au dimanche de 9h à 17h\n\nL\'appel est gratuit.</string>
+    <string name="submission_contact_operating_hours_body">Les langues :
+allemand, anglais, français, néerlandais
+
+Horaires d\'ouverture : du lundi au dimanche de 9h à 17h
+
+L\'appel est gratuit.</string>
     <string name="submission_contact_accessibility_title">Appelez le numéro d\'information et demandez un CODE</string>
     <string name="submission_contact_step_1_content">Première étape, vous appelez le numéro d\'information et demandez votre CODE. Vous pouvez joindre ce numéro au 0800 14 689. Les heures d\'ouverture sont du lundi au vendredi de 9h à 17h. L\'appel est gratuit.</string>
     <string name="submission_contact_step_2_content">Deuxième étape, vous enregistrez votre test avec votre CODE dans l\'application.</string>
@@ -520,7 +554,8 @@
     <string name="errors_communication_with_api">Erreur lors de la communication avec l\'interface Google</string>
     <string name="errors_external_action">Vous ne pouvez pas effectuer cette action. Veuillez contacter la hotline.</string>
     <string name="errors_google_update_needed">Votre app Coronalert est correctement installé, mais le service COVID-19 exposure notifications n\'est pas disponible sur le système d\'exploitation de votre smartphone. Cela signifie que vous ne pouvez pas utiliser le service Coronalert. Pour plus d\'informations, veuillez consulter notre page FAQ : https://www.coronalert.be</string>
-    <string name="errors_google_api_error">L\'app Coronalert fonctionne correctement, mais nous ne pouvons pas mettre à jour votre statut de risque actuel. L\'enregistrement de l\'exposition reste actif et fonctionne correctement. Pour plus d\'informations, veuillez consulter notre page FAQ : https://www.coronalert.be \n</string>
+    <string name="errors_google_api_error">L\'app Coronalert fonctionne correctement, mais nous ne pouvons pas mettre à jour votre statut de risque actuel. L\'enregistrement de l\'exposition reste actif et fonctionne correctement. Pour plus d\'informations, veuillez consulter notre page FAQ : https://www.coronalert.be
+</string>
     <string name="errors_generic_headline">Un problème est survenu.</string>
     <string name="errors_generic_details_headline">Cause</string>
     <string name="errors_generic_button_positive">OK</string>
@@ -556,4 +591,31 @@
     <string name="settings_tracing_status_location_headline">Autoriser la localisation</string>
     <string name="settings_tracing_status_location_body">Impossible d\'accéder à votre position. Google et / ou Android doivent accéder à la localisation de votre smartphone pour utiliser le Bluetooth.</string>
     <string name="settings_tracing_status_location_button">Ouvrir les réglages du téléphone</string>
+    <string name="settings_tracing_location_illustration_description_inactive"></string>
+    <string name="preference_r0">
+    <xliff:g id="preference">\"preference_r0\"</xliff:g>
+  </string>
+    <string name="preference_t0">
+    <xliff:g id="preference">\"preference_t0\"</xliff:g>
+  </string>
+    <string name="preference_t3">
+    <xliff:g id="preference">\"preference_t3\"</xliff:g>
+  </string>
+    <string name="preference_k">
+    <xliff:g id="preference">\"preference_k\"</xliff:g>
+  </string>
+    <string name="preference_result_channel">
+    <xliff:g id="preference">\"preference_result_channel\"</xliff:g>
+  </string>
+    <string name="submission_intro_symptoms_dialog_title">Symptômes</string>
+    <string name="submission_intro_symptoms_dialog_body">Présentez-vous actuellement des symptômes ?</string>
+    <string name="submission_intro_symptoms_dialog_positive">Oui</string>
+    <string name="submission_intro_symptoms_dialog_negative">Non</string>
+    <string name="submission_test_request_headline">Faites un test</string>
+    <string name="submission_test_request_text">Sélectionnez la date à laquelle vous êtes devenu contagieux. Cette date vous sera communiquée par la personne en charge du test.</string>
+    <string name="submission_test_request_save_text">Montrez ce numéro à la personne qui vous fera le test. Cliquez sur \"sauvegarder\" pour être averti dès que le résultat sera disponible.</string>
+    <string name="submission_test_request_save_button_save">Sauvegarder</string>
+    <string name="submission_countries_selection_headline">Sélectionnez votre pays</string>
+    <string name="submission_countries_selection_text">Si vous n\'étiez pas en Belgique à certaines des dates ci-dessous et que vous voulez partager cette information (de façon anonyme), veuillez sélectionner le pays dans lequel vous étiez à ces dates.</string>
+    <string name="submission_countries_selection_dialog_title">Choisissez un pays</string>
 </resources>
