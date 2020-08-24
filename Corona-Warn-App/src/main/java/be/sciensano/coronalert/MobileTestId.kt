@@ -17,7 +17,7 @@ class MobileTestId(
 ) {
 
     override fun toString(): String {
-        return "$r1${checksum(r1.toLong())}".chunked(5)
+        return "$r1${checksum(r1.toLong())}".chunked(4)
             .joinToString("-")
     }
 
