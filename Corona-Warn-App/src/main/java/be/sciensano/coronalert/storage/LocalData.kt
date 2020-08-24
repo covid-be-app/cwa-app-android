@@ -85,3 +85,19 @@ fun LocalData.resultChannel(value: Int) {
         )
     }
 }
+
+fun LocalData.dummyTestRequestsToSend(value: Int) {
+    getSharedPreferenceInstance().edit(true) {
+        putInt(
+            CoronaWarnApplication.getAppContext()
+                .getString(R.string.preference_dummy_test_requests_to_send),
+            value
+        )
+    }
+}
+
+fun LocalData.dummyTestRequestsToSend(): Int = getSharedPreferenceInstance().getInt(
+    CoronaWarnApplication.getAppContext()
+        .getString(R.string.preference_dummy_test_requests_to_send),
+    -1
+)

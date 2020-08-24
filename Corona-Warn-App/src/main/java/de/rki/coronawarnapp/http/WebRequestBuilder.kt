@@ -20,6 +20,7 @@
 package de.rki.coronawarnapp.http
 
 import KeyExportFormat
+import be.sciensano.coronalert.MobileTestId
 import be.sciensano.coronalert.http.requests.TestResultRequest
 import be.sciensano.coronalert.http.responses.TestResultResponse
 import com.google.protobuf.ByteString
@@ -47,11 +48,11 @@ import timber.log.Timber
 import java.io.File
 import java.util.Date
 import java.util.UUID
+import kotlin.math.max
 import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
 import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
 import be.sciensano.coronalert.service.diagnosiskey.DiagnosisKeyConstants as BeDiagnosisKeyConstants
 import be.sciensano.coronalert.service.submission.SubmissionConstants as BeSubmissionConstants
-import kotlin.math.max
 
 class WebRequestBuilder(
     private val distributionService: DistributionService,
@@ -278,6 +279,29 @@ class WebRequestBuilder(
             submissionPayloadBuilder.build()
         )
         return@withContext
+    }
+
+    suspend fun beAsyncDummySubmitKeysToServer() = withContext(Dispatchers.IO) {
+        val randomAdditions = 0 // prepare for random addition of keys
+        val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission + randomAdditions
+
+        Timber.d("Writing ${fakeKeyCount} Dummy Keys to the Submission Payload.")
+
+        val fakeKeyPadding =
+            requestPadding(SubmissionConstants.fakeKeySize * fakeKeyCount)
+
+        val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
+            .setPadding(ByteString.copyFromUtf8(fakeKeyPadding))
+            .addAllCountries(List(fakeKeyCount) { "BEL" })
+            .build()
+
+        val fakeTestId = MobileTestId.generate(Date())
+
+        beSubmissionService.submitKeys(
+            BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
+            fakeTestId.k, fakeTestId.r0, fakeTestId.t0, fakeTestId.t0, 0,
+            submissionPayload
+        )
     }
 
     suspend fun asyncFakeSubmission() = withContext(Dispatchers.IO) {

@@ -4,8 +4,10 @@ import android.content.Context
 import androidx.core.app.NotificationCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
+import be.sciensano.coronalert.service.DummyService
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.R
+import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.notification.NotificationHelper
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.util.TimeAndDateExtensions
@@ -59,16 +61,20 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
         }
         var result = Result.success()
         try {
-            if (TimeAndDateExtensions.calculateDays(
-                    LocalData.initialPollingForTestResultTimeStamp(),
-                    System.currentTimeMillis()
-                ) < BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
-            ) {
-                val testResult = BeSubmissionService.asyncRequestTestResult()
-                initiateNotification(TestResult.fromInt(testResult.result))
+            if (LocalData.registrationToken() != null && !LocalData.isTestResultNotificationSent()) {
+                if (TimeAndDateExtensions.calculateDays(
+                        LocalData.initialPollingForTestResultTimeStamp(),
+                        System.currentTimeMillis()
+                    ) < BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
+                ) {
+                    val testResult = BeSubmissionService.asyncRequestTestResult()
+                    initiateNotification(TestResult.fromInt(testResult.result))
+                } else {
+                    BeSubmissionService.deleteRegistrationToken()
+                    stopWorker()
+                }
             } else {
-                BeSubmissionService.deleteRegistrationToken()
-                stopWorker()
+                DummyService(WebRequestBuilder.getInstance()).sendDummyRequestsIfNeeded()
             }
         } catch (e: Exception) {
             result = Result.retry()
