@@ -170,7 +170,6 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
             DialogHelper.showDialog(tracingRequiredDialog)
             return
         }
-
         internalExposureNotificationPermissionHelper.requestPermissionToShareKeys()
     }
 
@@ -192,6 +191,7 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
             )
 //            submissionViewModel.submitDiagnosisKeys(keys)
         } else {
+            submissionViewModel.submitWithNoDiagnosisKeys()
             navigateToSubmissionDoneFragment()
         }
     }

@@ -240,6 +240,7 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.work:work-runtime-ktx:2.3.4'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
 
     // QR
     implementation('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
@@ -254,6 +255,7 @@ dependencies {
         exclude group: 'com.google.protobuf'
     }
     testImplementation "io.mockk:mockk:1.10.0"
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.8.0"
     testImplementation 'org.hamcrest:hamcrest-library:2.2'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
@@ -271,7 +273,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-basement:17.3.0'
     implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
     implementation 'com.google.android.gms:play-services-tasks:17.1.0'
-    api fileTree(dir: 'libs', include: ['play-services-nearby-18.0.2-eap.aar'])
+    api fileTree(dir: 'libs', include: ['play-services-nearby-18.0.3-eap.aar'])
 
     // HTTP
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
