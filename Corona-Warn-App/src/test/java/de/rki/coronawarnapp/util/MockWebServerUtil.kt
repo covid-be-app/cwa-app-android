@@ -15,6 +15,8 @@ import okio.utf8Size
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.protobuf.ProtoConverterFactory
+import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
+import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
 
 fun MockWebServer.newWebRequestBuilder(): WebRequestBuilder {
     val httpClient = OkHttpClient.Builder()
@@ -33,9 +35,14 @@ fun MockWebServer.newWebRequestBuilder(): WebRequestBuilder {
             .create(DistributionService::class.java),
         retrofit.baseUrl(this.url("/verification/")).build()
             .create(VerificationService::class.java),
+        retrofit.baseUrl(this.url("/verification/")).build()
+            .create(BeVerificationService::class.java),
         retrofit.baseUrl(this.url("/submission/")).build()
             .create(SubmissionService::class.java),
+        retrofit.baseUrl(this.url("/submission/")).build()
+            .create(BeSubmissionService::class.java),
         VerificationKeys()
+
     )
 }
 
