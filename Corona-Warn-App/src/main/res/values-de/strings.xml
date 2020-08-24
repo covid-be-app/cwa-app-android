@@ -1,559 +1,632 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="submission_done_further_info_bullet_points">
-        <item>Ihre Quarantäne dauert meistens 14 Tage. Bitte beobachten und erfassen Sie den Verlauf Ihrer Symptome genau.</item>
-        <item>Ihre Gesundheitsbehörde wird Sie auffordern, eine Liste der Personen zu erstellen, mit denen Sie Kontakt gehabt haben, d.h., aller Personen, mit denen Sie in den zwei Tagen, bevor Symptome auftraten, länger als 15 Minuten engen Kontakt hatten (weniger als 2 Meter, Gespräch von Angesicht zu Angesicht).</item>
-        <item>Bitte berücksichtigen Sie vor allem Personen, die nicht von der App informiert werden, da sie kein Handy haben oder die App nicht installiert haben.</item>
-        <item>Selbst wenn Sie keine Symptome mehr haben und es Ihnen wieder gut geht, könnten Sie immer noch ansteckend sein.</item>
-    </string-array>
-    <string-array name="submission_intro_bullet_points">
-        <item>Wenn Sie Corona-positiv getestet wurden, können Sie andere warnen.</item>
-        <item>Wenn Ihnen für einen positiven Testbefund ein CODE mitgeteilt wurde, können Sie ihn zur Registrierung des Tests benutzen.</item>
-        <item>Wenn Sie keinen CODE haben, können Sie ihn telefonisch anfragen.</item>
-    </string-array>
-    <string-array name="test_result_card_negative_further_info_bullet_points">
-        <item>Fühlen Sie sich noch angeschlagen? Fragen Sie Ihren Hausarzt, wenn Sie sich sehr krank fühlen und/oder Ihre Beschwerden sich verschlimmert haben.</item>
-        <item>Bleiben Sie bis zu Ihrer Genesung zu Hause. Wenn Sie sich Coronavirus (SARS-CoV-2) infizieren, wenn eine andere Infektion Sie schwächte, könnten Sie sehr krank werden.</item>
-        <item>Gehen Sie nicht krank zur Arbeit, um andere Personen nicht zu gefährden. Falls sich Ihre Symptome verschlechtern, kann die Notwendigkeit eines weiteren SARS-CoV-2-Tests bestehen.</item>
-    </string-array>
-    <string name="preference_name">
+  <string-array name="submission_done_further_info_bullet_points">
+    <item>Ihre Quarantäne dauert meistens 14 Tage. Bitte beobachten und erfassen Sie den Verlauf Ihrer Symptome genau.</item>
+    <item>Ihre Gesundheitsbehörde wird Sie auffordern, eine Liste der Personen zu erstellen, mit denen Sie Kontakt gehabt haben, d.h., aller Personen, mit denen Sie in den zwei Tagen, bevor Symptome auftraten, länger als 15 Minuten engen Kontakt hatten (weniger als 2 Meter, Gespräch von Angesicht zu Angesicht).</item>
+    <item>Bitte berücksichtigen Sie vor allem Personen, die nicht von der App informiert werden, da sie kein Handy haben oder die App nicht installiert haben.</item>
+    <item>Selbst wenn Sie keine Symptome mehr haben und es Ihnen wieder gut geht, könnten Sie immer noch ansteckend sein.</item>
+  </string-array>
+  <string-array name="submission_intro_bullet_points">
+    <item>Wenn Sie Corona-positiv getestet wurden, können Sie andere warnen.</item>
+    <item>Wenn Ihnen für einen positiven Testbefund ein CODE mitgeteilt wurde, können Sie ihn zur Registrierung des Tests benutzen.</item>
+    <item>Wenn Sie keinen CODE haben, können Sie ihn telefonisch anfragen.</item>
+  </string-array>
+  <string-array name="test_result_card_negative_further_info_bullet_points">
+    <item>Fühlen Sie sich noch angeschlagen? Fragen Sie Ihren Hausarzt, wenn Sie sich sehr krank fühlen und/oder Ihre Beschwerden sich verschlimmert haben.</item>
+    <item>Bleiben Sie bis zu Ihrer Genesung zu Hause. Wenn Sie sich Coronavirus (SARS-CoV-2) infizieren, wenn eine andere Infektion Sie schwächte, könnten Sie sehr krank werden.</item>
+    <item>Gehen Sie nicht krank zur Arbeit, um andere Personen nicht zu gefährden. Falls sich Ihre Symptome verschlechtern, kann die Notwendigkeit eines weiteren SARS-CoV-2-Tests bestehen.</item>
+  </string-array>
+  <string name="preference_name">
     <xliff:g id="preference">shared_preferences_cwa</xliff:g>
   </string>
-    <string name="preference_onboarding_completed">
+  <string name="preference_onboarding_completed">
     <xliff:g id="preference">preference_onboarding_completed</xliff:g>
   </string>
-    <string name="preference_onboarding_completed_timestamp">
+  <string name="preference_onboarding_completed_timestamp">
     <xliff:g id="preference">preference_onboarding_completed_timestamp</xliff:g>
   </string>
-    <string name="preference_reset_app">
+  <string name="preference_reset_app">
     <xliff:g id="preference">preference_reset_app</xliff:g>
   </string>
-    <string name="preference_only_wifi">
+  <string name="preference_only_wifi">
     <xliff:g id="preference">preference_only_wifi</xliff:g>
   </string>
-    <string name="preference_tracing">
+  <string name="preference_tracing">
     <xliff:g id="preference">preference_tracing</xliff:g>
   </string>
-    <string name="preference_timestamp_diagnosis_keys_fetch">
+  <string name="preference_timestamp_diagnosis_keys_fetch">
     <xliff:g id="preference">preference_timestamp_diagnosis_keys_fetch</xliff:g>
   </string>
-    <string name="preference_timestamp_manual_diagnosis_keys_retrieval">
+  <string name="preference_timestamp_manual_diagnosis_keys_retrieval">
     <xliff:g id="preference">preference_timestamp_manual_diagnosis_keys_retrieval</xliff:g>
   </string>
-    <string name="preference_string_google_api_token">
+  <string name="preference_string_google_api_token">
     <xliff:g id="preference">preference_m_string_google_api_token</xliff:g>
   </string>
-    <string name="preference_notifications_enabled">
+  <string name="preference_notifications_enabled">
     <xliff:g id="preference">preference_notifications_enabled</xliff:g>
   </string>
-    <string name="preference_notifications_risk_enabled">
+  <string name="preference_notifications_risk_enabled">
     <xliff:g id="preference">preference_notifications_risk_enabled</xliff:g>
   </string>
-    <string name="preference_notifications_test_enabled">
+  <string name="preference_notifications_test_enabled">
     <xliff:g id="preference">preference_notifications_test_enabled</xliff:g>
   </string>
-    <string name="preference_background_job_allowed">
+  <string name="preference_background_job_allowed">
     <xliff:g id="preference">preference_background_job_enabled</xliff:g>
   </string>
-    <string name="preference_mobile_data_allowed">
+  <string name="preference_mobile_data_allowed">
     <xliff:g id="preference">preference_mobile_data_enabled</xliff:g>
   </string>
-    <string name="preference_registration_token">
+  <string name="preference_registration_token">
     <xliff:g id="preference">preference_registration_token</xliff:g>
   </string>
-    <string name="preference_device_pairing_successful_time">
+  <string name="preference_device_pairing_successful_time">
     <xliff:g id="preference">preference_device_pairing_successful_time</xliff:g>
   </string>
-    <string name="preference_initial_tracing_activation_time">
+  <string name="preference_initial_tracing_activation_time">
     <xliff:g id="preference">preference_initial_tracing_activation_time</xliff:g>
   </string>
-    <string name="preference_initial_result_received_time">
+  <string name="preference_initial_result_received_time">
     <xliff:g id="preference">preference_initial_result_received_time</xliff:g>
   </string>
-    <string name="preference_risk_level_score">
+  <string name="preference_risk_level_score">
     <xliff:g id="preference">preference_risk_level_score</xliff:g>
   </string>
-    <string name="preference_risk_level_score_successful">
+  <string name="preference_risk_level_score_successful">
     <xliff:g id="preference">preference_risk_level_score_successful</xliff:g>
   </string>
-    <string name="preference_timestamp_risk_level_calculation">
+  <string name="preference_timestamp_risk_level_calculation">
     <xliff:g id="preference">preference_timestamp_risk_level_calculation</xliff:g>
   </string>
-    <string name="preference_test_guid">
+  <string name="preference_test_guid">
     <xliff:g id="preference">preference_test_guid</xliff:g>
   </string>
-    <string name="preference_is_allowed_to_submit_diagnosis_keys">
+  <string name="preference_is_allowed_to_submit_diagnosis_keys">
     <xliff:g id="preference">preference_is_allowed_to_submit_diagnosis_keys</xliff:g>
   </string>
-    <string name="preference_auth_code">
+  <string name="preference_auth_code">
     <xliff:g id="preference">preference_auth_code</xliff:g>
   </string>
-    <string name="preference_database_password">
+  <string name="preference_database_password">
     <xliff:g id="preference">preference_database_password</xliff:g>
   </string>
-    <string name="preference_total_non_active_tracing">
+  <string name="preference_total_non_active_tracing">
     <xliff:g id="preference">preference_total_non_active_tracing</xliff:g>
   </string>
-    <string name="preference_last_non_active_tracing_timestamp">
+  <string name="preference_last_non_active_tracing_timestamp">
     <xliff:g id="preference">preference_last_non_active_tracing_timestamp</xliff:g>
   </string>
-    <string name="preference_number_successful_submissions">
+  <string name="preference_number_successful_submissions">
     <xliff:g id="preference">preference_number_successful_submissions</xliff:g>
   </string>
-    <string name="preference_teletan">
+  <string name="preference_teletan">
     <xliff:g id="preference">preference_teletan</xliff:g>
   </string>
-    <string name="preference_last_three_hours_from_server">
+  <string name="preference_last_three_hours_from_server">
     <xliff:g id="preference">preference_last_three_hours_from_server</xliff:g>
   </string>
-    <string name="preference_polling_test_result_started">
+  <string name="preference_polling_test_result_started">
     <xliff:g id="preference">preference_polling_test_result_started</xliff:g>
   </string>
-    <string name="preference_test_result_notification">
+  <string name="preference_test_result_notification">
     <xliff:g id="preference">preference_test_result_notification</xliff:g>
   </string>
-    <string name="preference_risk_days_explanation_shown">
+  <string name="preference_risk_days_explanation_shown">
     <xliff:g id="preference">preference_risk_days_explanation_shown</xliff:g>
   </string>
-    <string name="accessibility_back">Zurück</string>
-    <string name="accessibility_next">Weiter</string>
-    <string name="accessibility_menu">Menü</string>
-    <string name="accessibility_close">Schließen</string>
-    <string name="accessibility_logo">Coronalert-App</string>
-    <string name="accessibility_button">Taste</string>
-    <string name="menu_help">Übersicht</string>
-    <string name="menu_information">App-Informationen</string>
-    <string name="menu_settings">Einstellungen</string>
-    <string name="notification_channel_id">
+  <string name="accessibility_back">Zurück</string>
+  <string name="accessibility_next">Weiter</string>
+  <string name="accessibility_menu">Menü</string>
+  <string name="accessibility_close">Schließen</string>
+  <string name="accessibility_logo">Coronalert-App</string>
+  <string name="accessibility_button">Taste</string>
+  <string name="menu_help">Übersicht</string>
+  <string name="menu_information">App-Informationen</string>
+  <string name="menu_settings">Einstellungen</string>
+  <string name="notification_channel_id">
     <xliff:g id="notification_channel_id">de.rki.coronawarnapp.notification.exposureNotificationChannelId</xliff:g>
   </string>
-    <string name="notification_id">
+  <string name="notification_id">
     <xliff:g id="notification_id">1</xliff:g>
   </string>
-    <string name="notification_name">Coronalert-App</string>
-    <string name="notification_description">Meldungen er Coronalert-App</string>
-    <string name="notification_headline">Coronalert-App</string>
-    <string name="notification_body">Neue Berichte Ihrer Coronalert-App.</string>
-    <string name="update_dialog_title">Update verfügbar</string>
-    <string name="update_dialog_message">Achtung: Coronalert-App nur mit dem neuesten Update betriebsbereit.</string>
-    <string name="update_dialog_button">Aktualisieren</string>
-    <string name="risk_card_body_contact">Bisher keine Kontakte</string>
-    <plurals name="risk_card_body_contact_value">
-        <item quantity="one">%1$s Kontakt</item>
-        <item quantity="other">%1$s Kontakte</item>
-    </plurals>
-    <string name="risk_card_body_saved_days">Kontaktlogbuch an %1$s der letzten 14 Tage aktiv</string>
-    <string name="risk_card_body_saved_days_full">Kontaktlogbuch dauerhaft aktiv</string>
-    <string name="risk_card_body_not_yet_fetched">Begegnungen noch nicht überprüft.</string>
-    <string name="risk_card_body_time_fetched">Aktualisiert: %1$s</string>
-    <string name="risk_card_body_next_update">Tägliche Aktualisierung</string>
-    <string name="risk_card_button_update">Aktualisieren</string>
-    <string name="risk_card_button_cooldown">Aktualisierung in %1$s</string>
-    <string name="risk_card_button_enable_tracing">Kontaktlogbuch aktivieren</string>
-    <string name="risk_card_body_tracing_off">Aktivieren Sie das Kontaktlogbuch, um sofort Ihren Risikostatus zu berechnen.</string>
-    <string name="risk_card_low_risk_headline">Niedriges Risiko</string>
-    <string name="risk_card_increased_risk_headline">Erhöhtes Risiko</string>
-    <plurals name="risk_card_increased_risk_body_contact_last">
-        <item quantity="one">%1$s Tag seit der letzten Begegnung</item>
-        <item quantity="other">%1$s Tage seit der letzten Begegnung</item>
-    </plurals>
-    <string name="risk_card_unknown_risk_headline">Unbekanntes Risiko</string>
-    <string name="risk_card_unknown_risk_body">Da Sie das Kontaktlogbuch noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen.</string>
-    <string name="risk_card_no_calculation_possible_headline">Kontaktverfolgung angehalten</string>
-    <string name="risk_card_no_calculation_possible_body_saved_risk">Letzte Kontaktverfolgung:<xliff:g id="line_break">\n</xliff:g>%1$s</string>
-    <string name="risk_card_outdated_risk_headline">Kontaktverfolgung unmöglich</string>
-    <string name="risk_card_outdated_risk_body">Ihr Kontaktlogbuch konnte seit mehr als 24 Stunden nicht aktualisiert werden.</string>
-    <string name="risk_card_outdated_manual_risk_body">Ihr Risikostatus wurde seit mehr als 48 Stunden nicht aktualisiert. Bitte aktualisieren Sie Ihren Risikostatus.</string>
-    <string name="risk_card_loading_headline">Prüfung läuft…</string>
-    <string name="risk_card_loading_body">Aktuelle Daten werden heruntergeladen und geprüft.\n Das kann mehrere Minuten dauern.</string>
-    <string name="main_about_headline">Häufig gestellte Fragen</string>
-    <string name="main_about_body">Hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
-    <string name="main_about_link">https://www.coronalert.be</string>
-    <string name="hint_external_webpage">Häufige Fragen, hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
-    <string name="main_share_title">Coronalert-App teilen</string>
-    <string name="main_share_headline">Gemeinsam gegen Corona</string>
-    <string name="main_share_body">Je häufiger die App benutzt wird, desto eher gebieten wir der Infektion Einhalt. Bitten Sie Familie, Freunde und Bekannte, die App herunterzuladen!</string>
-    <string name="main_share_button">Download-Link versenden</string>
-    <string name="main_share_message">Laden Sie die Anwendung Coronalert über diesen Link herunter: http://onelink.to/j8nrvj</string>
-    <string name="main_share_illustration_description">Ein Mann teilt die Coronalert-App mit vier anderen Personen.</string>
-    <string name="main_overview_title">Übersicht</string>
-    <string name="main_overview_accessibility_title">Übersicht</string>
-    <string name="main_overview_subtitle_tracing">Kontaktlogbuch</string>
-    <string name="main_overview_body_tracing">Das Kontaktlogbuch ist eine der drei zentralen Funktionen der App. Ist es aktiv, werden Begegnungen aufgezeichnet. Sie brauchen sich um nichts mehr zu kümmern.</string>
-    <string name="main_overview_subtitle_risk">Infektionsrisiko</string>
-    <string name="main_overview_body_risk">Wenn Sie in den vergangenen 14 Tagen Kontakt mit einer mit COVID-19 infizierten Person hatten, errechnet die App Ihr persönliches Infektionsrisiko. Dazu misst sie die Dauer und die Nähe des Kontakts.</string>
-    <string name="main_overview_subtitle_risk_levels">Folgender Risikostatus möglich:</string>
-    <string name="main_overview_subtitle_increased_risk">Erhöhtes Risiko</string>
-    <string name="main_overview_subtitle_low_risk">Niedriges Risiko</string>
-    <string name="main_overview_subtitle_unknown_risk">Unbekanntes Risiko</string>
-    <string name="main_overview_headline_test">Andere Nutzer warnen</string>
-    <string name="main_overview_body_test">Eine weitere zentrale Funktion. Hier können Sie Ihren Test registrieren und seinen Status abfragen. Bei einem positiven Test können Sie andere warnen und damit Infektionsketten unterbrechen.</string>
-    <string name="main_overview_headline_glossary">Begriffsdefinitionen</string>
-    <string name="main_overview_subtitle_glossary_tracing">Kontaktlogbuch</string>
-    <string name="main_overview_body_glossary_tracing">Liste der empfangenen und vorübergehend im Betriebssystemspeicher abgelegten kurzlebigen Zufallscodes. Sie wird bei der Kontaktprüfung gelesen. Alle Zufallscodes werden nach 14 Tagen automatisch gelöscht.</string>
-    <string name="main_overview_subtitle_glossary_calculation">Kontaktprüfung</string>
-    <string name="main_overview_body_glossary_calculation">Kontaktlogbuchdaten werden abgerufen und mit gemeldeten Infektionen anderer Nutzer synchronisiert. Die Kontaktprüfung erfolgt automatisch ca. alle zwei Stunden.</string>
-    <string name="main_overview_subtitle_glossary_contact">Kontakte</string>
-    <string name="main_overview_body_glossary_contact">Begegnungen über einen längeren Zeitraum und in der Nähe von Menschen, bei denen COVID-19 diagnostiziert wurde.</string>
-    <string name="main_overview_subtitle_glossary_notification">Kontaktmeldung</string>
-    <string name="main_overview_body_glossary_notification">Anzeige der Kontakte in Coronalert.</string>
-    <string name="main_overview_subtitle_glossary_keys">Zufallscode</string>
-    <string name="main_overview_body_glossary_keys">Zufallscodes sind zufällig erzeugte Zahlen- und Buchstabenkombinationen. Sie werden zwischen benachbarten Handys ausgetauscht. Zufallscodes lassen sich nicht einer bestimmten Person zuordnen und werden nach 14 Tagen automatisch gelöscht. Eine Corona-positiv getestete Person kann ihre Zufallscodes von bis zu 14 Tage freiwillig mit anderen App-Nutzern teilen.</string>
-    <string name="main_overview_illustration_description">Ein Handy zeigt unterschiedliche Inhalte, die von eins bis drei nummeriert sind.</string>
-    <string name="main_title">Hauptseite der Coronalert-App</string>
-    <string name="risk_details_title">Ihr Risikostatus</string>
-    <string name="risk_details_headline_behavior">Richtlinien</string>
-    <string name="risk_details_subtitle_behavior">So verhalten Sie sich richtig</string>
-    <string name="risk_details_behavior_body_stay_home">Gehen Sie, wenn möglich, nach Hause bzw. bleiben Sie zu Hause.</string>
-    <string name="risk_details_behavior_body_contact_doctor">Bitte wenden Sie sich mit Fragen zu Symptomen, Testmöglichkeiten und weiteren Isolationsmaßnahmen, sich an eine der folgenden Stellen:</string>
-    <string name="risk_details_behavior_body_wash_hands">Waschen Sie Ihre Hände regelmäßig.</string>
-    <string name="risk_details_behavior_body_wear_mask">Tragen Sie einen Mundschutz bei Begegnungen mit anderen Personen.</string>
-    <string name="risk_details_behavior_body_stay_away">Halten Sie mindestens 1,5 Meter Abstand zu anderen Personen.</string>
-    <string name="risk_details_behavior_body_cough_sneeze">Niesen oder husten Sie in die Armbeuge oder in ein Taschentuch.</string>
-    <string name="risk_details_behavior_increased_body_1">Ihr Hausarzt</string>
-    <string name="risk_details_behavior_increased_body_2">Kassenärztlicher Bereitschaftsdienst unter der Telefonnummer: 112</string>
-    <string name="risk_details_behavior_increased_body_3">Ihr Gesundheitsamt</string>
-    <string name="risk_details_headline_infection_risk">Infektionsrisiko</string>
-    <string name="risk_details_headline_period_logged">Erfasste Periode</string>
-    <string name="risk_details_subtitle_period_logged">Diese Periode wird berücksichtigt</string>
-    <string name="risk_details_information_body_period_logged">Ihr Infektionsrisiko kann nur für Perioden errechnet werden, in denen das Kontaktlogbuch aktiv ist. Das Kontaktlogbuch sollte daher immer aktiv sein.</string>
-    <string name="risk_details_information_body_period_logged_assessment">Die Kontaktverfolgung umfasst nur die letzten 14 Tage. In dieser Zeit war Ihre Kontaktverfolgung insgesamt %1$s Tage aktiv. Ältere Aufzeichnungen werden automatisch gelöscht, da sie aus Sicht des Infektionsschutzes irrelevant sind.</string>
-    <string name="risk_details_subtitle_infection_risk_past">So wurde Ihr Risiko ermittelt</string>
-    <string name="risk_details_subtitle_infection_risk">So wird Ihr Risiko ermittelt</string>
-    <string name="risk_details_information_body_unknown_risk">Da Sie das Kontaktlogbuch noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen.</string>
-    <string name="risk_details_information_body_outdated_risk">Ihr Kontaktlogbuch konnte über 24 Stunden lang nicht aktualisiert werden.</string>
-    <string name="risk_details_information_body_low_risk">Sie haben ein niedriges Infektionsrisiko, da kein Kontakt zu nachweislich Corona-positiv getesteten Personen erfasst wurde oder sich Ihr Kontakt auf kurze Zeit und einen größeren Abstand beschränkt hat.</string>
-    <plurals name="risk_details_information_body_increased_risk">
-        <item quantity="one">Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tag mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind.</item>
-        <item quantity="other">Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind.</item>
-    </plurals>
-    <string name="risk_details_information_body_notice">Das Infektionsrisiko wird anhand der Daten im Kontaktlogbuch unter Berücksichtigung von Abstand und Dauer lokal auf Ihrem Handy berechnet. Ihr Infektionsrisiko ist für niemanden einsehbar und wird nicht weitergegeben.</string>
-    <string name="risk_details_button_update">@string/risk_card_button_update</string>
-    <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
-    <string name="risk_details_accessibility_title">Ihr Risikostatus</string>
-    <string name="risk_details_explanation_dialog_title">Information über die Funktionalität Kontaktlogbuch</string>
-    <string name="risk_details_explanation_dialog_faq_body">Weitere Informationen finden Sie in den FAQ.</string>
-    <string name="onboarding_button_disable">Nicht aktivieren</string>
-    <string name="onboarding_button_enable">Aktivieren</string>
-    <string name="onboarding_button_cancel">Abbrechen</string>
-    <string name="onboarding_button_next">Weiter</string>
-    <string name="onboarding_button_start">Los geht’s</string>
-    <string name="onboarding_button_back_description">Zurück</string>
-    <string name="onboarding_onboarding_accessibility_title">Einführung Seite 1 von 5: Gemeinsam gegen Corona</string>
-    <string name="onboarding_headline">Gemeinsam gegen Corona</string>
-    <string name="onboarding_subtitle">Mehr Schutz für Sie und uns alle. Mit der Coronalert-App durchbrechen wir Infektionsketten schneller.</string>
-    <string name="onboarding_body">Machen Sie Ihr Handy zum Corona-Warn-System. Erhalten Sie eine Übersicht über Ihren Risikostatus und erfahren Sie, ob in den letzten 14 Tagen Corona-Infizierte in Ihrer Nähe waren.</string>
-    <string name="onboarding_body_emphasized">Die App merkt sich Begegnungen zwischen Menschen, indem ihre Handys ohne Zugriff auf persönliche Daten verschlüsselte Zufallscodes austauschen.</string>
-    <string name="onboarding_illustration_description">Eine Personengruppe benutzt Handys in einer Stadt.</string>
-    <string name="onboarding_privacy_accessibility_title">Onboarding Seite 2 von 5: Datenschutz. Es folgt ein langer Text. Sie können jederzeit mit der Taste am unteren Bildschirmrand fortfahren.</string>
-    <string name="onboarding_privacy_headline">Datenschutz</string>
-    <string name="onboarding_privacy_illustration_description">Eine Frau mit einem Handy benutzt die Coronalert-App. Ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten.</string>
-    <string name="onboarding_tracing_accessibility_title">Einführung Seite 3 von 5: Das Kontaktlogbuch aktivieren</string>
-    <string name="onboarding_tracing_headline">Das Kontaktlogbuch aktivieren</string>
-    <string name="onboarding_tracing_subtitle">Um zu erkennen, ob Sie infektiongsgefährdet sind, müssen Sie das Kontaktlogbuch aktivieren.</string>
-    <string name="onboarding_tracing_body">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an ihr Handy weitergibt. Die Funktion kann jederzeit deaktiviert werden.</string>
-    <string name="onboarding_tracing_body_emphasized">Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
-    <string name="onboarding_tracing_headline_consent">Einwilligungserklärung</string>
-    <string name="onboarding_tracing_body_consent">Um zu erfahren, ob Sie Kontakt mit einer infizierten Person hatten und für Sie ein Infektionsrisiko besteht, müssen Sie die Funktion Kontaktlogbuch in der App aktivieren. Der Aktivierung des Kontaktlogbuchs und der damit im Zusammenhang stehenden Datenverarbeitung stimmen Sie mit Antippen des Buttons: Kontaktlogbuch aktivieren zu.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zur Nutzung des Kontaktlogbuchs müssen Sie zudem auf dem Handy die von Google bereitgestellte Kontaktverfolgungs-Funktion „Meldungen möglicher Begegnung mit COVID-19-Infizierten“ aktivieren und für die Coronalert-App freigeben.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Ihr Handy erzeugt und versendet bei aktivierter Kontaktverfolgung kontinuierlich Zufalls-IDs per Bluetooth, die von anderen Apple- und Android-Handys mit ebenfalls aktivierter Kontaktverfolgung in Ihrer Umgebung empfangen werden können. Umgekehrt empfängt Ihr Handy die Zufalls-IDs der anderen Handys. Die eigenen und die von anderen Handys empfangenen Zufalls-IDs werden im Kontaktprotokoll der Kontaktverfolgungs-Funktion aufgezeichnet und dort 14 Tage gespeichert.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zur Ermittlung Ihres Infektionsrisikos lädt die App mehrmals täglich oder auf Abfrage eine Liste mit den Zufalls-IDs aller Nutzer, die Ihre Infektion mit dem Corona-Virus in der App geteilt haben. Diese Liste wird dann mit den im Kontaktprotokoll der Kontaktverfolgungs-Funktion gespeicherten Zufalls-IDs verglichen. Wenn die App dabei feststellt, dass Sie möglicherweise Kontakt zu einem infizierten Nutzer hatten, warnt Sie die App dass Sie mit einer infizierten Person in Kontakt waren und insoweit ein Infektionsrisiko besteht. In diesem Fall erhält die App außerdem Zugriff auf weitere im Kontaktprotokoll der Kontaktverfolgungs-Funktion Ihres Smartphones gespeicherte Daten (Datum und Dauer sowie Bluetooth-Signalstärke des Kontakts).<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Aus der Bluetooth-Signalstärke wird der räumliche Abstand abgeleitet (je stärker das Signal, desto geringer der Abstand). Diese Angaben werden von der App ausgewertet, um Ihr Gesundheitsrisiko durch eine COVID-Infektion abzuschätzen und Ihnen Empfehlungen für die nächsten Schritte zu geben. Diese Auswertung wird ausschließlich lokal auf Ihrem Handy durchgeführt. Außer Ihnen erfährt niemand (auch nicht das RKI), ob Sie mit einer infizierten Person Kontakt hatten und welches Risiko für Sie ermittelt wird.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zum Widerruf Ihrer Einwilligung in die Kontaktverfolgung können Sie die Funktion über den Schieberegler innerhalb der App deaktivieren oder die App löschen. Wenn Sie die Kontaktverfolgung wieder nutzen möchten, können Sie den Schieberegler erneut aktivieren oder die App erneut installieren. Wenn Sie die Kontaktverfolgung deaktivieren, prüft die App nicht mehr, ob Sie Kontakt zu einem infizierten Nutzer hatten. Wenn keine weiteren Zufalls-IDs versendet/empfangen werden soll, müssen Sie das Kontaktprotokoll der Kontaktverfolgungs-Funktion in den Einstellungen Ihres Handys deaktivieren. Bitte beachten Sie, dass die im Kontaktprotokoll aufgezeichneten fremden und eigenen Zufalls-Kennungen nicht in der App gelöscht werden. Die im Kontaktprotokoll gespeicherten Daten können Sie nur in den Handy-Einstellungen endgültig löschen.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Die Datenschutzhinweise der App (einschließlich Informationen zur Datenverarbeitung für die Kontaktverfolgung) finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
-    <string name="onboarding_tracing_button_next">Kontaktlogbuch aktivieren</string>
-    <string name="onboarding_tracing_dialog_headline">Genehmigung.</string>
-    <string name="onboarding_tracing_dialog_body">Coronalert-App kann dadurch keine Meldungen zum COVID-19-Risikostatus versenden und empfangen. Sie können die Funktion jederzeit ausschalten.</string>
-    <string name="onboarding_tracing_dialog_button_positive">Nicht aktivieren</string>
-    <string name="onboarding_tracing_dialog_button_negative">Zurück</string>
-    <string name="onboarding_tracing_illustration_description">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
-    <string name="onboarding_tracing_location_headline">Standortzugriff erlauben</string>
-    <string name="onboarding_tracing_location_body">Auf Ihren Standort kann nicht zugegriffen werden. Google und/oder Android erfordert für Bluetooth den Zugriff auf den Gerätestandort.</string>
-    <string name="onboarding_tracing_location_button">Geräteeinstellungen öffnen</string>
-    <string name="onboarding_test_accessibility_title">Einführung Seite 4 von 5: Wenn bei Ihnen COVID-19 diagnostiziert wird</string>
-    <string name="onboarding_test_headline">Wenn bei Ihnen COVID-19 diagnostiziert wird,</string>
-    <string name="onboarding_test_subtitle">… teilen Sie es bitte über die Coronalert-App mit. Freiwillig und sicher. Für die Gesundheit aller.</string>
-    <string name="onboarding_test_body">Ihre Meldung wird zuverlässig verschlüsselt über einen sicheren Server weiterverarbeitet. Die Personen, deren verschlüsselte Zufallscodes Sie gesammelt haben, erhalten nun eine Warnung und Informationen darüber, wie sie weiter vorgehen sollen.</string>
-    <string name="onboarding_test_illustration_description">Eine verschlüsselte positive Testdiagnose wird an das System übertragen, das nun andere Nutzer warnt.</string>
-    <string name="onboarding_notifications_accessibility_title">Einführung Seite 5 von 5: Warnungen erhalten und Risiken erkennen</string>
-    <string name="onboarding_notifications_headline">Warnungen erhalten, Risiken erkennen</string>
-    <string name="onboarding_notifications_subtitle">Die App kann Sie automatisch über Ihren Risikostatus informieren und Sie vor Neuinfektionen von Personen warnen, denen Sie begegnet sind. Lassen Sie sich jetzt von der App benachrichtigen.</string>
-    <string name="onboarding_notifications_body">Sie können sich dann selbst isolieren, um andere zu schützen und herausfinden, wo Sie sich testen lassen können.</string>
-    <string name="onboarding_notifications_illustration_description">Eine Frau erhält eine Meldung von ihrer Coronalert-App.</string>
-    <string name="settings_title">Einstellungen</string>
-    <string name="settings_on">An</string>
-    <string name="settings_off">Aus</string>
-    <string name="settings_tracing_title">Kontaktverfolgung</string>
-    <string name="settings_tracing_headline">So funktioniert die Kontaktverfolgung</string>
-    <string name="settings_tracing_body_description">Aufzeichnung und Weitergabe von COVID-19-Zufallscodes zulassen.</string>
-    <string name="settings_tracing_body_active">Kontaktlogbuch aktiv</string>
-    <string name="settings_tracing_body_inactive">Kontaktverfolgung angehalten</string>
-    <string name="settings_tracing_body_inactive_location">Ortungsdienste deaktiviert</string>
-    <string name="settings_tracing_body_text">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an ihr Handy weitergibt. Die Funktion kann jederzeit wieder deaktiviert werden.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
-    <string name="settings_tracing_status_active">Aktiv</string>
-    <string name="settings_tracing_status_inactive">Angehalten</string>
-    <string name="settings_tracing_status_restricted">Eingeschränkt</string>
-    <string name="settings_tracing_body_connection_inactive">Keine Internetverbindung</string>
-    <string name="settings_tracing_body_bluetooth_inactive">Bluetooth deaktiviert</string>
-    <string name="settings_tracing_status_bluetooth_headline">Bluetooth aktivieren</string>
-    <string name="settings_tracing_status_bluetooth_body">Zur Kontaktverfolgung muss Bluetooth zur Erfassung von Begegnungen aktiviert werden. Bluetooth bitte in den Geräteeinstellungen aktivieren.</string>
-    <string name="settings_tracing_status_bluetooth_button">Geräteeinstellungen öffnen</string>
-    <string name="settings_tracing_status_connection_headline">Internetverbindung herstellen</string>
-    <string name="settings_tracing_status_connection_body">Zur Kontaktverfolgung bedarf es einer Internetverbindung zur Berechnung der Kontakte. Diese in Geräteeinstellungen WIFI oder Handydaten aktivieren.</string>
-    <string name="settings_tracing_status_connection_button">Geräteeinstellungen öffnen</string>
-    <plurals name="settings_tracing_status_body_active">
-        <item quantity="one">Die Risiko-Ermittlung ist seit insgesamt einem Tag aktiv. Eine verlässliche Kontaktverfolgung kann nur mit einem laufend aktivierten Kontaktlogbuch erfolgen.</item>
-        <item quantity="other">Das Kontaktlogbuch ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Kontaktverfolgung kann nur mit einem laufend aktivierten Kontaktlogbuch erfolgen.</item>
-    </plurals>
-    <string name="settings_tracing_illustration_description_active">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
-    <string name="settings_tracing_illustration_description_inactive">Weil jemand das Kontaktlogbuch auf dem Handy deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
-    <string name="settings_tracing_bluetooth_illustration_description_inactive">Weil jemand auf dem Handy Bluetooth deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
-    <string name="settings_tracing_connection_illustration_description_inactive">Weil jemand auf dem Handy die Internetverbindung deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
-    <string name="settings_notifications_title">Meldungen</string>
-    <string name="settings_notifications_headline_active">Die Meldungen zum COVID-19-Risikostatus aktivieren?</string>
-    <string name="settings_notifications_headline_inactive">Meldungen wurden deaktiviert</string>
-    <string name="settings_notifications_body_description">Automatische Meldungen zum COVID-19-Risikostatus zulassen.</string>
-    <string name="settings_notifications_body_active">Legen Sie fest, worüber Sie weiterhin informiert werden möchten.</string>
-    <string name="settings_notifications_body_inactive">Um Meldungen zu aktivieren, müssen Sie \'Meldungen für die Coronalert-App\' in Ihren Geräteeinstellungen zulassen.</string>
-    <string name="settings_notifications_headline_card">Meldungen aktivieren</string>
-    <string name="settings_notifications_subtitle_notification">Meldungen</string>
-    <string name="settings_notifications_subtitle_update_risk">Änderung Ihres Infektionsrisikos</string>
-    <string name="settings_notifications_subtitle_update_test">Status Ihres Coronavirus-Tests</string>
-    <string name="settings_notifications_button_open_settings">Geräteeinstellungen öffnen</string>
-    <string name="settings_notifications_illustration_description_active">Eine Frau erhält eine Meldung von ihrer Coronalert-App.</string>
-    <string name="settings_notifications_illustration_description_inactive">Eine Frau hat die Meldungen ihrer Coronalert-App deaktiviert.</string>
-    <string name="settings_reset_title">App zurücksetzen</string>
-    <string name="settings_reset_body_description">Ihre Daten in der App löschen.</string>
-    <string name="settings_reset_headline">Die App wirklich zurücksetzen?</string>
-    <string name="settings_reset_body">Sie werden nicht mehr über Ihre Kontakte informiert und können andere Nutzer nicht mehr warnen.</string>
-    <string name="settings_reset_headline_keys">Kontaktlogbuch<xliff:g id="line_break">\n</xliff:g>löschen</string>
-    <string name="settings_reset_body_keys">Das Kontaktlogbuch separat in den Geräteeinstellungen löschen.</string>
-    <string name="settings_reset_button_positive">App zurücksetzen</string>
-    <string name="settings_reset_button_negative">Abbrechen</string>
-    <string name="settings_reset_illustration_description">Eine Hand hält ein Handy mit dem Symbol, das das Zurücksetzen der App anzeigt.</string>
-    <string name="settings_reset_dialog_headline">App zurücksetzen</string>
-    <string name="settings_reset_dialog_body">Sie werden nicht mehr über Ihre Kontakte informiert und können andere Nutzer nicht mehr warnen. Dieses Verfahren kann nicht rückgängig gemacht werden.</string>
-    <string name="settings_reset_dialog_button_cancel">Abbrechen</string>
-    <string name="settings_reset_dialog_button_confirm">Zurücksetzen</string>
-    <string name="settings_background_priority_title">Priorisierte Hintergrundaktivität</string>
-    <string name="settings_background_priority_body_description">Automatische Aktualisierung Ihres Risikostatus erlauben.</string>
-    <string name="settings_background_priority_headline">Coronalert-App im Hintergrund ausführen</string>
-    <string name="settings_background_priority_body">Die Coronalert-App läuft ununterbrochen im Hintergrund, wenn Sie die priorisierte Hintergrundaktivität aktivieren. So kann die App jederzeit Ihren Risikostatus ermitteln.</string>
-    <string name="settings_background_priority_illustration_description"></string>
-    <string name="settings_background_priority_card_body">In den Geräteeinstellungen die priorisierte Hintergrundaktivität deaktivieren, um sie auszuschalten.</string>
-    <string name="settings_background_priority_card_button">Geräteeinstellungen öffnen</string>
-    <string name="settings_background_priority_card_headline">Priorisierte Hintergrundaktivität ausschalten</string>
-    <string name="information_title">App-Informationen</string>
-    <string name="information_version">Version: %1s</string>
-    <string name="information_about_title">Über die App</string>
-    <string name="information_about_headline">Gemeinsam gegen Corona</string>
-    <string name="information_about_body_emphasized">Das Sciensano veröffentlicht die Coronalert-App im Auftrag der Bundesregierung. Die App ist die digitale Ergänzung zu Abstandhalten, Hygiene und Mundschutz.</string>
-    <string name="information_about_body">Wer sie nutzt, hilft, Infektionsketten schnell nachzuverfolgen und zu durchbrechen. Die App speichert dezentral – auf Ihrem Handy – Begegnungen mit anderen. Sie werden informiert, wenn Sie Begegnungen mit nachweislich infizierten Personen hatten. Ihre Privatsphäre bleibt dabei bestens geschützt.</string>
-    <string name="information_about_illustration_description">Eine Personengruppe benutzt Handys in einer Stadt.</string>
-    <string name="information_privacy_title">Datenschutz</string>
-    <string name="information_privacy_illustration_description">Eine Frau mit einem Handy benutzt die Coronalert-App. Ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten.</string>
-    <string name="information_privacy_html_path">privacy_de.html</string>
-    <string name="information_terms_title">Nutzungsbedingungen</string>
-    <string name="information_terms_headline">Inhalt</string>
-    <string name="information_terms_illustration_description">Eine Hand hält ein Handy mit viel Text. Daneben ist ein Haken als Symbol für akzeptierte Nutzungsbedingungen.</string>
-    <string name="information_terms_html_path">terms_de.html</string>
-    <string name="information_contact_title">Technische Hotline</string>
-    <string name="information_contact_headline">Wie können wir Ihnen helfen?</string>
-    <string name="information_contact_body">Bitte mit technischen Fragen zur Coronalert-App unsere Hotline kontaktieren.</string>
-    <string name="information_contact_subtitle_phone">Technische Hotline:</string>
-    <string name="information_contact_button_phone">0800 14 689</string>
-    <string name="information_contact_phone_call_number">0800 14 689</string>
-    <string name="information_contact_body_phone">Unser Kundenservice ist für Sie da.</string>
-    <string name="information_contact_body_open">Sprachen: Niederländisch, Französisch, Deutsch, Englisch\nErreichbarkeit:<xliff:g id="line_break">\n</xliff:g>Mo - Fr: 09:00 - 17:00 Uhr<xliff:g id="line_break">\n(außer an nationalen Feiertagen)</xliff:g><xliff:g id="line_break">\nDer Anruf ist kostenfrei.</xliff:g></string>
-    <string name="information_contact_body_other">Für gesundheitliche Fragen wenden Sie sich bitte an Ihren Hausarzt oder die Hotline des ärztlichen Bereitschaftsdienstes 112.</string>
-    <string name="information_contact_illustration_description">Ein Mann trägt ein Headset beim Telefonieren.</string>
-    <string name="information_help_title">FAQ</string>
-    <string name="information_help_title_accessibility">Häufig gestellte Fragen. Sie werden an eine externe Website weitergeleitet.</string>
-    <string name="information_technical_title">Rechtliche Hinweise</string>
-    <string name="information_technical_illustration_description">Eine Hand hält ein Handy mit viel Text. Daneben ist eine Balkenwaage als Symbol für rechtliche Hinweise.</string>
-    <string name="information_technical_html_path">technical_en.html</string>
-    <string name="information_legal_title">Impressum</string>
-    <string name="information_legal_headline_publisher">Herausgeber</string>
-    <string name="information_legal_subtitle_publisher">(verantwortlich nach § 5 Abs. 1 TMG, § 55 Abs. 1 RStV, DS-GVO, BDSG)</string>
-    <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">\n</xliff:g>rue Juliette Wytsmanstraat 14<xliff:g id="line_break">\n</xliff:g>1050 Brüssel<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>vertreten durch den Präsidenten</string>
-    <string name="information_legal_headline_contact">Kontakt</string>
-    <string name="information_legal_subtitle_contact">E-Mail: hello@coronalert.be<xliff:g id="line_break">\n</xliff:g>Telefon: 0800 14 689</string>
-    <string name="information_legal_headline_taxid">USt.-Id-Nummer</string>
-    <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
-    <string name="information_legal_illustration_description">Eine Hand hält ein Handy, das eine große Textmenge auf dem Bildschirm anzeigt. Daneben steht ein Abschnittssymbol, das den Aufdruck darstellt.</string>
-    <string name="submission_error_dialog_web_generic_error_title">Fehler</string>
-    <string name="submission_error_dialog_web_generic_network_error_body">Verbindungsfehler (%1$d). Bitte erneut versuchen.</string>
-    <string name="submission_error_dialog_web_generic_error_body">Verbindungsfehler. Bitte erneut versuchen.</string>
-    <string name="submission_error_dialog_web_generic_error_button_positive">Zurück</string>
-    <string name="submission_error_dialog_web_test_paired_title">Fehler</string>
-    <string name="submission_error_dialog_web_test_paired_body">Der QR-Code / CODE ist ungültig oder wurde schon verwendet. Bitte erneut versuchen oder die technische Hotline unter \'App-Info → Technische Hotline\' kontaktieren.</string>
-    <string name="submission_error_dialog_web_test_paired_button_positive">Zurück</string>
-    <string name="submission_error_dialog_web_paring_invalid_title">Fehler</string>
-    <string name="submission_error_dialog_web_paring_invalid_body">Einreichungs-CODE konnte nicht erstellt werden. Kontaktaufnahme unter \'App-Info -&gt; Technische Hotline\'.</string>
-    <string name="submission_error_dialog_web_paring_invalid_button_positive">Zurück</string>
-    <string name="submission_error_dialog_web_tan_invalid_title">Fehler</string>
-    <string name="submission_error_dialog_web_tan_invalid_body">Einreichungs-CODE konnte nicht erstellt werden. Kontaktaufnahme unter \'App-Info -&gt; Technische Hotline\'.</string>
-    <string name="submission_error_dialog_web_tan_invalid_button_positive">Zurück</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">Kamerazugriff benötigt</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_body">Der App die Benutzung der Kamera erlauben, um den QR-Code zu scannen.</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">Erlauben</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative">Nicht erlauben</string>
-    <string name="submission_qr_code_scan_permission_denied_dialog_headline">Kamerazugriff benötigt</string>
-    <string name="submission_qr_code_scan_permission_denied_dialog_body">Systemeinstellungen abfragen und der App erlauben, die Kamera zum Scannen des QR-Codes zu verwenden.</string>
-    <string name="submission_qr_code_scan_permission_denied_dialog_button">OK</string>
-    <string name="submission_qr_code_scan_invalid_dialog_headline">Falscher QR-Code</string>
-    <string name="submission_qr_code_scan_invalid_dialog_body">Falscher QR-Code. Bitte erneut versuchen.</string>
-    <string name="submission_qr_code_scan_invalid_dialog_button_positive">Erneut versuchen</string>
-    <string name="submission_qr_code_scan_invalid_dialog_button_negative">Abbrechen</string>
-    <string name="submission_qr_code_scan_title">Positionieren Sie den QR-Code in den Rahmen.</string>
-    <string name="submission_qr_code_scan_body">Positionieren Sie den QR-Code in den Rahmen.</string>
-    <string name="submission_test_result_headline">Testergebnis</string>
-    <string name="submission_test_result_subtitle">Info zum Ablauf:</string>
-    <string name="submission_test_result_steps_added_heading">Test erfolgreich hinzugefügt</string>
-    <string name="submission_test_result_steps_added_body">Ihr Test wurde in Coronalert gespeichert.</string>
-    <string name="submission_test_result_pending_steps_waiting_heading">Testergebnis noch nicht verfügbar</string>
-    <string name="submission_test_result_pending_steps_waiting_body">Testergebnis noch nicht verfügbar.</string>
-    <string name="submission_test_result_pending_refresh_button">Aktualisieren</string>
-    <string name="submission_test_result_pending_remove_test_button">Test löschen</string>
-    <string name="submission_test_result_negative_steps_negative_heading">Ihr Testergebnis</string>
-    <string name="submission_test_result_negative_steps_negative_body">Der Labortest hat keinen Nachweis für das Coronavirus SARS-CoV-2 bei Ihnen ergeben. \n\nBitte entfernen Sie den Test wieder aus der Coronalert-App, damit Sie bei Bedarf einen neuen Test hinterlegen können.</string>
-    <string name="submission_test_result_negative_remove_test_button">Test löschen</string>
-    <string name="submission_test_result_positive_steps_positive_heading">Ihr Testergebnis</string>
-    <string name="submission_test_result_positive_steps_positive_body">Ihr Testergebnis wurde als positiv verifiziert.</string>
-    <string name="submission_test_result_positive_steps_warning_others_heading">Andere warnen</string>
-    <string name="submission_test_result_positive_steps_warning_others_body">Ihre Zufallscodes der letzten 14 Tage teilen, um andere zu schützen und die Infektionskette zu unterbrechen.</string>
-    <string name="submission_test_result_positive_continue_button">Weiter</string>
-    <string name="submission_test_result_invalid_steps_invalid_heading">Ihr Testergebnis</string>
-    <string name="submission_test_result_invalid_steps_invalid_body">Es gab ein Problem bei der Auswertung Ihres Tests. Bitte kontaktieren Sie das Gesundheitsamt um Information zum weiteren Vorgehen zu erhalten.\n\nBitte entfernen Sie den Test wieder aus der Coronalert-App, damit Sie bei Bedarf einen neuen Test hinterlegen können.</string>
-    <string name="submission_test_result_invalid_remove_test_button">Test löschen</string>
-    <string name="submission_test_result_dialog_tracing_required_title">Kontaktlogbuch erforderlich</string>
-    <string name="submission_test_result_dialog_tracing_required_message">Bitte Kontaktlogbuch aktivieren, um andere zu warnen.</string>
-    <string name="submission_test_result_dialog_tracing_required_button">OK</string>
-    <string name="submission_test_result_dialog_remove_test_title">Test löschen?</string>
-    <string name="submission_test_result_dialog_remove_test_message">Der Test wird endgültig aus der Coronalert-App entfernt und kann nicht mehr eingefügt werden. Dieser Vorgang kann nicht widerrufen werden.</string>
-    <string name="submission_test_result_dialog_remove_test_button_positive">Entfernen</string>
-    <string name="submission_test_result_dialog_remove_test_button_negative">Abbrechen</string>
-    <string name="submission_test_result_card_positive_title">SARS-CoV-2 positiv</string>
-    <string name="submission_test_result_card_positive_body">Bei Ihnen wurde das SARS-CoV-2-Virus diagnostiziert.</string>
-    <string name="submission_tan_title">CODE-Eingabe</string>
-    <string name="submission_tan_body">Bitte den erhaltenen, 10-stelligen CODE eingeben.</string>
-    <string name="submission_tan_button_text">Weiter</string>
-    <string name="submission_tan_accessibility_title">CODE-Eingabe</string>
-    <string name="submission_tan_error">Ungültiger CODE, bitte Eingabe prüfen.</string>
-    <string name="submission_tan_character_error">Ungültige Eingabe, bitte Eingabe prüfen prüfen.</string>
-    <string name="submission_intro_title">Wurden Sie getestet?</string>
-    <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
-    <string name="submission_intro_text">Damit die Coronalert-App funktioniert, sind wir auf die Mithilfe von Corona-positiv getesteten Personen angewiesen.\n\nDa nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Gehen Sie wie folgt vor:</string>
-    <string name="submission_intro_button_next">Weiter</string>
-    <string name="submission_intro_illustration_description">Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzer warnt.</string>
-    <string name="submission_intro_accessibility_title">Wurden Sie getestet? So funktioniert die Coronalert-App</string>
-    <string name="submission_dispatcher_headline">Auswahl</string>
-    <string name="submission_dispatcher_subheadline">Welche Informationen haben Sie?</string>
-    <string name="submission_dispatcher_card_qr">Dokument mit QR-Code</string>
-    <string name="submission_dispatcher_qr_card_text">Registrieren Sie Ihren Test, indem Sie den QR-Code Ihres Test-Dokuments scannen.</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_headline">Einwilligungserklärung</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_body">Tippen Sie \'Erlauben\' an, willigen Sie ein, dass die App den Status Ihres Corona-Virus-Tests abfragt und in der App anzeigt. Diese Funktion ist aktiv, wenn Sie einen QR-Code erhalten und eingewilligt haben, dass Ihr Testergebnis an das Serversystem der App übermittelt wird. Hat das Testlabor Ihr Testergebnis auf dem Server gespeichert, sieht man das Ergebnis in der App. Haben Sie Meldungen aktiviert, erfahren Sie auch außerhalb der App über den Testergebniseingang. Aus Datenschutzgründen sehen Sie es nur in der App. Sie können diese Einwilligung jederzeit widerrufen, indem Sie die Testregistrierung in der App löschen. Der Widerruf der Einwilligung berührt die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung nicht. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_button_positive">Erlauben</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_button_negative">Nicht erlauben</string>
-    <string name="submission_dispatcher_card_tan_code">CODE</string>
-    <string name="submission_dispatcher_tan_code_card_text">Test per manueller CODE-Eingabe registrieren.</string>
-    <string name="submission_dispatcher_card_tan_tele">CODE anfragen</string>
-    <string name="submission_dispatcher_tan_tele_card_text">Bitte rufen Sie uns an, falls Sie Corona-positiv getestet wurden.</string>
-    <string name="submission_dispatcher_accessibility_title">Welche Informationen haben Sie?</string>
-    <string name="submission_positive_other_warning_title">Andere warnen</string>
-    <string name="submission_positive_other_warning_headline">Helfen Sie mit!</string>
-    <string name="submission_positive_other_warning_body">Als Nächstes können Sie dafür sorgen, dass das Corona-Warn-System Ihre lokal gespeicherten Zufallscodes der letzten 14 Tage an andere verteilt. So können Sie Ihre Mitmenschen warnen und helfen, die Infektionskette zu unterbrechen.\n\nDa nur unpersönliche Zufallscodes übertragen werden, bleibt Ihre Identität unbekannt.</string>
-    <string name="submission_positive_other_warning_privacy_title">Datenschutz</string>
-    <string name="submission_positive_other_warning_privacy_body">Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktiviertem Kontaktlogbuch automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.\n\nDie Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.\n\nSie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
-    <string name="submission_positive_other_warning_button">Weiter</string>
-    <string name="submission_positive_other_illustration_description">Ein Handy übermittelt einen positiven Testbefund verschlüsselt ins System.</string>
-    <string name="submission_done_title">Vielen Dank!</string>
-    <string name="submission_done_body">Sie haben einen wichtigen Beitrag geleistet! Dank Ihrer Mithilfe können andere gewarnt werden und entsprechend reagieren.</string>
-    <string name="submission_done_subtitle">Bitte beachten:</string>
-    <string name="submission_done_contagious">Sie sind ansteckend.</string>
-    <string name="submission_done_isolate">Bitte isolieren Sie sich von anderen Personen.</string>
-    <string name="submission_done_further_info_title">Weitere Infos:</string>
-    <string name="submission_done_button_done">Fertig</string>
-    <string name="submission_done_illustration_description">Jeder in der Gruppe jubelt, weil jemand sein Testergebnis geteilt hat.</string>
-    <string name="submission_contact_title">CODE anfragen</string>
-    <string name="submission_contact_headline">Info zum Ablauf:</string>
-    <string name="submission_contact_body">Bitte halten Sie zur CODE-Abfrage Ihren Befundbrief (wenn vorhanden) und Ihre Telefonnummer bereit.</string>
-    <string name="submission_contact_button_call">Anrufen</string>
-    <string name="submission_contact_button_enter">CODE eingeben</string>
-    <string name="submission_contact_step_1_body">Hotline anrufen &amp; CODE erfragen:</string>
-    <string name="submission_contact_number_display">0800 14 689</string>
-    <string name="submission_contact_number_dial">0800 14 689</string>
-    <string name="submission_contact_step_2_body">Test per CODE-Eingabe in der App registrieren</string>
-    <string name="submission_contact_operating_hours_body">Sprachen:\nNiederländisch, Französisch, Deutsch, Englisch\n\nErreichbarkeit:\nMo - Fr: 9.00-17.00 Uhr\n\nDer Anruf ist kostenfrei.</string>
-    <string name="submission_contact_accessibility_title">CODE-Anfrage per Anruf</string>
-    <string name="submission_contact_step_1_content">Im ersten Schritt Hotline anrufen und unter der Rufnummer 0800 14 689 CODE erfragen. Sie hat Montag bis Freitag von 9 bis 17 Uhr geöffnet. Der Anruf ist kostenfrei.</string>
-    <string name="submission_contact_step_2_content">Im zweiten Schritt registrieren Sie den Test per CODE-Eingabe in der App.</string>
-    <string name="submission_status_card_title_fetching">Datenabruf…</string>
-    <string name="submission_status_card_title_unregistered">Wurden Sie getestet?</string>
-    <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
-    <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
-    <string name="submission_status_card_title_positive">Befund positiv</string>
-    <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
-    <string name="submission_status_card_subtitle_negative">Befund negativ</string>
-    <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
-    <string name="submission_status_card_body_unregistered">Helfen Sie mit, die Infektionskette zu durchbrechen, indem Sie andere warnen.</string>
-    <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
-    <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
-    <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
-    <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
-    <string name="submission_status_card_button_unregistered">Mehr erfahren &amp; helfen</string>
-    <string name="submission_status_card_button_show_results">Test anzeigen</string>
-    <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
-    <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
-    <string name="submission_status_card_positive_result_contact">Das Gesundheitsamt meldet sich demnächst telefonisch oder schriftlich bei Ihnen.</string>
-    <string name="submission_status_card_positive_result_share">Teilen Sie Ihre Zufallscodes, damit andere gewarnt werden können.</string>
-    <string name="test_result_card_headline">Ihre Diagnose</string>
-    <string name="test_result_card_virus_name_text">SARS-CoV-2</string>
-    <string name="test_result_card_registered_at_text">Registriert am %s</string>
-    <string name="test_result_card_status_negative">Negativ</string>
-    <string name="test_result_card_status_positive">Positiv</string>
-    <string name="test_result_card_status_invalid">Auswertung nicht möglich</string>
-    <string name="test_result_card_status_pending">Ergebnis liegt noch nicht vor</string>
-    <string name="test_result_card_negative_further_info_title">Weitere Infos:</string>
-    <string name="button_back">Zurück zur vorherigen Seite</string>
-    <string name="button_proceed">Weiter-Taste</string>
-    <string name="button_share">Teilen</string>
-    <string name="button_menu">Menü</string>
-    <string name="suffix_button">Taste</string>
-    <string name="suffix_image">Bild</string>
-    <string name="errors_no_network">Keine Internetverbindung</string>
-    <string name="errors_not_enough_device_storage">Freier Speicherplatz unzureichend.</string>
-    <string name="errors_communication_with_api">Fehler bei der Kommunikation mit der Google-Schnittstelle.</string>
-    <string name="errors_external_action">Diese Handlung ist derzeit unmöglich. Bitte kontaktieren Sie die Hotline.</string>
-    <string name="errors_google_update_needed">Ihre Coronalert-App ist korrekt installiert. Leider fehlt dem Betriebssystem Ihres Handys der Dienst „Meldungen Kontakt mit COVID-19-Infizierten“ und Sie können die Coronalert-App nicht nutzen. Weitere Informationen finden Sie in unseren FAQ: https://www.coronalert.be</string>
-    <string name="errors_google_api_error">Ihre Coronalert-App läuft fehlerfrei. Leider kann Ihr Risikostatus derzeit nicht aktualisiert werden. Ihr Kontaktlogbuch ist weiterhin aktiv und funktioniert. Weitere Informationen finden Sie in unseren FAQ: https://www.coronalert.be \n</string>
-    <string name="errors_generic_headline">Etwas ist schiefgelaufen.</string>
-    <string name="errors_generic_details_headline">Ursache</string>
-    <string name="errors_generic_button_positive">Okay</string>
-    <string name="errors_generic_button_negative">Details</string>
-    <string name="errors_generic_text_unknown_error_cause">Unbekannter Fehler</string>
-    <string name="lorem_ipsum">Lorem Ipsum</string>
-    <string name="menu_test_api">API testen</string>
-    <string name="menu_test_risk_level">Risikograd testen</string>
-    <string name="menu_test_notification">Testmeldung.</string>
-    <string name="test_api_button_api_launch">Android-API-Test (manueller Test)</string>
-    <string name="test_api_button_start">Start (Senden/Empfangen von Bluetooth)</string>
-    <string name="test_api_button_get_exposure_keys">Exposure-Schlüssel erhalten (meine Schlüssel-Historie von api)</string>
-    <string name="test_api_button_share_my_keys">Meine Schlüssel per E-Mail teilen</string>
-    <string name="test_api_button_enter_other_keys">Kontaktschlüssel einreichen</string>
-    <string name="test_api_button_show_qr_code">QR-Code anzeigen</string>
-    <string name="test_api_button_submit_keys">Schlüssel an Server senden</string>
-    <string name="test_api_button_scan_qr_code">Kontaktschlüssel scannen</string>
-    <string name="test_api_switch_last_three_hours_from_server">Modus \'Letzte 3 Stunden\'</string>
-    <string name="test_api_button_check_exposure">Kontaktzusammenfassung prüfen</string>
-    <string name="test_api_exposure_summary_headline">Kontaktzusammenfassung</string>
-    <string name="test_api_body_daysSinceLastExposure">Tage seit letztem Kontakt: %1$s</string>
-    <string name="test_api_body_attenuation">Minderungsdauer in Minuten: %1$s</string>
-    <string name="test_api_body_summation_risk">Summation Risikobewertung: %1$s</string>
-    <string name="test_api_body_matchedKeyCount">Übereinstimmende Schlüsselzahl: %1$s</string>
-    <string name="test_api_body_maximumRiskScore">Maximale Risikobewertung %1$s</string>
-    <string name="test_api_body_my_keys">Meine Schlüssel (Anzahl: %1$d)</string>
-    <string name="test_api_body_other_keys">Anderer Schlüssel</string>
-    <string name="test_api_calculate_risk_level">Risikoniveau berechnen</string>
-    <string name="onboarding_background_fetch_dialog_headline">Hintergrund-Updates deaktiviert</string>
-    <string name="onboarding_background_fetch_dialog_body">Hintergrund-Updates wurden für die Corona-Warn-App deaktiviert. Zur Nutzung der automatischen Kontaktverfolgung bitte die Hintergrund-Update aktivieren. Bei deaktiviertem Hintergrund-Update lässt sich Ihre Kontaktverfolgung nur manuell in der App starten. Die Hintergrund-Update lässt sich für die App in den Geräteeinstellungen aktivieren.</string>
-    <string name="onboarding_background_fetch_dialog_button_positive">Geräteeinstellungen öffnen</string>
-    <string name="onboarding_background_fetch_dialog_button_negative">Kontaktverfolgung manuell starten</string>
-    <string name="settings_tracing_status_location_headline">Standortzugriff erlauben</string>
-    <string name="settings_tracing_status_location_body">Standortzugriff unmöglich. Für Google und/oder Android ist der Zugriff auf den Standort Ihres Geräts erforderlich, um Bluetooth verwenden zu können.</string>
-    <string name="settings_tracing_status_location_button">Geräteeinstellungen öffnen</string>
+  <string name="notification_name">Coronalert-App</string>
+  <string name="notification_description">Meldungen er Coronalert-App</string>
+  <string name="notification_headline">Coronalert-App</string>
+  <string name="notification_body">Neue Berichte Ihrer Coronalert-App.</string>
+  <string name="update_dialog_title">Update verfügbar</string>
+  <string name="update_dialog_message">Achtung: Coronalert-App nur mit dem neuesten Update betriebsbereit.</string>
+  <string name="update_dialog_button">Aktualisieren</string>
+  <string name="risk_card_body_contact">Bisher keine Kontakte</string>
+  <plurals name="risk_card_body_contact_value">
+    <item quantity="one">%1$s Kontakt</item>
+    <item quantity="other">%1$s Kontakte</item>
+  </plurals>
+  <string name="risk_card_body_saved_days">Kontaktlogbuch an %1$s der letzten 14 Tage aktiv</string>
+  <string name="risk_card_body_saved_days_full">Kontaktlogbuch dauerhaft aktiv</string>
+  <string name="risk_card_body_not_yet_fetched">Begegnungen noch nicht überprüft.</string>
+  <string name="risk_card_body_time_fetched">Aktualisiert: %1$s</string>
+  <string name="risk_card_body_next_update">Tägliche Aktualisierung</string>
+  <string name="risk_card_button_update">Aktualisieren</string>
+  <string name="risk_card_button_cooldown">Aktualisierung in %1$s</string>
+  <string name="risk_card_button_enable_tracing">Kontaktlogbuch aktivieren</string>
+  <string name="risk_card_body_tracing_off">Aktivieren Sie das Kontaktlogbuch, um sofort Ihren Risikostatus zu berechnen.</string>
+  <string name="risk_card_low_risk_headline">Niedriges Risiko</string>
+  <string name="risk_card_increased_risk_headline">Erhöhtes Risiko</string>
+  <plurals name="risk_card_increased_risk_body_contact_last">
+    <item quantity="one">%1$s Tag seit der letzten Begegnung</item>
+    <item quantity="other">%1$s Tage seit der letzten Begegnung</item>
+  </plurals>
+  <string name="risk_card_unknown_risk_headline">Unbekanntes Risiko</string>
+  <string name="risk_card_unknown_risk_body">Da Sie das Kontaktlogbuch noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen.</string>
+  <string name="risk_card_no_calculation_possible_headline">Kontaktverfolgung angehalten</string>
+  <string name="risk_card_no_calculation_possible_body_saved_risk">Letzte Kontaktverfolgung:<xliff:g id="line_break">
+</xliff:g>%1$s</string>
+  <string name="risk_card_outdated_risk_headline">Kontaktverfolgung unmöglich</string>
+  <string name="risk_card_outdated_risk_body">Ihr Kontaktlogbuch konnte seit mehr als 24 Stunden nicht aktualisiert werden.</string>
+  <string name="risk_card_outdated_manual_risk_body">Ihr Risikostatus wurde seit mehr als 48 Stunden nicht aktualisiert. Bitte Risikostatus aktualisieren.</string>
+  <string name="risk_card_loading_headline">Prüfung läuft…</string>
+  <string name="risk_card_loading_body">Aktuelle Daten werden heruntergeladen und geprüft.
+ Das kann mehrere Minuten dauern.</string>
+  <string name="main_about_headline">Häufig gestellte Fragen</string>
+  <string name="main_about_body">Hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
+  <string name="main_about_link">https://www.coronalert.be</string>
+  <string name="hint_external_webpage">Häufige Fragen, hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
+  <string name="main_share_title">Coronalert-App teilen</string>
+  <string name="main_share_headline">Gemeinsam gegen Corona</string>
+  <string name="main_share_body">Je häufiger die App benutzt wird, desto eher gebieten wir der Infektion Einhalt. Bitten Sie Familie, Freunde und Bekannte, die App herunterzuladen!</string>
+  <string name="main_share_button">Download-Link versenden</string>
+  <string name="main_share_message">Gemeinsam gegen Corona<xliff:g id="line_break">
+</xliff:g>Ich bin dabei. Du auch?<xliff:g id="line_break">
+</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>
+<xliff:g id="line_break">
+</xliff:g></string>
+  <string name="main_share_illustration_description">Ein Mann teilt die Coronalert-App mit vier anderen Personen.</string>
+  <string name="main_overview_title">Übersicht</string>
+  <string name="main_overview_accessibility_title">Übersicht</string>
+  <string name="main_overview_subtitle_tracing">Kontaktlogbuch</string>
+  <string name="main_overview_body_tracing">Das Kontaktlogbuch ist eine der drei zentralen Funktionen der App. Ist es aktiv, werden Begegnungen aufgezeichnet. Sie brauchen sich um nichts mehr zu kümmern.</string>
+  <string name="main_overview_subtitle_risk">Infektionsrisiko</string>
+  <string name="main_overview_body_risk">Wenn Sie in den vergangenen 14 Tagen Kontakt mit einer mit COVID-19 infizierten Person hatten, errechnet die App Ihr persönliches Infektionsrisiko. Dazu misst sie die Dauer und die Nähe des Kontakts.</string>
+  <string name="main_overview_subtitle_risk_levels">Folgender Risikostatus möglich:</string>
+  <string name="main_overview_subtitle_increased_risk">Erhöhtes Risiko</string>
+  <string name="main_overview_subtitle_low_risk">Niedriges Risiko</string>
+  <string name="main_overview_subtitle_unknown_risk">Unbekanntes Risiko</string>
+  <string name="main_overview_headline_test">Andere Nutzer warnen</string>
+  <string name="main_overview_body_test">Eine weitere zentrale Funktion. Hier können Sie Ihren Test registrieren und seinen Status abfragen. Bei einem positiven Test können Sie andere warnen und damit Infektionsketten unterbrechen.</string>
+  <string name="main_overview_headline_glossary">Begriffsdefinitionen</string>
+  <string name="main_overview_subtitle_glossary_tracing">Kontaktlogbuch</string>
+  <string name="main_overview_body_glossary_tracing">Liste der empfangenen und vorübergehend im Betriebssystem abgelegten kurzlebigen Zufallscodes. Sie wird bei der Kontaktprüfung gelesen. Alle Zufallscodes werden nach 14 Tagen automatisch gelöscht.</string>
+  <string name="main_overview_subtitle_glossary_calculation">Kontaktprüfung</string>
+  <string name="main_overview_body_glossary_calculation">Kontaktlogbuchdaten werden abgerufen und mit gemeldeten Infektionen anderer Nutzer synchronisiert. Die Kontaktprüfung erfolgt automatisch ca. alle zwei Stunden.</string>
+  <string name="main_overview_subtitle_glossary_contact">Kontakte</string>
+  <string name="main_overview_body_glossary_contact">Begegnungen über einen längeren Zeitraum und in der Nähe von Menschen, bei denen COVID-19 diagnostiziert wurde.</string>
+  <string name="main_overview_subtitle_glossary_notification">Kontaktmeldung</string>
+  <string name="main_overview_body_glossary_notification">Anzeige der Kontakte in Coronalert.</string>
+  <string name="main_overview_subtitle_glossary_keys">Zufallscodes</string>
+  <string name="main_overview_body_glossary_keys">Zufallscodes sind zufällig erzeugte Zahlen- und Buchstabenkombinationen, die zwischen benachbarten Handys ausgetauscht werden. Sie lassen sich nicht einer bestimmten Person zuordnen und werden nach 14 Tagen automatisch gelöscht. Eine Corona-positiv getestete Person kann Zufallscodes von bis zu 14 Tage teilen.</string>
+  <string name="main_overview_illustration_description">Ein Handy zeigt Inhalte, die von eins bis drei nummeriert sind.</string>
+  <string name="main_title">Hauptseite der Coronalert-App</string>
+  <string name="risk_details_title">Ihr Risikostatus</string>
+  <string name="risk_details_headline_behavior">Richtlinien</string>
+  <string name="risk_details_subtitle_behavior">So verhalten Sie sich richtig</string>
+  <string name="risk_details_behavior_body_stay_home">Gehen Sie, wenn möglich, nach Hause bzw. bleiben Sie zu Hause.</string>
+  <string name="risk_details_behavior_body_contact_doctor">Bitte wenden Sie sich mit Fragen zu Symptomen, Testmöglichkeiten und weiteren Isolationsmaßnahmen, sich an eine der folgenden Stellen:</string>
+  <string name="risk_details_behavior_body_wash_hands">Waschen Sie Ihre Hände regelmäßig.</string>
+  <string name="risk_details_behavior_body_wear_mask">Tragen Sie einen Mundschutz bei Begegnungen mit anderen Personen.</string>
+  <string name="risk_details_behavior_body_stay_away">Halten Sie mindestens 1,5 Meter Abstand zu anderen Personen.</string>
+  <string name="risk_details_behavior_body_cough_sneeze">Niesen oder husten Sie in die Armbeuge oder in ein Taschentuch.</string>
+  <string name="risk_details_behavior_increased_body_1">Ihr Hausarzt</string>
+  <string name="risk_details_behavior_increased_body_2">Kassenärztlicher Bereitschaftsdienst unter der Telefonnummer: 112</string>
+  <string name="risk_details_behavior_increased_body_3">Ihr Gesundheitsamt</string>
+  <string name="risk_details_headline_infection_risk">Infektionsrisiko</string>
+  <string name="risk_details_headline_period_logged">Erfasste Periode</string>
+  <string name="risk_details_subtitle_period_logged">Diese Periode wird berücksichtigt</string>
+  <string name="risk_details_information_body_period_logged">Ihr Infektionsrisiko kann nur für Perioden errechnet werden, in denen das Kontaktlogbuch aktiv ist. Das Kontaktlogbuch sollte daher immer aktiv sein.</string>
+  <string name="risk_details_information_body_period_logged_assessment">Die Kontaktverfolgung ist von den letzten 14 Tagen. In dieser Zeit war Ihre Kontaktverfolgung insgesamt %1$s Tage aktiv. Ältere Aufzeichnungen werden automatisch gelöscht, da sie aus Sicht des Infektionsschutzes irrelevant sind.</string>
+  <string name="risk_details_subtitle_infection_risk_past">So wurde Ihr Risiko ermittelt</string>
+  <string name="risk_details_subtitle_infection_risk">So wird Ihr Risiko ermittelt</string>
+  <string name="risk_details_information_body_unknown_risk">Da Sie das Kontaktlogbuch noch nicht lange genug aktiviert haben, konnten wir für Sie kein Infektionsrisiko berechnen.</string>
+  <string name="risk_details_information_body_outdated_risk">Ihr Kontaktlogbuch konnte über 24 Stunden lang nicht aktualisiert werden.</string>
+  <string name="risk_details_information_body_low_risk">Sie haben ein niedriges Infektionsrisiko, da kein Kontakt zu Corona-positiv getesteten Personen erfasst wurde oder sich Ihr Kontakt auf kurze Zeit und einen größeren Abstand beschränkt hat.</string>
+  <plurals name="risk_details_information_body_increased_risk">
+    <item quantity="one">Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tag mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind.</item>
+    <item quantity="other">Sie haben ein erhöhtes Infektionsrisiko, da Sie zuletzt vor %1$s Tagen mindestens einer Corona-positiv getesteten Person über einen längeren Zeitraum und mit einem geringen Abstand begegnet sind.</item>
+  </plurals>
+  <string name="risk_details_information_body_notice">Das Infektionsrisiko wird mit Daten im Kontaktlogbuch unter Berücksichtigung von Abstand und Dauer auf Ihrem Handy berechnet. Ihr Infektionsrisiko ist nicht einsehbar und wird nicht weitergegeben.</string>
+  <string name="risk_details_button_update">@string/risk_card_button_update</string>
+  <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
+  <string name="risk_details_accessibility_title">Ihr Risikostatus</string>
+  <string name="risk_details_explanation_dialog_title">Information über die Funktionalität Kontaktlogbuch</string>
+  <string name="risk_details_explanation_dialog_faq_body">Weitere Informationen finden Sie in den FAQ.</string>
+  <string name="onboarding_button_disable">Nicht aktivieren</string>
+  <string name="onboarding_button_enable">Aktivieren</string>
+  <string name="onboarding_button_cancel">Abbrechen</string>
+  <string name="onboarding_button_next">Weiter</string>
+  <string name="onboarding_button_start">Los geht’s</string>
+  <string name="onboarding_button_back_description">Zurück</string>
+  <string name="onboarding_onboarding_accessibility_title">Einführung Seite 1 von 5: Gemeinsam gegen Corona</string>
+  <string name="onboarding_headline">Gemeinsam gegen Corona</string>
+  <string name="onboarding_subtitle">Mehr Schutz für Sie und uns alle. Mit der Coronalert-App durchbrechen wir Infektionsketten schneller.</string>
+  <string name="onboarding_body">Machen Sie Ihr Handy zum Corona-Warn-System. Erhalten Sie eine Übersicht über Ihren Risikostatus und erfahren Sie, ob in den letzten 14 Tagen Corona-Infizierte in Ihrer Nähe waren.</string>
+  <string name="onboarding_body_emphasized">Die App merkt sich Begegnungen zwischen Menschen, indem ihre Handys ohne Zugriff auf persönliche Daten verschlüsselte Zufallscodes austauschen.</string>
+  <string name="onboarding_illustration_description">Eine Personengruppe benutzt Handys in einer Stadt.</string>
+  <string name="onboarding_privacy_accessibility_title">Onboarding Seite 2 von 5: Datenschutz. Es folgt ein langer Text. Sie können jederzeit mit der Taste am unteren Bildschirmrand fortfahren.</string>
+  <string name="onboarding_privacy_headline">Datenschutz</string>
+  <string name="onboarding_privacy_illustration_description">Eine Frau mit einem Handy benutzt die Coronalert-App. Ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten.</string>
+  <string name="onboarding_tracing_accessibility_title">Einführung Seite 3 von 5: Das Kontaktlogbuch aktivieren</string>
+  <string name="onboarding_tracing_headline">Das Kontaktlogbuch aktivieren</string>
+  <string name="onboarding_tracing_subtitle">Um zu erkennen, ob Sie infektionsgefährdet sind, müssen Sie das Kontaktlogbuch aktivieren.</string>
+  <string name="onboarding_tracing_body">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an Ihr Handy weitergibt. Die Funktion kann jederzeit deaktiviert werden.</string>
+  <string name="onboarding_tracing_body_emphasized">Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
+  <string name="onboarding_tracing_headline_consent">Einwilligungserklärung</string>
+  <string name="onboarding_tracing_body_consent">Um zu erfahren, ob Sie Kontakt mit einer infizierten Person hatten und für Sie ein Infektionsrisiko besteht, müssen Sie die Funktion Kontaktlogbuch in der App aktivieren. Der Aktivierung des Kontaktlogbuchs und der damit im Zusammenhang stehenden Datenverarbeitung stimmen Sie mit Antippen des Buttons: Kontaktlogbuch aktivieren zu.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Zur Nutzung des Kontaktlogbuchs müssen Sie zudem auf dem Handy die von Google bereitgestellte Kontaktverfolgungs-Funktion „Meldungen möglicher Begegnung mit COVID-19-Infizierten“ aktivieren und für die Coronalert-App freigeben.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Ihr Handy erzeugt und versendet bei aktivierter Kontaktverfolgung kontinuierlich Zufalls-IDs per Bluetooth, die von anderen Apple- und Android-Handys mit ebenfalls aktivierter Kontaktverfolgung in Ihrer Umgebung empfangen werden können. Umgekehrt empfängt Ihr Handy die Zufalls-IDs der anderen Handys. Die eigenen und die von anderen Handys empfangenen Zufalls-IDs werden im Kontaktprotokoll der Kontaktverfolgungs-Funktion aufgezeichnet und dort 14 Tage gespeichert.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Zur Ermittlung Ihres Infektionsrisikos lädt die App mehrmals täglich oder auf Abfrage eine Liste mit den Zufalls-IDs aller Nutzer, die Ihre Infektion mit dem Corona-Virus in der App geteilt haben. Diese Liste wird dann mit den im Kontaktprotokoll der Kontaktverfolgungs-Funktion gespeicherten Zufalls-IDs verglichen. Wenn die App dabei feststellt, dass Sie möglicherweise Kontakt zu einem infizierten Nutzer hatten, warnt Sie die App dass Sie mit einer infizierten Person in Kontakt waren und insoweit ein Infektionsrisiko besteht. In diesem Fall erhält die App außerdem Zugriff auf weitere im Kontaktprotokoll der Kontaktverfolgungs-Funktion Ihres Smartphones gespeicherte Daten (Datum und Dauer sowie Bluetooth-Signalstärke des Kontakts).<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Aus der Bluetooth-Signalstärke wird der räumliche Abstand abgeleitet (je stärker das Signal, desto geringer der Abstand). Diese Angaben werden von der App ausgewertet, um Ihr Gesundheitsrisiko durch eine COVID-Infektion abzuschätzen und Ihnen Empfehlungen für die nächsten Schritte zu geben. Diese Auswertung wird ausschließlich lokal auf Ihrem Handy durchgeführt. Außer Ihnen erfährt niemand (auch nicht das RKI), ob Sie mit einer infizierten Person Kontakt hatten und welches Risiko für Sie ermittelt wird.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Zum Widerruf Ihrer Einwilligung in die Kontaktverfolgung können Sie die Funktion über den Schieberegler innerhalb der App deaktivieren oder die App löschen. Wenn Sie die Kontaktverfolgung wieder nutzen möchten, können Sie den Schieberegler erneut aktivieren oder die App erneut installieren. Wenn Sie die Kontaktverfolgung deaktivieren, prüft die App nicht mehr, ob Sie Kontakt zu einem infizierten Nutzer hatten. Wenn keine weiteren Zufalls-IDs versendet/empfangen werden soll, müssen Sie das Kontaktprotokoll der Kontaktverfolgungs-Funktion in den Einstellungen Ihres Handys deaktivieren. Bitte beachten Sie, dass die im Kontaktprotokoll aufgezeichneten fremden und eigenen Zufalls-Kennungen nicht in der App gelöscht werden. Die im Kontaktprotokoll gespeicherten Daten können Sie nur in den Handy-Einstellungen endgültig löschen.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Die Datenschutzhinweise der App (einschließlich Informationen zur Datenverarbeitung für die Kontaktverfolgung) finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+  <string name="onboarding_tracing_button_next">Kontaktlogbuch aktivieren</string>
+  <string name="onboarding_tracing_dialog_headline">Genehmigung.</string>
+  <string name="onboarding_tracing_dialog_body">Coronalert-App kann dadurch keine Meldungen zum COVID-19-Risikostatus versenden und empfangen. Sie können die Funktion jederzeit ausschalten.</string>
+  <string name="onboarding_tracing_dialog_button_positive">Nicht aktivieren</string>
+  <string name="onboarding_tracing_dialog_button_negative">Zurück</string>
+  <string name="onboarding_tracing_illustration_description">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
+  <string name="onboarding_tracing_location_headline">Standortzugriff erlauben</string>
+  <string name="onboarding_tracing_location_body">Auf Ihren Standort kann nicht zugegriffen werden. Google und/oder Android erfordert für Bluetooth den Zugriff auf den Gerätestandort.</string>
+  <string name="onboarding_tracing_location_button">Geräteeinstellungen öffnen</string>
+  <string name="onboarding_test_accessibility_title">Einführung Seite 4 von 5: Wenn bei Ihnen COVID-19 diagnostiziert wird</string>
+  <string name="onboarding_test_headline">Wenn bei Ihnen COVID-19 diagnostiziert wird,</string>
+  <string name="onboarding_test_subtitle">… teilen Sie es bitte über die Coronalert-App mit. Freiwillig und sicher. Für die Gesundheit aller.</string>
+  <string name="onboarding_test_body">Ihre Meldung wird zuverlässig verschlüsselt über einen sicheren Server verarbeitet. Die Personen, deren verschlüsselte Zufallscodes Sie gesammelt haben, erhalten nun eine Warnung und Informationen darüber, wie sie weiter vorgehen sollen.</string>
+  <string name="onboarding_test_illustration_description">Eine verschlüsselte positive Testdiagnose wird an das System übertragen, das nun andere Nutzer warnt.</string>
+  <string name="onboarding_notifications_accessibility_title">Einführung Seite 5 von 5: Warnungen erhalten, Risiken erkennen</string>
+  <string name="onboarding_notifications_headline">Warnungen erhalten, Risiken erkennen</string>
+  <string name="onboarding_notifications_subtitle">Die App kann Sie automatisch über Ihren Risikostatus informieren und Sie vor Neuinfektionen von Personen warnen, denen Sie begegnet sind. Lassen Sie sich jetzt von der App benachrichtigen.</string>
+  <string name="onboarding_notifications_body">Sie können sich dann selbst isolieren, um andere zu schützen und herausfinden, wo Sie sich testen lassen können.</string>
+  <string name="onboarding_notifications_illustration_description">Eine Frau erhält eine Meldung von ihrer Coronalert-App.</string>
+  <string name="settings_title">Einstellungen</string>
+  <string name="settings_on">An</string>
+  <string name="settings_off">Aus</string>
+  <string name="settings_tracing_title">Kontaktverfolgung</string>
+  <string name="settings_tracing_headline">So funktioniert die Kontaktverfolgung</string>
+  <string name="settings_tracing_body_description">Aufzeichnung und Weitergabe von COVID-19-Zufallscodes zulassen.</string>
+  <string name="settings_tracing_body_active">Kontaktlogbuch aktiv</string>
+  <string name="settings_tracing_body_inactive">Kontaktverfolgung angehalten</string>
+  <string name="settings_tracing_body_inactive_location">Ortungsdienste deaktiviert</string>
+  <string name="settings_tracing_body_text">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an ihr Handy weitergibt. Die Funktion kann jederzeit wieder deaktiviert werden.<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
+  <string name="settings_tracing_status_active">Aktiv</string>
+  <string name="settings_tracing_status_inactive">Angehalten</string>
+  <string name="settings_tracing_status_restricted">Eingeschränkt</string>
+  <string name="settings_tracing_body_connection_inactive">Keine Internetverbindung</string>
+  <string name="settings_tracing_body_bluetooth_inactive">Bluetooth deaktiviert</string>
+  <string name="settings_tracing_status_bluetooth_headline">Bluetooth aktivieren</string>
+  <string name="settings_tracing_status_bluetooth_body">Zur Kontaktverfolgung muss Bluetooth zur Erfassung von Begegnungen aktiviert werden. Bluetooth bitte in den Geräteeinstellungen aktivieren.</string>
+  <string name="settings_tracing_status_bluetooth_button">Geräteeinstellungen öffnen</string>
+  <string name="settings_tracing_status_connection_headline">Internetverbindung herstellen</string>
+  <string name="settings_tracing_status_connection_body">Zur Kontaktverfolgung bedarf es einer Internetverbindung zur Berechnung der Kontakte. Diese in Geräteeinstellungen WIFI oder Handydaten aktivieren.</string>
+  <string name="settings_tracing_status_connection_button">Geräteeinstellungen öffnen</string>
+  <plurals name="settings_tracing_status_body_active">
+    <item quantity="one">Kontaktlogbuch seit insgesamt einem Tag aktiv. Eine verlässliche Kontaktverfolgung kann nur mit einem laufend aktivierten Kontaktlogbuch erfolgen.</item>
+    <item quantity="other">Das Kontaktlogbuch ist seit insgesamt %1$s Tagen aktiv. Eine verlässliche Kontaktverfolgung kann nur mit einem laufend aktivierten Kontaktlogbuch erfolgen.</item>
+  </plurals>
+  <string name="settings_tracing_illustration_description_active">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
+  <string name="settings_tracing_illustration_description_inactive">Weil das Kontaktlogbuch auf dem Handy deaktiviert wurde, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
+  <string name="settings_tracing_bluetooth_illustration_description_inactive">Weil jemand auf dem Handy Bluetooth deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
+  <string name="settings_tracing_connection_illustration_description_inactive">Weil jemand auf dem Handy die Internetverbindung deaktivierte, kann ein Treffen mit zwei weiteren Personen nicht aufgezeichnet werden.</string>
+  <string name="settings_notifications_title">Meldungen</string>
+  <string name="settings_notifications_headline_active">Die Meldungen zum COVID-19-Risikostatus aktivieren?</string>
+  <string name="settings_notifications_headline_inactive">Meldungen wurden deaktiviert</string>
+  <string name="settings_notifications_body_description">Automatische Meldungen zum COVID-19-Risikostatus zulassen.</string>
+  <string name="settings_notifications_body_active">Legen Sie fest, worüber Sie weiterhin informiert werden möchten.</string>
+  <string name="settings_notifications_body_inactive">Um Meldungen zu aktivieren, müssen Sie \'Meldungen für die Coronalert-App\' in Ihren Geräteeinstellungen zulassen.</string>
+  <string name="settings_notifications_headline_card">Meldungen aktivieren</string>
+  <string name="settings_notifications_subtitle_notification">Meldungen</string>
+  <string name="settings_notifications_subtitle_update_risk">Änderung Ihres Infektionsrisikos</string>
+  <string name="settings_notifications_subtitle_update_test">Status Ihres COVID-19-Tests</string>
+  <string name="settings_notifications_button_open_settings">Geräteeinstellungen öffnen</string>
+  <string name="settings_notifications_illustration_description_active">Eine Frau erhält eine Meldung von ihrer Coronalert-App.</string>
+  <string name="settings_notifications_illustration_description_inactive">Eine Frau hat die Meldungen ihrer Coronalert-App deaktiviert.</string>
+  <string name="settings_reset_title">App zurücksetzen</string>
+  <string name="settings_reset_body_description">Ihre Daten in der App löschen.</string>
+  <string name="settings_reset_headline">Die App wirklich zurücksetzen?</string>
+  <string name="settings_reset_body">Sie werden nicht mehr über Ihre Kontakte informiert und können andere Nutzer nicht mehr warnen.</string>
+  <string name="settings_reset_headline_keys">Kontaktlogbuch<xliff:g id="line_break">
+</xliff:g>löschen</string>
+  <string name="settings_reset_body_keys">Das Kontaktlogbuch separat in den Geräteeinstellungen löschen.</string>
+  <string name="settings_reset_button_positive">App zurücksetzen</string>
+  <string name="settings_reset_button_negative">Abbrechen</string>
+  <string name="settings_reset_illustration_description">Eine Hand hält ein Handy mit dem Symbol, das das Zurücksetzen der App anzeigt.</string>
+  <string name="settings_reset_dialog_headline">App zurücksetzen</string>
+  <string name="settings_reset_dialog_body">Keine Info über Ihre Kontakte mehr und Sie können andere Nutzer nicht mehr warnen. Dieses Verfahren kann nicht rückgängig gemacht werden.</string>
+  <string name="settings_reset_dialog_button_cancel">Abbrechen</string>
+  <string name="settings_reset_dialog_button_confirm">Zurücksetzen</string>
+  <string name="settings_background_priority_title">Priorisierte Hintergrundaktivität</string>
+  <string name="settings_background_priority_body_description">Automatische Aktualisierung Ihres Risikostatus erlauben.</string>
+  <string name="settings_background_priority_headline">Coronalert-App im Hintergrund ausführen</string>
+  <string name="settings_background_priority_body">Die Coronalert-App läuft ununterbrochen im Hintergrund, wenn Sie die priorisierte Hintergrundaktivität aktivieren. So kann die App jederzeit Ihren Risikostatus ermitteln.</string>
+  <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
+  <string name="settings_background_priority_card_body">In den Geräteeinstellungen die priorisierte Hintergrundaktivität deaktivieren, um sie auszuschalten.</string>
+  <string name="settings_background_priority_card_button">Geräteeinstellungen öffnen</string>
+  <string name="settings_background_priority_card_headline">Priorisierte Hintergrundaktivität ausschalten</string>
+  <string name="information_title">App-Informationen</string>
+  <string name="information_version">Version: %1s</string>
+  <string name="information_about_title">Über die App</string>
+  <string name="information_about_headline">Gemeinsam gegen Corona</string>
+  <string name="information_about_body_emphasized">Das Sciensano veröffentlicht die Coronalert-App im Auftrag der Bundesregierung. Die App ist die digitale Ergänzung zu Abstandhalten, Hygiene und Mundschutz.</string>
+  <string name="information_about_body">Wer sie nutzt, hilft, Infektionsketten schnell nachzuverfolgen und zu durchbrechen. Die App speichert dezentral – auf Ihrem Handy – Begegnungen mit anderen. Sie werden informiert, wenn Sie Begegnungen mit nachweislich infizierten Personen hatten. Ihre Privatsphäre bleibt dabei bestens geschützt.</string>
+  <string name="information_about_illustration_description">Eine Personengruppe benutzt Handys in einer Stadt.</string>
+  <string name="information_privacy_title">Datenschutz</string>
+  <string name="information_privacy_illustration_description">Eine Frau mit einem Handy benutzt die Coronalert-App. Ein Vorhängeschloss auf einem Schild steht als Symbol für verschlüsselte Daten.</string>
+  <string name="information_privacy_html_path">privacy_en.html</string>
+  <string name="information_terms_title">Nutzungsbedingungen</string>
+  <string name="information_terms_headline">Inhalt</string>
+  <string name="information_terms_illustration_description">Eine Hand mit Handy mit viel Text. Daneben ist ein Haken als Symbol für akzeptierte Nutzungsbedingungen.</string>
+  <string name="information_terms_html_path">terms_en.html</string>
+  <string name="information_contact_title"></string>
+  <string name="information_contact_headline"></string>
+  <string name="information_contact_body"></string>
+  <string name="information_contact_subtitle_phone"></string>
+  <string name="information_contact_button_phone"></string>
+  <string name="information_contact_phone_call_number"></string>
+  <string name="information_contact_body_phone"></string>
+  <string name="information_contact_body_open"></string>
+  <string name="information_contact_body_other"></string>
+  <string name="information_contact_illustration_description"></string>
+  <string name="information_help_title">FAQ</string>
+  <string name="information_help_title_accessibility">Häufig gestellte Fragen. Sie werden an eine externe Website weitergeleitet.</string>
+  <string name="information_technical_title">Rechtliche Hinweise</string>
+  <string name="information_technical_illustration_description">Eine Hand mit Handy mit viel Text. Daneben ist eine Balkenwaage als Symbol für rechtliche Hinweise.</string>
+  <string name="information_technical_html_path">technical_en.html</string>
+  <string name="information_legal_title">Impressum</string>
+  <string name="information_legal_headline_publisher">Herausgeber</string>
+  <string name="information_legal_subtitle_publisher">(verantwortlich nach § 5 Abs. 1 TMG, § 55 Abs. 1 RStV, DS-GVO, BDSG)</string>
+  <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">
+</xliff:g>Rue Juliette Wytsmanstraat 14<xliff:g id="line_break">
+</xliff:g>1050 Brüssel<xliff:g id="line_break">
+</xliff:g><xliff:g id="line_break">
+</xliff:g>vertreten durch den Präsidenten</string>
+  <string name="information_legal_headline_contact">Kontakt</string>
+  <string name="information_legal_subtitle_contact">E-Mail: hello@coronalert.be<xliff:g id="line_break">
+</xliff:g>Telefon: 0800 14 689</string>
+  <string name="information_legal_headline_taxid">USt.-Id-Nummer</string>
+  <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
+  <string name="information_legal_illustration_description">Eine Hand mit Handy, das eine große Textmenge auf dem Bildschirm anzeigt. Daneben steht ein Abschnittssymbol, das den Aufdruck darstellt.</string>
+  <string name="submission_error_dialog_web_generic_error_title">Fehler</string>
+  <string name="submission_error_dialog_web_generic_network_error_body">Verbindungsfehler (%1$d). Bitte erneut versuchen.</string>
+  <string name="submission_error_dialog_web_generic_error_body">Verbindungsfehler. Bitte erneut versuchen.</string>
+  <string name="submission_error_dialog_web_generic_error_button_positive">Zurück</string>
+  <string name="submission_error_dialog_web_test_paired_title">Fehler</string>
+  <string name="submission_error_dialog_web_test_paired_body">Der QR-Code / CODE ist ungültig oder wurde schon verwendet. Bitte erneut versuchen oder die technische Hotline unter \'App-Info → Technische Hotline\' kontaktieren.</string>
+  <string name="submission_error_dialog_web_test_paired_button_positive">Zurück</string>
+  <string name="submission_error_dialog_web_paring_invalid_title">Fehler</string>
+  <string name="submission_error_dialog_web_paring_invalid_body">Einreichungs-CODE konnte nicht erstellt werden. Kontaktaufnahme unter \'App-Info -&gt; Technische Hotline\'.</string>
+  <string name="submission_error_dialog_web_paring_invalid_button_positive">Zurück</string>
+  <string name="submission_error_dialog_web_tan_invalid_title">Fehler</string>
+  <string name="submission_error_dialog_web_tan_invalid_body">Einreichungs-CODE konnte nicht erstellt werden. Kontaktaufnahme unter \'App-Info -&gt; Technische Hotline\'.</string>
+  <string name="submission_error_dialog_web_tan_invalid_button_positive">Zurück</string>
+  <string name="submission_qr_code_scan_permission_rationale_dialog_headline">Kamerazugriff benötigt</string>
+  <string name="submission_qr_code_scan_permission_rationale_dialog_body">Der App die Benutzung der Kamera erlauben, um den QR-Code zu scannen.</string>
+  <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">Erlauben</string>
+  <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative">Nicht erlauben</string>
+  <string name="submission_qr_code_scan_permission_denied_dialog_headline">Kamerazugriff benötigt</string>
+  <string name="submission_qr_code_scan_permission_denied_dialog_body">Systemeinstellungen abfragen und der App erlauben, die Kamera zum Scannen des QR-Codes zu verwenden.</string>
+  <string name="submission_qr_code_scan_permission_denied_dialog_button">OK</string>
+  <string name="submission_qr_code_scan_invalid_dialog_headline">Falscher QR-Code</string>
+  <string name="submission_qr_code_scan_invalid_dialog_body">Falscher QR-Code. Bitte erneut versuchen.</string>
+  <string name="submission_qr_code_scan_invalid_dialog_button_positive">Erneut versuchen</string>
+  <string name="submission_qr_code_scan_invalid_dialog_button_negative">Abbrechen</string>
+  <string name="submission_qr_code_scan_title">Positionieren Sie den QR-Code in den Rahmen.</string>
+  <string name="submission_qr_code_scan_body">Positionieren Sie den QR-Code in den Rahmen.</string>
+  <string name="submission_test_result_headline">Testergebnis</string>
+  <string name="submission_test_result_subtitle">Info zum Ablauf:</string>
+  <string name="submission_test_result_steps_added_heading">Test erfolgreich hinzugefügt</string>
+  <string name="submission_test_result_steps_added_body">Ihr Test wurde in Coronalert gespeichert.</string>
+  <string name="submission_test_result_pending_steps_waiting_heading">Testergebnis noch nicht verfügbar</string>
+  <string name="submission_test_result_pending_steps_waiting_body">Testergebnis noch nicht verfügbar.</string>
+  <string name="submission_test_result_pending_refresh_button">Aktualisieren</string>
+  <string name="submission_test_result_pending_remove_test_button">Test löschen</string>
+  <string name="submission_test_result_negative_steps_negative_heading">Ihr Testergebnis</string>
+  <string name="submission_test_result_negative_steps_negative_body">Der Labortest hat keinen Nachweis für das Coronavirus SARS-CoV-2 bei Ihnen ergeben. 
+
+Bitte entfernen Sie den Test wieder aus der Coronalert-App, damit Sie bei Bedarf einen neuen Test hinterlegen können.</string>
+  <string name="submission_test_result_negative_remove_test_button">Test löschen</string>
+  <string name="submission_test_result_positive_steps_positive_heading">Ihr Testergebnis</string>
+  <string name="submission_test_result_positive_steps_positive_body">Ihr Testergebnis wurde als positiv verifiziert.</string>
+  <string name="submission_test_result_positive_steps_warning_others_heading">Andere warnen</string>
+  <string name="submission_test_result_positive_steps_warning_others_body">Ihre Zufallscodes der letzten 14 Tage teilen, um andere zu schützen und die Infektionskette zu unterbrechen.</string>
+  <string name="submission_test_result_positive_continue_button">Weiter</string>
+  <string name="submission_test_result_invalid_steps_invalid_heading">Ihr Testergebnis</string>
+  <string name="submission_test_result_invalid_steps_invalid_body">Es gab ein Problem bei der Auswertung Ihres Tests. Bitte kontaktieren Sie das Gesundheitsamt, um Information zum weiteren Vorgehen zu erhalten.
+
+Bitte entfernen Sie den Test wieder aus der Coronalert-App, damit Sie bei Bedarf einen neuen Test hinterlegen können.</string>
+  <string name="submission_test_result_invalid_remove_test_button">Test löschen</string>
+  <string name="submission_test_result_dialog_tracing_required_title">Kontaktlogbuch erforderlich</string>
+  <string name="submission_test_result_dialog_tracing_required_message">Bitte Kontaktlogbuch aktivieren, um andere zu warnen.</string>
+  <string name="submission_test_result_dialog_tracing_required_button">OK</string>
+  <string name="submission_test_result_dialog_remove_test_title">Test löschen?</string>
+  <string name="submission_test_result_dialog_remove_test_message">Der Test wird in der Coronalert-App gelöscht und kann nicht mehr eingefügt werden. Dieser Vorgang kann nicht widerrufen werden.</string>
+  <string name="submission_test_result_dialog_remove_test_button_positive">Entfernen</string>
+  <string name="submission_test_result_dialog_remove_test_button_negative">Abbrechen</string>
+  <string name="submission_test_result_card_positive_title">SARS-CoV-2 positiv</string>
+  <string name="submission_test_result_card_positive_body">Bei Ihnen wurde das SARS-CoV-2-Virus diagnostiziert.</string>
+  <string name="submission_tan_title">CODE-Eingabe</string>
+  <string name="submission_tan_body">Bitte den erhaltenen, 10-stelligen CODE eingeben.</string>
+  <string name="submission_tan_button_text">Weiter</string>
+  <string name="submission_tan_accessibility_title">CODE-Eingabe</string>
+  <string name="submission_tan_error">Ungültiger CODE, bitte Eingabe prüfen.</string>
+  <string name="submission_tan_character_error">Ungültige Eingabe, bitte Eingabe prüfen.</string>
+  <string name="submission_intro_title">Wurden Sie getestet?</string>
+  <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
+  <string name="submission_intro_text">Damit die App funktioniert, sind wir auf die Mithilfe von Corona-positiv getesteten Personen angewiesen.
+
+Da nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Gehen Sie wie folgt vor:</string>
+  <string name="submission_intro_button_next">Weiter</string>
+  <string name="submission_intro_illustration_description">Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzer warnt.</string>
+  <string name="submission_intro_accessibility_title">Wurden Sie getestet? So funktioniert die Coronalert-App</string>
+  <string name="submission_dispatcher_headline">Auswahl</string>
+  <string name="submission_dispatcher_subheadline">Welche Informationen haben Sie?</string>
+  <string name="submission_dispatcher_card_qr">Dokument mit QR-Code</string>
+  <string name="submission_dispatcher_qr_card_text">Registrieren Sie Ihren Test, indem Sie den QR-Code Ihres Test-Dokuments scannen.</string>
+  <string name="submission_dispatcher_qr_privacy_dialog_headline">Einwilligungserklärung</string>
+  <string name="submission_dispatcher_qr_privacy_dialog_body">Tippen Sie \'Erlauben\' an, willigen Sie ein, dass die App den Status Ihres Corona-Tests abfragt und in der App anzeigt. Diese Funktion ist aktiv, wenn Sie einen QR-Code erhalten und eingewilligt haben, dass Ihr Testergebnis an das Serversystem der App übermittelt wird. Hat das Testlabor Ihr Testergebnis auf dem Server gespeichert, sieht man das Ergebnis in der App. Haben Sie Meldungen aktiviert, erfahren Sie auch außerhalb der App über den Testergebniseingang. Aus Datenschutzgründen sehen Sie es nur in der App. Sie können diese Einwilligung jederzeit widerrufen, indem Sie die Testregistrierung in der App löschen. Der Widerruf der Einwilligung berührt die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung nicht. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+  <string name="submission_dispatcher_qr_privacy_dialog_button_positive">Erlauben</string>
+  <string name="submission_dispatcher_qr_privacy_dialog_button_negative">Nicht erlauben</string>
+  <string name="submission_dispatcher_card_tan_code">CODE</string>
+  <string name="submission_dispatcher_tan_code_card_text">Test per manueller CODE-Eingabe registrieren.</string>
+  <string name="submission_dispatcher_card_tan_tele">CODE anfragen</string>
+  <string name="submission_dispatcher_tan_tele_card_text">Bitte rufen Sie uns an, falls Sie Corona-positiv getestet wurden.</string>
+  <string name="submission_dispatcher_accessibility_title">Welche Informationen haben Sie?</string>
+  <string name="submission_positive_other_warning_title">Andere warnen</string>
+  <string name="submission_positive_other_warning_headline">Helfen Sie mit!</string>
+  <string name="submission_positive_other_warning_body">Als Nächstes können Sie dafür sorgen, dass die Coronalert-App Ihre lokal gespeicherten Zufallscodes der letzten 14 Tage an andere verteilt. So können Sie Ihre Mitmenschen warnen und helfen, die Infektionskette zu unterbrechen.
+
+Da nur unpersönliche Zufallscodes übertragen werden, bleibt Ihre Identität unbekannt.</string>
+  <string name="submission_positive_other_warning_privacy_title">Datenschutz</string>
+  <string name="submission_positive_other_warning_privacy_body">Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktiviertem Kontaktlogbuch automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.
+
+Die Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.
+
+Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+  <string name="submission_positive_other_warning_button">Weiter</string>
+  <string name="submission_positive_other_illustration_description">Ein Handy übermittelt einen positiven Testbefund verschlüsselt ins System.</string>
+  <string name="submission_done_title">Vielen Dank!</string>
+  <string name="submission_done_body">Sie haben einen wichtigen Beitrag geleistet! Dank Ihrer Mithilfe können andere gewarnt werden und entsprechend reagieren.</string>
+  <string name="submission_done_subtitle">Bitte beachten:</string>
+  <string name="submission_done_contagious">Sie sind ansteckend.</string>
+  <string name="submission_done_isolate">Bitte isolieren Sie sich von anderen Personen.</string>
+  <string name="submission_done_further_info_title">Weitere Infos:</string>
+  <string name="submission_done_button_done">Fertig</string>
+  <string name="submission_done_illustration_description">Jeder in der Gruppe jubelt, weil jemand sein Testergebnis geteilt hat.</string>
+  <string name="submission_contact_title">CODE anfragen</string>
+  <string name="submission_contact_headline">Info zum Ablauf:</string>
+  <string name="submission_contact_body">Bitte halten Sie zur CODE-Abfrage Ihren Befundbrief (wenn vorhanden) und Ihre Telefonnummer bereit.</string>
+  <string name="submission_contact_button_call">Anrufen</string>
+  <string name="submission_contact_button_enter">CODE eingeben</string>
+  <string name="submission_contact_step_1_body">Hotline anrufen &amp; CODE erfragen:</string>
+  <string name="submission_contact_number_display">0800 14 689</string>
+  <string name="submission_contact_number_dial">0800 14 689</string>
+  <string name="submission_contact_step_2_body">Test per CODE-Eingabe in der App registrieren</string>
+  <string name="submission_contact_operating_hours_body">Sprachen:
+Niederländisch, Französisch, Deutsch, Englisch
+
+Erreichbarkeit:
+Mo - Fr: 9.00-17.00 Uhr
+
+Der Anruf ist kostenfrei.</string>
+  <string name="submission_contact_accessibility_title">CODE-Anfrage per Anruf</string>
+  <string name="submission_contact_step_1_content">Im ersten Schritt Hotline anrufen und unter der Rufnummer 0800 14 689 CODE erfragen. Sie hat Montag bis Freitag von 9 bis 17 Uhr geöffnet. Der Anruf ist kostenfrei.</string>
+  <string name="submission_contact_step_2_content">Im zweiten Schritt registrieren Sie den Test per CODE-Eingabe in der App.</string>
+  <string name="submission_status_card_title_fetching">Datenabruf…</string>
+  <string name="submission_status_card_title_unregistered">Wurden Sie getestet?</string>
+  <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
+  <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
+  <string name="submission_status_card_title_positive">Befund positiv</string>
+  <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
+  <string name="submission_status_card_subtitle_negative">Befund negativ</string>
+  <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
+  <string name="submission_status_card_body_unregistered">Helfen Sie, die Infektionskette zu durchbrechen, indem Sie andere warnen.</string>
+  <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
+  <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
+  <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
+  <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
+  <string name="submission_status_card_button_unregistered">Mehr erfahren &amp; helfen</string>
+  <string name="submission_status_card_button_show_results">Test anzeigen</string>
+  <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
+  <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
+  <string name="submission_status_card_positive_result_contact">Das Gesundheitsamt meldet sich demnächst telefonisch oder schriftlich bei Ihnen.</string>
+  <string name="submission_status_card_positive_result_share">Zufallscodes teilen, damit andere gewarnt werden können.</string>
+  <string name="test_result_card_headline">Ihre Diagnose</string>
+  <string name="test_result_card_virus_name_text">SARS-CoV-2</string>
+  <string name="test_result_card_registered_at_text">Registriert am %s</string>
+  <string name="test_result_card_status_negative">Negativ</string>
+  <string name="test_result_card_status_positive">Positiv</string>
+  <string name="test_result_card_status_invalid">Auswertung nicht möglich</string>
+  <string name="test_result_card_status_pending">Ergebnis liegt noch nicht vor</string>
+  <string name="test_result_card_negative_further_info_title">Weitere Infos:</string>
+  <string name="button_back">Zurück zur vorigen Seite</string>
+  <string name="button_proceed">Weiter-Taste</string>
+  <string name="button_share">Teilen</string>
+  <string name="button_menu">Menü</string>
+  <string name="suffix_button">Taste</string>
+  <string name="suffix_image">Bild</string>
+  <string name="errors_no_network">Keine Internetverbindung</string>
+  <string name="errors_not_enough_device_storage">Freier Speicherplatz unzureichend.</string>
+  <string name="errors_communication_with_api">Fehler bei der Kommunikation mit der Google-Schnittstelle.</string>
+  <string name="errors_external_action">Handlung ist derzeit unmöglich. Bitte Hotline kontaktieren.</string>
+  <string name="errors_google_update_needed">Ihre Coronalert-App ist korrekt installiert. Leider fehlt dem Betriebssystem Ihres Handys der Dienst „Meldungen Kontakt mit COVID-19-Infizierten“ und Sie können die Coronalert-App nicht nutzen. Weitere Informationen finden Sie in unseren FAQ: https://www.coronalert.be</string>
+  <string name="errors_google_api_error">Ihre Coronalert-App läuft fehlerfrei. Leider kann Ihr Risikostatus derzeit nicht aktualisiert werden. Ihr Kontaktlogbuch ist weiterhin aktiv und funktioniert. Weitere Informationen finden Sie in unseren FAQ: https://www.coronalert.be 
+</string>
+  <string name="errors_generic_headline">Etwas ist schiefgelaufen.</string>
+  <string name="errors_generic_details_headline">Ursache</string>
+  <string name="errors_generic_button_positive">Okay</string>
+  <string name="errors_generic_button_negative">Details</string>
+  <string name="errors_generic_text_unknown_error_cause">Unbekannter Fehler</string>
+  <string name="lorem_ipsum">Lorem Ipsum</string>
+  <string name="menu_test_api">API testen</string>
+  <string name="menu_test_risk_level">Risikograd testen</string>
+  <string name="menu_test_notification">Testmeldung.</string>
+  <string name="test_api_button_api_launch">Android-API-Test (manueller Test)</string>
+  <string name="test_api_button_start">Start (Senden/Empfangen von Bluetooth)</string>
+  <string name="test_api_button_get_exposure_keys">Exposure-Schlüssel erhalten (meine Schlüssel-Historie von api)</string>
+  <string name="test_api_button_share_my_keys">Meine Schlüssel per E-Mail teilen</string>
+  <string name="test_api_button_enter_other_keys">Kontaktschlüssel einreichen</string>
+  <string name="test_api_button_show_qr_code">QR-Code anzeigen</string>
+  <string name="test_api_button_submit_keys">Schlüssel an Server senden</string>
+  <string name="test_api_button_scan_qr_code">Kontaktschlüssel scannen</string>
+  <string name="test_api_switch_last_three_hours_from_server">Modus \'Letzte 3 Stunden\'</string>
+  <string name="test_api_button_check_exposure">Kontaktzusammenfassung prüfen</string>
+  <string name="test_api_exposure_summary_headline">Kontaktzusammenfassung</string>
+  <string name="test_api_body_daysSinceLastExposure">Tage seit letztem Kontakt: %1$s</string>
+  <string name="test_api_body_attenuation">Minderungsdauer in Minuten: %1$s</string>
+  <string name="test_api_body_summation_risk">Summation Risikobewertung: %1$s</string>
+  <string name="test_api_body_matchedKeyCount">Deckende Schlüsselzahl: %1$s</string>
+  <string name="test_api_body_maximumRiskScore">Maximale Risikobewertung %1$s</string>
+  <string name="test_api_body_my_keys">Meine Schlüssel (Anzahl: %1$d)</string>
+  <string name="test_api_body_other_keys">Anderer Schlüssel</string>
+  <string name="test_api_calculate_risk_level">Risikoniveau berechnen</string>
+  <string name="onboarding_background_fetch_dialog_headline">Hintergrund-Updates deaktiviert</string>
+  <string name="onboarding_background_fetch_dialog_body">Hintergrund-Updates wurden für die Corona-Warn-App deaktiviert. Zur Nutzung der automatischen Kontaktverfolgung bitte Hintergrund-Update aktivieren. Bei deaktiviertem Hintergrund-Update kann Ihre Kontaktverfolgung nur manuell in der App aktiviert werden. Die Hintergrund-Update für die App in den Geräteeinstellungen aktivieren.</string>
+  <string name="onboarding_background_fetch_dialog_button_positive">Geräteeinstellungen öffnen</string>
+  <string name="onboarding_background_fetch_dialog_button_negative">Kontaktverfolgung manuell starten</string>
+  <string name="settings_tracing_status_location_headline">Standortzugriff erlauben</string>
+  <string name="settings_tracing_status_location_body">Standortzugriff unmöglich. Google und/oder Android brauchen Zugriff auf den  Gerätestandort, um Bluetooth verwenden zu können.</string>
+  <string name="settings_tracing_status_location_button">Geräteeinstellungen öffnen</string>
+  <string name="settings_tracing_location_illustration_description_inactive"></string>
+  <string name="preference_r0">
+    <xliff:g id="preference">\"preference_r0\"</xliff:g>
+  </string>
+  <string name="preference_t0">
+    <xliff:g id="preference">\"preference_t0\"</xliff:g>
+  </string>
+  <string name="preference_t3">
+    <xliff:g id="preference">\"preference_t3\"</xliff:g>
+  </string>
+  <string name="preference_k">
+    <xliff:g id="preference">\"preference_k\"</xliff:g>
+  </string>
+  <string name="preference_result_channel">
+    <xliff:g id="preference">\"preference_result_channel\"</xliff:g>
+  </string>
+  <string name="submission_intro_symptoms_dialog_title">Symptome</string>
+  <string name="submission_intro_symptoms_dialog_body">Treten derzeit Symptome auf?</string>
+  <string name="submission_intro_symptoms_dialog_positive">Ja</string>
+  <string name="submission_intro_symptoms_dialog_negative">Nein</string>
+  <string name="submission_test_request_headline">Lassen Sie sich testen</string>
+  <string name="submission_test_request_text">Das Datum, an dem Sie ansteckend wurden, wählen. Dazu fordert Sie
+die Person, die Sie testet, auf.</string>
+  <string name="submission_test_request_save_text">Diese Nummer der Testperson zeigen. \'Speichern\' antippen, damit Sie das verfügbare Testergebnis erhalten.</string>
+  <string name="submission_test_request_save_button_save">Speichern</string>
+  <string name="submission_countries_selection_headline">Länder wählen</string>
+  <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
+  <string name="submission_countries_selection_dialog_title">Land wählen</string>
 </resources>

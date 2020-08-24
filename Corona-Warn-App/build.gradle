@@ -33,12 +33,12 @@ android {
         applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 44
-        versionName "1.2.7-test"
+        versionCode 45
+        versionName "1.2.8-test"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        resConfigs "de", "en", "tr", "bg", "pl", "ro", "fr", "nl"
+        resConfigs "de", "en", "fr", "nl"
 
         buildConfigField "String", "DOWNLOAD_CDN_URL", "\"$DOWNLOAD_CDN_URL\""
         buildConfigField "String", "SUBMISSION_CDN_URL", "\"$SUBMISSION_CDN_URL\""
