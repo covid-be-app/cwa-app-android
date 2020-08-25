@@ -646,6 +646,7 @@ The call is free of charge.</string>
     <string name="information_legal_subtitle_contact_form"></string>
     <string name="information_legal_subtitle_contact_form_non_en_de"></string>
     <string name="preference_background_notification"><xliff:g id="preference">preference_background_notification</xliff:g></string>
+    <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
     <plurals name="risk_card_body_contact_value_high_risk">
         <item quantity="one">"%1$s exposure"</item>
         <item quantity="other">"%1$s exposures"</item>

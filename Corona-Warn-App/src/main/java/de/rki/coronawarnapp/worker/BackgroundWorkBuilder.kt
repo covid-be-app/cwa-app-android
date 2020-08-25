@@ -5,6 +5,8 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler.WorkTag
 import java.util.concurrent.TimeUnit
+import be.sciensano.coronalert.worker.BackgroundConstants as BeBackgroundConstants
+import be.sciensano.coronalert.worker.BackgroundNoisePeriodicWorker as BeBackgroundNoisePeriodicWorker
 
 /**
  * Build diagnosis key periodic work request
@@ -121,8 +123,8 @@ fun buildBackgroundNoiseOneTimeWork() =
  * @see BackgroundConstants.KIND_DELAY
  */
 fun buildBackgroundNoisePeriodicWork() =
-    PeriodicWorkRequestBuilder<BackgroundNoisePeriodicWorker>(
-        BackgroundConstants.MIN_HOURS_TO_NEXT_BACKGROUND_NOISE_EXECUTION,
+    PeriodicWorkRequestBuilder<BeBackgroundNoisePeriodicWorker>(
+        BeBackgroundConstants.MIN_HOURS_TO_NEXT_BACKGROUND_NOISE_EXECUTION,
         TimeUnit.HOURS
     )
         .addTag(WorkTag.BACKGROUND_NOISE_PERIODIC_WORKER.tag)
