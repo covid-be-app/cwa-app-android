@@ -1,5 +1,6 @@
 package be.sciensano.coronalert.service.submission
 
+import be.sciensano.coronalert.http.responses.TestResultResponse
 import be.sciensano.coronalert.storage.k
 import be.sciensano.coronalert.storage.r0
 import be.sciensano.coronalert.storage.resultChannel
@@ -19,23 +20,24 @@ import de.rki.coronawarnapp.service.submission.SubmissionService as DeSubmission
 
 object SubmissionService {
 
-    suspend fun asyncRequestTestResult(): TestResult {
+    suspend fun asyncRequestTestResult(): TestResultResponse {
         val registrationToken =
             LocalData.registrationToken() ?: throw NoRegistrationTokenSetException()
 
-        val testResult = WebRequestBuilder.getInstance().beAsyncGetTestResult(registrationToken)
-        val testResultStatus = TestResult.fromInt(testResult.result)
+        return WebRequestBuilder.getInstance().beAsyncGetTestResult(registrationToken)
+    }
 
-        if (testResultStatus === TestResult.POSITIVE) {
+    suspend fun asyncSendAck(testResult: TestResultResponse) {
+
+        if (TestResult.fromInt(testResult.result) == TestResult.POSITIVE) {
             LocalData.t3(Date().toServerFormat())
             LocalData.resultChannel(testResult.resultChannel)
         }
 
-        if (testResultStatus !== TestResult.PENDING) {
-            WebRequestBuilder.getInstance().beAsyncAckTestResult(registrationToken)
-        }
+        val registrationToken =
+            LocalData.registrationToken() ?: throw NoRegistrationTokenSetException()
 
-        return testResultStatus
+        WebRequestBuilder.getInstance().beAsyncAckTestResult(registrationToken)
     }
 
     suspend fun asyncSubmitExposureKeys(keys: List<Pair<TemporaryExposureKey, Country>>) {

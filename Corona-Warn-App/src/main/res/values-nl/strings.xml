@@ -119,7 +119,7 @@
     <string name="accessibility_next">Volgende</string>
     <string name="accessibility_menu">Menu</string>
     <string name="accessibility_close">Sluiten</string>
-    <string name="accessibility_logo">CoronAlert</string>
+    <string name="accessibility_logo">Coronalert</string>
     <string name="accessibility_button">Knop</string>
     <string name="menu_help">Overzicht</string>
     <string name="menu_information">Informatie app</string>
@@ -130,12 +130,12 @@
     <string name="notification_id">
     <xliff:g id="notification_id">1</xliff:g>
   </string>
-    <string name="notification_name">CoronAlert</string>
-    <string name="notification_description">Meldingen van CoronAlert</string>
-    <string name="notification_headline">CoronAlert</string>
-    <string name="notification_body">U heeft nieuwe berichten van CoronAlert.</string>
+    <string name="notification_name">Coronalert</string>
+    <string name="notification_description">Meldingen van Coronalert</string>
+    <string name="notification_headline">Coronalert</string>
+    <string name="notification_body">U heeft nieuwe berichten van Coronalert.</string>
     <string name="update_dialog_title">Update beschikbaar</string>
-    <string name="update_dialog_message">Let op, u kunt CoronAlert pas weer gebruiken zodra u de laatste update geïnstalleerd heeft.</string>
+    <string name="update_dialog_message">Let op, u kunt Coronalert pas weer gebruiken zodra u de laatste update geïnstalleerd heeft.</string>
     <string name="update_dialog_button">Bijwerken</string>
     <string name="risk_card_body_contact">Geen contact tot nu toe</string>
     <plurals name="risk_card_body_contact_value">
@@ -168,10 +168,10 @@
     <string name="risk_card_loading_headline">Controle is bezig ...</string>
     <string name="risk_card_loading_body">De huidige gegevens worden gedownload en gecontroleerd. Dit kan enkele minuten duren.</string>
     <string name="main_about_headline">FAQ</string>
-    <string name="main_about_body">Hier vindt u antwoorden op veelgestelde vragen over CoronAlert. U wordt doorgestuurd naar een externe website.</string>
+    <string name="main_about_body">Hier vindt u antwoorden op veelgestelde vragen over Coronalert. U wordt doorgestuurd naar een externe website.</string>
     <string name="main_about_link">https://www.coronalert.be</string>
-    <string name="hint_external_webpage">Hier vindt u antwoorden op veelgestelde vragen over CoronAlert. U wordt doorgestuurd naar een externe website.</string>
-    <string name="main_share_title">Deel CoronAlert</string>
+    <string name="hint_external_webpage">Hier vindt u antwoorden op veelgestelde vragen over Coronalert. U wordt doorgestuurd naar een externe website.</string>
+    <string name="main_share_title">Deel Coronalert</string>
     <string name="main_share_headline">Samen krijgen we het coronavirus klein</string>
     <string name="main_share_body">Hoe meer mensen de app gebruiken, hoe sneller we de infectieketen kunnen doorbreken. Vraag uw familie en vrienden om de app te downloaden.</string>
     <string name="main_share_button">Downloadlink verzenden</string>
@@ -180,7 +180,7 @@
 </xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>
 <xliff:g id="line_break">
 </xliff:g></string>
-    <string name="main_share_illustration_description">Een man deelt CoronAlert met vier andere mensen.</string>
+    <string name="main_share_illustration_description">Een man deelt Coronalert met vier andere mensen.</string>
     <string name="main_overview_title">Overzicht</string>
     <string name="main_overview_accessibility_title">Overzicht</string>
     <string name="main_overview_subtitle_tracing">Contacttracing</string>
@@ -201,11 +201,11 @@
     <string name="main_overview_subtitle_glossary_contact">Contacten</string>
     <string name="main_overview_body_glossary_contact">Contact gedurende een langere periode en in de nabijheid van mensen met een COVID-19-diagnose.</string>
     <string name="main_overview_subtitle_glossary_notification">Melding contact</string>
-    <string name="main_overview_body_glossary_notification">Contacten in CoronAlert weergeven.</string>
+    <string name="main_overview_body_glossary_notification">Contacten in Coronalert weergeven.</string>
     <string name="main_overview_subtitle_glossary_keys">Willekeurige IDs</string>
     <string name="main_overview_body_glossary_keys">Willekeurige ID\'s zijn combinaties van cijfers en letters die willekeurig worden gegenereerd. Ze worden uitgewisseld tussen toestellen die zich in elkaars buurt bevinden. Willekeurige ID\'s zijn niet te herleiden tot een bepaalde persoon en worden na 14 dagen automatisch gewist. Personen die een COVID-19-diagnose hebben gekregen, kunnen ervoor kiezen om hun willekeurige ID\'s van maximaal de voorbije 14 dagen te delen met andere gebruikers van de app.</string>
     <string name="main_overview_illustration_description">Een smartphone geeft diverse inhouden weer, genummerd van 1 tot 3.</string>
-    <string name="main_title">Hoofdpagina van CoronAlert</string>
+    <string name="main_title">Hoofdpagina van Coronalert</string>
     <string name="risk_details_title">Uw risicostatus</string>
     <string name="risk_details_headline_behavior">Richtlijnen</string>
     <string name="risk_details_subtitle_behavior">Dit is wat u moet doen</string>
@@ -246,13 +246,13 @@
     <string name="onboarding_button_back_description">Terug</string>
     <string name="onboarding_onboarding_accessibility_title">Onboarding pagina 1 van 5: Samen krijgen we het coronavirus klein</string>
     <string name="onboarding_headline">Samen krijgen we het coronavirus klein</string>
-    <string name="onboarding_subtitle">Bescherm uzelf en ons allemaal. Gebruik CoronAlert, zo kunnen we de infectieketens sneller doorbreken.</string>
+    <string name="onboarding_subtitle">Bescherm uzelf en ons allemaal. Gebruik Coronalert, zo kunnen we de infectieketens sneller doorbreken.</string>
     <string name="onboarding_body">Maak van uw toestel een corona-waarschuwingssysteem. U krijgt een overzicht van uw risicostatus en krijgt te horen of u de voorbije 14 dagen nauw contact heeft gehad met mensen die een COVID-19-diagnose hebben gekregen.</string>
     <string name="onboarding_body_emphasized">De app registreert contacten tussen mensen. Hiervoor worden gecodeerde willekeurige ID\'s uitgewisseld tussen hun toestellen. Er is op geen enkel moment toegang tot persoonlijke gegevens.</string>
     <string name="onboarding_illustration_description">Een groep mensen gebruikt hun smartphones in de stad.</string>
     <string name="onboarding_privacy_accessibility_title">Onboarding pagina 2 van 5: Privacy van gegevens. Er volgt een lange tekst. Gebruik de knop onderaan het scherm om op elk moment verder te gaan.</string>
     <string name="onboarding_privacy_headline">Privacy van gegevens</string>
-    <string name="onboarding_privacy_illustration_description">Een vrouw gebruikt CoronAlert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
+    <string name="onboarding_privacy_illustration_description">Een vrouw gebruikt Coronalert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
     <string name="onboarding_tracing_accessibility_title">Onboarding pagina 3 van 5: Hoe activeert u contacttracing</string>
     <string name="onboarding_tracing_headline">Hoe activeert u contacttracing </string>
     <string name="onboarding_tracing_subtitle">Als u wilt weten of u risico loopt op een besmetting, dan activeert u de contacttracing.</string>
@@ -261,7 +261,7 @@
     <string name="onboarding_tracing_headline_consent">Toestemmingsverklaring</string>
     <string name="onboarding_tracing_body_consent">Als u wilt weten of u in contact bent gekomen met een besmet persoon en of er een risico is dat u ook zelf besmet bent, schakelt u de contacttracing van de app in. Door op de knop Inschakelen te tikken, gaat u ermee akkoord dat de contacttracing van de app en de bijbehorende verwerking van gegevens ingeschakeld worden.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>Om de contacttracing van de app te kunnen gebruiken, schakelt u de COVID-19-contacttracing die Google op uw smartphone heeft gezet, in en geeft u CoronAlert de toestemming om deze functie te gebruiken.<xliff:g id="line_break">
+</xliff:g>Om de contacttracing van de app te kunnen gebruiken, schakelt u de COVID-19-contacttracing die Google op uw smartphone heeft gezet, in en geeft u Coronalert de toestemming om deze functie te gebruiken.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
 </xliff:g>Wanneer de contacttracing is ingeschakeld, genereert en verzendt uw smartphone continu willekeurige ID\'s via Bluetooth, die andere Android- of Apple-smartphones in uw buurt kunnen ontvangen als de contacttracing ook bij hen is ingeschakeld. Uw smartphone ontvangt op zijn beurt de willekeurige ID\'s van de andere smartphones. Uw eigen willekeurige ID\'s en die van andere smartphones worden 14 dagen lang opgeslagen in het contactlogboek.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
@@ -274,7 +274,7 @@
 </xliff:g>De privacyverklaring van de app (inclusief uitleg over de gegevensverwerking voor de contacttracing) vindt u in het menu onder \'Informatie over privacy van gegevens\'.</string>
     <string name="onboarding_tracing_button_next">Activeer contacttracing</string>
     <string name="onboarding_tracing_dialog_headline">Toestemming</string>
-    <string name="onboarding_tracing_dialog_body">Dit betekent dat CoronAlert geen meldingen over uw COVID-19-risicostatus kan versturen of ontvangen. U kunt deze functie op eender welk moment uitschakelen.</string>
+    <string name="onboarding_tracing_dialog_body">Dit betekent dat Coronalert geen meldingen over uw COVID-19-risicostatus kan versturen of ontvangen. U kunt deze functie op eender welk moment uitschakelen.</string>
     <string name="onboarding_tracing_dialog_button_positive">Niet activeren</string>
     <string name="onboarding_tracing_dialog_button_negative">Terug</string>
     <string name="onboarding_tracing_illustration_description">Drie mensen hebben de contacttracing op hun toestellen geactiveerd. Hun contacten met elkaar worden geregistreerd.</string>
@@ -283,14 +283,14 @@
     <string name="onboarding_tracing_location_button">Open instellingen</string>
     <string name="onboarding_test_accessibility_title">Onboarding pagina 4 van 5: Als u een COVID-19-diagnose krijgt...</string>
     <string name="onboarding_test_headline">Als u een COVID-19-diagnose krijgt ...</string>
-    <string name="onboarding_test_subtitle">... meld dit in CoronAlert. Het delen van uw testresultaten gebeurt vrijwillig en is veilig. Doe dit alstublieft in het belang van ieders gezondheid.</string>
+    <string name="onboarding_test_subtitle">... meld dit in Coronalert. Het delen van uw testresultaten gebeurt vrijwillig en is veilig. Doe dit alstublieft in het belang van ieders gezondheid.</string>
     <string name="onboarding_test_body">Uw melding is veilig versleuteld en wordt verwerkt op een beveiligde server. De mensen van wie uw toestel de gecodeerde willekeurige ID\'s heeft verzameld, ontvangen nu een waarschuwing samen met informatie over wat ze nu moeten doen.</string>
     <string name="onboarding_test_illustration_description">Er wordt een gecodeerde positieve diagnose naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen.</string>
     <string name="onboarding_notifications_accessibility_title">Onboarding pagina 5 van 5: Waarschuwingen ontvangen en risico\'s identificeren</string>
     <string name="onboarding_notifications_headline">Waarschuwingen ontvangen en risico\'s identificeren</string>
     <string name="onboarding_notifications_subtitle">De app kan u automatisch op de hoogte brengen van uw risicostatus en u waarschuwen voor nieuwe besmettingen van mensen met wie u contact heeft gehad. Geef toestemming om u via de app op de hoogte te laten brengen. </string>
     <string name="onboarding_notifications_body">U kunt dan in zelfisolatie gaan om anderen te beschermen en uitzoeken waar u zich kunt laten testen.</string>
-    <string name="onboarding_notifications_illustration_description">Een vrouw krijgt een melding van CoronAlert.</string>
+    <string name="onboarding_notifications_illustration_description">Een vrouw krijgt een melding van Coronalert.</string>
     <string name="settings_title">Instellingen</string>
     <string name="settings_on">On</string>
     <string name="settings_off">Off</string>
@@ -327,14 +327,14 @@
     <string name="settings_notifications_headline_inactive">Meldingen zijn uitgeschakeld</string>
     <string name="settings_notifications_body_description">Sta automatische meldingen van uw COVID-19-risicostatus toe.</string>
     <string name="settings_notifications_body_active">Geef aan voor welke gebieden u meldingen wilt blijven ontvangen.</string>
-    <string name="settings_notifications_body_inactive">Om meldingen te activeren staat u meldingen van CoronAlert in de instellingen van uw toestel toe.</string>
+    <string name="settings_notifications_body_inactive">Om meldingen te activeren staat u meldingen van Coronalert in de instellingen van uw toestel toe.</string>
     <string name="settings_notifications_headline_card">Meldingen inschakelen</string>
     <string name="settings_notifications_subtitle_notification">Meldingen</string>
     <string name="settings_notifications_subtitle_update_risk">Uw risico op besmetting is veranderd</string>
     <string name="settings_notifications_subtitle_update_test">Status van uw COVID-19-test</string>
     <string name="settings_notifications_button_open_settings">Open instellingen</string>
-    <string name="settings_notifications_illustration_description_active">Een vrouw krijgt een melding van CoronAlert.</string>
-    <string name="settings_notifications_illustration_description_inactive">Een vrouw heeft de meldingen van CoronAlert uitgeschakeld.</string>
+    <string name="settings_notifications_illustration_description_active">Een vrouw krijgt een melding van Coronalert.</string>
+    <string name="settings_notifications_illustration_description_inactive">Een vrouw heeft de meldingen van Coronalert uitgeschakeld.</string>
     <string name="settings_reset_title">App opnieuw instellen</string>
     <string name="settings_reset_body_description">Verwijder al uw gegevens in de app.</string>
     <string name="settings_reset_headline">Weet u zeker dat u de app opnieuw wilt instellen?</string>
@@ -351,8 +351,8 @@
     <string name="settings_reset_dialog_button_confirm">Opnieuw instellen</string>
     <string name="settings_background_priority_title">Prioritaire achtergrondtaken</string>
     <string name="settings_background_priority_body_description">Automatisch bijwerken van de risicostatus toestaan</string>
-    <string name="settings_background_priority_headline">Draai CoronAlert op de achtergrond</string>
-    <string name="settings_background_priority_body">CoronAlert draait permanent op de achtergrond als u prioritaire achtergrondtaken activeert. Zo kan de app op ieder moment uw risicostatus bepalen.</string>
+    <string name="settings_background_priority_headline">Draai Coronalert op de achtergrond</string>
+    <string name="settings_background_priority_body">Coronalert draait permanent op de achtergrond als u prioritaire achtergrondtaken activeert. Zo kan de app op ieder moment uw risicostatus bepalen.</string>
     <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
     <string name="settings_background_priority_card_body">Prioritaire achtergrondtaken kunnen worden uitgeschakeld in de instellingen van uw toestel.</string>
     <string name="settings_background_priority_card_button">Open instellingen</string>
@@ -365,7 +365,7 @@
     <string name="information_about_body">Gebruikers van de app helpen bij het opsporen en doorbreken van infectieketens. De app slaat contacten met andere mensen lokaal op uw toestel op. U krijgt een melding als u in contact bent gekomen met mensen die later een COVID-19-diagnose hebben gekregen. Uw identiteit en privacy zijn altijd beschermd.</string>
     <string name="information_about_illustration_description">Een groep mensen gebruikt hun smartphones in de stad.</string>
     <string name="information_privacy_title">Privacy van gegevens</string>
-    <string name="information_privacy_illustration_description">Een vrouw gebruikt CoronAlert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
+    <string name="information_privacy_illustration_description">Een vrouw gebruikt Coronalert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
     <string name="information_privacy_html_path">privacy_nl.html</string>
     <string name="information_terms_title">Gebruiksvoorwaarden</string>
     <string name="information_terms_headline">Inhoud</string>
@@ -388,7 +388,7 @@
     <string name="information_technical_html_path">technical_en.html</string>
     <string name="information_legal_title">Colofon</string>
     <string name="information_legal_headline_publisher">Gepubliceerd door</string>
-    <string name="information_legal_subtitle_publisher">(verantwoordelijk in overeenstemming met § 5, para. 1 TMG, § 55 para. 1 RStV, DS-GVO, BDSG)</string>
+    <string name="information_legal_subtitle_publisher"></string>
     <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">
 </xliff:g>Juliette Wytsmanstraat 14<xliff:g id="line_break">
 </xliff:g>1050 Brussel<xliff:g id="line_break">
@@ -405,31 +405,31 @@
     <string name="submission_error_dialog_web_generic_error_body">Er kon geen verbinding worden gemaakt. Probeer het nog eens.</string>
     <string name="submission_error_dialog_web_generic_error_button_positive">Terug</string>
     <string name="submission_error_dialog_web_test_paired_title">Fout</string>
-    <string name="submission_error_dialog_web_test_paired_body">De QR-code/CODE is ongeldig of is al gebruikt. Probeer het opnieuw of neem contact op met de technische hotline via App Informatie -&gt; Technische Hotline.</string>
+    <string name="submission_error_dialog_web_test_paired_body"></string>
     <string name="submission_error_dialog_web_test_paired_button_positive">Terug</string>
     <string name="submission_error_dialog_web_paring_invalid_title">Fout</string>
-    <string name="submission_error_dialog_web_paring_invalid_body">Er kon geen CODE voor indiening gegenereerd worden. Neem contact op met de technische hotline via Informatie App -&gt; Technische hotline.</string>
+    <string name="submission_error_dialog_web_paring_invalid_body"></string>
     <string name="submission_error_dialog_web_paring_invalid_button_positive">Terug</string>
     <string name="submission_error_dialog_web_tan_invalid_title">Fout</string>
-    <string name="submission_error_dialog_web_tan_invalid_body">Er kon geen CODE voor indiening gegenereerd worden. Neem contact op met de technische hotline via Informatie App -&gt; Technische hotline.</string>
+    <string name="submission_error_dialog_web_tan_invalid_body"></string>
     <string name="submission_error_dialog_web_tan_invalid_button_positive">Terug</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">Toestemming voor het gebruik van de camera vereist</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_body">Geef de app toegang tot de camera om de QR-code te scannen.</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">Toestaan</string>
-    <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative">Niet toestaan</string>
-    <string name="submission_qr_code_scan_permission_denied_dialog_headline">Toegang tot de camera vereist</string>
-    <string name="submission_qr_code_scan_permission_denied_dialog_body">Geef de app via uw instellingen de toestemming om de camera te gebruiken, zodat u de QR-code kunt scannen.</string>
-    <string name="submission_qr_code_scan_permission_denied_dialog_button">OK</string>
-    <string name="submission_qr_code_scan_invalid_dialog_headline">Verkeerde QR-code</string>
-    <string name="submission_qr_code_scan_invalid_dialog_body">De QR-code is niet correct. Probeer het nog eens.</string>
-    <string name="submission_qr_code_scan_invalid_dialog_button_positive">Probeer het nog eens.</string>
-    <string name="submission_qr_code_scan_invalid_dialog_button_negative">Annuleren</string>
-    <string name="submission_qr_code_scan_title">Houd de QR-code in het kader.</string>
-    <string name="submission_qr_code_scan_body">Houd de QR-code in het kader.</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_headline"></string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_body"></string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive"></string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_button_negative"></string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_headline"></string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_body"></string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_button"></string>
+    <string name="submission_qr_code_scan_invalid_dialog_headline"></string>
+    <string name="submission_qr_code_scan_invalid_dialog_body"></string>
+    <string name="submission_qr_code_scan_invalid_dialog_button_positive"></string>
+    <string name="submission_qr_code_scan_invalid_dialog_button_negative"></string>
+    <string name="submission_qr_code_scan_title"></string>
+    <string name="submission_qr_code_scan_body"></string>
     <string name="submission_test_result_headline">Testresultaat</string>
     <string name="submission_test_result_subtitle">Hoe dit werkt:</string>
     <string name="submission_test_result_steps_added_heading">Test met succes toegevoegd</string>
-    <string name="submission_test_result_steps_added_body">Uw test is opgeslagen in CoronAlert.</string>
+    <string name="submission_test_result_steps_added_body">Uw test is opgeslagen in Coronalert.</string>
     <string name="submission_test_result_pending_steps_waiting_heading">Testresultaat is nog niet beschikbaar</string>
     <string name="submission_test_result_pending_steps_waiting_body">Uw testresultaat is nog niet beschikbaar.</string>
     <string name="submission_test_result_pending_refresh_button">Bijwerken</string>
@@ -437,7 +437,7 @@
     <string name="submission_test_result_negative_steps_negative_heading">Uw testresultaat</string>
     <string name="submission_test_result_negative_steps_negative_body">Het laboratoriumresultaat geeft niet aan dat u het coronavirus SARS-CoV-2 heeft.
 
-Verwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
+Verwijder de test uit Coronalert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
     <string name="submission_test_result_negative_remove_test_button">Test verwijderen</string>
     <string name="submission_test_result_positive_steps_positive_heading">Uw testresultaat</string>
     <string name="submission_test_result_positive_steps_positive_body">Uw testresultaat is positief.</string>
@@ -453,41 +453,41 @@ Verwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcod
     <string name="submission_test_result_dialog_tracing_required_message">Activeer de contacttracing om andere mensen te waarschuwen.</string>
     <string name="submission_test_result_dialog_tracing_required_button">OK</string>
     <string name="submission_test_result_dialog_remove_test_title">De test verwijderen?</string>
-    <string name="submission_test_result_dialog_remove_test_message">De test wordt permanent verwijderd uit CoronAlert en kan niet opnieuw worden toegevoegd. Deze procedure kan niet ongedaan gemaakt worden.</string>
+    <string name="submission_test_result_dialog_remove_test_message">De test wordt permanent verwijderd uit Coronalert en kan niet opnieuw worden toegevoegd. Deze procedure kan niet ongedaan gemaakt worden.</string>
     <string name="submission_test_result_dialog_remove_test_button_positive">Verwijder</string>
     <string name="submission_test_result_dialog_remove_test_button_negative">Annuleren</string>
     <string name="submission_test_result_card_positive_title">SARS-CoV-2-positief</string>
     <string name="submission_test_result_card_positive_body">U testte positief op het SARS-CoV-2-virus.</string>
-    <string name="submission_tan_title">Ingave CODE</string>
-    <string name="submission_tan_body">Vul de 10-cijferige CODE in die u heeft gekregen.</string>
-    <string name="submission_tan_button_text">Volgende</string>
-    <string name="submission_tan_accessibility_title">Ingave CODE</string>
-    <string name="submission_tan_error">Ongeldige CODE, controleer uw ingave.</string>
-    <string name="submission_tan_character_error">Ongeldige ingave, controleer uw ingave.</string>
+    <string name="submission_tan_title"></string>
+    <string name="submission_tan_body"></string>
+    <string name="submission_tan_button_text"></string>
+    <string name="submission_tan_accessibility_title"></string>
+    <string name="submission_tan_error"></string>
+    <string name="submission_tan_character_error"></string>
     <string name="submission_intro_title">Werd u getest?</string>
-    <string name="submission_intro_headline">Zo werkt CoronAlert</string>
+    <string name="submission_intro_headline">Zo werkt Coronalert</string>
     <string name="submission_intro_text">De app werkt alleen goed als mensen die een COVID-19-diagnose hebben gekregen, meewerken. Daarom rekenen we op u.
 
 Er worden alleen gecodeerde willekeurige ID\'s uitgewisseld. U blijft dus anoniem. U gaat als volgt te werk:</string>
     <string name="submission_intro_button_next">Volgende</string>
     <string name="submission_intro_illustration_description">Er wordt een gecodeerde positieve diagnose naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen.</string>
-    <string name="submission_intro_accessibility_title">Werd u getest? Zo werkt CoronAlert</string>
-    <string name="submission_dispatcher_headline">Selectie</string>
-    <string name="submission_dispatcher_subheadline">Welke informatie heeft u?</string>
-    <string name="submission_dispatcher_card_qr">Document met QR-code</string>
-    <string name="submission_dispatcher_qr_card_text">Scan de QR-code op uw testdocument en registreer uw test.</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_headline">Toestemmingsverklaring</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_body">Door op Accepteren te tikken, geeft u de app de toestemming de status van uw coronavirustest na te gaan en die in de app weer te geven. Deze functie is beschikbaar als u een QR-code heeft ontvangen en toestemming heeft gegeven om uw testresultaat naar de server van de app door te sturen. Zodra het testlaboratorium uw testresultaat op de server heeft opgeslagen, kunt u het resultaat in de app zien. Als u de meldingen heeft ingeschakeld, ontvangt u ook buiten de app een melding waarin staat dat uw testresultaat is ontvangen. Om privacyredenen wordt het testresultaat zelf echter alleen in de app getoond. U kunt deze toestemming op eender welk moment intrekken, hiervoor verwijdert u uw testregistratie in de app. Het intrekken van uw toestemming heeft geen invloed op de rechtmatigheid van de verwerking voorafgaand aan de intrekking. Meer informatie vindt u in het menu onder \'Informatie over privacy gegevens\'.</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_button_positive">Aanvaarden</string>
-    <string name="submission_dispatcher_qr_privacy_dialog_button_negative">Niet aanvaarden</string>
-    <string name="submission_dispatcher_card_tan_code">CODE</string>
-    <string name="submission_dispatcher_tan_code_card_text">Geef uw CODE handmatig in en registreer uw test.</string>
-    <string name="submission_dispatcher_card_tan_tele">CODE aanvragen</string>
-    <string name="submission_dispatcher_tan_tele_card_text">Contacteer ons als u een COVID-19-diagnose heeft gekregen.</string>
-    <string name="submission_dispatcher_accessibility_title">Welke informatie heeft u?</string>
+    <string name="submission_intro_accessibility_title">Werd u getest? Zo werkt Coronalert</string>
+    <string name="submission_dispatcher_headline"></string>
+    <string name="submission_dispatcher_subheadline"></string>
+    <string name="submission_dispatcher_card_qr"></string>
+    <string name="submission_dispatcher_qr_card_text"></string>
+    <string name="submission_dispatcher_qr_privacy_dialog_headline"></string>
+    <string name="submission_dispatcher_qr_privacy_dialog_body"></string>
+    <string name="submission_dispatcher_qr_privacy_dialog_button_positive"></string>
+    <string name="submission_dispatcher_qr_privacy_dialog_button_negative"></string>
+    <string name="submission_dispatcher_card_tan_code"></string>
+    <string name="submission_dispatcher_tan_code_card_text"></string>
+    <string name="submission_dispatcher_card_tan_tele"></string>
+    <string name="submission_dispatcher_tan_tele_card_text"></string>
+    <string name="submission_dispatcher_accessibility_title"></string>
     <string name="submission_positive_other_warning_title">Anderen waarschuwen</string>
     <string name="submission_positive_other_warning_headline">We helpen elkaar!</string>
-    <string name="submission_positive_other_warning_body">Vervolgens kunt u ook aangeven dat CoronAlert uw willekeurige ID\'s van de voorbije 14 dagen met anderen deelt. Zo kunt u andere mensen waarschuwen en de infectieketen helpen doorbreken.
+    <string name="submission_positive_other_warning_body">Vervolgens kunt u ook aangeven dat Coronalert uw willekeurige ID\'s van de voorbije 14 dagen met anderen deelt. Zo kunt u andere mensen waarschuwen en de infectieketen helpen doorbreken.
 
 Er worden alleen onpersoonlijke willekeurige ID\'s doorgegeven. U blijft anoniem.</string>
     <string name="submission_positive_other_warning_privacy_title">Privacy van gegevens</string>
@@ -504,23 +504,19 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
     <string name="submission_done_further_info_title">Andere informatie:</string>
     <string name="submission_done_button_done">Klaar</string>
     <string name="submission_done_illustration_description">Iedereen in de groep juicht omdat iemand het resultaat van de test heeft gedeeld.</string>
-    <string name="submission_contact_title">CODE aanvragen</string>
-    <string name="submission_contact_headline">Hoe dit werkt:</string>
-    <string name="submission_contact_body">Houd uw testresultaat (indien beschikbaar) en uw telefoonnummer bij de hand wanneer u een CODE aanvraagt.</string>
-    <string name="submission_contact_button_call">Bellen</string>
-    <string name="submission_contact_button_enter">CODE ingeven</string>
-    <string name="submission_contact_step_1_body">Bel de hotline en vraag een CODE aan:</string>
-    <string name="submission_contact_number_display">0800 14 689</string>
-    <string name="submission_contact_number_dial">0800 14 689</string>
-    <string name="submission_contact_step_2_body">Geef de CODE in de app in en registreer de test.</string>
-    <string name="submission_contact_operating_hours_body">Talen: Nederlands, Frans, Duits, Engels
-\Kantooruren:
-Maandag tot vrijdag: 9.00 - 17.00 uur
-
-Dit is een gratis oproep.</string>
-    <string name="submission_contact_accessibility_title">Bel de hotline en vraag een CODE aan</string>
-    <string name="submission_contact_step_1_content">Stap een: u belt de hotline en vraagt uw CODE aan. U kunt de hotline bereiken op het nummer 0800 14 689. De kantoren zijn geopend van maandag tot vrijdag van 9 tot 17 uur. Dit is een gratis nummer.</string>
-    <string name="submission_contact_step_2_content">Stap twee: u registreert uw test met uw CODE in de app.</string>
+    <string name="submission_contact_title"></string>
+    <string name="submission_contact_headline"></string>
+    <string name="submission_contact_body"></string>
+    <string name="submission_contact_button_call"></string>
+    <string name="submission_contact_button_enter"></string>
+    <string name="submission_contact_step_1_body"></string>
+    <string name="submission_contact_number_display"></string>
+    <string name="submission_contact_number_dial"></string>
+    <string name="submission_contact_step_2_body"></string>
+    <string name="submission_contact_operating_hours_body"></string>
+    <string name="submission_contact_accessibility_title"></string>
+    <string name="submission_contact_step_1_content"></string>
+    <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Gegevens worden opgehaald ...</string>
     <string name="submission_status_card_title_unregistered">Werd u getest?</string>
     <string name="submission_status_card_title_pending">Uw resultaat is nog niet beschikbaar</string>
@@ -559,7 +555,7 @@ Dit is een gratis oproep.</string>
     <string name="errors_communication_with_api">Fout tijdens de communicatie met Google-interface</string>
     <string name="errors_external_action">U kunt deze actie niet uitvoeren. Neem contact op met de hotline.</string>
     <string name="errors_google_update_needed">CoronAlert is correct geïnstalleerd, maar de functie Meldingen COVID-19-contacttracing is niet beschikbaar in het besturingssysteem van uw smartphone. Dat betekent dat u CoronAlert niet kunt gebruiken. Ga voor meer informatie naar onze FAQ-pagina: https://www.coronalert.be/nl/faq/</string>
-    <string name="errors_google_api_error">CoronAlert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De contacttracing blijft actief en werkt correct. Ga voor meer informatie naar onze FAQ-pagina: https://www.coronalert.be/nl/faq/
+    <string name="errors_google_api_error">Coronalert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De contacttracing blijft actief en werkt correct. Ga voor meer informatie naar onze FAQ-pagina: https://www.coronalert.be/nl/faq/
 </string>
     <string name="errors_generic_headline">Er is iets fout gegaan.</string>
     <string name="errors_generic_details_headline">Oorzaak</string>
@@ -575,7 +571,7 @@ Dit is een gratis oproep.</string>
     <string name="test_api_button_get_exposure_keys">Ontvang sleutels contacten (mijn sleutelgeschiedenis van api)</string>
     <string name="test_api_button_share_my_keys">Deel mijn sleutels via e-mail</string>
     <string name="test_api_button_enter_other_keys">Sleutel contacten indienen</string>
-    <string name="test_api_button_show_qr_code">Toon QR-code</string>
+    <string name="test_api_button_show_qr_code"></string>
     <string name="test_api_button_submit_keys">Sleutels versturen naar de server</string>
     <string name="test_api_button_scan_qr_code">Scan sleutel contacten</string>
     <string name="test_api_switch_last_three_hours_from_server">Modus De voorbije 3 uur</string>
@@ -590,7 +586,7 @@ Dit is een gratis oproep.</string>
     <string name="test_api_body_other_keys">Andere sleutel</string>
     <string name="test_api_calculate_risk_level">Bereken het risiconiveau</string>
     <string name="onboarding_background_fetch_dialog_headline">Achtergrondupdates uitgeschakeld</string>
-    <string name="onboarding_background_fetch_dialog_body">U heeft achtergrondupdates voor CoronAlert uitgeschakeld. Activeer de achtergrondupdates om de automatische contacttracing te gebruiken. Als u de achtergrondupdates niet inschakelt, kunt u de contacttracing alleen handmatig starten in de app. U kunt de achtergrondupdates voor de app inschakelen in de instellingen van uw toestel.</string>
+    <string name="onboarding_background_fetch_dialog_body">U heeft achtergrondupdates voor Coronalert uitgeschakeld. Activeer de achtergrondupdates om de automatische contacttracing te gebruiken. Als u de achtergrondupdates niet inschakelt, kunt u de contacttracing alleen handmatig starten in de app. U kunt de achtergrondupdates voor de app inschakelen in de instellingen van uw toestel.</string>
     <string name="onboarding_background_fetch_dialog_button_positive">Open instellingen</string>
     <string name="onboarding_background_fetch_dialog_button_negative">Start contacttracing handmatig</string>
     <string name="settings_tracing_status_location_headline">Toegang tot de locatie toestaan</string>
@@ -598,29 +594,52 @@ Dit is een gratis oproep.</string>
     <string name="settings_tracing_status_location_button">Open instellingen</string>
     <string name="settings_tracing_location_illustration_description_inactive"></string>
     <string name="preference_r0">
-    <xliff:g id="preference">\"preference_r0\"</xliff:g>
+    <xliff:g id="preference">preference_r0</xliff:g>
   </string>
     <string name="preference_t0">
-    <xliff:g id="preference">\"preference_t0\"</xliff:g>
+    <xliff:g id="preference">preference_t0</xliff:g>
   </string>
     <string name="preference_t3">
-    <xliff:g id="preference">\"preference_t3\"</xliff:g>
+    <xliff:g id="preference">preference_t3</xliff:g>
   </string>
     <string name="preference_k">
-    <xliff:g id="preference">\"preference_k\"</xliff:g>
+    <xliff:g id="preference">preference_k</xliff:g>
   </string>
     <string name="preference_result_channel">
-    <xliff:g id="preference">\"preference_result_channel\"</xliff:g>
+    <xliff:g id="preference">preference_result_channel</xliff:g>
   </string>
     <string name="submission_intro_symptoms_dialog_title">Symptomen</string>
     <string name="submission_intro_symptoms_dialog_body">Heeft u op dit moment symptomen?</string>
     <string name="submission_intro_symptoms_dialog_positive">Ja</string>
     <string name="submission_intro_symptoms_dialog_negative">Neen</string>
     <string name="submission_test_request_headline">Laat u testen</string>
-    <string name="submission_test_request_text">Kies de datum waarop u besmettelijk bent geworden. De persoon die de test afneemt, vertelt u welke dat is.</string>
+    <string name="submission_test_request_text">Selecteer de datum waarop u de symptomen begon te vertonen. Dit wordt u meegedeeld door de persoon die de test uitvoert.</string>
     <string name="submission_test_request_save_text">Laat dit cijfer zien aan de persoon die de test afneemt. Tik op \'Bewaar\', zodat u een melding krijgt zodra het testresultaat beschikbaar is.</string>
     <string name="submission_test_request_save_button_save">Bewaar</string>
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als u op een van onderstaande data niet in België was en u deze informatie (anoniem) wilt doorgeven, kies dan de landen die u op die datum hebt bezocht. Tik op de lijn die u wilt wijzigen.</string>
     <string name="submission_countries_selection_dialog_title">Kies een land</string>
+    <string name="preference_background_check_done"></string>
+    <string name="risk_card_body_open_daily"></string>
+    <string name="risk_details_information_body_notice_low"></string>
+    <string name="risk_details_information_body_notice_increased"></string>
+    <string name="onboarding_energy_optimized_dialog_headline"></string>
+    <string name="onboarding_energy_optimized_dialog_body"></string>
+    <string name="onboarding_energy_optimized_dialog_button_positive"></string>
+    <string name="onboarding_energy_optimized_dialog_button_negative"></string>
+    <string name="onboarding_manual_required_dialog_headline"></string>
+    <string name="onboarding_manual_required_dialog_body"></string>
+    <string name="onboarding_manual_required_dialog_button"></string>
+    <string name="submission_error_dialog_web_tan_redeemed_title"></string>
+    <string name="submission_error_dialog_web_tan_redeemed_body"></string>
+    <string name="submission_error_dialog_web_tan_redeemed_button_positive"></string>
+    <string name="onboarding_tracing_easy_language_explanation"></string>
+    <string name="information_legal_subtitle_contact_form"></string>
+    <string name="information_legal_subtitle_contact_form_non_en_de"></string>
+    <string name="preference_background_notification"></string>
+    <plurals name="risk_card_body_contact_value_high_risk">
+        <item quantity="one"></item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="preference_dummy_test_requests_to_send"></string>
 </resources>

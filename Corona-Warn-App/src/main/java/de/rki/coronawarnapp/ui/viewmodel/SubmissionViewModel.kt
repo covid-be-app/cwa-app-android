@@ -159,6 +159,10 @@ class SubmissionViewModel : ViewModel() {
         SubmissionService.deleteTestGUID()
     }
 
+    fun submitWithNoDiagnosisKeys() {
+        SubmissionService.submissionSuccessful()
+    }
+
     fun deregisterTestFromDevice() {
         deleteTestGUID()
         BeSubmissionService.deleteRegistrationToken()

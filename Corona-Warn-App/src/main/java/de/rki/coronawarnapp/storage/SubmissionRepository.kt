@@ -5,7 +5,7 @@ import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
-import java.util.*
+import java.util.Date
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 object SubmissionRepository {
@@ -34,10 +34,14 @@ object SubmissionRepository {
 
     private suspend fun fetchTestResult(): DeviceUIState {
         try {
-            val testResult = BeSubmissionService.asyncRequestTestResult()
-
+            val testResultResponse = BeSubmissionService.asyncRequestTestResult()
+            val testResult = TestResult.fromInt(testResultResponse.result)
             if (testResult == TestResult.POSITIVE) {
                 LocalData.isAllowedToSubmitDiagnosisKeys(true)
+            }
+
+            if (testResult != TestResult.PENDING) {
+                BeSubmissionService.asyncSendAck(testResultResponse)
             }
 
             val initialTestResultReceivedTimestamp = LocalData.initialTestResultReceivedTimestamp()
@@ -58,6 +62,7 @@ object SubmissionRepository {
                 TestResult.POSITIVE -> DeviceUIState.PAIRED_POSITIVE
                 TestResult.PENDING -> DeviceUIState.PAIRED_NO_RESULT
                 TestResult.INVALID -> DeviceUIState.PAIRED_ERROR
+                TestResult.REDEEMED -> DeviceUIState.PAIRED_REDEEMED
             }
         } catch (err: NoRegistrationTokenSetException) {
             return DeviceUIState.UNPAIRED

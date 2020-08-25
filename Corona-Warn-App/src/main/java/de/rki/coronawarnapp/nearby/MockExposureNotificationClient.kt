@@ -6,6 +6,7 @@ import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import com.google.android.gms.nearby.exposurenotification.ExposureInformation
 import com.google.android.gms.nearby.exposurenotification.ExposureNotificationClient
 import com.google.android.gms.nearby.exposurenotification.ExposureSummary
+import com.google.android.gms.nearby.exposurenotification.ExposureWindow
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import com.google.android.gms.tasks.Task
 import com.google.android.gms.tasks.Tasks
@@ -62,6 +63,10 @@ class MockExposureNotificationClient : ExposureNotificationClient {
 
     override fun getApiKey(): ApiKey<Api.ApiOptions.NoOptions> {
         throw NotImplementedError()
+    }
+
+    override fun getExposureWindows(p0: String?): Task<List<ExposureWindow>> {
+        return Tasks.forResult(emptyList())
     }
 
     override fun getTemporaryExposureKeyHistory(): Task<List<TemporaryExposureKey>> {

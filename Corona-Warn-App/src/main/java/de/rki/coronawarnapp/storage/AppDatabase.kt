@@ -2,6 +2,7 @@ package de.rki.coronawarnapp.storage
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import androidx.annotation.VisibleForTesting
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -13,8 +14,6 @@ import de.rki.coronawarnapp.storage.tracing.TracingIntervalDao
 import de.rki.coronawarnapp.storage.tracing.TracingIntervalEntity
 import de.rki.coronawarnapp.storage.tracing.TracingIntervalRepository
 import de.rki.coronawarnapp.util.Converters
-import de.rki.coronawarnapp.util.security.SecurityHelper
-import net.sqlcipher.database.SupportFactory
 import java.io.File
 
 @Database(
@@ -39,6 +38,7 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
         fun resetInstance() = synchronized(this) {
             instance = null
         }
@@ -64,7 +64,7 @@ abstract class AppDatabase : RoomDatabase() {
                  * and cached references that are non-critical to app operation.
                  */
                 .fallbackToDestructiveMigrationFrom()
-                .openHelperFactory(SupportFactory(SecurityHelper.getDBPassword()))
+//                .openHelperFactory(SupportFactory(SecurityHelper.getDBPassword()))
                 .build()
         }
     }
