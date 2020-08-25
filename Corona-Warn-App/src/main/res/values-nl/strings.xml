@@ -619,27 +619,27 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als u op een van onderstaande data niet in België was en u deze informatie (anoniem) wilt doorgeven, kies dan de landen die u op die datum hebt bezocht. Tik op de lijn die u wilt wijzigen.</string>
     <string name="submission_countries_selection_dialog_title">Kies een land</string>
-    <string name="preference_background_check_done"></string>
-    <string name="risk_card_body_open_daily"></string>
-    <string name="risk_details_information_body_notice_low"></string>
-    <string name="risk_details_information_body_notice_increased"></string>
-    <string name="onboarding_energy_optimized_dialog_headline"></string>
-    <string name="onboarding_energy_optimized_dialog_body"></string>
-    <string name="onboarding_energy_optimized_dialog_button_positive"></string>
-    <string name="onboarding_energy_optimized_dialog_button_negative"></string>
-    <string name="onboarding_manual_required_dialog_headline"></string>
-    <string name="onboarding_manual_required_dialog_body"></string>
-    <string name="onboarding_manual_required_dialog_button"></string>
-    <string name="submission_error_dialog_web_tan_redeemed_title"></string>
+    <string name="preference_background_check_done">preference_background_check_done</string>
+    <string name="risk_card_body_open_daily">Note: Please open the app daily to update your risk status.</string>
+    <string name="risk_details_information_body_notice_low">Therefore, your risk of infection has been ranked as low. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else.</string>
+    <string name="risk_details_information_body_notice_increased">Therefore, your risk of infection has been ranked as increased. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else. When you get home, please also avoid close contact with members of your family or household.</string>
+    <string name="onboarding_energy_optimized_dialog_headline">Allow prioritized background activity</string>
+    <string name="onboarding_energy_optimized_dialog_body">Enable prioritized background activity to allow the App to determine your risk status in the background any time (recommended). This disables battery life optimization for the Corona-Warn-App only. We do not expect this to cause a significant decrease in your device\'s battery life.  If you do not allow this setting, we recommend you to open the App manually at least once every 24 hours.</string>
+    <string name="onboarding_energy_optimized_dialog_button_positive">Allow</string>
+    <string name="onboarding_energy_optimized_dialog_button_negative">Do Not Allow</string>
+    <string name="onboarding_manual_required_dialog_headline">Prioritized background activity disabled</string>
+    <string name="onboarding_manual_required_dialog_body">Please note that with prioritized background activity disabled, you have to open the App manually at least once every 24 hours to update your risk status.  You can enable prioritized background activity in your settings any time.</string>
+    <string name="onboarding_manual_required_dialog_button">OK</string>
     <string name="submission_error_dialog_web_tan_redeemed_body"></string>
-    <string name="submission_error_dialog_web_tan_redeemed_button_positive"></string>
+    <string name="submission_error_dialog_web_tan_redeemed_button_positive">OK</string>
     <string name="onboarding_tracing_easy_language_explanation"></string>
     <string name="information_legal_subtitle_contact_form"></string>
     <string name="information_legal_subtitle_contact_form_non_en_de"></string>
-    <string name="preference_background_notification"></string>
+    <string name="preference_background_notification"><xliff:g id="preference">preference_background_notification</xliff:g></string>
     <plurals name="risk_card_body_contact_value_high_risk">
         <item quantity="one"></item>
         <item quantity="other"></item>
     </plurals>
-    <string name="preference_dummy_test_requests_to_send"></string>
+    <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
+    <string name="submission_error_dialog_web_tan_redeemed_title">Test has errors</string>
 </resources>
