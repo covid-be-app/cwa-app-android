@@ -47,7 +47,7 @@ object DiagnosisKeyService {
 
         WebRequestBuilder.getInstance().beAsyncSubmitKeysToServer(
             k, r0, t0, t3, resultChannel,
-            keysToReport.map { Pair(it.first, it.second) }
+            keysToReport
         )
     }
 }

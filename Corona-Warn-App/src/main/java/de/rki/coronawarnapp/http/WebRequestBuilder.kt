@@ -23,6 +23,7 @@ import KeyExportFormat
 import be.sciensano.coronalert.MobileTestId
 import be.sciensano.coronalert.http.requests.TestResultRequest
 import be.sciensano.coronalert.http.responses.TestResultResponse
+import be.sciensano.coronalert.util.PaddingUtil.getPadding
 import com.google.protobuf.ByteString
 import com.google.protobuf.InvalidProtocolBufferException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationCorruptException
@@ -267,32 +268,28 @@ class WebRequestBuilder(
         keyList: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
     ) = withContext(Dispatchers.IO) {
         Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
-        val submissionPayloadBuilder = KeyExportFormat.SubmissionPayload.newBuilder()
-        keyList.forEach {
-            submissionPayloadBuilder.addKeys(it.first)
-                .addCountries(it.second)
-        }
+
+        val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
+            .addAllKeys(keyList.map { it.first })
+            .addAllCountries(keyList.map { it.second })
+            .setPadding(getPadding(keyList.size))
+            .build()
 
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
             k, r0, t0, t3, resultChannel,
-            submissionPayloadBuilder.build()
+            submissionPayload
         )
         return@withContext
     }
 
     suspend fun beAsyncDummySubmitKeysToServer() = withContext(Dispatchers.IO) {
-        val randomAdditions = 0 // prepare for random addition of keys
-        val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission + randomAdditions
-
-        Timber.d("Writing ${fakeKeyCount} Dummy Keys to the Submission Payload.")
-
-        val fakeKeyPadding =
-            requestPadding(SubmissionConstants.fakeKeySize * fakeKeyCount)
+        val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission
+        Timber.d("Writing $fakeKeyCount Dummy Keys to the Submission Payload.")
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .setPadding(ByteString.copyFromUtf8(fakeKeyPadding))
             .addAllCountries(List(fakeKeyCount) { "BEL" })
+            .setPadding(getPadding(0))
             .build()
 
         val fakeTestId = MobileTestId.generate(Date())
