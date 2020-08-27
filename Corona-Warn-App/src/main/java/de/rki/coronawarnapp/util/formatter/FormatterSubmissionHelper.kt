@@ -180,8 +180,9 @@ fun formatSubmissionStatusCardFetchingVisible(
 )
 
 fun formatSubmissionStatusCardUnregisteredVisible(
-    deviceRegistered: Boolean?
-): Int = formatVisibility(deviceRegistered == false)
+    deviceRegistered: Boolean?, deviceUiState: DeviceUIState?
+): Int =
+    formatVisibility(deviceRegistered == false && deviceUiState != DeviceUIState.SUBMITTED_FINAL)
 
 fun formatSubmissionStatusCardContentVisible(
     deviceUiState: DeviceUIState?
