@@ -13,6 +13,7 @@ import de.rki.coronawarnapp.ui.main.MainActivity
 import java.util.Calendar
 import java.util.Date
 
+private const val MAXIMUM_KEYS = 14
 
 class SubmissionTestRequestFragment : Fragment() {
 
@@ -41,8 +42,14 @@ class SubmissionTestRequestFragment : Fragment() {
         val calendar = Calendar.getInstance()
         calendar.time = viewModel.submissionDate.value!!
 
+        binding.submissionDatePicker.minDate = let {
+            val cal = Calendar.getInstance()
+            cal.add(Calendar.DATE, -MAXIMUM_KEYS)
+            cal.time.time
+        }
         // no date in future
         binding.submissionDatePicker.maxDate = Date().time
+
         binding.submissionDatePicker.init(
             calendar.get(Calendar.YEAR),
             calendar.get(Calendar.MONTH),
