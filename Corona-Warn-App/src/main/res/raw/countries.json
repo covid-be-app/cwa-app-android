@@ -91,16 +91,6 @@
     },
     {
         "name": {
-            "de": "Tschechoslowakei",
-            "en": "Czechoslovakia",
-            "fr": "Tchécoslovaquie",
-            "nl": "Tsjecho-Slowakije"
-        },
-        "code2": "CS",
-        "code3": "CSK"
-    },
-    {
-        "name": {
             "de": "Serbien und Montenegro",
             "en": "Serbia and Montenegro",
             "fr": "Serbie-et-Monténégro",
@@ -128,16 +118,6 @@
         },
         "code2": "CZ",
         "code3": "CZE"
-    },
-    {
-        "name": {
-            "de": "Ostdeutschland",
-            "en": "East Germany",
-            "fr": "Allemagne de l’Est",
-            "nl": "Oost-Duitsland"
-        },
-        "code2": "DD",
-        "code3": "DDR"
     },
     {
         "name": {
@@ -568,46 +548,6 @@
         },
         "code2": "YU",
         "code3": "YUG"
-    },
-    {
-        "name": {
-            "de": "Jugoslawien",
-            "en": "Yugoslavia",
-            "fr": "Yougoslavie",
-            "nl": "Joegoslavië"
-        },
-        "code2": "YU",
-        "code3": "YUG"
-    },
-    {
-        "name": {
-            "de": "Jugoslawien",
-            "en": "Yugoslavia",
-            "fr": "Yougoslavie",
-            "nl": "Joegoslavië"
-        },
-        "code2": "YU",
-        "code3": "YUG"
-    },
-    {
-        "name": {
-            "de": "Tschechoslowakei",
-            "en": "Czechoslovakia",
-            "fr": "Tchécoslovaquie",
-            "nl": "Tsjecho-Slowakije"
-        },
-        "code2": "CS",
-        "code3": "CSK"
-    },
-    {
-        "name": {
-            "de": "Tschechoslowakei",
-            "en": "Czechoslovakia",
-            "fr": "Tchécoslovaquie",
-            "nl": "Tsjecho-Slowakije"
-        },
-        "code2": "CS",
-        "code3": "CSK"
     },
     {
         "name": {
@@ -2623,6 +2563,7 @@
         "name": {
             "de": "Burma",
             "en": "Burma",
+            "nl": "Birma",
             "fr": "Birmanie"
         },
         "code2": "BU",
@@ -2642,7 +2583,8 @@
         "name": {
             "de": "Obervolta",
             "en": "Upper Volta",
-            "fr": "Haute-Volta"
+            "fr": "Haute-Volta",
+			"nl": "Opper-Volta"
         },
         "code2": "HV",
         "code3": "HVO"
@@ -2651,7 +2593,8 @@
         "name": {
             "de": "Südjemen",
             "en": "South Yemen",
-            "fr": "Yémen du Sud"
+            "fr": "Yémen du Sud",
+			"nl": "Zuid Jemen"
         },
         "code2": "YE",
         "code3": "YEM"
@@ -2659,6 +2602,7 @@
     {
         "name": {
             "de": "Zaire",
+            "nl": "Zaire",
             "en": "Zaire",
             "fr": "Zaïre"
         },
@@ -2667,6 +2611,7 @@
     },
     {
         "name": {
+			"nl": "Afar- en Issaland",
             "de": "Französisches Afar- und Issa",
             "en": "French Afar and Issas",
             "fr": "Territoire français des Afars et des Issas"
@@ -2678,6 +2623,7 @@
         "name": {
             "de": "Britisches Antarktis-Territorium",
             "en": "British Antarctic Territory",
+			"nl": "Brits Antarctisch Territorium",
             "fr": "Territoire britannique antarctique"
         },
         "code2": "BQ",
@@ -2687,7 +2633,8 @@
         "name": {
             "de": "Kanton und Enderbury Inseln",
             "en": "Canton and Enderbury Islands",
-            "fr": "Îles Canton et Enderbury"
+            "fr": "Îles Canton et Enderbury",
+			"nl": "Canton en Enderbury"
         },
         "code2": "CT",
         "code3": "CTE"
@@ -2696,7 +2643,8 @@
         "name": {
             "de": "Dahomey",
             "en": "Dahomey",
-            "fr": "Dahomey"
+            "fr": "Dahomey",
+			"nl": "Dahomey"
         },
         "code2": "DY",
         "code3": "DHY"
@@ -2705,7 +2653,8 @@
         "name": {
             "de": "Königin-Maud-Land",
             "en": "Dronning Maud Land",
-            "fr": "Terre de la Reine-Maud"
+            "fr": "Terre de la Reine-Maud",
+			"nl": "Koningin Maudland"
         },
         "code2": "NQ",
         "code3": "ATN"
@@ -2714,146 +2663,11 @@
         "name": {
             "de": "Osttimor",
             "en": "East Timor",
-            "fr": "Timor-Oriental"
+            "fr": "Timor-Oriental",
+			"nl": "Oost Timor"
         },
         "code2": "TP",
         "code3": "TMP"
-    },
-    {
-        "name": {
-            "de": "Metropolitan-Frankreich",
-            "en": "Metropolitan France",
-            "fr": "France métropolitaine"
-        },
-        "code2": "FX",
-        "code3": "FXX"
-    },
-    {
-        "name": {
-            "de": "Gilbert und Ellice Inseln",
-            "en": "Gilbert and Ellice Islands",
-            "fr": "Îles Gilbert et Ellice"
-        },
-        "code2": "GE",
-        "code3": "GEL"
-    },
-    {
-        "name": {
-            "de": "Johnston Island",
-            "en": "Johnston Island",
-            "fr": "Île de Johnston"
-        },
-        "code2": "JT",
-        "code3": "JTN"
-    },
-    {
-        "name": {
-            "de": "Midwayinseln",
-            "en": "Midway Islands",
-            "fr": "Îles Midway"
-        },
-        "code2": "MI",
-        "code3": "MID"
-    },
-    {
-        "name": {
-            "de": "Neutrale Zone",
-            "en": "Neutral Zone",
-            "fr": "Zone neutre"
-        },
-        "code2": "NT",
-        "code3": "NTZ"
-    },
-    {
-        "name": {
-            "de": "Neue Hebriden",
-            "en": "New Hebrides",
-            "fr": "Nouvelles-Hébrides"
-        },
-        "code2": "NH",
-        "code3": "NHB"
-    },
-    {
-        "name": {
-            "de": "Treuhandgebiet Pazifische Inseln",
-            "en": "Trust Territory of the Pacific Islands",
-            "fr": "Territoire sous tutelle des îles du Pacifique"
-        },
-        "code2": "PC",
-        "code3": "PCI"
-    },
-    {
-        "name": {
-            "de": "Panamakanalzone",
-            "en": "Panama Canal Zone",
-            "fr": "Zone du canal de Panamá"
-        },
-        "code2": "PZ",
-        "code3": "PCZ"
-    },
-    {
-        "name": {
-            "de": "Sikkim",
-            "en": "Sikkim",
-            "fr": "Sikkim"
-        },
-        "code2": "SK",
-        "code3": "SKM"
-    },
-    {
-        "name": {
-            "de": "Südrhodesien",
-            "en": "Southern Rhodesia",
-            "fr": "Rhodésie du Sud"
-        },
-        "code2": "RH",
-        "code3": "RHO"
-    },
-    {
-        "name": {
-            "de": "US Miscellaneous Pacific Islands",
-            "en": "US Miscellaneous Pacific Islands",
-            "fr": "Îles US éparses du Pacifique"
-        },
-        "code2": "PU",
-        "code3": "PUS"
-    },
-    {
-        "name": {
-            "de": "Demokratische Republik Vietnam",
-            "en": "Democratic Republic of Vietnam",
-            "fr": "République démocratique du Viêt Nam"
-        },
-        "code2": "VD",
-        "code3": "VDR"
-    },
-    {
-        "name": {
-            "de": "Wake-Inseln",
-            "en": "Wake Islands",
-            "fr": "Île Wake"
-        },
-        "code2": "WK",
-        "code3": "WAK"
-    },
-    {
-        "name": {
-            "de": "Französischen Süd- und Antarktisgebiete",
-            "en": "French Southern and Antarctic Lands",
-            "fr": "Terres australes et antarctiques françaises",
-            "nl": "Franse Zuidelijke en Zuidpoolgebieden"
-        },
-        "code2": "TF",
-        "code3": "ATF"
-    },
-    {
-        "name": {
-            "de": "Nordjemen",
-            "en": "North Yemen",
-            "fr": "Yémen du Nord"
-        },
-        "code2": "YD",
-        "code3": "YMD"
     },
     {
         "name": {
@@ -2924,16 +2738,6 @@
         },
         "code2": "LY",
         "code3": "LBY"
-    },
-    {
-        "name": {
-            "de": "Vietnam",
-            "en": "Vietnam",
-            "fr": "Viêt Nam",
-            "nl": "Vietnam"
-        },
-        "code2": "VN",
-        "code3": "VNM"
     },
     {
         "name": {
