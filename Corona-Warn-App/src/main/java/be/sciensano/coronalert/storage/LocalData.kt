@@ -101,3 +101,22 @@ fun LocalData.dummyTestRequestsToSend(): Int = getSharedPreferenceInstance().get
         .getString(R.string.preference_dummy_test_requests_to_send),
     -1
 )
+
+
+fun LocalData.isTestResultNegative(isNegative: Boolean) {
+    getSharedPreferenceInstance().edit(true) {
+        putBoolean(
+            CoronaWarnApplication.getAppContext()
+                .getString(R.string.preference_negative_test_result),
+            isNegative
+        )
+    }
+}
+
+fun LocalData.isTestResultNegative(): Boolean? {
+    return getSharedPreferenceInstance().getBoolean(
+        CoronaWarnApplication.getAppContext()
+            .getString(R.string.preference_negative_test_result),
+        false
+    )
+}
