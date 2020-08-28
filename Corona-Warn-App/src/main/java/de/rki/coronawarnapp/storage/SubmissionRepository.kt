@@ -1,6 +1,7 @@
 package de.rki.coronawarnapp.storage
 
 import androidx.lifecycle.MutableLiveData
+import be.sciensano.coronalert.storage.isTestResultNegative
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.formatter.TestResult
@@ -25,6 +26,9 @@ object SubmissionRepository {
                     LocalData.isAllowedToSubmitDiagnosisKeys() == true -> {
                         DeviceUIState.PAIRED_POSITIVE
                     }
+                    LocalData.isTestResultNegative() == true -> {
+                        DeviceUIState.PAIRED_NEGATIVE
+                    }
                     else -> fetchTestResult()
                 }
             }
@@ -38,6 +42,10 @@ object SubmissionRepository {
             val testResult = TestResult.fromInt(testResultResponse.result)
             if (testResult == TestResult.POSITIVE) {
                 LocalData.isAllowedToSubmitDiagnosisKeys(true)
+            }
+
+            if (testResult == TestResult.NEGATIVE) {
+                LocalData.isTestResultNegative(true)
             }
 
             if (testResult != TestResult.PENDING) {

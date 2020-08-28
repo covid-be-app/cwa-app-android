@@ -1,6 +1,7 @@
 package be.sciensano.coronalert.service.submission
 
 import be.sciensano.coronalert.http.responses.TestResultResponse
+import be.sciensano.coronalert.storage.isTestResultNegative
 import be.sciensano.coronalert.storage.k
 import be.sciensano.coronalert.storage.r0
 import be.sciensano.coronalert.storage.resultChannel
@@ -53,6 +54,7 @@ object SubmissionService {
 
     fun deleteRegistrationToken() {
         DeSubmissionService.deleteRegistrationToken()
+        LocalData.isTestResultNegative(false)
         LocalData.t0(null)
         LocalData.r0(null)
         LocalData.k(null)
