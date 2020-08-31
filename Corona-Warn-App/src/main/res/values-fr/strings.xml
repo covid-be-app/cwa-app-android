@@ -177,7 +177,7 @@
   <string name="main_share_button">Envoyer le lien de téléchargement</string>
   <string name="main_share_message">Luttons ensemble contre le coronavirus !<xliff:g id="line_break">
 </xliff:g>Je suis dans le coup, vous aussi ?<xliff:g id="line_break">
-</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>
+</xliff:g><xliff:g id="link_play_store">https://coronalert.be</xliff:g>
 <xliff:g id="line_break">
 </xliff:g></string>
   <string name="main_share_illustration_description">Un homme partage l\'application Coronalert avec quatre autres personnes.</string>
@@ -192,7 +192,7 @@
   <string name="main_overview_subtitle_low_risk">Risque faible</string>
   <string name="main_overview_subtitle_unknown_risk">Risque inconnu</string>
   <string name="main_overview_headline_test">Avertir les autres utilisateurs</string>
-  <string name="main_overview_body_test">L\'enregistrement de votre test et la récupération des résultats constituent un autre élément central. Si vous recevez un diagnostic positif au COVID-19, vous pouvez en informer d\'autres personnes et briser la chaîne d\'infection.</string>
+  <string name="main_overview_body_test">Il est également possible d\'enregistrer son test pour pouvoir ensuite recevoir le résultat sur cette même application. En cas de test positif au COVID-19, vous pourrez alors le notifier aux autres utilisateurs et briser la chaîne de transmission du virus.</string>
   <string name="main_overview_headline_glossary">Définition des termes :</string>
   <string name="main_overview_subtitle_glossary_tracing">Journal d\'exposition</string>
   <string name="main_overview_body_glossary_tracing">Liste des identifiants reçus et des identifiants aléatoires temporaires enregistrés temporairement dans le stockage du système d\'exploitation. Cette liste est lue lors de la vérification des expositions. Tous les identifiants aléatoires sont automatiquement supprimés après 14 jours.</string>
@@ -201,18 +201,18 @@
   <string name="main_overview_subtitle_glossary_contact">Expositions</string>
   <string name="main_overview_body_glossary_contact">Rencontres sur une longue durée et à proximité de personnes ayant reçu un diagnostic positif au COVID-19.</string>
   <string name="main_overview_subtitle_glossary_notification">Notification d\'exposition</string>
-  <string name="main_overview_body_glossary_notification">L\'affichage des expositions dans l\'application Coronalert</string>
+  <string name="main_overview_body_glossary_notification">Si vous avez été en contact rapproché avec une personne testée positive au COVID-19 et qui a partagé son résultat dans l\'application Coronalert, vous en serez averti à travers la notification d\'exposition.</string>
   <string name="main_overview_subtitle_glossary_keys">Identifiants aléatoires</string>
   <string name="main_overview_body_glossary_keys">Les identifiants aléatoires sont des combinaisons de chiffres et de lettres générées de manière aléatoire. Ils sont échangés entre des smartphones situés à proximité les uns des autres. Les identifiants aléatoires ne sont pas rattachés à une personne spécifique et sont automatiquement supprimés après 14 jours. Les personnes ayant reçu un diagnostic positif au COVID-19 peuvent choisir de partager leurs identifiants aléatoires des 14 derniers jours avec d\'autres utilisateurs de l\'application.</string>
   <string name="main_overview_illustration_description">Un smartphone affiche différents contenus, numérotés de 1 à 3.</string>
   <string name="main_title">Page principale du site Coronalert</string>
   <string name="risk_details_title">Votre statut de risque</string>
-  <string name="risk_details_headline_behavior">Lignes directrices</string>
+  <string name="risk_details_headline_behavior">Mesures de prévention</string>
   <string name="risk_details_subtitle_behavior">Voici ce que vous devez faire</string>
   <string name="risk_details_behavior_body_stay_home">Si possible, rentrez chez vous et restez-y.</string>
   <string name="risk_details_behavior_body_contact_doctor">Si vous avez des questions concernant les symptômes, la disponibilité des tests ou l\'auto-isolement, veuillez contacter l\'une des personnes suivantes:</string>
   <string name="risk_details_behavior_body_wash_hands">Lavez-vous les mains régulièrement.</string>
-  <string name="risk_details_behavior_body_wear_mask">Portez un masque facial lorsque vous rencontrez d\'autres personnes.</string>
+  <string name="risk_details_behavior_body_wear_mask">Portez un masque facial lorsque vous rencontrez d\'autres personnes, ainsi que sur les lieux où c\'est obligatoire.</string>
   <string name="risk_details_behavior_body_stay_away">Gardez au moins 1,5 mètre de distance avec les autres personnes.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Éternuez ou toussez dans votre coude ou dans un mouchoir en papier.</string>
   <string name="risk_details_behavior_increased_body_1">Votre médecin généraliste</string>
@@ -249,7 +249,7 @@
   <string name="onboarding_subtitle">Plus de protection pour vous et pour nous tous. En utilisant l\'application Coronalert, nous pouvons briser les chaînes d\'infection beaucoup plus rapidement.</string>
   <string name="onboarding_body">Transformez votre appareil en un système d\'alerte au coronavirus. Obtenez un aperçu de votre statut de risque et découvrez si vous avez été en contact étroit avec quelqu\'un positif au COVID-19 au cours des 14 derniers jours.</string>
   <string name="onboarding_body_emphasized">L\'application enregistre les rencontres entre individus en échangeant des identifiants chiffrés et aléatoires entre leurs appareils, sans qu\'aucune donnée personnelle, quelle qu\'elle soit, ne soit consultée.</string>
-  <string name="onboarding_illustration_description">Un groupe de personnes utilisent leurs smartphones dans toute la ville.</string>
+  <string name="onboarding_illustration_description">Logos officiels du gouvernement fédéral, du gouvernement flamand, de la Région wallonne, de la Région de Bruxelles-Capitale et de la Communauté germanophone.</string>
   <string name="onboarding_privacy_accessibility_title">Page d\'accueil 2 sur 5 : Confidentialité des données. Un long texte suit. Pour continuer à tout moment, utilisez le bouton en bas de l\'écran.</string>
   <string name="onboarding_privacy_headline">Données de confidentialité</string>
   <string name="onboarding_privacy_illustration_description">Une femme utilise l\'application Coronalert sur son smartphone. Une icône représentant un cadenas sur le fond d\'un bouclier symbolise les données cryptées.</string>
@@ -257,7 +257,7 @@
   <string name="onboarding_tracing_headline">Comment activer l\'enregistrement de l\'exposition ?</string>
   <string name="onboarding_tracing_subtitle">Pour déterminer si vous êtes exposé à un risque d\'infection, vous devez activer la fonction d\'enregistrement de l\'exposition.</string>
   <string name="onboarding_tracing_body">La journalisation de l\'exposition fonctionne en ce sens que votre appareil reçoit, via Bluetooth, les identifiants aléatoires cryptés des autres utilisateurs et transmet votre propre identifiant aléatoire à leurs appareils. Cette fonction peut être désactivée à tout moment.</string>
-  <string name="onboarding_tracing_body_emphasized">Les identifiants aléatoires cryptés ne transmettent aux autres personnes que des informations sur la date, la durée et la proximité (en utilisant la force du signal). Les données personnelles telles que le nom, l\'adresse, le lieu ne sont jamais enregistrées. Les personnes ne peuvent pas être identifiées.</string>
+  <string name="onboarding_tracing_body_emphasized">Les identifiants aléatoires cryptés ne transmettent aux autres personnes que des informations sur la date, la durée et la proximité (en utilisant la force du signal). Les données personnelles telles que le nom, l\'adresse, le lieu et l\'heure ne sont jamais enregistrées. Les personnes ne peuvent pas être identifiées.</string>
   <string name="onboarding_tracing_headline_consent">Déclaration de consentement</string>
   <string name="onboarding_tracing_body_consent">Pour savoir si vous avez été en contact avec une personne infectée et s\'il y a un risque que vous soyez vous-même infecté, vous devez activer la fonction d\'enregistrement de l\'exposition de l\'application. En appuyant sur le bouton Activer, vous acceptez l\'activation de la fonction de journalisation de l\'exposition et le traitement des données associées.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
@@ -283,12 +283,12 @@
   <string name="onboarding_tracing_location_button">Ouvrir les réglages du téléphone</string>
   <string name="onboarding_test_accessibility_title">Page d\'accueil 4 sur 5 : Si vous êtes diagnostiqué positif au COVID-19...</string>
   <string name="onboarding_test_headline">Si vous êtes diagnostiqué positif au COVID-19...</string>
-  <string name="onboarding_test_subtitle">... veuillez le signaler dans l\'application Coronalert. Le partage de vos résultats de test est volontaire et sécurisé. Faites-le pour le bien de la santé de tous.</string>
-  <string name="onboarding_test_body">Votre notification est cryptée de manière sécurisée et traitée sur un serveur sécurisé. Les personnes dont les identifiants aléatoires cryptés ont été collectés par votre smartphone recevront désormais un avertissement ainsi que des informations sur ce qu\'elles doivent faire maintenant.</string>
+  <string name="onboarding_test_subtitle">… veuillez le signaler dans cette application. Le partage de vos résultats de test reste toujours volontaire et anonyme. Nous vous encourageons donc à le faire afin de continuer à protéger la santé de tous.</string>
+  <string name="onboarding_test_body">Cette information sera toujours traitée de manière anonyme et sécurisée. Votre nom et vos données personnelles ne seront pas partagées. Seuls des identifiants aléatoires seront envoyés vers les téléphones des personnes avec qui vous avez eu un contact rapproché et qui utilisent l\'application. Cela leur permettra de connaître leur risque sans pour autant en connaître l\'origine. Elles recevront également des informations sur les étapes à suivre.</string>
   <string name="onboarding_test_illustration_description">Un diagnostic positif crypté est transmis au système qui avertit alors les autres utilisateurs.</string>
   <string name="onboarding_notifications_accessibility_title">Page d\'accueil 5 sur 5 : Recevoir des avertissements et identifier les risques</string>
   <string name="onboarding_notifications_headline">Recevoir des avertissements et identifier les risques</string>
-  <string name="onboarding_notifications_subtitle">L\'application peut vous informer automatiquement de votre statut de risque et vous avertir des nouvelles infections de personnes auxquelles vous avez été exposé. Autorisez l\'application à vous avertir dès maintenant.</string>
+  <string name="onboarding_notifications_subtitle">L\'application peut vous informer automatiquement si vous avez été exposé à d\'éventuels risques et vous avertir des nouvelles infections de personnes auxquelles vous avez été exposé. Autorisez l\'application à vous avertir dès maintenant.</string>
   <string name="onboarding_notifications_body">Vous pouvez alors vous isoler pour protéger les autres et chercher un endroit où vous faire tester.</string>
   <string name="onboarding_notifications_illustration_description">Une femme reçoit une notification de son application Coronalert.</string>
   <string name="settings_title">Paramètres</string>
@@ -302,7 +302,7 @@
   <string name="settings_tracing_body_inactive_location">Localisation désactivée</string>
   <string name="settings_tracing_body_text">La journalisation de l\'exposition fonctionne ainsi : votre smartphone reçoit, via Bluetooth, des identifiants aléatoires cryptés d\'autres utilisateurs et transmet votre identifiant aléatoire à leurs téléphones. Cette fonction peut être désactivée à tout moment. <xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>Les identifiants aléatoires cryptés ne transmettent que des informations sur la date, la durée et la proximité (calculées à l\'aide de la puissance du signal). Les données personnelles telles que le nom, l\'adresse et le lieu ne sont jamais enregistrées. Les personnes ne peuvent donc pas être identifiées.</string>
+</xliff:g>Les identifiants aléatoires cryptés ne transmettent que des informations sur la date, la durée et la proximité (calculées à l\'aide de la puissance du signal). Les données personnelles telles que le nom, l\'adresse, le lieu et l\'heure ne sont jamais enregistrées. Les personnes ne peuvent donc pas être identifiées.</string>
   <string name="settings_tracing_status_active">Actif</string>
   <string name="settings_tracing_status_inactive">Arrêté</string>
   <string name="settings_tracing_status_restricted">Restreint</string>
@@ -361,7 +361,7 @@
   <string name="information_version">Version: %1s</string>
   <string name="information_about_title">À propos de l\'application</string>
   <string name="information_about_headline">Luttons ensemble contre le coronavirus !</string>
-  <string name="information_about_body_emphasized">Sciensano est l\'organisme fédéral belge de santé publique. Il publie l’application Coronalert au nom du gouvernement fédéral. L\'application est conçue comme un complément numérique aux mesures de santé publique déjà mises en place : distanciation sociale, hygiène et masques.</string>
+  <string name="information_about_body_emphasized">Sciensano est un organisme fédéral belge de santé publique. Il publie l\'application Coronalert au nom des gouvernements des entités fédérées. L\'application se veut un complément numérique aux mesures de santé publique déjà mises en place.</string>
   <string name="information_about_body">Quiconque utilise l\'application aide à retracer et à briser les chaînes d\'infection. L\'application enregistre sur votre appareil les rencontres avec d\'autres personnes au niveau local. Vous êtes averti si vous avez rencontré des personnes chez qui le COVID-19 a été diagnostiqué par la suite. Votre identité et votre vie privée sont toujours protégées.</string>
   <string name="information_about_illustration_description">Un groupe de personnes utilisent leurs smartphones dans toute la ville.</string>
   <string name="information_privacy_title">Données de confidentialité</string>
@@ -408,10 +408,10 @@
   <string name="submission_error_dialog_web_test_paired_body"></string>
   <string name="submission_error_dialog_web_test_paired_button_positive">Retour</string>
   <string name="submission_error_dialog_web_paring_invalid_title">Erreur</string>
-  <string name="submission_error_dialog_web_paring_invalid_body">Keys for submission could not be generated.</string>
+  <string name="submission_error_dialog_web_paring_invalid_body">Les clés de soumission n\'ont pas pu être générées.</string>
   <string name="submission_error_dialog_web_paring_invalid_button_positive">Retour</string>
   <string name="submission_error_dialog_web_tan_invalid_title">Erreur</string>
-  <string name="submission_error_dialog_web_tan_invalid_body">The generated code is invalid for submission.</string>
+  <string name="submission_error_dialog_web_tan_invalid_body">Le code généré n\'est pas valable pour la soumission.</string>
   <string name="submission_error_dialog_web_tan_invalid_button_positive">Retour</string>
   <string name="submission_qr_code_scan_permission_rationale_dialog_headline"></string>
   <string name="submission_qr_code_scan_permission_rationale_dialog_body"></string>
@@ -524,7 +524,7 @@ La transmission de votre résultat de test via l\'application est volontaire. Vo
   <string name="submission_status_card_body_invalid">Votre test n\'a pas pu être évalué.</string>
   <string name="submission_status_card_body_positive">Vous avez été diagnostiqué positif pour le SRAS-CoV-2.</string>
   <string name="submission_status_card_body_negative">Vous avez été diagnostiqué négatif pour le SRAS-CoV-2.</string>
-  <string name="submission_status_card_button_unregistered">En savoir plus</string>
+  <string name="submission_status_card_button_unregistered">Je me fais tester</string>
   <string name="submission_status_card_button_show_results">Test d\'affichage</string>
   <string name="submission_status_card_positive_result_subtitle">Veuillez noter :</string>
   <string name="submission_status_card_positive_result_contagious">Vous êtes infectieux. Isolez-vous des autres.</string>
@@ -608,28 +608,28 @@ La transmission de votre résultat de test via l\'application est volontaire. Vo
   <string name="submission_intro_symptoms_dialog_negative">Non</string>
   <string name="submission_test_request_headline">Faites un test</string>
   <string name="submission_test_request_text">Sélectionnez la date à laquelle vous avez commencé à avoir des symptômes. Celle-ci vous sera communiquée par la personne qui effectue le test.</string>
-  <string name="submission_test_request_save_text">Montrez ce numéro à la personne qui vous fera le test. Cliquez sur \"sauvegarder\" pour être averti dès que le résultat sera disponible.</string>
-  <string name="submission_test_request_save_button_save">Sauvegarder</string>
+  <string name="submission_test_request_save_text">Montrez ce numéro au médecin ou au laboratoire qui vous fera le test. Cliquez sur \"Enregistrer\" pour être averti dès que le résultat sera disponible.</string>
+  <string name="submission_test_request_save_button_save">Enregistrer</string>
   <string name="submission_countries_selection_headline">Sélectionnez votre pays</string>
   <string name="submission_countries_selection_text">Si vous n\'étiez pas en Belgique à certaines des dates ci-dessous et que vous voulez partager cette information (de façon anonyme), veuillez sélectionner le pays dans lequel vous étiez à ces dates.</string>
   <string name="submission_countries_selection_dialog_title">Choisissez un pays</string>
   <string name="preference_background_check_done">preference_background_check_done</string>
-  <string name="risk_card_body_open_daily">Note: Please open the app daily to update your risk status.</string>
-  <string name="risk_details_information_body_notice_low">Therefore, your risk of infection has been ranked as low. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else.</string>
-  <string name="risk_details_information_body_notice_increased">Therefore, your risk of infection has been ranked as increased. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else. When you get home, please also avoid close contact with members of your family or household.</string>
-  <string name="onboarding_energy_optimized_dialog_headline">Allow prioritized background activity</string>
+  <string name="risk_card_body_open_daily">Note : Veuillez ouvrir l\'application quotidiennement pour mettre à jour votre statut de risque.</string>
+  <string name="risk_details_information_body_notice_low">Par conséquent, votre risque d\'infection a été classé comme faible. Votre risque d\'infection est calculé à partir des données d\'enregistrement de l\'exposition (durée et proximité) localement sur votre appareil. Votre risque d\'infection ne peut pas être vu par, ou transmis à, quelqu\'un d\'autre.</string>
+  <string name="risk_details_information_body_notice_increased">Par conséquent, votre risque d\'infection a été classé comme étant accru. Votre risque d\'infection est calculé à partir des données d\'enregistrement de l\'exposition (durée et proximité) localement sur votre appareil. Votre risque d\'infection ne peut pas être vu par, ou transmis à, quelqu\'un d\'autre. Lorsque vous rentrez chez vous, veuillez également éviter tout contact étroit avec les membres de votre famille ou de votre ménage.</string>
+  <string name="onboarding_energy_optimized_dialog_headline">Permettre une activité d\'arrière plan prioritaire</string>
   <string name="onboarding_energy_optimized_dialog_body">Activez l\'option d\'arrière-plan prioritaire pour permettre à l\'application de déterminer votre statut de risque en arrière-plan à tout moment (recommandé). Cela désactive l\'optimisation de la durée de vie de la batterie pour l\'application Coronalert uniquement. Nous ne nous attendons pas à ce que cela entraîne une diminution significative de la durée de vie de la batterie de votre appareil.
 
 Si vous n\'autorisez pas ce paramètre, nous vous recommandons d\'ouvrir l\'application manuellement au moins une fois toutes les 24 heures.</string>
-  <string name="onboarding_energy_optimized_dialog_button_positive">Allow</string>
-  <string name="onboarding_energy_optimized_dialog_button_negative">Do Not Allow</string>
-  <string name="onboarding_manual_required_dialog_headline">Prioritized background activity disabled</string>
-  <string name="onboarding_manual_required_dialog_body">Please note that with prioritized background activity disabled, you have to open the App manually at least once every 24 hours to update your risk status.
+  <string name="onboarding_energy_optimized_dialog_button_positive">Autoriser</string>
+  <string name="onboarding_energy_optimized_dialog_button_negative">Ne pas autoriser</string>
+  <string name="onboarding_manual_required_dialog_headline">Activité d\'arrière-plan arrêtée</string>
+  <string name="onboarding_manual_required_dialog_body">Veuillez noter que si l\'activité de fond prioritaire est désactivée, vous devez ouvrir l\'application manuellement au moins une fois toutes les 24 heures pour mettre à jour votre statut de risque.
 
-You can enable prioritized background activity in your settings any time.</string>
+Vous pouvez activer l\'activité d\'arrière-plan prioritaire dans vos paramètres à tout moment.</string>
   <string name="onboarding_manual_required_dialog_button">OK</string>
-  <string name="submission_error_dialog_web_tan_redeemed_title">Test has errors</string>
-  <string name="submission_error_dialog_web_tan_redeemed_body">There was a problem evaluating your test.</string>
+  <string name="submission_error_dialog_web_tan_redeemed_title">Le test comporte des erreurs</string>
+  <string name="submission_error_dialog_web_tan_redeemed_body">Il y a eu un problème d\'évaluation de votre test.</string>
   <string name="submission_error_dialog_web_tan_redeemed_button_positive">OK</string>
   <string name="onboarding_tracing_easy_language_explanation"></string>
   <string name="information_legal_subtitle_contact_form"></string>
@@ -638,9 +638,10 @@ You can enable prioritized background activity in your settings any time.</strin
     <xliff:g id="preference">preference_background_notification</xliff:g>
   </string>
   <plurals name="risk_card_body_contact_value_high_risk">
-    <item quantity="one">%1$s exposure</item>
-    <item quantity="other">%1$s exposures</item>
+    <item quantity="one">%1$s exposition</item>
+    <item quantity="other">%1$s expositions</item>
   </plurals>
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
+  <string name="test_api_switch_background_notifications"></string>
 </resources>
