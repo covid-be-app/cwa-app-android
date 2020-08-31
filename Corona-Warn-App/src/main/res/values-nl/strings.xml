@@ -8,7 +8,7 @@
   </string-array>
   <string-array name="submission_intro_bullet_points">
     <item>Als u een COVID-19-diagnose heeft gekregen, kunt u anderen hiervan op de hoogte brengen.</item>
-    <item>We vragen u of u symptomen heeft. Als u symptomen heeft, vragen wij u naar de datum waarop de symptomen begonnen.</item>
+    <item>We vragen u of u symptomen hebt. Als u symptomen hebt, vragen we u naar de datum waarop de symptomen begonnen.</item>
     <item>U krijgt een code te zien die u kunt gebruiken om uw testresultaat in de app te zien.</item>
   </string-array>
   <string-array name="test_result_card_negative_further_info_bullet_points">
@@ -142,15 +142,15 @@
     <item quantity="one">%1$s contact</item>
     <item quantity="other">%1$s contacten</item>
   </plurals>
-  <string name="risk_card_body_saved_days">Contacttracing was %1$s van de afgelopen 14 dagen actief.</string>
-  <string name="risk_card_body_saved_days_full">Contacttracing permanent actief</string>
+  <string name="risk_card_body_saved_days">Blootstellingschecks waren %1$s van de afgelopen 14 dagen actief.</string>
+  <string name="risk_card_body_saved_days_full">Blootstellingschecks permanent actief</string>
   <string name="risk_card_body_not_yet_fetched">Contacten werden nog niet gecontroleerd.</string>
   <string name="risk_card_body_time_fetched">Bijgewerkt: %1$s</string>
   <string name="risk_card_body_next_update">Dagelijks bijwerken</string>
   <string name="risk_card_button_update">Bijwerken</string>
   <string name="risk_card_button_cooldown">Bijwerken over %1$s</string>
-  <string name="risk_card_button_enable_tracing">Activeer contacttracing</string>
-  <string name="risk_card_body_tracing_off">Activeer contactlogboek om uw risicostatus vandaag te evalueren.</string>
+  <string name="risk_card_button_enable_tracing">Activeer blootstellingschecks</string>
+  <string name="risk_card_body_tracing_off">Activeer blootstellingschecks om uw risicostatus vandaag te evalueren.</string>
   <string name="risk_card_low_risk_headline">Laag risico</string>
   <string name="risk_card_increased_risk_headline">Verhoogd risico </string>
   <plurals name="risk_card_increased_risk_body_contact_last">
@@ -158,12 +158,12 @@
     <item quantity="other">%1$s dagen sinds laatste contact</item>
   </plurals>
   <string name="risk_card_unknown_risk_headline">Onbekend risico</string>
-  <string name="risk_card_unknown_risk_body">U heeft de contacttracing niet lang genoeg aangezet. Daarom kunnen we uw risico op een besmetting niet berekenen.</string>
-  <string name="risk_card_no_calculation_possible_headline">Contacttracing stopgezet</string>
-  <string name="risk_card_no_calculation_possible_body_saved_risk">Laatste contacttracing:<xliff:g id="line_break">
+  <string name="risk_card_unknown_risk_body">U hebt Coronalert niet lang genoeg aangezet. Daarom kunnen we uw risico op besmetting niet berekenen.</string>
+  <string name="risk_card_no_calculation_possible_headline">Blootstellingschecks stopgezet</string>
+  <string name="risk_card_no_calculation_possible_body_saved_risk">Laatste Blootstellingschecks:<xliff:g id="line_break">
 </xliff:g>%1$s</string>
-  <string name="risk_card_outdated_risk_headline">Contacttracing is niet mogelijk</string>
-  <string name="risk_card_outdated_risk_body">Uw contactlogboek kon gedurende meer dan 24 uur niet worden geüpdatet.</string>
+  <string name="risk_card_outdated_risk_headline">Blootstellingschecks zijn niet mogelijk</string>
+  <string name="risk_card_outdated_risk_body">Uw blootstellingschecks konden gedurende meer dan 24 uur niet worden geüpdatet.</string>
   <string name="risk_card_outdated_manual_risk_body">Uw risicostatus is al meer dan 48 uur niet bijgewerkt. Werk uw risicostatus bij.</string>
   <string name="risk_card_loading_headline">Controle is bezig ...</string>
   <string name="risk_card_loading_body">De huidige gegevens worden gedownload en gecontroleerd. Dit kan enkele minuten duren.</string>
@@ -171,20 +171,20 @@
   <string name="main_about_body">Hier vindt u antwoorden op veelgestelde vragen over Coronalert. U wordt doorgestuurd naar een externe website.</string>
   <string name="main_about_link">https://coronalert.be/nl/faq/</string>
   <string name="hint_external_webpage">Hier vindt u antwoorden op veelgestelde vragen over Coronalert. U wordt doorgestuurd naar een externe website.</string>
-  <string name="main_share_title">Deel Coronalert</string>
+  <string name="main_share_title">Deel de Coronalert-app</string>
   <string name="main_share_headline">Samen krijgen we het coronavirus klein</string>
-  <string name="main_share_body">Hoe meer mensen de app gebruiken, hoe sneller we de infectieketen kunnen doorbreken. Vraag uw familie en vrienden om de app te downloaden.</string>
+  <string name="main_share_body">Hoe meer mensen de app gebruiken, hoe sneller we de verspreiding van het virus kunnen tegengaan. Nodig uw familie en vrienden uit om de app te downloaden.</string>
   <string name="main_share_button">Downloadlink verzenden</string>
   <string name="main_share_message">Samen krijgen we het coronavirus klein<xliff:g id="line_break">
 </xliff:g>Ik doe mee, u ook?<xliff:g id="line_break">
-</xliff:g><xliff:g id="link_play_store">https://www.coronalert.be</xliff:g>
+</xliff:g><xliff:g id="link_play_store">https://coronalert.be</xliff:g>
 <xliff:g id="line_break">
 </xliff:g></string>
   <string name="main_share_illustration_description">Een man deelt Coronalert met vier andere mensen.</string>
   <string name="main_overview_title">Overzicht</string>
   <string name="main_overview_accessibility_title">Overzicht</string>
-  <string name="main_overview_subtitle_tracing">Contacttracing</string>
-  <string name="main_overview_body_tracing">Het contactlogboek is een van de drie centrale kenmerken van de app. Wanneer u dit logboek activeert, worden contacten met toestellen van mensen gelogd. U hoeft verder niets te doen.</string>
+  <string name="main_overview_subtitle_tracing">Blootstellingschecks</string>
+  <string name="main_overview_body_tracing">Het Blootstellingslogboek is een van de drie centrale functionaliteiten van de app. Wanneer u dit logboek activeert, worden contacten met toestellen van mensen gelogd. U hoeft verder niets te doen.</string>
   <string name="main_overview_subtitle_risk">Risico op infectie</string>
   <string name="main_overview_body_risk">Als u in de afgelopen 14 dagen contact heeft gehad met iemand die een COVID-19-diagnose heeft gekregen, dan berekent de app uw persoonlijke besmettingsrisico. Hiervoor meet hij de duur en de nabijheid van het contact.</string>
   <string name="main_overview_subtitle_risk_levels">De volgende risicostatus kan worden getoond:</string>
@@ -194,25 +194,25 @@
   <string name="main_overview_headline_test">Andere gebruikers op de hoogte brengen</string>
   <string name="main_overview_body_test">Een andere centrale functie is het registreren van uw test en het ophalen van het resultaat. Als u een COVID-19-diagnose krijgt, kunt u anderen op de hoogte stellen en de infectieketen doorbreken.</string>
   <string name="main_overview_headline_glossary">Definitie van termen</string>
-  <string name="main_overview_subtitle_glossary_tracing">Contactlogboek</string>
+  <string name="main_overview_subtitle_glossary_tracing">Blootstellingschecks</string>
   <string name="main_overview_body_glossary_tracing">Lijst van ontvangen tijdelijke willekeurige ID\'s die tijdelijk zijn opgeslagen in het besturingssysteem. Deze lijst wordt gelezen wanneer de contacten worden gecontroleerd. Alle willekeurige ID\'s worden na 14 dagen automatisch gewist.</string>
-  <string name="main_overview_subtitle_glossary_calculation">Contactcontrole</string>
-  <string name="main_overview_body_glossary_calculation">Gegevens over contacttracing worden opgehaald en gesynchroniseerd met gemelde besmettingen van andere gebruikers. De contactcontrole wordt ongeveer om de twee uur automatisch uitgevoerd.</string>
-  <string name="main_overview_subtitle_glossary_contact">Contacten</string>
+  <string name="main_overview_subtitle_glossary_calculation">Blootstellingschecks</string>
+  <string name="main_overview_body_glossary_calculation">Gegevens over blootstellingschecks worden opgehaald en gesynchroniseerd met gemelde besmettingen van andere gebruikers. De blootstellingschecks worden ongeveer om de twee uur automatisch uitgevoerd.</string>
+  <string name="main_overview_subtitle_glossary_contact">Blootstellingen</string>
   <string name="main_overview_body_glossary_contact">Contact gedurende een langere periode en in de nabijheid van mensen met een COVID-19-diagnose.</string>
-  <string name="main_overview_subtitle_glossary_notification">Melding contact</string>
-  <string name="main_overview_body_glossary_notification">Contacten in Coronalert weergeven.</string>
+  <string name="main_overview_subtitle_glossary_notification">Melding blootstelling</string>
+  <string name="main_overview_body_glossary_notification">Als u in nauw contact bent geweest met een persoon die positief werd getest op COVID-19 en die zijn of haar resultaat heeft gedeeld in Coronalert, wordt u hiervan op de hoogte gesteld via de blootstellingsmelding.</string>
   <string name="main_overview_subtitle_glossary_keys">Willekeurige IDs</string>
   <string name="main_overview_body_glossary_keys">Willekeurige ID\'s zijn combinaties van cijfers en letters die willekeurig worden gegenereerd. Ze worden uitgewisseld tussen toestellen die zich in elkaars buurt bevinden. Willekeurige ID\'s zijn niet te herleiden tot een bepaalde persoon en worden na 14 dagen automatisch gewist. Personen die een COVID-19-diagnose hebben gekregen, kunnen ervoor kiezen om hun willekeurige ID\'s van maximaal de voorbije 14 dagen te delen met andere gebruikers van de app.</string>
   <string name="main_overview_illustration_description">Een smartphone geeft diverse inhouden weer, genummerd van 1 tot 3.</string>
   <string name="main_title">Hoofdpagina van Coronalert</string>
   <string name="risk_details_title">Uw risicostatus</string>
-  <string name="risk_details_headline_behavior">Richtlijnen</string>
+  <string name="risk_details_headline_behavior">Preventieve maatregelen</string>
   <string name="risk_details_subtitle_behavior">Dit is wat u moet doen</string>
   <string name="risk_details_behavior_body_stay_home">Ga indien mogelijk naar huis en blijf thuis.</string>
   <string name="risk_details_behavior_body_contact_doctor">Als u vragen heeft over symptomen, de beschikbaarheid van testen of zelfisolatie, neem dan contact op met een van de volgende personen:</string>
   <string name="risk_details_behavior_body_wash_hands">Was uw handen regelmatig.</string>
-  <string name="risk_details_behavior_body_wear_mask">Draag een mondmasker wanneer u in contact komt met andere mensen.</string>
+  <string name="risk_details_behavior_body_wear_mask">Draag een mondmasker wanneer u in contact komt met andere mensen, maar ook op plaatsen waar dat verplicht is.</string>
   <string name="risk_details_behavior_body_stay_away">Houd minstens 1,5 meter afstand van andere mensen.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Nies of hoest in uw elleboog of een papieren zakdoekje.</string>
   <string name="risk_details_behavior_increased_body_1">Uw huisarts</string>
@@ -221,11 +221,11 @@
   <string name="risk_details_headline_infection_risk">Risico op besmetting</string>
   <string name="risk_details_headline_period_logged">Geregistreerde periode</string>
   <string name="risk_details_subtitle_period_logged">Deze periode is opgenomen in de berekening.</string>
-  <string name="risk_details_information_body_period_logged">Uw risico op een besmetting kan alleen worden berekend voor perioden waarin de contacttracing actief was. De contacttracing moet daarom permanent actief blijven.</string>
-  <string name="risk_details_information_body_period_logged_assessment">De contacttracing dekt de voorbije 14 dagen. De contacttracing op uw toestel was tijdens deze periode %1$s dagen actief. De app verwijdert automatisch oudere registraties, omdat ze niet langer relevant zijn voor het voorkomen van besmettingen.</string>
+  <string name="risk_details_information_body_period_logged">Uw risico op een besmetting kan alleen worden berekend voor perioden waarin de blootstellingschecks actief waren. De blootstellingschecks moeten daarom permanent actief blijven.</string>
+  <string name="risk_details_information_body_period_logged_assessment">De blootstellingschecks dekkern de voorbije 14 dagen. De blootstellingschecks op uw toestel waren tijdens deze periode %1$s dagen actief. De app verwijdert automatisch oudere registraties, omdat ze niet langer relevant zijn voor het voorkomen van besmettingen.</string>
   <string name="risk_details_subtitle_infection_risk_past">Zo werd uw risico berekend</string>
   <string name="risk_details_subtitle_infection_risk">Zo wordt uw risico berekend</string>
-  <string name="risk_details_information_body_unknown_risk">U heeft de contacttracing niet lang genoeg aangezet. Daarom kunnen we uw risico op een besmetting niet berekenen.</string>
+  <string name="risk_details_information_body_unknown_risk">U hebt Coronalert niet lang genoeg aangezet. Daarom kunnen we uw risico op besmetting niet berekenen.</string>
   <string name="risk_details_information_body_outdated_risk">Uw contactlogboek kon gedurende meer dan 24 uur niet worden geüpdatet.</string>
   <string name="risk_details_information_body_low_risk">U heeft weinig risico op een besmetting omdat u niet in contact bent gekomen met iemand die later een COVID-19-diagnose heeft geregistreerd of omdat uw contact kortstondig was en de afstand groot genoeg was.</string>
   <plurals name="risk_details_information_body_increased_risk">
@@ -236,7 +236,7 @@
   <string name="risk_details_button_update">@string/risk_card_button_update</string>
   <string name="risk_details_button_enable_tracing">@string/risk_card_button_enable_tracing</string>
   <string name="risk_details_accessibility_title">Uw risicostatus</string>
-  <string name="risk_details_explanation_dialog_title">Informatie over de werking van de contacttracing</string>
+  <string name="risk_details_explanation_dialog_title">Informatie over de werking van de app</string>
   <string name="risk_details_explanation_dialog_faq_body">Voor meer informatie kunt u terecht op onze FAQ-pagina.</string>
   <string name="onboarding_button_disable">Niet activeren</string>
   <string name="onboarding_button_enable">Activeren</string>
@@ -253,56 +253,58 @@
   <string name="onboarding_privacy_accessibility_title">Onboarding pagina 2 van 5: Privacy van gegevens. Er volgt een lange tekst. Gebruik de knop onderaan het scherm om op elk moment verder te gaan.</string>
   <string name="onboarding_privacy_headline">Privacy van gegevens</string>
   <string name="onboarding_privacy_illustration_description">Een vrouw gebruikt Coronalert op haar smartphone. Het hangslot op een schildje geeft aan dat de gegevens versleuteld worden.</string>
-  <string name="onboarding_tracing_accessibility_title">Onboarding pagina 3 van 5: Hoe activeert u contacttracing</string>
-  <string name="onboarding_tracing_headline">Hoe activeert u contacttracing </string>
-  <string name="onboarding_tracing_subtitle">Als u wilt weten of u risico loopt op een besmetting, dan activeert u de contacttracing.</string>
+  <string name="onboarding_tracing_accessibility_title">Onboarding pagina 3 van 5: Hoe activeert u blootstellingschecks</string>
+  <string name="onboarding_tracing_headline">Hoe activeert u blootstellingschecks?</string>
+  <string name="onboarding_tracing_subtitle">Als u wilt weten of u risico loopt op besmetting, activeer dan de app.</string>
   <string name="onboarding_tracing_body">Voor het registreren van contacten ontvangt uw toestel via Bluetooth gecodeerde willekeurige ID\'s van andere gebruikers en wordt uw eigen willekeurige ID aan hun toestellen doorgegeven. U kunt deze functie op elk moment uitschakelen.</string>
-  <string name="onboarding_tracing_body_emphasized">De gecodeerde willekeurige ID\'s geven alleen informatie over datum, duur en nabijheid (via signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres of locatie worden nooit geregistreerd. U kunt niet worden geïdentificeerd.</string>
+  <string name="onboarding_tracing_body_emphasized">Gecodeerde willekeurige ID\'s geven alleen informatie over datum, duur en nabijheid (berekend met behulp van signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres, locatie en tijd worden nooit geregistreerd. U kunt dan ook niet geïdentificeerd worden.</string>
   <string name="onboarding_tracing_headline_consent">Toestemmingsverklaring</string>
-  <string name="onboarding_tracing_body_consent">Als u wilt weten of u in contact bent gekomen met een besmet persoon en of er een risico is dat u ook zelf besmet bent, schakelt u de contacttracing van de app in. Door op de knop Inschakelen te tikken, gaat u ermee akkoord dat de contacttracing van de app en de bijbehorende verwerking van gegevens ingeschakeld worden.<xliff:g id="line_break">
+  <string name="onboarding_tracing_body_consent">Als u wilt weten of u in contact bent gekomen met een besmet persoon en of er een risico is dat u ook zelf besmet bent, schakelt u de blootstellingschecks van de app in. Door op de knop Inschakelen te tikken, gaat u ermee akkoord dat de blootstellingschecks van de app en de bijbehorende verwerking van gegevens ingeschakeld worden.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>Om de contacttracing van de app te kunnen gebruiken, schakelt u de COVID-19-contacttracing die Google op uw smartphone heeft gezet, in en geeft u Coronalert de toestemming om deze functie te gebruiken.<xliff:g id="line_break">
+</xliff:g>Om de blootstellingschecks van de app te kunnen gebruiken, schakelt u de COVID-19-blootstellingschecks die Google op uw smartphone heeft gezet, in en geeft u Coronalert de toestemming om deze functie te gebruiken.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>Wanneer de contacttracing is ingeschakeld, genereert en verzendt uw smartphone continu willekeurige ID\'s via Bluetooth, die andere Android- of Apple-smartphones in uw buurt kunnen ontvangen als de contacttracing ook bij hen is ingeschakeld. Uw smartphone ontvangt op zijn beurt de willekeurige ID\'s van de andere smartphones. Uw eigen willekeurige ID\'s en die van andere smartphones worden 14 dagen lang opgeslagen in het contactlogboek.<xliff:g id="line_break">
+</xliff:g>Wanneer de blootstellingschecks zijn ingeschakeld, genereert en verzendt uw smartphone continu willekeurige ID\'s via Bluetooth, die andere Android- of Apple-smartphones in uw buurt kunnen ontvangen als de blootstellingschecks ook bij hen zijn ingeschakeld. Uw smartphone ontvangt op zijn beurt de willekeurige ID\'s van de andere smartphones. Uw eigen willekeurige ID\'s en die van andere smartphones worden 14 dagen lang opgeslagen in het blootstellingslogboek.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>Om te bekijken welk risico u loopt, laadt de App - meerdere keren per dag of op verzoek - een lijst van de willekeurige ID\'s van alle gebruikers die in de app hebben geregistreerd dat ze besmet zijn met het coronavirus. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die zijn opgeslagen in het contactlogboek. Als de app detecteert dat u mogelijk in contact bent geweest met een besmette gebruiker, dan zal hij u hiervan op de hoogte brengen en u laten weten dat er een risico is dat u ook besmet bent. In dit geval krijgt de app ook toegang tot andere gegevens die zijn opgeslagen in het contactlogboek van uw smartphone (datum, duur en Bluetooth-signaalsterkte van het contact).<xliff:g id="line_break">
+</xliff:g>Om te bekijken welk risico u loopt, laadt de app - meerdere keren per dag of op verzoek - een lijst van de willekeurige ID\'s van alle gebruikers die in de app hebben geregistreerd dat ze besmet zijn met het coronavirus. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die zijn opgeslagen in het contactlogboek. Als de app detecteert dat u mogelijk in contact bent geweest met een besmette gebruiker, dan zal hij u hiervan op de hoogte brengen en u laten weten dat er een risico is dat u ook besmet bent. In dit geval krijgt de app ook toegang tot andere gegevens die zijn opgeslagen in het blootstellingslogboek van uw smartphone (datum, duur en Bluetooth-signaalsterkte van het contact).<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
 </xliff:g>De Bluetooth-signaalsterkte wordt gebruikt om de fysieke afstand te berekenen (hoe sterker het signaal, hoe kleiner de afstand). De app analyseert vervolgens deze informatie en geeft een inschatting van hoe groot de kans is dat u besmet bent met het coronavirus. De app vertelt u ook wat u vervolgens moet doen. Deze analyse gebeurt alleen lokaal op uw smartphone. Behalve u weet niemand (zelfs de FOD volksgezondheid niet) of u in contact bent geweest met een besmet persoon en welk risico er voor u is vastgesteld.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>Als u uw toestemming voor de contacttracing wilt intrekken, schakelt u de functie met de toggle uit in de app of verwijdert u de app. Als u de contacttracing weer wilt gebruiken, schakelt u de functie met de toggle weer in of installeert u de app opnieuw. Als u de contacttracing uitschakelt, controleert de app niet langer of u in contact bent geweest met een besmette gebruiker. Als u ook niet langer wilt dat uw toestel willekeurige ID\'s verstuurt en ontvangt, schakelt u de COVID-19-contacttracing in de instellingen van uw smartphone uit. Uw eigen willekeurige ID\'s en die van andere smartphones die zijn opgeslagen in het contactlogboek, worden niet verwijderd in de app. U kunt alleen de gegevens die zijn opgeslagen in het contactlogboek, permanent verwijderen in de instellingen van uw smartphone.<xliff:g id="line_break">
+</xliff:g>Als u uw toestemming voor de blootstellingschecks wilt intrekken, schakelt u de functie met de toggle uit in de app of verwijdert u de app. Als u de blootstellingschecks weer wilt gebruiken, schakelt u de functie met de toggle weer in of installeert u de app opnieuw. Als u de blootstellingschecks uitschakelt, controleert de app niet langer of u in contact bent geweest met een besmette gebruiker. Als u ook niet langer wilt dat uw toestel willekeurige ID\'s verstuurt en ontvangt, schakelt u de COVID-19-blootstellingschecks in de instellingen van uw smartphone uit. Uw eigen willekeurige ID\'s en die van andere smartphones die zijn opgeslagen in het contactlogboek, worden niet verwijderd in de app. U kunt alleen de gegevens die zijn opgeslagen in het contactlogboek, permanent verwijderen in de instellingen van uw smartphone.<xliff:g id="line_break">
 </xliff:g><xliff:g id="line_break">
-</xliff:g>De privacyverklaring van de app (inclusief uitleg over de gegevensverwerking voor de contacttracing) vindt u in het menu onder \'Informatie over privacy van gegevens\'.</string>
-  <string name="onboarding_tracing_button_next">Activeer contacttracing</string>
+</xliff:g>De privacyverklaring van de app (inclusief uitleg over de gegevensverwerking voor de blootstellingschecks) vindt u in het menu onder \'Informatie over privacy van gegevens\'.</string>
+  <string name="onboarding_tracing_button_next">Activeer blootstellingschecks</string>
   <string name="onboarding_tracing_dialog_headline">Toestemming</string>
   <string name="onboarding_tracing_dialog_body">Dit betekent dat Coronalert geen meldingen over uw COVID-19-risicostatus kan versturen of ontvangen. U kunt deze functie op eender welk moment uitschakelen.</string>
   <string name="onboarding_tracing_dialog_button_positive">Niet activeren</string>
   <string name="onboarding_tracing_dialog_button_negative">Terug</string>
-  <string name="onboarding_tracing_illustration_description">Drie mensen hebben de contacttracing op hun toestellen geactiveerd. Hun contacten met elkaar worden geregistreerd.</string>
-  <string name="onboarding_tracing_location_headline">Toegang tot de locatie toestaan</string>
+  <string name="onboarding_tracing_illustration_description">Drie mensen hebben de blootstellingschecks op hun toestellen geactiveerd. Hun contacten met elkaar worden geregistreerd.</string>
+  <string name="onboarding_tracing_location_headline">Toegang tot locatievoorzieningen toestaan</string>
   <string name="onboarding_tracing_location_body">Uw locatie is niet toegankelijk. Google en/of Android heeft toegang tot de locatie van uw toestel nodig om Bluetooth te kunnen gebruiken.</string>
   <string name="onboarding_tracing_location_button">Open instellingen</string>
   <string name="onboarding_test_accessibility_title">Onboarding pagina 4 van 5: Als u een COVID-19-diagnose krijgt...</string>
   <string name="onboarding_test_headline">Als u een COVID-19-diagnose krijgt ...</string>
-  <string name="onboarding_test_subtitle">... meld dit in Coronalert. Het delen van uw testresultaten gebeurt vrijwillig en is veilig. Doe dit alstublieft in het belang van ieders gezondheid.</string>
-  <string name="onboarding_test_body">Uw melding is veilig versleuteld en wordt verwerkt op een beveiligde server. De mensen van wie uw toestel de gecodeerde willekeurige ID\'s heeft verzameld, ontvangen nu een waarschuwing samen met informatie over wat ze nu moeten doen.</string>
+  <string name="onboarding_test_subtitle">...meld dit dan in Coronalert. Zo helpt u mee de verspreiding van het coronavirus tegen te gaan.
+
+Uw melding wordt anoniem verstuurd en wordt verwerkt op een beveiligde server. Alle personen waarvan uw telefoon de willekeurige code heeft verzameld, ontvangen dan een waarschuwing met informatie over wat ze moeten doen.</string>
+  <string name="onboarding_test_body">Deze informatie wordt altijd anoniem en veilig behandeld. Uw naam en persoonlijke gegevens worden niet gedeeld. Alleen willekeurige ID’s worden naar de telefoons gestuurd van mensen met wie je nauw contact hebt gehad en die de applicatie gebruiken. Zo kunnen ze hun risico\'s kennen zonder de oorsprong ervan te kennen. Zij zullen ook informatie ontvangen over de te volgen stappen.</string>
   <string name="onboarding_test_illustration_description">Er wordt een gecodeerde positieve diagnose naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen.</string>
-  <string name="onboarding_notifications_accessibility_title">Onboarding pagina 5 van 5: Waarschuwingen ontvangen en risico\'s identificeren</string>
-  <string name="onboarding_notifications_headline">Waarschuwingen ontvangen en risico\'s identificeren</string>
+  <string name="onboarding_notifications_accessibility_title">Onboarding pagina 5 van 5: Meldingen ontvangen en risico\'s identificeren</string>
+  <string name="onboarding_notifications_headline">Meldingen ontvangen en risico\'s identificeren</string>
   <string name="onboarding_notifications_subtitle">De app kan u automatisch op de hoogte brengen van uw risicostatus en u waarschuwen voor nieuwe besmettingen van mensen met wie u contact heeft gehad. Geef toestemming om u via de app op de hoogte te laten brengen. </string>
   <string name="onboarding_notifications_body">U kunt dan in zelfisolatie gaan om anderen te beschermen en uitzoeken waar u zich kunt laten testen.</string>
   <string name="onboarding_notifications_illustration_description">Een vrouw krijgt een melding van Coronalert.</string>
   <string name="settings_title">Instellingen</string>
-  <string name="settings_on">On</string>
-  <string name="settings_off">Off</string>
-  <string name="settings_tracing_title">Contacttracing</string>
-  <string name="settings_tracing_headline">Zo werkt de contacttracing</string>
+  <string name="settings_on">Aan</string>
+  <string name="settings_off">Uit</string>
+  <string name="settings_tracing_title">Blootstellingschecks</string>
+  <string name="settings_tracing_headline">Zo werken de blootstellingschecks</string>
   <string name="settings_tracing_body_description">Sta toe dat willekeurige COVID-19-ID\'s worden gegenereerd en gedeeld.</string>
-  <string name="settings_tracing_body_active">Contacttracing actief</string>
-  <string name="settings_tracing_body_inactive">Contacttracing stopgezet</string>
+  <string name="settings_tracing_body_active">Blootstellingschecks actief</string>
+  <string name="settings_tracing_body_inactive">Blootstellingschecks stopgezet</string>
   <string name="settings_tracing_body_inactive_location">Locatiefunctie uitgeschakeld</string>
-  <string name="settings_tracing_body_text">Voor de contacttracing ontvangt uw toestel via Bluetooth gecodeerde willekeurige ID\'s van andere gebruikers en geeft het uw willekeurige ID door aan hun toestellen. Deze functie kan op elk moment worden uitgeschakeld. 1
-11
-1Gecodeerde willekeurige ID\'s geven alleen informatie over datum, duur en nabijheid (berekend met behulp van signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres en locatie worden nooit geregistreerd. U kunt dan ook niet geïdentificeerd worden.</string>
+  <string name="settings_tracing_body_text">De app werkt via Bluetooth op je telefoon. Telefoons die de app gebruiken delen willekeurige codes (ID\'s) uit wanneer ze in elkaars buurt zijn. U kunt deze functie op elk moment uitschakelen.
+
+De willekeurige codes geven alleen informatie over de datum, duur en nabijheid door aan andere gebruikers (berekend met behulp van signaalsterkte) door aan anderen. Persoonlijke gegevens zoals naam, adres, locatie en tijd worden nooit geregistreerd. U kunt dan ook niet geïdentificeerd worden.</string>
   <string name="settings_tracing_status_active">Actief</string>
   <string name="settings_tracing_status_inactive">Stopgezet</string>
   <string name="settings_tracing_status_restricted">Beperkt</string>
@@ -315,11 +317,11 @@
   <string name="settings_tracing_status_connection_body">Om contacten te kunnen registreren is een internetverbinding nodig. Schakel in de instellingen van uw telefoon wifi of mobiele data in.</string>
   <string name="settings_tracing_status_connection_button">Open instellingen</string>
   <plurals name="settings_tracing_status_body_active">
-    <item quantity="one">De contacttracing is al een dag actief.\nEen contactcontrole is alleen betrouwbaar als de contacttracing permanent is ingeschakeld.</item>
-    <item quantity="other">De contacttracing is al %1$s dagen actief.\nEen contactcontrole is alleen betrouwbaar als de contacttracing permanent is ingeschakeld.</item>
+    <item quantity="one">De blootstellingschecks zijn al een dag actief.\nEen blootstellingscheck is alleen betrouwbaar als de blootstellingschecks permanent zijn ingeschakeld.</item>
+    <item quantity="other">De blootstellingschecks zijn al %1$s dagen actief.\nEen blootstellingscheck is alleen betrouwbaar als de blootstellingschecks permanent zijn ingeschakeld.</item>
   </plurals>
-  <string name="settings_tracing_illustration_description_active">Drie mensen hebben de contacttracing op hun toestellen geactiveerd. Hun contacten met elkaar worden geregistreerd.</string>
-  <string name="settings_tracing_illustration_description_inactive">Iemand heeft de contacttracing op zijn smartphone uitgeschakeld, dus is een contact met twee andere mensen niet geregistreerd.</string>
+  <string name="settings_tracing_illustration_description_active">Drie mensen hebben de blootstellingschecks op hun toestellen geactiveerd. Hun contacten met elkaar worden geregistreerd.</string>
+  <string name="settings_tracing_illustration_description_inactive">Iemand heeft de blootstellingschecks op zijn smartphone uitgeschakeld, dus is een contact met twee andere mensen niet geregistreerd.</string>
   <string name="settings_tracing_bluetooth_illustration_description_inactive">Iemand heeft Bluetooth op zijn smartphone uitgeschakeld, dus een contact met twee andere mensen wordt niet geregistreerd.</string>
   <string name="settings_tracing_connection_illustration_description_inactive">Iemand heeft de internetverbinding op zijn smartphone uitgeschakeld, dus een contact met twee andere mensen wordt niet geregistreerd.</string>
   <string name="settings_notifications_title">Meldingen</string>
@@ -331,7 +333,7 @@
   <string name="settings_notifications_headline_card">Meldingen inschakelen</string>
   <string name="settings_notifications_subtitle_notification">Meldingen</string>
   <string name="settings_notifications_subtitle_update_risk">Uw risico op besmetting is veranderd</string>
-  <string name="settings_notifications_subtitle_update_test">Status van uw COVID-19-test</string>
+  <string name="settings_notifications_subtitle_update_test">Uw COVID-19-testresultaat</string>
   <string name="settings_notifications_button_open_settings">Open instellingen</string>
   <string name="settings_notifications_illustration_description_active">Een vrouw krijgt een melding van Coronalert.</string>
   <string name="settings_notifications_illustration_description_inactive">Een vrouw heeft de meldingen van Coronalert uitgeschakeld.</string>
@@ -339,9 +341,9 @@
   <string name="settings_reset_body_description">Verwijder al uw gegevens in de app.</string>
   <string name="settings_reset_headline">Weet u zeker dat u de app opnieuw wilt instellen?</string>
   <string name="settings_reset_body">Er wordt niet langer gemeld dat u contact heeft gehad en u kunt andere gebruikers niet langer waarschuwen. </string>
-  <string name="settings_reset_headline_keys">Contact<xliff:g id="line_break">
+  <string name="settings_reset_headline_keys">Blootstellings<xliff:g id="line_break">
 </xliff:g>logboek verwijderen</string>
-  <string name="settings_reset_body_keys">Het contactlogboek moet apart worden verwijderd in de instellingen van uw toestel.</string>
+  <string name="settings_reset_body_keys">Het blootstellingslogboek moet apart worden verwijderd in de instellingen van uw toestel.</string>
   <string name="settings_reset_button_positive">App opnieuw instellen</string>
   <string name="settings_reset_button_negative">Annuleren</string>
   <string name="settings_reset_illustration_description">U ziet een hand met een smartphone met daarop een symbool dat aangeeft dat de app opnieuw wordt ingesteld.</string>
@@ -349,19 +351,19 @@
   <string name="settings_reset_dialog_body">Er wordt niet langer gemeld dat u contact heeft gehad en u kunt andere gebruikers niet langer waarschuwen. Deze procedure kan niet ongedaan gemaakt worden.</string>
   <string name="settings_reset_dialog_button_cancel">Annuleren</string>
   <string name="settings_reset_dialog_button_confirm">Opnieuw instellen</string>
-  <string name="settings_background_priority_title">Prioritaire achtergrondtaken</string>
+  <string name="settings_background_priority_title">Prioritaire achtergrondactiviteit</string>
   <string name="settings_background_priority_body_description">Automatisch bijwerken van de risicostatus toestaan</string>
   <string name="settings_background_priority_headline">Draai Coronalert op de achtergrond</string>
-  <string name="settings_background_priority_body">Coronalert draait permanent op de achtergrond als u prioritaire achtergrondtaken activeert. Zo kan de app op ieder moment uw risicostatus bepalen.</string>
+  <string name="settings_background_priority_body">Coronalert draait permanent op de achtergrond als u prioritaire achtergrondactiviteit activeert. Zo kan de app op ieder moment uw risicostatus bepalen.</string>
   <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
-  <string name="settings_background_priority_card_body">Prioritaire achtergrondtaken kunnen worden uitgeschakeld in de instellingen van uw toestel.</string>
+  <string name="settings_background_priority_card_body">Prioritaire achtergrondactiviteit kan worden uitgeschakeld in de instellingen van uw toestel.</string>
   <string name="settings_background_priority_card_button">Open instellingen</string>
   <string name="settings_background_priority_card_headline">Prioritaire achtergrondtaken uitschakelen</string>
   <string name="information_title">Informatie app</string>
   <string name="information_version">Versie: %1s</string>
   <string name="information_about_title">Over de app</string>
   <string name="information_about_headline">Samen krijgen we het coronavirus klein</string>
-  <string name="information_about_body_emphasized">Sciensano is het federale onderzoekscentrum voor de volksgezondheid, de diergezondheid en de voedselveiligheid van België. Het lanceert CoronAlert namens de federale regering. De app is bedoeld als digitale aanvulling op de reeds ingevoerde maatregelen op het gebied van volksgezondheid: een veilige afstand aanhouden, hygiënemaatregelen naleven en een mondmasker dragen.</string>
+  <string name="information_about_body_emphasized">Sciensano is een Belgisch federaal agentschap voor de volksgezondheid. Zij publiceert Coronalert namens de regeringen van de gefedereerde entiteiten. De app bestaat als een digitale aanvulling op de reeds bestaande maatregelen op het gebied van de volksgezondheid.</string>
   <string name="information_about_body">Gebruikers van de app helpen bij het opsporen en doorbreken van infectieketens. De app slaat contacten met andere mensen lokaal op uw toestel op. U krijgt een melding als u in contact bent gekomen met mensen die later een COVID-19-diagnose hebben gekregen. Uw identiteit en privacy zijn altijd beschermd.</string>
   <string name="information_about_illustration_description">Een groep mensen gebruikt hun smartphones in de stad.</string>
   <string name="information_privacy_title">Privacy van gegevens</string>
@@ -395,7 +397,7 @@
 </xliff:g><xliff:g id="line_break">
 </xliff:g>vertegenwoordigd door de voorzitter</string>
   <string name="information_legal_headline_contact">Contact</string>
-  <string name="information_legal_subtitle_contact">E-mail: hello@coronalert.be<xliff:g id="line_break">
+  <string name="information_legal_subtitle_contact">E-mail: info@sciensano.be<xliff:g id="line_break">
 </xliff:g>Telefoon: 0800 14 689</string>
   <string name="information_legal_headline_taxid">BTW-identificatienummer</string>
   <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
@@ -408,10 +410,10 @@
   <string name="submission_error_dialog_web_test_paired_body"></string>
   <string name="submission_error_dialog_web_test_paired_button_positive">Terug</string>
   <string name="submission_error_dialog_web_paring_invalid_title">Fout</string>
-  <string name="submission_error_dialog_web_paring_invalid_body">Keys for submission could not be generated.</string>
+  <string name="submission_error_dialog_web_paring_invalid_body">Sleutels voor indiening konden niet worden gegenereerd.</string>
   <string name="submission_error_dialog_web_paring_invalid_button_positive">Terug</string>
   <string name="submission_error_dialog_web_tan_invalid_title">Fout</string>
-  <string name="submission_error_dialog_web_tan_invalid_body">The generated code is invalid for submission.</string>
+  <string name="submission_error_dialog_web_tan_invalid_body">De gegenereerde code is ongeldig voor indiening.</string>
   <string name="submission_error_dialog_web_tan_invalid_button_positive">Terug</string>
   <string name="submission_qr_code_scan_permission_rationale_dialog_headline"></string>
   <string name="submission_qr_code_scan_permission_rationale_dialog_body"></string>
@@ -447,10 +449,10 @@ Verwijder de test uit Coronalert. Zo kunt u hier indien nodig een nieuwe testcod
   <string name="submission_test_result_invalid_steps_invalid_heading">Uw testresultaat</string>
   <string name="submission_test_result_invalid_steps_invalid_body">Er was een probleem met de evaluatie van uw test. Neem contact op met de dienst volksgezondheid om te weten wat u nu moet doen.
 
-Verwijder de test uit CoronAlert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
+Verwijder de test uit Coronalert. Zo kunt u hier indien nodig een nieuwe testcode bewaren.</string>
   <string name="submission_test_result_invalid_remove_test_button">Test verwijderen</string>
-  <string name="submission_test_result_dialog_tracing_required_title">Contacttracing vereist</string>
-  <string name="submission_test_result_dialog_tracing_required_message">Activeer de contacttracing om andere mensen te waarschuwen.</string>
+  <string name="submission_test_result_dialog_tracing_required_title">Blootstellingschecks vereist</string>
+  <string name="submission_test_result_dialog_tracing_required_message">Activeer de blootstellingschecks om andere mensen te waarschuwen.</string>
   <string name="submission_test_result_dialog_tracing_required_button">OK</string>
   <string name="submission_test_result_dialog_remove_test_title">De test verwijderen?</string>
   <string name="submission_test_result_dialog_remove_test_message">De test wordt permanent verwijderd uit Coronalert en kan niet opnieuw worden toegevoegd. Deze procedure kan niet ongedaan gemaakt worden.</string>
@@ -491,7 +493,7 @@ Er worden alleen gecodeerde willekeurige ID\'s uitgewisseld. U blijft dus anonie
 
 Er worden alleen onpersoonlijke willekeurige ID\'s doorgegeven. U blijft anoniem.</string>
   <string name="submission_positive_other_warning_privacy_title">Privacy van gegevens</string>
-  <string name="submission_positive_other_warning_privacy_body">Door op \'Aanvaarden\' te tikken, stemt u ermee in dat de app uw positieve testresultaat samen met uw willekeurige ID\'s van de voorbije 14 dagen naar het serversysteem van de app stuurt, zodat andere app-gebruikers die de contacttracing hebben ingeschakeld, er automatisch van op de hoogte kunnen worden gebracht dat ze mogelijk zijn blootgesteld aan een risico op besmetting. De willekeurige ID\'s die hiervoor worden doorgestuurd, bevatten geen informatie op basis waarvan conclusies kunnen worden getrokken over uw identiteit of persoon. 
+  <string name="submission_positive_other_warning_privacy_body">Door op \'Aanvaarden\' te tikken, stemt u ermee in dat de app uw positieve testresultaat samen met uw willekeurige ID\'s van de voorbije 14 dagen naar het serversysteem van de app stuurt, zodat andere app-gebruikers die de blootstellingschecks hebben ingeschakeld, er automatisch van op de hoogte kunnen worden gebracht dat ze mogelijk zijn blootgesteld aan een risico op besmetting. De willekeurige ID\'s die hiervoor worden doorgestuurd, bevatten geen informatie op basis waarvan conclusies kunnen worden getrokken over uw identiteit of persoon. 
 
 U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u uw testresultaat niet doorgeeft. Aangezien het niet mogelijk is om te traceren of te controleren of en hoe u de app gebruikt, weet alleen u of u de informatie dat u besmet bent, heeft verzonden. U kunt uw toestemming op eender welk moment intrekken, hiervoor verwijdert u de app. Deze intrekking van uw toestemming heeft geen invloed op de rechtmatigheid van de verwerking op basis van de toestemming voorafgaand aan de intrekking. Meer informatie kunt u vinden in het menu onder \'Informatie over privacy van gegevens\'.</string>
   <string name="submission_positive_other_warning_button">Volgende</string>
@@ -530,7 +532,7 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
   <string name="submission_status_card_body_invalid">Uw test kon niet geëvalueerd worden.</string>
   <string name="submission_status_card_body_positive">U testte positief op SARS-CoV-2.</string>
   <string name="submission_status_card_body_negative">U testte negatief op SARS-CoV-2.</string>
-  <string name="submission_status_card_button_unregistered">Meer informatie en Help</string>
+  <string name="submission_status_card_button_unregistered">Ik laat me testen</string>
   <string name="submission_status_card_button_show_results">Toon de test</string>
   <string name="submission_status_card_positive_result_subtitle">Let op:</string>
   <string name="submission_status_card_positive_result_contagious">U bent besmettelijk. Ga in zelfisolatie.</string>
@@ -554,8 +556,8 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
   <string name="errors_not_enough_device_storage">U heeft niet voldoende vrij geheugen.</string>
   <string name="errors_communication_with_api">Fout tijdens de communicatie met Google-interface</string>
   <string name="errors_external_action">U kunt deze actie niet uitvoeren. Neem contact op met de hotline.</string>
-  <string name="errors_google_update_needed">CoronAlert is correct geïnstalleerd, maar de functie Meldingen COVID-19-contacttracing is niet beschikbaar in het besturingssysteem van uw smartphone. Dat betekent dat u CoronAlert niet kunt gebruiken. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq/</string>
-  <string name="errors_google_api_error">Coronalert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De contacttracing blijft actief en werkt correct. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq/ 
+  <string name="errors_google_update_needed">Coronalert is correct geïnstalleerd, maar de functie Blootstellingsmeldingen is niet beschikbaar in het besturingssysteem van uw smartphone. Dat betekent dat u Coronalert niet kunt gebruiken. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq/</string>
+  <string name="errors_google_api_error">Coronalert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De blootstellingschecks blijven actief en werken correct. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq/ 
 </string>
   <string name="errors_generic_headline">Er is iets fout gegaan.</string>
   <string name="errors_generic_details_headline">Oorzaak</string>
@@ -586,11 +588,11 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
   <string name="test_api_body_other_keys">Andere sleutel</string>
   <string name="test_api_calculate_risk_level">Bereken het risiconiveau</string>
   <string name="onboarding_background_fetch_dialog_headline">Achtergrondupdates uitgeschakeld</string>
-  <string name="onboarding_background_fetch_dialog_body">U heeft achtergrondupdates voor Coronalert uitgeschakeld. Activeer de achtergrondupdates om de automatische contacttracing te gebruiken. Als u de achtergrondupdates niet inschakelt, kunt u de contacttracing alleen handmatig starten in de app. U kunt de achtergrondupdates voor de app inschakelen in de instellingen van uw toestel.</string>
+  <string name="onboarding_background_fetch_dialog_body">U heeft achtergrondupdates voor Coronalert uitgeschakeld. Activeer de achtergrondupdates om de automatische blootstellingschecks te gebruiken. Als u de achtergrondupdates niet inschakelt, kunt u de blootstellingschecks alleen handmatig starten in de app. U kunt de achtergrondupdates voor de app inschakelen in de instellingen van uw toestel.</string>
   <string name="onboarding_background_fetch_dialog_button_positive">Open instellingen</string>
-  <string name="onboarding_background_fetch_dialog_button_negative">Start contacttracing handmatig</string>
+  <string name="onboarding_background_fetch_dialog_button_negative">Start blootstellingschecks handmatig</string>
   <string name="settings_tracing_status_location_headline">Toegang tot de locatie toestaan</string>
-  <string name="settings_tracing_status_location_body">Uw locatie is niet toegankelijk. Google en/of Android heeft toegang tot de locatie van uw toestel nodig om Bluetooth te kunnen gebruiken.</string>
+  <string name="settings_tracing_status_location_body">Uw locatie is niet toegankelijk. Google en/of Android heeft toegang tot de locatievoorzieningen van uw toestel nodig om Bluetooth te kunnen gebruiken.</string>
   <string name="settings_tracing_status_location_button">Open instellingen</string>
   <string name="settings_tracing_location_illustration_description_inactive"></string>
   <string name="preference_r0">
@@ -612,7 +614,7 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
   <string name="submission_intro_symptoms_dialog_body">Heeft u op dit moment symptomen?</string>
   <string name="submission_intro_symptoms_dialog_positive">Ja</string>
   <string name="submission_intro_symptoms_dialog_negative">Neen</string>
-  <string name="submission_test_request_headline">Laat u testen</string>
+  <string name="submission_test_request_headline">Ontvang je testresultaat</string>
   <string name="submission_test_request_text">Selecteer de datum waarop u de symptomen begon te vertonen. Dit wordt u meegedeeld door de persoon die de test uitvoert.</string>
   <string name="submission_test_request_save_text">Laat dit cijfer zien aan de persoon die de test afneemt. Tik op \'Bewaar\', zodat u een melding krijgt zodra het testresultaat beschikbaar is.</string>
   <string name="submission_test_request_save_button_save">Bewaar</string>
@@ -620,22 +622,22 @@ U geeft uw testresultaat vrijwillig door via de app. U wordt niet gestraft als u
   <string name="submission_countries_selection_text">Als u op een van onderstaande data niet in België was en u deze informatie (anoniem) wilt doorgeven, kies dan de landen die u op die datum hebt bezocht. Tik op de lijn die u wilt wijzigen.</string>
   <string name="submission_countries_selection_dialog_title">Kies een land</string>
   <string name="preference_background_check_done">preference_background_check_done</string>
-  <string name="risk_card_body_open_daily">Note: Please open the app daily to update your risk status.</string>
-  <string name="risk_details_information_body_notice_low">Therefore, your risk of infection has been ranked as low. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else.</string>
-  <string name="risk_details_information_body_notice_increased">Therefore, your risk of infection has been ranked as increased. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else. When you get home, please also avoid close contact with members of your family or household.</string>
-  <string name="onboarding_energy_optimized_dialog_headline">Allow prioritized background activity</string>
-  <string name="onboarding_energy_optimized_dialog_body">Maak prioritaire achtergrondactiviteit mogelijk zodat de App op elk moment uw risicostatus op de achtergrond kan bepalen (aanbevolen). Dit schakelt de optimalisatie van de levensduur van de batterij uit, alleen voor de Coronalert-App. We verwachten niet dat dit een significante vermindering van de batterijduur van uw apparaat zal veroorzaken.
+  <string name="risk_card_body_open_daily">Opmerking: Open de app dagelijks om uw risicostatus bij te werken.</string>
+  <string name="risk_details_information_body_notice_low">Daarom is uw kans op infectie geklasseerd als laag. Uw infectierisico wordt berekend aan de hand van de blootstellingsregistratiegegevens (duur en nabijheid) ter plaatse op uw toestel. Uw infectierisico kan niet worden gezien door, of worden doorgegeven aan iemand anders.</string>
+  <string name="risk_details_information_body_notice_increased">Daarom is uw risico op infectie als verhoogd geklasseerd. Uw infectierisico wordt berekend aan de hand van de blootstellingsregistratiegegevens (duur en nabijheid) op uw toestel. Uw infectierisico kan niet worden gezien door, of worden doorgegeven aan iemand anders. Als u thuiskomt, vermijd dan ook nauw contact met uw familie of huishouden.</string>
+  <string name="onboarding_energy_optimized_dialog_headline">Prioritaire achtergrondactiviteit toestaan</string>
+  <string name="onboarding_energy_optimized_dialog_body">Maak prioritaire achtergrondactiviteit mogelijk zodat de App op elk moment uw risicostatus op de achtergrond kan bepalen (aanbevolen). Dit schakelt de optimalisatie van de levensduur van de batterij uit, alleen voor Coronalert. We verwachten niet dat dit een significante vermindering van de batterijduur van uw apparaat zal veroorzaken.
 
 Als u deze instelling niet toestaat, raden wij u aan om de App minimaal één keer per 24 uur handmatig te openen.</string>
-  <string name="onboarding_energy_optimized_dialog_button_positive">Allow</string>
-  <string name="onboarding_energy_optimized_dialog_button_negative">Do Not Allow</string>
-  <string name="onboarding_manual_required_dialog_headline">Prioritized background activity disabled</string>
-  <string name="onboarding_manual_required_dialog_body">Please note that with prioritized background activity disabled, you have to open the App manually at least once every 24 hours to update your risk status.
+  <string name="onboarding_energy_optimized_dialog_button_positive">Laat  toe</string>
+  <string name="onboarding_energy_optimized_dialog_button_negative">Niet toestaan</string>
+  <string name="onboarding_manual_required_dialog_headline">Prioritaire achtergrondactiviteit uitgeschakeld</string>
+  <string name="onboarding_manual_required_dialog_body">Wees er van bewust dat u met uitgeschakelde prioritaire achtergrondactiviteit de app minstens elke 24 uur manueel moet openen op uw risicostatus te updaten.
 
-You can enable prioritized background activity in your settings any time.</string>
+U kan op gelijk welk moment prioritaire achtergrondactiviteit inschakelen in de instellingen van uw toestel.</string>
   <string name="onboarding_manual_required_dialog_button">OK</string>
-  <string name="submission_error_dialog_web_tan_redeemed_title">Test has errors</string>
-  <string name="submission_error_dialog_web_tan_redeemed_body">There was a problem evaluating your test.</string>
+  <string name="submission_error_dialog_web_tan_redeemed_title">Test heeft fouten</string>
+  <string name="submission_error_dialog_web_tan_redeemed_body">Er was een probleem met de evaluatie van uw test.</string>
   <string name="submission_error_dialog_web_tan_redeemed_button_positive">OK</string>
   <string name="onboarding_tracing_easy_language_explanation"></string>
   <string name="information_legal_subtitle_contact_form"></string>
@@ -644,9 +646,10 @@ You can enable prioritized background activity in your settings any time.</strin
     <xliff:g id="preference">preference_background_notification</xliff:g>
   </string>
   <plurals name="risk_card_body_contact_value_high_risk">
-    <item quantity="one">%1$s exposure</item>
-    <item quantity="other">%1$s exposures</item>
+    <item quantity="one">%1$s blootstelling</item>
+    <item quantity="other">%1$s blootstellingen</item>
   </plurals>
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
+  <string name="test_api_switch_background_notifications"></string>
 </resources>
