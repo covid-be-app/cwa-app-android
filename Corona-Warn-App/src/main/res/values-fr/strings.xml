@@ -249,7 +249,7 @@
   <string name="onboarding_subtitle">Plus de protection pour vous et pour nous tous. En utilisant l\'application Coronalert, nous pouvons briser les chaînes d\'infection beaucoup plus rapidement.</string>
   <string name="onboarding_body">Transformez votre appareil en un système d\'alerte au coronavirus. Obtenez un aperçu de votre statut de risque et découvrez si vous avez été en contact étroit avec quelqu\'un positif au COVID-19 au cours des 14 derniers jours.</string>
   <string name="onboarding_body_emphasized">L\'application enregistre les rencontres entre individus en échangeant des identifiants chiffrés et aléatoires entre leurs appareils, sans qu\'aucune donnée personnelle, quelle qu\'elle soit, ne soit consultée.</string>
-  <string name="onboarding_illustration_description">Un groupe de personnes utilisent leurs smartphones dans toute la ville.</string>
+  <string name="onboarding_illustration_description">Logos officiels du gouvernement fédéral, du gouvernement flamand, de la Région wallonne, de la Région de Bruxelles-Capitale et de la Communauté germanophone.</string>
   <string name="onboarding_privacy_accessibility_title">Page d\'accueil 2 sur 5 : Confidentialité des données. Un long texte suit. Pour continuer à tout moment, utilisez le bouton en bas de l\'écran.</string>
   <string name="onboarding_privacy_headline">Données de confidentialité</string>
   <string name="onboarding_privacy_illustration_description">Une femme utilise l\'application Coronalert sur son smartphone. Une icône représentant un cadenas sur le fond d\'un bouclier symbolise les données cryptées.</string>

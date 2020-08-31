@@ -250,7 +250,7 @@ This can take several minutes.</string>
   <string name="onboarding_subtitle">More protection for you and for us all. By using the Coronalert-App we can break infection chains much quicker.</string>
   <string name="onboarding_body">Turn your device into a coronavirus warning system. Get an overview of your risk status and find out whether you\'ve had close contact with anyone diagnosed with COVID-19 in the last 14 days.</string>
   <string name="onboarding_body_emphasized">The app logs encounters between individuals by exchanging encrypted, random IDs between their devices, whereby no personal data whatsoever is accessed.</string>
-  <string name="onboarding_illustration_description">A group of persons use their smartphones around town.</string>
+  <string name="onboarding_illustration_description">Official logos of the federal government, the Flemish government, the Walloon Region, the Brussels-Capital Region and the German-speaking Community.</string>
   <string name="onboarding_privacy_accessibility_title">Onboarding page 2 of 5: Data Privacy. A long text follows. To proceed at any time, use the button at the bottom of the screen.</string>
   <string name="onboarding_privacy_headline">Data Privacy</string>
   <string name="onboarding_privacy_illustration_description">A woman uses the Coronalert-App on her smartphone. An icon showing a padlock on the background of a shield symbolizes encrypted data.</string>
