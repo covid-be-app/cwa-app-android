@@ -64,7 +64,7 @@ class CoronaWarnApplication : Application(), LifecycleObserver,
 
         NotificationHelper.createNotificationChannel()
         // Enable Conscrypt for TLS1.3 Support below API Level 29
-//        Security.insertProviderAt(Conscrypt.newProvider(), 1)
+        Security.insertProviderAt(Conscrypt.newProvider(), 1)
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
         registerActivityLifecycleCallbacks(this)
 
@@ -73,7 +73,7 @@ class CoronaWarnApplication : Application(), LifecycleObserver,
         }
 
         // notification to test the WakeUpService from Google when the app
-        // was force stopped
+        // was force stopped`
         BackgroundWorkHelper.sendDebugNotification(
             "Application onCreate", "App was woken up"
         )
