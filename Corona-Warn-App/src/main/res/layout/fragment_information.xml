@@ -54,6 +54,7 @@
                     layout="@layout/include_row"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     app:icon="@{@drawable/ic_link}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
