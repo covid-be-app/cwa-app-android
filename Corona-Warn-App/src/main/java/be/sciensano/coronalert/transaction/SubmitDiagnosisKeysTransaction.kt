@@ -8,7 +8,9 @@ import be.sciensano.coronalert.ui.submission.Country
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.transaction.Transaction
 import de.rki.coronawarnapp.transaction.TransactionState
+import de.rki.coronawarnapp.util.ProtoFormatConverterExtensions.limitKeyCount
 import de.rki.coronawarnapp.util.ProtoFormatConverterExtensions.transformKeyHistoryToExternalFormat
+import timber.log.Timber
 import be.sciensano.coronalert.service.diagnosiskey.DiagnosisKeyService as BeDiagnosisKeyService
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
@@ -56,11 +58,13 @@ object SubmitDiagnosisKeysTransaction : Transaction() {
              * RETRIEVE TEMPORARY EXPOSURE KEY HISTORY
              ****************************************************/
             val temporaryExposureKeyList = executeState(RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY) {
-                keys.map { it.first }.transformKeyHistoryToExternalFormat()
-                    .mapIndexed { index, temporaryExposureKey ->
+                keys.map { it.first }.limitKeyCount().transformKeyHistoryToExternalFormat()
+                    .map { temporaryExposureKey ->
                         Pair(
                             temporaryExposureKey,
-                            keys[index].second.code3
+                            keys.find {
+                                it.first.rollingStartIntervalNumber == temporaryExposureKey.rollingStartIntervalNumber
+                            }!!.second.code3
                         )
                     }
             }
