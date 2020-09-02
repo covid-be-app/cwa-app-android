@@ -7,6 +7,6 @@ class DatabaseConstantsTest {
 
     @Test
     fun allDatabaseConstants() {
-        Assert.assertEquals(DATABASE_NAME, "coronawarnapp-db")
+        Assert.assertEquals(DATABASE_NAME, "coronalert-db")
     }
 }
