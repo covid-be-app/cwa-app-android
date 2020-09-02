@@ -69,7 +69,8 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setButtonOnClickListener()
 
-        showOneTimeTracingExplanationDialog()
+        //don't show this popup
+//        showOneTimeTracingExplanationDialog()
     }
 
     override fun onResume() {
