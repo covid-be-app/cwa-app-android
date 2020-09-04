@@ -520,7 +520,7 @@
   <string name="errors_communication_with_api">Error during communication with Google interface</string>
   <string name="errors_external_action">You cannot perform this action. Please contact the hotline.</string>
   <string name="errors_google_update_needed">Your Coronalert-App is correctly installed, but the COVID-19 exposure notifications service is not available on your smartphone\'s operating system. This means that you cannot use the Coronalert-App. For further information, please see our FAQ page: https://coronalert.be/en/faq/</string>
-  <string name="errors_google_api_error">The Coronalert-App is running correctly, but we cannot update your current risk status. Exposure logging remains active and is working correctly. For further information, please see our FAQ page: https://coronalert.be/en/faq/\n</string>
+  <string name="errors_google_api_error">The Coronalert-App is running correctly, but we cannot update your current risk status. Exposure logging remains active and is working correctly. For further information, please see our FAQ page: https://coronalert.be/en/faq/</string>
   <string name="errors_generic_headline">Something went wrong.</string>
   <string name="errors_generic_details_headline">Cause</string>
   <string name="errors_generic_button_positive">OK</string>

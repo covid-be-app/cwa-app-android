@@ -168,7 +168,7 @@
   <string name="risk_card_loading_body">De huidige gegevens worden gedownload en gecontroleerd. Dit kan enkele minuten duren.</string>
   <string name="main_about_headline">FAQ</string>
   <string name="main_about_body">Hier vindt u antwoorden op veelgestelde vragen over Coronalert. U wordt doorgestuurd naar een externe website.</string>
-  <string name="main_about_link">https://coronalert.be/nl/faq/</string>
+  <string name="main_about_link">https://coronalert.be/nl/faq-nl/</string>
   <string name="hint_external_webpage">Hier vindt u antwoorden op veelgestelde vragen over Coronalert. U wordt doorgestuurd naar een externe website.</string>
   <string name="main_share_title">Deel de Coronalert-app</string>
   <string name="main_share_headline">Samen krijgen we het coronavirus klein</string>
@@ -217,7 +217,7 @@
   <string name="risk_details_headline_period_logged">Geregistreerde periode</string>
   <string name="risk_details_subtitle_period_logged">Deze periode is opgenomen in de berekening.</string>
   <string name="risk_details_information_body_period_logged">Uw risico op een besmetting kan alleen worden berekend voor perioden waarin de blootstellingschecks actief waren. De blootstellingschecks moeten daarom permanent actief blijven.</string>
-  <string name="risk_details_information_body_period_logged_assessment">De blootstellingschecks dekkern de voorbije 14 dagen. De blootstellingschecks op uw toestel waren tijdens deze periode %1$s dagen actief. De app verwijdert automatisch oudere registraties, omdat ze niet langer relevant zijn voor het voorkomen van besmettingen.</string>
+  <string name="risk_details_information_body_period_logged_assessment">De blootstellingschecks dekken de voorbije 14 dagen. De blootstellingschecks op uw toestel waren tijdens deze periode %1$s dagen actief. De app verwijdert automatisch oudere registraties, omdat ze niet langer relevant zijn voor het voorkomen van besmettingen.</string>
   <string name="risk_details_subtitle_infection_risk_past">Zo werd uw risico berekend</string>
   <string name="risk_details_subtitle_infection_risk">Zo wordt uw risico berekend</string>
   <string name="risk_details_information_body_unknown_risk">U hebt Coronalert niet lang genoeg aangezet. Daarom kunnen we uw risico op besmetting niet berekenen.</string>
@@ -519,8 +519,8 @@
   <string name="errors_not_enough_device_storage">U heeft niet voldoende vrij geheugen.</string>
   <string name="errors_communication_with_api">Fout tijdens de communicatie met Google-interface</string>
   <string name="errors_external_action">U kunt deze actie niet uitvoeren. Neem contact op met de hotline.</string>
-  <string name="errors_google_update_needed">Coronalert is correct geïnstalleerd, maar de functie Blootstellingsmeldingen is niet beschikbaar in het besturingssysteem van uw smartphone. Dat betekent dat u Coronalert niet kunt gebruiken. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq/</string>
-  <string name="errors_google_api_error">Coronalert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De blootstellingschecks blijven actief en werken correct. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq/ \n</string>
+  <string name="errors_google_update_needed">Coronalert is correct geïnstalleerd, maar de functie Blootstellingsmeldingen is niet beschikbaar in het besturingssysteem van uw smartphone. Dat betekent dat u Coronalert niet kunt gebruiken. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq-nl/</string>
+  <string name="errors_google_api_error">Coronalert werkt correct, maar we kunnen uw huidige risicostatus niet bijwerken. De blootstellingschecks blijven actief en werken correct. Ga voor meer informatie naar onze FAQ-pagina: https://coronalert.be/nl/faq-nl/</string>
   <string name="errors_generic_headline">Er is iets fout gegaan.</string>
   <string name="errors_generic_details_headline">Oorzaak</string>
   <string name="errors_generic_button_positive">OK</string>
