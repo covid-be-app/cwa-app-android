@@ -6,7 +6,7 @@ import com.google.protobuf.ByteString
 import de.rki.coronawarnapp.service.submission.SubmissionConstants
 import org.junit.Assert
 import org.junit.Test
-import java.util.Date
+import java.util.Calendar
 
 class SubmissionPayloadTest {
 
@@ -17,20 +17,24 @@ class SubmissionPayloadTest {
 
     @Test
     fun testPayloadSizesAllEquals() {
-        val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
-            .setKeyData(ByteString.copyFrom(key1))
-            .setRollingStartIntervalNumber((Date().time / 60 / 10 / 1000).toInt())
-            .setRollingPeriod(144)
-            .setTransmissionRiskLevel(4)
-            .build()
+        val sizes = (0..SubmissionConstants.minKeyCountForSubmission).flatMap { index ->
+            (2020..2100).map { year ->
+                val cal = Calendar.getInstance()
+                cal.set(year, 1, 1)
 
-        val sizes = (0..SubmissionConstants.minKeyCountForSubmission).map { index ->
-            KeyExportFormat.SubmissionPayload.newBuilder()
-                .addAllKeys(List(index) { key })
-                .addAllCountries(List(index) { "BEL" })
-                .setPadding(getPadding(index))
-                .build().serializedSize
+                val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
+                    .setKeyData(ByteString.copyFrom(key1))
+                    .setRollingStartIntervalNumber((cal.time.time / 60 / 10 / 1000).toInt())
+                    .setRollingPeriod(144)
+                    .setTransmissionRiskLevel(4)
+                    .build()
 
+                KeyExportFormat.SubmissionPayload.newBuilder()
+                    .addAllKeys(List(index) { key })
+                    .addAllCountries(List(index) { "BEL" })
+                    .setPadding(getPadding(index))
+                    .build().serializedSize
+            }
         }
 
         Assert.assertEquals(sizes.distinct().size, 1)
