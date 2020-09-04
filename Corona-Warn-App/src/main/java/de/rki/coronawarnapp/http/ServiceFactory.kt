@@ -1,6 +1,7 @@
 package de.rki.coronawarnapp.http
 
 import android.webkit.URLUtil
+import be.sciensano.coronalert.http.service.StatisticsService
 import de.rki.coronawarnapp.BuildConfig
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.exception.http.ServiceFactoryException
@@ -226,5 +227,19 @@ class ServiceFactory {
             .addConverterFactory(gsonConverterFactory)
             .build()
             .create(BeSubmissionService::class.java)
+    }
+
+    private val statisticsCdnUrl
+        get() = getValidUrl(BuildConfig.STATISTICS_CDN_URL)
+
+    fun statisticsService(): StatisticsService = statisticsService
+    private val statisticsService by lazy {
+        Retrofit.Builder()
+            .client(okHttpClient.buildClientWithNewSpecs(getCDNSpecs()))
+            .baseUrl(statisticsCdnUrl)
+            .addConverterFactory(protoConverterFactory)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+            .create(StatisticsService::class.java)
     }
 }
