@@ -168,7 +168,7 @@
   <string name="risk_card_loading_body">Aktuelle Daten werden heruntergeladen und geprüft.\n Das kann mehrere Minuten dauern.</string>
   <string name="main_about_headline">Häufig gestellte Fragen</string>
   <string name="main_about_body">Hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
-  <string name="main_about_link">https://coronalert.be/de/faq/</string>
+  <string name="main_about_link">https://coronalert.be/de/faq-de/</string>
   <string name="hint_external_webpage">Häufige Fragen, hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
   <string name="main_share_title">Coronalert-App teilen</string>
   <string name="main_share_headline">Gemeinsam gegen Corona</string>
@@ -519,8 +519,8 @@
   <string name="errors_not_enough_device_storage">Freier Speicherplatz unzureichend.</string>
   <string name="errors_communication_with_api">Fehler bei der Kommunikation mit der Google-Schnittstelle.</string>
   <string name="errors_external_action">Handlung ist derzeit unmöglich. Bitte Hotline kontaktieren.</string>
-  <string name="errors_google_update_needed">Ihre Coronalert-App ist korrekt installiert. Leider fehlt dem Betriebssystem Ihres Handys der Dienst „Meldungen Kontakt mit COVID-19-Infizierten“ und Sie können die Coronalert-App nicht nutzen. Weitere Informationen finden Sie in unseren FAQ: https://coronalert.be/de/faq/</string>
-  <string name="errors_google_api_error">Ihre Coronalert-App läuft fehlerfrei. Leider kann Ihr Risikostatus derzeit nicht aktualisiert werden. Ihr Kontaktlogbuch ist weiterhin aktiv und funktioniert. Weitere Informationen finden Sie in unseren FAQ: https://coronalert.be/de/faq/ \n</string>
+  <string name="errors_google_update_needed">Ihre Coronalert-App ist korrekt installiert. Leider fehlt dem Betriebssystem Ihres Handys der Dienst „Meldungen Kontakt mit COVID-19-Infizierten“ und Sie können die Coronalert-App nicht nutzen. Weitere Informationen finden Sie in unseren FAQ: https://coronalert.be/de/faq-de/</string>
+  <string name="errors_google_api_error">Ihre Coronalert-App läuft fehlerfrei. Leider kann Ihr Risikostatus derzeit nicht aktualisiert werden. Ihr Kontaktlogbuch ist weiterhin aktiv und funktioniert. Weitere Informationen finden Sie in unseren FAQ: https://coronalert.be/de/faq-de/ \n</string>
   <string name="errors_generic_headline">Etwas ist schiefgelaufen.</string>
   <string name="errors_generic_details_headline">Ursache</string>
   <string name="errors_generic_button_positive">Okay</string>

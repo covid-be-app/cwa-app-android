@@ -168,7 +168,7 @@
   <string name="risk_card_loading_body">Les données actuelles sont téléchargées et vérifiées. Cela peut prendre plusieurs minutes.</string>
   <string name="main_about_headline">FAQ</string>
   <string name="main_about_body">Vous trouverez ici les réponses aux questions fréquemment posées sur l\'application Coronalert. Vous serez dirigé vers un site web externe.</string>
-  <string name="main_about_link">https://coronalert.be/fr/faq/</string>
+  <string name="main_about_link">https://coronalert.be/fr/faq-fr/</string>
   <string name="hint_external_webpage">Vous trouverez ici les réponses aux questions fréquemment posées sur l\'application Coronalert. Vous serez dirigé vers un site web externe.</string>
   <string name="main_share_title">Partager l\'application Coronalert</string>
   <string name="main_share_headline">Luttons ensemble contre le coronavirus !</string>
@@ -496,7 +496,7 @@
   <string name="submission_status_card_body_positive">Vous avez été diagnostiqué positif pour le SRAS-CoV-2.</string>
   <string name="submission_status_card_body_negative">Vous avez été diagnostiqué négatif pour le SRAS-CoV-2.</string>
   <string name="submission_status_card_button_unregistered">Je me fais tester</string>
-  <string name="submission_status_card_button_show_results">Test d\'affichage</string>
+  <string name="submission_status_card_button_show_results">Voir mon test</string>
   <string name="submission_status_card_positive_result_subtitle">Veuillez noter :</string>
   <string name="submission_status_card_positive_result_contagious">Vous êtes infectieux. Isolez-vous des autres.</string>
   <string name="submission_status_card_positive_result_contact">L\'autorité de santé publique vous contactera dans les prochains jours par téléphone ou par courrier.</string>
@@ -519,8 +519,8 @@
   <string name="errors_not_enough_device_storage">Vous n\'avez pas suffisamment de mémoire libre.</string>
   <string name="errors_communication_with_api">Erreur lors de la communication avec l\'interface Google</string>
   <string name="errors_external_action">Vous ne pouvez pas effectuer cette action. Veuillez contacter la hotline.</string>
-  <string name="errors_google_update_needed">Votre app Coronalert est correctement installé, mais le service COVID-19 exposure notifications n\'est pas disponible sur le système d\'exploitation de votre smartphone. Cela signifie que vous ne pouvez pas utiliser le service Coronalert. Pour plus d\'informations, veuillez consulter notre page FAQ : https://coronalert.be/fr/faq/</string>
-  <string name="errors_google_api_error">L\'app Coronalert fonctionne correctement, mais nous ne pouvons pas mettre à jour votre statut de risque actuel. L\'enregistrement de l\'exposition reste actif et fonctionne correctement. Pour plus d\'informations, veuillez consulter notre page FAQ : https://coronalert.be/fr/faq/ \n</string>
+  <string name="errors_google_update_needed">Votre app Coronalert est correctement installé, mais le service COVID-19 exposure notifications n\'est pas disponible sur le système d\'exploitation de votre smartphone. Cela signifie que vous ne pouvez pas utiliser le service Coronalert. Pour plus d\'informations, veuillez consulter notre page FAQ : https://coronalert.be/fr/faq-fr/</string>
+  <string name="errors_google_api_error">L\'app Coronalert fonctionne correctement, mais nous ne pouvons pas mettre à jour votre statut de risque actuel. L\'enregistrement de l\'exposition reste actif et fonctionne correctement. Pour plus d\'informations, veuillez consulter notre page FAQ : https://coronalert.be/fr/faq-fr/</string>
   <string name="errors_generic_headline">Un problème est survenu.</string>
   <string name="errors_generic_details_headline">Cause</string>
   <string name="errors_generic_button_positive">OK</string>
