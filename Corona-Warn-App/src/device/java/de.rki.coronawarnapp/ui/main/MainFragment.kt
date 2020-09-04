@@ -70,7 +70,7 @@ class MainFragment : Fragment() {
         setButtonOnClickListener()
         setContentDescription()
 
-        showOneTimeTracingExplanationDialog()
+//        showOneTimeTracingExplanationDialog()
     }
 
     override fun onResume() {
