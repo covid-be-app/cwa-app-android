@@ -48,7 +48,7 @@ object SubmissionRepository {
                 LocalData.isTestResultNegative(true)
             }
 
-            if (testResult != TestResult.PENDING) {
+            if (testResult == TestResult.POSITIVE || testResult == TestResult.NEGATIVE) {
                 BeSubmissionService.asyncSendAck(testResultResponse)
             }
 
