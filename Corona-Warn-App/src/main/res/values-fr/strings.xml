@@ -205,13 +205,13 @@
   <string name="risk_details_headline_behavior">Mesures de prévention</string>
   <string name="risk_details_subtitle_behavior">Voici ce que vous devez faire</string>
   <string name="risk_details_behavior_body_stay_home">Si possible, rentrez chez vous et restez-y.</string>
-  <string name="risk_details_behavior_body_contact_doctor">Si vous avez des questions concernant les symptômes, la disponibilité des tests ou l\'auto-isolement, veuillez contacter l\'une des personnes suivantes:</string>
+  <string name="risk_details_behavior_body_contact_doctor">Avez-vous des symptômes qui peuvent indiquer la présence de Covid-19, tels que fatigue, fièvre, toux sèche, maux de tête, perte de goût ou d\'odorat ? Veuillez contacter l\'une des personnes suivantes :</string>
   <string name="risk_details_behavior_body_wash_hands">Lavez-vous les mains régulièrement.</string>
   <string name="risk_details_behavior_body_wear_mask">Portez un masque facial lorsque vous rencontrez d\'autres personnes, ainsi que sur les lieux où c\'est obligatoire.</string>
   <string name="risk_details_behavior_body_stay_away">Gardez au moins 1,5 mètre de distance avec les autres personnes.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Éternuez ou toussez dans votre coude ou dans un mouchoir en papier.</string>
   <string name="risk_details_behavior_increased_body_1">Votre médecin généraliste</string>
-  <string name="risk_details_behavior_increased_body_2">Service d\'urgence médicale au numéro de téléphone 112.</string>
+  <string name="risk_details_behavior_increased_body_2">Le service de garde médical sur le numéro 1733</string>
   <string name="risk_details_behavior_increased_body_3">Votre autorité de santé publique</string>
   <string name="risk_details_headline_infection_risk">Risque d\'infection</string>
   <string name="risk_details_headline_period_logged">Période enregistrée</string>
@@ -610,4 +610,7 @@
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
   <string name="test_api_switch_background_notifications"></string>
+    <string name="risk_details_behavior_body_contact_no_symptom">Vous n\'avez pas de symptômes ? Si tel est le cas, veuillez prendre contact avec :</string>
+  <string name="risk_details_behavior_get_tested">Faites-vous tester dès que possible.</string>
+  <string name="risk_details_behavior_increased_body_1_no_symptom">Le centre de contact au 02 214.19.19</string>
 </resources>

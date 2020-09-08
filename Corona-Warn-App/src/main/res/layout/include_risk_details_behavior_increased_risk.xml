@@ -46,6 +46,55 @@
             app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_stay_home"
             app:riskLevel="@{tracingViewModel.riskLevel}" />
 
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/risk_details_behavior_get_tested"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_stay_away">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/risk_details_behavior_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle"
+                android:backgroundTint="@{FormatterRiskHelper.formatBehaviorIconBackground(tracingViewModel.riskLevel)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    style="@style/icon"
+                    android:layout_width="@dimen/icon_size_risk_details_behavior"
+                    android:layout_height="@dimen/icon_size_risk_details_behavior"
+                    android:layout_margin="@dimen/icon_margin_risk_details_behavior"
+                    android:focusable="false"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_risk_warning"
+                    android:tint="@{FormatterRiskHelper.formatBehaviorIcon(tracingViewModel.riskLevel)}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                style="@style/subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:text="@string/risk_details_behavior_get_tested"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/risk_details_behavior_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <include
             android:id="@+id/risk_details_behavior_cough_sneeze"
             layout="@layout/include_risk_details_behavior_row"
@@ -57,15 +106,15 @@
             app:icon="@{@drawable/ic_risk_details_contact}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_stay_away"
+            app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_get_tested"
             app:riskLevel="@{tracingViewModel.riskLevel}" />
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/risk_details_behavior_bullet_symptoms"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_large"
-            android:layout_marginTop="@dimen/spacing_tiny"
+            android:layout_marginTop="16dp"
             android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,17 +143,45 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_bullet_point_1" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/risk_details_behavior_no_symptom"
+            layout="@layout/include_risk_details_behavior_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:focusable="false"
+            app:body="@{@string/risk_details_behavior_body_contact_no_symptom}"
+            app:icon="@{@drawable/ic_risk_details_contact}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_bullet_symptoms"
+            app:riskLevel="@{tracingViewModel.riskLevel}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/risk_details_behavior_bullet_no_symptoms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="16dp"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/risk_details_behavior_no_symptom">
+
             <TextView
-                android:id="@+id/risk_details_behavior_bullet_point_3"
+                android:id="@+id/risk_details_behavior_bullet_point_1_no_symptoms"
                 style="@style/subtitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_tiny"
                 android:focusable="false"
-                android:text="@string/risk_details_behavior_increased_body_3"
+                android:text="@string/risk_details_behavior_increased_body_1_no_symptom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_bullet_point_2" />
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
