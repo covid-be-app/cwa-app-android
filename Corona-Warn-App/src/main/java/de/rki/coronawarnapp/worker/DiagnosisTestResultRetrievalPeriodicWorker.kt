@@ -71,7 +71,6 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                     initiateNotification(TestResult.fromInt(testResult.result))
                 } else {
                     BeSubmissionService.deleteRegistrationToken()
-                    stopWorker()
                 }
             } else {
                 DummyService(WebRequestBuilder.getInstance()).sendDummyRequestsIfNeeded()
@@ -112,7 +111,6 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                 )
             }
             LocalData.isTestResultNotificationSent(true)
-            stopWorker()
         }
     }
 

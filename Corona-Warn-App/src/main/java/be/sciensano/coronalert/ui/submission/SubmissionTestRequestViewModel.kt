@@ -40,6 +40,7 @@ class SubmissionTestRequestViewModel : ViewModel() {
             LocalData.r0(mobileTestId.r0)
             LocalData.k(mobileTestId.k)
             LocalData.registrationToken(mobileTestId.registrationToken())
+            LocalData.initialPollingForTestResultTimeStamp(System.currentTimeMillis())
         }
 
 }
