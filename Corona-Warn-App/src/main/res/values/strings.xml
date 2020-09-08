@@ -205,13 +205,13 @@
   <string name="risk_details_headline_behavior">Preventive measures</string>
   <string name="risk_details_subtitle_behavior">This is what you should do</string>
   <string name="risk_details_behavior_body_stay_home">If possible, please go home and stay at home.</string>
-  <string name="risk_details_behavior_body_contact_doctor">If you have questions about symptoms, testing availability, or self-isolation, please contact one of the following:</string>
+  <string name="risk_details_behavior_body_contact_doctor">Do you have any symptoms indicating Covid-19, such as fatigue, fever, dry cough, headache, loss of taste or smell? Please contact one of the following persons:</string>
   <string name="risk_details_behavior_body_wash_hands">Wash your hands regularly.</string>
   <string name="risk_details_behavior_body_wear_mask">Wear a face mask when you encounter other people, as well as in places where it is mandatory.</string>
   <string name="risk_details_behavior_body_stay_away">Keep at least 1.5 meters distance from other people.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Sneeze or cough into your elbow or a tissue.</string>
-  <string name="risk_details_behavior_increased_body_1">Your general practitioner</string>
-  <string name="risk_details_behavior_increased_body_2">General medical emergency service on telephone number 112</string>
+  <string name="risk_details_behavior_increased_body_1">- Your general practitioner</string>
+  <string name="risk_details_behavior_increased_body_2">- Medical out-of-hours service at 1733</string>
   <string name="risk_details_behavior_increased_body_3">Your public health authority</string>
   <string name="risk_details_headline_infection_risk">Risk of Infection</string>
   <string name="risk_details_headline_period_logged">Period logged</string>
@@ -483,19 +483,19 @@
   <string name="submission_contact_step_1_content"></string>
   <string name="submission_contact_step_2_content"></string>
   <string name="submission_status_card_title_fetching">Data being retrieved....</string>
-  <string name="submission_status_card_title_unregistered">I want to do a test</string>
+  <string name="submission_status_card_title_unregistered">Receive your test result</string>
   <string name="submission_status_card_title_pending">Your result is not yet available</string>
   <string name="submission_status_card_title_available">Your result is available</string>
   <string name="submission_status_card_title_positive">Positive Diagnosis</string>
   <string name="submission_status_card_subtitle_invalid">Invalid test</string>
   <string name="submission_status_card_subtitle_negative">Negative Diagnosis</string>
   <string name="submission_status_card_body_fetching">You result is being updated</string>
-  <string name="submission_status_card_body_unregistered">Help to break the infection chain by notifying others.</string>
+  <string name="submission_status_card_body_unregistered">Generate the code to receive your test result on your smartphone</string>
   <string name="submission_status_card_body_pending">The evaluation of your test is not yet done.</string>
   <string name="submission_status_card_body_invalid">Your test could not be evaluated.</string>
   <string name="submission_status_card_body_positive">You have been diagnosed positive for SARS-CoV-2.</string>
   <string name="submission_status_card_body_negative">You have been diagnosed negative for SARS-CoV-2.</string>
-  <string name="submission_status_card_button_unregistered">I will be tested</string>
+  <string name="submission_status_card_button_unregistered">Generate the code</string>
   <string name="submission_status_card_button_show_results">Display Test</string>
   <string name="submission_status_card_positive_result_subtitle">Please note:</string>
   <string name="submission_status_card_positive_result_contagious">You are infectious. Isolate yourself from other people.</string>
@@ -576,7 +576,7 @@
   <string name="submission_intro_symptoms_dialog_body">Do you currently have symptoms?</string>
   <string name="submission_intro_symptoms_dialog_positive">Yes</string>
   <string name="submission_intro_symptoms_dialog_negative">No</string>
-  <string name="submission_test_request_headline">Get tested</string>
+  <string name="submission_test_request_headline">Generate the code</string>
   <string name="submission_test_request_text">Select the date on which you started having symptoms. This will be communicated to you by the person doing the test.</string>
   <string name="submission_test_request_save_text">Show this number to the person doing the test. Tap \"Save\" so you can be notified as soon as the test result is available.</string>
   <string name="submission_test_request_save_button_save">Save</string>
@@ -610,4 +610,7 @@
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
   <string name="test_api_switch_background_notifications">Background notification</string>
+  <string name="risk_details_behavior_body_contact_no_symptom">Do you have no symptoms? Please contact:</string>
+  <string name="risk_details_behavior_increased_body_1_no_symptom">- The contact center on 02 214.19.19</string>
+  <string name="risk_details_behavior_get_tested">Get tested as soon as possible.</string>
 </resources>

@@ -60,5 +60,6 @@ object SubmissionService {
         LocalData.k(null)
         LocalData.t3(null)
         LocalData.resultChannel(-1)
+        LocalData.initialPollingForTestResultTimeStamp(0L)
     }
 }

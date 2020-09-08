@@ -3,7 +3,7 @@
 
     <!-- Brand Colors -->
     <color name="colorBrandPrimary">#FC2251</color>
-    <color name="colorBrandSecondary">#25ba6c</color>
+    <color name="colorBrandSecondary">#00A35A</color>
     <color name="colorBrandTertiary">#EA003D</color>
 
     <!-- Backgrounds and Separators -->
@@ -20,24 +20,24 @@
     <color name="colorTextPrimary3">#4D17191A</color>
     <color name="colorTextEmphasizedButton">#FFFFFF</color>
     <color name="colorTextSemanticRed">#FC2251</color>
-    <color name="colorTextSemanticGreen">#25BA6C</color>
+    <color name="colorTextSemanticGreen">#00A35A</color>
     <color name="colorTextSemanticNeutral">#6B8384</color>
     <color name="colorTextTint">#007FAD</color>
 
     <!-- Semantic -->
     <color name="colorSemanticHighRisk">#FC2251</color>
     <color name="colorSemanticHighRiskPressed">#EA003D</color>
-    <color name="colorSemanticLowRisk">#25BA6C</color>
-    <color name="colorSemanticLowRiskPressed">#00A35A</color>
+    <color name="colorSemanticLowRisk">#00A35A</color>
+    <color name="colorSemanticLowRiskPressed">#038946</color>
     <color name="colorSemanticNeutralRisk">#6B8384</color>
     <color name="colorSemanticNeutralRiskPressed">#556666</color>
     <color name="colorSemanticUnknownRisk">#FFFFFF</color>
     <color name="colorSemanticUnknownRiskPressed">#E7E8E8</color>
 
     <!-- Accent -->
-    <color name="colorAccentTintButton">#25ba6c</color>
-    <color name="colorAccentTintButtonPressed">#00A35A</color>
-    <color name="colorAccentTintIcon">#25ba6c</color>
+    <color name="colorAccentTintButton">#00A35A</color>
+    <color name="colorAccentTintButtonPressed">#038946</color>
+    <color name="colorAccentTintIcon">#00A35A</color>
 
     <!-- Misc -->
     <color name="colorTransparent">#00FFFFFF</color>

@@ -205,13 +205,13 @@
   <string name="risk_details_headline_behavior">Vorbeugende Maßnahmen</string>
   <string name="risk_details_subtitle_behavior">So verhalten Sie sich richtig</string>
   <string name="risk_details_behavior_body_stay_home">Gehen Sie, wenn möglich, nach Hause bzw. bleiben Sie zu Hause.</string>
-  <string name="risk_details_behavior_body_contact_doctor">Bitte wenden Sie sich mit Fragen zu Symptomen, Testmöglichkeiten und weiteren Isolationsmaßnahmen, sich an eine der folgenden Stellen:</string>
+  <string name="risk_details_behavior_body_contact_doctor">Haben Sie Symptome, die auf Covid-19 hinweisen können, wie z.B. Müdigkeit, Fieber, trockener Husten, Kopfschmerzen, Geschmacks- oder Geruchsverlust? Bitte kontaktieren Sie eine der folgenden Personen:</string>
   <string name="risk_details_behavior_body_wash_hands">Waschen Sie Ihre Hände regelmäßig.</string>
   <string name="risk_details_behavior_body_wear_mask">Tragen Sie einen Mundschutz bei Begegnungen mit anderen Personen, sowie an Orten, an denen dies vorgeschrieben ist.</string>
   <string name="risk_details_behavior_body_stay_away">Halten Sie mindestens 1,5 Meter Abstand zu anderen Personen.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Niesen oder husten Sie in die Armbeuge oder in ein Taschentuch.</string>
-  <string name="risk_details_behavior_increased_body_1">Ihr Hausarzt</string>
-  <string name="risk_details_behavior_increased_body_2">Kassenärztlicher Bereitschaftsdienst unter der Telefonnummer: 112</string>
+  <string name="risk_details_behavior_increased_body_1">- Ihr Hausarzt</string>
+  <string name="risk_details_behavior_increased_body_2">- Den medizinischen Bereitschaftsdienst auf der Nummer 1733</string>
   <string name="risk_details_behavior_increased_body_3">Ihr Gesundheitsamt</string>
   <string name="risk_details_headline_infection_risk">Infektionsrisiko</string>
   <string name="risk_details_headline_period_logged">Erfasste Periode</string>
@@ -483,19 +483,19 @@
   <string name="submission_contact_step_1_content"></string>
   <string name="submission_contact_step_2_content"></string>
   <string name="submission_status_card_title_fetching">Datenabruf…</string>
-  <string name="submission_status_card_title_unregistered">Ich möchte mich testen lassen</string>
+  <string name="submission_status_card_title_unregistered">Erhalten Sie Ihr Testergebnis</string>
   <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
   <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
   <string name="submission_status_card_title_positive">Befund positiv</string>
   <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
   <string name="submission_status_card_subtitle_negative">Befund negativ</string>
   <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
-  <string name="submission_status_card_body_unregistered">Helfen Sie, die Infektionskette zu durchbrechen, indem Sie andere warnen.</string>
+  <string name="submission_status_card_body_unregistered">Generieren Sie den Code, um Ihr Testergebnis auf Ihrem Smartphone zu erhalten</string>
   <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
   <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
   <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
   <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
-  <string name="submission_status_card_button_unregistered">Ich lasse mich testen</string>
+  <string name="submission_status_card_button_unregistered">Generieren Sie den Code</string>
   <string name="submission_status_card_button_show_results">Test anzeigen</string>
   <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
   <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
@@ -576,7 +576,7 @@
   <string name="submission_intro_symptoms_dialog_body">Treten derzeit Symptome auf?</string>
   <string name="submission_intro_symptoms_dialog_positive">Ja</string>
   <string name="submission_intro_symptoms_dialog_negative">Nein</string>
-  <string name="submission_test_request_headline">Lassen Sie sich testen</string>
+  <string name="submission_test_request_headline">Generieren Sie den Code</string>
   <string name="submission_test_request_text">Wählen Sie das Datum aus, an dem Sie mit den Symptomen begonnen haben. Dies wird Ihnen von der Person, die den Test durchführt, mitgeteilt.</string>
   <string name="submission_test_request_save_text">Diese Nummer der Testperson zeigen. \'Speichern\' antippen, damit Sie das verfügbare Testergebnis erhalten.</string>
   <string name="submission_test_request_save_button_save">Speichern</string>
@@ -587,7 +587,7 @@
   <string name="risk_card_body_open_daily">Hinweis: Bitte öffnen Sie die App täglich, um Ihren Risikostatus zu aktualisieren.</string>
   <string name="risk_details_information_body_notice_low">Daher wurde Ihr Infektionsrisiko als gering eingestuft. Ihr Infektionsrisiko wird aus den Daten der Expositionsprotokollierung (Dauer und Nähe) lokal auf Ihrem Gerät berechnet. Ihr Infektionsrisiko kann von niemand anderem gesehen oder weitergegeben werden.</string>
   <string name="risk_details_information_body_notice_increased">Daher wurde Ihr Infektionsrisiko als erhöht eingestuft. Ihr Infektionsrisiko wird aus den Daten der Expositionsprotokollierung (Dauer und Nähe) lokal auf Ihrem Gerät berechnet. Ihr Infektionsrisiko kann von niemand anderem gesehen oder weitergegeben werden. Wenn Sie nach Hause kommen, vermeiden Sie bitte auch engen Kontakt mit Mitgliedern Ihrer Familie oder Ihres Haushalts.</string>
-  <string name="onboarding_energy_optimized_dialog_headline">Laat geprioriteerde achtergrondactiviteit toe</string>
+  <string name="onboarding_energy_optimized_dialog_headline">Priorisierte Hintergrundaktivität zulassen</string>
   <string name="onboarding_energy_optimized_dialog_body">Aktivieren Sie die priorisierte Hintergrundaktivität, damit die App Ihren Risikostatus jederzeit im Hintergrund bestimmen kann (empfohlen). Dies deaktiviert die Optimierung der Akkulaufzeit nur für die Coronalert-App. Wir gehen nicht davon aus, dass dies zu einer signifikanten Verringerung der Akkulaufzeit Ihres Geräts führen wird.\n\nWenn Sie diese Einstellung nicht zulassen, empfehlen wir Ihnen, die App mindestens einmal alle 24 Stunden manuell zu öffnen.</string>
   <string name="onboarding_energy_optimized_dialog_button_positive">Erlauben</string>
   <string name="onboarding_energy_optimized_dialog_button_negative">Erlauben Sie nicht</string>
@@ -609,5 +609,8 @@
   </plurals>
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
-  <string name="test_api_switch_background_notifications"></string>
+  <string name="test_api_switch_background_notifications">Background notification</string>
+  <string name="risk_details_behavior_body_contact_no_symptom">Haben Sie keine Symptome? Wenn nein, kontaktieren Sie bitte:</string>
+  <string name="risk_details_behavior_increased_body_1_no_symptom">- Das Kontaktzentrum unter der 02 214.19.1</string>
+  <string name="risk_details_behavior_get_tested">Lassen Sie sich so bald wie möglich testen.</string>
 </resources>

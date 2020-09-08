@@ -205,13 +205,13 @@
   <string name="risk_details_headline_behavior">Preventieve maatregelen</string>
   <string name="risk_details_subtitle_behavior">Dit is wat u moet doen</string>
   <string name="risk_details_behavior_body_stay_home">Ga indien mogelijk naar huis en blijf thuis.</string>
-  <string name="risk_details_behavior_body_contact_doctor">Als u vragen heeft over symptomen, de beschikbaarheid van testen of zelfisolatie, neem dan contact op met een van de volgende personen:</string>
+  <string name="risk_details_behavior_body_contact_doctor">Heeft u symptomen die kunnen wijzen op Covid-19, zoals vermoeidheid, koorts, droge hoest, hoofdpijn, verlies van smaak of reuk? Contacteer dan één van volgende personen:</string>
   <string name="risk_details_behavior_body_wash_hands">Was uw handen regelmatig.</string>
   <string name="risk_details_behavior_body_wear_mask">Draag een mondmasker wanneer u in contact komt met andere mensen, maar ook op plaatsen waar dat verplicht is.</string>
   <string name="risk_details_behavior_body_stay_away">Houd minstens 1,5 meter afstand van andere mensen.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Nies of hoest in uw elleboog of een papieren zakdoekje.</string>
-  <string name="risk_details_behavior_increased_body_1">Uw huisarts</string>
-  <string name="risk_details_behavior_increased_body_2">Algemeen noodnummer 112</string>
+  <string name="risk_details_behavior_increased_body_1">- Uw huisarts</string>
+  <string name="risk_details_behavior_increased_body_2">- De medische wachtdienst op het nummer 1733</string>
   <string name="risk_details_behavior_increased_body_3">Uw dienst volksgezondheid</string>
   <string name="risk_details_headline_infection_risk">Risico op besmetting</string>
   <string name="risk_details_headline_period_logged">Geregistreerde periode</string>
@@ -483,19 +483,19 @@
   <string name="submission_contact_step_1_content"></string>
   <string name="submission_contact_step_2_content"></string>
   <string name="submission_status_card_title_fetching">Gegevens worden opgehaald ...</string>
-  <string name="submission_status_card_title_unregistered">Ik wil een test doen</string>
+  <string name="submission_status_card_title_unregistered">Ontvang uw testresultaat</string>
   <string name="submission_status_card_title_pending">Uw resultaat is nog niet beschikbaar</string>
   <string name="submission_status_card_title_available">Uw resultaat is beschikbaar</string>
   <string name="submission_status_card_title_positive">Positieve diagnose</string>
   <string name="submission_status_card_subtitle_invalid">Ongeldige test</string>
   <string name="submission_status_card_subtitle_negative">Negatieve diagnose</string>
   <string name="submission_status_card_body_fetching">Uw resultaat wordt bijgewerkt</string>
-  <string name="submission_status_card_body_unregistered">Waarschuw anderen en help zo mee de infectieketen te doorbreken.</string>
+  <string name="submission_status_card_body_unregistered">Genereer de code om uw testresultaat op uw smartphone te ontvangen</string>
   <string name="submission_status_card_body_pending">De evaluatie van uw test is nog niet afgerond.</string>
   <string name="submission_status_card_body_invalid">Uw test kon niet geëvalueerd worden.</string>
   <string name="submission_status_card_body_positive">U testte positief op SARS-CoV-2.</string>
   <string name="submission_status_card_body_negative">U testte negatief op SARS-CoV-2.</string>
-  <string name="submission_status_card_button_unregistered">Ik laat me testen</string>
+  <string name="submission_status_card_button_unregistered">Genereer de code</string>
   <string name="submission_status_card_button_show_results">Toon de test</string>
   <string name="submission_status_card_positive_result_subtitle">Let op:</string>
   <string name="submission_status_card_positive_result_contagious">U bent besmettelijk. Ga in zelfisolatie.</string>
@@ -576,7 +576,7 @@
   <string name="submission_intro_symptoms_dialog_body">Heeft u op dit moment symptomen?</string>
   <string name="submission_intro_symptoms_dialog_positive">Ja</string>
   <string name="submission_intro_symptoms_dialog_negative">Neen</string>
-  <string name="submission_test_request_headline">Ontvang je testresultaat</string>
+  <string name="submission_test_request_headline">Genereer de code</string>
   <string name="submission_test_request_text">Selecteer de datum waarop u de symptomen begon te vertonen. Dit wordt u meegedeeld door de persoon die de test uitvoert.</string>
   <string name="submission_test_request_save_text">Laat dit cijfer zien aan de persoon die de test afneemt. Tik op \'Bewaar\', zodat u een melding krijgt zodra het testresultaat beschikbaar is.</string>
   <string name="submission_test_request_save_button_save">Bewaar</string>
@@ -609,5 +609,8 @@
   </plurals>
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
-  <string name="test_api_switch_background_notifications"></string>
+  <string name="test_api_switch_background_notifications">Background notification</string>
+  <string name="risk_details_behavior_body_contact_no_symptom">Heeft u geen symptomen? Neem dan contact op met:</string>
+  <string name="risk_details_behavior_increased_body_1_no_symptom">- Het contactcenter op het nummer 02 214.19.19</string>
+  <string name="risk_details_behavior_get_tested">Laat u zo snel mogelijk testen.</string>
 </resources>

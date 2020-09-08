@@ -208,8 +208,6 @@
                         style="@style/headline5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:accessibilityHeading="true"
-                        android:focusable="true"
                         android:text="@string/risk_details_headline_infection_risk"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
