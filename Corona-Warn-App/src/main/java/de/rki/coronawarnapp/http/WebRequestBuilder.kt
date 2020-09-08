@@ -288,7 +288,6 @@ class WebRequestBuilder(
         Timber.d("Writing $fakeKeyCount Dummy Keys to the Submission Payload.")
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .addAllCountries(List(fakeKeyCount) { "BEL" })
             .setPadding(getPadding(0))
             .build()
 
