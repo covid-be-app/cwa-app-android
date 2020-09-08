@@ -6,6 +6,7 @@ import com.google.protobuf.ByteString
 import de.rki.coronawarnapp.service.submission.SubmissionConstants
 import org.junit.Assert
 import org.junit.Test
+import java.util.Calendar
 import java.util.Date
 
 class SubmissionPayloadTest {
@@ -24,16 +25,30 @@ class SubmissionPayloadTest {
             .setTransmissionRiskLevel(4)
             .build()
 
-        val sizes = (0..SubmissionConstants.minKeyCountForSubmission).map { index ->
-            KeyExportFormat.SubmissionPayload.newBuilder()
-                .addAllKeys(List(index) { key })
-                .addAllCountries(List(index) { "BEL" })
-                .setPadding(getPadding(index))
-                .build().serializedSize
+        val datesRange = (2020 until 2100)
 
+        val sizes = (0 until SubmissionConstants.minKeyCountForSubmission).flatMap { index ->
+            datesRange.map { year ->
+                val cal = Calendar.getInstance()
+                cal.set(year, 1, 1)
+
+                val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
+                    .setKeyData(ByteString.copyFrom(key1))
+                    .setRollingStartIntervalNumber((cal.time.time / 60 / 10 / 1000).toInt())
+                    .setRollingPeriod(144)
+                    .setTransmissionRiskLevel(4)
+                    .build()
+
+                KeyExportFormat.SubmissionPayload.newBuilder()
+                    .addAllKeys(List(index) { key })
+                    .addAllCountries(List(index) { "BEL" })
+                    .setPadding(getPadding(index))
+                    .build().serializedSize
+            }
         }
 
-        Assert.assertEquals(sizes.distinct().size, 1)
+        Assert.assertEquals(
+            sizes,
+            List(SubmissionConstants.minKeyCountForSubmission * datesRange.count()) { 492 })
     }
-
 }
