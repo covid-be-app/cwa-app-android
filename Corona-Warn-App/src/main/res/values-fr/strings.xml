@@ -210,8 +210,8 @@
   <string name="risk_details_behavior_body_wear_mask">Portez un masque facial lorsque vous rencontrez d\'autres personnes, ainsi que sur les lieux où c\'est obligatoire.</string>
   <string name="risk_details_behavior_body_stay_away">Gardez au moins 1,5 mètre de distance avec les autres personnes.</string>
   <string name="risk_details_behavior_body_cough_sneeze">Éternuez ou toussez dans votre coude ou dans un mouchoir en papier.</string>
-  <string name="risk_details_behavior_increased_body_1">Votre médecin généraliste</string>
-  <string name="risk_details_behavior_increased_body_2">Le service de garde médical sur le numéro 1733</string>
+  <string name="risk_details_behavior_increased_body_1">- Votre médecin généraliste</string>
+  <string name="risk_details_behavior_increased_body_2">- Le service de garde médical sur le numéro 1733</string>
   <string name="risk_details_behavior_increased_body_3">Votre autorité de santé publique</string>
   <string name="risk_details_headline_infection_risk">Risque d\'infection</string>
   <string name="risk_details_headline_period_logged">Période enregistrée</string>
@@ -483,19 +483,19 @@
   <string name="submission_contact_step_1_content"></string>
   <string name="submission_contact_step_2_content"></string>
   <string name="submission_status_card_title_fetching">Données en cours de récupération....</string>
-  <string name="submission_status_card_title_unregistered">Je souhaite faire mon test</string>
+  <string name="submission_status_card_title_unregistered">Recevoir votre résultat de test</string>
   <string name="submission_status_card_title_pending">Votre résultat n\'est pas encore disponible</string>
   <string name="submission_status_card_title_available">Votre résultat est disponible</string>
   <string name="submission_status_card_title_positive">Diagnostic positif</string>
   <string name="submission_status_card_subtitle_invalid">Test non valable</string>
   <string name="submission_status_card_subtitle_negative">Diagnostic négatif</string>
   <string name="submission_status_card_body_fetching">Votre résultat est mis à jour</string>
-  <string name="submission_status_card_body_unregistered">Aidez à briser la chaîne d\'infection en informant les autres.</string>
+  <string name="submission_status_card_body_unregistered">Générez le code pour recevoir votre résultat test sur votre smartphone</string>
   <string name="submission_status_card_body_pending">L\'évaluation de votre test n\'est pas encore faite.</string>
   <string name="submission_status_card_body_invalid">Votre test n\'a pas pu être évalué.</string>
   <string name="submission_status_card_body_positive">Vous avez été diagnostiqué positif pour le SRAS-CoV-2.</string>
   <string name="submission_status_card_body_negative">Vous avez été diagnostiqué négatif pour le SRAS-CoV-2.</string>
-  <string name="submission_status_card_button_unregistered">Je me fais tester</string>
+  <string name="submission_status_card_button_unregistered">Générez le code</string>
   <string name="submission_status_card_button_show_results">Voir mon test</string>
   <string name="submission_status_card_positive_result_subtitle">Veuillez noter :</string>
   <string name="submission_status_card_positive_result_contagious">Vous êtes infectieux. Isolez-vous des autres.</string>
@@ -576,7 +576,7 @@
   <string name="submission_intro_symptoms_dialog_body">Présentez-vous actuellement des symptômes ?</string>
   <string name="submission_intro_symptoms_dialog_positive">Oui</string>
   <string name="submission_intro_symptoms_dialog_negative">Non</string>
-  <string name="submission_test_request_headline">Faites un test</string>
+  <string name="submission_test_request_headline">Générez le code</string>
   <string name="submission_test_request_text">Sélectionnez la date à laquelle vous avez commencé à avoir des symptômes. Celle-ci vous sera communiquée par la personne qui effectue le test.</string>
   <string name="submission_test_request_save_text">Montrez ce numéro au médecin ou au laboratoire qui vous fera le test. Cliquez sur \"Enregistrer\" pour être averti dès que le résultat sera disponible.</string>
   <string name="submission_test_request_save_button_save">Enregistrer</string>
@@ -609,8 +609,8 @@
   </plurals>
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
-  <string name="test_api_switch_background_notifications"></string>
-    <string name="risk_details_behavior_body_contact_no_symptom">Vous n\'avez pas de symptômes ? Si tel est le cas, veuillez prendre contact avec :</string>
+  <string name="test_api_switch_background_notifications">Background notification</string>
+  <string name="risk_details_behavior_body_contact_no_symptom">Vous n\'avez pas de symptômes ? Si tel est le cas, veuillez prendre contact avec :</string>
+  <string name="risk_details_behavior_increased_body_1_no_symptom">- Le centre de contact au 02 214.19.19</string>
   <string name="risk_details_behavior_get_tested">Faites-vous tester dès que possible.</string>
-  <string name="risk_details_behavior_increased_body_1_no_symptom">Le centre de contact au 02 214.19.19</string>
 </resources>
