@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import be.sciensano.coronalert.util.DateUtil
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestRequestSaveBinding
 import de.rki.coronawarnapp.ui.doNavigate
-import de.rki.coronawarnapp.ui.main.MainActivity
 import java.text.DateFormat
 
 
@@ -27,6 +27,8 @@ class SubmissionTestRequestSaveFragment : Fragment() {
     ): View? {
         _binding = FragmentSubmissionTestRequestSaveBinding.inflate(inflater)
         binding.lifecycleOwner = this
+        // registers callback when the os level back is pressed
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, backCallback)
         return binding.root
     }
 
@@ -46,18 +48,28 @@ class SubmissionTestRequestSaveFragment : Fragment() {
         binding.submissionTestRequestSaveCode.text = mobileTestId.toString()
 
         binding.submissionTestRequestSaveHeader.headerButtonBack.buttonIcon.setOnClickListener {
-            (activity as MainActivity).goBack()
+            findNavController().doNavigate(
+                SubmissionTestRequestSaveFragmentDirections
+                    .actionSubmissionTestRequestSaveFragmentToMainFragment()
+            )
         }
 
         binding.submissionTestRequestSaveButtonSave.setOnClickListener {
-            viewModel.saveTestId()
             findNavController().doNavigate(
                 SubmissionTestRequestSaveFragmentDirections
-                    .actionSubmissionTestRequestSaveFragmentToSubmissionResultFragment()
+                    .actionSubmissionTestRequestSaveFragmentToMainFragment()
             )
-
         }
-
     }
 
+    // Overrides default back behaviour
+    private val backCallback: OnBackPressedCallback =
+        object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().doNavigate(
+                    SubmissionTestRequestSaveFragmentDirections
+                        .actionSubmissionTestRequestSaveFragmentToMainFragment()
+                )
+            }
+        }
 }
