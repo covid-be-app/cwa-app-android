@@ -435,12 +435,12 @@
   <string name="submission_tan_accessibility_title"></string>
   <string name="submission_tan_error"></string>
   <string name="submission_tan_character_error"></string>
-  <string name="submission_intro_title">Ich möchte mich testen lassen</string>
+  <string name="submission_intro_title">Meinen Test erhalten</string>
   <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
   <string name="submission_intro_text">Damit die App funktioniert, sind wir auf die Mithilfe von Corona-positiv getesteten Personen angewiesen.\n\nDa nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Gehen Sie wie folgt vor:</string>
   <string name="submission_intro_button_next">Weiter</string>
   <string name="submission_intro_illustration_description">Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzer warnt.</string>
-  <string name="submission_intro_accessibility_title">Ich möchte mich testen lassen. So funktioniert die Coronalert-App</string>
+  <string name="submission_intro_accessibility_title">Meinen Test erhalten. So funktioniert die Coronalert-App</string>
   <string name="submission_dispatcher_headline"></string>
   <string name="submission_dispatcher_subheadline"></string>
   <string name="submission_dispatcher_card_qr"></string>
@@ -578,8 +578,8 @@
   <string name="submission_intro_symptoms_dialog_negative">Nein</string>
   <string name="submission_test_request_headline">Generieren Sie den Code</string>
   <string name="submission_test_request_text">Wählen Sie das Datum aus, an dem Sie mit den Symptomen begonnen haben. Dies wird Ihnen von der Person, die den Test durchführt, mitgeteilt.</string>
-  <string name="submission_test_request_save_text">Diese Nummer der Testperson zeigen. \'Speichern\' antippen, damit Sie das verfügbare Testergebnis erhalten.</string>
-  <string name="submission_test_request_save_button_save">Speichern</string>
+  <string name="submission_test_request_save_text">Zeigen Sie diese Nummer dem Arzt oder dem Labor, das den Test durchführt, um Ihr Smartphone daran anzuschließen.</string>
+  <string name="submission_test_request_save_button_save">Schließen</string>
   <string name="submission_countries_selection_headline">Länder wählen</string>
   <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
   <string name="submission_countries_selection_dialog_title">Land wählen</string>
@@ -613,4 +613,12 @@
   <string name="risk_details_behavior_body_contact_no_symptom">Haben Sie keine Symptome? Wenn nein, kontaktieren Sie bitte:</string>
   <string name="risk_details_behavior_increased_body_1_no_symptom">- Das Kontaktzentrum unter der 02 214.19.1</string>
   <string name="risk_details_behavior_get_tested">Lassen Sie sich so bald wie möglich testen.</string>
+  <string name="statistics_healine">Statistiken</string>
+  <string name="statistics_date_range" formatted="false">%s - %s</string>
+  <string name="statistics_infected" formatted="false">%d tägliche Infektionen (%d%%)</string>
+  <string name="statistics_hospitalised" formatted="false">%d Krankenhausaufenthalte (%d%%)</string>
+  <string name="statistics_deceased" formatted="false">%d verstorben (%d%%)</string>
+  <string name="statistics_last_updated">Zuletzt aktualisiert am %s</string>
+  <string name="submission_test_request_save_date_label">Datum der Infektiosität</string>
+  <string name="submission_test_request_save_code_label">Code</string>
 </resources>

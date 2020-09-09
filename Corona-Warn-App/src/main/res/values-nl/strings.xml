@@ -435,12 +435,12 @@
   <string name="submission_tan_accessibility_title"></string>
   <string name="submission_tan_error"></string>
   <string name="submission_tan_character_error"></string>
-  <string name="submission_intro_title">Ik wil een test doen</string>
+  <string name="submission_intro_title">Ontvang mijn test</string>
   <string name="submission_intro_headline">Zo werkt Coronalert</string>
   <string name="submission_intro_text">De app werkt alleen goed als mensen die een COVID-19-diagnose hebben gekregen, meewerken. Daarom rekenen we op u.\n\nEr worden alleen gecodeerde willekeurige ID\'s uitgewisseld. U blijft dus anoniem. U gaat als volgt te werk:</string>
   <string name="submission_intro_button_next">Volgende</string>
   <string name="submission_intro_illustration_description">Er wordt een gecodeerde positieve diagnose naar het systeem gestuurd, dat nu andere gebruikers zal waarschuwen.</string>
-  <string name="submission_intro_accessibility_title">Ik wil een test doen. Zo werkt Coronalert</string>
+  <string name="submission_intro_accessibility_title">Ontvang mijn test. Zo werkt Coronalert</string>
   <string name="submission_dispatcher_headline"></string>
   <string name="submission_dispatcher_subheadline"></string>
   <string name="submission_dispatcher_card_qr"></string>
@@ -578,8 +578,8 @@
   <string name="submission_intro_symptoms_dialog_negative">Neen</string>
   <string name="submission_test_request_headline">Genereer de code</string>
   <string name="submission_test_request_text">Selecteer de datum waarop u de symptomen begon te vertonen. Dit wordt u meegedeeld door de persoon die de test uitvoert.</string>
-  <string name="submission_test_request_save_text">Laat dit cijfer zien aan de persoon die de test afneemt. Tik op \'Bewaar\', zodat u een melding krijgt zodra het testresultaat beschikbaar is.</string>
-  <string name="submission_test_request_save_button_save">Bewaar</string>
+  <string name="submission_test_request_save_text">Toon dit nummer aan de dokter of het labo dat de test zal uitvoeren om uw smartphone aan te sluiten.</string>
+  <string name="submission_test_request_save_button_save">Sluit</string>
   <string name="submission_countries_selection_headline">Kies landen</string>
   <string name="submission_countries_selection_text">Als u op een van onderstaande data niet in België was en u deze informatie (anoniem) wilt doorgeven, kies dan de landen die u op die datum hebt bezocht. Tik op de lijn die u wilt wijzigen.</string>
   <string name="submission_countries_selection_dialog_title">Kies een land</string>
@@ -613,4 +613,12 @@
   <string name="risk_details_behavior_body_contact_no_symptom">Heeft u geen symptomen? Neem dan contact op met:</string>
   <string name="risk_details_behavior_increased_body_1_no_symptom">- Het contactcenter op het nummer 02 214.19.19</string>
   <string name="risk_details_behavior_get_tested">Laat u zo snel mogelijk testen.</string>
+  <string name="statistics_healine">Statistieken</string>
+  <string name="statistics_date_range" formatted="false">%s - %s</string>
+  <string name="statistics_infected" formatted="false">%d dagelijkse besmettingen (%d%%)</string>
+  <string name="statistics_hospitalised" formatted="false">%d opnames (%d%%)</string>
+  <string name="statistics_deceased" formatted="false">%d overlijdens (%d%%)</string>
+  <string name="statistics_last_updated">Laatst bijgewerkt op %s</string>
+  <string name="submission_test_request_save_date_label">Datum van besmettelijkheid</string>
+  <string name="submission_test_request_save_code_label">Code</string>
 </resources>
