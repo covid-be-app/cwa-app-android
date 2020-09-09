@@ -619,5 +619,7 @@
     <string name="statistics_hospitalised">%d hospitalisations (%d%%)</string>
     <string name="statistics_deceased">%d deceased (%d%%)</string>
     <string name="statistics_last_updated">Last updated: %s</string>
+  <string name="submission_test_request_save_date_label">Date of infectiousness</string>
+  <string name="submission_test_request_save_code_label">Code</string>
 
 </resources>
