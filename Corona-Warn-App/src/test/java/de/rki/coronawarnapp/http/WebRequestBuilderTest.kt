@@ -1,5 +1,6 @@
 package de.rki.coronawarnapp.http
 
+import be.sciensano.coronalert.http.service.StatisticsService
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
 import de.rki.coronawarnapp.http.service.VerificationService
@@ -37,6 +38,9 @@ class WebRequestBuilderTest {
     private lateinit var beSubmissionService: BeSubmissionService
 
     @MockK
+    private lateinit var statisticsService: StatisticsService
+
+    @MockK
     private lateinit var verificationKeys: VerificationKeys
 
     private lateinit var webRequestBuilder: WebRequestBuilder
@@ -50,6 +54,7 @@ class WebRequestBuilderTest {
             beVerificationService,
             submissionService,
             beSubmissionService,
+            statisticsService,
             verificationKeys
         )
     }
