@@ -19,8 +19,6 @@ class SubmissionTestRequestViewModel : ViewModel() {
 
     val submissionDate: MutableLiveData<Date> = MutableLiveData(Date())
 
-    private val _mobileTestId: MutableLiveData<MobileTestId> = MutableLiveData()
-
     fun setSubmissionDate(date: Date) = run { submissionDate.value = date }
 
     fun generateTestId(): MobileTestId {
@@ -30,18 +28,16 @@ class SubmissionTestRequestViewModel : ViewModel() {
         val submissionDateMinus2 = cal.time
 
         val testId = MobileTestId.generate(submissionDateMinus2)
-        _mobileTestId.postValue(testId)
+        saveTestId(testId)
         return testId
     }
 
-    fun saveTestId() =
-        _mobileTestId.value?.let { mobileTestId ->
-            LocalData.t0(mobileTestId.t0)
-            LocalData.r0(mobileTestId.r0)
-            LocalData.k(mobileTestId.k)
-            LocalData.registrationToken(mobileTestId.registrationToken())
-            LocalData.initialPollingForTestResultTimeStamp(System.currentTimeMillis())
-        }
-
+    private fun saveTestId(mobileTestId: MobileTestId) {
+        LocalData.t0(mobileTestId.t0)
+        LocalData.r0(mobileTestId.r0)
+        LocalData.k(mobileTestId.k)
+        LocalData.registrationToken(mobileTestId.registrationToken())
+        LocalData.initialPollingForTestResultTimeStamp(System.currentTimeMillis())
+    }
 }
 

@@ -270,9 +270,9 @@
         android:label="fragment_submission_test_request_save"
         tools:layout="@layout/fragment_submission_test_request_save">
         <action
-            android:id="@+id/action_submissionTestRequestSaveFragment_to_submissionResultFragment"
-            app:destination="@id/submissionResultFragment"
-            app:popUpTo="@id/submissionResultFragment"
+            android:id="@+id/action_submissionTestRequestSaveFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

@@ -166,7 +166,7 @@
   <string name="risk_card_outdated_manual_risk_body">Votre statut de risque n\'a pas été mis à jour depuis plus de 48 heures. Veuillez mettre à jour votre statut de risque.</string>
   <string name="risk_card_loading_headline">La vérification est en cours...</string>
   <string name="risk_card_loading_body">Les données actuelles sont téléchargées et vérifiées. Cela peut prendre plusieurs minutes.</string>
-  <string name="main_about_headline">FAQ</string>
+  <string name="main_about_headline">Questions fréquentes</string>
   <string name="main_about_body">Vous trouverez ici les réponses aux questions fréquemment posées sur l\'application Coronalert. Vous serez dirigé vers un site web externe.</string>
   <string name="main_about_link">https://coronalert.be/fr/faq-fr/</string>
   <string name="hint_external_webpage">Vous trouverez ici les réponses aux questions fréquemment posées sur l\'application Coronalert. Vous serez dirigé vers un site web externe.</string>
@@ -361,7 +361,7 @@
   <string name="information_contact_body_open"></string>
   <string name="information_contact_body_other"></string>
   <string name="information_contact_illustration_description"></string>
-  <string name="information_help_title">FAQ</string>
+  <string name="information_help_title">Questions fréquentes</string>
   <string name="information_help_title_accessibility">Foire aux questions. Vous serez dirigé vers un site web externe.</string>
   <string name="information_technical_title">Avis juridiques</string>
   <string name="information_technical_illustration_description">Une main tient un smartphone qui affiche un texte à l\'écran. À côté du texte se trouve une balance qui symbolise les mentions légales.</string>
@@ -435,12 +435,12 @@
   <string name="submission_tan_accessibility_title"></string>
   <string name="submission_tan_error"></string>
   <string name="submission_tan_character_error"></string>
-  <string name="submission_intro_title">Je souhaite faire mon test</string>
+  <string name="submission_intro_title">Recevoir mon test</string>
   <string name="submission_intro_headline">Voici comment fonctionne l\'application Coronalert</string>
   <string name="submission_intro_text">Pour que l\'application fonctionne bien, nous comptons sur le soutien des personnes qui ont été diagnostiquées positives au COVID-19. Puisque seules des identités aléatoires cryptées sont échangées, vous restez anonyme. Vous pouvez maintenant procéder comme suit :</string>
   <string name="submission_intro_button_next">Suivant</string>
   <string name="submission_intro_illustration_description">Un diagnostic positif crypté est transmis au système, qui avertit alors les autres utilisateurs.</string>
-  <string name="submission_intro_accessibility_title">Je souhaite faire mon test. Voici comment fonctionne l\'application Coronalert</string>
+  <string name="submission_intro_accessibility_title">Recevoir mon test. Voici comment fonctionne l\'application Coronalert</string>
   <string name="submission_dispatcher_headline"></string>
   <string name="submission_dispatcher_subheadline"></string>
   <string name="submission_dispatcher_card_qr"></string>
@@ -578,8 +578,8 @@
   <string name="submission_intro_symptoms_dialog_negative">Non</string>
   <string name="submission_test_request_headline">Générez le code</string>
   <string name="submission_test_request_text">Sélectionnez la date à laquelle vous avez commencé à avoir des symptômes. Celle-ci vous sera communiquée par la personne qui effectue le test.</string>
-  <string name="submission_test_request_save_text">Montrez ce numéro au médecin ou au laboratoire qui vous fera le test. Cliquez sur \"Enregistrer\" pour être averti dès que le résultat sera disponible.</string>
-  <string name="submission_test_request_save_button_save">Enregistrer</string>
+  <string name="submission_test_request_save_text">Montrez ce numéro au médecin ou au laboratoire qui vous fera le test afin de relier votre smartphone à celui-ci.</string>
+  <string name="submission_test_request_save_button_save">Fermer</string>
   <string name="submission_countries_selection_headline">Sélectionnez votre pays</string>
   <string name="submission_countries_selection_text">Si vous n\'étiez pas en Belgique à certaines des dates ci-dessous et que vous voulez partager cette information (de façon anonyme), veuillez sélectionner le pays dans lequel vous étiez à ces dates.</string>
   <string name="submission_countries_selection_dialog_title">Choisissez un pays</string>
@@ -613,4 +613,12 @@
   <string name="risk_details_behavior_body_contact_no_symptom">Vous n\'avez pas de symptômes ? Si tel est le cas, veuillez prendre contact avec :</string>
   <string name="risk_details_behavior_increased_body_1_no_symptom">- Le centre de contact au 02 214.19.19</string>
   <string name="risk_details_behavior_get_tested">Faites-vous tester dès que possible.</string>
+  <string name="statistics_healine">Statistiques</string>
+  <string name="statistics_date_range" formatted="false">%s - %s</string>
+  <string name="statistics_infected" formatted="false">%d infections quotidiennes (%d%%)</string>
+  <string name="statistics_hospitalised" formatted="false">%d admissions (%d%%)</string>
+  <string name="statistics_deceased" formatted="false">%d décès (%d%%)</string>
+  <string name="statistics_last_updated">Dernière mise à jour le %s</string>
+  <string name="submission_test_request_save_date_label">Date de la contagiosité</string>
+  <string name="submission_test_request_save_code_label">Code</string>
 </resources>

@@ -23,6 +23,7 @@ import KeyExportFormat
 import be.sciensano.coronalert.MobileTestId
 import be.sciensano.coronalert.http.requests.TestResultRequest
 import be.sciensano.coronalert.http.responses.TestResultResponse
+import be.sciensano.coronalert.http.service.StatisticsService
 import be.sciensano.coronalert.util.PaddingUtil.getPadding
 import com.google.protobuf.ByteString
 import com.google.protobuf.InvalidProtocolBufferException
@@ -61,6 +62,7 @@ class WebRequestBuilder(
     private val beVerificationService: BeVerificationService,
     private val submissionService: SubmissionService,
     private val beSubmissionService: BeSubmissionService,
+    private val statisticsService: StatisticsService,
     private val verificationKeys: VerificationKeys
 ) {
     companion object {
@@ -85,6 +87,7 @@ class WebRequestBuilder(
                 serviceFactory.beVerificationService(),
                 serviceFactory.submissionService(),
                 serviceFactory.beSubmissionService(),
+                serviceFactory.statisticsService(),
                 VerificationKeys()
             )
         }
@@ -298,6 +301,10 @@ class WebRequestBuilder(
             fakeTestId.k, fakeTestId.r0, fakeTestId.t0, fakeTestId.t0, 0,
             submissionPayload
         )
+    }
+
+    suspend fun getStatistics() = withContext(Dispatchers.IO) {
+        statisticsService.getStatistics()
     }
 
     suspend fun asyncFakeSubmission() = withContext(Dispatchers.IO) {

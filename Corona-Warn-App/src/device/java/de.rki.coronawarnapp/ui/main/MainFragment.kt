@@ -8,8 +8,10 @@ import android.view.accessibility.AccessibilityEvent
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.ui.StatisticsViewModel
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentMainBinding
 import de.rki.coronawarnapp.risk.TimeVariables
@@ -21,9 +23,12 @@ import de.rki.coronawarnapp.ui.viewmodel.SubmissionViewModel
 import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
 import de.rki.coronawarnapp.util.DialogHelper
 import de.rki.coronawarnapp.util.ExternalActionHelper
+import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.text.DateFormat
+import java.util.Date
 
 /**
  * After the user has finished the onboarding this fragment will be the heart of the application.
@@ -44,6 +49,8 @@ class MainFragment : Fragment() {
     private val tracingViewModel: TracingViewModel by activityViewModels()
     private val settingsViewModel: SettingsViewModel by activityViewModels()
     private val submissionViewModel: SubmissionViewModel by activityViewModels()
+    private val statisticsViewModel: StatisticsViewModel by activityViewModels()
+
     private var _binding: FragmentMainBinding? = null
     private val binding: FragmentMainBinding get() = _binding!!
 
@@ -71,6 +78,7 @@ class MainFragment : Fragment() {
         setContentDescription()
 
 //        showOneTimeTracingExplanationDialog()
+        observeStatistics()
     }
 
     override fun onResume() {
@@ -84,7 +92,45 @@ class MainFragment : Fragment() {
         TimerHelper.checkManualKeyRetrievalTimer()
         submissionViewModel.refreshDeviceUIState()
         tracingViewModel.refreshLastSuccessfullyCalculatedScore()
+        statisticsViewModel.refreshStatistics()
         binding.mainScrollview.sendAccessibilityEvent(AccessibilityEvent.TYPE_ANNOUNCEMENT)
+    }
+
+    private fun observeStatistics() {
+        statisticsViewModel.statistics.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                val lastUpdatedDate =
+                    DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT)
+                        .format(Date(it.lastUpdatedDate))
+
+                val startDate = android.text.format.DateFormat.format("dd MMM", Date(it.startDate))
+                val endDate = android.text.format.DateFormat.format("dd MMM", Date(it.endDate))
+
+                statistics.visibility = View.VISIBLE
+                binding.statistics.statisticsTextSubtitle.text =
+                    getString(R.string.statistics_date_range, startDate, endDate)
+                binding.statistics.bulletInfectionsText.text = getString(
+                    R.string.statistics_infected,
+                    it.averageInfected,
+                    it.averageInfectedChangePercentage
+                )
+                binding.statistics.bulletPointHospitalisationsText.text = getString(
+                    R.string.statistics_hospitalised,
+                    it.averageHospitalised,
+                    it.averageHospitalisedChangePercentage
+                )
+                binding.statistics.bulletPointDeceasedText.text = getString(
+                    R.string.statistics_deceased,
+                    it.averageDeceased,
+                    it.averageDeceasedChangePercentage
+                )
+                binding.statistics.statisticsTextFooter.text =
+                    getString(R.string.statistics_last_updated, lastUpdatedDate)
+            } else {
+                statistics.visibility = View.GONE
+            }
+
+        })
     }
 
     private fun setContentDescription() {

@@ -435,12 +435,12 @@
   <string name="submission_tan_accessibility_title"></string>
   <string name="submission_tan_error"></string>
   <string name="submission_tan_character_error"></string>
-  <string name="submission_intro_title">I want to do a test</string>
+  <string name="submission_intro_title">Receive my test</string>
   <string name="submission_intro_headline">This is how the Coronalert-App works</string>
   <string name="submission_intro_text">For the app to work well, we are relying on the support of people who were diagnosed with COVID-19.\n\nSince only encrypted random IDs are exchanged, you remain anonymous. You can now proceed as follows:</string>
   <string name="submission_intro_button_next">Next</string>
   <string name="submission_intro_illustration_description">An encrypted positive test diagnosis is transmitted to the system, which will now warn other users.</string>
-  <string name="submission_intro_accessibility_title">I want to do a test. This is how the Coronalert-App works</string>
+  <string name="submission_intro_accessibility_title">Receive my test. This is how the Coronalert-App works</string>
   <string name="submission_dispatcher_headline"></string>
   <string name="submission_dispatcher_subheadline"></string>
   <string name="submission_dispatcher_card_qr"></string>
@@ -578,8 +578,8 @@
   <string name="submission_intro_symptoms_dialog_negative">No</string>
   <string name="submission_test_request_headline">Generate the code</string>
   <string name="submission_test_request_text">Select the date on which you started having symptoms. This will be communicated to you by the person doing the test.</string>
-  <string name="submission_test_request_save_text">Show this number to the person doing the test. Tap \"Save\" so you can be notified as soon as the test result is available.</string>
-  <string name="submission_test_request_save_button_save">Save</string>
+  <string name="submission_test_request_save_text">Show this number to the doctor or laboratory that will perform the test in order to link your smartphone to it.</string>
+  <string name="submission_test_request_save_button_save">Close</string>
   <string name="submission_countries_selection_headline">Select countries</string>
   <string name="submission_countries_selection_text">For each of the below dates, if you have not been in Belgium and you would like to share this information (anonymously), please select the country you visited on that date by tapping the line you want to change</string>
   <string name="submission_countries_selection_dialog_title">Choose a country</string>
@@ -613,4 +613,12 @@
   <string name="risk_details_behavior_body_contact_no_symptom">Do you have no symptoms? Please contact:</string>
   <string name="risk_details_behavior_increased_body_1_no_symptom">- The contact center on 02 214.19.19</string>
   <string name="risk_details_behavior_get_tested">Get tested as soon as possible.</string>
+  <string name="statistics_healine">Statistics</string>
+  <string name="statistics_date_range" formatted="false">%s - %s</string>
+  <string name="statistics_infected" formatted="false">%d daily infections (%d%%)</string>
+  <string name="statistics_hospitalised" formatted="false">%d hospitalisations (%d%%)</string>
+  <string name="statistics_deceased" formatted="false">%d deceased (%d%%)</string>
+  <string name="statistics_last_updated">Last updated on %s</string>
+  <string name="submission_test_request_save_date_label">Date of infectiousness</string>
+  <string name="submission_test_request_save_code_label">Code</string>
 </resources>

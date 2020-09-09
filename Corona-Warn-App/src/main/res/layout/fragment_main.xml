@@ -51,9 +51,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@{FormatterAccessibilityHelper.formatImage(@string/accessibility_logo)}"
+                    android:focusable="true"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_main_header"
-                    android:focusable="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/main_header_share"
                     app:layout_constraintStart_toStartOf="parent"
@@ -102,8 +102,8 @@
                     android:layout_width="@dimen/match_constraint"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing_small"
-                    android:focusable="false"
                     android:contentDescription="@{FormatterSettingsHelper.formatTracingContentDescription(tracingViewModel.isTracingEnabled(), settingsViewModel.isBluetoothEnabled(), settingsViewModel.isConnectionEnabled(), settingsViewModel.isLocationEnabled())}"
+                    android:focusable="false"
                     android:text="@{FormatterSettingsHelper.formatTracingDescription(tracingViewModel.isTracingEnabled(), settingsViewModel.isBluetoothEnabled(), settingsViewModel.isConnectionEnabled(), settingsViewModel.isLocationEnabled())}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/main_tracing_icon"
@@ -133,6 +133,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/main_tracing" />
 
             <include
+                android:id="@+id/statistics"
+                layout="@layout/include_statistics_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/main_tracing_divider" />
+
+            <include
                 android:id="@+id/main_risk"
                 layout="@layout/include_risk_card"
                 android:layout_width="@dimen/match_constraint"
@@ -141,7 +152,7 @@
                 android:visibility="@{FormatterSubmissionHelper.formatShowRiskStatusCard(submissionViewModel.deviceUiState)}"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
-                app:layout_constraintTop_toBottomOf="@+id/main_tracing_divider"
+                app:layout_constraintTop_toBottomOf="@+id/statistics"
                 app:settingsViewModel="@{settingsViewModel}"
                 app:showDetails="@{false}"
                 app:tracingViewModel="@{tracingViewModel}" />
@@ -217,11 +228,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline_bottom"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
                 app:layout_constraintTop_toBottomOf="@+id/main_barrier"
-                app:layout_constraintBottom_toBottomOf="@+id/guideline_bottom"
-                app:layout_constraintVertical_bias="0.0"/>
+                app:layout_constraintVertical_bias="0.0" />
 
             <include layout="@layout/merge_guidelines_side" />
 
