@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/statistics_text_healine"
+            style="@style/headline5"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:accessibilityHeading="true"
+            android:focusable="false"
+            android:text="@string/statistics_healine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/statistics_text_subtitle"
+            style="@style/subtitleMedium"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:paddingBottom="@dimen/spacing_tiny"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statistics_text_healine"
+            tools:text="20 Aug - 26 aug" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statistics_infections_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/bullet_point_spacing_between"
+            app:layout_constraintTop_toBottomOf="@+id/statistics_text_subtitle"
+            tools:layout_editor_absoluteX="24dp">
+
+            <ImageView
+                android:id="@+id/bullet_infections_point"
+                android:layout_width="@dimen/bullet_point_size"
+                android:layout_height="@dimen/bullet_point_size"
+                android:layout_marginStart="@dimen/bullet_point_spacing_before"
+                android:baseline="@dimen/bullet_point_baseline_offset"
+                android:importantForAccessibility="no"
+                android:src="@drawable/bullet_point"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bullet_infections_text"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/bullet_infections_text"
+                style="@style/subtitle"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bullet_point_spacing_after"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bullet_infections_point"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statistics_hospitalisations_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/bullet_point_spacing_between"
+            app:layout_constraintTop_toBottomOf="@+id/statistics_infections_layout"
+            tools:layout_editor_absoluteX="24dp">
+
+            <ImageView
+                android:id="@+id/bullet_point_hospitalisations"
+                android:layout_width="@dimen/bullet_point_size"
+                android:layout_height="@dimen/bullet_point_size"
+                android:layout_marginStart="@dimen/bullet_point_spacing_before"
+                android:baseline="@dimen/bullet_point_baseline_offset"
+                android:importantForAccessibility="no"
+                android:src="@drawable/bullet_point"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bullet_point_hospitalisations_text"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/bullet_point_hospitalisations_text"
+                style="@style/subtitle"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bullet_point_spacing_after"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bullet_point_hospitalisations"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statistics_deceased_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/bullet_point_spacing_between"
+            app:layout_constraintTop_toBottomOf="@+id/statistics_hospitalisations_layout"
+            tools:layout_editor_absoluteX="24dp">
+
+            <ImageView
+                android:id="@+id/bullet_point_deceased"
+                android:layout_width="@dimen/bullet_point_size"
+                android:layout_height="@dimen/bullet_point_size"
+                android:layout_marginStart="@dimen/bullet_point_spacing_before"
+                android:baseline="@dimen/bullet_point_baseline_offset"
+                android:importantForAccessibility="no"
+                android:src="@drawable/bullet_point"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bullet_point_deceased_text"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/bullet_point_deceased_text"
+                style="@style/subtitle"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bullet_point_spacing_after"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bullet_point_deceased"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/statistics_text_footer"
+            style="@style/body2"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextPrimary2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statistics_deceased_layout"
+            tools:text="Last updated on 2 Sep 2020 at 11:03" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
