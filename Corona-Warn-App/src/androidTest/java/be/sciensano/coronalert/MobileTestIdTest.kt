@@ -9,6 +9,7 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.math.BigInteger
 import java.util.Calendar
 import java.util.Date
 import javax.crypto.spec.SecretKeySpec
@@ -28,46 +29,29 @@ class MobileTestIdTest {
 
     @Test
     fun testR1Calculation() {
-        every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("bJxx/UPRKwPwdadwJTs76w==")
+        every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("enaeEaH/7zxo8/4RUFtidQ==")
         every {
             mobileTestIdFactory["makeInfo"](
                 any<String>(),
                 any<String>(),
                 any<String>()
             )
-        } returns "RNJ7XO0sP88xextu2020-07-21TEST REQUEST"
+        } returns "ryinAKH0AoVXXLwM2020-09-08TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate(newDate(2020, 7, 21)).toString(),
-            "4025-7078-0892-3569-6"
+            mobileTestIdFactory.generate(newDate(2020, 9, 8)).toString(),
+            "3748-3803-3537-3893-8"
         )
+    }
 
-        every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("8FQZ4I4BT66ClgTmnM1Alw==")
-        every {
-            mobileTestIdFactory["makeInfo"](
-                any<String>(),
-                any<String>(),
-                any<String>()
-            )
-        } returns "2nii5Uwaga2GAsiJ2020-07-21TEST REQUEST"
+    @Test
+    fun testModulo() {
+        Assert.assertEquals(modulo97("20071082443971088220685"), 0)
 
+        val mobileTestId = MobileTestId.generate(newDate(2020, 1, 1))
         Assert.assertEquals(
-            mobileTestIdFactory.generate(newDate(2020, 7, 21)).toString(),
-            "3101-6944-5554-2932-2"
-        )
-
-        every { mobileTestIdFactory["generateK"]() } returns getSecretKeyForB64("j9EWWBZYt9CWsGtTpPNUrg==")
-        every {
-            mobileTestIdFactory["makeInfo"](
-                any<String>(),
-                any<String>(),
-                any<String>()
-            )
-        } returns "tlA1nDLx0PE0QlVN2020-07-21TEST REQUEST"
-
-        Assert.assertEquals(
-            mobileTestIdFactory.generate(newDate(2020, 7, 21)).toString(),
-            "9892-5015-0432-5758-4"
+            modulo97("${mobileTestId.compactT0()}${mobileTestId.toString().replace("-", "")}")
+            , 0
         )
     }
 
@@ -81,7 +65,6 @@ class MobileTestIdTest {
         Assert.assertEquals(
             mobileTestId.registrationToken().split("|")[0], mobileTestId.r1
         )
-
         Assert.assertEquals(
             mobileTestId.registrationToken().split("|")[1], Date().toServerFormat()
         )
@@ -90,6 +73,10 @@ class MobileTestIdTest {
     private fun getSecretKeyForB64(value: String): SecretKeySpec {
         val testDecodedK = Base64.decode(value, Base64.DEFAULT)
         return SecretKeySpec(testDecodedK, 0, testDecodedK.size, "AES")
+    }
+
+    private fun modulo97(value: String): Int {
+        return BigInteger(value).mod(BigInteger("97")).toInt()
     }
 
     private fun newDate(year: Int, month: Int, dayOfMonth: Int): Date {

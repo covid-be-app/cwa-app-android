@@ -4,6 +4,7 @@ import android.security.keystore.KeyProperties
 import android.util.Base64
 import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import timber.log.Timber
+import java.math.BigInteger
 import java.util.Date
 import javax.crypto.KeyGenerator
 import javax.crypto.Mac
@@ -17,7 +18,7 @@ class MobileTestId(
 ) {
 
     override fun toString(): String {
-        return "$r1${checksum(r1.toLong())}".chunked(4)
+        return "$r1${checksum("${compactT0()}$r1")}".chunked(4)
             .joinToString("-")
     }
 
@@ -25,12 +26,7 @@ class MobileTestId(
         return "$r1|$t0"
     }
 
-
-    private fun checksum(value: Long): String {
-        return String.format("%02d", 97 - (value * 100 % 97))
-    }
-
-    private fun compactT0(): String {
+    fun compactT0(): String {
         return t0.replace("-", "").slice(2..7)
     }
 
@@ -60,6 +56,17 @@ class MobileTestId(
             return MobileTestId(r0!!, t0, r1, kEncoded!!)
         }
 
+
+        private fun checksum(value: String): String {
+            return String.format(
+                "%02d", BigInteger("97").minus(
+                    BigInteger(value).multiply(
+                        BigInteger("100")
+                    ).mod(BigInteger("97"))
+                )
+            )
+        }
+
         private fun generateK(): SecretKey {
             val generator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES)
             generator.init(128)
@@ -71,7 +78,7 @@ class MobileTestId(
             return List(16) { (('a'..'z') + ('A'..'Z') + ('0'..'9')).random() }.joinToString("")
         }
 
-        private fun makeInfo(r0: String, t0: String, suffix: String = ""): String {
+        private fun makeInfo(r0: String, t0: String, suffix: String = "TEST REQUEST"): String {
             return r0 + t0 + suffix
         }
 
