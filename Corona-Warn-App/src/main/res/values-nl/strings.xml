@@ -371,7 +371,7 @@
   <string name="information_legal_subtitle_publisher"></string>
   <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">\n</xliff:g>Juliette Wytsmanstraat 14<xliff:g id="line_break">\n</xliff:g>1050 Brussel</string>
   <string name="information_legal_headline_contact">Contact</string>
-  <string name="information_legal_subtitle_contact">E-mail: info@sciensano.be<xliff:g id="line_break">\n</xliff:g>Telefoon: 0800 14 689</string>
+  <string name="information_legal_subtitle_contact">E-mail: coronalert@sciensano.be<xliff:g id="line_break">\n</xliff:g>Telefoon: 0800 14 689</string>
   <string name="information_legal_headline_taxid">BTW-identificatienummer</string>
   <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
   <string name="information_legal_illustration_description">U ziet een hand met een smartphone met een grote hoeveelheid tekst op het schermpje. Het symbooltje naast de tekst verwijst naar het colofon.</string>
