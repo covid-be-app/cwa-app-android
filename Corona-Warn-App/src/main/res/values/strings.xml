@@ -371,7 +371,7 @@
   <string name="information_legal_subtitle_publisher"></string>
   <string name="information_legal_body_publisher">Sciensano<xliff:g id="line_break">\n</xliff:g>rue Juliette Wytsmanstraat 14<xliff:g id="line_break">\n</xliff:g>1050 Brussels</string>
   <string name="information_legal_headline_contact">Contact</string>
-  <string name="information_legal_subtitle_contact">E-Mail: info@sciensano.be<xliff:g id="line_break">\n</xliff:g>Telephone: 0800 14 689</string>
+  <string name="information_legal_subtitle_contact">E-Mail: coronalert@sciensano.be<xliff:g id="line_break">\n</xliff:g>Telephone: 0800 14 689</string>
   <string name="information_legal_headline_taxid">VAT identification number</string>
   <string name="information_legal_subtitle_taxid">BE0693.876.830</string>
   <string name="information_legal_illustration_description">A hand holds a smartphone displaying a large body of text on the screen. Next to the text is a section symbol representing the imprint.</string>
