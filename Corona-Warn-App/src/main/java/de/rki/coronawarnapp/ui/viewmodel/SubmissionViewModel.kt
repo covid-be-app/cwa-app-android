@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import be.sciensano.coronalert.MobileTestId
 import be.sciensano.coronalert.storage.readCountries
 import be.sciensano.coronalert.storage.t0
 import be.sciensano.coronalert.storage.t3
@@ -72,6 +73,16 @@ class SubmissionViewModel : ViewModel() {
         val belgium = countries.find { it.code3 == "BEL" }!!
         val keyPairs = keys.inT0T3Range(t0, t3).map { key -> Pair(key, belgium) }
         _keyPairs.postValue(keyPairs)
+    }
+
+    fun getMobileTestIduiCode(): String? {
+        return LocalData.registrationToken()?.let {
+            MobileTestId.uiCode(it)
+        }
+    }
+
+    fun getMobileTestIdt0(): String? {
+        return LocalData.t0()
     }
 
     fun beSubmitDiagnosisKeys(keys: List<Pair<TemporaryExposureKey, Country>>) =
