@@ -18,16 +18,11 @@ class MobileTestId(
 ) {
 
     override fun toString(): String {
-        return "$r1${checksum("${compactT0()}$r1")}".chunked(4)
-            .joinToString("-")
+        return uiCode(registrationToken())
     }
 
     fun registrationToken(): String {
         return "$r1|$t0"
-    }
-
-    fun compactT0(): String {
-        return t0.replace("-", "").slice(2..7)
     }
 
     companion object {
@@ -56,6 +51,21 @@ class MobileTestId(
             return MobileTestId(r0!!, t0, r1, kEncoded!!)
         }
 
+        fun compactServerDate(date: String): String {
+            return date.replace("-", "").slice(2..7)
+        }
+
+        fun uiCode(registrationToken: String): String {
+            val r1 = registrationToken.split("|")[0]
+            val t0 = registrationToken.split("|")[1]
+
+            return uiCode(t0, r1)
+        }
+
+        private fun uiCode(t0: String, r1: String): String {
+            return "$r1${checksum("${compactServerDate(t0)}$r1")}".chunked(4)
+                .joinToString("-")
+        }
 
         private fun checksum(value: String): String {
             return String.format(

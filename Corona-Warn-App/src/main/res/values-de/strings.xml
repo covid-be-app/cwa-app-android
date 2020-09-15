@@ -621,4 +621,5 @@
     <string name="statistics_last_updated">Zuletzt aktualisiert am %s</string>
     <string name="submission_test_request_save_date_label">Datum der Infektiosität</string>
     <string name="submission_test_request_save_code_label">Code</string>
+    <string name="submission_test_result_steps_added_body_with_code">Ihr Test wurde in Coronalert gespeichert.\n\nDatum der Infektiosität\n%s\n\nCode\n%s</string>
 </resources>

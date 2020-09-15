@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.util.DateUtil
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestResultBinding
 import de.rki.coronawarnapp.exception.http.CwaClientError
@@ -22,6 +23,8 @@ import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.DialogHelper
 import de.rki.coronawarnapp.util.observeEvent
+import kotlinx.android.synthetic.main.include_step_entry_simple_body.view.*
+import java.text.DateFormat
 
 /**
  * A simple [Fragment] subclass.
@@ -123,6 +126,21 @@ class SubmissionTestResultFragment : Fragment() {
                 showRedeemedTokenWarningDialog()
             }
         })
+
+        val uiCode = submissionViewModel.getMobileTestIduiCode()
+        val t0 = submissionViewModel.getMobileTestIdt0()
+        if (uiCode != null && t0 != null) {
+            val date =
+                DateFormat.getDateInstance(DateFormat.FULL)
+                    .format(DateUtil.parseServerDate(t0).toDate())
+
+            binding.submissionTestResultContent.submissionTestResultPendingSteps.testResultPendingStepsAdded
+                .simple_step_entry_body.text = getString(
+                R.string.submission_test_result_steps_added_body_with_code,
+                date,
+                uiCode
+            )
+        }
     }
 
     private fun showRedeemedTokenWarningDialog() {
