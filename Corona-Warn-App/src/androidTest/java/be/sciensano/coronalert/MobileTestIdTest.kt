@@ -50,7 +50,10 @@ class MobileTestIdTest {
 
         val mobileTestId = MobileTestId.generate(newDate(2020, 1, 1))
         Assert.assertEquals(
-            modulo97("${mobileTestId.compactT0()}${mobileTestId.toString().replace("-", "")}")
+            modulo97(
+                "${MobileTestId.compactServerDate(mobileTestId.t0)}${mobileTestId.toString()
+                    .replace("-", "")}"
+            )
             , 0
         )
     }
