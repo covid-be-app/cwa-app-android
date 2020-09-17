@@ -75,9 +75,6 @@ object BackgroundWorkScheduler {
         val notificationBody = StringBuilder()
         notificationBody.append("Jobs starting: ")
         if (LocalData.numberOfSuccessfulSubmissions() > 0) return
-        if (!isWorkActive(WorkTag.BACKGROUND_NOISE_PERIODIC_WORKER.tag)) {
-            scheduleBackgroundNoisePeriodicWork()
-        }
         val isPeriodicWorkActive = isWorkActive(WorkTag.DIAGNOSIS_KEY_RETRIEVAL_PERIODIC_WORKER.tag)
         logWorkActiveStatus(
             WorkTag.DIAGNOSIS_KEY_RETRIEVAL_PERIODIC_WORKER.tag,
