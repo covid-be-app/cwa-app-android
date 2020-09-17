@@ -7,7 +7,6 @@ import androidx.work.WorkerParameters
 import be.sciensano.coronalert.service.DummyService
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.R
-import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.notification.NotificationHelper
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.util.TimeAndDateExtensions
@@ -73,7 +72,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                     BeSubmissionService.deleteRegistrationToken()
                 }
             } else {
-                DummyService(WebRequestBuilder.getInstance()).sendDummyRequestsIfNeeded()
+                DummyService.sendDummyRequestsIfNeeded()
             }
         } catch (e: Exception) {
             result = Result.retry()

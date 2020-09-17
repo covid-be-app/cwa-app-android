@@ -8,20 +8,17 @@ import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
 @Suppress("MagicNumber")
-class DummyService(
-    private val webRequestBuilder: WebRequestBuilder
-) {
-    private val dummyToken = "000000000000000|2020-01-01"
-
-    fun initScenario() {
-        if ((0..100).random() < 20 && LocalData.dummyTestRequestsToSend() == -1) {
-            val random = (2..5).random()
-            LocalData.dummyTestRequestsToSend(random)
-        }
-    }
+object DummyService {
+    private const val dummyToken = "000000000000000|2020-01-01"
+    private val webRequestBuilder = WebRequestBuilder.getInstance()
 
     suspend fun sendDummyRequestsIfNeeded() {
-        if (LocalData.dummyTestRequestsToSend() > 0) {
+        if (LocalData.dummyTestRequestsToSend() == -1) {
+            if ((0..60).random() == 0) {
+                val random = (2 until 5).random()
+                LocalData.dummyTestRequestsToSend(random)
+            }
+        } else {
             fakeTestRequest()
             if (LocalData.dummyTestRequestsToSend() == 0) {
                 fakeKeysUpload()
@@ -30,18 +27,19 @@ class DummyService(
     }
 
     private suspend fun fakeTestRequest() {
+        Timber.d("fake test request")
         webRequestBuilder.beAsyncGetTestResult(dummyToken)
         LocalData.dummyTestRequestsToSend(LocalData.dummyTestRequestsToSend() - 1)
     }
 
     private suspend fun fakeKeysUpload() {
+        delay(TimeUnit.SECONDS.toMillis((5 until 15).random().toLong()))
         ignoreExceptions { webRequestBuilder.beAsyncAckTestResult(dummyToken) }
 
-        val delayInSeconds = (5..15).random()
-
-        delay(TimeUnit.SECONDS.toMillis(delayInSeconds.toLong()))
-
+        delay(TimeUnit.SECONDS.toMillis((5 until 15).random().toLong()))
         ignoreExceptions { webRequestBuilder.beAsyncDummySubmitKeysToServer() }
+
+        LocalData.dummyTestRequestsToSend(-1)
     }
 
 
