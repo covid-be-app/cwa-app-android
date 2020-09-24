@@ -13,6 +13,7 @@ object DummyService {
     private val webRequestBuilder = WebRequestBuilder.getInstance()
 
     suspend fun sendDummyRequestsIfNeeded() {
+        Timber.d("init dummy scenario")
         if (LocalData.dummyTestRequestsToSend() == -1) {
             if ((0..60).random() == 0) {
                 val random = (2 until 5).random()
@@ -26,15 +27,21 @@ object DummyService {
         }
     }
 
+    suspend fun fakeAckRequest() {
+        Timber.d("fake ack request")
+        webRequestBuilder.beAsyncAckTestResult(dummyToken)
+    }
+
     private suspend fun fakeTestRequest() {
         Timber.d("fake test request")
         webRequestBuilder.beAsyncGetTestResult(dummyToken)
+        fakeAckRequest()
         LocalData.dummyTestRequestsToSend(LocalData.dummyTestRequestsToSend() - 1)
     }
 
     private suspend fun fakeKeysUpload() {
         delay(TimeUnit.SECONDS.toMillis((5 until 15).random().toLong()))
-        ignoreExceptions { webRequestBuilder.beAsyncAckTestResult(dummyToken) }
+        fakeTestRequest()
 
         delay(TimeUnit.SECONDS.toMillis((5 until 15).random().toLong()))
         ignoreExceptions { webRequestBuilder.beAsyncDummySubmitKeysToServer() }
