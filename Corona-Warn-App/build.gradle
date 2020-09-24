@@ -33,8 +33,8 @@ android {
         applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 76
-        versionName "1.5.4"
+        versionCode 77
+        versionName "1.6.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -71,7 +71,7 @@ android {
                 buildConfigField "String", "PUB_KEYS_SIGNATURE_VERIFICATION", "\"$PUB_KEYS_SIGNATURE_VERIFICATION\""
 
             def STATISTICS_CDN_URL = overridingProperties.getProperty('STATISTICS_CDN_URL')
-            if (PUB_KEYS_SIGNATURE_VERIFICATION)
+            if (STATISTICS_CDN_URL)
                 buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
         }
 
@@ -125,7 +125,7 @@ android {
                     buildConfigField "String", "PUB_KEYS_SIGNATURE_VERIFICATION", "\"$PUB_KEYS_SIGNATURE_VERIFICATION\""
 
                 def STATISTICS_CDN_URL = overridingProperties.getProperty('STATISTICS_CDN_URL')
-                if (PUB_KEYS_SIGNATURE_VERIFICATION)
+                if (STATISTICS_CDN_URL)
                     buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
             }
         }

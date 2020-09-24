@@ -5,6 +5,7 @@ import android.util.Base64
 import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import timber.log.Timber
 import java.math.BigInteger
+import java.security.SecureRandom
 import java.util.Date
 import javax.crypto.KeyGenerator
 import javax.crypto.Mac
@@ -85,7 +86,12 @@ class MobileTestId(
         }
 
         private fun generateR0(): String {
-            return List(16) { (('a'..'z') + ('A'..'Z') + ('0'..'9')).random() }.joinToString("")
+            val secureRandom = SecureRandom()
+            return List(16) {
+                (('a'..'z') + ('A'..'Z') + ('0'..'9'))[secureRandom.nextInt(16)]
+            }.joinToString(
+                ""
+            )
         }
 
         private fun makeInfo(r0: String, t0: String, suffix: String = "TEST REQUEST"): String {

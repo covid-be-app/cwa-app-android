@@ -287,11 +287,27 @@ class WebRequestBuilder(
     }
 
     suspend fun beAsyncDummySubmitKeysToServer() = withContext(Dispatchers.IO) {
-        val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission
+        val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission - 1
         Timber.d("Writing $fakeKeyCount Dummy Keys to the Submission Payload.")
 
+        val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
+            .setKeyData(
+                ByteString.copyFrom(
+                    byteArrayOf(
+                        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                    )
+                )
+            )
+            .setRollingStartIntervalNumber(2600000)
+            .setRollingPeriod(144)
+            .setTransmissionRiskLevel(4)
+            .build()
+
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .setPadding(getPadding(0))
+            .addKeys(key)
+            .addCountries("BEL")
+            .setPadding(getPadding(1))
             .build()
 
         val fakeTestId = MobileTestId.generate(Date())

@@ -33,8 +33,6 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
     /**
      * Work execution
      *
-     * If background job is running for less than 21 days, testResult is checked.
-     * If the job is running for more than 21 days, the job will be stopped
      *
      * @return Result
      *
@@ -67,6 +65,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                     ) < BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
                 ) {
                     val testResult = BeSubmissionService.asyncRequestTestResult()
+                    DummyService.fakeAckRequest()
                     initiateNotification(TestResult.fromInt(testResult.result))
                 } else {
                     BeSubmissionService.deleteRegistrationToken()
@@ -75,6 +74,7 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
                 DummyService.sendDummyRequestsIfNeeded()
             }
         } catch (e: Exception) {
+            Timber.e(e)
             result = Result.retry()
         }
 

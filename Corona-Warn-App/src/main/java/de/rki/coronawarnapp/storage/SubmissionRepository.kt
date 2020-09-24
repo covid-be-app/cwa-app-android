@@ -1,6 +1,7 @@
 package de.rki.coronawarnapp.storage
 
 import androidx.lifecycle.MutableLiveData
+import be.sciensano.coronalert.service.DummyService
 import be.sciensano.coronalert.storage.isTestResultNegative
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.util.DeviceUIState
@@ -50,6 +51,8 @@ object SubmissionRepository {
 
             if (testResult == TestResult.POSITIVE || testResult == TestResult.NEGATIVE) {
                 BeSubmissionService.asyncSendAck(testResultResponse)
+            } else {
+                DummyService.fakeAckRequest()
             }
 
             val initialTestResultReceivedTimestamp = LocalData.initialTestResultReceivedTimestamp()
