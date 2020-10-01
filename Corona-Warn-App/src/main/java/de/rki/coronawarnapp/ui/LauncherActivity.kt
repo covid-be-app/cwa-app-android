@@ -1,6 +1,8 @@
 package de.rki.coronawarnapp.ui
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
 import androidx.lifecycle.lifecycleScope
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.ui.main.MainActivity
@@ -25,8 +27,15 @@ class LauncherActivity : AppCompatActivity() {
     }
 
     fun navigateToActivities() {
+        val data: Uri? = intent?.data
+        val pcr = data?.getQueryParameter("pcr")
+
         if (LocalData.isOnboarded()) {
-            startMainActivity()
+            if (pcr != null && pcr.length == 16 && pcr.isDigitsOnly() && data.queryParameterNames.size == 1) {
+                startMainActivityWithTestActivivation(data.toString())
+            } else {
+                startMainActivity()
+            }
         } else {
             startOnboardingActivity()
         }
@@ -40,6 +49,12 @@ class LauncherActivity : AppCompatActivity() {
 
     private fun startMainActivity() {
         MainActivity.start(this)
+        this.overridePendingTransition(0, 0)
+        finish()
+    }
+
+    private fun startMainActivityWithTestActivivation(url: String) {
+        MainActivity.startForTestActivation(this, url)
         this.overridePendingTransition(0, 0)
         finish()
     }

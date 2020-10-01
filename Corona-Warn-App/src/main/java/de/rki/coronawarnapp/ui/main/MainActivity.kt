@@ -11,8 +11,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import de.rki.coronawarnapp.R
-import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.http.playbook.BackgroundNoise
+import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.ui.viewmodel.SettingsViewModel
 import de.rki.coronawarnapp.util.ConnectivityHelper
 import de.rki.coronawarnapp.util.DialogHelper
@@ -32,9 +32,17 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
     companion object {
         private val TAG: String? = MainActivity::class.simpleName
+        const val URL_ARGUMENT = "url"
 
         fun start(context: Context) {
             context.startActivity(Intent(context, MainActivity::class.java))
+        }
+
+        fun startForTestActivation(context: Context, activationCode: String) {
+            val intent = Intent(context, MainActivity::class.java)
+            intent.putExtra(URL_ARGUMENT, activationCode)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            context.startActivity(intent)
         }
     }
 
@@ -184,6 +192,23 @@ class MainActivity : AppCompatActivity() {
         ConnectivityHelper.unregisterNetworkStatusCallback(this, callbackNetwork)
         ConnectivityHelper.unregisterBluetoothStatusCallback(this, callbackBluetooth)
         ConnectivityHelper.unregisterLocationStatusCallback(this, callbackLocation)
+    }
+
+    private fun showTestActivatedDialog() {
+        val dialog = DialogHelper.DialogInstance(
+            this,
+            R.string.onboarding_energy_optimized_dialog_headline,
+            R.string.onboarding_energy_optimized_dialog_body,
+            R.string.onboarding_energy_optimized_dialog_button_positive,
+            R.string.onboarding_energy_optimized_dialog_button_negative,
+            false, {
+                // go to battery optimization
+                ExternalActionHelper.disableBatteryOptimizations(this)
+            }, {
+                // keep battery optimization enabled
+                showManualCheckingRequiredDialog()
+            })
+        DialogHelper.showDialog(dialog)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
