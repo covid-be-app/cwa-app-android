@@ -97,7 +97,7 @@ class TracingViewModel : ViewModel() {
                     TimerHelper.checkManualKeyRetrievalTimer()
                 }
             } catch (e: TransactionException) {
-                e.cause?.report(INTERNAL)
+                //do nothing, we don't want to intercept various network error
             } catch (e: Exception) {
                 e.report(INTERNAL)
             }
@@ -106,7 +106,7 @@ class TracingViewModel : ViewModel() {
             try {
                 RiskLevelTransaction.start()
             } catch (e: TransactionException) {
-                e.cause?.report(INTERNAL)
+                //do nothing, we don't want to intercept various network error
             } catch (e: Exception) {
                 e.report(INTERNAL)
             }
