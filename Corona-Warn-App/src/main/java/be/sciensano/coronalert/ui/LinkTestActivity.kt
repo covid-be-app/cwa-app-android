@@ -124,6 +124,7 @@ class LinkTestActivity : AppCompatActivity() {
                 //strip html
                 view.loadUrl(
                     "javascript:" +
+                            "if(document.getElementById('cookie-notice')) document.getElementById('cookie-notice').style.display = 'none';" +
                             "document.getElementsByClassName('navbar')[0].style.display = 'none';" +
                             "document.getElementsByClassName('entry-header')[0].style.display = 'none';" +
                             "document.getElementsByClassName('vc_row')[0].style.display = 'none';" +
