@@ -70,7 +70,7 @@
                     android:scheme="https" />
                 <data
                     android:host="staging.coronalert.be"
-                    android:path="/de/coronalert-formular-bestatigung/"
+                    android:path="/de/coronalert-formular/"
                     android:scheme="https" />
                 <data
                     android:host="staging.coronalert.be"
