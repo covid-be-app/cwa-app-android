@@ -28,7 +28,7 @@ class MobileTestId(
 
     companion object {
         fun generate(
-            date: Date, infoSuffix: String = ""
+            date: Date, infoSuffix: String = "TEST REQUEST"
         ): MobileTestId {
             val t0 = date.toServerFormat()
             Timber.d("t0: %s", t0)
@@ -94,7 +94,7 @@ class MobileTestId(
             )
         }
 
-        private fun makeInfo(r0: String, t0: String, suffix: String = "TEST REQUEST"): String {
+        private fun makeInfo(r0: String, t0: String, suffix: String): String {
             return r0 + t0 + suffix
         }
 
