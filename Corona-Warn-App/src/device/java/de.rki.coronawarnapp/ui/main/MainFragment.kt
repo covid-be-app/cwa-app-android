@@ -1,5 +1,6 @@
 package de.rki.coronawarnapp.ui.main
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -16,6 +17,7 @@ import androidx.navigation.fragment.findNavController
 import be.sciensano.coronalert.ui.LinkTestActivity
 import be.sciensano.coronalert.ui.StatisticsViewModel
 import be.sciensano.coronalert.ui.submission.SubmissionTestRequestViewModel
+import de.rki.coronawarnapp.BuildConfig
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentMainBinding
 import de.rki.coronawarnapp.risk.TimeVariables
@@ -82,6 +84,8 @@ class MainFragment : Fragment() {
         setButtonOnClickListener()
         setContentDescription()
 
+        setEnvironmentDebugText()
+
 //        showOneTimeTracingExplanationDialog()
         observeStatistics()
 
@@ -143,6 +147,28 @@ class MainFragment : Fragment() {
                     {},
                     {}
                 ))
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setEnvironmentDebugText() {
+        val urls = listOf(
+            BuildConfig.DOWNLOAD_CDN_URL,
+            BuildConfig.STATISTICS_CDN_URL,
+            BuildConfig.SUBMISSION_CDN_URL,
+            BuildConfig.VERIFICATION_CDN_URL
+        )
+
+        if (urls.any { url -> !url.contains("prd") }) {
+            binding.textEnvironment.visibility = View.VISIBLE
+            if (urls.all { url -> url.contains("tst") }) {
+                binding.textEnvironment.text = "TST ENVIRONMENT"
+            }
+            if (urls.all { url -> url.contains("stg") }) {
+                binding.textEnvironment.text = "STG ENVIRONMENT"
+            }
+        } else {
+            binding.textEnvironment.visibility = View.GONE
         }
     }
 
