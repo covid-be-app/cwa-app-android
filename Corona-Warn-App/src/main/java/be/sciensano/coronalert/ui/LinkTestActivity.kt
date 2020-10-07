@@ -66,6 +66,7 @@ class LinkTestActivity : AppCompatActivity() {
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.settings.domStorageEnabled = true
 
+        @Suppress("MagicNumber")
         binding.webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView, newProgress: Int) {
                 super.onProgressChanged(view, newProgress)
@@ -124,7 +125,8 @@ class LinkTestActivity : AppCompatActivity() {
                 //strip html
                 view.loadUrl(
                     "javascript:" +
-                            "if(document.getElementById('cookie-notice')) document.getElementById('cookie-notice').style.display = 'none';" +
+                            "if(document.getElementById('cookie-notice')) " +
+                            "document.getElementById('cookie-notice').style.display = 'none';" +
                             "document.getElementsByClassName('navbar')[0].style.display = 'none';" +
                             "document.getElementsByClassName('entry-header')[0].style.display = 'none';" +
                             "document.getElementsByClassName('vc_row')[0].style.display = 'none';" +
@@ -142,6 +144,7 @@ class LinkTestActivity : AppCompatActivity() {
             }
         }
 
+        @Suppress("ReturnCount")
         override fun shouldOverrideUrlLoading(
             view: WebView,
             newUrl: String

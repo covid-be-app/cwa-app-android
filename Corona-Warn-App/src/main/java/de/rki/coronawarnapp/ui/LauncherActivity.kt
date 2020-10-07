@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 class LauncherActivity : AppCompatActivity() {
     companion object {
         private val TAG: String? = LauncherActivity::class.simpleName
+        private const val PCR_LENGTH: Int = 16
     }
 
     private lateinit var updateChecker: UpdateChecker
@@ -27,11 +28,9 @@ class LauncherActivity : AppCompatActivity() {
     }
 
     fun navigateToActivities() {
-        val data: Uri? = intent?.data
-        val pcr = data?.getQueryParameter("pcr")
-
         if (LocalData.isOnboarded()) {
-            if (pcr != null && pcr.length == 16 && pcr.isDigitsOnly() && data.queryParameterNames.size == 1) {
+            val data: Uri? = intent?.data
+            if (isPcrValid(data)) {
                 startMainActivityWithTestActivivation(data.toString())
             } else {
                 startMainActivity()
@@ -39,6 +38,12 @@ class LauncherActivity : AppCompatActivity() {
         } else {
             startOnboardingActivity()
         }
+    }
+
+    private fun isPcrValid(data: Uri?): Boolean {
+        val pcr = data?.getQueryParameter("pcr")
+
+        return (pcr != null && pcr.length == PCR_LENGTH && pcr.isDigitsOnly() && data.queryParameterNames.size == 1)
     }
 
     private fun startOnboardingActivity() {
