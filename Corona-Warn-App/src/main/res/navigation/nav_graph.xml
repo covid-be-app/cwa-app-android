@@ -41,6 +41,9 @@
         <action
             android:id="@+id/action_mainFragment_to_testRiskLevelCalculation"
             app:destination="@id/testRiskLevelCalculation" />
+        <action
+            android:id="@+id/action_mainFragment_to_submissionTestRequestFragment"
+            app:destination="@id/submissionTestRequestFragment" />
     </fragment>
 
     <fragment
@@ -247,6 +250,15 @@
         <action
             android:id="@+id/action_submissionTestRequestFragment_to_submissionTestRequestSaveFragment"
             app:destination="@id/submissionTestRequestSaveFragment" />
+        <action
+            android:id="@+id/action_submissionTestRequestFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="skipCodeInformation"
+            android:defaultValue="false"
+            app:argType="boolean" />
     </fragment>
     <fragment
         android:id="@+id/submissionKeysListFragment"

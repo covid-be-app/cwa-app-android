@@ -1,5 +1,7 @@
 package de.rki.coronawarnapp.ui.main
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +13,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.ui.LinkTestActivity
 import be.sciensano.coronalert.ui.StatisticsViewModel
+import be.sciensano.coronalert.ui.submission.SubmissionTestRequestViewModel
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentMainBinding
 import de.rki.coronawarnapp.risk.TimeVariables
@@ -50,6 +54,7 @@ class MainFragment : Fragment() {
     private val settingsViewModel: SettingsViewModel by activityViewModels()
     private val submissionViewModel: SubmissionViewModel by activityViewModels()
     private val statisticsViewModel: StatisticsViewModel by activityViewModels()
+    private val testRequestViewModel: SubmissionTestRequestViewModel by activityViewModels()
 
     private var _binding: FragmentMainBinding? = null
     private val binding: FragmentMainBinding get() = _binding!!
@@ -79,6 +84,66 @@ class MainFragment : Fragment() {
 
 //        showOneTimeTracingExplanationDialog()
         observeStatistics()
+
+        val url = activity?.intent?.extras?.getString(MainActivity.URL_ARGUMENT)
+        if (url != null) {
+            addTestForConfirmation(url)
+        }
+    }
+
+    private fun addTestForConfirmation(url: String) {
+        if (submissionViewModel.getMobileTestIduiCode() == null) {
+            DialogHelper.showDialog(
+                DialogHelper.DialogInstance(
+                    requireActivity(),
+                    R.string.submission_intro_symptoms_dialog_title,
+                    R.string.submission_intro_symptoms_dialog_body,
+                    R.string.submission_intro_symptoms_dialog_positive,
+                    R.string.submission_intro_symptoms_dialog_negative,
+                    true,
+                    {
+                        findNavController().doNavigate(
+                            MainFragmentDirections.actionMainFragmentToSubmissionTestRequestFragment(
+                                true
+                            )
+                        )
+                    },
+                    {
+                        testRequestViewModel.setSubmissionDate(Date())
+                        testRequestViewModel.generateTestId()
+                        navigateToLinkTestActivity(url)
+                    }
+                ))
+        } else {
+            navigateToLinkTestActivity(url)
+        }
+
+    }
+
+    private fun navigateToLinkTestActivity(url: String) {
+        val r1 = submissionViewModel.getMobileTestIduiCode()
+        val t0 = submissionViewModel.getMobileTestIdt0()
+        if (r1 != null && t0 != null) {
+            LinkTestActivity.start(requireActivity(), url, r1, t0)
+            activity?.intent?.removeExtra(MainActivity.URL_ARGUMENT)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == LinkTestActivity.ACTIVATION_RESULT && resultCode == Activity.RESULT_OK) {
+            DialogHelper.showDialog(
+                DialogHelper.DialogInstance(
+                    requireActivity(),
+                    R.string.test_linked_dialog_title,
+                    R.string.test_linked_dialog_body,
+                    R.string.test_linked_dialog_button_positive,
+                    null,
+                    true,
+                    {},
+                    {}
+                ))
+        }
     }
 
     override fun onResume() {
