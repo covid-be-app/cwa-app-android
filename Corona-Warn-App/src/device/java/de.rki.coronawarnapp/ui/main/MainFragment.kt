@@ -97,6 +97,7 @@ class MainFragment : Fragment() {
 
     private fun addTestForConfirmation(url: String) {
         if (submissionViewModel.getMobileTestIduiCode() == null) {
+            submissionViewModel.newTestForConfirmation = true
             DialogHelper.showDialog(
                 DialogHelper.DialogInstance(
                     requireActivity(),
@@ -135,18 +136,26 @@ class MainFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == LinkTestActivity.ACTIVATION_RESULT && resultCode == Activity.RESULT_OK) {
-            DialogHelper.showDialog(
-                DialogHelper.DialogInstance(
-                    requireActivity(),
-                    R.string.test_linked_dialog_title,
-                    R.string.test_linked_dialog_body,
-                    R.string.test_linked_dialog_button_positive,
-                    null,
-                    true,
-                    {},
-                    {}
-                ))
+        if (requestCode == LinkTestActivity.ACTIVATION_RESULT) {
+            if (resultCode == Activity.RESULT_OK) {
+                DialogHelper.showDialog(
+                    DialogHelper.DialogInstance(
+                        requireActivity(),
+                        R.string.test_linked_dialog_title,
+                        R.string.test_linked_dialog_body,
+                        R.string.test_linked_dialog_button_positive,
+                        null,
+                        true,
+                        {},
+                        {}
+                    ))
+                submissionViewModel.newTestForConfirmation = false
+            } else {
+                if (submissionViewModel.newTestForConfirmation) {
+                    submissionViewModel.deregisterTestFromDevice()
+                    submissionViewModel.newTestForConfirmation = false
+                }
+            }
         }
     }
 
@@ -194,7 +203,8 @@ class MainFragment : Fragment() {
                     DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT)
                         .format(Date(it.lastUpdatedDate))
 
-                val startDate = android.text.format.DateFormat.format("dd MMM", Date(it.startDate))
+                val startDate =
+                    android.text.format.DateFormat.format("dd MMM", Date(it.startDate))
                 val endDate = android.text.format.DateFormat.format("dd MMM", Date(it.endDate))
 
                 statistics.visibility = View.VISIBLE
@@ -271,7 +281,10 @@ class MainFragment : Fragment() {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToSettingsTracingFragment())
         }
         binding.mainAbout.mainCard.setOnClickListener {
-            ExternalActionHelper.openUrl(this, requireContext().getString(R.string.main_about_link))
+            ExternalActionHelper.openUrl(
+                this,
+                requireContext().getString(R.string.main_about_link)
+            )
         }
         binding.mainHeaderShare.buttonIcon.setOnClickListener {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToMainSharingFragment())
