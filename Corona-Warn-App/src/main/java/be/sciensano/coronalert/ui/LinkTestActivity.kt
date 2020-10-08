@@ -26,10 +26,10 @@ class LinkTestActivity : AppCompatActivity() {
         private const val T0_ARGUMENT = "t0"
         const val ACTIVATION_RESULT = 100
         private val CONFIRMATION_URLS = listOf(
-            "https://staging.coronalert.be/en/corona-alert-form-confirmation",
-            "https://staging.coronalert.be/fr/formulaire-coronalert-confirmation",
-            "https://staging.coronalert.be/nl/coronalert-formulier-bevestiging",
-            "https://staging.coronalert.be/de/coronalert-formular-bestatigung"
+            "corona-alert-form-confirmation",
+            "formulaire-coronalert-confirmation",
+            "coronalert-formulier-bevestiging",
+            "coronalert-formular-bestatigung"
         )
 
         fun start(activity: Activity, url: String, r1: String, t0: String) {

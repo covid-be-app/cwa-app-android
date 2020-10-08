@@ -65,19 +65,19 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="staging.coronalert.be"
+                    android:host="coronalert.be"
                     android:path="/en/corona-alert-form/"
                     android:scheme="https" />
                 <data
-                    android:host="staging.coronalert.be"
+                    android:host="coronalert.be"
                     android:path="/de/coronalert-formular/"
                     android:scheme="https" />
                 <data
-                    android:host="staging.coronalert.be"
+                    android:host="coronalert.be"
                     android:path="/fr/formulaire-coronalert/"
                     android:scheme="https" />
                 <data
-                    android:host="staging.coronalert.be"
+                    android:host="coronalert.be"
                     android:path="/nl/coronalert-formulier/"
                     android:scheme="https" />
             </intent-filter>
