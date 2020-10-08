@@ -101,13 +101,13 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onResume() {
         super.onResume()
-        ConnectivityHelper.registerNetworkStatusCallback(this, callbackNetwork)
+//        ConnectivityHelper.registerNetworkStatusCallback(this, callbackNetwork)
         ConnectivityHelper.registerBluetoothStatusCallback(this, callbackBluetooth)
         ConnectivityHelper.registerLocationStatusCallback(this, callbackLocation)
         settingsViewModel.updateBackgroundJobEnabled(ConnectivityHelper.autoModeEnabled(this))
         scheduleWork()
         checkShouldDisplayBackgroundWarning()
-        doBackgroundNoiseCheck()
+//        doBackgroundNoiseCheck()
     }
 
     private fun doBackgroundNoiseCheck() {
@@ -189,7 +189,7 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onPause() {
         super.onPause()
-        ConnectivityHelper.unregisterNetworkStatusCallback(this, callbackNetwork)
+//        ConnectivityHelper.unregisterNetworkStatusCallback(this, callbackNetwork)
         ConnectivityHelper.unregisterBluetoothStatusCallback(this, callbackBluetooth)
         ConnectivityHelper.unregisterLocationStatusCallback(this, callbackLocation)
     }
