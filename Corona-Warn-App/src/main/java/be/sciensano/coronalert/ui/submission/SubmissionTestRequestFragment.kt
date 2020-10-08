@@ -66,10 +66,18 @@ class SubmissionTestRequestFragment : Fragment() {
         }
 
         binding.submissionTestRequestButtonNext.setOnClickListener {
-            findNavController().doNavigate(
-                SubmissionTestRequestFragmentDirections
-                    .actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
-            )
+            if (SubmissionTestRequestFragmentArgs.fromBundle(requireArguments()).skipCodeInformation) {
+                viewModel.generateTestId()
+                findNavController().doNavigate(
+                    SubmissionTestRequestFragmentDirections
+                        .actionSubmissionTestRequestFragmentToMainFragment()
+                )
+            } else {
+                findNavController().doNavigate(
+                    SubmissionTestRequestFragmentDirections
+                        .actionSubmissionTestRequestFragmentToSubmissionTestRequestSaveFragment()
+                )
+            }
         }
     }
 }

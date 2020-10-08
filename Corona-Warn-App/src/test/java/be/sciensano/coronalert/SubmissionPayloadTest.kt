@@ -7,7 +7,6 @@ import de.rki.coronawarnapp.service.submission.SubmissionConstants
 import org.junit.Assert
 import org.junit.Test
 import java.util.Calendar
-import java.util.Date
 
 class SubmissionPayloadTest {
 
@@ -18,19 +17,13 @@ class SubmissionPayloadTest {
 
     @Test
     fun testPayloadSizesAllEquals() {
-        val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
-            .setKeyData(ByteString.copyFrom(key1))
-            .setRollingStartIntervalNumber((Date().time / 60 / 10 / 1000).toInt())
-            .setRollingPeriod(144)
-            .setTransmissionRiskLevel(4)
-            .build()
 
         val datesRange = (2020 until 2100)
 
         val sizes = (0 until SubmissionConstants.minKeyCountForSubmission).flatMap { index ->
             datesRange.map { year ->
                 val cal = Calendar.getInstance()
-                cal.set(year, 1, 1)
+                cal.set(year, 1, 1, 0, 0)
 
                 val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
                     .setKeyData(ByteString.copyFrom(key1))

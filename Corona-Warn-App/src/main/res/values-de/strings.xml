@@ -7,14 +7,13 @@
     <item>Selbst wenn Sie keine Symptome mehr haben und es Ihnen wieder gut geht, könnten Sie immer noch ansteckend sein.</item>
   </string-array>
   <string-array name="submission_intro_bullet_points">
-    <item>Wenn Sie Corona-positiv getestet wurden, können Sie andere warnen.</item>
     <item>Wir fragen, ob Sie Symptome wie Husten, Geschmacks- und Geruchsverlust, Erkältung oder Grippe haben. Wenn ja, werden Sie nach dem Datum des Auftretens der Symptome gefragt.</item>
     <item>Sie erhalten einen Code, mit dem der Befund in der App abgerufen werden kann.</item>
   </string-array>
   <string-array name="test_result_card_negative_further_info_bullet_points">
     <item>Fühlen Sie sich noch angeschlagen? Fragen Sie Ihren Hausarzt, wenn Sie sich sehr krank fühlen und/oder Ihre Beschwerden sich verschlimmert haben.</item>
     <item>Bleiben Sie bis zu Ihrer Genesung zu Hause. Wenn Sie sich Coronavirus (SARS-CoV-2) infizieren, wenn eine andere Infektion Sie schwächte, könnten Sie sehr krank werden.</item>
-    <item>Gehen Sie nicht krank zur Arbeit, um andere Personen nicht zu gefährden. Falls sich Ihre Symptome verschlechtern, kann die Notwendigkeit eines weiteren SARS-CoV-2-Tests bestehen.</item>
+    <item>Gehen Sie nicht krank zur Arbeit, um andere Personen nicht zu gefährden. Falls sich Ihre Beschwerden verschlimmern, kann ein weiterer SARS-CoV-2-Test notwendig sein.</item>
   </string-array>
   <string name="preference_name">
     <xliff:g id="preference">shared_preferences_sciensano</xliff:g>
@@ -170,7 +169,7 @@
   <string name="main_about_body">Hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
   <string name="main_about_link">https://coronalert.be/de/faq-de/</string>
   <string name="hint_external_webpage">Häufige Fragen, hier finden Sie Antworten auf häufig gestellte Fragen rund um die Coronalert-App. Sie werden auf eine externe Website weitergeleitet.</string>
-  <string name="main_share_title">Coronalert-App teilen</string>
+  <string name="main_share_title">Coronalert teilen</string>
   <string name="main_share_headline">Gemeinsam gegen Corona</string>
   <string name="main_share_body">Je häufiger die App benutzt wird, desto eher gebieten wir der Infektion Einhalt. Bitten Sie Familie, Freunde und Bekannte, die App herunterzuladen!</string>
   <string name="main_share_button">Download-Link versenden</string>
@@ -253,11 +252,11 @@
   <string name="onboarding_tracing_subtitle">Um zu erkennen, ob Sie infektionsgefährdet sind, müssen Sie das Kontaktlogbuch aktivieren.</string>
   <string name="onboarding_tracing_body">Kontaktverfolgung erfolgt, indem Ihr Handy per Bluetooth verschlüsselte Zufallscodes anderer Nutzer empfängt und Ihren Zufallscode an Ihr Handy weitergibt. Die Funktion kann jederzeit deaktiviert werden.</string>
   <string name="onboarding_tracing_body_emphasized">Die verschlüsselten Zufallscodes leiten nur Datum, Dauer und die anhand der Signalstärke berechnete Entfernung zu Ihren Mitmenschen weiter. Persönliche Daten wie Name, Adresse oder Standort werden nicht erfasst. Personen sind nicht identifizierbar.</string>
-  <string name="onboarding_tracing_headline_consent">Einwilligungserklärung</string>
-  <string name="onboarding_tracing_body_consent">Um zu erfahren, ob Sie Kontakt mit einer infizierten Person hatten und für Sie ein Infektionsrisiko besteht, müssen Sie die Funktion Kontaktlogbuch in der App aktivieren. Der Aktivierung des Kontaktlogbuchs und der damit im Zusammenhang stehenden Datenverarbeitung stimmen Sie mit Antippen des Buttons: Kontaktlogbuch aktivieren zu.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zur Nutzung des Kontaktlogbuchs müssen Sie zudem auf dem Handy die von Google bereitgestellte Kontaktverfolgungs-Funktion „Meldungen möglicher Begegnung mit COVID-19-Infizierten“ aktivieren und für die Coronalert-App freigeben.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Ihr Handy erzeugt und versendet bei aktivierter Kontaktverfolgung kontinuierlich Zufalls-IDs per Bluetooth, die von anderen Apple- und Android-Handys mit ebenfalls aktivierter Kontaktverfolgung in Ihrer Umgebung empfangen werden können. Umgekehrt empfängt Ihr Handy die Zufalls-IDs der anderen Handys. Die eigenen und die von anderen Handys empfangenen Zufalls-IDs werden im Kontaktprotokoll der Kontaktverfolgungs-Funktion aufgezeichnet und dort 14 Tage gespeichert.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zur Ermittlung Ihres Infektionsrisikos lädt die App mehrmals täglich oder auf Abfrage eine Liste mit den Zufalls-IDs aller Nutzer, die Ihre Infektion mit dem Corona-Virus in der App geteilt haben. Diese Liste wird dann mit den im Kontaktprotokoll der Kontaktverfolgungs-Funktion gespeicherten Zufalls-IDs verglichen. Wenn die App dabei feststellt, dass Sie möglicherweise Kontakt zu einem infizierten Nutzer hatten, warnt Sie die App dass Sie mit einer infizierten Person in Kontakt waren und insoweit ein Infektionsrisiko besteht. In diesem Fall erhält die App außerdem Zugriff auf weitere im Kontaktprotokoll der Kontaktverfolgungs-Funktion Ihres Smartphones gespeicherte Daten (Datum und Dauer sowie Bluetooth-Signalstärke des Kontakts).<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Aus der Bluetooth-Signalstärke wird der räumliche Abstand abgeleitet (je stärker das Signal, desto geringer der Abstand). Diese Angaben werden von der App ausgewertet, um Ihr Gesundheitsrisiko durch eine COVID-Infektion abzuschätzen und Ihnen Empfehlungen für die nächsten Schritte zu geben. Diese Auswertung wird ausschließlich lokal auf Ihrem Handy durchgeführt. Außer Ihnen erfährt niemand (auch nicht das RKI), ob Sie mit einer infizierten Person Kontakt hatten und welches Risiko für Sie ermittelt wird.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Zum Widerruf Ihrer Einwilligung in die Kontaktverfolgung können Sie die Funktion über den Schieberegler innerhalb der App deaktivieren oder die App löschen. Wenn Sie die Kontaktverfolgung wieder nutzen möchten, können Sie den Schieberegler erneut aktivieren oder die App erneut installieren. Wenn Sie die Kontaktverfolgung deaktivieren, prüft die App nicht mehr, ob Sie Kontakt zu einem infizierten Nutzer hatten. Wenn keine weiteren Zufalls-IDs versendet/empfangen werden soll, müssen Sie das Kontaktprotokoll der Kontaktverfolgungs-Funktion in den Einstellungen Ihres Handys deaktivieren. Bitte beachten Sie, dass die im Kontaktprotokoll aufgezeichneten fremden und eigenen Zufalls-Kennungen nicht in der App gelöscht werden. Die im Kontaktprotokoll gespeicherten Daten können Sie nur in den Handy-Einstellungen endgültig löschen.<xliff:g id="line_break">\n</xliff:g><xliff:g id="line_break">\n</xliff:g>Die Datenschutzhinweise der App (einschließlich Informationen zur Datenverarbeitung für die Kontaktverfolgung) finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
+  <string name="onboarding_tracing_headline_consent"></string>
+  <string name="onboarding_tracing_body_consent"></string>
   <string name="onboarding_tracing_button_next">Kontaktlogbuch aktivieren</string>
   <string name="onboarding_tracing_dialog_headline">Genehmigung.</string>
-  <string name="onboarding_tracing_dialog_body">Coronalert-App kann dadurch keine Meldungen zum COVID-19-Risikostatus versenden und empfangen. Sie können die Funktion jederzeit ausschalten.</string>
+  <string name="onboarding_tracing_dialog_body">Coronalert-App kann dadurch keine Meldungen zum COVID-19-Risikostatus versenden und empfangen. Sie können die Funktion jederzeit deaktivieren.</string>
   <string name="onboarding_tracing_dialog_button_positive">Nicht aktivieren</string>
   <string name="onboarding_tracing_dialog_button_negative">Zurück</string>
   <string name="onboarding_tracing_illustration_description">Drei Personen aktivierten das Kontaktlogbuch auf dem Handy. Ihre Treffen werden daher erfasst.</string>
@@ -437,10 +436,10 @@
   <string name="submission_tan_character_error"></string>
   <string name="submission_intro_title">Meinen Test erhalten</string>
   <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
-  <string name="submission_intro_text">Damit die App funktioniert, sind wir auf die Mithilfe von Corona-positiv getesteten Personen angewiesen.\n\nDa nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Sie können jetzt wie folgt vorgehen:</string>
+  <string name="submission_intro_text">Da nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Sie können jetzt wie folgt vorgehen:</string>
   <string name="submission_intro_button_next">Weiter</string>
   <string name="submission_intro_illustration_description">Ein positiver Testbefund wird verschlüsselt ins System übermittelt, das nun andere Nutzer warnt.</string>
-  <string name="submission_intro_accessibility_title">Meinen Test erhalten. So funktioniert die Coronalert-App</string>
+  <string name="submission_intro_accessibility_title">Meinen Test erhalten. So funktioniert die Coronalert</string>
   <string name="submission_dispatcher_headline"></string>
   <string name="submission_dispatcher_subheadline"></string>
   <string name="submission_dispatcher_card_qr"></string>
@@ -456,7 +455,7 @@
   <string name="submission_dispatcher_accessibility_title"></string>
   <string name="submission_positive_other_warning_title">Andere warnen</string>
   <string name="submission_positive_other_warning_headline">Helfen Sie mit!</string>
-  <string name="submission_positive_other_warning_body">Als Nächstes können Sie dafür sorgen, dass die Coronalert-App Ihre lokal gespeicherten Zufallscodes der letzten 14 Tage an andere verteilt. So können Sie Ihre Mitmenschen warnen und helfen, die Infektionskette zu unterbrechen.\n\nDa nur unpersönliche Zufallscodes übertragen werden, bleibt Ihre Identität unbekannt.</string>
+  <string name="submission_positive_other_warning_body">Sie können angeben, dass Coronalert Ihre zufälligen IDs der letzten Tage mit anderen teilt. Auf diese Weise können Sie andere Personen warnen und die Infektionskette durchbrechen.\n\nDa nur unpersönliche Zufallscodes erteilt werden, ist Ihre Identität sicher.</string>
   <string name="submission_positive_other_warning_privacy_title">Datenschutz</string>
   <string name="submission_positive_other_warning_privacy_body">Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktiviertem Kontaktlogbuch automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.\n\nDie Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.\n\nSie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
   <string name="submission_positive_other_warning_button">Weiter</string>
@@ -577,7 +576,7 @@
   <string name="submission_intro_symptoms_dialog_positive">Ja</string>
   <string name="submission_intro_symptoms_dialog_negative">Nein</string>
   <string name="submission_test_request_headline">Generieren Sie den Code</string>
-  <string name="submission_test_request_text">Wählen Sie das Datum aus, an dem Sie mit den Symptomen begonnen haben. Dies wird Ihnen von der Person, die den Test durchführt, mitgeteilt.</string>
+  <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
   <string name="submission_test_request_save_text">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführen wird, um Ihr Smartphone mit dem Test zu verbinden.\nWenn Sie einen PCR-Code erhalten haben, geben Sie diese Nummer und Daten in das Webformular ein.</string>
   <string name="submission_test_request_save_button_save">Schließen</string>
   <string name="submission_countries_selection_headline">Länder wählen</string>
@@ -622,4 +621,12 @@
   <string name="submission_test_request_save_date_label">Datum der Infektiosität</string>
   <string name="submission_test_request_save_code_label">Code</string>
   <string name="submission_test_result_steps_added_body_with_code" formatted="false">Ihr Test wurde in Coronalert gespeichert.\n\nDatum der Infektiosität\n%s\n\nCode\n%s</string>
+  <string name="activity_link_test_title">Verknüpfen Sie Ihr Smartphone</string>
+  <string name="activity_link_test_error_body">Beim Laden der Seite ist ein Problem aufgetreten. Bitte versuche es erneut.</string>
+  <string name="activity_link_test_error_title">Fehler</string>
+  <string name="activity_link_test_error_button_positive">Wiederholen</string>
+  <string name="activity_link_test_error_button_negative">Stornieren</string>
+  <string name="test_linked_dialog_title">Test erfolgreich verknüpft</string>
+  <string name="test_linked_dialog_body">Ihr Test wurde erfolgreich mit Ihrem Smartphone verknüpft. Ab sofort können Sie Ihr Testergebnis in Coronalert erhalten.</string>
+  <string name="test_linked_dialog_button_positive">OK</string>
 </resources>

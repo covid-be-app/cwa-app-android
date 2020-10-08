@@ -49,7 +49,7 @@ object RiskLevelRepository {
      *
      */
     fun setLastCalculatedRiskLevelAsCurrent() {
-        var lastRiskLevelScore = getLastCalculatedScore()
+        var lastRiskLevelScore = getLastSuccessfullyCalculatedScore()
         if (lastRiskLevelScore == RiskLevel.UNDETERMINED) {
             lastRiskLevelScore = RiskLevel.UNKNOWN_RISK_INITIAL
         }

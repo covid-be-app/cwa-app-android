@@ -160,7 +160,7 @@ class SettingsTracingFragment : Fragment(),
                         // tracing was never activated
                         // ask for consent via dialog for initial tracing activation when tracing was not
                         // activated during onboarding
-                        showConsentDialog()
+//                        showConsentDialog()
                         // check if background processing is switched off, if it is, show the manual calculation dialog explanation before turning on.
                         if (!PowerManagementHelper.isIgnoringBatteryOptimizations(requireActivity())) {
                             showManualCheckingRequiredDialog()

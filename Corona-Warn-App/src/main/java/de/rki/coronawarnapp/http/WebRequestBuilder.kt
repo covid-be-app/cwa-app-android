@@ -48,6 +48,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.io.File
+import java.util.Calendar
 import java.util.Date
 import java.util.UUID
 import kotlin.math.max
@@ -290,6 +291,10 @@ class WebRequestBuilder(
         val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission - 1
         Timber.d("Writing $fakeKeyCount Dummy Keys to the Submission Payload.")
 
+        val cal = Calendar.getInstance()
+        cal.set(Calendar.HOUR, 0)
+        cal.set(Calendar.MINUTE, 0)
+
         val key = KeyExportFormat.TemporaryExposureKey.newBuilder()
             .setKeyData(
                 ByteString.copyFrom(
@@ -299,9 +304,9 @@ class WebRequestBuilder(
                     )
                 )
             )
-            .setRollingStartIntervalNumber(2600000)
+            .setRollingStartIntervalNumber((cal.time.time / 60 / 1000 / 10).toInt())
             .setRollingPeriod(144)
-            .setTransmissionRiskLevel(4)
+            .setTransmissionRiskLevel(0)
             .build()
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
