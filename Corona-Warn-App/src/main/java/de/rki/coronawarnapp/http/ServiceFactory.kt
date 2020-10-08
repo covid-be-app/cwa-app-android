@@ -1,6 +1,7 @@
 package de.rki.coronawarnapp.http
 
 import android.webkit.URLUtil
+import be.sciensano.coronalert.http.service.StatisticsService
 import de.rki.coronawarnapp.BuildConfig
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.exception.http.ServiceFactoryException
@@ -24,6 +25,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.protobuf.ProtoConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
+import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
+import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
+
 
 class ServiceFactory {
     companion object {
@@ -199,5 +203,43 @@ class ServiceFactory {
             throw ServiceFactoryException(IllegalArgumentException("the url is invalid"))
         }
         return url
+    }
+
+    /**
+     * Belgium services
+     */
+    fun beVerificationService(): BeVerificationService = beVerificationService
+    private val beVerificationService by lazy {
+        Retrofit.Builder()
+            .client(okHttpClient.buildClientWithNewSpecs(getRestrictedSpecs()))
+            .baseUrl("${verificationCdnUrl}/verification-api/")
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+            .create(BeVerificationService::class.java)
+    }
+
+    fun beSubmissionService(): BeSubmissionService = beSubmissionService
+    private val beSubmissionService by lazy {
+        Retrofit.Builder()
+            .client(okHttpClient.buildClientWithNewSpecs(getRestrictedSpecs()))
+            .baseUrl("${submissionCdnUrl}/submission-api/")
+            .addConverterFactory(protoConverterFactory)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+            .create(BeSubmissionService::class.java)
+    }
+
+    private val statisticsCdnUrl
+        get() = getValidUrl(BuildConfig.STATISTICS_CDN_URL)
+
+    fun statisticsService(): StatisticsService = statisticsService
+    private val statisticsService by lazy {
+        Retrofit.Builder()
+            .client(okHttpClient.buildClientWithNewSpecs(getCDNSpecs()))
+            .baseUrl(statisticsCdnUrl)
+            .addConverterFactory(protoConverterFactory)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+            .create(StatisticsService::class.java)
     }
 }

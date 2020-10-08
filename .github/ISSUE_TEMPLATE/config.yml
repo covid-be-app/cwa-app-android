@@ -1,5 +1,1 @@
 blank_issues_enabled: false
-contact_links:
-  - name: Feature Requests
-    url: https://github.com/corona-warn-app/cwa-wishlist/issues
-    about: Please propose new features here.

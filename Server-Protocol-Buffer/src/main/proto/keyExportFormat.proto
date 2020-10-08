@@ -29,6 +29,8 @@ message SignatureInfo {
 
 message SubmissionPayload {
     repeated TemporaryExposureKey keys = 1;
+    repeated string countries = 2;
+    optional bytes padding = 3;
 }
 
 message TemporaryExposureKey {

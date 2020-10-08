@@ -7,3 +7,7 @@
 .externalNativeBuild
 .cxx
 /.idea/
+Corona-Warn-App/device
+/.idea/**/*
+!/.idea/codeStyles/
+!/.idea/codeStyles/**/*

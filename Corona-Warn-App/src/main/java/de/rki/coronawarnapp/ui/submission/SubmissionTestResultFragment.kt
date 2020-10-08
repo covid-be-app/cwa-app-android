@@ -9,7 +9,9 @@ import android.view.accessibility.AccessibilityEvent
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.util.DateUtil
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestResultBinding
 import de.rki.coronawarnapp.exception.http.CwaClientError
@@ -18,8 +20,11 @@ import de.rki.coronawarnapp.exception.http.CwaWebException
 import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.ui.viewmodel.SubmissionViewModel
 import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
+import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.DialogHelper
 import de.rki.coronawarnapp.util.observeEvent
+import kotlinx.android.synthetic.main.include_step_entry_simple_body.view.*
+import java.text.DateFormat
 
 /**
  * A simple [Fragment] subclass.
@@ -115,6 +120,38 @@ class SubmissionTestResultFragment : Fragment() {
         submissionViewModel.uiStateError.observeEvent(viewLifecycleOwner) {
             DialogHelper.showDialog(buildErrorDialog(it))
         }
+
+        submissionViewModel.deviceUiState.observe(viewLifecycleOwner, Observer { uiState ->
+            if (uiState == DeviceUIState.PAIRED_REDEEMED) {
+                showRedeemedTokenWarningDialog()
+            }
+        })
+
+        val uiCode = submissionViewModel.getMobileTestIduiCode()
+        val t0 = submissionViewModel.getMobileTestIdt0()
+        if (uiCode != null && t0 != null) {
+            val date =
+                DateFormat.getDateInstance(DateFormat.FULL)
+                    .format(DateUtil.parseServerDate(t0).toDate())
+
+            binding.submissionTestResultContent.submissionTestResultPendingSteps.testResultPendingStepsAdded
+                .simple_step_entry_body.text = getString(
+                R.string.submission_test_result_steps_added_body_with_code,
+                date,
+                uiCode
+            )
+        }
+    }
+
+    private fun showRedeemedTokenWarningDialog() {
+        val dialog = DialogHelper.DialogInstance(
+            requireActivity(),
+            R.string.submission_error_dialog_web_tan_redeemed_title,
+            R.string.submission_error_dialog_web_tan_redeemed_body,
+            R.string.submission_error_dialog_web_tan_redeemed_button_positive
+        )
+
+        DialogHelper.showDialog(dialog)
     }
 
     override fun onResume() {
@@ -127,6 +164,8 @@ class SubmissionTestResultFragment : Fragment() {
     private fun setButtonOnClickListener() {
         binding.submissionTestResultButtonPendingRefresh.setOnClickListener {
             submissionViewModel.refreshDeviceUIState()
+            binding.submissionTestResultContent.submissionTestResultCard.testResultCard
+                .sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
         }
 
         binding.submissionTestResultButtonPendingRemoveTest.setOnClickListener {

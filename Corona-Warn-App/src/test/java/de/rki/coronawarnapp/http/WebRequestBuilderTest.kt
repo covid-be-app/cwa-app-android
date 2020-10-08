@@ -1,5 +1,6 @@
 package de.rki.coronawarnapp.http
 
+import be.sciensano.coronalert.http.service.StatisticsService
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
 import de.rki.coronawarnapp.http.service.VerificationService
@@ -17,16 +18,27 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import java.util.Date
+import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
+import be.sciensano.coronalert.http.service.VerificationService as BeVerificationService
 
 class WebRequestBuilderTest {
     @MockK
     private lateinit var verificationService: VerificationService
 
     @MockK
+    private lateinit var beVerificationService: BeVerificationService
+
+    @MockK
     private lateinit var distributionService: DistributionService
 
     @MockK
     private lateinit var submissionService: SubmissionService
+
+    @MockK
+    private lateinit var beSubmissionService: BeSubmissionService
+
+    @MockK
+    private lateinit var statisticsService: StatisticsService
 
     @MockK
     private lateinit var verificationKeys: VerificationKeys
@@ -39,7 +51,10 @@ class WebRequestBuilderTest {
         webRequestBuilder = WebRequestBuilder(
             distributionService,
             verificationService,
+            beVerificationService,
             submissionService,
+            beSubmissionService,
+            statisticsService,
             verificationKeys
         )
     }

@@ -63,10 +63,10 @@
             <TextView
                 android:id="@+id/risk_details_header_title"
                 style="@style/headline6"
-                android:accessibilityHeading="true"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/guideline_body_title"
+                android:accessibilityHeading="true"
                 android:text="@string/risk_details_title"
                 android:textColor="@{FormatterRiskHelper.formatStableTextColor(tracingViewModel.riskLevel)}"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -198,6 +198,7 @@
                     style="@style/greyBodyBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/risk_details_period_logged_card">
@@ -205,11 +206,9 @@
                     <TextView
                         android:id="@+id/risk_details_information_headline"
                         style="@style/headline5"
-                        android:accessibilityHeading="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/risk_details_headline_infection_risk"
-                        android:focusable="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -220,8 +219,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_tiny"
-                        android:text="@string/risk_details_subtitle_infection_risk"
                         android:focusable="true"
+                        android:text="@string/risk_details_subtitle_infection_risk"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/risk_details_information_headline" />
@@ -232,9 +231,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_normal"
+                        android:focusable="true"
                         android:text="@{FormatterRiskHelper.formatRiskDetailsRiskLevelBody(tracingViewModel.riskLevel, tracingViewModel.daysSinceLastExposure)}"
                         android:visibility="@{FormatterHelper.formatVisibilityText(FormatterRiskHelper.formatRiskDetailsRiskLevelBody(tracingViewModel.riskLevel, tracingViewModel.daysSinceLastExposure))}"
-                        android:focusable="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/risk_details_information_subtitle" />
@@ -245,8 +244,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_normal"
-                        android:text="@string/risk_details_information_body_notice"
                         android:focusable="true"
+                        android:text="@{FormatterRiskHelper.formatRiskDetailsRiskLevelBodyNotice(tracingViewModel.riskLevel)}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/risk_details_information_body" />

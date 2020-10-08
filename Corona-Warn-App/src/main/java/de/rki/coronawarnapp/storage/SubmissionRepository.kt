@@ -1,12 +1,14 @@
 package de.rki.coronawarnapp.storage
 
 import androidx.lifecycle.MutableLiveData
+import be.sciensano.coronalert.service.DummyService
+import be.sciensano.coronalert.storage.isTestResultNegative
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
-import de.rki.coronawarnapp.service.submission.SubmissionService
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
 import java.util.Date
+import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
 object SubmissionRepository {
     private val TAG: String? = SubmissionRepository::class.simpleName
@@ -25,6 +27,9 @@ object SubmissionRepository {
                     LocalData.isAllowedToSubmitDiagnosisKeys() == true -> {
                         DeviceUIState.PAIRED_POSITIVE
                     }
+                    LocalData.isTestResultNegative() == true -> {
+                        DeviceUIState.PAIRED_NEGATIVE
+                    }
                     else -> fetchTestResult()
                 }
             }
@@ -34,10 +39,20 @@ object SubmissionRepository {
 
     private suspend fun fetchTestResult(): DeviceUIState {
         try {
-            val testResult = SubmissionService.asyncRequestTestResult()
-
+            val testResultResponse = BeSubmissionService.asyncRequestTestResult()
+            val testResult = TestResult.fromInt(testResultResponse.result)
             if (testResult == TestResult.POSITIVE) {
                 LocalData.isAllowedToSubmitDiagnosisKeys(true)
+            }
+
+            if (testResult == TestResult.NEGATIVE) {
+                LocalData.isTestResultNegative(true)
+            }
+
+            if (testResult == TestResult.POSITIVE || testResult == TestResult.NEGATIVE) {
+                BeSubmissionService.asyncSendAck(testResultResponse)
+            } else {
+                DummyService.fakeAckRequest()
             }
 
             val initialTestResultReceivedTimestamp = LocalData.initialTestResultReceivedTimestamp()
@@ -58,6 +73,7 @@ object SubmissionRepository {
                 TestResult.POSITIVE -> DeviceUIState.PAIRED_POSITIVE
                 TestResult.PENDING -> DeviceUIState.PAIRED_NO_RESULT
                 TestResult.INVALID -> DeviceUIState.PAIRED_ERROR
+                TestResult.REDEEMED -> DeviceUIState.PAIRED_REDEEMED
             }
         } catch (err: NoRegistrationTokenSetException) {
             return DeviceUIState.UNPAIRED

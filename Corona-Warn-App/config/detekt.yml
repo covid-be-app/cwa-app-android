@@ -80,7 +80,7 @@ complexity:
     threshold: 60
   LongParameterList:
     active: true
-    functionThreshold: 6
+    functionThreshold: 10
     constructorThreshold: 10
     ignoreDefaultParameters: false
     ignoreDataClasses: true
@@ -522,7 +522,8 @@ style:
       '**/*.Spek.kt',
       '**/CwaWebException.kt',
       '**/HttpErrorParser.kt',
-      '**/ErrorCodes.kt'
+      '**/ErrorCodes.kt',
+      '**/MobileTestId.kt'
     ]
     ignoreNumbers: ['-1', '0', '1', '2']
     ignoreHashCodeFunction: true

@@ -129,10 +129,7 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
 
         submissionViewModel.submissionState.observe(viewLifecycleOwner, Observer {
             if (it == ApiRequestState.SUCCESS) {
-                findNavController().doNavigate(
-                    SubmissionResultPositiveOtherWarningFragmentDirections
-                        .actionSubmissionResultPositiveOtherWarningFragmentToSubmissionDoneFragment()
-                )
+                navigateToSubmissionDoneFragment()
             }
         })
     }
@@ -152,6 +149,16 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
                 .actionSubmissionResultPositiveOtherWarningFragmentToSubmissionResultFragment()
         )
 
+    /**
+     * Navigate to submission done Fragment
+     * @see SubmissionDoneFragment
+     */
+    private fun navigateToSubmissionDoneFragment() =
+        findNavController().doNavigate(
+            SubmissionResultPositiveOtherWarningFragmentDirections
+                .actionSubmissionResultPositiveOtherWarningFragmentToSubmissionDoneFragment()
+        )
+
     private fun initiateWarningOthers() {
         if (tracingViewModel.isTracingEnabled.value != true) {
             val tracingRequiredDialog = DialogHelper.DialogInstance(
@@ -163,7 +170,6 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
             DialogHelper.showDialog(tracingRequiredDialog)
             return
         }
-
         internalExposureNotificationPermissionHelper.requestPermissionToShareKeys()
     }
 
@@ -177,7 +183,17 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
     // InternalExposureNotificationPermissionHelper - callbacks
     override fun onKeySharePermissionGranted(keys: List<TemporaryExposureKey>) {
         super.onKeySharePermissionGranted(keys)
-        submissionViewModel.submitDiagnosisKeys(keys)
+        submissionViewModel.setKeys(requireContext(), keys)
+        if (keys.isNotEmpty()) {
+            findNavController().doNavigate(
+                SubmissionResultPositiveOtherWarningFragmentDirections
+                    .actionSubmissionResultPositiveOtherWarningFragmentToSubmissionKeysListFragment()
+            )
+//            submissionViewModel.submitDiagnosisKeys(keys)
+        } else {
+            submissionViewModel.submitWithNoDiagnosisKeys()
+            navigateToSubmissionDoneFragment()
+        }
     }
 
     override fun onFailure(exception: Exception?) {

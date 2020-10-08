@@ -69,7 +69,8 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setButtonOnClickListener()
 
-        showOneTimeTracingExplanationDialog()
+        //don't show this popup
+//        showOneTimeTracingExplanationDialog()
     }
 
     override fun onResume() {
@@ -188,7 +189,6 @@ class MainFragment : Fragment() {
 
         // check if the dialog explaining the tracing time was already shown
         if (!LocalData.tracingExplanationDialogWasShown()) {
-
 
             val activity = this.requireActivity()
 
