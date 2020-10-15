@@ -7,11 +7,8 @@ import androidx.security.crypto.MasterKeys
 import de.rki.coronawarnapp.util.RetryMechanism
 import timber.log.Timber
 import java.security.KeyException
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class EncryptedPreferencesFactory @Inject constructor(
+class EncryptedPreferencesFactory constructor(
     private val context: Context
 ) {
 
