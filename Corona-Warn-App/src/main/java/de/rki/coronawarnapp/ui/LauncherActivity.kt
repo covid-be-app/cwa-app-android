@@ -71,8 +71,13 @@ class LauncherActivity : AppCompatActivity() {
 
     private fun isPcrValid(data: Uri?): Boolean {
         val pcr = data?.getQueryParameter("pcr")
+        val authorizedCharacters = (('a'..'z') + ('A'..'Z') + ('0'..'9'))
 
-        return (pcr != null && pcr.length == PCR_LENGTH && pcr.isDigitsOnly() && data.queryParameterNames.size == 1)
+        return (pcr != null && pcr.length == PCR_LENGTH && pcr.all {
+            authorizedCharacters.contains(
+                it
+            )
+        } && data.queryParameterNames.size == 1)
     }
 
     private fun startOnboardingActivity() {
