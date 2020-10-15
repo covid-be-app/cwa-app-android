@@ -51,8 +51,6 @@ class SubmissionDoneFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setButtonOnClickListener()
 
-        DataRetentionHelper.clearAllLocalData(requireContext())
-
         lifecycleScope.launch {
             try {
                 val isTracingEnabled = InternalExposureNotificationClient.asyncIsEnabled()

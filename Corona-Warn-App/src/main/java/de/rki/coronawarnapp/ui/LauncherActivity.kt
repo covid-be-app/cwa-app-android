@@ -2,6 +2,7 @@ package de.rki.coronawarnapp.ui
 
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.common.api.ApiException
 import de.rki.coronawarnapp.exception.ExceptionCategory
