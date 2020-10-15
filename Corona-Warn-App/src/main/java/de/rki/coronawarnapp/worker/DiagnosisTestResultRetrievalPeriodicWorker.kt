@@ -14,6 +14,7 @@ import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler.stop
 import timber.log.Timber
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
+import be.sciensano.coronalert.worker.BackgroundConstants as BeBackgroundConstants
 
 /**
  * Diagnosis Test Result Periodic retrieval
@@ -58,21 +59,34 @@ class DiagnosisTestResultRetrievalPeriodicWorker(
         }
         var result = Result.success()
         try {
-            if (LocalData.registrationToken() != null && !LocalData.isTestResultNotificationSent()) {
-                if (TimeAndDateExtensions.calculateDays(
-                        LocalData.initialPollingForTestResultTimeStamp(),
+
+            if (LocalData.registrationToken() != null) {
+                if (LocalData.initialTestResultReceivedTimestamp() != 0L && TimeAndDateExtensions.calculateDays(
+                        LocalData.initialTestResultReceivedTimestamp(),
                         System.currentTimeMillis()
-                    ) < BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
+                    ) >= BeBackgroundConstants.TEST_RESULT_SEEN_VALIDITY_MAX_DAYS
                 ) {
-                    val testResult = BeSubmissionService.asyncRequestTestResult()
-                    DummyService.fakeAckRequest()
-                    initiateNotification(TestResult.fromInt(testResult.result))
-                } else {
                     BeSubmissionService.deleteRegistrationToken()
                 }
+
+                if (LocalData.initialPollingForTestResultTimeStamp() != 0L && TimeAndDateExtensions.calculateDays(
+                        LocalData.initialPollingForTestResultTimeStamp(),
+                        System.currentTimeMillis()
+                    ) >= BackgroundConstants.POLLING_VALIDITY_MAX_DAYS
+                ) {
+                    BeSubmissionService.deleteRegistrationToken()
+                }
+            }
+
+            if (LocalData.registrationToken() != null && !LocalData.isTestResultNotificationSent()) {
+                val testResult = BeSubmissionService.asyncRequestTestResult()
+                DummyService.fakeAckRequest()
+                initiateNotification(TestResult.fromInt(testResult.result))
+
             } else {
                 DummyService.sendDummyRequestsIfNeeded()
             }
+
         } catch (e: Exception) {
             Timber.e(e)
             result = Result.retry()
