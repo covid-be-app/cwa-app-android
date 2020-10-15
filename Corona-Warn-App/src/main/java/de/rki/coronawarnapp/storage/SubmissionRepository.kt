@@ -6,7 +6,6 @@ import be.sciensano.coronalert.storage.isTestResultNegative
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.formatter.TestResult
-import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
 import java.util.Date
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
@@ -51,22 +50,11 @@ object SubmissionRepository {
 
             if (testResult == TestResult.POSITIVE || testResult == TestResult.NEGATIVE) {
                 BeSubmissionService.asyncSendAck(testResultResponse)
+                LocalData.initialTestResultReceivedTimestamp(System.currentTimeMillis())
             } else {
                 DummyService.fakeAckRequest()
             }
 
-            val initialTestResultReceivedTimestamp = LocalData.initialTestResultReceivedTimestamp()
-
-            if (initialTestResultReceivedTimestamp == null) {
-                val currentTime = System.currentTimeMillis()
-                LocalData.initialTestResultReceivedTimestamp(currentTime)
-                testResultReceivedDate.value = Date(currentTime)
-                if (testResult == TestResult.PENDING) {
-                    BackgroundWorkScheduler.startWorkScheduler()
-                }
-            } else {
-                testResultReceivedDate.value = Date(initialTestResultReceivedTimestamp)
-            }
 
             return when (testResult) {
                 TestResult.NEGATIVE -> DeviceUIState.PAIRED_NEGATIVE

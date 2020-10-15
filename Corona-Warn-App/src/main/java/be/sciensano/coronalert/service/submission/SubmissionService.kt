@@ -61,5 +61,8 @@ object SubmissionService {
         LocalData.t3(null)
         LocalData.resultChannel(-1)
         LocalData.initialPollingForTestResultTimeStamp(0L)
+        LocalData.initialTestResultReceivedTimestamp(0L)
+        LocalData.isAllowedToSubmitDiagnosisKeys(false)
+        LocalData.isTestResultNotificationSent(false)
     }
 }

@@ -573,14 +573,13 @@ object LocalData {
             )
         }
 
-    fun initialTestResultReceivedTimestamp(): Long? {
+    fun initialTestResultReceivedTimestamp(): Long {
         val timestamp = getSharedPreferenceInstance().getLong(
             CoronaWarnApplication.getAppContext()
                 .getString(R.string.preference_initial_result_received_time),
             0L
         )
 
-        if (timestamp == 0L) return null
         return timestamp
     }
 
