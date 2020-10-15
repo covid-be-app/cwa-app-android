@@ -61,6 +61,8 @@ class SubmissionViewModel : ViewModel() {
 
     val keyPairs: LiveData<List<Pair<TemporaryExposureKey, Country>>> = _keyPairs
 
+    var newTestForConfirmation: Boolean = false
+
     fun getCountries(context: Context): List<Country> {
         return readCountries(context)
     }

@@ -40,10 +40,13 @@ fun Throwable.report(
 
         if (this.statusCode == STATUS_CODE_GOOGLE_UPDATE_NEEDED) {
             errorMessage = R.string.errors_google_update_needed
+
         } else if (this.statusCode == STATUS_CODE_REACHED_REQUEST_LIMIT ||
             this.statusCode == STATUS_CODE_GOOGLE_API_FAIL
         ) {
-            errorMessage = R.string.errors_google_api_error
+//            errorMessage = R.string.errors_google_api_error
+            //do not report sporadic google api message
+            return
         }
 
         intent.putExtra(

@@ -186,11 +186,12 @@ object RiskLevelTransaction : Transaction() {
         result = executeCheckUnknownRiskInitialNoKeys()
         if (isValidResult(result)) return@lockAndExecute
 
-        /****************************************************
-         * CHECK [UNKNOWN_RISK_OUTDATED_RESULTS] CONDITIONS
-         ****************************************************/
-        result = executeCheckUnknownRiskOutdatedResults()
-        if (isValidResult(result)) return@lockAndExecute
+        //no longer check for outdated result
+//        /****************************************************
+//         * CHECK [UNKNOWN_RISK_OUTDATED_RESULTS] CONDITIONS
+//         ****************************************************/
+//        result = executeCheckUnknownRiskOutdatedResults()
+//        if (isValidResult(result)) return@lockAndExecute
 
         /****************************************************
          * [CHECK_APP_CONNECTIVITY]
@@ -199,6 +200,7 @@ object RiskLevelTransaction : Transaction() {
             executeClose()
             return@lockAndExecute
         }
+
 
         /****************************************************
          * RETRIEVE APPLICATION CONFIGURATION
@@ -246,9 +248,12 @@ object RiskLevelTransaction : Transaction() {
             if (RISK_CALCULATION_DATE_UPDATE.isInStateStack()) {
                 LocalData.lastTimeRiskLevelCalculation(lastCalculatedRiskLevelDate.get())
             }
+
+            RiskLevelRepository.setLastCalculatedRiskLevelAsCurrent()
         } catch (e: Exception) {
             // We handle every exception through a RollbackException to make sure that a single EntryPoint
-            // is available for the caller.
+            // is available for the caller.d
+
             handleRollbackError(e)
         }
     }
