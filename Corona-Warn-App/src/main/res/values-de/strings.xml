@@ -629,4 +629,8 @@
   <string name="test_linked_dialog_title">Test erfolgreich verknüpft</string>
   <string name="test_linked_dialog_body">Ihr Test wurde erfolgreich mit Ihrem Smartphone verknüpft. Ab sofort können Sie Ihr Testergebnis in Coronalert erhalten.</string>
   <string name="test_linked_dialog_button_positive">OK</string>
+
+  <string name="submission_done_reset_dialog_title">Zurücksetzen der App</string>
+  <string name="submission_done_reset_dialog_body">Vielen Dank, dass Sie Ihre Daten zur Verfügung gestellt und anderen geholfen haben. Die App wird nun zurückgesetzt und alle Daten werden gelöscht. Wir empfehlen Ihnen dringend, die Anwendung während Ihrer Isolationsperiode zu deaktivieren, indem Sie das Kontaktlogbuch stoppen. Nach Ihrer Isolationsperiode können Sie die Anwendung wieder verwenden.</string>
+  <string name="submission_done_reset_dialog_button_positive">OK</string>
 </resources>
