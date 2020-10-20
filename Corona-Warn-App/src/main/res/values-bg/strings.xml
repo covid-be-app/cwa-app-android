@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
 
     <!-- ####################################
                Preference Keys
@@ -42,7 +43,7 @@
     <!-- NOTR -->
     <string name="preference_initial_tracing_activation_time"><xliff:g id="preference">"preference_initial_tracing_activation_time"</xliff:g></string>
     <!-- NOTR -->
-    <string name="preference_initial_result_received_time"><xliff:g id="preference">"preference_initial_result_received_time"</xliff:g></string>
+    <string name="preference_initial_result_received_time"><xliff:g id="preference">"preference_initial_result_received_time_2"</xliff:g></string>
     <!-- NOTR -->
     <string name="preference_risk_level_score"><xliff:g id="preference">"preference_risk_level_score"</xliff:g></string>
     <!-- NOTR -->
@@ -545,7 +546,7 @@
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_bluetooth_illustration_description_inactive">"Контакт между трима души, един от които е с изключена функция Bluetooth."</string>
     <!-- XACT: settings(tracing) - describes illustration -->
-    <string name="settings_tracing_location_illustration_description_inactive"/>
+    <string name="settings_tracing_location_illustration_description_inactive" />
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_connection_illustration_description_inactive">"Контакт между трима души, един от които няма връзка с интернет."</string>
 
@@ -610,7 +611,7 @@
     <!-- YTXT: settings(background priority) - description text -->
     <string name="settings_background_priority_body">"Ако сте активирали приоритетната дейност във фонов режим, приложението Corona-Warn-App работи непрекъснато. Това дава възможност да се определи Вашият статус на риск по всяко време."</string>
     <!-- XACT: settings(background priority) - illustraction description -->
-    <string name="settings_background_priority_illustration_description"/>
+    <string name="settings_background_priority_illustration_description" />
     <!-- XTXT: settings(background priority) - explains user what to do on card if background priority is enabled -->
     <string name="settings_background_priority_card_body">"Можете да дезактивирате приоритетната дейност във фонов режим от настройките на устройството."</string>
     <!-- XBUT: settings(background priority) - go to operating system settings button on card -->

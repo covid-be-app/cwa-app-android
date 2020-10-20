@@ -67,7 +67,7 @@
     <xliff:g id="preference">preference_initial_tracing_activation_time</xliff:g>
   </string>
     <string name="preference_initial_result_received_time">
-    <xliff:g id="preference">preference_initial_result_received_time</xliff:g>
+    <xliff:g id="preference">preference_initial_result_received_time_2</xliff:g>
   </string>
     <string name="preference_risk_level_score">
     <xliff:g id="preference">preference_risk_level_score</xliff:g>

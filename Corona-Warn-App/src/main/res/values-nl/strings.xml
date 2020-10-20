@@ -67,7 +67,7 @@
     <xliff:g id="preference">preference_initial_tracing_activation_time</xliff:g>
   </string>
     <string name="preference_initial_result_received_time">
-    <xliff:g id="preference">preference_initial_result_received_time</xliff:g>
+    <xliff:g id="preference">preference_initial_result_received_time_2</xliff:g>
   </string>
     <string name="preference_risk_level_score">
     <xliff:g id="preference">preference_risk_level_score</xliff:g>
@@ -632,5 +632,5 @@
 
     <string name="submission_done_reset_dialog_title">App Reset</string>
     <string name="submission_done_reset_dialog_body">Bedankt voor het delen van je gegevens en het helpen van anderen. De app wordt nu gereset en alle gegevens worden verwijderd. We raden je sterk aan om de app uit te schakelen tijdens je isolatieperiode door het stoppen van de blootstellingsregistratie. Na je isolatieperiode kan je de app weer gebruiken.</string>
-  <string name="submission_done_reset_dialog_button_positive">OK</string>
+    <string name="submission_done_reset_dialog_button_positive">OK</string>
 </resources>
