@@ -67,7 +67,7 @@
     <xliff:g id="preference">preference_initial_tracing_activation_time</xliff:g>
   </string>
   <string name="preference_initial_result_received_time">
-    <xliff:g id="preference">preference_initial_result_received_time</xliff:g>
+    <xliff:g id="preference">preference_initial_result_received_time_2</xliff:g>
   </string>
   <string name="preference_risk_level_score">
     <xliff:g id="preference">preference_risk_level_score</xliff:g>
@@ -609,8 +609,8 @@
   <string name="preference_dummy_test_requests_to_send">preference_dummy_test_requests_to_send</string>
   <string name="preference_negative_test_result">preference_negative_test_result</string>
   <string name="test_api_switch_background_notifications">Background notification</string>
-  <string name="risk_details_behavior_body_contact_no_symptom">Haben Sie keine Symptome? Wenn nein, kontaktieren Sie bitte:</string>
-  <string name="risk_details_behavior_increased_body_1_no_symptom">- Das Kontaktzentrum unter der 02 214.19.1</string>
+  <string name="risk_details_behavior_body_contact_no_symptom">Haben Sie keine Symptome?</string>
+  <string name="risk_details_behavior_increased_body_1_no_symptom">- Bitte respektieren Sie die Quarantäne für 10 Tage.</string>
   <string name="risk_details_behavior_get_tested">Lassen Sie sich so bald wie möglich testen.</string>
   <string name="statistics_healine">Wöchentlicher Durchschnitt</string>
   <string name="statistics_date_range" formatted="false">%s - %s</string>
@@ -629,7 +629,6 @@
   <string name="test_linked_dialog_title">Test erfolgreich verknüpft</string>
   <string name="test_linked_dialog_body">Ihr Test wurde erfolgreich mit Ihrem Smartphone verknüpft. Ab sofort können Sie Ihr Testergebnis in Coronalert erhalten.</string>
   <string name="test_linked_dialog_button_positive">OK</string>
-
   <string name="submission_done_reset_dialog_title">Zurücksetzen der App</string>
   <string name="submission_done_reset_dialog_body">Vielen Dank, dass Sie Ihre Daten zur Verfügung gestellt und anderen geholfen haben. Die App wird nun zurückgesetzt und alle Daten werden gelöscht. Wir empfehlen Ihnen dringend, die Anwendung während Ihrer Isolationsperiode zu deaktivieren, indem Sie das Kontaktlogbuch stoppen. Nach Ihrer Isolationsperiode können Sie die Anwendung wieder verwenden.</string>
   <string name="submission_done_reset_dialog_button_positive">OK</string>

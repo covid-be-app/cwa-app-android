@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
 
     <!-- ####################################
                Preference Keys
@@ -42,7 +43,7 @@
     <!-- NOTR -->
     <string name="preference_initial_tracing_activation_time"><xliff:g id="preference">"preference_initial_tracing_activation_time"</xliff:g></string>
     <!-- NOTR -->
-    <string name="preference_initial_result_received_time"><xliff:g id="preference">"preference_initial_result_received_time"</xliff:g></string>
+    <string name="preference_initial_result_received_time"><xliff:g id="preference">"preference_initial_result_received_time_2"</xliff:g></string>
     <!-- NOTR -->
     <string name="preference_risk_level_score"><xliff:g id="preference">"preference_risk_level_score"</xliff:g></string>
     <!-- NOTR -->
@@ -545,7 +546,7 @@
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_bluetooth_illustration_description_inactive">"O persoană și-a oprit Bluetooth-ul pe smartphone și, prin urmare, întâlnirea cu alte două persoane nu este înregistrată."</string>
     <!-- XACT: settings(tracing) - describes illustration -->
-    <string name="settings_tracing_location_illustration_description_inactive"/>
+    <string name="settings_tracing_location_illustration_description_inactive" />
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_connection_illustration_description_inactive">"O persoană și-a oprit Internetul pe smartphone și, prin urmare, întâlnirea cu alte două persoane nu este înregistrată."</string>
 
@@ -610,7 +611,7 @@
     <!-- YTXT: settings(background priority) - description text -->
     <string name="settings_background_priority_body">"Aplicația Corona-Warn rulează permanent în fundal dacă activați Activitate în fundal cu prioritate. Aceasta permite aplicației să determine starea riscului dvs. în orice moment."</string>
     <!-- XACT: settings(background priority) - illustraction description -->
-    <string name="settings_background_priority_illustration_description"/>
+    <string name="settings_background_priority_illustration_description" />
     <!-- XTXT: settings(background priority) - explains user what to do on card if background priority is enabled -->
     <string name="settings_background_priority_card_body">"Dacă doriți să dezactivați activitatea în fundal cu prioritate, vă rugăm să faceți acest lucru din setările dispozitivului."</string>
     <!-- XBUT: settings(background priority) - go to operating system settings button on card -->
