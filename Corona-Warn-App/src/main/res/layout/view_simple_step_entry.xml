@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isFinal"
+            type="Boolean" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="text"
+            type="String" />
+
+        <variable
+            name="icon"
+            type="android.graphics.drawable.Drawable" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step_entry_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:backgroundTint="#F5F5F5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/icon"
+                android:layout_width="@dimen/icon_size_risk_details_behavior"
+                android:layout_height="@dimen/icon_size_risk_details_behavior"
+                android:layout_margin="@dimen/icon_margin_risk_details_behavior"
+                android:focusable="false"
+                android:importantForAccessibility="no"
+                android:src="@{icon}"
+                android:tint="@color/colorSemanticLowRisk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step_entry_wrapper_children"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/step_entry_icon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/simple_step_entry_title"
+                style="@style/headline6"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:accessibilityHeading="true"
+                android:text="@{title}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/simple_step_entry_body"
+                style="@style/subtitle"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="@{text}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/simple_step_entry_title"
+                tools:text="Text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/step_entry_placeholder"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/spacing_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/step_entry_icon"
+            app:layout_constraintTop_toBottomOf="@id/step_entry_wrapper_children" />
+
+        <View
+            android:id="@+id/step_entry_line"
+            android:layout_width="@dimen/test_result_step_progress_line_width"
+            android:layout_height="@dimen/match_constraint"
+            android:background="@color/colorSurface2"
+            android:visibility="@{isFinal ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@+id/step_entry_placeholder"
+            app:layout_constraintEnd_toEndOf="@id/step_entry_icon"
+            app:layout_constraintStart_toStartOf="@id/step_entry_icon"
+            app:layout_constraintTop_toBottomOf="@id/step_entry_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
