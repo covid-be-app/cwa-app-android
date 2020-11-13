@@ -53,7 +53,10 @@ class InformationFragment : Fragment() {
     private fun setAccessibilityDelegate() {
         val accessibilityDelegate: View.AccessibilityDelegate =
             object : View.AccessibilityDelegate() {
-                override fun onInitializeAccessibilityNodeInfo(v: View?, info: AccessibilityNodeInfo) {
+                override fun onInitializeAccessibilityNodeInfo(
+                    v: View?,
+                    info: AccessibilityNodeInfo
+                ) {
                     super.onInitializeAccessibilityNodeInfo(v, info)
                     val string: String = getString(R.string.information_help_title_accessibility)
                     info.text = string
@@ -94,6 +97,11 @@ class InformationFragment : Fragment() {
         binding.informationTechnical.mainRow.setOnClickListener {
             findNavController().doNavigate(
                 InformationFragmentDirections.actionInformationFragmentToInformationTechnicalFragment()
+            )
+        }
+        binding.informationDataTransfert.mainRow.setOnClickListener {
+            findNavController().doNavigate(
+                InformationFragmentDirections.actionInformationFragmentToInformationDataTransfertFragment()
             )
         }
         binding.informationHeader.headerButtonBack.buttonIcon.setOnClickListener {

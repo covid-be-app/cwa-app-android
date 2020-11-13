@@ -632,4 +632,10 @@
     <string name="submission_done_reset_dialog_title">Réinitialisation de l\'app</string>
     <string name="submission_done_reset_dialog_body">Merci de partager vos données et d\'aider les autres. L\'application va maintenant être réinitialisée et toutes les données seront supprimées. Nous vous recommandons vivement de désactiver l\'application pendant votre période d\'isolement en arrêtant l\'enregistrement de l\'exposition. Après votre période d\'isolement, vous pourrez à nouveau utiliser l\'application.</string>
     <string name="submission_done_reset_dialog_button_positive">OK</string>
+
+
+    <string name="information_data_transfer">Transfert de données</string>
+    <string name="information_data_transfer_headline">Choisissez le mode de communication de votre application</string>
+    <string name="information_data_transfer_body">Votre application se synchronise avec le serveur via WIFI par défaut. Vous pouvez modifier ce paramètre ici</string>
+    <string name="information_data_transfer_switch">4G/5G</string>
 </resources>

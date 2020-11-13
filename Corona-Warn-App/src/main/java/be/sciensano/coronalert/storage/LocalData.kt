@@ -246,3 +246,13 @@ fun LocalData.statisticsDate(value: Long) {
         )
     }
 }
+
+fun LocalData.dataTransfer(value: Boolean) {
+    getSharedPreferenceInstance().edit(true) {
+        putBoolean("data_transfer", value)
+    }
+}
+
+fun LocalData.dataTransfer() =
+    getSharedPreferenceInstance().getBoolean("data_transfer", true)
+

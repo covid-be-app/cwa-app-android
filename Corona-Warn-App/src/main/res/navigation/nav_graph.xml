@@ -133,6 +133,9 @@
         <action
             android:id="@+id/action_informationFragment_to_informationTechnicalFragment"
             app:destination="@id/informationTechnicalFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_informationDataTransfertFragment"
+            app:destination="@id/informationDataTransfertFragment" />
     </fragment>
 
     <fragment
@@ -170,6 +173,12 @@
         android:name="de.rki.coronawarnapp.ui.information.InformationTechnicalFragment"
         android:label="InformationTechnicalFragment"
         tools:layout="@layout/fragment_information_technical" />
+
+    <fragment
+        android:id="@+id/informationDataTransfertFragment"
+        android:name="be.sciensano.coronalert.ui.information.InformationDataTransferFragment"
+        android:label="InformationDataTransfertFragment"
+        tools:layout="@layout/fragment_information_data_transfer" />
 
     <!-- Submission -->
     <fragment
