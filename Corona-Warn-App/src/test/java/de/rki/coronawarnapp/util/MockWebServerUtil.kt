@@ -1,5 +1,6 @@
 package de.rki.coronawarnapp.util
 
+import be.sciensano.coronalert.http.service.DynamicTextsService
 import be.sciensano.coronalert.http.service.StatisticsService
 import de.rki.coronawarnapp.http.HttpErrorParser
 import de.rki.coronawarnapp.http.WebRequestBuilder
@@ -44,6 +45,8 @@ fun MockWebServer.newWebRequestBuilder(): WebRequestBuilder {
             .create(BeSubmissionService::class.java),
         retrofit.baseUrl(this.url("/statistics/")).build()
             .create(StatisticsService::class.java),
+        retrofit.baseUrl(this.url("/dynamicTexts/")).build()
+            .create(DynamicTextsService::class.java),
         VerificationKeys()
 
     )

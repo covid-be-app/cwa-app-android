@@ -45,6 +45,7 @@ android {
         buildConfigField "String", "VERIFICATION_CDN_URL", "\"$VERIFICATION_CDN_URL\""
         buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
         buildConfigField "String", "PUB_KEYS_SIGNATURE_VERIFICATION", "\"$PUB_KEYS_SIGNATURE_VERIFICATION\""
+        buildConfigField "String", "DYNAMIC_TEXTS_URL", "\"$DYNAMIC_TEXTS_URL\""
 
         //override URLs. Use local.properties if exist.
         // If environment.properties also exist, override local.properties
@@ -73,6 +74,10 @@ android {
             def STATISTICS_CDN_URL = overridingProperties.getProperty('STATISTICS_CDN_URL')
             if (STATISTICS_CDN_URL)
                 buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
+
+            def DYNAMIC_TEXTS_URL = overridingProperties.getProperty('DYNAMIC_TEXTS_URL')
+            if (DYNAMIC_TEXTS_URL)
+                buildConfigField "String", "DYNAMIC_TEXTS_URL", "\"$DYNAMIC_TEXTS_URL\""
         }
 
         javaCompileOptions {
@@ -127,6 +132,10 @@ android {
                 def STATISTICS_CDN_URL = overridingProperties.getProperty('STATISTICS_CDN_URL')
                 if (STATISTICS_CDN_URL)
                     buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
+
+                def DYNAMIC_TEXTS_URL = overridingProperties.getProperty('DYNAMIC_TEXTS_URL')
+                if (DYNAMIC_TEXTS_URL)
+                    buildConfigField "String", "DYNAMIC_TEXTS_URL", "\"$DYNAMIC_TEXTS_URL\""
             }
         }
     }

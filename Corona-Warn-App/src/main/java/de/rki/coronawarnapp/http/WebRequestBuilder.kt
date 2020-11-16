@@ -23,6 +23,7 @@ import KeyExportFormat
 import be.sciensano.coronalert.MobileTestId
 import be.sciensano.coronalert.http.requests.TestResultRequest
 import be.sciensano.coronalert.http.responses.TestResultResponse
+import be.sciensano.coronalert.http.service.DynamicTextsService
 import be.sciensano.coronalert.http.service.StatisticsService
 import be.sciensano.coronalert.util.PaddingUtil.getPadding
 import com.google.protobuf.ByteString
@@ -64,6 +65,7 @@ class WebRequestBuilder(
     private val submissionService: SubmissionService,
     private val beSubmissionService: BeSubmissionService,
     private val statisticsService: StatisticsService,
+    private val dynamicTextsService: DynamicTextsService,
     private val verificationKeys: VerificationKeys
 ) {
     companion object {
@@ -89,6 +91,7 @@ class WebRequestBuilder(
                 serviceFactory.submissionService(),
                 serviceFactory.beSubmissionService(),
                 serviceFactory.statisticsService(),
+                serviceFactory.dynamicTextsService(),
                 VerificationKeys()
             )
         }
@@ -326,6 +329,10 @@ class WebRequestBuilder(
 
     suspend fun getStatistics() = withContext(Dispatchers.IO) {
         statisticsService.getStatistics()
+    }
+
+    suspend fun getDynamicTexts() = withContext(Dispatchers.IO) {
+        dynamicTextsService.getDynamicTexts()
     }
 
     suspend fun asyncFakeSubmission() = withContext(Dispatchers.IO) {
