@@ -502,7 +502,7 @@
     <string name="submission_status_card_positive_result_share">Partagez vos identifiants aléatoires afin que d\'autres personnes puissent être averties.</string>
     <string name="test_result_card_headline">Votre diagnostic :</string>
     <string name="test_result_card_virus_name_text">SARS-CoV-2</string>
-    <string name="test_result_card_registered_at_text">Enregistré sur %s </string>
+    <string name="test_result_card_registered_at_text">Enregistré le %s </string>
     <string name="test_result_card_status_negative">Négatif</string>
     <string name="test_result_card_status_positive">Positif</string>
     <string name="test_result_card_status_invalid">L\'évaluation n\'est pas possible</string>
