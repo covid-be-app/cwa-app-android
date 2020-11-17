@@ -13,10 +13,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/submission_test_result_container"
-        android:contentDescription="@string/submission_test_result_headline"
-        android:accessibilityLiveRegion="assertive"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:accessibilityLiveRegion="assertive"
+        android:contentDescription="@string/submission_test_result_headline">
 
         <include
             android:id="@+id/submission_test_result_header"
@@ -40,20 +40,88 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <include
+        <ScrollView
             android:id="@+id/submission_test_result_content"
-            layout="@layout/include_submission_test_result"
-            android:accessibilityLiveRegion="assertive"
-            android:importantForAccessibility="yes"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="@dimen/match_constraint"
             android:layout_marginBottom="@dimen/button_padding_top_bottom"
+            android:accessibilityLiveRegion="assertive"
+            android:importantForAccessibility="yes"
             android:visibility="@{FormatterSubmissionHelper.formatTestResultVisible(submissionViewModel.uiStateState)}"
             app:layout_constraintBottom_toTopOf="@+id/include_submission_test_result_buttons"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submission_test_result_header"
-            app:submissionViewModel="@{submissionViewModel}" />
+            app:layout_constraintTop_toBottomOf="@+id/submission_test_result_header">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/submission_test_result_card"
+                    layout="@layout/include_test_result_card"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:focusable="true"
+                    android:importantForAccessibility="yes"
+                    app:deviceUIState="@{submissionViewModel.deviceUiState}"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline_card_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:registerDate="@{submissionViewModel.testResultReceivedDate}" />
+
+                <TextView
+                    android:id="@+id/submission_test_result_subtitle"
+                    style="@style/headline5"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:accessibilityHeading="true"
+                    android:text="@string/submission_test_result_subtitle"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_card" />
+
+                <include
+                    android:id="@+id/submission_test_result_pending_steps"
+                    layout="@layout/include_test_result_pending_steps"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:visibility="@{FormatterSubmissionHelper.formatTestResultPendingStepsVisible(submissionViewModel.deviceUiState)}"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_subtitle" />
+
+                <LinearLayout
+                    android:id="@+id/submission_test_result_explanation_dynamic"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_subtitle" />
+
+                <include
+                    android:id="@+id/submission_test_result_invalid_steps"
+                    layout="@layout/include_test_result_invalid_steps"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:visibility="@{FormatterSubmissionHelper.formatTestResultInvalidStepsVisible(submissionViewModel.deviceUiState)}"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_subtitle" />
+
+
+                <include layout="@layout/merge_guidelines_side" />
+
+                <include layout="@layout/merge_guidelines_card" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/include_submission_test_result_buttons"
@@ -139,7 +207,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_end="@dimen/guideline_action" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

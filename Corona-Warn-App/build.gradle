@@ -33,8 +33,8 @@ android {
         applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 82
-        versionName "1.8.2"
+        versionCode 83
+        versionName "1.9.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -45,6 +45,7 @@ android {
         buildConfigField "String", "VERIFICATION_CDN_URL", "\"$VERIFICATION_CDN_URL\""
         buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
         buildConfigField "String", "PUB_KEYS_SIGNATURE_VERIFICATION", "\"$PUB_KEYS_SIGNATURE_VERIFICATION\""
+        buildConfigField "String", "DYNAMIC_TEXTS_URL", "\"$DYNAMIC_TEXTS_URL\""
 
         //override URLs. Use local.properties if exist.
         // If environment.properties also exist, override local.properties
@@ -73,6 +74,10 @@ android {
             def STATISTICS_CDN_URL = overridingProperties.getProperty('STATISTICS_CDN_URL')
             if (STATISTICS_CDN_URL)
                 buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
+
+            def DYNAMIC_TEXTS_URL = overridingProperties.getProperty('DYNAMIC_TEXTS_URL')
+            if (DYNAMIC_TEXTS_URL)
+                buildConfigField "String", "DYNAMIC_TEXTS_URL", "\"$DYNAMIC_TEXTS_URL\""
         }
 
         javaCompileOptions {
@@ -127,6 +132,10 @@ android {
                 def STATISTICS_CDN_URL = overridingProperties.getProperty('STATISTICS_CDN_URL')
                 if (STATISTICS_CDN_URL)
                     buildConfigField "String", "STATISTICS_CDN_URL", "\"$STATISTICS_CDN_URL\""
+
+                def DYNAMIC_TEXTS_URL = overridingProperties.getProperty('DYNAMIC_TEXTS_URL')
+                if (DYNAMIC_TEXTS_URL)
+                    buildConfigField "String", "DYNAMIC_TEXTS_URL", "\"$DYNAMIC_TEXTS_URL\""
             }
         }
     }
@@ -247,7 +256,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.1.1'
-    implementation 'androidx.work:work-runtime-ktx:2.3.4'
+    implementation 'androidx.work:work-runtime-ktx:2.5.0-beta01'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation 'androidx.annotation:annotation:1.1.0'
 
@@ -282,7 +291,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-basement:17.3.0'
     implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
     implementation 'com.google.android.gms:play-services-tasks:17.1.0'
-    api fileTree(dir: 'libs', include: ['play-services-nearby-18.0.3-eap.aar'])
+    api fileTree(dir: 'libs', include: ['play-services-nearby-exposurenotification-1.7.2-eap.aar'])
 
     // HTTP
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

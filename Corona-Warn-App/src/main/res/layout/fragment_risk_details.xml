@@ -152,31 +152,15 @@
                     app:layout_constraintStart_toStartOf="@+id/guideline_start"
                     app:layout_constraintTop_toBottomOf="@id/risk_details_behavior_subtitle">
 
-                    <include
-                        android:id="@+id/risk_details_behavior"
-                        layout="@layout/include_risk_details_behavior"
+                    <LinearLayout
+                        android:id="@+id/risk_details_dynamics"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_normal"
-                        android:focusable="true"
-                        android:visibility="@{FormatterRiskHelper.formatVisibilityBehavior(tracingViewModel.riskLevel)}"
+                        android:orientation="vertical"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tracingViewModel="@{tracingViewModel}" />
-
-                    <include
-                        android:id="@+id/risk_details_behavior_increased_risk"
-                        layout="@layout/include_risk_details_behavior_increased_risk"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_normal"
-                        android:focusable="true"
-                        android:visibility="@{FormatterRiskHelper.formatVisibilityBehaviorIncreasedRisk(tracingViewModel.riskLevel)}"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tracingViewModel="@{tracingViewModel}" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

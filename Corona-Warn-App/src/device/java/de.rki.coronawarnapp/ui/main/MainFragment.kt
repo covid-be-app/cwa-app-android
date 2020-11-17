@@ -9,17 +9,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityEvent
 import android.widget.PopupMenu
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.http.responses.DynamicTexts
+import be.sciensano.coronalert.http.responses.PositiveTestResultCardExplanation
+import be.sciensano.coronalert.http.responses.iconToResMap
+import be.sciensano.coronalert.ui.DynamicTextsViewModel
 import be.sciensano.coronalert.ui.LinkTestActivity
 import be.sciensano.coronalert.ui.StatisticsViewModel
 import be.sciensano.coronalert.ui.submission.SubmissionTestRequestViewModel
 import de.rki.coronawarnapp.BuildConfig
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentMainBinding
+import de.rki.coronawarnapp.databinding.IncludeRiskDetailsBehaviorRowBinding
+import de.rki.coronawarnapp.risk.RiskLevelConstants
 import de.rki.coronawarnapp.risk.TimeVariables
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.timer.TimerHelper
@@ -35,6 +42,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.DateFormat
 import java.util.Date
+import java.util.Locale
 
 /**
  * After the user has finished the onboarding this fragment will be the heart of the application.
@@ -57,6 +65,7 @@ class MainFragment : Fragment() {
     private val submissionViewModel: SubmissionViewModel by activityViewModels()
     private val statisticsViewModel: StatisticsViewModel by activityViewModels()
     private val testRequestViewModel: SubmissionTestRequestViewModel by activityViewModels()
+    private val dynamicTextsViewModel: DynamicTextsViewModel by activityViewModels()
 
     private var _binding: FragmentMainBinding? = null
     private val binding: FragmentMainBinding get() = _binding!!
@@ -92,6 +101,37 @@ class MainFragment : Fragment() {
         val url = activity?.intent?.extras?.getString(MainActivity.URL_ARGUMENT)
         if (url != null) {
             addTestForConfirmation(url)
+        }
+
+        dynamicTextsViewModel.getDynamicTexts(requireContext())
+        dynamicTextsViewModel.dynamicTexts.observe(viewLifecycleOwner, Observer {
+            addPositiveTestExplanation(it.structure.positiveTestResultCard.explanation, it.texts)
+        })
+    }
+
+    private fun addPositiveTestExplanation(
+        sections: List<PositiveTestResultCardExplanation>,
+        texts: Map<String, Map<String, String>>
+    ) {
+        binding.submissionStatusCardPositiveResultExplanationDynamic.removeAllViewsInLayout()
+
+        val inflater =
+            LayoutInflater.from(binding.submissionStatusCardPositiveResultExplanationDynamic.context)
+        sections.forEach { section ->
+            val newViewBinding = IncludeRiskDetailsBehaviorRowBinding.inflate(
+                inflater,
+                binding.submissionStatusCardPositiveResultExplanationDynamic,
+                true
+            )
+
+            newViewBinding.riskLevel = RiskLevelConstants.INCREASED_RISK
+            newViewBinding.body =
+                DynamicTexts.getText(section.text, texts, Locale.getDefault().language)
+            newViewBinding.icon =
+                ContextCompat.getDrawable(
+                    requireContext(),
+                    iconToResMap[section.icon] ?: R.drawable.circle
+                )
         }
     }
 
@@ -261,10 +301,10 @@ class MainFragment : Fragment() {
         binding.mainTestResult.submissionStatusCardContentButton.setOnClickListener {
             toSubmissionResult()
         }
-        binding.mainTestPositive.submissionStatusCardPositive.setOnClickListener {
+        binding.mainTestPositive.setOnClickListener {
             toSubmissionResult()
         }
-        binding.mainTestPositive.submissionStatusCardPositiveButton.setOnClickListener {
+        binding.submissionStatusCardPositiveButton.setOnClickListener {
             toSubmissionResult()
         }
         binding.mainTracing.setOnClickListener {

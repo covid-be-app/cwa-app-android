@@ -7,13 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityEvent
 import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.http.responses.DynamicTexts
+import be.sciensano.coronalert.http.responses.Explanation
+import be.sciensano.coronalert.http.responses.iconToResMap
+import be.sciensano.coronalert.ui.DynamicTextsViewModel
 import be.sciensano.coronalert.util.DateUtil
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestResultBinding
+import de.rki.coronawarnapp.databinding.ViewSimpleStepEntryBinding
 import de.rki.coronawarnapp.exception.http.CwaClientError
 import de.rki.coronawarnapp.exception.http.CwaServerError
 import de.rki.coronawarnapp.exception.http.CwaWebException
@@ -24,7 +30,10 @@ import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.DialogHelper
 import de.rki.coronawarnapp.util.observeEvent
 import kotlinx.android.synthetic.main.include_step_entry_simple_body.view.*
+import kotlinx.android.synthetic.main.include_submission_test_result.view.*
 import java.text.DateFormat
+import java.util.Locale
+
 
 /**
  * A simple [Fragment] subclass.
@@ -36,6 +45,7 @@ class SubmissionTestResultFragment : Fragment() {
 
     private val submissionViewModel: SubmissionViewModel by activityViewModels()
     private val tracingViewModel: TracingViewModel by activityViewModels()
+    private val dynamicTextsViewModel: DynamicTextsViewModel by activityViewModels()
 
     private var _binding: FragmentSubmissionTestResultBinding? = null
     private val binding: FragmentSubmissionTestResultBinding get() = _binding!!
@@ -63,6 +73,43 @@ class SubmissionTestResultFragment : Fragment() {
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, backCallback)
         // Inflate the layout for this fragment
         return binding.root
+    }
+
+    private fun addExplanation(
+        sections: List<Explanation>,
+        texts: Map<String, Map<String, String>>
+    ) {
+        binding.submissionTestResultExplanationDynamic.removeAllViewsInLayout()
+
+        val inflater = LayoutInflater.from(binding.submissionTestResultExplanationDynamic.context)
+        sections.forEachIndexed { i, section ->
+            val newViewBinding = ViewSimpleStepEntryBinding.inflate(
+                inflater,
+                binding.submissionTestResultExplanationDynamic,
+                true
+            )
+
+            val paragraphs = section.paragraphs?.joinToString("\n\n") { paragraph ->
+                DynamicTexts.getText(paragraph, texts, Locale.getDefault().language)
+            }
+
+            newViewBinding.isFinal = sections.size == i + 1
+            newViewBinding.title =
+                DynamicTexts.getText(section.title, texts, Locale.getDefault().language)
+            newViewBinding.text =
+                "${
+                    DynamicTexts.getText(
+                        section.text,
+                        texts,
+                        Locale.getDefault().language
+                    )
+                }${paragraphs ?: ""}"
+            newViewBinding.icon =
+                ContextCompat.getDrawable(
+                    requireContext(),
+                    iconToResMap[section.icon] ?: R.drawable.circle
+                )
+        }
     }
 
     private fun navigateToMainScreen() =
@@ -125,7 +172,18 @@ class SubmissionTestResultFragment : Fragment() {
             if (uiState == DeviceUIState.PAIRED_REDEEMED) {
                 showRedeemedTokenWarningDialog()
             }
+            dynamicTextsViewModel.getDynamicTexts(requireContext())
         })
+
+        dynamicTextsViewModel.dynamicTexts.observe(viewLifecycleOwner, Observer {
+            if (submissionViewModel.deviceUiState.value == DeviceUIState.PAIRED_NEGATIVE) {
+                addExplanation(it.structure.negativeTestResult.explanation, it.texts)
+            }
+            if (submissionViewModel.deviceUiState.value == DeviceUIState.PAIRED_POSITIVE) {
+                addExplanation(it.structure.positiveTestResult.explanation, it.texts)
+            }
+        })
+
 
         val uiCode = submissionViewModel.getMobileTestIduiCode()
         val t0 = submissionViewModel.getMobileTestIdt0()
@@ -134,12 +192,12 @@ class SubmissionTestResultFragment : Fragment() {
                 DateFormat.getDateInstance(DateFormat.FULL)
                     .format(DateUtil.parseServerDate(t0).toDate())
 
-            binding.submissionTestResultContent.submissionTestResultPendingSteps.testResultPendingStepsAdded
-                .simple_step_entry_body.text = getString(
-                R.string.submission_test_result_steps_added_body_with_code,
-                date,
-                uiCode
-            )
+            binding.submissionTestResultContent.submission_test_result_pending_steps.simple_step_entry_body.text =
+                getString(
+                    R.string.submission_test_result_steps_added_body_with_code,
+                    date,
+                    uiCode
+                )
         }
     }
 
@@ -164,7 +222,7 @@ class SubmissionTestResultFragment : Fragment() {
     private fun setButtonOnClickListener() {
         binding.submissionTestResultButtonPendingRefresh.setOnClickListener {
             submissionViewModel.refreshDeviceUIState()
-            binding.submissionTestResultContent.submissionTestResultCard.testResultCard
+            binding.submissionTestResultCard.testResultCard
                 .sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
         }
 
