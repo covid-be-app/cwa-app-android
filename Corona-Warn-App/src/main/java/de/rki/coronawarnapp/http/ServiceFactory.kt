@@ -1,6 +1,7 @@
 package de.rki.coronawarnapp.http
 
 import android.webkit.URLUtil
+import be.sciensano.coronalert.http.service.DynamicTextsService
 import be.sciensano.coronalert.http.service.StatisticsService
 import de.rki.coronawarnapp.BuildConfig
 import de.rki.coronawarnapp.CoronaWarnApplication
@@ -241,5 +242,18 @@ class ServiceFactory {
             .addConverterFactory(gsonConverterFactory)
             .build()
             .create(StatisticsService::class.java)
+    }
+
+    private val dynamicTextsUrl
+        get() = getValidUrl(BuildConfig.DYNAMIC_TEXTS_URL)
+
+    fun dynamicTextsService(): DynamicTextsService = dynamicTextsService
+    private val dynamicTextsService by lazy {
+        Retrofit.Builder()
+            .client(okHttpClient.buildClientWithNewSpecs(getCDNSpecs()))
+            .baseUrl(dynamicTextsUrl)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+            .create(DynamicTextsService::class.java)
     }
 }
