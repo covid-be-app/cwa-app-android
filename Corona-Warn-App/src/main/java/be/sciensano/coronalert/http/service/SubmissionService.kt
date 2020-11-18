@@ -17,6 +17,7 @@ interface SubmissionService {
         @Header("Date-Patient-Infectious") t0: String,
         @Header("Date-Test-Communicated") t3: String,
         @Header("Result-Channel") channel: Int,
+        @Header("Date-Onset-Of-Symptoms") dateOnsetSymptoms: String?,
         @Body requestBody: KeyExportFormat.SubmissionPayload
     ): ResponseBody
 }

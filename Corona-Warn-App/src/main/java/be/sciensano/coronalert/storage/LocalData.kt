@@ -22,6 +22,20 @@ fun LocalData.t0(value: String?) {
     }
 }
 
+fun LocalData.onsetSymptomsDate(): String? = getSharedPreferenceInstance().getString(
+    "date_onset_symptoms",
+    null
+)
+
+fun LocalData.onsetSymptomsDate(value: String?) {
+    getSharedPreferenceInstance().edit(true) {
+        putString(
+            "date_onset_symptoms",
+            value
+        )
+    }
+}
+
 fun LocalData.r0(): String? = getSharedPreferenceInstance().getString(
     CoronaWarnApplication.getAppContext()
         .getString(R.string.preference_r0),

@@ -154,7 +154,7 @@ class MainFragment : Fragment() {
                         )
                     },
                     {
-                        testRequestViewModel.setSubmissionDate(Date())
+                        testRequestViewModel.setSymptomsDate(null)
                         testRequestViewModel.generateTestId()
                         navigateToLinkTestActivity(url)
                     }

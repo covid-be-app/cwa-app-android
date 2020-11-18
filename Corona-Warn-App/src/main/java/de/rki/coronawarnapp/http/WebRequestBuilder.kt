@@ -272,6 +272,7 @@ class WebRequestBuilder(
         t0: String,
         t3: String,
         resultChannel: Int,
+        onsetSymptomsDate: String?,
         keyList: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
     ) = withContext(Dispatchers.IO) {
         Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
@@ -284,7 +285,7 @@ class WebRequestBuilder(
 
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
-            k, r0, t0, t3, resultChannel,
+            k, r0, t0, t3, resultChannel, onsetSymptomsDate,
             submissionPayload
         )
         return@withContext
@@ -322,7 +323,12 @@ class WebRequestBuilder(
 
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
-            fakeTestId.k, fakeTestId.r0, fakeTestId.t0, fakeTestId.t0, 0,
+            fakeTestId.k,
+            fakeTestId.r0,
+            fakeTestId.t0,
+            fakeTestId.t0,
+            0,
+            fakeTestId.onsetSymptomsDate,
             submissionPayload
         )
     }
