@@ -634,8 +634,11 @@
     <string name="submission_done_reset_dialog_button_positive">OK</string>
 
 
-    <string name="information_data_transfer">Data transfer</string>
-    <string name="information_data_transfer_headline">Choose the communication mode for your app</string>
-    <string name="information_data_transfer_body">Your application synchronizes with the server via WIFI by default. You can change this setting here</string>
-    <string name="information_data_transfer_switch">4G/5G</string>
+    <string name="information_data_transfer">Downloads</string>
+    <string name="information_data_transfer_headline">Use mobile data for random ID downloads.</string>
+    <string name="information_data_transfer_body">"Download random ID's over mobile data. If this option is disabled the ID's will only be downloaded over Wifi. "</string>
+    <string name="information_data_transfer_switch">Use mobile data</string>
+    <string name="information_data_transfer_switch_on">Wifi and Mobile Data</string>
+    <string name="information_data_transfer_switch_off">Wifi Only</string>
+
 </resources>

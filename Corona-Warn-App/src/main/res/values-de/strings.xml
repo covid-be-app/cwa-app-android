@@ -633,8 +633,10 @@
     <string name="submission_done_reset_dialog_body">Vielen Dank, dass Sie Ihre Daten zur Verfügung gestellt und anderen geholfen haben. Die App wird nun zurückgesetzt und alle Daten werden gelöscht. Wir empfehlen Ihnen dringend, die Anwendung während Ihrer Isolationsperiode zu deaktivieren, indem Sie das Kontaktlogbuch stoppen. Nach Ihrer Isolationsperiode können Sie die Anwendung wieder verwenden.</string>
     <string name="submission_done_reset_dialog_button_positive">OK</string>
 
-    <string name="information_data_transfer">Datenübertragung</string>
-    <string name="information_data_transfer_headline">Wählen Sie den Kommunikationsmodus für Ihre App</string>
-    <string name="information_data_transfer_body">Ihre Anwendung wird standardmäßig über WIFI mit dem Server synchronisiert. Sie können diese Einstellung hier ändern</string>
-    <string name="information_data_transfer_switch">4G/5G</string>
+    <string name="information_data_transfer">Herunterladen</string>
+    <string name="information_data_transfer_headline">Verwenden Sie mobile Daten für Zufallscode-Downloads.</string>
+    <string name="information_data_transfer_body">"Zufallscodes über mobile Daten herunterladen. Wenn diese Option deaktiviert ist, werden die Zufallscodes nur über Wifi heruntergeladen. "</string>
+    <string name="information_data_transfer_switch">Mobile Daten verwenden</string>
+  <string name="information_data_transfer_switch_off">Nur Wifi</string>
+  <string name="information_data_transfer_switch_on">Wifi und mobile Daten</string>
 </resources>

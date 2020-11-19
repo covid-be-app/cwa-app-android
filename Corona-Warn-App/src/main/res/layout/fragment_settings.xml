@@ -96,6 +96,22 @@
                     app:subtitle="@{@string/settings_background_priority_title}"
                     app:tracingViewModel="@{tracingViewModel}" />
 
+                <include
+                    android:id="@+id/settings_data_transfer"
+                    layout="@layout/include_setting_row"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    app:body="@{@string/information_data_transfer_headline}"
+                    app:color="@{FormatterSettingsHelper.formatSettingsDataTransferIconColor(settingsViewModel.isDataTransferEnabled())}"
+                    app:icon="@{FormatterSettingsHelper.formatSettingsDataTransferIcon(settingsViewModel.isDataTransferEnabled())}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/settings_background_priority"
+                    app:showDivider="@{true}"
+                    app:statusText="@{FormatterSettingsHelper.formatDataTransferStatus(settingsViewModel.isDataTransferEnabled())}"
+                    app:subtitle="@{@string/information_data_transfer}"
+                    app:tracingViewModel="@{tracingViewModel}" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/settings_reset"
                     style="@style/row"
@@ -103,7 +119,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/settings_background_priority">
+                    app:layout_constraintTop_toBottomOf="@+id/settings_data_transfer">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"

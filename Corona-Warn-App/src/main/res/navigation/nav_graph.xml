@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_settingsBackgroundPriorityFragment"
             app:destination="@id/settingsBackgroundPriorityFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_informationDataTransferFragment"
+            app:destination="@id/informationDataTransferFragment" />
     </fragment>
 
     <fragment
@@ -134,8 +137,8 @@
             android:id="@+id/action_informationFragment_to_informationTechnicalFragment"
             app:destination="@id/informationTechnicalFragment" />
         <action
-            android:id="@+id/action_informationFragment_to_informationDataTransfertFragment"
-            app:destination="@id/informationDataTransfertFragment" />
+            android:id="@+id/action_informationFragment_to_informationDataTransferFragment"
+            app:destination="@id/informationDataTransferFragment" />
     </fragment>
 
     <fragment
@@ -175,9 +178,9 @@
         tools:layout="@layout/fragment_information_technical" />
 
     <fragment
-        android:id="@+id/informationDataTransfertFragment"
+        android:id="@+id/informationDataTransferFragment"
         android:name="be.sciensano.coronalert.ui.information.InformationDataTransferFragment"
-        android:label="InformationDataTransfertFragment"
+        android:label="InformationDataTransferFragment"
         tools:layout="@layout/fragment_information_data_transfer" />
 
     <!-- Submission -->

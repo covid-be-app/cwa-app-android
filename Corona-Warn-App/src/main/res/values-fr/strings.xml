@@ -634,8 +634,10 @@
     <string name="submission_done_reset_dialog_button_positive">OK</string>
 
 
-    <string name="information_data_transfer">Transfert de données</string>
-    <string name="information_data_transfer_headline">Choisissez le mode de communication de votre application</string>
-    <string name="information_data_transfer_body">Votre application se synchronise avec le serveur via WIFI par défaut. Vous pouvez modifier ce paramètre ici</string>
-    <string name="information_data_transfer_switch">4G/5G</string>
+    <string name="information_data_transfer">Téléchargements</string>
+    <string name="information_data_transfer_headline">Utiliser des réseaux mobiles pour le téléchargement d\'identifiants aléatoires.</string>
+    <string name="information_data_transfer_body">Téléchargez des identifiants aléatoires par le biais de réseaux mobiles. Si cette option est désactivée, les identifiants ne seront téléchargés qu\'en Wifi.</string>
+    <string name="information_data_transfer_switch">Utilisez réseaux mobiles</string>
+  <string name="information_data_transfer_switch_off">Wifi Uniquement</string>
+  <string name="information_data_transfer_switch_on">Wifi et Mobile</string>
 </resources>

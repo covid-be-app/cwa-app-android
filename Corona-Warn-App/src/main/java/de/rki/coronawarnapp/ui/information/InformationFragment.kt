@@ -99,11 +99,7 @@ class InformationFragment : Fragment() {
                 InformationFragmentDirections.actionInformationFragmentToInformationTechnicalFragment()
             )
         }
-        binding.informationDataTransfert.mainRow.setOnClickListener {
-            findNavController().doNavigate(
-                InformationFragmentDirections.actionInformationFragmentToInformationDataTransfertFragment()
-            )
-        }
+
         binding.informationHeader.headerButtonBack.buttonIcon.setOnClickListener {
             (activity as MainActivity).goBack()
         }

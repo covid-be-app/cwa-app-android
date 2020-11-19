@@ -633,8 +633,10 @@
     <string name="submission_done_reset_dialog_body">Bedankt voor het delen van je gegevens en het helpen van anderen. De app wordt nu gereset en alle gegevens worden verwijderd. We raden je sterk aan om de app uit te schakelen tijdens je isolatieperiode door het stoppen van de blootstellingsregistratie. Na je isolatieperiode kan je de app weer gebruiken.</string>
     <string name="submission_done_reset_dialog_button_positive">OK</string>
 
-    <string name="information_data_transfer">Gegevensoverdracht</string>
-    <string name="information_data_transfer_headline">Kies de communicatiemodus voor uw app</string>
-    <string name="information_data_transfer_body">Uw applicatie synchroniseert standaard met de server via WIFI. U kunt deze instelling hier wijzigen</string>
-    <string name="information_data_transfer_switch">4G/5G</string>
+    <string name="information_data_transfer">Downloads</string>
+    <string name="information_data_transfer_headline">Gebruik mobiele netwerken voor willekeurige ID-downloads.</string>
+    <string name="information_data_transfer_body">"Download willekeurige ID's over mobiele netwerken. Als deze optie is uitgeschakeld, worden de ID's alleen via Wifi gedownload. "</string>
+    <string name="information_data_transfer_switch">Gebruik mobiele netwerken</string>
+  <string name="information_data_transfer_switch_off">Enkel Wifi</string>
+  <string name="information_data_transfer_switch_on">Wifi en Mobiele Data</string>
 </resources>

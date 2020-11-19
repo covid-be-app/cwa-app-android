@@ -102,15 +102,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/information_technical"
                     app:subtitle="@{@string/information_contact_title}" />
 
-                <include
-                    android:id="@+id/information_data_transfert"
-                    layout="@layout/include_row"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/information_technical"
-                    app:subtitle="@{@string/information_data_transfer}" />
 
                 <include
                     android:id="@+id/information_legal"
@@ -119,7 +110,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/information_data_transfert"
+                    app:layout_constraintTop_toBottomOf="@+id/information_technical"
                     app:subtitle="@{@string/information_legal_title}" />
 
 
