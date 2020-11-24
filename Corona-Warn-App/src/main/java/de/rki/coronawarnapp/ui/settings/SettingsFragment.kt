@@ -71,6 +71,8 @@ class SettingsFragment : Fragment() {
         val backgroundPriorityRow = binding.settingsBackgroundPriority.settingsRow
         val resetRow = binding.settingsReset
         val goBack = binding.settingsHeader.headerButtonBack.buttonIcon
+        val dataTransferRow = binding.settingsDataTransfer.settingsRow
+
         resetRow.setOnClickListener {
             findNavController().doNavigate(
                 SettingsFragmentDirections.actionSettingsFragmentToSettingsResetFragment()
@@ -89,6 +91,11 @@ class SettingsFragment : Fragment() {
         backgroundPriorityRow.setOnClickListener {
             findNavController().doNavigate(
                 SettingsFragmentDirections.actionSettingsFragmentToSettingsBackgroundPriorityFragment()
+            )
+        }
+        dataTransferRow.setOnClickListener {
+            findNavController().doNavigate(
+                SettingsFragmentDirections.actionSettingsFragmentToInformationDataTransferFragment()
             )
         }
         goBack.setOnClickListener {
