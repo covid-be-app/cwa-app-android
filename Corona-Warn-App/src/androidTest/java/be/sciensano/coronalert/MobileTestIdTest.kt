@@ -39,7 +39,7 @@ class MobileTestIdTest {
         } returns "ryinAKH0AoVXXLwM2020-09-08TEST REQUEST"
 
         Assert.assertEquals(
-            mobileTestIdFactory.generate(newDate(2020, 9, 8)).toString(),
+            mobileTestIdFactory.generate(newDate(2020, 9, 10)).toString(),
             "3748-3803-3537-3893-8"
         )
     }
@@ -48,19 +48,20 @@ class MobileTestIdTest {
     fun testModulo() {
         Assert.assertEquals(modulo97("20071082443971088220685"), 0)
 
-        val mobileTestId = MobileTestId.generate(newDate(2020, 1, 1))
+        val mobileTestId = MobileTestId.generate(newDate(2020, 1, 3))
         Assert.assertEquals(
             modulo97(
-                "${MobileTestId.compactServerDate(mobileTestId.t0)}${mobileTestId.toString()
-                    .replace("-", "")}"
-            )
-            , 0
+                "${MobileTestId.compactServerDate(mobileTestId.t0)}${
+                    mobileTestId.toString()
+                        .replace("-", "")
+                }"
+            ), 0
         )
     }
 
     @Test
     fun testGenerateId() {
-        val mobileTestId = MobileTestId.generate(Date())
+        val mobileTestId = MobileTestId.generate()
 
         Assert.assertEquals(
             mobileTestId.r1.length, 15
@@ -69,7 +70,7 @@ class MobileTestIdTest {
             mobileTestId.registrationToken().split("|")[0], mobileTestId.r1
         )
         Assert.assertEquals(
-            mobileTestId.registrationToken().split("|")[1], Date().toServerFormat()
+            mobileTestId.registrationToken().split("|")[1], dateMinus(Date(), 2).toServerFormat()
         )
     }
 
@@ -89,5 +90,12 @@ class MobileTestIdTest {
         calendar.set(Calendar.MONTH, month - 1)
         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
         return calendar.time
+    }
+
+    private fun dateMinus(date: Date, value: Int): Date {
+        val cal = Calendar.getInstance()
+        cal.time = date
+        cal.add(Calendar.DATE, -value)
+        return (cal.time)
     }
 }

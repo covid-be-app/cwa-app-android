@@ -3,6 +3,7 @@ package be.sciensano.coronalert.service.submission
 import be.sciensano.coronalert.http.responses.TestResultResponse
 import be.sciensano.coronalert.storage.isTestResultNegative
 import be.sciensano.coronalert.storage.k
+import be.sciensano.coronalert.storage.onsetSymptomsDate
 import be.sciensano.coronalert.storage.r0
 import be.sciensano.coronalert.storage.resultChannel
 import be.sciensano.coronalert.storage.t0
@@ -56,6 +57,7 @@ object SubmissionService {
         DeSubmissionService.deleteRegistrationToken()
         LocalData.isTestResultNegative(false)
         LocalData.t0(null)
+        LocalData.onsetSymptomsDate(null)
         LocalData.r0(null)
         LocalData.k(null)
         LocalData.t3(null)
