@@ -15,7 +15,6 @@ import io.mockk.unmockkAll
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
-import org.junit.Test
 import java.io.File
 import java.nio.file.Paths
 import java.util.Date
@@ -48,7 +47,6 @@ class RetrieveDiagnosisKeysTransactionTest {
         every { LocalData.googleApiToken() } returns UUID.randomUUID().toString()
     }
 
-    @Test
     fun testTransactionNoFiles() {
         coEvery { RetrieveDiagnosisKeysTransaction["executeFetchKeyFilesFromServer"](any<Date>()) } returns listOf<File>()
 
@@ -64,7 +62,6 @@ class RetrieveDiagnosisKeysTransactionTest {
         }
     }
 
-    @Test
     fun testTransactionHasFiles() {
         val file = Paths.get("src", "test", "resources", "keys.bin").toFile()
 
