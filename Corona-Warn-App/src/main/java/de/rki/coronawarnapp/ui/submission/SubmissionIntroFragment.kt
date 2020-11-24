@@ -13,7 +13,6 @@ import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSubmissionIntroBinding
 import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.util.DialogHelper
-import java.util.Date
 
 /**
  * The [SubmissionIntroFragment] displays information about how the corona warning system works
@@ -76,7 +75,7 @@ class SubmissionIntroFragment : Fragment() {
                         )
                     },
                     {
-                        viewModel.setSubmissionDate(Date())
+                        viewModel.setSymptomsDate(null)
                         findNavController().doNavigate(
                             SubmissionIntroFragmentDirections
                                 .actionSubmissionIntroFragmentToSubmissionTestRequestSaveFragment()
