@@ -632,4 +632,12 @@
     <string name="submission_done_reset_dialog_title">Réinitialisation de l\'app</string>
     <string name="submission_done_reset_dialog_body">Merci de partager vos données et d\'aider les autres. L\'application va maintenant être réinitialisée et toutes les données seront supprimées. Nous vous recommandons vivement de désactiver l\'application pendant votre période d\'isolement en arrêtant l\'enregistrement de l\'exposition. Après votre période d\'isolement, vous pourrez à nouveau utiliser l\'application.</string>
     <string name="submission_done_reset_dialog_button_positive">OK</string>
+
+
+    <string name="information_data_transfer">Téléchargements</string>
+    <string name="information_data_transfer_headline">Utiliser des réseaux mobiles pour le téléchargement d\'identifiants aléatoires.</string>
+    <string name="information_data_transfer_body">Téléchargez des identifiants aléatoires par le biais de réseaux mobiles. Si cette option est désactivée, les identifiants ne seront téléchargés qu\'en Wifi.</string>
+    <string name="information_data_transfer_switch">Utilisez réseaux mobiles</string>
+  <string name="information_data_transfer_switch_off">Wifi Uniquement</string>
+  <string name="information_data_transfer_switch_on">Wifi et Mobile</string>
 </resources>

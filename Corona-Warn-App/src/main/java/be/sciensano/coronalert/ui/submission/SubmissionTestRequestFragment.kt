@@ -40,7 +40,7 @@ class SubmissionTestRequestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val calendar = Calendar.getInstance()
-        calendar.time = viewModel.submissionDate.value!!
+        viewModel.setSymptomsDate(calendar.time)
 
         binding.submissionDatePicker.minDate = let {
             val cal = Calendar.getInstance()
@@ -58,7 +58,7 @@ class SubmissionTestRequestFragment : Fragment() {
             calendar.set(Calendar.YEAR, year)
             calendar.set(Calendar.MONTH, monthOfYear)
             calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-            viewModel.setSubmissionDate(calendar.time)
+            viewModel.setSymptomsDate(calendar.time)
         }
 
         binding.submissionTestRequestHeader.headerButtonBack.buttonIcon.setOnClickListener {

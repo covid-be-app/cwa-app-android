@@ -3,6 +3,7 @@ package de.rki.coronawarnapp.storage
 import android.content.Context
 import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.MutableLiveData
+import be.sciensano.coronalert.storage.dataTransfer
 import de.rki.coronawarnapp.util.ConnectivityHelper
 import de.rki.coronawarnapp.util.PowerManagementHelper
 
@@ -29,6 +30,7 @@ object SettingsRepository {
     val isBackgroundJobEnabled = MutableLiveData(true)
     val isBackgroundPriorityEnabled = MutableLiveData(false)
     val manualKeyRetrievalTime = MutableLiveData<Long>()
+    val isDataTransferEnabled = MutableLiveData(LocalData.dataTransfer())
 
     /**
      * Get the current notifications state. Only relevant for the ui.
@@ -48,6 +50,15 @@ object SettingsRepository {
     fun toggleNotificationsRiskEnabled() {
         LocalData.toggleNotificationsRiskEnabled()
         refreshNotificationsRiskEnabled()
+    }
+
+    fun toggleDataTranferEnabled() {
+        LocalData.dataTransfer(!LocalData.dataTransfer())
+        refreshDataTransferEnabled()
+    }
+
+    private fun refreshDataTransferEnabled() {
+        isDataTransferEnabled.value = LocalData.dataTransfer()
     }
 
     /**
@@ -135,4 +146,6 @@ object SettingsRepository {
         isBackgroundPriorityEnabled.value =
             PowerManagementHelper.isIgnoringBatteryOptimizations(context)
     }
+
+
 }
