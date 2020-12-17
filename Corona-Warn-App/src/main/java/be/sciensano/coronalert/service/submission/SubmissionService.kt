@@ -14,10 +14,8 @@ import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.storage.LocalData
-import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
-import java.util.Date
 import de.rki.coronawarnapp.service.submission.SubmissionService as DeSubmissionService
 
 object SubmissionService {
@@ -32,7 +30,7 @@ object SubmissionService {
     suspend fun asyncSendAck(testResult: TestResultResponse) {
 
         if (TestResult.fromInt(testResult.result) == TestResult.POSITIVE) {
-            LocalData.t3(Date().toServerFormat())
+            LocalData.t3(testResult.dateTestCommunicated)
             LocalData.resultChannel(testResult.resultChannel)
         }
 
