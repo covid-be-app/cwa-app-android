@@ -68,14 +68,8 @@ object CachedKeyFileHolder {
      */
     suspend fun asyncFetchFiles(currentDate: Date): List<File> = withContext(Dispatchers.IO) {
         checkForFreeSpace()
-        val serverDatesForRegions = getRegionsFromServer().flatMap { region ->
-            getDatesFromServer(region).map {
-                Pair(
-                    region,
-                    it
-                )
-            }
-        }
+        val serverDatesForRegions = getDatesForRegionsFromServer()
+        
         // TODO remove last3HourFetch before Release
 //        if (BuildConfig.FLAVOR != "device" && isLast3HourFetchEnabled()) {
 //            Timber.v("Last 3 Hours will be Fetched. Only use for Debugging!")
@@ -223,6 +217,17 @@ object CachedKeyFileHolder {
      */
     private suspend fun getDatesFromServer(region: String) =
         WebRequestBuilder.getInstance().asyncGetDateIndex(region)
+
+    private suspend fun getDatesForRegionsFromServer(): List<Pair<String, String>> {
+        return getRegionsFromServer().flatMap { region ->
+            getDatesFromServer(region).map {
+                Pair(
+                    region,
+                    it
+                )
+            }
+        }
+    }
 
 
     /**
