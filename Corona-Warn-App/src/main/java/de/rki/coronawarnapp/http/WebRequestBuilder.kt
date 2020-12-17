@@ -97,19 +97,25 @@ class WebRequestBuilder(
         }
     }
 
-    suspend fun asyncGetDateIndex(): List<String> = withContext(Dispatchers.IO) {
+    suspend fun asyncGetRegionIndex(): List<String> = withContext(Dispatchers.IO) {
         return@withContext distributionService
-            .getDateIndex(DiagnosisKeyConstants.AVAILABLE_DATES_URL).toList()
+            .getRegionIndex(DiagnosisKeyConstants.AVAILABLE_REGION_URL).toList()
     }
 
-    suspend fun asyncGetHourIndex(day: Date): List<String> = withContext(Dispatchers.IO) {
+    suspend fun asyncGetDateIndex(region: String): List<String> = withContext(Dispatchers.IO) {
         return@withContext distributionService
-            .getHourIndex(
-                DiagnosisKeyConstants.AVAILABLE_DATES_URL +
-                        "/${day.toServerFormat()}/${DiagnosisKeyConstants.HOUR}"
-            )
-            .toList()
+            .getDateIndex(DiagnosisKeyConstants.availableDatesForRegionUrl(region)).toList()
     }
+
+    suspend fun asyncGetHourIndex(region: String, day: Date): List<String> =
+        withContext(Dispatchers.IO) {
+            return@withContext distributionService
+                .getHourIndex(
+                    DiagnosisKeyConstants.AVAILABLE_DATES_URL +
+                            "/${day.toServerFormat()}/${DiagnosisKeyConstants.HOUR}"
+                )
+                .toList()
+        }
 
     /**
      * Retrieves Key Files from the Server based on a URL
@@ -279,7 +285,7 @@ class WebRequestBuilder(
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addAllKeys(keyList.map { it.first })
-            .addAllCountries(keyList.map { it.second })
+            .addAllVisitedCountries(keyList.map { it.second })
             .setPadding(getPadding(keyList.size))
             .build()
 
@@ -315,7 +321,7 @@ class WebRequestBuilder(
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addKeys(key)
-            .addCountries("BEL")
+            .addVisitedCountries("BE")
             .setPadding(getPadding(1))
             .build()
 

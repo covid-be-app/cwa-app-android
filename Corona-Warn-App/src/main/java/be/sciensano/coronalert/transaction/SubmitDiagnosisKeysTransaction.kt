@@ -64,7 +64,7 @@ object SubmitDiagnosisKeysTransaction : Transaction() {
                             temporaryExposureKey,
                             keys.find {
                                 it.first.rollingStartIntervalNumber == temporaryExposureKey.rollingStartIntervalNumber
-                            }!!.second.code3
+                            }!!.second.code2
                         )
                     }
             }

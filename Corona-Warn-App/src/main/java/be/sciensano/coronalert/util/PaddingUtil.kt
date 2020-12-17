@@ -12,7 +12,7 @@ object PaddingUtil {
                 SubmissionConstants.minKeyCountForSubmission - forKeysCount,
                 0
             )
-        val paddingCount = (35 * fakeKeyCount).let { if (it > 128) it - 1 else it }
+        val paddingCount = (34 * fakeKeyCount).let { if (it > 128) it - 1 else it }
 
         return ByteString.copyFromUtf8(requestPadding(paddingCount))
     }
