@@ -24,7 +24,8 @@ data class Structure(
     val positiveTestResult: PositiveTestResult,
     val positiveTestResultCard: PositiveTestResultCard,
     val negativeTestResult: NegativeTestResult,
-    val thankYou: ThankYou
+    val thankYou: ThankYou,
+    val participatingCountries: ParticipatingCountries
 )
 
 data class Standard(val preventiveMeasures: List<PreventiveMeasure>)
@@ -33,6 +34,8 @@ data class PositiveTestResultCard(val explanation: List<PositiveTestResultCardEx
 data class PositiveTestResult(val explanation: List<Explanation>)
 data class NegativeTestResult(val explanation: List<Explanation>)
 data class ThankYou(val pleaseNote: List<PleaseNote>, val otherInformation: List<OtherInformation>)
+data class ParticipatingCountries(val list: List<Country>)
+
 data class PreventiveMeasure(val icon: String, val text: String, val paragraphs: List<String>?)
 
 data class Explanation(
@@ -46,6 +49,8 @@ data class PositiveTestResultCardExplanation(
     val icon: String,
     val text: String
 )
+
+data class Country(val icon: String, val text: String)
 
 data class PleaseNote(val icon: String, val text: String)
 
