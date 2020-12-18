@@ -238,7 +238,7 @@ class WebRequestBuilder(
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addAllKeys(keyList)
-            .setPadding(ByteString.copyFromUtf8(fakeKeyPadding))
+            .setRequestPadding(ByteString.copyFromUtf8(fakeKeyPadding))
             .build()
         submissionService.submitKeys(
             DiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
@@ -286,8 +286,12 @@ class WebRequestBuilder(
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addAllKeys(keyList.map { it.first })
             .addAllVisitedCountries(keyList.map { it.second })
-            .setPadding(getPadding(keyList.size))
+            .setRequestPadding(getPadding(keyList.size))
+            .setOrigin("BE")
+            .setConsentToFederation(true)
             .build()
+
+        Timber.d(submissionPayload.toString())
 
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
@@ -322,7 +326,9 @@ class WebRequestBuilder(
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addKeys(key)
             .addVisitedCountries("BE")
-            .setPadding(getPadding(1))
+            .setRequestPadding(getPadding(1))
+            .setOrigin("BE")
+            .setConsentToFederation(true)
             .build()
 
         val fakeTestId = MobileTestId.generate(Date())
@@ -356,7 +362,7 @@ class WebRequestBuilder(
             requestPadding(SubmissionConstants.fakeKeySize * fakeKeyCount)
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .setPadding(ByteString.copyFromUtf8(fakeKeyPadding))
+            .setRequestPadding(ByteString.copyFromUtf8(fakeKeyPadding))
             .build()
 
         submissionService.submitKeys(

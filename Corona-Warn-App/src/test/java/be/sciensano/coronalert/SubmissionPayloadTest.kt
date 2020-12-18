@@ -35,13 +35,15 @@ class SubmissionPayloadTest {
                 KeyExportFormat.SubmissionPayload.newBuilder()
                     .addAllKeys(List(index) { key })
                     .addAllVisitedCountries(List(index) { "BE" })
-                    .setPadding(getPadding(index))
+                    .setRequestPadding(getPadding(index))
+                    .setOrigin("BE")
+                    .setConsentToFederation(true)
                     .build().serializedSize
             }
         }
 
         Assert.assertEquals(
             sizes,
-            List(SubmissionConstants.minKeyCountForSubmission * datesRange.count()) { 478 })
+            List(SubmissionConstants.minKeyCountForSubmission * datesRange.count()) { 484 })
     }
 }
