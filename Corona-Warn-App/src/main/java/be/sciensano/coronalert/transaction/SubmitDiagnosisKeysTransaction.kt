@@ -51,22 +51,15 @@ object SubmitDiagnosisKeysTransaction : Transaction() {
     }
 
     /** initiates the transaction. This suspend function guarantees a successful transaction once completed. */
-    suspend fun start(keys: List<Pair<TemporaryExposureKey, Country>>) =
+    suspend fun start(keys: List<TemporaryExposureKey>) =
         lockAndExecuteUnique {
 
             /****************************************************
              * RETRIEVE TEMPORARY EXPOSURE KEY HISTORY
              ****************************************************/
             val temporaryExposureKeyList = executeState(RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY) {
-                keys.map { it.first }.limitKeyCount().transformKeyHistoryToExternalFormat()
-                    .map { temporaryExposureKey ->
-                        Pair(
-                            temporaryExposureKey,
-                            keys.find {
-                                it.first.rollingStartIntervalNumber == temporaryExposureKey.rollingStartIntervalNumber
-                            }!!.second.code2
-                        )
-                    }
+                keys.limitKeyCount()
+                    .transformKeyHistoryToExternalFormat()
             }
 
             /****************************************************

@@ -279,14 +279,13 @@ class WebRequestBuilder(
         t3: String,
         resultChannel: Int,
         onsetSymptomsDate: String?,
-        keyList: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
+        keys: List<KeyExportFormat.TemporaryExposureKey>
     ) = withContext(Dispatchers.IO) {
-        Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
+        Timber.d("Writing ${keys.size} Keys to the Submission Payload.")
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .addAllKeys(keyList.map { it.first })
-            .addAllVisitedCountries(keyList.map { it.second })
-            .setRequestPadding(getPadding(keyList.size))
+            .addAllKeys(keys)
+            .setRequestPadding(getPadding(keys.size))
             .setOrigin("BE")
             .setConsentToFederation(true)
             .build()
@@ -325,7 +324,6 @@ class WebRequestBuilder(
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addKeys(key)
-            .addVisitedCountries("BE")
             .setRequestPadding(getPadding(1))
             .setOrigin("BE")
             .setConsentToFederation(true)

@@ -40,7 +40,7 @@ object SubmissionService {
         WebRequestBuilder.getInstance().beAsyncAckTestResult(registrationToken)
     }
 
-    suspend fun asyncSubmitExposureKeys(keys: List<Pair<TemporaryExposureKey, Country>>) {
+    suspend fun asyncSubmitExposureKeys(keys: List<TemporaryExposureKey>) {
         SubmitDiagnosisKeysTransaction.start(keys)
     }
 
