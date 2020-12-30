@@ -641,4 +641,26 @@
     <string name="information_data_transfer_switch_on">Wifi and Mobile Data</string>
     <string name="information_data_transfer_switch_off">Wifi Only</string>
 
+    <!-- XHED: Title of the interoperbaility information view. -->
+    <string name="interoperability_title">"Transnational\nExposure Logging"</string>
+
+    <!-- XHED: Setting title of interoperability in the tracing settings view -->
+    <string name="settings_interoperability_title">"Transnational Exposure Logging"</string>
+    <!-- XTXT: Settings description of the interoperability in the tracing settings view -->
+    <string name="settings_interoperability_subtitle">"Participating Countries"</string>
+
+    <!-- XHED: Header of interoperability information/configuration view -->
+    <string name="interoperability_configuration_title">"Transnational Exposure Logging"</string>
+    <!-- XTXT: First section after the header of the interoperability information/configuration view -->
+    <string name="interoperability_configuration_first_section">"Several countries are working together to enable transnational alerts via a joint exchange server. For example, contacts with users of an official coronavirus app from other participating countries can also be taken into account for exposure logging."</string>
+    <!-- XTXT: Second section after the header of the interoperability information/configuration view -->
+    <string name="interoperability_configuration_second_section">"For this purpose, the app downloads every day a list of therandom IDs of all users who had a positive test and who have decided to inform other users by sharing their random IDs. This list is then compared with the random IDs recorded by your smartphone.You can chose to download this list over WiFi; otherwise part of your mobile data budget will be consumed. Be aware that this may result inroaming charges if you would leave the EU."</string>
+    <!-- XHED: Header right above the country list in the interoperability information/configuration view -->
+    <string name="interoperability_configuration_list_title">"The following countries currently participate in transnational exposure logging:"</string>
+    <!-- XTXT: Text right under the country list in the interoperability information/configuration view -->
+    <string name="interoperability_configuration_information">"The app’s privacy notice (including information about the data processing carried out for the transnational exposure logging feature) can be found in the menu under “App Information” &gt; “Data Privacy”."</string>
+
+    <!-- XACT: interoperability (eu) - illustraction description, explanation image -->
+    <string name="interoperability_eu_illustration_description">"A hand holds a smartphone. Europe and the European flag are illustrated in the background."</string>
+
 </resources>

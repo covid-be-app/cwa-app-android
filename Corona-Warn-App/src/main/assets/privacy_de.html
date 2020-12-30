@@ -1,427 +1,448 @@
-<p>
-    Die Contact Tracing App wurde im Zusammenhang mit dem Ausbruch des Coronavirus
-    und auf Initiative der belgischen Regierung und der föderalen
-    Einheiten&nbsp;entwickelt.
-</p>
-<p>
-    Die Contact Tracing App basiert auf einem Proximity Tracing System namens
-    "Decentralized Privacy-Preserving Proximity Tracing" ("DP-3T-System"), das von
-    einem internationalen Konsortium von Technologen, Rechtsexperten, Ingenieuren
-    und Epidemiologen verschiedener Universitäten entwickelt wurde. Ausführlichere
-    Informationen über das DP-3T-System sind öffentlich zugänglich unter
-    https://github.com/DP-3T/documents. Darüber hinaus verwendet die Contact
-    Tracing App das von Google und Apple entwickelte Exposure Notification System.
-    Dieses Benachrichtigungssystem ermöglicht es der Anwendung zur Ermittlung von
-    Kontaktpersonen, Benachrichtigungen an den Benutzer zu senden, wie weiter
-    unten näher erläutert wird. Weitere Informationen über das
-    Expositionsbenachrichtigungssystem finden Sie unter
-    https://www.google.com/covid19/exposurenotifications/.
-</p>
-<p>
-    Die Benutzung der Contact Tracing App ist vollkommen freiwillig. Mit anderen
-    Worten, es besteht keinerlei Verpflichtung, diese App zur Ermittlung von
-    Kontaktpersonen zu installieren.
-</p>
-<p>
-    Die Contact Tracing App ist für den Einsatz in allen Ländern vorgesehen, die
-    ebenfalls ein DP-3T-System verwenden. Das bedeutet, dass ein Benutzer der
-    belgischen App zur Ermittlung von Kontaktpersonen, der ein solches Land
-    besucht, auch Benachrichtigungen erhalten kann, dass er in einem solchen Land
-    einem Risiko ausgesetzt war.
-</p>
-<h2>
-    WER IST DER CONTROLLER FÜR DIE ANWENDUNG ZUR ERMITTLUNG VON KONTAKTPERSONEN?
-</h2>
-<p>
-    Diese Anwendung zur Ermittlung von Kontaktpersonen unterliegt dem Königlichen
-    Erlass Nr. 44 vom 26. Juni 2020 über die “gemeinsame Verarbeitung von Daten
-    durch Sciensano und durch&nbsp;die von den zuständigen regionalen Behörden
-    benannten Kontaktzentren, Gesundheitsdiensten und mobilen Teams im Rahmen
-    einer Kontaktverfolgung von Personen, die (möglicherweise) mit dem Coronavirus
-    infiziert sind, mit Hilfe einer Datenbank bei Sciensano.”
-</p>
-<p>
-    Diese App zur Ermittlung von Kontaktpersonen wird von von den regionalen
-    Gesundheitsverwaltungen angeboten und Sciensano ist für die
-    Server-Infrastruktur der App verantwortlich. Sciensano ist eine öffentliche
-    Einrichtung mit Rechtspersönlichkeit, die durch das Gesetz vom 25. Februar
-    2018 über die Gründung von Sciensano gegründet wurde, mit eingetragenem Sitz
-    in der rue Juliette Wytsman 14, B-1050 Ixelles, und bei der Kreuzungsbank für
-    Unternehmen unter der Nummer 0693.876.830 registriert ist (nachstehend
-    "Sciensano" genannt).
-</p>
-<p>
-    Gemäß dem Königlichen Erlass Nr. 44 fungiert Sciensano als Verantwortlicher
-    für die Erhebung und Verarbeitung personenbezogener Daten im Sinne der
-    Allgemeinen Datenschutzverordnung (im Folgenden als "GDPR" bezeichnet).
-</p>
-<p>
-    Sciensano kann auf dem Postweg unter der oben angegebenen Adresse und per
-    E-Mail unter coronalert@sciensano.be kontaktiert werden.
-</p>
-<p>
-    Sie hat einen Datenschutzbeauftragten ernannt, der unter folgender Adresse
-    kontaktiert werden kann dpo@sciensano.be.
-</p>
-<h2>
-    WAS IST DER ZWECK DER APP ZUR ERMITTLUNG VON KONTAKTPERSONEN UND WIE
-    FUNKTIONIERT SIE?
-</h2>
-<p>Nahbereichverfolgung</p>
-<p>
-    Das Ziel der App zur Ermittlung von Kontaktpersonen besteht darin, Bürger zu
-    informieren, die sich in unmittelbarer physischer Nähe einer
-    COVID-19-positiven Person befunden haben und somit dem Virus ausgesetzt waren,
-    ohne die Identität der Kontaktperson oder den Ort und Zeitpunkt des Kontakts
-    preiszugeben. Die verschiedenen Verarbeitungen von Personendaten, die im
-    Rahmen dieses Meldeverfahrens und im Rahmen der Registrierung als Benutzer des
-    Apps zur Ermittlung von Kontaktpersonen erfolgen, beruhen auf Gründen des
-    öffentlichen Interesses (Art. 6.1 (e) GDPR) und, soweit es sich um
-    Gesundheitsdaten handelt, auf Gründen des öffentlichen Interesses im Bereich
-    der öffentlichen Gesundheit (9.2 (i) GDPR). Die Contact Tracing App wird durch
-    den Königlichen Erlass Nr. 44 geregelt. Die Verarbeitung erfolgt in der Tat im
-    öffentlichen Interesse, da sie darauf abzielt, die Verbreitung von COVID-19
-    einzudämmen und die Bevölkerung vor dieser Epidemie zu schützen.
-</p>
-<p>
-    Um dieses Ziel zu erreichen, generiert die Contact Tracing App geheime
-    Schlüssel und berechnet aus diesen Schlüsseln flüchtige (d.h. vorübergehende),
-    zufällige IDs, die das Telefon des Benutzers repräsentieren. Diese IDs sind
-    vorübergehend, da sie mit einer hohen Frequenz (alle 10-20 Minuten)
-    aktualisiert werden, d.h. mit der gleichen Frequenz wie die
-    Bluetooth-MAC-Adresse (d.h. die temporären Identifikatoren, die
-    Bluetooth-Geräte verwenden, um den Absender oder Empfänger von Nachrichten
-    anzuzeigen).
-</p>
-<p>
-    Das Telefon des Benutzers sendet diese zufälligen IDs und zeichnet auch die
-    von anderen Telefonen in der Nähe beobachteten zufälligen IDs auf und
-    speichert diese während 14 Tagen zusammen mit dem Datum, der Signalstärke und
-    der Dauer.
-</p>
-<p>
-    Um auf COVID-19 getestet zu werden, muss sich ein Anwender mit einem Arzt in
-    Verbindung setzen, der eine Probe entnimmt. Entweder registriert der Arzt des
-    Benutzers selbst eine pseudonyme Kennung vom Telefon des Benutzers im
-    Testserver. Von da an, wird die Contact Tracing App den Testserver regelmässig
-    anhand dieser anonymen Kennung überprüfen, um festzustellen, ob das
-    Testergebnis verfügbar ist. Sobald das Testergebnis verfügbar ist, wird die
-    Contact Tracing App den Benutzer über das Testergebnis informieren: negativ
-    oder positiv. Wenn das Ergebnis positiv ist, sollte der Benutzer den Arzt
-    kontaktieren. Der Benutzer kann dann entscheiden, die Geheimschlüssel
-    hochzuladen, um die zuvor (wie in Abschnitt 4 näher beschrieben) gesendeten
-    Zufalls-IDs auf den zentralen Server zu generieren. Um Fehlbenutzungen zu
-    minimieren, wird dieser Upload durch den Testserver autorisiert, der einen
-    Autorisierungscode an den zentralen Server sendet. Unmittelbar nach dem
-    Hochladen werden dann alle diese Geheimschlüssel vom Telefon entfernt.
-</p>
-<p>
-    Ausser wenn sie hochgeladen werden, bleiben die Geheimschlüssel zur
-    Generierung der gesendeten Zufalls-IDs für einen Zeitraum von maximal 14 Tagen
-    auf dem Telefon. Die aufgezeichneten Zufalls-IDs anderer Benutzer verlassen
-    das Telefon nie und werden nach 14 Tagen vernichtet.
-</p>
-<p>
-    Sobald die Geheimschlüssel zur Generierung der gesendeten Zufalls-IDs von
-    einem infizierten Benutzer auf den zentralen Server hochgeladen wurden, kann
-    die Contact Tracing App anderer Benutzer diese Geheimschlüssel vom Server
-    abrufen, um zu beurteilen, ob diese anderen Benutzer dem Virus durch die
-    unmittelbare Nähe zu einer COVID-19-positiven Person, die ihre Daten
-    hochgeladen hat, ausgesetzt waren. Wenn die Contact Tracing App, die die Daten
-    vom Server abruft, ein erhebliches Infektionsrisiko feststellt (d.h. der
-    Benutzer hat sich während eines Zeitraums von mindestens 15 Minuten in der
-    Nähe einer COVID-19-positiven Person aufgehalten), informiert sie den Benutzer
-    über die Contract Tracing App und empfiehlt bestimmte Aktionen mittels einer
-    von der Contact Tracing App generierten Push-Benachrichtigung. Es liegt in der
-    alleinigen Verantwortung des Benutzers, diese Empfehlungen zu befolgen.
-</p>
-<p>
-    Um Klarheit zu schaffen und Zweifel zu vermeiden, leistet die Contact Tracing
-    App Folgendes NICHT:
-</p>
-<ul>
-    <li>
-        die Einhaltung staatlich verhängter Quarantäne-, Einsperrungs- oder sozialer
-        Distanzierungsmaßnahmen zu überwachen;
-    </li>
-    <li>COVID-19 positive Patienten zu verfolgen;</li>
-    <li>
-        in Echtzeit Informationen über einen Hochrisikokontakt mit einem positiven
-        Patienten zu übermittellen;
-    </li>
-    <li>Informationen zu Benutzern ohne positives Testergebnis zu senden;</li>
-    <li>
-        Hotspots oder Verlaufe von COVID-19-positiven Patienten identifizieren.
-    </li>
-</ul>
-<p>Begrenzte Verarbeitung für statistische Zwecke</p>
-<p>
-    Auf der Grundlage der auf den zentralen Server hochgeladenen Informationen
-    kann Sciensano begrenzte aggregierte Statistiken erstellen, wie z.B. die
-    Zählung der Anzahl der pro Tag hochgeladenen Schlüssel und die Anzahl der
-    Personen, die die Contract Tracing App nutzen und jeden Tag positiv getestet
-    haben. Sciensano wird diese Zahlen nur auf der Grundlage zuvor anonymisierter
-    Daten erstellen. Sciensano hat keinen Zugriff auf die Namen, Telefonnummern
-    oder andere "persönliche Daten", die von den Benutzern zur Verfügung gestellt
-    oder durch die Nutzung der App zur Ermittlung von Kontaktpersonen generiert
-    wurden.
-</p>
-<h2>
-    WELCHE PERSONENBEZOGENEN DATEN WERDEN BEI DER NUTZUNG DER APP ZUR ERMITTLUNG
-    VON KONTAKTPERSONEN ERHOBEN UND VERARBEITET?
-</h2>
-<p>
-    Das DP-3T-System ist speziell darauf ausgelegt, die Datenerhebung und
-    -verarbeitung auf ein Minimum zu reduzieren. Bei der Verwendung der Contact
-    Tracing App werden nur Daten gesammelt, die es ermöglichen, den Benutzer
-    darüber zu informieren, dass er dem Virus ausgesetzt gewesen sein könnte. Die
-    Contact Tracing App verrät dem Benutzer nicht, wer der potentiell ansteckende
-    Kontakt war, oder wann genau und wo der Kontakt stattgefunden hat.
-</p>
-<p>
-    Eine detaillierte Beschreibung der gesammelten Daten ist unten aufgeführt. Die
-    gesammelten Daten erlauben es nicht, Personen direkt oder indirekt zu
-    identifizieren. Sciensano hat weder Zugriff auf die Namen der Benutzer der
-    Contact Tracing App noch auf andere persönliche Daten, die eine
-    Identifizierung ermöglichen (Telefonnummer, nationale Registrierungsnummer,
-    IP-Adresse usw.). Es kann jedoch nicht ausgeschlossen werden, dass z.B. ein
-    Benutzer, dem mitgeteilt wird, dass er in engem Kontakt mit einer positiv auf
-    COVID-19 getesteten Person stand, diese Person identifizieren kann. Daher
-    werden die Daten im Allgemeinen als persönliche Daten betrachtet, wenn auch
-    pseudonymisiert. Die im Telefon gespeicherten Schlüssel und zufälligen IDs
-    (wie weiter unten näher erläutert) gelden als gesundheitsbezogene Daten im
-    Falle dass &nbsp;(i) die Contact Tracing App feststellt, dass eine Person
-    einem Infektionsrisiko ausgesetzt ist, (ii) die Person einen Test aufzeichnet
-    und (iii) die Person ein positives Testergebnis mitteilt.
-</p>
-<p>Geheimer Schlüssel</p>
-<p>
-    Bei der Installation generiert die Contact Tracing App jeden Tag einen
-    geheimen Schlüssel (weiterer 'Secret Key'), der auf dem Telefon des Benutzers
-    gespeichert wird.
-</p>
-<p>
-    Der geheime Schlüssel wird mit allen anderen Benutzern geteilt, um
-    festzustellen, ob ein potenziell infektiöser Kontakt stattgefunden hat, wenn
-    der Benutzer durch Hochladen dieser Information auf den zentralen Server, wie
-    in Absatz 3 beschrieben, mitteilt, dass bei ihm COVID-19 diagnostiziert wurde.
-</p>
-<p>
-    Um die Privatsphäre der Benutzer zu schützen und das Risiko zu verringern,
-    dass die Personen, die geheime Schlüssel hochladen, nachdem sie mit COVID-19
-    diagnostiziert wurden, ausgesondert werden, lädt die Contract Tracing App
-    jedes Benutzers einen Dummy-Geheimschlüssel (im Durchschnitt alle 5 Tage) auf
-    den zentralen Server hoch.
-</p>
-<p>Ephemere zufällige Identifikatoren (IDs)</p>
-<p>
-    Telefone mit der installierten Contact Tracing App senden zufällige
-    Identifikatoren, die Kombinationen aus Einsen und Nullen sind, über Bluetooth.
-    Diese IDs werden aus den Geheimschlüsseln berechnet. Nach der Ausstrahlung
-    werden diese IDs vom Telefon gelöscht.
-</p>
-<p>
-    Das Telefon empfängt die IDs, die von nahe gelegenen Telefonen ausgestrahlt
-    werden, und speichert die empfangenen IDs lokal mit folgenden Informationen:
-    empfangene ID, Signalstärke, Dauer und Datum.
-</p>
-<p>
-    Diese Aufzeichnungen der empfangenen IDs werden auf dem Telefon gespeichert
-    und niemals an irgendjemanden gesendet.
-</p>
-<p>Labor-Testergebnisdaten</p>
-<p>
-    Benutzer haben die Möglichkeit, das Ergebnis ihres COVID-19-Labortests über
-    die App abzufragen, die sich mit dem Testergebnis-Server verbindet.
-</p>
-<p>Die IP-Adresse</p>
-<p>
-    IP-Adressen von Benutzern, die Schlüssel herunterladen/hochladen, werden
-    explizit aus allen Protokollen oder Speichern entfernt. In der belgischen
-    Architektur kümmert sich ein PROXY-Server um die Entfernung der IP-Adresse des
-    Uploaders (alternativ macht der Server dies selbst und dies ist zu
-    überprüfen).
-</p>
-<p>Verkehrsdaten über den Upload</p>
-<p>
-    Benutzer, die ihre Geheimschlüssel auf den zentralen Server hochladen, tun
-    dies über den Webdienst zusammen mit dem Datum, an dem der Geheimschlüssel
-    benutzt wurde, und dem geschätzten Datum, an dem der Benutzer ansteckend
-    wurde.
-</p>
-<p>
-    Die Contact Tracing App sammelt keine Standortdaten. Der Benutzer kann jedoch
-    innerhalb der App zur Ermittlung von Kontaktpersonen angeben, in welchem
-    Land/in welchen Ländern er sich zu einem bestimmten Zeitpunkt aus Gründen der
-    Interoperabilität mit den Apps zur Ermittlung von Kontaktpersonen anderer
-    Länder aufgehalten hat. In diesem Fall wird der geheime Schlüssel an das vom
-    Benutzer angegebene Land gesendet. Dies bedeutet, dass er an das “European
-    Federation Gateway Service” und von dort aus an das Backoffice der App des
-    Landes, in dem der Schlüssel verwendet wurde (Pendant zu Sciensano), und von
-    dort aus an alle App-Benutzer dieses Landes gesendet wird
-</p>
-<p>
-    Nur Benutzer, für die der Testserver einen Autorisierungscode (nach
-    Bestätigung, dass der Benutzer positiv getestet wurde) an den zentralen Server
-    gesendet hat, können erfolgreich Daten auf den zentralen Server hochladen.
-</p>
-<p>Autorisierungs-Code</p>
-<p>
-    Wenn ein Benutzer COVID-19 positiv getestet wird, sendet der Testserver einen
-    Autorisierungscode an den zentralen Server. Wenn ein Benutzer seine
-    Geheimschlüssel hochladen möchte, prüft der zentrale Server, ob er einen
-    Autorisierungscode für diesen spezifischen Benutzer erhalten hat. Wenn der
-    zentrale Server tatsächlich einen Autorisierungscode für diesen spezifischen
-    Benutzer erhalten hat, kann der Benutzer die Geheimschlüssel hochladen.
-</p>
-<p>Besuchte Länder</p>
-<p>
-    Der Benutzer kann in der App zur Ermittlung von Kontaktpersonen angeben,
-    welche Länder er besucht hat. Darüber hinaus werden in der App zur Ermittlung
-    von Kontaktpersonen keine weiteren Standortdaten erfasst oder verarbeitet.
-</p>
-<p>Persönliche Daten von Kindern</p>
-<p>
-    Unter Berücksichtigung der Tatsache, dass die Contact Tracing App auf den
-    Schutz der Gesundheit abzielt und angesichts der Garantien, die gegeben
-    werden, um die Risiken für die Nutzer der App stark zu reduzieren (freiwillige
-    Nutzung, begrenzte und pseudonymisierte Daten, reduzierte
-    Datenspeicherungszeit), wurde davon ausgegangen, dass ein Kind ab dem Alter
-    von 13 Jahren allein der Installation der Anwendung zustimmen kann. Unterhalb
-    dieses Alters ist die Einwilligung des gesetzlichen Vertreters erforderlich.
-</p>
-<h2>
-    TRIFFT DIE ANWENDUNG ZUR ERMITTLUNG VON KONTAKTPERSONEN AUTOMATISIERTE
-    ENTSCHEIDUNGEN?
-</h2>
-<p>
-    Die App zur Ermittlung von Kontaktpersonen trifft keine automatisierten
-    Entscheidungen in Bezug auf einen Benutzer im Sinne von Artikel 22 der
-    Allgemeinen Datenschutzverordnung.
-</p>
-<h2>MIT WEM WERDEN PERSONENBEZOGENE (PSEUDONYME) DATEN AUSGETAUSCHT?</h2>
-<p>Hochladen auf den zentralen Server</p>
-<p>
-    Wie in den Absätzen 3 und 4 beschrieben, kann der Benutzer Daten auf den
-    zentralen Server hochladen. Dieser zentrale Server wird von Sciensano in
-    der Europäischen Union gehostet.
-</p>
-<p>
-    Der zentrale Server speichert nur dann Informationen von infizierten
-    Benutzern, wenn diese sich entscheiden, die Geheimschlüssel auf diesen Server
-    hochzuladen.
-</p>
-<p>Verteilung an alle Anwendungen</p>
-<p>
-    Wie in den Absätzen 3 und 4 beschrieben, werden die auf den zentralen Server
-    hochgeladenen Schlüssel täglich an alle Anwendungen verteilt. Aus
-    Effizienzgründen kann diese Verteilung über ein Content Distribution Network
-    erfolgen, d.h. über einen Replikationsdienst, der sicherstellt, dass alle die
-    gleichen Daten erhalten, ohne das Netzwerk zu überlasten.
-</p>
-<p>
-    Austausch von Personendaten mit nationalen Anbietern von europäischen
-    Datenbanken im Zusammenhang mit ähnlichen Anwendungen zur Ermittlung von
-    Kontaktpersonen in anderen Ländern.
-</p>
-<p>
-    Wenn der Nutzer in der Anwendung für die Auftragsverfolgung angibt, dass er
-    ein anderes EU-Land besucht hat, können die geheimen Schlüssel direkt oder
-    über das EU-Gateway, d.h. einen Server, der diese Schlüssel an die anderen
-    EU-Server weiterleitet, an die zentralen Server ähnlicher Anwendungen für die
-    Auftragsverfolgung in diesen EU-Ländern gesendet werden. Ein Schlüssel wird
-    nur dann an Land A weitergeleitet, wenn ein Benutzer angibt, dass er Land A
-    besucht hat.
-</p>
-<p>Weitergabe persönlicher Daten an IKT-Anbieter</p>
-<p>
-    Durch die Installation der Contact Tracing App können Google und Apple sehen,
-    wer die Contact Tracing App installiert hat. Sie stellen jedoch sicher, dass
-    das System die Identität der Benutzer nicht mit ihnen teilt.
-</p>
-<h2>
-    WERDEN PERSONENBEZOGENE DATEN IN LÄNDER AUSSERHALB DER EUROPÄISCHEN UNION
-    ÜBERMITTELT?
-</h2>
-<p>
-    Personenbezogene Daten werden nicht in Länder außerhalb der Europäischen Union
-    übertragen.
-</p>
-<h2>WIE LANGE WERDEN DIE PERSONENBEZOGENEN DATEN AUFBEWAHRT?</h2>
-<p>
-    Die auf dem Telefon jedes Benutzers und auf dem zentralen Server gespeicherten
-    persönlichen Daten werden nach 14 Tagen automatisch gelöscht.
-</p>
-<p>
-    Die Anwendung zur Ermittlung von Kontaktpersonen wird in jedem Fall zu dem
-    durch das geltende belgische Recht festgelegten Zeitpunkt deaktiviert.
-</p>
-<h2>WIE WERDEN DIE PERSÖNLICHEN DATEN GESCHÜTZT?</h2>
-<p>
-    Die Entwickler des DP-3T-Systems haben dem Schutz der persönlichen Daten große
-    Bedeutung beigemessen. Das DP-3T-System sieht die folgenden Schutzvorkehrungen
-    für die Privatsphäre und die Sicherheit vor:
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Datenschutzerklärung</title>
+</head>
 
-<ul>
-    <li>
-        Das System ist so konzipiert, dass es dem neuesten Stand der
-        kryptographischen Techniken und Maßnahmen entspricht.
-    </li>
-    <li>
-        Alle Übertragungen von persönlichen Daten werden durch Verschlüsselung
-        geschützt und bei Bedarf authentifiziert.
-    </li>
-    <li>
-        Persönliche Daten werden hauptsächlich auf dem Telefon des Benutzers
-        gespeichert, und nur begrenzte Informationen werden an den zentralen Server
-        gesendet, wenn sich der Benutzer entscheidet, sie zu senden (dezentraler
-        Ansatz).
-    </li>
-    <li>
-        Der dezentralisierte Ansatz mindert das Risiko des Missbrauchs der
-        persönlichen Daten durch eine zentrale Behörde.
-    </li>
-</ul>
+<body>
 
-<p>
-    Darüber hinaus ist der zentrale Server durch geeignete technische und
-    organisatorische Massnahmen geschützt, einschliesslich eines strikten
-    Zugriffsmanagements.
-</p>
-<h2>WELCHE RECHTE HABEN DIE BENUTZER?</h2>
-<p>
-    Unter den in der Allgemeinen Datenschutzverordnung vorgesehenen Bedingungen
-    haben die Nutzer das Recht, auf ihre personenbezogenen Daten zuzugreifen, die
-    Berichtigung, Löschung oder Einschränkung der Verarbeitung zu beantragen oder
-    gegen die Verarbeitung ihrer personenbezogenen Daten Widerspruch einzulegen
-    ("Rechte der betroffenen Person").
-</p>
-<p>
-    Sciensano kann nur dann auf Anfragen von Benutzern antworten, wenn Sciensano
-    in der Lage ist, die im Rahmen der Anwendung zur Ermittlung von
-    Kontaktpersonen verarbeiteten Daten mit dem jeweiligen Benutzer in Verbindung
-    zu bringen. Um die Daten mit dem Benutzer in Verbindung bringen zu können,
-    müsste Sciensano zusätzliche Daten beschaffen. Da die Contact Tracing App auf
-    einer Technologie basiert, die darauf abzielt, die Privatsphäre der Benutzer
-    so weit wie möglich zu schützen, ist es nicht wünschenswert, dass Sciensano
-    zusätzliche Daten lediglich zur Identifizierung des Benutzers verarbeitet.
-    Gemäß Artikel 11 GDPR kann Sciensano nicht verpflichtet werden, solche
-    zusätzlichen Daten zu verarbeiten, um den Nutzer allein zum Zwecke der
-    Erfüllung der Rechte der betroffenen Person nach dem GDPR zu identifizieren.
-    Dies bedeutet in der Praxis, dass die Nutzer ihre Rechte als betroffene Person
-    nicht ausüben können, wenn Sciensano keine zusätzlichen Informationen zur
-    Verfügung gestellt werden.
-</p>
-<p>
-    Benutzer haben das Recht, eine Beschwerde bei der belgischen Aufsichtsbehörde
-    einzureichen (https://www.gegevensbeschermingsautoriteit.be /
-    https://www.autoriteprotectiondonnees.be /
-    https://www.dataprotectionauthority.be).
-</p>
-<h2>ÄNDERUNGEN DIESER DATENSCHUTZERKLÄRUNG</h2>
-<p>
-    Sciensano kann diese Datenschutzerklärung von Zeit zu Zeit ändern. In diesem
-    Fall wird Sciensano den Benutzer durch eine Mitteilung in der Contact Tracing
-    App über diese Änderung informieren.
-</p>
+<section>
+
+    <p>
+        Dieses Contact Tracing App wurde im Zusammenhang mit dem Ausbruch des
+        Coronavirus und auf Initiative&nbsp;der belgischen Regierung entwickelt.
+    </p>
+    <p>
+        Die Contact Tracing App basiert auf einem Proximity Tracing System namens
+        "Decentralized Privacy-Preserving Proximity Tracing" ("DP-3T-System"), das
+        von einem internationalen Konsortium von Technologen, Rechtsexperten,
+        Ingenieuren und Epidemiologen verschiedener Universitäten entwickelt
+        wurde. Ausführlichere Informationen über das DP-3T-System sind öffentlich
+        zugänglich unter https://github.com/DP-3T/documents. Darüber
+        hinaus&nbsp;verwendet die Contact Tracing&nbsp;App das von Google und
+        Apple entwickelte Expositionsmeldesystem. Dieses
+        Expositionsbenachrichtigungssystem ermöglicht es der Contact Tracing App,
+        Benachrichtigungen an den Benutzer zu senden, wie weiter unten näher
+        erläutert wird. Weitere Informationen über das
+        Expositionsbenachrichtigungssystem sind unter
+        <a
+                href="https://www.google.com/covid19/exposurenotifications/"
+        >https://www.google.com/covid19/exposurenotifications/</a
+        >
+        verfügbar.
+    </p>
+    <p>
+        Die Benutzung der Contact Tracing App ist vollkommen freiwillig. Mit
+        anderen Worten, es besteht keinerlei Verpflichtung, diese App zur
+        Ermittlung von Kontaktpersonen zu installieren.
+    </p>
+    <p>
+        Die Contact Tracing App wird in jedem Land verwendbar sein, das auch ein
+        DP-3T-System verwendet. Wenn ein belgischer Benutzer ein solches Land
+        besucht, kann er&nbsp;auch Benachrichtigungen erhalten, dass er&nbsp;in
+        einem solchen Land gefährdet ist.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        WER IST DER CONTROLLER FÜR DIE ANWENDUNG ZUR ERMITTLUNG VON
+        KONTAKTPERSONEN?
+    </h2>
+    <p>
+        Diese App zur Ermittlung von Kontaktpersonen wird von Sciensano angeboten,
+        einer öffentlichen Einrichtung mit Rechtspersönlichkeit, die durch das
+        Gesetz vom 25. Februar 2018 über die Gründung von Sciensano gegründet
+        wurde, mit eingetragenem Sitz in der rue Juliette Wytsman 14, B-1050
+        Ixelles, und bei der Kreuzungsbank für Unternehmen unter der Nummer
+        0693.876.830 registriert ist (im Folgenden als "Sciensano" bezeichnet).
+    </p>
+    <p>
+        Sciensano gilt im Hinblick auf die Erhebung und Verarbeitung
+        personenbezogener Daten über die Contact Tracing App im Sinne der
+        Allgemeinen Datenschutzverordnung als für die Verarbeitung
+        Verantwortlicher.
+    </p>
+    <p>
+        Sciensano kann per Post unter der oben genannten Adresse oder telefonisch
+        unter +32 2 642 51 11 und per E-Mail unter coronalert@sciensano.be kontaktiert
+        werden.
+    </p>
+    <p>
+        Sciensano hat einen Datenschutzbeauftragten ernannt, der unter
+        dpo@sciensano.be kontaktiert werden kann.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        WAS IST DER ZWECK DER APP ZUR ERMITTLUNG VON KONTAKTPERSONEN UND WIE
+        FUNKTIONIERT SIE?
+    </h2>
+    <p>Nahbereichsverfolgung</p>
+    <p>
+        Der Zweck der Contact Tracing App ist es, festzustellen, wer in
+        unmittelbarer physischer Nähe zu einer COVID-19-positiven Person war und
+        somit dem Virus ausgesetzt war, ohne die Identität des Kontakts oder den
+        genauen Zeitpunkt und Ort des Kontakts preiszugeben. Diese Verarbeitung
+        erfolgt aus Gründen des öffentlichen Interesses&nbsp;(Art. 6.1 (e) GDPR)
+        und, soweit es sich um Gesundheitsdaten handelt, aus Gründen des
+        öffentlichen Interesses im Bereich der öffentlichen Gesundheit (9.2
+        (i)&nbsp;GDPR). Die Verarbeitung erfolgt in der Tat im öffentlichen
+        Interesse, da sie darauf abzielt, die Ausbreitung von COVID-19 einzudämmen
+        und die Bevölkerung vor dieser Epidemie zu schützen.
+    </p>
+    <p>
+        Um dieses Ziel zu erreichen, generiert die Contact Tracing App geheime
+        Schlüssel und berechnet aus diesen Schlüsseln flüchtige (d.h. temporäre),
+        zufällige IDs, die das Telefon des Benutzers repräsentieren. Diese IDs
+        sind flüchtig, da sie mit einer hohen Frequenz (alle 10-20 Minuten)
+        aktualisiert werden, d. h. mit der gleichen Frequenz wie die
+        Bluetooth-MAC-Adresse.
+    </p>
+    <p>
+        Das Telefon des Benutzers sendet diese zufälligen IDs aus und zeichnet
+        auch die von anderen Telefonen&nbsp;in der Nähe&nbsp;beobachteten
+        zufälligen IDs auf&nbsp;und speichert diese zusammen mit dem Datum, der
+        Signalstärke und der Dauer.
+    </p>
+    <p>
+        Um auf COVID-19 getestet zu werden, muss sich ein Benutzer mit einem Arzt
+        in Verbindung setzen, der eine Probe entnimmt und eine anonyme Kennung vom
+        Telefon des Benutzers im Testserver registriert. Von da an wird die
+        Contact Tracing App den Testserver regelmässig anhand dieser anonymen
+        Kennung überprüfen, um festzustellen, ob das Testergebnis verfügbar ist.
+        Sobald das Testergebnis verfügbar ist, informiert die Contact Tracing App
+        den Benutzer über das Testergebnis: negativ oder positiv. Wenn das
+        Ergebnis positiv ist, sollte der Benutzer den Arzt kontaktieren und in
+        Quarantäne gehen. Der Benutzer kann dann entscheiden, die Geheimschlüssel
+        hochzuladen, um die zuvor (wie in Absatz 4 näher beschrieben) an den
+        zentralen Server gesendeten Zufalls-IDs zu generieren. Um Fehlbenutzungen
+        zu minimieren, wird dieses Hochladen durch den Testserver autorisiert, der
+        einen Autorisierungscode an den zentralen Server sendet. Anschliessend
+        werden alle diese Geheimschlüssel vom Telefon entfernt.
+    </p>
+    <p>
+        Die Geheimschlüssel zur Generierung der gesendeten Zufalls-IDs bleiben,
+        außer wenn sie hochgeladen&nbsp;werden, maximal 14 Tage lang&nbsp;auf dem
+        Telefon. Die aufgezeichneten Zufalls-IDs verlassen das Telefon&nbsp;nie
+        und werden nach 14 Tagen vernichtet.
+    </p>
+    <p>
+        Sobald die Geheimschlüssel zur Generierung der gesendeten Zufalls-IDs von
+        einem infizierten Benutzer auf den zentralen Server hochgeladen wurden,
+        kann die Contact Tracing App anderer Benutzer diese Geheimschlüssel vom
+        Server abrufen, um abzuschätzen, ob diese anderen Benutzer dem Virus durch
+        die unmittelbare Nähe zu einer COVID-19-positiven Person, die ihre Daten
+        hochgeladen hat, ausgesetzt waren. Wenn&nbsp;die Contact Tracing App, die
+        die Daten vom Server abruft, ein erhebliches
+        Infektionsrisiko&nbsp;feststellt (d.h. der Benutzer war in der
+        Nähe&nbsp;einer COVID-19-positiven Person), informiert sie den Benutzer
+        über die Contact Tracing App und empfiehlt bestimmte Aktionen mittels
+        einer von der Contact Tracing App&nbsp;generierten Push-Benachrichtigung.
+        Es liegt in der alleinigen Verantwortung des Benutzers, diese Empfehlungen
+        zu befolgen.
+    </p>
+    <p>
+        Aus Gründen der Klarheit und zur Vermeidung von Zweifeln ist die Contact
+        Tracing App NICHT&nbsp;enthalten:
+    </p>
+    <ul>
+        <li>
+            die Einhaltung aller von der Regierung verhängten Quarantäne-,
+            Einsperrungs- oder sozialen Abgrenzungsmaßnahmen zu überwachen;
+        </li>
+        <li>COVID-19 positive Patienten verfolgen;</li>
+        <li>
+            jegliche Informationen über Benutzer ohne positives Testergebnis zu
+            senden; und
+        </li>
+        <li>
+            Hotspots oder Trajektorien von COVID-19-positiven Patienten zu
+            identifizieren.
+        </li>
+    </ul>
+    <p>Begrenzte Verarbeitung für statistische Zwecke</p>
+    <p>
+        Auf der Grundlage der auf den zentralen Server hochgeladenen Informationen
+        kann Sciensano begrenzte aggregierte Statistiken erstellen, z. B. die
+        Anzahl der pro Tag hochgeladenen Schlüssel und die Anzahl der Personen mit
+        einer App, die jeden Tag positiv getestet haben.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        WELCHE PERSÖNLICHEN DATEN WERDEN BEI DER NUTZUNG DER APP ZUR ERMITTLUNG
+        VON KONTAKTPERSONEN ERHOBEN UND VERARBEITET?
+    </h2>
+    <p>
+        Das DP-3T-System ist speziell darauf ausgelegt, die Datenerfassung und
+        -verarbeitung zu minimieren. Bei der Verwendung der Contact Tracing App
+        werden nur Daten gesammelt, die es ermöglichen, den Benutzer darüber zu
+        informieren, dass er dem Virus ausgesetzt gewesen sein könnte. Die Contact
+        Tracing App verrät dem Benutzer nicht, wer der potentiell ansteckende
+        Kontakt war oder wo der Kontakt stattgefunden hat. Die einzige
+        Information, die zur Verfügung gestellt wird, ist das Datum des
+        Hochrisikokontakts.
+    </p>
+    <p>
+        Eine detaillierte Beschreibung der gesammelten Daten wird im Folgenden
+        gegeben. Die gesammelten Daten erlauben es nicht, Personen direkt zu
+        identifizieren, und es ist auch nicht beabsichtigt, dies zu tun. Es kann
+        jedoch nicht ausgeschlossen werden, dass z.B. ein Benutzer, dem mitgeteilt
+        wird, dass er in engem Kontakt mit einer positiv auf COVID-19 getesteten
+        Person gestanden hat, diese Person identifizieren kann. Daher werden die
+        Daten im Allgemeinen als persönliche Daten betrachtet, wenn auch
+        pseudonymisiert. Die Daten werden als gesundheitsbezogene Daten
+        betrachtet, da (i) die Anwendung feststellt, dass eine Person einem
+        Infektionsrisiko ausgesetzt ist, (ii) die Person einen Test aufzeichnet
+        und (iii) die Person ein positives Testergebnis teilt.
+    </p>
+    <p>Geheimer Schlüssel</p>
+    <p>
+        Bei der Installation generiert die Contact Tracing App jeden Tag einen
+        geheimen Schlüssel, der auf dem Telefon&nbsp;des Benutzers gespeichert
+        wird.
+    </p>
+    <p>
+        Die geheimen Schlüssel werden gemeinsam genutzt, wenn der Benutzer
+        mitteilt, dass bei ihm COVID-19 diagnostiziert wurde, indem er sie, wie in
+        Absatz 3 beschrieben, auf den zentralen Server hochlädt.
+    </p>
+    <p>
+        Um die Privatsphäre der Benutzer zu schützen und das Risiko zu verringern,
+        dass die Personen, die geheime Schlüssel hochladen, nachdem sie mit
+        COVID-19 diagnostiziert wurden, ausgesondert werden, lädt die Contact
+        Tracing App jedes Benutzers einen Dummy-Geheimschlüssel (durchschnittlich
+        alle 5 Tage) auf den zentralen Server hoch.
+    </p>
+    <p>Ephemere zufällige Identifikatoren (IDs)</p>
+    <p>
+        Telefone mit der installierten Contact Tracing App senden zufällige
+        Identifikatoren, die Kombinationen aus Einsen und Nullen sind, über
+        Bluetooth. Diese IDs werden aus den Geheimschlüsseln berechnet. Nach der
+        Ausstrahlung werden diese IDs vom Telefon gelöscht.
+    </p>
+    <p>
+        Das Telefon empfängt die IDs, die von nahe gelegenen Telefonen
+        ausgestrahlt werden, und speichert die empfangenen IDs lokal mit folgenden
+        Informationen: empfangene ID, Signalstärke, Dauer und Datum.
+    </p>
+    <p>
+        Diese Aufzeichnungen der empfangenen IDs werden auf dem
+        Telefon&nbsp;gespeichert und niemals irgendwo hin versandt.
+    </p>
+    <p>IP-Adresse</p>
+    <p>Das System speichert keine IP-Adressen von Benutzern.</p>
+    <p>Verkehrsdaten über den Upload</p>
+    <p>
+        Benutzer, die ihre Geheimschlüssel auf den zentralen Server hochladen, tun
+        dies zusammen mit dem Datum, an dem der Geheimschlüssel benutzt
+        wurde,&nbsp;und&nbsp;dem geschätzten Datum, an dem der Benutzer ansteckend
+        wurde.
+    </p>
+    <p>
+        Die Contact Tracing App sammelt keine Standortdaten. Der Benutzer kann
+        jedoch innerhalb der App zur Ermittlung von Kontaktpersonen angeben, in
+        welchem Land/in welchen Ländern er sich zu einem bestimmten Zeitpunkt aus
+        Gründen der Interoperabilität mit den Apps zur Ermittlung von
+        Kontaktpersonen anderer Länder aufgehalten hat. In diesem Fall wird der
+        geheime Schlüssel an das vom Benutzer angegebene Land gesendet.
+    </p>
+    <p>
+        Nur Benutzer, für die der Testserver einen Autorisierungscode an den
+        zentralen Server gesendet hat,&nbsp;können erfolgreich Daten auf den
+        zentralen Server hochladen.
+    </p>
+    <p>Autorisierungs-Code</p>
+    <p>
+        Wenn ein Benutzer COVID-19 positiv getestet wird, sendet der
+        Testserver&nbsp;einen Autorisierungscode an den zentralen Server. Wenn ein
+        Benutzer seine Geheimschlüssel hochladen möchte, prüft der zentrale
+        Server, ob er einen Autorisierungscode für diesen spezifischen Benutzer
+        erhalten hat. Wenn die Zentrale tatsächlich einen Autorisierungscode für
+        diesen spezifischen Benutzer erhalten hat, kann der Benutzer die
+        Geheimschlüssel hochladen.
+    </p>
+    <p>Besuchte Länder</p>
+    <p>
+        Der Benutzer kann in der App zur Ermittlung von Kontaktpersonen angeben,
+        welche Länder er besucht hat. Darüber hinaus werden in der App zur
+        Ermittlung von Kontaktpersonen keine weiteren Standortdaten erfasst oder
+        verarbeitet.
+    </p>
+    <p>Persönliche Daten von Kindern</p>
+    <p>
+        Unter Berücksichtigung der Tatsache, dass die Contact Tracing App auf den
+        Schutz der Gesundheit abzielt und dass ihre Nutzung als eine Handlung
+        persönlicher Natur betrachtet werden kann, und angesichts der Garantien,
+        die gegeben wurden, um die Risiken für die Nutzer der App stark zu
+        reduzieren (freiwillige Nutzung, begrenzte und pseudonymisierte Daten,
+        verkürzte Datenspeicherungszeit), wurde davon ausgegangen, dass ab dem
+        Alter von 14 Jahren ein Kind allein dem Herunterladen der Anwendung
+        zustimmen kann. Unterhalb dieses Alters ist die Einwilligung des
+        gesetzlichen Vertreters erforderlich.
+    </p>
+    <p>
+        Diese Zustimmung muss besonders aufgeklärt werden und erfordert daher die
+        Mitteilung spezifischer, dem Alter des Minderjährigen angepasster
+        Informationen (Sprache, Länge des Dokuments, verwendete Schriftart usw. ).
+        Diese Informationen sollten zu zwei Zeitpunkten mitgeteilt werden: vor dem
+        Herunterladen der App und nach Erhalt eines positiven Testergebnisses, um
+        die Zustimmung zum Hochladen der Geheimschlüssel auf den zentralen Server
+        zu erteilen.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        TRIFFT DIE ANWENDUNG ZUR ERMITTLUNG VON KONTAKTPERSONEN AUTOMATISIERTE
+        ENTSCHEIDUNGEN?
+    </h2>
+    <p>
+        Die Contact Tracing App trifft keine automatisierten Entscheidungen in
+        Bezug auf einen Benutzer im Sinne von Artikel 22 der Allgemeinen
+        Datenschutzverordnung.
+    </p>
+    <h2>MIT WEM WERDEN PERSÖNLICHE DATEN GETEILT?</h2>
+    <p>Hochladen auf den zentralen Server</p>
+    <p>
+        Wie in den Absätzen 3 und 4 beschrieben, kann der Benutzer Daten auf den
+        zentralen Server hochladen. Dieser zentrale Server wird unter der
+        Verantwortung von Sciensano gehostet.
+    </p>
+    <p>
+        Der zentrale Server speichert nur dann Informationen von infizierten
+        Benutzern, wenn diese sich entscheiden, die geheimen Schlüssel&nbsp;auf
+        diesen Server hochzuladen.
+    </p>
+    <p>Verteilung an alle Apps</p>
+    <p>
+        Wie in den Absätzen 3 und 4 beschrieben, werden die auf den zentralen
+        Server hochgeladenen Schlüssel täglich an alle Anwendungen verteilt. Aus
+        Effizienzgründen kann diese Verteilung über ein Content Distribution
+        Network erfolgen.
+    </p>
+    <p>
+        Austausch persönlicher Daten
+        mit&nbsp;nationalen&nbsp;Anbietern&nbsp;europäischer Datenbanken im
+        Zusammenhang mit&nbsp;ähnlichen Anwendungen zur Ermittlung von
+        Kontaktpersonen in anderen Ländern
+    </p>
+    <p>
+        Wenn der Benutzer in der Anwendung zur Ermittlung von Kontaktpersonen
+        angibt, dass er/sie ein anderes EU-Land besucht hat, können die geheimen
+        Schlüssel direkt oder über das EU-Gateway an die zentralen Server
+        ähnlicher Anwendungen zur Ermittlung von Kontaktpersonen in diesen
+        EU-Ländern gesendet werden.
+    </p>
+    <p>Gemeinsame Nutzung persönlicher Daten mit ICT-Anbietern</p>
+    <p>
+        Durch die Installation der Contact Tracing App können Google und Apple
+        sehen, wer die Contact Tracing App installiert hat. Sie stellen jedoch
+        sicher, dass das System die Identität der Benutzer nicht mit ihnen teilt.
+    </p>
+    <h2>
+        WERDEN PERSONENBEZOGENE DATEN IN LÄNDER AUSSERHALB DER EUROPÄISCHEN UNION
+        ÜBERMITTELT?
+    </h2>
+    <p>
+        Personenbezogene Daten werden nicht in Länder außerhalb der Europäischen
+        Union übermittelt.
+    </p>
+    <h2>WIE LANGE WERDEN DIE PERSÖNLICHEN DATEN AUFBEWAHRT?</h2>
+    <p>
+        Die auf dem Telefon&nbsp;jedes Benutzers und auf dem zentralen Server
+        gespeicherten persönlichen Daten werden nach 14 Tagen automatisch
+        entfernt.
+    </p>
+    <p>
+        Der App zur Ermittlung von Kontaktpersonen wird in jedem Fall zu dem durch
+        das geltende belgische Recht festgelegten Datum deaktiviert.
+    </p>
+    <h2>WIE WERDEN DIE PERSÖNLICHEN DATEN GESCHÜTZT?</h2>
+    <p>
+        Die Entwickler des DP-3T-Systems haben dem Schutz personenbezogener Daten
+        große Bedeutung beigemessen. Das DP-3T-System sieht die folgenden
+        Schutzvorkehrungen für die Privatsphäre und die Sicherheit vor:
+    </p>
+    <ul>
+        <li>
+            Das System ist so konzipiert, dass es den neuesten kryptographischen
+            Techniken und Maßnahmen entspricht.
+        </li>
+        <li>
+            Alle Übertragungen von persönlichen Daten sind durch eine
+            authentifizierte&nbsp;Verschlüsselung geschützt.
+        </li>
+        <li>
+            Persönliche Daten werden hauptsächlich auf dem Telefon&nbsp;des
+            Benutzers gespeichert, und nur begrenzte Informationen werden an den
+            zentralen Server gesendet, wenn sich der Benutzer entscheidet, sie zu
+            senden (dezentraler Ansatz).
+        </li>
+        <li>
+            Der dezentralisierte Ansatz mindert das Risiko des Missbrauchs der
+            persönlichen Daten durch eine zentrale Behörde.
+        </li>
+    </ul>
+    <p>
+        Darüber hinaus ist der zentrale Server durch geeignete technische und
+        organisatorische Maßnahmen einschließlich eines strikten
+        Zugriffsmanagements geschützt.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>WELCHE RECHTE HABEN DIE BENUTZER?</h2>
+    <p>
+        Unter den in der Allgemeinen Datenschutzverordnung vorgesehenen
+        Bedingungen haben die Nutzer das Recht, auf ihre personenbezogenen Daten
+        zuzugreifen, die Berichtigung, Löschung oder Einschränkung der
+        Verarbeitung zu beantragen oder sich der Verarbeitung ihrer
+        personenbezogenen Daten zu widersetzen ("Rechte der betroffenen Person").
+    </p>
+    <p>
+        Sciensano wird nur dann auf Anfragen von Benutzern antworten können, wenn
+        es in der Lage sein wird, die im Rahmen der Contact Tracing App
+        verarbeiteten Daten mit dem jeweiligen Benutzer zu verknüpfen. Um die
+        Daten mit dem Benutzer in Verbindung bringen zu können, müsste Sciensano
+        zusätzliche Daten beschaffen. Da die Contact Tracing App auf einer
+        Technologie basiert, die darauf abzielt, die Privatsphäre der Benutzer so
+        weit wie möglich zu schützen, ist es nicht wünschenswert, dass Sciensano
+        zusätzliche Daten lediglich zur Identifizierung des Benutzers verarbeitet.
+        Gemäß Artikel 11 GDPR kann Scienscano nicht verpflichtet werden, solche
+        zusätzlichen Daten zu verarbeiten, um den Nutzer allein zum Zwecke der
+        Erfüllung der Rechte der betroffenen Person nach dem GDPR zu
+        identifizieren. Dies bedeutet in der Praxis, dass die Nutzer ihre Rechte
+        als betroffene Person nicht ausüben können, wenn Sciensano keine
+        zusätzlichen Informationen zur Verfügung gestellt werden.
+    </p>
+    <p>
+        Benutzer haben das Recht, eine Beschwerde bei der belgischen
+        Aufsichtsbehörde (<a href="http://www.gegevensbeschermingsautoriteit.be"
+    >https://www.gegevensbeschermingsautoriteit.be</a
+    >&nbsp;<a href="http://www.autoriteprotectiondonnees.be"
+    >https://www.autoriteprotectiondonnees.be</a
+    >&nbsp;<a href="http://www.dataprotectionauthority.be"
+    >https://www.dataprotectionauthority.be</a
+    >) einzureichen.
+    </p>
+    <h2>ÄNDERUNGEN AN DIESER DATENSCHUTZERKLÄRUNG</h2>
+    <p>
+        Sciensano kann diese Datenschutzerklärung von Zeit zu Zeit ändern. In
+        diesem Fall wird Sciensano den Benutzer durch eine Mitteilung in der
+        Contact Tracing App über diese Änderung informieren.
+    </p>
+</section>
+<p>&nbsp;</p>
+
+</body>
+</html>

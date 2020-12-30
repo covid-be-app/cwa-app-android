@@ -69,7 +69,7 @@ object CachedKeyFileHolder {
     suspend fun asyncFetchFiles(currentDate: Date): List<File> = withContext(Dispatchers.IO) {
         checkForFreeSpace()
         val serverDatesForRegions = getDatesForRegionsFromServer()
-        
+
         // TODO remove last3HourFetch before Release
 //        if (BuildConfig.FLAVOR != "device" && isLast3HourFetchEnabled()) {
 //            Timber.v("Last 3 Hours will be Fetched. Only use for Debugging!")
