@@ -5,5 +5,6 @@ data class TestResultResponse(
     val resultChannel: Int,
     val datePatientInfectious: String,
     val dateSampleCollected: String,
+    val dateTestCommunicated: String,
     val responsePadding: String
 )

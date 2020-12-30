@@ -8,6 +8,9 @@ import retrofit2.http.Url
 interface DistributionService {
 
     @GET
+    suspend fun getRegionIndex(@Url url: String): List<String>
+
+    @GET
     suspend fun getDateIndex(@Url url: String): List<String>
 
     @GET

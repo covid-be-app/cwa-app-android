@@ -37,6 +37,11 @@ object SubmissionRepository {
     }
 
     private suspend fun fetchTestResult(): DeviceUIState {
+        val registeredTestTimeStamp = LocalData.initialPollingForTestResultTimeStamp()
+        if (registeredTestTimeStamp != 0L) {
+            testResultReceivedDate.postValue(Date(registeredTestTimeStamp))
+        }
+
         try {
             val testResultResponse = BeSubmissionService.asyncRequestTestResult()
             val testResult = TestResult.fromInt(testResultResponse.result)

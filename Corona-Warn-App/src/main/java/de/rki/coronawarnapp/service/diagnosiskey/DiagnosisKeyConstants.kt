@@ -77,5 +77,11 @@ object DiagnosisKeyConstants {
     /** Available Dates URL built from CDN URL's and REST resources */
     val AVAILABLE_DATES_URL = "$DIAGNOSIS_KEYS_DOWNLOAD_URL/$COUNTRY/$CURRENT_COUNTRY/$DATE"
 
+    val AVAILABLE_REGION_URL = "$DIAGNOSIS_KEYS_DOWNLOAD_URL/$COUNTRY"
+
+    fun availableDatesForRegionUrl(region: String) =
+        "$DIAGNOSIS_KEYS_DOWNLOAD_URL/$COUNTRY/$region/$DATE"
+
+
     const val SERVER_ERROR_CODE_403 = 403
 }
