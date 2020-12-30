@@ -23,6 +23,8 @@ class SettingsViewModel : ViewModel() {
         SettingsRepository.isBluetoothEnabled
     val isLocationEnabled: LiveData<Boolean> =
         SettingsRepository.isLocationEnabled
+    val isDataTransferEnabled: LiveData<Boolean> = SettingsRepository.isDataTransferEnabled
+
 
     // Will impact UI if background activity is not permitted, persistent storing is not necessary
     val isBackgroundJobEnabled: LiveData<Boolean> = SettingsRepository.isBackgroundJobEnabled
@@ -131,5 +133,9 @@ class SettingsViewModel : ViewModel() {
 
     fun refreshBackgroundPriorityEnabled(context: Context) {
         SettingsRepository.refreshBackgroundPriorityEnabled(context)
+    }
+
+    fun toggleDataTranfer() {
+        SettingsRepository.toggleDataTranferEnabled()
     }
 }

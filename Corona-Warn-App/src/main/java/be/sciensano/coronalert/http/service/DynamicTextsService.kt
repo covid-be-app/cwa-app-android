@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface DynamicTextsService {
 
-    @GET("dynamictext/dynamicTexts.json")
+    @GET("dynamictext/dynamicTextsV2.json")
     suspend fun getDynamicTexts(): DynamicTexts
 }

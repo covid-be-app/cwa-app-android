@@ -2,6 +2,7 @@ package be.sciensano.coronalert.service.diagnosiskey
 
 import KeyExportFormat
 import be.sciensano.coronalert.storage.k
+import be.sciensano.coronalert.storage.onsetSymptomsDate
 import be.sciensano.coronalert.storage.r0
 import be.sciensano.coronalert.storage.resultChannel
 import be.sciensano.coronalert.storage.t0
@@ -33,21 +34,23 @@ object DiagnosisKeyService {
      * @param keysToReport - KeyList in the Server Format to submit to the Server
      */
     suspend fun asyncSubmitKeys(
-        keysToReport: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
+        keysToReport: List<KeyExportFormat.TemporaryExposureKey>
     ) {
         Timber.d("Diagnosis Keys will be submitted.")
         val k = LocalData.k() ?: throw IllegalStateException()
         val r0 = LocalData.r0() ?: throw IllegalStateException()
         val t0 = LocalData.t0() ?: throw IllegalStateException()
         val t3 = LocalData.t3() ?: throw IllegalStateException()
+        val onsetSymptomsDate = LocalData.onsetSymptomsDate()
+
         val resultChannel = LocalData.resultChannel()
         if (resultChannel == -1) {
             throw IllegalStateException()
         }
 
         WebRequestBuilder.getInstance().beAsyncSubmitKeysToServer(
-            k, r0, t0, t3, resultChannel,
-            keysToReport
+            k, r0, t0, t3, resultChannel, onsetSymptomsDate,
+            keysToReport,
         )
     }
 }

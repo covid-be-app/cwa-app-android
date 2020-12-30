@@ -102,6 +102,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/information_technical"
                     app:subtitle="@{@string/information_contact_title}" />
 
+
                 <include
                     android:id="@+id/information_legal"
                     layout="@layout/include_row"
@@ -109,8 +110,9 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/information_contact"
+                    app:layout_constraintTop_toBottomOf="@+id/information_technical"
                     app:subtitle="@{@string/information_legal_title}" />
+
 
                 <TextView
                     android:id="@+id/information_version"

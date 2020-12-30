@@ -632,4 +632,20 @@
     <string name="submission_done_reset_dialog_title">Réinitialisation de l\'app</string>
     <string name="submission_done_reset_dialog_body">Merci de partager vos données et d\'aider les autres. L\'application va maintenant être réinitialisée et toutes les données seront supprimées. Nous vous recommandons vivement de désactiver l\'application pendant votre période d\'isolement en arrêtant l\'enregistrement de l\'exposition. Après votre période d\'isolement, vous pourrez à nouveau utiliser l\'application.</string>
     <string name="submission_done_reset_dialog_button_positive">OK</string>
+
+
+    <string name="information_data_transfer">Téléchargements</string>
+    <string name="information_data_transfer_headline">Utiliser des réseaux mobiles pour le téléchargement d\'identifiants aléatoires.</string>
+    <string name="information_data_transfer_body">Téléchargez des identifiants aléatoires par le biais de réseaux mobiles. Si cette option est désactivée, les identifiants ne seront téléchargés qu\'en Wifi.</string>
+    <string name="information_data_transfer_switch">Utilisez réseaux mobiles</string>
+  <string name="information_data_transfer_switch_off">Wifi Uniquement</string>
+  <string name="information_data_transfer_switch_on">Wifi et Mobile</string>
+    <string name="settings_interoperability_title">Journalisation des expositions transnationales</string>
+  <string name="interoperability_configuration_title">Journalisation des expositions transnationales</string>
+  <string name="settings_interoperability_subtitle">Pays participants</string>
+  <string name="interoperability_configuration_first_section">Plusieurs pays travaillent ensemble pour permettre des alertes transnationales via un serveur d\'échange commun. Par exemple, les contacts avec les utilisateurs d\'une application officielle de coronavirus d\'autres pays participants peuvent également être pris en compte pour l\'enregistrement de l\'exposition.</string>
+  <string name="interoperability_configuration_list_title">Les pays suivants participent actuellement à l\'enregistrement des expositions transnationales:</string>
+  <string name="interoperability_configuration_information">L\'avis de confidentialité de l\'application (y compris les informations sur le traitement des données effectué pour la fonction d\'enregistrement des expositions transnationales) se trouve dans le menu sous «Informations sur l\'application»> «Confidentialité des données».</string>
+  <string name="interoperability_configuration_second_section">À cette fin, l\'application télécharge chaque jour une liste d\'identifiants aléatoires de tous les utilisateurs qui ont eu un test positif et qui ont décidé d\'informer les autres utilisateurs en partageant leurs identifiants aléatoires. Cette liste est ensuite comparée aux identifiants aléatoires enregistrés par votre smartphone. Vous pouvez choisir de télécharger cette liste via WiFi; sinon une partie de votre budget de données mobiles sera consommée. Sachez que cela peut entraîner des frais d\'itinérance si vous quittez l\'UE.</string>
+  <string name="interoperability_title">Journalisation des expositions transnationales</string>
 </resources>

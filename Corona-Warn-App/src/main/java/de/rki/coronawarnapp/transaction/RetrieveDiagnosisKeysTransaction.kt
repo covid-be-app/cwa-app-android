@@ -19,6 +19,7 @@
 
 package de.rki.coronawarnapp.transaction
 
+import be.sciensano.coronalert.storage.dataTransfer
 import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.nearby.InternalExposureNotificationClient
@@ -36,6 +37,7 @@ import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.Retriev
 import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.rollback
 import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.start
 import de.rki.coronawarnapp.util.CachedKeyFileHolder
+import de.rki.coronawarnapp.util.ConnectivityHelper
 import de.rki.coronawarnapp.worker.BackgroundWorkHelper
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -131,12 +133,14 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
                 "Start RetrieveDiagnosisKeysTransaction",
                 "No keys fetched today yet \n${DateTime.now()}\nUTC: $currentDate"
             )
+
             start()
         }
     }
 
     /** initiates the transaction. This suspend function guarantees a successful transaction once completed. */
     suspend fun start() = lockAndExecuteUnique {
+
         /**
          * Handles the case when the ENClient got disabled but the Transaction is still scheduled
          * in a background job. Also it acts as a failure catch in case the orchestration code did
@@ -147,6 +151,13 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             executeClose()
             return@lockAndExecuteUnique
         }
+
+        // abort if not on wifi and data transfer disabled
+        if (!LocalData.dataTransfer() && !ConnectivityHelper.isWifiAvailable(CoronaWarnApplication.getAppContext())) {
+            executeClose()
+            return@lockAndExecuteUnique
+        }
+
         /****************************************************
          * INIT TRANSACTION
          ****************************************************/

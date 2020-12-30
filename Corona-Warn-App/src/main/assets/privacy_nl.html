@@ -1,415 +1,430 @@
-<p>
-    Deze Contactopsporingsapp werd ontwikkeld in het kader van de uitbraak van het
-    Coronavirus en op initiatief&nbsp;van de Belgische regering en de gefedereerde
-    entiteiten.
-</p>
-<p>
-    De Contactopsporingsapp is gebaseerd op het "Decentralized Privacy-Preserving
-    Proximity Tracing" systeem ("DP-3T systeem") ontwikkeld door een
-    internationaal consortium van technologen, juristen, ingenieurs en
-    epidemiologen van verschillende universiteiten. Meer gedetailleerde informatie
-    over het DP-3T systeem&nbsp;is publiek beschikbaar op
-    https://github.com/DP-3T/documents. Daarnaast maakt de
-    Contactopsporingsapp&nbsp;gebruik van het Exposure Notification System dat
-    door Google en Apple is ontwikkeld. Dit Exposure Notification System stelt de
-    Contactopsporingsapp in staat om meldingen naar de gebruiker te sturen, zoals
-    hieronder nader wordt toegelicht. Meer informatie over het systeem voor
-    kennisgeving van blootstelling is beschikbaar op
-    https://www.google.com/covid19/exposurenotifications/.
-</p>
-<p>
-    Het gebruik van de Contactopsporingsapp is volledig vrijwillig. Met andere
-    woorden, er is geen enkele verplichting om deze Contactopsporingsapp te
-    installeren.
-</p>
-<p>
-    De Contactopsporingsapp is bedoeld voor gebruik in elk land dat ook een DP-3T
-    systeem gebruikt. Dit betekent dat als een gebruiker van de Belgische
-    Contactopsporingsapp zo een land bezoekt, hij/zij&nbsp;ook meldingen kan
-    ontvangen dat hij/zij&nbsp;een risico heeft gelopen in dit land.
-</p>
-<h2>Wie is de controller voor de app?</h2>
-<p>
-    Deze Contactopsporingsapp wordt gereguleerd door het “Koninklijk Besluit
-    nr.&nbsp;44 van 26 juni 2020 betreffende de gezamenlijke gegevensverwerking
-    door Sciensano en de door de bevoegde regionale overheden of door de bevoegde
-    agentschappen aangeduide contactcentra, gezondheidsinspecties en mobiele teams
-    in het kader van een contactonderzoek bij personen die (vermoedelijk) met het
-    coronavirus COVID-19 besmet zijn op basis van een gegevensbank bij Sciensano”
-    (hierna “Koninklijk Besluit nr.&nbsp;44” genoemd).
-</p>
-<p>
-    Deze Contactopsporingsapp wordt aangeboden door de regionale
-    gezondheidsdiensten en Sciensano is verantwoordelijk voor de
-    serverinfrastructuur van de app. Sciensano is een openbare instelling met
-    rechtspersoonlijkheid opgericht door de wet van 25 februari 2018 betreffende
-    de oprichting van Sciensano, met maatschappelijke zetel te Juliette
-    Wytsmanstraat 14, B-1050 Elsene en geregistreerd bij de Kruispuntbank van
-    Ondernemingen onder het nummer 0693.876.830 (hierna "Sciensano" genoemd).
-</p>
-<p>
-    Volgens het Koninklijk Besluit nr. 44 treedt Sciensano op als de
-    verantwoordelijke voor het verzamelen en verwerken van persoonsgegevens in de
-    zin van de Algemene Verordening inzake de GegevensBescherming ("AVGB”
-    genoemd).&nbsp;
-</p>
-<p>
-    Sciensano kan worden gecontacteerd op het hierboven vermelde adres en via
-    e-mail op coronalert@sciensano.be.
-</p>
-<p>
-    Sciensano heeft een functionaris voor gegevensbescherming aangesteld, die
-    bereikbaar is via dpo@sciensano.be.
-</p>
-<h2>
-    Wat is het doel van de appvoor het opsporen van contacten en hoe werkt het?
-</h2>
-<p>Nabijheidstracering</p>
-<p>
-    Het doel van de Contactopsporingsapp is om burgers te informeren die in de
-    nabijheid van een COVID-19-positieve persoon zijn geweest en dus zijn
-    blootgesteld aan het virus, zonder de identiteit van het contact te onthullen
-    of waar en wanneer juist het contact heeft plaatsgevonden. De verschillende
-    verwerkingen van persoonsgegevens in het kader van deze meldingsprocedure en
-    in het kader van de registratie als gebruiker van de Contactopsporingsapp zijn
-    gebaseerd op redenen van algemeen belang&nbsp;(art.&nbsp;6.1 (e) van de AVGB)
-    en, voor zover het gegevens met betrekking tot de gezondheid betreft, op
-    redenen van algemeen belang op het gebied van de
-    volksgezondheid&nbsp;(art.&nbsp;9.2 (i)&nbsp;van de AVGB). De
-    Contactopsporingsapp wordt geregeld door het Koninklijk Besluit nr.&nbsp;44.
-    De verwerkingsactiviteiten worden inderdaad uitgevoerd in het algemeen belang,
-    aangezien ze tot doel hebben de verspreiding van COVID-19 in te dijken en de
-    bevolking tegen deze epidemie te beschermen.
-</p>
-<p>
-    Om dit doel te bereiken genereert de Contactopsporingsapp Geheime Sleutels en
-    berekent van deze sleutels kortstondige (met andere woorden, tijdelijke),
-    willekeurige ID’s die de telefoon van de gebruiker vertegenwoordigen. Deze
-    ID's zijn efemeer omdat ze op een hoge frequentie worden aangepast (elke 10-20
-    minuten), d.w.z. op dezelfde frequentie als het Bluetooth MAC-adres (dit is
-    tijdelijke identifiers die Bluetooth-apparaten gebruiken om de afzender of
-    ontvanger van berichten aan te geven).
-</p>
-<p>
-    De telefoon van de gebruiker zendt deze willekeurige ID's uit en registreert
-    ook de willekeurige ID's die worden uitgestuurd door andere telefoons&nbsp;in
-    de buurt en slaat deze op voor 14 dagen samen met de datum, de signaalsterkte
-    en de duur.
-</p>
-<p>
-    Om getest te worden op COVID-19 moet een gebruiker contact opnemen met een
-    zorgverlener die een staal neemt. De zorgverlener of de gebruiker zelf
-    registreren een pseudonieme identificatiecode van de telefoon van de gebruiker
-    in de testserver. Vanaf dat moment zal de Contactopsporingsapp regelmatig de
-    testserver controleren, aan de hand van deze anonieme identificatiecode, om na
-    te gaan of het testresultaat beschikbaar is. Zodra het testresultaat
-    beschikbaar is, zal de Contactopsporingsapp de gebruiker informeren over het
-    testresultaat: negatief of positief. Als het resultaat positief is, moet de
-    gebruiker contact op te nemen met de arts. De gebruiker kan dan toestemming
-    geven om de Geheime Sleutels die de eerder uitgezonden willekeurige ID's
-    genereren (zoals verder beschreven in paragraaf 4) op te laden naar de
-    centrale server. Om onjuist gebruik tot een minimum te beperken, wordt deze
-    upload geautoriseerd door de testserver die een autorisatiecode naar de
-    centrale server stuurt. Direct na de upload worden al deze Geheime Sleutels
-    van de telefoon verwijderd.
-</p>
-<p>
-    Behalve als ze worden&nbsp;geüpload, blijven de Geheime Sleutels om de
-    uitgezonden willekeurige ID's te genereren voor een periode van maximaal 14
-    dagen in&nbsp;de telefoon. De opgenomen willekeurige ID's van andere
-    gebruikers verlaten nooit de telefoon&nbsp;en worden na 14 dagen vernietigd.
-</p>
-<p>
-    Zodra de Geheime Sleutels om de uitgezonden willekeurige ID's te genereren
-    door een geïnfecteerde gebruiker naar de centrale server zijn geüpload kan de
-    Contactopsporingsapp van andere gebruikers deze Geheime Sleutels van de server
-    halen. Op deze manier kan de app inschatten of die andere gebruikers aan het
-    virus zijn blootgesteld door de nabijheid van een COVID-19-positieve persoon
-    die zijn gegevens heeft geüpload. Als&nbsp;de Contactopsporingsapp die de
-    gegevens van de server ophaalt een substantieel&nbsp;risico op
-    infectie&nbsp;detecteert (d.w.z. dat de gebruiker gedurende een periode van
-    ten minste 15 minuten in de buurt van een COVID-19-positieve persoon is
-    geweest), zal deze de gebruiker informeren en bepaalde acties aanbevelen door
-    middel van een pushmelding in de Contactopsporingsapp. Het is uitsluitend de
-    verantwoordelijkheid van de gebruiker om deze aanbevelingen op te volgen.
-</p>
-<p>
-    Voor de duidelijkheid en om twijfel te voorkomen, de Contactopsporingsapp doet
-    dit NIET:
-</p>
-<ul>
-    <li>
-        toezicht houden op de naleving van door de overheid opgelegde quarantaine-,
-        isolatie- of sociale afstandsmaatregelen;
-    </li>
-    <li>opsporen van COVID-19 positieve patiënten;</li>
-    <li>
-        in reële tijd informatie over een hoog-risico contact met een positieve
-        patiënt doorgeven;
-    </li>
-    <li>
-        informatie sturen over gebruikers zonder een positief testresultaat;
-        noch&nbsp;
-    </li>
-    <li>
-        &nbsp;hotspots of trajecten van COVID-19-positieve patiënten identificeren.
-    </li>
-</ul>
-<p>Beperkte verwerking voor statistische doeleinden</p>
-<p>
-    Op basis van de informatie die naar de centrale server wordt geüpload, kan
-    Sciensano beperkte geaggregeerde statistieken samenstellen, zoals het tellen
-    van het aantal geüploade sleutels per dag en het aantal mensen die de
-    Contactopsporingsapp&nbsp;gebruiken en die elke dag positief getest zijn.
-    Sciensano zal alleen die cijfers genereren op basis van eerder geanonimiseerde
-    gegevens. Sciensano heeft geen toegang tot de namen, telefoonnummers of andere
-    "persoonlijke gegevens" die door de gebruikers worden verstrekt of gegenereerd
-    door het gebruik van de Contactopsporingsapp.
-</p>
-<h2>
-    Welke persoonsgegevens worden verzameld en verwerkt bij het gebruik van de
-    appvoor het opsporen van contacten?
-</h2>
-<p>
-    Het DP-3T systeem is specifiek ontworpen om het verzamelen en verwerken van
-    gegevens tot een minimum te beperken. Bij gebruik van de Contactopsporingsapp
-    worden alleen gegevens verzameld waarmee de gebruiker kan worden geïnformeerd
-    dat hij of zij mogelijk is blootgesteld aan het virus. De Contactopsporingsapp
-    informeert de gebruiker niet wie het mogelijke besmettelijke contact was, of
-    waar het contact plaatsvond. De enige informatie die wordt verstrekt is de
-    datum van het contact met een hoog risico. &nbsp;
-</p>
-<p>
-    Hieronder volgt een gedetailleerde beschrijving van de verzamelde gegevens.
-    Aan de hand van de verzamelde gegevens is het niet mogelijk om personen direct
-    of indirect te identificeren. Sciensano heeft geen toegang tot de namen van de
-    gebruikers van de Contactopsporingsapp, noch tot andere persoonlijke gegevens
-    die het mogelijk maken hen te identificeren (telefoonnummer, nationaal
-    registratienummer, IP-adres, enz.). Het kan echter niet worden uitgesloten dat
-    bijvoorbeeld een gebruiker die ervan op de hoogte is gesteld dat hij/zij in
-    nauw contact is geweest met een persoon die positief is bevonden voor
-    COVID-19, deze persoon kan identificeren. Daarom worden de gegevens over het
-    algemeen als persoonsgegevens beschouwd, zij het pseudonieme persoonsgegevens.
-    De sleutels en willekeurige ID's (zoals hieronder nader toegelicht) worden als
-    gezondheidsgerelateerde gegevens beschouwd wanneer (i) de Contactopsporingsapp
-    vaststelt dat een persoon een risico op infectie loopt, (ii) de persoon een
-    test registreert en (iii) de persoon een positieve testuitslag deelt.
-</p>
-<p>Geheime sleutel</p>
-<p>
-    Na installatie genereert de Contactopsporingsapp elke dag een Geheime Sleutel
-    die op de telefoon&nbsp;van de gebruiker wordt opgeslagen.
-</p>
-<p>
-    De Geheime Sleutel wordt gedeeld met alle andere gebruikers om te bepalen of
-    er een mogelijk besmettelijk contact heeft plaatsgevonden als de gebruiker
-    meldt dat hij/zij is gediagnosticeerd met COVID-19 door deze informatie te
-    uploaden naar de centrale server zoals beschreven in paragraaf&nbsp;3.
-</p>
-<p>
-    Om de persoonlijke levenssfeer van de gebruikers te beschermen en om het
-    risico te verkleinen dat de personen die Geheime Sleutels opladen na een
-    diagnose met COVID-19 geïdentificeerd kunnen worden, zal de
-    Contactopsporingsapp&nbsp;van elke gebruiker (gemiddeld elke 5 dagen) een
-    dummy Geheime Sleutel opladen naar de centrale server.
-</p>
-<p>Tijdelijke willekeurige ID's</p>
-<p>
-    Telefoons met de Contactopsporingsapp sturen via Bluetooth willekeurige
-    getallen (ID’s) uit, die bestaan uit combinaties van enen en nullen. Deze ID's
-    worden berekend met behulp van de Geheime Sleutels. Eenmaal uitgezonden worden
-    deze ID's van de telefoon verwijderd.
-</p>
-<p>
-    De telefoon ontvangt de ID's die worden uitgezonden door nabijgelegen
-    telefoons en slaat de ontvangen ID's lokaal op met de volgende informatie:
-    ontvangen ID, signaalsterkte, duur en datum.
-</p>
-<p>
-    Deze gegevens van de ontvangen ID's worden opgeslagen op de telefoon&nbsp;en
-    verlaten de telefoon nooit.
-</p>
-<p>Testresultaten van het laboratorium &nbsp;</p>
-<p>
-    Gebruikers hebben de mogelijkheid om het resultaat van hun COVID-19
-    laboratoriumtest op te vragen via de app die verbinding maakt met de server om
-    de testresultaten te bekomen.
-</p>
-<p>IP-adres</p>
-<p>
-    IP-adressen van gebruikers die sleutels downloaden/uploaden worden expliciet
-    verwijderd uit alle logbestanden of opslagruimten. In de Belgische
-    architectuur zorgt een PROXYserver voor het verwijderen van het IP-adres van
-    de oplader (of de server doet het zelf en dit moet geauditeerd worden).
-</p>
-<p>Verkeersgegevens over de upload</p>
-<p>
-    Gebruikers die hun Geheime Sleutels opladen naar de centrale server doen dat
-    via de webservice, samen met de datum waarop de Geheime Sleutel werd gebruikt
-    en&nbsp;de geschatte datum waarop de gebruiker besmettelijk werd.
-</p>
-<p>
-    De Contactopsporingsapp verzamelt geen locatiegegevens. De gebruiker kan
-    echter wel binnen de Contactopsporingsapp&nbsp;aangeven in welk(e)
-    land(en)&nbsp;hij/zij op een bepaalde datum is geweest om interoperabiliteit
-    te bekomen met de Contactopsporingsapps van andere landen.&nbsp;In dit geval
-    wordt de Geheime Sleutel naar het door de gebruiker aangegeven land gestuurd.
-    Dit betekent dat het naar de “European Federation Gateway Service” wordt
-    gestuurd, en van daaruit naar de backoffice van de app van het land waar de
-    sleutel is gebruikt (tegenhanger van Sciensano) en van daaruit naar alle
-    app-gebruikers van dat land.
-</p>
-<p>
-    Alleen gebruikers waarvoor de testserver een autorisatiecode heeft gestuurd
-    (na bevestiging dat de gebruiker positief is getest) naar de centrale
-    server&nbsp;kunnen met succes gegevens opladen naar de centrale server.
-</p>
-<p>Autorisatiecode</p>
-<p>
-    Wanneer een gebruiker COVID-19 positief wordt getest, stuurt de
-    testserver&nbsp;een autorisatiecode naar de centrale server. Wanneer een
-    gebruiker zijn/haar Geheime Sleutels wil opladen, controleert de centrale
-    server of hij een autorisatiecode voor deze specifieke gebruiker heeft
-    ontvangen. Als de centrale server inderdaad een autorisatiecode heeft
-    ontvangen voor deze specifieke gebruiker, zal de gebruiker de Geheime Sleutels
-    kunnen opladen.
-</p>
-<p>Bezochte landen</p>
-<p>
-    De gebruiker kan ervoor kiezen om in de Contactopsporingsapp aan te geven
-    welke landen hij/zij heeft bezocht. Daarnaast verzamelt en verwerkt de
-    Contactopsporingsapp geen andere locatiegegevens.
-</p>
-<p>Persoonlijke gegevens van kinderen</p>
-<p>
-    Rekening houdend met het feit dat de Contactopsporingsapp gericht is op de
-    bescherming van de gezondheid en gezien de garanties die worden geboden om de
-    risico's voor de gebruikers van de app sterk te verminderen (vrijwillig
-    gebruik, beperkte en gepseudonimiseerde gegevens, kortere opslagtijd van de
-    gegevens), wordt ervan uitgegaan dat een kind vanaf de leeftijd van 13 jaar
-    alleen kan instemmen met de installatie van de app. Onder deze leeftijd is de
-    toestemming van de wettelijke vertegenwoordiger vereist.
-</p>
-<h2>
-    Neemt de app voor het opsporen van contacten geautomatiseerde beslissingen?
-</h2>
-<p>
-    De Contactopsporingsapp neemt geen geautomatiseerde beslissingen met
-    betrekking tot een gebruiker in de zin van artikel 22 van de Algemene
-    Verordening inzake GegevensBescherming (AVGB).
-</p>
-<h2>Metwie worden persoonlijke (pseudonieme) gegevens gedeeld?</h2>
-<p>Upload naar de centrale server</p>
-<p>
-    Zoals beschreven in paragraaf 3 en 4 kan de gebruiker gegevens opladen naar de
-    centrale server. Deze centrale server wordt gehost door Sciensano in de Europese Unie.
-</p>
-<p>
-    De centrale server bewaart alleen informatie van geïnfecteerde gebruikers als
-    zij besluiten om de Geheime Sleutels&nbsp;naar deze server op te laden.
-</p>
-<p>Distributie naar alle apps</p>
-<p>
-    Zoals beschreven in paragraaf 3 en 4 worden de naar de centrale server
-    opgeladen sleutels dagelijks naar alle apps gedistribueerd. Om redenen van
-    efficiëntie kan deze distributie plaatsvinden via een Content Distribution
-    Network, d.w.z. een replicatiedienst die ervoor zorgt dat iedereen dezelfde
-    gegevens ontvangt zonder het netwerk te overbelasten.
-</p>
-<p>
-    Het delen van persoonsgegevens met nationale&nbsp;aanbieders van Europese
-    databanken met betrekking tot&nbsp;vergelijkbare contactopsporingsapps in
-    andere landen.
-</p>
-<p>
-    Als de gebruiker in de Contactopsporingsapp aangeeft dat hij/zij een ander
-    EU-land heeft bezocht, kunnen de Geheime Sleutels rechtstreeks of via de
-    EU-gateway naar de centrale servers van vergelijkbare contactopsporingsapps in
-    die EU-landen worden gestuurd, d.w.z. een server die deze sleutels doorstuurt
-    naar de andere EU-servers. Een sleutel wordt alleen doorgestuurd naar land A
-    als een gebruiker aangeeft dat hij land A heeft bezocht.
-</p>
-<p>Het delen van persoonlijke gegevens met ICT-leveranciers</p>
-<p>
-    Door&nbsp;het installeren van de Contactopsporingsapp kunnen Google en Apple
-    zien wie de Contactopsporingsapp heeft geïnstalleerd. Zij zorgen er echter
-    voor dat het systeem de identiteit van de gebruikers niet met hen deelt.
-</p>
-<h2>Worden persoonsgegevens doorgegeven aan landen buiten de europese unie?</h2>
-<p>
-    Persoonsgegevens worden niet doorgegeven aan landen buiten de Europese
-    Unie.&nbsp;
-</p>
-<h2>Hoe lang worden de persoonlijke gegevens bewaard?</h2>
-<p>
-    De persoonlijke gegevens die op de telefoon van elke gebruiker en op de
-    centrale server zijn opgeslagen, worden na 14 dagen automatisch verwijderd.
-</p>
-<p>
-    De Contactopsporingsapp zal in ieder geval gedeactiveerd worden op de datum
-    bepaald door de toepasselijke Belgische wetgeving.
-</p>
-<h2>Hoe worden de persoonsgegevens beschermd?</h2>
-<p>
-    De ontwikkelaars van het DP-3T systeem hebben veel belang gehecht aan de
-    bescherming van persoonsgegevens. Het DP-3T systeem voorziet in de volgende
-    privacy- en veiligheidsbescherming:
-</p>
-<ul>
-    <li>
-        Het systeem is ontworpen om te voldoen aan de nieuwste cryptografische
-        technieken en maatregelen.
-    </li>
-    <li>
-        Alle overdrachten van persoonlijke gegevens worden beveiligd door middel van
-        encryptie en indien nodig geauthentiseerd.
-    </li>
-    <li>
-        Persoonlijke gegevens worden voornamelijk opgeslagen op de telefoon van de
-        gebruiker en er wordt slechts beperkte informatie naar de centrale server
-        gestuurd als de gebruiker besluit deze te versturen (decentrale aanpak).
-    </li>
-    <li>
-        De decentrale aanpak beperkt het risico van misbruik van de persoonsgegevens
-        door een centrale autoriteit.
-    </li>
-</ul>
-<p>
-    Bovendien wordt de centrale server beschermd door passende technische en
-    organisatorische maatregelen, waaronder een strikt toegangsbeheer.
-</p>
-<h2>Welke rechten hebben de gebruikers?</h2>
-<p>
-    Onder de voorwaarden van de Algemene Verordening inzake GegevensBescherming
-    (AVGB) hebben gebruikers het recht om toegang te krijgen tot hun
-    persoonsgegevens, om rectificatie, uitwissing of beperking van de verwerking
-    te verzoeken of om bezwaar te maken tegen de verwerking van hun
-    persoonsgegevens ("rechten van de betrokkene").
-</p>
-<p>
-    Sciensano zal alleen kunnen reageren op verzoeken van gebruikers wanneer het
-    mogelijk is om de gegevens die worden verwerkt in het kader van de
-    Contactopsporingsapp te koppelen aan de specifieke gebruiker. Om de gegevens
-    aan de gebruiker te kunnen koppelen, zou Sciensano extra gegevens moeten
-    verkrijgen. Aangezien de Contactopsporingsapp is gebouwd op technologie die de
-    persoonlijke levenssfeer van de gebruikers zoveel mogelijk moet beschermen, is
-    het niet wenselijk dat Sciensano aanvullende gegevens verwerkt om de gebruiker
-    te identificeren. Op grond van artikel 11 van de AVGB kan Sciensano niet
-    worden verplicht om dergelijke aanvullende gegevens te verwerken om de
-    gebruiker te identificeren met als enig doel het naleven van de rechten van de
-    betrokkene op grond van de AVGB. Dit betekent dat gebruikers in de praktijk
-    niet in staat zullen zijn om hun rechten als betrokkene uit te oefenen, tenzij
-    er aanvullende informatie aan Sciensano wordt verstrekt.
-</p>
-<p>
-    Gebruikers hebben het recht om een klacht in te dienen bij de Belgische
-    Toezichtautoriteit (https://www.gegevensbeschermingsautoriteit.be /
-    https://www.autoriteprotectiondonnees.be /
-    https://www.dataprotectionauthority.be).
-</p>
-<h2>Wijzigingen in deze privacyverklaring</h2>
-<p>
-    Sciensano kan deze privacyverklaring van tijd tot tijd wijzigen. In dat geval
-    zal Sciensano de gebruiker van een dergelijke wijziging op de hoogte stellen
-    door middel van een kennisgeving in de Contactopsporingsapp.
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Privacyverklaring</title>
+</head>
+
+<body>
+<section>
+    <p>
+        Deze Contactopsporingsapp werd ontwikkeld in het kader van de uitbraak van het
+        Coronavirus en op initiatief van de Belgische overheid.
+    </p>
+    <p>
+        De Contactopsporingsapp is gebaseerd op het "Decentralized Privacy-Preserving
+        Proximity Tracing" systeem voor nabijheidsdetectie ("DP-3T systeem")
+        ontwikkeld door een internationaal consortium van technologen, juristen,
+        ingenieurs en epidemiologen van verschillende universiteiten. Meer
+        gedetailleerde informatie over het DP-3T systeem is publiek beschikbaar op
+        https://github.com/DP-3T/documents. Daarnaast maakt de Contactopsporingsapp
+        gebruik van het Exposure Notification System dat door Google en Apple is
+        ontwikkeld. Dit Exposure Notification System stelt de Contactopsporingsapp in
+        staat om meldingen naar de gebruiker te sturen, zoals hieronder wordt
+        toegelicht. Meer informatie over het systeem voor notificatie van risicovolle
+        contacten is beschikbaar op
+        <a href="https://www.google.com/covid19/exposurenotifications/"
+        >https://www.google.com/covid19/exposurenotifications/</a
+        >&nbsp;
+    </p>
+    <p>
+        Het gebruik van de Contactopsporingsapp is volledig vrijwillig. Met andere
+        woorden, er is geen enkele verplichting om deze Contactopsporingsapp te
+        installeren.
+    </p>
+    <p>
+        De Contactopsporingsapp zal kunnen gebruikt worden in elk land dat ook een
+        DP-3T systeem gebruikt. Als een Belgische gebruiker zo'n land bezoekt, kan
+        hij/zij ook meldingen ontvangen dat hij/zij in dat land een risicovol contact
+        heeft gehad.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Wie is de controller voor de app voor het opsporen van contacten?</h2>
+    <p>
+        Deze Contactopsporingsapp wordt aangeboden door Sciensano, een openbare
+        instelling met rechtspersoonlijkheid opgericht door de wet van 25 februari
+        2018 betreffende de oprichting van Sciensano, met maatschappelijke zetel te
+        Juliette Wytsmanstraat 14, B-1050 Elsene en geregistreerd bij de Kruispuntbank
+        van Ondernemingen onder het nummer 0693.876.830 (hierna "Sciensano" genoemd).
+    </p>
+    <p>
+        Sciensano wordt beschouwd als de verantwoordelijke voor het verzamelen en
+        verwerken van persoonsgegevens via de Contactopsporingsapp in de zin van de
+        Algemene Verordening inzake GegevensBescherming (AVGB).
+    </p>
+    <p>
+        Sciensano kan worden gecontacteerd op het hierboven vermelde adres, of
+        telefonisch op +32 2 642 51 11 en per e-mail op coronalert@sciensano.be.
+    </p>
+    <p>
+        Sciensano heeft een functionaris voor gegevensbescherming aangesteld die
+        bereikbaar is via <a href="mailto:dpo@sciensano.be">dpo@sciensano.be</a>.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        Wat is het doel van de app voor het opsporen van contacten en hoe werkt het?
+    </h2>
+    <p>Nabijheidstracering</p>
+    <p>
+        Het doel van de Contactopsporingsapp is om te bepalen wie er in de nabijheid
+        van een COVID-19-positieve persoon is geweest en dus is blootgesteld aan het
+        virus, zonder de identiteit van het contact te onthullen of waar en wanneer
+        juist het contact heeft plaatsgevonden. Deze verwerking is gebaseerd op
+        redenen van algemeen belang (artikel 6, lid 1, onder e), van de AVGB) en, voor
+        zover het gegevens met betrekking tot de gezondheid betreft, op redenen van
+        algemeen belang op het gebied van de volksgezondheid (9, lid 2, onder i), van
+        de AVGB). De verwerking wordt inderdaad uitgevoerd in het algemeen belang,
+        aangezien zij tot doel heeft de verspreiding van COVID-19 in te dijken en de
+        bevolking tegen deze epidemie te beschermen.
+    </p>
+    <p>
+        Om dit doel te bereiken genereert de Contactopsporingsapp Geheime Sleutels en
+        berekent van deze Sleutels kortstondige (met andere woorden, tijdelijke),
+        willekeurige ID's die de telefoon van de gebruiker vertegenwoordigen. Deze
+        ID's worden frequent aangepast (elke 10-20 minuten), samen met het Bluetooth
+        MAC-adres.
+    </p>
+    <p>
+        De telefoon van de gebruiker zendt deze willekeurige ID's uit en registreert
+        ook de willekeurige ID's die worden uitgestuurd door andere telefoons in de
+        buurt en slaat deze op samen met de datum, de signaalsterkte en de duur.
+    </p>
+    <p>
+        Om getest te worden voor COVID-19, moet een gebruiker contact opnemen met een
+        zorgverlener die een staal neemt en een anonieme identificatiecode van de
+        telefoon van de gebruiker in de testserver registreert. Vanaf dat moment zal
+        de Contactopsporingsapp regelmatig de testserver controleren, aan de hand van
+        deze anonieme identificatiecode, om na te gaan of het testresultaat
+        beschikbaar is. Zodra het testresultaat beschikbaar is, zal de
+        Contactopsporingsapp de gebruiker informeren over het testresultaat: negatief
+        of positief. Als het resultaat positief is, moet de gebruiker contact opnemen
+        met de arts en in quarantaine gaan. De gebruiker kan dan beslissen om de
+        Geheime Sleutels die de eerder uitgezonden willekeurige ID's genereren (zoals
+        verder beschreven in paragraaf&nbsp;4) op te laden naar de centrale server. Om
+        onjuist gebruik tot een minimum te beperken, wordt deze upload geautoriseerd
+        door de testserver die een autorisatiecode naar de centrale server stuurt.
+        Vervolgens worden al deze Geheime Sleutels van de telefoon verwijderd.
+    </p>
+    <p>
+        Behalve als ze worden geüpload, blijven de Geheime Sleutels om de uitgezonden
+        willekeurige ID's te genereren voor een periode van maximaal 14 dagen in de
+        telefoon. De ontvangen willekeurige ID's verlaten nooit de telefoon en worden
+        na 14 dagen vernietigd.
+    </p>
+    <p>
+        Zodra de Geheime Sleutels om de uitgezonden willekeurige ID's te genereren
+        door een geïnfecteerde gebruiker naar de centrale server zijn geüpload, kan de
+        Contactopsporingsapp van andere gebruikers deze Geheime Sleutels van de server
+        halen. Op deze manier kan de app inschatten of de gebruiker voldoende lang en
+        voldoende dicht in de buurt geweest is bij een persoon besmet met COVID-19 en
+        dus een hoger risico heeft van blootstelling aan het virus. Als de
+        Contactopsporingsapp die de gegevens van de server ophaalt een aanzienlijk
+        risico op infectie detecteert (d.w.z. dat de gebruiker in de buurt van een
+        COVID-19-positieve persoon is geweest), zal zij de gebruiker informeren en
+        bepaalde acties aanbevelen door middel van een pushmelding in de app. Het is
+        uitsluitend de verantwoordelijkheid van de gebruiker om deze aanbevelingen op
+        te volgen.
+    </p>
+    <p>
+        Voor de duidelijkheid en om twijfel te voorkomen, de Contactopsporingsapp doet
+        dit NIET:
+    </p>
+    <ul>
+        <li>
+            toezicht houden op de naleving van door de overheid opgelegde quarantaine-,
+            opsluitings- of sociale afstandsmaatregelen;
+        </li>
+        <li>volgen van COVID-19 positieve patiënten;</li>
+        <li>
+            informatie over gebruikers zonder een positief testresultaat doorsturen; en
+        </li>
+        <li>hotspots of trajecten van COVID-19-positieve patiënten identificeren.</li>
+    </ul>
+    <p>Beperkte verwerking voor statistische doeleinden</p>
+    <p>
+        Op basis van de informatie die naar de centrale server wordt geüpload, kan
+        Sciensano beperkte geaggregeerde statistieken samenstellen, zoals het tellen
+        van het aantal geüploade sleutels per dag en het aantal mensen met een app die
+        elke dag positief hebben getest.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        Welke persoonsgegevens worden verzameld en verwerkt bij het gebruik van de app
+        voor het opsporen van contacten?
+    </h2>
+    <p>
+        Het DP-3T systeem is specifiek ontworpen om het verzamelen en verwerken van
+        gegevens tot een minimum te beperken. Bij gebruik van de Contactopsporingsapp
+        worden alleen gegevens verzameld waarmee de gebruiker kan worden geïnformeerd
+        dat hij of zij mogelijk is blootgesteld aan het virus. De Contactopsporingsapp
+        informeert de gebruiker niet wie het mogelijke besmettelijke contact was, of
+        waar het contact plaatsvond. De enige informatie die wordt verstrekt is de
+        datum van het contact met een hoog risico.
+    </p>
+    <p>
+        Hieronder volgt een gedetailleerde beschrijving van de verzamelde gegevens.
+        Aan de hand van de verzamelde gegevens kunnen personen niet rechtstreeks
+        worden geïdentificeerd en het is ook niet de bedoeling dat dit gebeurt. Het
+        kan echter niet worden uitgesloten dat bijvoorbeeld een gebruiker die ervan op
+        de hoogte is gesteld dat hij/zij in nauw contact is geweest met een persoon
+        die positief op COVID-19 is getest, die persoon kan identificeren. Daarom
+        worden de gegevens over het algemeen als persoonsgegevens beschouwd, zij het
+        onder een pseudoniem. De gegevens worden als gezondheidsgerelateerde gegevens
+        beschouwd omdat (i) de app vaststelt dat een persoon een risico op infectie
+        loopt, (ii) de persoon een test registreert en (iii) de persoon een positief
+        testresultaat deelt.
+    </p>
+    <p>Geheime sleutel</p>
+    <p>
+        Na installatie genereert de Contactopsporingsapp elke dag een Geheime Sleutel
+        die wordt opgeslagen op de telefoon van de gebruiker.
+    </p>
+    <p>
+        De Geheime Sleutels worden gedeeld als de gebruiker meldt dat hij/zij
+        gediagnosticeerd is met COVID-19 door deze te uploaden naar de centrale server
+        zoals beschreven in paragraaf 3.
+    </p>
+    <p>
+        Om de privacy van de gebruikers te beschermen en om het risico te verkleinen
+        dat de personen die Geheime Sleutels opladen na een diagnose met COVID-19
+        geïdentificeerd kunnen worden, zal de Contactopsporingsapp van elke gebruiker
+        (gemiddeld elke 5 dagen) een dummy Geheime Sleutel opladen naar de centrale
+        server.
+    </p>
+    <p>Tijdelijke willekeurige ID's</p>
+    <p>
+        Telefoons met de Contactopsporingsapp sturen via Bluetooth willekeurige
+        getallen (ID’s) uit, die bestaan uit combinaties van enen en nullen. Deze ID's
+        worden berekend met behulp van de Geheime Sleutels. Eenmaal uitgezonden worden
+        deze ID's van de telefoon verwijderd.
+    </p>
+    <p>
+        De telefoon ontvangt de ID's die worden uitgezonden door nabijgelegen
+        telefoons en slaat de ontvangen ID's lokaal op met de volgende informatie:
+        ontvangen ID, signaalsterkte, duur en datum.
+    </p>
+    <p>
+        Deze gegevens van de ontvangen ID's worden veilig opgeslagen op de telefoon en
+        verlaten de telefoon nooit.
+    </p>
+    <p>IP-adres</p>
+    <p>Het systeem slaat geen IP-adressen van gebruikers op.</p>
+    <p>Verkeersgegevens over de upload</p>
+    <p>
+        Gebruikers laden hun Geheime Sleutels op naar de centrale server samen met de
+        datum waarop de Geheime Sleutel werd gebruikt en de geschatte datum waarop de
+        gebruiker besmettelijk werd.
+    </p>
+    <p>
+        De Contactopsporingsapp verzamelt geen locatiegegevens. De gebruiker kan
+        echter wel binnen de Contactopsporingsapp aangeven in welk(e) land(en) hij/zij
+        op een bepaalde datum is geweest om te kunnen samenwerken met de
+        Contactopsporingsapps van andere landen. In dit geval wordt de Geheime Sleutel
+        naar het door de gebruiker aangegeven land gestuurd.
+    </p>
+    <p>
+        Alleen gebruikers waarvoor de testserver een autorisatiecode naar de centrale
+        server heeft gestuurd, kunnen met succes gegevens naar de centrale server
+        uploaden.
+    </p>
+    <p>Autorisatiecode</p>
+    <p>
+        Wanneer een gebruiker COVID-19 positief wordt getest, stuurt de testserver een
+        autorisatiecode naar de centrale server. Wanneer een gebruiker zijn Geheime
+        Sleutels wil opladen, controleert de centrale server of hij een
+        autorisatiecode voor deze specifieke gebruiker heeft ontvangen. Als de
+        centrale inderdaad een autorisatiecode heeft ontvangen voor deze specifieke
+        gebruiker, zal de gebruiker de Geheime Sleutels kunnen opladen.
+    </p>
+    <p>Bezochte landen</p>
+    <p>
+        De gebruiker kan ervoor kiezen om in de Contactopsporingsapp aan te geven
+        welke landen hij/zij heeft bezocht. Daarnaast verzamelt of verwerkt de
+        Contactopsporingsapp geen andere locatiegegevens.
+    </p>
+    <p>Persoonlijke gegevens van kinderen</p>
+    <p>
+        Rekening houdend met het feit dat de Contactopsporingsapp gericht is op de
+        bescherming van de gezondheid en dat het gebruik ervan kan worden beschouwd
+        als een handeling van persoonlijke aard, en gezien de garanties die worden
+        geboden om de risico's voor de gebruikers van de app sterk te beperken
+        (vrijwillig gebruik, beperkte en gepseudoniemiseerde gegevens, kortere
+        opslagtijd van de gegevens), wordt ervan uitgegaan dat een kind vanaf de
+        leeftijd van 14 jaar alleen kan instemmen met het downloaden van de
+        applicatie. Onder deze leeftijd is de toestemming van de wettelijke
+        vertegenwoordiger vereist.
+    </p>
+    <p>
+        Deze toestemming moet bijzonder goed worden toegelicht en vereist daarom de
+        mededeling van specifieke informatie, aangepast aan de leeftijd van de
+        minderjarige (taal, lengte van het document, gebruikte lettertype, enz.) Deze
+        informatie moet op twee momenten worden meegedeeld: vóór het downloaden van de
+        app en op het moment van een positieve test, voordat de Geheime Sleutels
+        worden opgeladen.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>
+        Neemt de app voor het opsporen van contacten geautomatiseerde beslissingen?
+    </h2>
+    <p>
+        De Contactopsporingsapp neemt geen geautomatiseerde beslissingen met
+        betrekking tot een gebruiker in de zin van artikel 22 van de Algemene
+        Verordening inzake GegevensBescherming (AVGB).
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Met wie worden persoonlijke gegevens gedeeld?</h2>
+    <p>Upload naar de centrale server</p>
+    <p>
+        Zoals beschreven in paragraaf 3 en 4 kan de gebruiker gegevens uploaden naar
+        de centrale server. Deze centrale server wordt gehost onder de
+        verantwoordelijkheid van Sciensano.
+    </p>
+    <p>
+        De centrale server bewaart alleen informatie van geïnfecteerde gebruikers als
+        zij besluiten om de Geheime Sleutels naar deze server op te laden.
+    </p>
+    <p>Distributie naar alle apps</p>
+    <p>
+        Zoals beschreven in paragraaf 3 en 4 worden de naar de centrale server
+        opgeladen sleutels dagelijks naar alle apps gedistribueerd. Om redenen van
+        efficiëntie kan deze distributie plaatsvinden via een Content Distribution
+        Network.
+    </p>
+    <p>
+        Het delen van persoonsgegevens met nationale aanbieders van Europese
+        databanken voor vergelijkbare contactopsporingsapps in andere landen
+    </p>
+    <p>
+        Als de gebruiker in de Contactopsporingsapp aangeeft dat hij/zij een ander
+        EU-land heeft bezocht, kunnen de Geheime Sleutels rechtstreeks of via de
+        EU-gateway naar de centrale servers van vergelijkbare contactopsporingsapps in
+        die EU-landen worden gestuurd.
+    </p>
+    <p>Het delen van persoonlijke gegevens met ICT-leveranciers</p>
+    <p>
+        Door het installeren van de Contactopsporingsapp, kunnen Google en Apple zien
+        wie de Contactopsporingsapp heeft geïnstalleerd. Zij zorgen er echter voor dat
+        het systeem de identiteit van de gebruikers niet met hen deelt.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Worden persoonsgegevens doorgegeven aan landen buiten de europese unie?</h2>
+    <p>
+        Persoonsgegevens worden niet doorgegeven aan landen buiten de Europese Unie.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Hoe lang worden de persoonlijke gegevens bewaard?</h2>
+    <p>
+        De persoonlijke gegevens die op de telefoon van elke gebruiker en op de
+        centrale server zijn opgeslagen, worden na 14 dagen automatisch verwijderd.
+    </p>
+    <p>
+        De Contactopsporingsapp zal in ieder geval gedeactiveerd worden op de datum
+        bepaald door de toepasselijke Belgische wetgeving.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Hoe worden de persoonsgegevens beschermd?</h2>
+    <p>
+        De ontwikkelaars van het DP-3T systeem hebben veel belang gehecht aan de
+        bescherming van persoonsgegevens. Het DP-3T systeem voorziet in de volgende
+        privacy- en veiligheidsbescherming:
+    </p>
+    <ul>
+        <li>
+            Het systeem is ontworpen om te voldoen aan de nieuwste cryptografische
+            technieken en maatregelen.
+        </li>
+        <li>
+            Alle overdracht van persoonlijke gegevens wordt beschermd door middel van
+            geauthentiseerde encryptie.
+        </li>
+        <li>
+            Persoonlijke gegevens worden voornamelijk opgeslagen op de telefoon van de
+            gebruiker en er wordt slechts beperkte informatie naar de centrale server
+            gestuurd als de gebruiker besluit deze te versturen (decentrale aanpak).
+        </li>
+        <li>
+            De decentrale aanpak beperkt het risico van misbruik van de persoonsgegevens
+            door een centrale autoriteit.
+        </li>
+    </ul>
+    <p>
+        Bovendien wordt de centrale server beschermd door passende technische en
+        organisatorische maatregelen, waaronder een strikt toegangsbeheer.
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Welke rechten hebben de gebruikers?</h2>
+    <p>
+        Onder de voorwaarden van de AVGB hebben gebruikers het recht om toegang te
+        krijgen tot hun persoonsgegevens, om rectificatie, uitwissing of beperking van
+        de verwerking te verzoeken of om bezwaar te maken tegen de verwerking van hun
+        persoonsgegevens ("rechten van de betrokkene").
+    </p>
+    <p>
+        Sciensano zal alleen kunnen reageren op verzoeken van gebruikers wanneer het
+        mogelijk is om de gegevens die worden verwerkt in het kader van de
+        Contactopsporingsapp te koppelen aan de specifieke gebruiker. Om de gegevens
+        aan de gebruiker te kunnen koppelen, zou Sciensano extra gegevens moeten
+        verkrijgen. Aangezien de Contactopsporingsapp is gebouwd op technologie die de
+        persoonlijke levenssfeer van de gebruikers zoveel mogelijk moet beschermen, is
+        het niet wenselijk dat Sciensano aanvullende gegevens verwerkt om de gebruiker
+        te identificeren. Op grond van artikel 11 van de AVGB kan Scienscano niet
+        worden verplicht om dergelijke aanvullende gegevens te verwerken om de
+        gebruiker te identificeren met als enig doel het naleven van de rechten van de
+        betrokkene op grond van de AVGB. Dit betekent dat gebruikers in de praktijk
+        niet in staat zullen zijn om hun rechten als betrokkene uit te oefenen, tenzij
+        er aanvullende informatie aan Sciensano wordt verstrekt.
+    </p>
+    <p>
+        Gebruikers hebben het recht om een klacht in te dienen bij de Belgische
+        toezichthoudende autoriteit (<a
+            href="http://www.gegevensbeschermingsautoriteit.be"
+    >https://www.gegevensbeschermingsautoriteit.be</a
+    >&nbsp;<a href="http://www.autoriteprotectiondonnees.be"
+    >https://www.autoriteprotectiondonnees.be</a
+    >&nbsp;<a href="http://www.dataprotectionauthority.be"
+    >https://www.dataprotectionauthority.be</a
+    >).
+    </p>
+</section>
+<p>&nbsp;</p>
+<section>
+
+    <h2>Wijzigingen in deze privacyverklaring</h2>
+    <p>
+        Sciensano kan deze privacyverklaring van tijd tot tijd wijzigen. In dat geval
+        zal Sciensano de gebruiker van een dergelijke wijziging op de hoogte stellen
+        door middel van een kennisgeving in de Contactopsporingsapp.
+    </p>
+</section>
+<p>&nbsp;</p>
+
+
+</body>
+</html>

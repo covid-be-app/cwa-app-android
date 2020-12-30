@@ -81,30 +81,30 @@ object ConnectivityHelper {
      *
      */
     fun registerLocationStatusCallback(context: Context, callback: LocationCallback) {
-            val receiver = object : BroadcastReceiver() {
-                var isGpsEnabled: Boolean = false
-                var isNetworkEnabled: Boolean = false
+        val receiver = object : BroadcastReceiver() {
+            var isGpsEnabled: Boolean = false
+            var isNetworkEnabled: Boolean = false
 
-                override fun onReceive(context: Context, intent: Intent) {
-                    intent.action?.let { act ->
-                        if (act.matches("android.location.PROVIDERS_CHANGED".toRegex())) {
-                            val locationManager =
-                                context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-                            isGpsEnabled =
-                                locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-                            isNetworkEnabled =
-                                locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+            override fun onReceive(context: Context, intent: Intent) {
+                intent.action?.let { act ->
+                    if (act.matches("android.location.PROVIDERS_CHANGED".toRegex())) {
+                        val locationManager =
+                            context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+                        isGpsEnabled =
+                            locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+                        isNetworkEnabled =
+                            locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
 
-                            if (isGpsEnabled || isNetworkEnabled) {
-                                callback.onLocationAvailable()
-                                Timber.d("Location enabled")
-                            } else {
-                                callback.onLocationUnavailable()
-                                Timber.d("Location disabled")
-                            }
+                        if (isGpsEnabled || isNetworkEnabled) {
+                            callback.onLocationAvailable()
+                            Timber.d("Location enabled")
+                        } else {
+                            callback.onLocationUnavailable()
+                            Timber.d("Location disabled")
                         }
                     }
                 }
+            }
         }
         callback.recevier = receiver
         context.registerReceiver(
@@ -210,7 +210,9 @@ object ConnectivityHelper {
      * @see isBackgroundRestricted
      */
     fun autoModeEnabled(context: Context): Boolean {
-        return !isBackgroundRestricted(context) || PowerManagementHelper.isIgnoringBatteryOptimizations(context)
+        return !isBackgroundRestricted(context) || PowerManagementHelper.isIgnoringBatteryOptimizations(
+            context
+        )
     }
 
     /**
@@ -253,6 +255,13 @@ object ConnectivityHelper {
         return caps?.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED) ?: false
     }
 
+    fun isWifiAvailable(context: Context): Boolean {
+        val manager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork: Network? = manager.activeNetwork
+        val caps: NetworkCapabilities? = manager.getNetworkCapabilities(activeNetwork)
+        return caps?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ?: false
+    }
+
     /**
      * Abstract bluetooth state change callback.
      *
@@ -290,6 +299,7 @@ object ConnectivityHelper {
          */
         abstract fun onLocationUnavailable()
     }
+
     /**
      * Abstract network state change callback.
      *

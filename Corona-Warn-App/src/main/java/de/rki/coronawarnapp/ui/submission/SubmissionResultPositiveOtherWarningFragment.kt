@@ -183,13 +183,8 @@ class SubmissionResultPositiveOtherWarningFragment : Fragment(),
     // InternalExposureNotificationPermissionHelper - callbacks
     override fun onKeySharePermissionGranted(keys: List<TemporaryExposureKey>) {
         super.onKeySharePermissionGranted(keys)
-        submissionViewModel.setKeys(requireContext(), keys)
         if (keys.isNotEmpty()) {
-            findNavController().doNavigate(
-                SubmissionResultPositiveOtherWarningFragmentDirections
-                    .actionSubmissionResultPositiveOtherWarningFragmentToSubmissionKeysListFragment()
-            )
-//            submissionViewModel.submitDiagnosisKeys(keys)
+            submissionViewModel.beSubmitDiagnosisKeys(keys)
         } else {
             submissionViewModel.submitWithNoDiagnosisKeys()
             navigateToSubmissionDoneFragment()

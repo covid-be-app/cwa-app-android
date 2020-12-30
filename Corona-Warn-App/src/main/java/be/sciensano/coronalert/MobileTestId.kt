@@ -6,6 +6,7 @@ import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import timber.log.Timber
 import java.math.BigInteger
 import java.security.SecureRandom
+import java.util.Calendar
 import java.util.Date
 import javax.crypto.KeyGenerator
 import javax.crypto.Mac
@@ -15,7 +16,8 @@ class MobileTestId(
     val r0: String,
     val t0: String,
     val r1: String,
-    val k: String
+    val k: String,
+    val onsetSymptomsDate: String?,
 ) {
 
     override fun toString(): String {
@@ -27,10 +29,13 @@ class MobileTestId(
     }
 
     companion object {
+        private const val INFECTIOUS_DAYS_MINUS = 2
+
         fun generate(
-            date: Date, infoSuffix: String = "TEST REQUEST"
+            symptoms: Date? = null, infoSuffix: String = "TEST REQUEST"
         ): MobileTestId {
-            val t0 = date.toServerFormat()
+
+            val t0 = calculatet0(symptoms ?: Date())
             Timber.d("t0: %s", t0)
 
             var r1: String? = null
@@ -39,17 +44,19 @@ class MobileTestId(
             while (r1 == null) {
                 val k = generateK()
                 kEncoded = Base64.encodeToString(k.encoded, Base64.NO_WRAP)
-                Timber.d("k: %s", kEncoded)
                 r0 = generateR0()
-                Timber.d("r0: %s", r0)
                 val info = makeInfo(r0, t0, infoSuffix)
-                Timber.d("info: %s", info)
                 r1 = calculateR1(info, k)
-                Timber.d("r1: %s", r1)
-
             }
 
-            return MobileTestId(r0!!, t0, r1, kEncoded!!)
+            return MobileTestId(r0!!, t0, r1, kEncoded!!, symptoms?.toServerFormat())
+        }
+
+        private fun calculatet0(date: Date): String {
+            val cal = Calendar.getInstance()
+            cal.time = date
+            cal.add(Calendar.DATE, -INFECTIOUS_DAYS_MINUS)
+            return (cal.time).toServerFormat()
         }
 
         fun compactServerDate(date: String): String {
