@@ -146,24 +146,20 @@
           "text": "participatingCountries.list.5.text"
         },
         {
-          "icon": "flag.it",
+          "icon": "flag.lv",
           "text": "participatingCountries.list.6.text"
         },
         {
-          "icon": "flag.lv",
+          "icon": "flag.nl",
           "text": "participatingCountries.list.7.text"
         },
         {
-          "icon": "flag.nl",
+          "icon": "flag.pl",
           "text": "participatingCountries.list.8.text"
         },
         {
-          "icon": "flag.pl",
-          "text": "participatingCountries.list.9.text"
-        },
-        {
           "icon": "flag.es",
-          "text": "participatingCountries.list.10.text"
+          "text": "participatingCountries.list.9.text"
         }
       ]
     }
@@ -204,15 +200,14 @@
       "thankYou.otherInformation.1.paragraphs.3": "Please particularly consider people who will not be notified directly by the app since they don't own a smartphone, or haven't installed the app.",
       "thankYou.otherInformation.1.paragraphs.4": "Even when you no longer have any symptoms and you feel well again, you could still be infectious.",
       "participatingCountries.list.1.text": "Belgium",
-      "participatingCountries.list.2.text": "Belgium",
-      "participatingCountries.list.3.text": "Belgium",
-      "participatingCountries.list.4.text": "Belgium",
-      "participatingCountries.list.5.text": "Belgium",
-      "participatingCountries.list.6.text": "Belgium",
-      "participatingCountries.list.7.text": "Belgium",
-      "participatingCountries.list.8.text": "Belgium",
-      "participatingCountries.list.9.text": "Belgium",
-      "participatingCountries.list.10.text": "Belgium"
+      "participatingCountries.list.2.text": "Croatia",
+      "participatingCountries.list.3.text": "Denmark",
+      "participatingCountries.list.4.text": "Germany",
+      "participatingCountries.list.5.text": "Ireland",
+      "participatingCountries.list.6.text": "Latvia",
+      "participatingCountries.list.7.text": "Netherlands",
+      "participatingCountries.list.8.text": "Poland",
+      "participatingCountries.list.9.text": "Spain"
     },
     "nl": {
       "standard.preventiveMeasures.1.text": "Was je handen regelmatig en grondig, met water en zeep.",
@@ -248,16 +243,15 @@
       "thankYou.otherInformation.1.paragraphs.2": "De dienst volksgezondheid zal je vragen een lijst op te stellen van mensen met wie je contact hebt gehad. Noteer iedereen met wie je gedurende meer dan 15 minuten nauw contact hebt gehad (minder dan 2 meter, persoonlijk gesprek) in de twee dagen voordat je symptomen ontwikkelde.",
       "thankYou.otherInformation.1.paragraphs.3": "Denk vooral aan mensen die niet rechtstreeks door de app op de hoogte worden gesteld, omdat ze geen smartphone hebben of de app niet hebben geïnstalleerd.",
       "thankYou.otherInformation.1.paragraphs.4": "Zelfs als je geen symptomen meer hebt en zich weer goed voelt, kan je nog steeds besmettelijk zijn.",
-      "participatingCountries.list.1.text": "Belgium",
-      "participatingCountries.list.2.text": "Belgium",
-      "participatingCountries.list.3.text": "Belgium",
-      "participatingCountries.list.4.text": "Belgium",
-      "participatingCountries.list.5.text": "Belgium",
-      "participatingCountries.list.6.text": "Belgium",
-      "participatingCountries.list.7.text": "Belgium",
-      "participatingCountries.list.8.text": "Belgium",
-      "participatingCountries.list.9.text": "Belgium",
-      "participatingCountries.list.10.text": "Belgium"
+      "participatingCountries.list.1.text": "België",
+      "participatingCountries.list.2.text": "Kroatië",
+      "participatingCountries.list.3.text": "Denemarken",
+      "participatingCountries.list.4.text": "Duitsland",
+      "participatingCountries.list.5.text": "Ierland",
+      "participatingCountries.list.6.text": "Litouwen",
+      "participatingCountries.list.7.text": "Nederland",
+      "participatingCountries.list.8.text": "Polen",
+      "participatingCountries.list.9.text": "Spanje"
     },
     "fr": {
       "standard.preventiveMeasures.1.text": "Lavez-vous les mains régulièrement et soigneusement avec de l'eau et du savon.",
@@ -293,16 +287,15 @@
       "thankYou.otherInformation.1.paragraphs.2": "Votre autorité de santé publique vous demandera d'établir une liste des personnes avec lesquelles vous avez été en contact. Cette liste doit inclure toutes les personnes avec lesquelles vous avez été en contact étroit (moins de 2 mètres, conversation en face à face) pendant plus de 15 minutes au cours des deux jours précédant l'apparition des symptômes.",
       "thankYou.otherInformation.1.paragraphs.3": "Veuillez considérer tout particulièrement les personnes qui ne seront pas directement averties par l'application puisqu'elles ne possèdent pas de smartphone ou n'ont pas installé l'application.",
       "thankYou.otherInformation.1.paragraphs.4": "Même si vous n'avez plus de symptômes et que vous vous sentez bien, vous pouvez toujours être contagieux. ",
-      "participatingCountries.list.1.text": "Belgium",
-      "participatingCountries.list.2.text": "Belgium",
-      "participatingCountries.list.3.text": "Belgium",
-      "participatingCountries.list.4.text": "Belgium",
-      "participatingCountries.list.5.text": "Belgium",
-      "participatingCountries.list.6.text": "Belgium",
-      "participatingCountries.list.7.text": "Belgium",
-      "participatingCountries.list.8.text": "Belgium",
-      "participatingCountries.list.9.text": "Belgium",
-      "participatingCountries.list.10.text": "Belgium"
+      "participatingCountries.list.1.text": "Belgique",
+      "participatingCountries.list.2.text": "Croatie",
+      "participatingCountries.list.3.text": "Danemark",
+      "participatingCountries.list.4.text": "Allemagne",
+      "participatingCountries.list.5.text": "Irlande",
+      "participatingCountries.list.6.text": "Lituanie",
+      "participatingCountries.list.7.text": "Pays-Bas",
+      "participatingCountries.list.8.text": "Pologne",
+      "participatingCountries.list.9.text": "Espagne"
     },
     "de": {
       "standard.preventiveMeasures.1.text": "Waschen Sie Ihre Hände regelmäßig und gründlich mit Wasser und Seife.",
@@ -338,16 +331,15 @@
       "thankYou.otherInformation.1.paragraphs.2": "Ihre Gesundheitsbehörde wird Sie auffordern, eine Liste der Personen zu erstellen, mit denen Sie Kontakt gehabt haben, d.h., aller Personen, mit denen Sie in den zwei Tagen, bevor Symptome auftraten, länger als 15 Minuten engen Kontakt hatten (weniger als 2 Meter, Gespräch von Angesicht zu Angesicht).",
       "thankYou.otherInformation.1.paragraphs.3": "Bitte berücksichtigen Sie vor allem Personen, die nicht von der App informiert werden, da sie kein Handy haben oder die App nicht installiert haben.",
       "thankYou.otherInformation.1.paragraphs.4": "Auch wenn Sie keine Symptome aufweisen und sich wieder gesund fühlen, könnten Sie noch ansteckend sein.",
-      "participatingCountries.list.1.text": "Belgium",
-      "participatingCountries.list.2.text": "Belgium",
-      "participatingCountries.list.3.text": "Belgium",
-      "participatingCountries.list.4.text": "Belgium",
-      "participatingCountries.list.5.text": "Belgium",
-      "participatingCountries.list.6.text": "Belgium",
-      "participatingCountries.list.7.text": "Belgium",
-      "participatingCountries.list.8.text": "Belgium",
-      "participatingCountries.list.9.text": "Belgium",
-      "participatingCountries.list.10.text": "Belgium"
+      "participatingCountries.list.1.text": "Belgien",
+      "participatingCountries.list.2.text": "Kroatien",
+      "participatingCountries.list.3.text": "Dänemark",
+      "participatingCountries.list.4.text": "Deutschland",
+      "participatingCountries.list.5.text": "Irland",
+      "participatingCountries.list.6.text": "Litauen",
+      "participatingCountries.list.7.text": "Niederlande",
+      "participatingCountries.list.8.text": "Polen",
+      "participatingCountries.list.9.text": "Spanien"
     }
   }
 }
