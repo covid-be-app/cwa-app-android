@@ -34,7 +34,7 @@ object DiagnosisKeyService {
      * @param keysToReport - KeyList in the Server Format to submit to the Server
      */
     suspend fun asyncSubmitKeys(
-        keysToReport: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
+        keysToReport: List<KeyExportFormat.TemporaryExposureKey>
     ) {
         Timber.d("Diagnosis Keys will be submitted.")
         val k = LocalData.k() ?: throw IllegalStateException()

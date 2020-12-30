@@ -97,19 +97,25 @@ class WebRequestBuilder(
         }
     }
 
-    suspend fun asyncGetDateIndex(): List<String> = withContext(Dispatchers.IO) {
+    suspend fun asyncGetRegionIndex(): List<String> = withContext(Dispatchers.IO) {
         return@withContext distributionService
-            .getDateIndex(DiagnosisKeyConstants.AVAILABLE_DATES_URL).toList()
+            .getRegionIndex(DiagnosisKeyConstants.AVAILABLE_REGION_URL).toList()
     }
 
-    suspend fun asyncGetHourIndex(day: Date): List<String> = withContext(Dispatchers.IO) {
+    suspend fun asyncGetDateIndex(region: String): List<String> = withContext(Dispatchers.IO) {
         return@withContext distributionService
-            .getHourIndex(
-                DiagnosisKeyConstants.AVAILABLE_DATES_URL +
-                        "/${day.toServerFormat()}/${DiagnosisKeyConstants.HOUR}"
-            )
-            .toList()
+            .getDateIndex(DiagnosisKeyConstants.availableDatesForRegionUrl(region)).toList()
     }
+
+    suspend fun asyncGetHourIndex(region: String, day: Date): List<String> =
+        withContext(Dispatchers.IO) {
+            return@withContext distributionService
+                .getHourIndex(
+                    DiagnosisKeyConstants.AVAILABLE_DATES_URL +
+                            "/${day.toServerFormat()}/${DiagnosisKeyConstants.HOUR}"
+                )
+                .toList()
+        }
 
     /**
      * Retrieves Key Files from the Server based on a URL
@@ -232,7 +238,7 @@ class WebRequestBuilder(
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addAllKeys(keyList)
-            .setPadding(ByteString.copyFromUtf8(fakeKeyPadding))
+            .setRequestPadding(ByteString.copyFromUtf8(fakeKeyPadding))
             .build()
         submissionService.submitKeys(
             DiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
@@ -273,15 +279,18 @@ class WebRequestBuilder(
         t3: String,
         resultChannel: Int,
         onsetSymptomsDate: String?,
-        keyList: List<Pair<KeyExportFormat.TemporaryExposureKey, String>>
+        keys: List<KeyExportFormat.TemporaryExposureKey>
     ) = withContext(Dispatchers.IO) {
-        Timber.d("Writing ${keyList.size} Keys to the Submission Payload.")
+        Timber.d("Writing ${keys.size} Keys to the Submission Payload.")
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .addAllKeys(keyList.map { it.first })
-            .addAllCountries(keyList.map { it.second })
-            .setPadding(getPadding(keyList.size))
+            .addAllKeys(keys)
+            .setRequestPadding(getPadding(keys.size))
+            .setOrigin("BE")
+            .setConsentToFederation(true)
             .build()
+
+        Timber.d(submissionPayload.toString())
 
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
@@ -315,8 +324,9 @@ class WebRequestBuilder(
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
             .addKeys(key)
-            .addCountries("BEL")
-            .setPadding(getPadding(1))
+            .setRequestPadding(getPadding(1))
+            .setOrigin("BE")
+            .setConsentToFederation(true)
             .build()
 
         val fakeTestId = MobileTestId.generate(Date())
@@ -350,7 +360,7 @@ class WebRequestBuilder(
             requestPadding(SubmissionConstants.fakeKeySize * fakeKeyCount)
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
-            .setPadding(ByteString.copyFromUtf8(fakeKeyPadding))
+            .setRequestPadding(ByteString.copyFromUtf8(fakeKeyPadding))
             .build()
 
         submissionService.submitKeys(

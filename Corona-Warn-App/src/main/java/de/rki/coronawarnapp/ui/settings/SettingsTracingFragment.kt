@@ -9,6 +9,7 @@ import android.view.accessibility.AccessibilityEvent
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSettingsTracingBinding
 import de.rki.coronawarnapp.exception.ExceptionCategory
@@ -16,12 +17,12 @@ import de.rki.coronawarnapp.exception.reporting.report
 import de.rki.coronawarnapp.nearby.InternalExposureNotificationClient
 import de.rki.coronawarnapp.nearby.InternalExposureNotificationPermissionHelper
 import de.rki.coronawarnapp.storage.LocalData
+import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.ui.main.MainActivity
 import de.rki.coronawarnapp.ui.viewmodel.SettingsViewModel
 import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
 import de.rki.coronawarnapp.util.DialogHelper
 import de.rki.coronawarnapp.util.ExternalActionHelper
-import de.rki.coronawarnapp.util.IGNORE_CHANGE_TAG
 import de.rki.coronawarnapp.util.PowerManagementHelper
 import de.rki.coronawarnapp.util.formatter.formatTracingSwitchEnabled
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
@@ -101,11 +102,20 @@ class SettingsTracingFragment : Fragment(),
         val bluetooth = binding.settingsTracingStatusBluetooth.tracingStatusCardButton
         val connection = binding.settingsTracingStatusConnection.tracingStatusCardButton
         val location = binding.settingsTracingStatusLocation.tracingStatusCardButton
+
+        val interoperability = binding.settingsInteroperabilityRow.settingsPlainRow
+        interoperability.setOnClickListener {
+            findNavController().doNavigate(
+                SettingsTracingFragmentDirections
+                    .actionSettingsTracingFragmentToInteropCountryConfigurationFragment()
+            )
+        }
+
         internalExposureNotificationPermissionHelper =
             InternalExposureNotificationPermissionHelper(this, this)
         switch.setOnCheckedChangeListener { _, _ ->
             // Make sure that listener is called by user interaction
-            if (switch.tag != IGNORE_CHANGE_TAG) {
+            if (switch.isPressed || row.isPressed) {
                 startStopTracing()
                 // Focus on the body text after to announce the tracing status for accessibility reasons
                 binding.settingsTracingSwitchRow.settingsSwitchRowHeaderBody

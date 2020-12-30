@@ -47,7 +47,7 @@ object DynamicTextsService {
     }
 
     private fun readDefaultDynamicTexts(context: Context): DynamicTexts {
-        val bufferedReader = context.assets.open("dynamicTexts.json").bufferedReader()
+        val bufferedReader = context.assets.open("dynamicTextsV2.json").bufferedReader()
         val dynamicTexts = gson.fromJson(
             bufferedReader
                 .use { it.readText() },
@@ -59,7 +59,7 @@ object DynamicTextsService {
     }
 
     suspend fun fetchDynamicTexts(context: Context): DynamicTexts {
-        val file = File("${context.filesDir}/dynamicTexts.json")
+        val file = File("${context.filesDir}/dynamicTextsV2.json")
 
         return try {
 
