@@ -272,22 +272,18 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
     /**
      * Executes the API_SUBMISSION Transaction State
      *
-     * We currently use Batch Size 1 and thus submit multiple times to the API.
-     * This means that instead of directly submitting all files at once, we have to split up
-     * our file list as this equals a different batch for Google every time.
+     * Sending all files at once because of google quota
      */
     private suspend fun executeAPISubmission(
         token: String,
         exportFiles: Collection<File>,
         exposureConfiguration: ExposureConfiguration?
     ) = executeState(API_SUBMISSION) {
-        exportFiles.forEach { batch ->
-            InternalExposureNotificationClient.asyncProvideDiagnosisKeys(
-                listOf(batch),
-                exposureConfiguration,
-                token
-            )
-        }
+        InternalExposureNotificationClient.asyncProvideDiagnosisKeys(
+            exportFiles,
+            exposureConfiguration,
+            token
+        )
         Timber.d("Diagnosis Keys provided successfully, Token: $token")
     }
 
