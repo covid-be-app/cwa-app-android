@@ -51,6 +51,7 @@ import timber.log.Timber
 import java.io.File
 import java.util.Calendar
 import java.util.Date
+import java.util.TimeZone
 import java.util.UUID
 import kotlin.math.max
 import be.sciensano.coronalert.http.service.SubmissionService as BeSubmissionService
@@ -304,7 +305,7 @@ class WebRequestBuilder(
         val fakeKeyCount = SubmissionConstants.minKeyCountForSubmission - 1
         Timber.d("Writing $fakeKeyCount Dummy Keys to the Submission Payload.")
 
-        val cal = Calendar.getInstance()
+        val cal = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
         cal.set(Calendar.HOUR, 0)
         cal.set(Calendar.MINUTE, 0)
 
@@ -319,7 +320,7 @@ class WebRequestBuilder(
             )
             .setRollingStartIntervalNumber((cal.time.time / 60 / 1000 / 10).toInt())
             .setRollingPeriod(144)
-            .setTransmissionRiskLevel(0)
+            .setTransmissionRiskLevel(1)
             .build()
 
         val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
