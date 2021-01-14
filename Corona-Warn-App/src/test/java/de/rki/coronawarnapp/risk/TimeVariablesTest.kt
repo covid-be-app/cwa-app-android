@@ -14,7 +14,7 @@ class TimeVariablesTest {
 
     @Test
     fun getTransactionTimeout() {
-        Assert.assertEquals(TimeVariables.getTransactionTimeout(), 60000L)
+        Assert.assertEquals(TimeVariables.getTransactionTimeout(), 300000L)
     }
 
     @Test
@@ -24,7 +24,10 @@ class TimeVariablesTest {
 
     @Test
     fun getDefaultRetentionPeriodInMS() {
-        Assert.assertEquals(TimeVariables.getDefaultRetentionPeriodInMS(), 14.toLong().daysToMilliseconds())
+        Assert.assertEquals(
+            TimeVariables.getDefaultRetentionPeriodInMS(),
+            14.toLong().daysToMilliseconds()
+        )
     }
 
     @Test
