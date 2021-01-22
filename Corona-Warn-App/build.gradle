@@ -256,7 +256,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.1.1'
-    implementation 'androidx.work:work-runtime-ktx:2.5.0-beta01'
+    implementation 'androidx.work:work-runtime-ktx:2.5.0-rc01'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation 'androidx.annotation:annotation:1.1.0'
 
