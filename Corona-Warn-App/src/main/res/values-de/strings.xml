@@ -637,14 +637,38 @@
     <string name="information_data_transfer_headline">Verwenden Sie mobile Daten für Zufallscode-Downloads.</string>
     <string name="information_data_transfer_body">"Zufallscodes über mobile Daten herunterladen. Wenn diese Option deaktiviert ist, werden die Zufallscodes nur über Wifi heruntergeladen. "</string>
     <string name="information_data_transfer_switch">Mobile Daten verwenden</string>
-  <string name="information_data_transfer_switch_off">Nur Wifi</string>
-  <string name="information_data_transfer_switch_on">Wifi und mobile Daten</string>
+    <string name="information_data_transfer_switch_off">Nur Wifi</string>
+    <string name="information_data_transfer_switch_on">Wifi und mobile Daten</string>
     <string name="settings_interoperability_title">Transnationale Expositionsprotokollierung</string>
-  <string name="interoperability_configuration_title">Transnationale Expositionsprotokollierung</string>
-  <string name="settings_interoperability_subtitle">Teilnehmende Länder</string>
-  <string name="interoperability_configuration_first_section">Mehrere Länder arbeiten zusammen, um transnationale Warnungen über einen gemeinsamen Austauschserver zu ermöglichen. Beispielsweise können Kontakte zu Benutzern einer offiziellen Coronavirus-App aus anderen teilnehmenden Ländern auch für die Expositionsprotokollierung berücksichtigt werden.</string>
+    <string name="interoperability_configuration_title">Transnationale Expositionsprotokollierung</string>
+    <string name="settings_interoperability_subtitle">Teilnehmende Länder</string>
+    <string name="interoperability_configuration_first_section">Mehrere Länder arbeiten zusammen, um transnationale Warnungen über einen gemeinsamen Austauschserver zu ermöglichen. Beispielsweise können Kontakte zu Benutzern einer offiziellen Coronavirus-App aus anderen teilnehmenden Ländern auch für die Expositionsprotokollierung berücksichtigt werden.</string>
     <string name="interoperability_configuration_list_title">Die folgenden Länder beteiligen sich derzeit an der transnationalen Expositionserfassung:</string>
-  <string name="interoperability_configuration_information">Die Datenschutzerklärung der App (einschließlich Informationen zur Datenverarbeitung für die transnationale Expositionsprotokollierungsfunktion) finden Sie im Menü unter \"App-Informationen\"> \"Datenschutz\".</string>
-  <string name="interoperability_configuration_second_section">Zu diesem Zweck lädt die App jeden Tag eine Liste der zufälligen IDs aller Benutzer herunter, die einen positiven Test hatten und beschlossen haben, andere Benutzer durch Weitergabe ihrer zufälligen IDs zu informieren. Diese Liste wird dann mit den zufälligen IDs verglichen, die von Ihrem Smartphone aufgezeichnet wurden. Sie können diese Liste über WLAN herunterladen. Andernfalls wird ein Teil Ihres mobilen Datenbudgets verbraucht. Beachten Sie, dass dies zu Inroaming-Gebühren führen kann, wenn Sie die EU verlassen.</string>
-  <string name="interoperability_title">Transnationale Expositionsprotokollierung</string>
+    <string name="interoperability_configuration_information">Die Datenschutzerklärung der App (einschließlich Informationen zur Datenverarbeitung für die transnationale Expositionsprotokollierungsfunktion) finden Sie im Menü unter \"App-Informationen\"> \"Datenschutz\".</string>
+    <string name="interoperability_configuration_second_section">Zu diesem Zweck lädt die App jeden Tag eine Liste der zufälligen IDs aller Benutzer herunter, die einen positiven Test hatten und beschlossen haben, andere Benutzer durch Weitergabe ihrer zufälligen IDs zu informieren. Diese Liste wird dann mit den zufälligen IDs verglichen, die von Ihrem Smartphone aufgezeichnet wurden. Sie können diese Liste über WLAN herunterladen. Andernfalls wird ein Teil Ihres mobilen Datenbudgets verbraucht. Beachten Sie, dass dies zu Inroaming-Gebühren führen kann, wenn Sie die EU verlassen.</string>
+    <string name="interoperability_title">Transnationale Expositionsprotokollierung</string>
+
+
+    <string name="tools_card_body">Entdecken Sie verschiedene Tools, um die aktuellen COVID-Maßnahmen zu berücksichtigen</string>
+    <string name="tools_card_title">Toolbox</string>
+    <string name="tools_title">Toolbox</string>
+
+    <string name="tools_vaccination_information">Impfinformatik</string>
+    <string name="tools_test_reservation">Testreservering</string>
+    <string name="tools_quarantine_certification">Quarantäne-Zertifikat</string>
+    <string name="tools_passenger_locator_form">Passagier-Lokalisierungsformular</string>
+    <string name="tools_declaration_of_honour">Notwendige Reise - Ehrenwörtliche Erklärung</string>
+    <string name="tools_test_center">Finden Sie ein Testzentrum</string>
+
+    <string name="tools_vaccination_information_title">Impfinformatik</string>
+    <string name="tools_test_reservation_title">Testreservering</string>
+    <string name="tools_quarantine_certification_title">Zertifikat</string>
+    <string name="tools_passenger_locator_form_title">POF</string>
+    <string name="tools_declaration_of_honour_title">Erklärung</string>
+
+    <string name="tools_epidemiological_situation">COVID-19 Epidemiologische Situation</string>
+    <string name="tools_register_to_be_vaccinated">Registrieren Sie sich, um geimpft zu werden</string>
+
+    <string name="tools_book_a_test">Testreservering</string>
+    <string name="tools_book_a_test_in_brussels">Buchen Sie einen Test in Brüssel</string>
 </resources>

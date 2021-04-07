@@ -332,6 +332,10 @@ class MainFragment : Fragment() {
         binding.mainHeaderOptionsMenu.buttonIcon.setOnClickListener {
             showPopup(it)
         }
+
+        binding.tools.toolsCard.setOnClickListener {
+            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToToolsFragment())
+        }
     }
 
     private fun toSubmissionResult() {

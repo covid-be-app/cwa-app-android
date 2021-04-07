@@ -661,6 +661,43 @@
     <string name="interoperability_configuration_information">"The app’s privacy notice (including information about the data processing carried out for the transnational exposure logging feature) can be found in the menu under “App Information” &gt; “Data Privacy”."</string>
 
     <!-- XACT: interoperability (eu) - illustraction description, explanation image -->
-    <string name="interoperability_eu_illustration_description">"A hand holds a smartphone. Europe and the European flag are illustrated in the background."</string>
+    <string name="interoperability_eu_illustration_description" translatable="false">"A hand holds a smartphone. Europe and the European flag are illustrated in the background."</string>
 
+    <string name="tools_card_body">Discover several tools to respect current COVID-measures</string>
+    <string name="tools_card_title">Toolbox</string>
+    <string name="tools_title">Toolbox</string>
+
+    <string name="tools_vaccination_information">Vaccination Information</string>
+    <string name="tools_test_reservation">Test Reservation</string>
+    <string name="tools_quarantine_certification">Quarantine certificate</string>
+    <string name="tools_passenger_locator_form">Passenger Locator Form</string>
+    <string name="tools_declaration_of_honour">Essential Travel - Sworn Statement</string>
+    <string name="tools_test_center">Find a test center</string>
+
+    <string name="tools_vaccination_information_title">Vaccination</string>
+    <string name="tools_test_reservation_title">Test Reservation</string>
+    <string name="tools_quarantine_certification_title">Certificate</string>
+    <string name="tools_passenger_locator_form_title">PLF</string>
+    <string name="tools_declaration_of_honour_title">Sworn Statement</string>
+
+    <string name="tools_epidemiological_situation">COVID-19 Epidemiological Situation</string>
+    <string name="tools_register_to_be_vaccinated">Register to be vaccinated</string>
+
+    <string name="tools_book_a_test">Book a Test</string>
+    <string name="tools_book_a_test_in_brussels">Book a Test in Brussels</string>
+
+    <string name="tools_quarantine_certification_nl" translatable="false">Quarantaine certificaat</string>
+    <string name="tools_quarantine_certification_bxl" translatable="false">Quarantine certificate</string>
+    <string name="tools_quarantine_certification_wall" translatable="false">Certificat de Quarantaine</string>
+    <string name="tools_quarantine_certification_de" translatable="false">Quarantäne-Zertifikat</string>
+
+    <string name="tools_passenger_locator_form_fr" translatable="false">Formulaire de Localisation du Passager</string>
+    <string name="tools_passenger_locator_form_en" translatable="false">Passenger Locator Form</string>
+    <string name="tools_passenger_locator_form_nl" translatable="false">Passenger Locator Form</string>
+    <string name="tools_passenger_locator_form_de" translatable="false">Passagier-Lokalisierungsformular</string>
+
+    <string name="tools_declaration_of_honour_fr" translatable="false">Déclaration sur l\’honneur</string>
+    <string name="tools_declaration_of_honour_en" translatable="false">Sworn Statement</string>
+    <string name="tools_declaration_of_honour_nl" translatable="false">Verklaring op eer</string>
+    <string name="tools_declaration_of_honour_de" translatable="false">Ehrenwörtliche Erklärung</string>
 </resources>
