@@ -48,10 +48,16 @@ class CachedKeyFileHolderTest {
         val date = Date()
 
         coEvery { keyCacheRepository.getDates() } returns listOf()
+        coEvery { keyCacheRepository.getHours() } returns listOf()
         coEvery { keyCacheRepository.getFilesFromEntries() } returns listOf()
-        every { CachedKeyFileHolder["isLast3HourFetchEnabled"]() } returns false
         every { CachedKeyFileHolder["checkForFreeSpace"]() } returns Unit
-        every { CachedKeyFileHolder["getDatesForRegionsFromServer"]() } returns arrayListOf<String>()
+        every { CachedKeyFileHolder["getDatesForRegionsFromServer"]() } returns arrayListOf<Pair<String, String>>()
+        every {
+            CachedKeyFileHolder["getHoursForRegionsFromServer"](
+                any<List<String>>(),
+                any<Date>()
+            )
+        } returns arrayListOf<Pair<String, String>>()
 
         runBlocking {
 
@@ -59,11 +65,26 @@ class CachedKeyFileHolderTest {
 
             coVerifyOrder {
                 CachedKeyFileHolder.asyncFetchFiles(date)
+
                 CachedKeyFileHolder["getDatesForRegionsFromServer"]()
+                CachedKeyFileHolder["getHoursForRegionsFromServer"](
+                    any<List<String>>(),
+                    any<Date>()
+                )
+
                 keyCacheRepository.deleteOutdatedEntries(any())
+
                 CachedKeyFileHolder["getMissingDaysForRegionsFromDiff"](arrayListOf<Pair<String, String>>())
                 keyCacheRepository.getDates()
+
+                CachedKeyFileHolder["getMissingHoursForRegionsFromDiff"](
+                    arrayListOf<Pair<String, String>>(),
+                    any<Date>()
+                )
+                keyCacheRepository.getHours()
+
                 keyCacheRepository.getFilesFromEntries()
+
             }
         }
     }

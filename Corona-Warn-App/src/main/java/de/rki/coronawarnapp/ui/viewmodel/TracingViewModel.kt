@@ -15,6 +15,7 @@ import de.rki.coronawarnapp.timer.TimerHelper
 import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction
 import de.rki.coronawarnapp.transaction.RiskLevelTransaction
 import de.rki.coronawarnapp.util.ConnectivityHelper
+import de.rki.coronawarnapp.worker.BackgroundConstants.DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY
 import kotlinx.coroutines.launch
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -70,10 +71,15 @@ class TracingViewModel : ViewModel() {
                     DateTimeZone.UTC
                 )
 
-                // check if the keys were not already retrieved today
-                val keysWereNotRetrievedToday =
-                    LocalData.lastTimeDiagnosisKeysFromServerFetch() == null ||
-                            currentDate.withTimeAtStartOfDay() != lastFetch.withTimeAtStartOfDay()
+                // check if the keys were not already retrieved
+                val keysWereNotRetrieved =
+                    (LocalData.lastTimeDiagnosisKeysFromServerFetch() == null ||
+                            lastFetch.isBefore(
+                                currentDate.minusHours(
+                                    DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY
+                                )
+                            )
+                            )
 
                 // check if the network is enabled to make the server fetch
                 val isNetworkEnabled =
@@ -84,11 +90,11 @@ class TracingViewModel : ViewModel() {
                 val isBackgroundJobEnabled =
                     ConnectivityHelper.autoModeEnabled(CoronaWarnApplication.getAppContext())
 
-                Timber.v("Keys were not retrieved today $keysWereNotRetrievedToday")
+                Timber.v("Keys were not retrieved $keysWereNotRetrieved")
                 Timber.v("Network is enabled $isNetworkEnabled")
                 Timber.v("Background jobs are enabled $isBackgroundJobEnabled")
 
-                if (keysWereNotRetrievedToday && isNetworkEnabled && isBackgroundJobEnabled) {
+                if (keysWereNotRetrieved && isNetworkEnabled && isBackgroundJobEnabled) {
                     TracingRepository.isRefreshing.value = true
 
                     // start the fetching and submitting of the diagnosis keys
