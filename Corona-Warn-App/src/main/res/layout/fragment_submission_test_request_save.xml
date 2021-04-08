@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/submission_intro_illustration_description"
                     android:focusable="true"
-                    android:src="@drawable/ic_illustration_test"
+                    android:src="@drawable/ic_illustration_test_code"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/submission_test_request_save_header" />
