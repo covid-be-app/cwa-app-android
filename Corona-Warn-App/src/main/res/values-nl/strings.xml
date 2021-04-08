@@ -637,14 +637,37 @@
     <string name="information_data_transfer_headline">Gebruik mobiele netwerken voor willekeurige ID-downloads.</string>
     <string name="information_data_transfer_body">"Download willekeurige ID's over mobiele netwerken. Als deze optie is uitgeschakeld, worden de ID's alleen via Wifi gedownload. "</string>
     <string name="information_data_transfer_switch">Gebruik mobiele netwerken</string>
-  <string name="information_data_transfer_switch_off">Enkel Wifi</string>
-  <string name="information_data_transfer_switch_on">Wifi en Mobiele Data</string>
+    <string name="information_data_transfer_switch_off">Enkel Wifi</string>
+    <string name="information_data_transfer_switch_on">Wifi en Mobiele Data</string>
     <string name="settings_interoperability_title">Transnationale blootstellingsregistratie</string>
-  <string name="interoperability_configuration_title">Transnationale blootstellingsregistratie</string>
-  <string name="settings_interoperability_subtitle">Deelnemende landen</string>
-  <string name="interoperability_configuration_first_section">Verschillende landen werken samen om transnationale alerts mogelijk te maken via een gezamenlijke uitwisselingsserver. Zo kunnen ook contacten met gebruikers van een officiële coronavirus-app uit andere deelnemende landen in aanmerking worden genomen voor exposure logging.</string>
-  <string name="interoperability_configuration_list_title">De volgende landen nemen momenteel deel aan transnationale blootstellingsregistratie:</string>
-  <string name="interoperability_configuration_information">De privacyverklaring van de app (inclusief informatie over de gegevensverwerking die wordt uitgevoerd voor de transnationale blootstellingsregistratiefunctie) is te vinden in het menu onder \'Informatie app\'> \'Privacyverklaring\'.</string>
-  <string name="interoperability_configuration_second_section">Voor dit doel downloadt de app elke dag een lijst met willekeurige ID\'s van alle gebruikers die een positieve test hebben ondergaan en die hebben besloten andere gebruikers te informeren door hun willekeurige ID\'s te delen. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die door uw smartphone zijn geregistreerd. U kunt ervoor kiezen om deze lijst via wifi te downloaden; anders wordt een deel van uw mobiele gegevensbudget verbruikt. Houd er rekening mee dat dit kan leiden tot roamingkosten als u de EU verlaat.</string>
-  <string name="interoperability_title">Transnationale blootstellingsregistratie</string>
+    <string name="interoperability_configuration_title">Transnationale blootstellingsregistratie</string>
+    <string name="settings_interoperability_subtitle">Deelnemende landen</string>
+    <string name="interoperability_configuration_first_section">Verschillende landen werken samen om transnationale alerts mogelijk te maken via een gezamenlijke uitwisselingsserver. Zo kunnen ook contacten met gebruikers van een officiële coronavirus-app uit andere deelnemende landen in aanmerking worden genomen voor exposure logging.</string>
+    <string name="interoperability_configuration_list_title">De volgende landen nemen momenteel deel aan transnationale blootstellingsregistratie:</string>
+    <string name="interoperability_configuration_information">De privacyverklaring van de app (inclusief informatie over de gegevensverwerking die wordt uitgevoerd voor de transnationale blootstellingsregistratiefunctie) is te vinden in het menu onder \'Informatie app\'> \'Privacyverklaring\'.</string>
+    <string name="interoperability_configuration_second_section">Voor dit doel downloadt de app elke dag een lijst met willekeurige ID\'s van alle gebruikers die een positieve test hebben ondergaan en die hebben besloten andere gebruikers te informeren door hun willekeurige ID\'s te delen. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die door uw smartphone zijn geregistreerd. U kunt ervoor kiezen om deze lijst via wifi te downloaden; anders wordt een deel van uw mobiele gegevensbudget verbruikt. Houd er rekening mee dat dit kan leiden tot roamingkosten als u de EU verlaat.</string>
+    <string name="interoperability_title">Transnationale blootstellingsregistratie</string>
+
+    <string name="tools_card_body">Ontdek verschillende tools om de huidige COVID-maatregelen te respecteren</string>
+    <string name="tools_card_title">Toolbox</string>
+    <string name="tools_title">Toolbox</string>
+
+    <string name="tools_vaccination_information">Vaccinatie-informatie</string>
+    <string name="tools_test_reservation">Testreservering</string>
+    <string name="tools_quarantine_certification">Quarantainecertificaat</string>
+    <string name="tools_passenger_locator_form">Passenger Locator Form</string>
+    <string name="tools_declaration_of_honour">Essentiële reis - Verklaring op eer</string>
+    <string name="tools_test_center">Zoek een testcentrum</string>
+
+    <string name="tools_vaccination_information_title">Vaccinatie</string>
+    <string name="tools_test_reservation_title">Testreservering</string>
+    <string name="tools_quarantine_certification_title">Certificaat</string>
+    <string name="tools_passenger_locator_form_title">PLF</string>
+    <string name="tools_declaration_of_honour_title">Verklaring op eer</string>
+
+    <string name="tools_epidemiological_situation">COVID-19 Epidemiologische situatie</string>
+    <string name="tools_register_to_be_vaccinated">Registreer om te worden gevaccineerd</string>
+
+    <string name="tools_book_a_test">Reserveer een test</string>
+    <string name="tools_book_a_test_in_brussels">Reserveer een test in Brussel</string>
 </resources>

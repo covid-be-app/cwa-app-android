@@ -44,6 +44,9 @@
         <action
             android:id="@+id/action_mainFragment_to_submissionTestRequestFragment"
             app:destination="@id/submissionTestRequestFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
     </fragment>
 
     <fragment
@@ -376,5 +379,25 @@
         <action
             android:id="@+id/action_interopCountryConfigurationFragment_to_settingTracingFragment"
             app:destination="@id/settingsTracingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="be.sciensano.coronalert.ui.tools.ToolsFragment"
+        android:label="ToolsFragment">
+
+        <action
+            android:id="@+id/action_toolsFragment_to_toolsChildrenFragment"
+            app:destination="@id/toolsChildrenFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsChildrenFragment"
+        android:name="be.sciensano.coronalert.ui.tools.ToolsChildrenFragment"
+        android:label="ToolsFragment">
+
+        <argument
+            android:name="tools"
+            app:argType="be.sciensano.coronalert.ui.tools.Tools" />
     </fragment>
 </navigation>
