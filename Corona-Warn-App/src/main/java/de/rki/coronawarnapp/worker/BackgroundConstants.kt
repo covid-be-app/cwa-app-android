@@ -135,4 +135,6 @@ object BackgroundConstants {
      * @see TimeUnit.DAYS
      */
     const val NUMBER_OF_DAYS_TO_RUN_PLAYBOOK = 0
+
+    const val DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY = 6
 }

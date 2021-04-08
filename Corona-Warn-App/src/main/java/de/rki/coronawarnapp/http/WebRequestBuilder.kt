@@ -112,8 +112,7 @@ class WebRequestBuilder(
         withContext(Dispatchers.IO) {
             return@withContext distributionService
                 .getHourIndex(
-                    DiagnosisKeyConstants.AVAILABLE_DATES_URL +
-                            "/${day.toServerFormat()}/${DiagnosisKeyConstants.HOUR}"
+                    DiagnosisKeyConstants.availableHoursForRegionUrl(region, day.toServerFormat())
                 )
                 .toList()
         }
