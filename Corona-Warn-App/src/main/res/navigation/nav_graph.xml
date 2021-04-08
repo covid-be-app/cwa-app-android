@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_mainFragment_to_toolsFragment"
             app:destination="@id/toolsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_linkTestInfoFragment"
+            app:destination="@id/linkTestInfoFragment" />
     </fragment>
 
     <fragment
@@ -400,4 +403,9 @@
             android:name="tools"
             app:argType="be.sciensano.coronalert.ui.tools.Tools" />
     </fragment>
+    <fragment
+        android:id="@+id/linkTestInfoFragment"
+        android:name="be.sciensano.coronalert.ui.LinkTestInfoFragment"
+        android:label="LinkTestInfoFragment" />
+
 </navigation>

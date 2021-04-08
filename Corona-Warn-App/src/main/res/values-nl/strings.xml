@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Gegevens worden opgehaald ...</string>
-    <string name="submission_status_card_title_unregistered">Ontvang je testresultaat</string>
+    <string name="submission_status_card_title_unregistered">Koppel je COVID-test aan de app</string>
     <string name="submission_status_card_title_pending">Uw resultaat is nog niet beschikbaar</string>
     <string name="submission_status_card_title_available">Uw resultaat is beschikbaar</string>
     <string name="submission_status_card_title_positive">Positieve diagnose</string>
     <string name="submission_status_card_subtitle_invalid">Ongeldige test</string>
     <string name="submission_status_card_subtitle_negative">Negatieve diagnose</string>
     <string name="submission_status_card_body_fetching">Je resultaat wordt bijgewerkt</string>
-    <string name="submission_status_card_body_unregistered">Genereer de code om je testresultaat op je smartphone te ontvangen</string>
+    <string name="submission_status_card_body_unregistered">Genereer de code en stuur deze door naar de behandelaar, vul het online webformulier in of gebruik de sms om uw testresultaat te koppelen aan de app.</string>
     <string name="submission_status_card_body_pending">De evaluatie van je test is nog niet afgerond.</string>
     <string name="submission_status_card_body_invalid">Uw test kon niet geëvalueerd worden.</string>
     <string name="submission_status_card_body_positive">U testte positief op SARS-CoV-2.</string>
     <string name="submission_status_card_body_negative">U testte negatief op SARS-CoV-2.</string>
-    <string name="submission_status_card_button_unregistered">Genereer de code</string>
+    <string name="submission_status_card_button_unregistered">Ik ga een COVID test doen</string>
     <string name="submission_status_card_button_show_results">Toon de test</string>
     <string name="submission_status_card_positive_result_subtitle">Let op:</string>
     <string name="submission_status_card_positive_result_contagious">U bent besmettelijk. Ga in zelfisolatie.</string>
@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Neen</string>
     <string name="submission_test_request_headline">Genereer de code</string>
     <string name="submission_test_request_text">Kies de datum waarop je symptomen begon te krijgen.</string>
-    <string name="submission_test_request_save_text">Laat dit nummer en de datum zien aan de arts of het laboratorium dat de test zal uitvoeren om je smartphone aan de test te koppelen.\nAls u een PCR-code heeft ontvangen, voer je dit nummer en de gegevens in het webformulier in.</string>
+    <string name="submission_test_request_save_text">Laat dit nummer en de datum zien aan de arts of het laboratorium dat de test uitvoert om uw smartphone aan de test te koppelen.</string>
     <string name="submission_test_request_save_button_save">Sluit</string>
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als je op een van de onderstaande datums niet in België was en je deze informatie (anoniem) wilt delen, selecteer dan het land dat je op die datum hebt bezocht. Tik op de lijn die je wilt wijzigen.</string>
@@ -670,4 +670,16 @@
 
     <string name="tools_book_a_test">Reserveer een test</string>
     <string name="tools_book_a_test_in_brussels">Reserveer een test in Brussel</string>
+
+    <string name="submission_status_card_body_unregistered_warning">Dit vereist een handmatige handeling vanwege anonimiteitsredenen</string>
+    <string name="submission_status_card_button_registered">Ik heb al een COVID-test gedaan</string>
+    <string name="link_test_info_title">Ik heb al een COVID-test gedaan</string>
+    <string name="link_test_info_intro">3 mogelijkheden om uw test te koppelen</string>
+    <string-array name="link_test_info_bullets">
+        <item>Ik heb een test gedaan en mijn arts of laboratorium heeft de 17 cijfers van de Coronalert-app correct ingevoerd. U hoeft niets te doen.</item>
+        <item>U heeft of krijgt een sms. Klik op de link en vul het webformulier in.</item>
+        <item>Ga direct naar het webformulier om de 2 codes handmatig in te voeren.</item>
+    </string-array>
+    <string name="submission_test_request_save_headline">Geef deze code op voor uw COVID-testreservering</string>
+    <string name="submission_test_request_save_explanation">Probeer zoveel mogelijk dit nummer door te geven aan de arts die de test voorschrijft, maar wees gerust, als u vergeet, heeft u de middelen om het te doen via een webformulier als u een activatiecode hebt, of per sms als uw test is gerelateerd aan een CPTC-account.</string>
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="de.rki.coronawarnapp.util.formatter.FormatterSubmissionHelper" />
     </data>
 
@@ -46,6 +47,35 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/submission_test_request_save_header" />
+
+                <TextView
+                    android:id="@+id/submission_test_request_save_headline_text"
+                    style="@style/headline5"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:focusable="true"
+                    android:text="@string/submission_test_request_save_headline"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_intro_hero_illustration" />
+
+                <TextView
+                    android:id="@+id/submission_test_request_save_text"
+                    style="@style/subtitle"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:focusable="true"
+                    android:text="@string/submission_test_request_save_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_request_save_headline_text" />
 
                 <TextView
                     android:id="@+id/submission_test_request_save_date_label"
@@ -100,8 +130,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +137,7 @@
                     tools:text="64658-91203-67952-49" />
 
                 <TextView
-                    android:id="@+id/submission_test_request_save_text"
+                    android:id="@+id/submission_test_request_save_text_2"
                     style="@style/subtitle"
                     android:layout_width="@dimen/match_constraint"
                     android:layout_height="wrap_content"
@@ -117,10 +145,12 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="24dp"
                     android:focusable="true"
-                    android:text="@string/submission_test_request_save_text"
+                    android:text="@string/submission_test_request_save_explanation"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/submission_intro_hero_illustration" />
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_request_save_code" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
