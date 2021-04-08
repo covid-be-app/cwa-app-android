@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Datenabruf…</string>
-    <string name="submission_status_card_title_unregistered">Erhalten Sie Ihr Testergebnis</string>
+    <string name="submission_status_card_title_unregistered">Verknüpfen Sie Ihren COVID-Test mit der App</string>
     <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
     <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
     <string name="submission_status_card_title_positive">Befund positiv</string>
     <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
     <string name="submission_status_card_subtitle_negative">Befund negativ</string>
     <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
-    <string name="submission_status_card_body_unregistered">Generieren Sie den Code, um Ihr Testergebnis auf Ihrem Smartphone zu erhalten</string>
+    <string name="submission_status_card_body_unregistered">Generieren Sie den Code und senden Sie ihn an den Praktiker, füllen Sie das Online-Webformular aus oder verwenden Sie die SMS, um Ihr Testergebnis mit der App zu verknüpfen.</string>
     <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
     <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
     <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
     <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
-    <string name="submission_status_card_button_unregistered">Generieren Sie den Code</string>
+    <string name="submission_status_card_button_unregistered">Ich werde einen COVID-Test machen</string>
     <string name="submission_status_card_button_show_results">Test anzeigen</string>
     <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
     <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Nein</string>
     <string name="submission_test_request_headline">Generieren Sie den Code</string>
     <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
-    <string name="submission_test_request_save_text">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführen wird, um Ihr Smartphone mit dem Test zu verbinden.\nWenn Sie einen PCR-Code erhalten haben, geben Sie diese Nummer und Daten in das Webformular ein.</string>
+    <string name="submission_test_request_save_text">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführt, um Ihr Smartphone mit dem Test zu verbinden.</string>
     <string name="submission_test_request_save_button_save">Schließen</string>
     <string name="submission_countries_selection_headline">Länder wählen</string>
     <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
@@ -671,4 +671,16 @@
 
     <string name="tools_book_a_test">Testreservering</string>
     <string name="tools_book_a_test_in_brussels">Buchen Sie einen Test in Brüssel</string>
+
+    <string name="submission_status_card_body_unregistered_warning">Dies erfordert aus Gründen der Anonymität eine manuelle Aktion</string>
+    <string name="submission_status_card_button_registered">COVID-Test bereits durchgeführt</string>
+    <string name="link_test_info_title">COVID-Test bereits durchgeführt</string>
+    <string name="link_test_info_intro">3 Möglichkeiten, Ihren Test zu verknüpfen</string>
+    <string-array name="link_test_info_bullets">
+        <item>Ich habe einen Test durchgeführt und mein Arzt oder Labor hat die 17 Ziffern der Coronalert-App korrekt eingegeben. Du musst nichts tun.</item>
+        <item>Sie haben eine SMS erhalten oder werden diese erhalten. Klicken Sie auf den Link und füllen Sie das Webformular aus.</item>
+        <item>Gehen Sie direkt zum Webformular, um die 2 Codes manuell zu codieren.</item>
+    </string-array>
+    <string name="submission_test_request_save_headline">Geben Sie diesen Code für Ihre COVID-Testreservierung an</string>
+    <string name="submission_test_request_save_explanation">Versuchen Sie so viel wie möglich, diese Nummer an den Arzt zu übermitteln, der den Test verschreibt. Seien Sie jedoch versichert, wenn Sie vergessen, dass Sie die Möglichkeit haben, dies entweder per Webformular zu tun, wenn Sie einen CPR-Code haben, oder per SMS, wenn Ihr Test durchgeführt wird im Zusammenhang mit einem CPTC-Konto.</string>
 </resources>
