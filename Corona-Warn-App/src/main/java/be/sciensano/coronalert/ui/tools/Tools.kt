@@ -78,7 +78,7 @@ data class QuarantineCertificate(
 @Parcelize
 data class PassengerLocatorForm(
     override val illustrationRes: Int = R.drawable.ic_tools_passenger_locator_form_illustration,
-    override val titleRes: Int = R.string.tools_quarantine_certification_title,
+    override val titleRes: Int = R.string.tools_passenger_locator_form_title,
     override val children: List<ToolsChildren> = listOf(
         ToolsChildren(
             "https://travel.info-coronavirus.be/nl/public-health-passenger-locator-form",
