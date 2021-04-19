@@ -680,4 +680,7 @@
     </string-array>
     <string name="submission_test_request_save_headline">Utilisez ce code pour enregistrer votre test dans l’application</string>
     <string name="submission_test_request_save_explanation">Montrez ce numéro et cette date au médecin ou au laboratoire effectuant le test pour relier votre smartphone au test.</string>
+    <string name="submission_test_result_warning_others_title">Voulez-vous avertir vos contacts?</string>
+    <string name="submission_test_result_warning_others_positive">Oui</string>
+    <string name="submission_test_result_warning_others_negative">Non</string>
 </resources>

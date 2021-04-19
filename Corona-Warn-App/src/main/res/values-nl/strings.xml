@@ -680,4 +680,7 @@
     </string-array>
     <string name="submission_test_request_save_headline">Gebruik deze code om jouw test te registreren in de app</string>
     <string name="submission_test_request_save_explanation">Laat dit nummer en de datum zien aan de arts of het laboratorium dat de test uitvoert om uw smartphone aan de test te koppelen.</string>
+    <string name="submission_test_result_warning_others_title">Wil je anderen waarschuwen?</string>
+    <string name="submission_test_result_warning_others_positive">Ja</string>
+    <string name="submission_test_result_warning_others_negative">Neen</string>
 </resources>
