@@ -53,24 +53,24 @@ data class QuarantineCertificate(
     override val titleRes: Int = R.string.tools_quarantine_certification_title,
     override val children: List<ToolsChildren> = listOf(
         ToolsChildren(
-            "https://www.zorg-en-gezondheid.be/testen-isoleren-en-quarantaine",
+            "https://quarantaine.info-coronavirus.be/nl",
             R.string.tools_quarantine_certification_nl,
             "NL"
         ),
         ToolsChildren(
-            "https://coronavirus.brussels/en/home-2/",
-            R.string.tools_quarantine_certification_bxl,
-            "BXL"
-        ),
-        ToolsChildren(
-            "https://covid.aviq.be/fr/testing-particuliers",
+            "https://quarantaine.info-coronavirus.be/fr",
             R.string.tools_quarantine_certification_wall,
-            "WALL"
+            "FR"
         ),
         ToolsChildren(
-            "https://www.ostbelgienlive.be/desktopdefault.aspx/tabid-6711/",
+            "https://quarantaine.info-coronavirus.be/de",
             R.string.tools_quarantine_certification_de,
             "DE"
+        ),
+        ToolsChildren(
+            "https://quarantaine.info-coronavirus.be/en",
+            R.string.tools_quarantine_certification_bxl,
+            "EN"
         ),
     )
 ) : Tools
