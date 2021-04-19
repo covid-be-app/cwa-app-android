@@ -77,6 +77,7 @@
             android:layout_marginTop="@dimen/spacing_normal"
             android:layout_marginEnd="@dimen/card_padding"
             android:layout_marginBottom="@dimen/card_padding"
+            android:backgroundTint="@color/card_unknown"
             android:text="@string/submission_status_card_button_registered"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
