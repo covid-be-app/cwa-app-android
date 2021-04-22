@@ -77,13 +77,6 @@ class ToolsFragment : Fragment() {
             )
         }
 
-        binding.toolsDeclarationOfHonour.mainRow.setOnClickListener {
-            findNavController().navigate(
-                ToolsFragmentDirections.actionToolsFragmentToToolsChildrenFragment(
-                    DeclarationOfHonour()
-                )
-            )
-        }
         binding.toolsTestCenter.mainRow.setOnClickListener {
             startActivity(
                 Intent(

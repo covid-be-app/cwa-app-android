@@ -656,14 +656,12 @@
     <string name="tools_test_reservation">Testreservering</string>
     <string name="tools_quarantine_certification">Quarantainecertificaat</string>
     <string name="tools_passenger_locator_form">Passenger Locator Form</string>
-    <string name="tools_declaration_of_honour">Essentiële reis - Verklaring op eer</string>
     <string name="tools_test_center">Zoek een testcentrum</string>
 
     <string name="tools_vaccination_information_title">Vaccinatie</string>
     <string name="tools_test_reservation_title">Testreservering</string>
     <string name="tools_quarantine_certification_title">Certificaat</string>
     <string name="tools_passenger_locator_form_title">PLF</string>
-    <string name="tools_declaration_of_honour_title">Verklaring op eer</string>
 
     <string name="tools_epidemiological_situation">COVID-19 Epidemiologische situatie</string>
     <string name="tools_register_to_be_vaccinated">Registreer voor de reservelijst</string>

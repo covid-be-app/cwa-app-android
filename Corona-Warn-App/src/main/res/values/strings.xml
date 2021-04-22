@@ -671,14 +671,12 @@
     <string name="tools_test_reservation">Test Reservation</string>
     <string name="tools_quarantine_certification">Quarantine certificate</string>
     <string name="tools_passenger_locator_form">Passenger Locator Form</string>
-    <string name="tools_declaration_of_honour">Essential Travel - Sworn Statement</string>
     <string name="tools_test_center">Find a test center</string>
 
     <string name="tools_vaccination_information_title">Vaccination</string>
     <string name="tools_test_reservation_title">Test Reservation</string>
     <string name="tools_quarantine_certification_title">Certificate</string>
     <string name="tools_passenger_locator_form_title">PLF</string>
-    <string name="tools_declaration_of_honour_title">Sworn Statement</string>
 
     <string name="tools_epidemiological_situation">COVID-19 Epidemiological Situation</string>
     <string name="tools_register_to_be_vaccinated">Register to the reserve list</string>
@@ -695,11 +693,6 @@
     <string name="tools_passenger_locator_form_en" translatable="false">Passenger Locator Form</string>
     <string name="tools_passenger_locator_form_nl" translatable="false">Passenger Locator Form</string>
     <string name="tools_passenger_locator_form_de" translatable="false">Passagier-Lokalisierungsformular</string>
-
-    <string name="tools_declaration_of_honour_fr" translatable="false">Déclaration sur l\’honneur</string>
-    <string name="tools_declaration_of_honour_en" translatable="false">Sworn Statement</string>
-    <string name="tools_declaration_of_honour_nl" translatable="false">Verklaring op eer</string>
-    <string name="tools_declaration_of_honour_de" translatable="false">Ehrenwörtliche Erklärung</string>
 
     <string name="submission_status_card_body_unregistered_warning">This requires a manual action due to anonymity of the app</string>
     <string name="submission_status_card_button_registered">I already did my COVID-test</string>

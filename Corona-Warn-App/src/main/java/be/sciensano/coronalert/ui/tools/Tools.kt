@@ -103,31 +103,3 @@ data class PassengerLocatorForm(
         ),
     )
 ) : Tools
-
-@Parcelize
-data class DeclarationOfHonour(
-    override val illustrationRes: Int = R.drawable.ic_tools_declaration_of_honour_illustration,
-    override val titleRes: Int = R.string.tools_declaration_of_honour_title,
-    override val children: List<ToolsChildren> = listOf(
-        ToolsChildren(
-            "https://travel.info-coronavirus.be/nl/essentiele-reis",
-            R.string.tools_declaration_of_honour_nl,
-            "NL"
-        ),
-        ToolsChildren(
-            "https://travel.info-coronavirus.be/fr/voyage-essentiel",
-            R.string.tools_declaration_of_honour_fr,
-            "FR"
-        ),
-        ToolsChildren(
-            "https://travel.info-coronavirus.be/essential-travel-sworn-statement",
-            R.string.tools_declaration_of_honour_en,
-            "EN"
-        ),
-        ToolsChildren(
-            "https://travel.info-coronavirus.be/de/notwendige-reise-ehrenwortliche-erklarung",
-            R.string.tools_declaration_of_honour_de,
-            "DE"
-        ),
-    )
-) : Tools

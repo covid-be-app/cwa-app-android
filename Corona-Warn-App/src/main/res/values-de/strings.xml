@@ -657,14 +657,12 @@
     <string name="tools_test_reservation">Testreservierung</string>
     <string name="tools_quarantine_certification">Quarantäne-Zertifikat</string>
     <string name="tools_passenger_locator_form">Passagier-Lokalisierungsformular</string>
-    <string name="tools_declaration_of_honour">Notwendige Reise - Ehrenwörtliche Erklärung</string>
     <string name="tools_test_center">Finden Sie ein Testzentrum</string>
 
     <string name="tools_vaccination_information_title">Informationen zur Impfung</string>
     <string name="tools_test_reservation_title">Testreservierung</string>
     <string name="tools_quarantine_certification_title">Zertifikat</string>
     <string name="tools_passenger_locator_form_title">PLF</string>
-    <string name="tools_declaration_of_honour_title">Erklärung</string>
 
     <string name="tools_epidemiological_situation">COVID-19 Epidemiologische Situation</string>
     <string name="tools_register_to_be_vaccinated">Registrieren Sie sich für die Reserveliste</string>
