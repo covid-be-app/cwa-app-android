@@ -241,7 +241,7 @@
     <string name="onboarding_onboarding_accessibility_title">Onboarding pagina 1 van 5: Samen krijgen we het coronavirus klein</string>
     <string name="onboarding_headline">Samen krijgen we het coronavirus klein</string>
     <string name="onboarding_subtitle">Bescherm uzelf en ons allemaal. Gebruik Coronalert, zo kunnen we de infectieketens sneller doorbreken.</string>
-    <string name="onboarding_body">Maak van je toestel een corona-waarschuwingssysteem. Je krijgt een overzicht van uw risicostatus en krijgt te horen of je de voorbije 14 dagen nauw contact hebt gehad met mensen die een COVID-19-diagnose hebben gekregen.</string>
+    <string name="onboarding_body">Maak van je toestel een corona-waarschuwingssysteem. Je krijgt een overzicht van je risicostatus en krijgt te horen of je de voorbije 14 dagen nauw contact hebt gehad met mensen die een COVID-19-diagnose hebben gekregen. \n\nDe app registreert contacten tussen mensen. Hun toestellen wisselen willekeurige versleutelde ID\'s uit, maar hebben geen toegang tot persoonlijke gegevens.</string>
     <string name="onboarding_body_emphasized">De app registreert contacten tussen mensen. Hiervoor worden gecodeerde willekeurige ID\'s uitgewisseld tussen hun toestellen. Er is op geen enkel moment toegang tot persoonlijke gegevens.</string>
     <string name="onboarding_illustration_description">Officiële logo’s van de federale overheid, de Vlaamse overheid, het Waals Gewest, Het Brussels Hoofdstedelijk Gewest en de Duitstalige Gemeenschap.</string>
     <string name="onboarding_privacy_accessibility_title">Onboarding pagina 2 van 5: Privacy van gegevens. Er volgt een lange tekst. Gebruik de knop onderaan het scherm om op elk moment verder te gaan.</string>
@@ -482,14 +482,14 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Gegevens worden opgehaald ...</string>
-    <string name="submission_status_card_title_unregistered">Koppel je COVID-test aan de app</string>
+    <string name="submission_status_card_title_unregistered">Ontvang je testresultaat in jouw app</string>
     <string name="submission_status_card_title_pending">Uw resultaat is nog niet beschikbaar</string>
     <string name="submission_status_card_title_available">Uw resultaat is beschikbaar</string>
     <string name="submission_status_card_title_positive">Positieve diagnose</string>
     <string name="submission_status_card_subtitle_invalid">Ongeldige test</string>
     <string name="submission_status_card_subtitle_negative">Negatieve diagnose</string>
     <string name="submission_status_card_body_fetching">Je resultaat wordt bijgewerkt</string>
-    <string name="submission_status_card_body_unregistered">Genereer de code en stuur deze door naar de behandelaar, vul het online webformulier in of gebruik de sms om uw testresultaat te koppelen aan de app.</string>
+    <string name="submission_status_card_body_unregistered"></string>
     <string name="submission_status_card_body_pending">De evaluatie van je test is nog niet afgerond.</string>
     <string name="submission_status_card_body_invalid">Uw test kon niet geëvalueerd worden.</string>
     <string name="submission_status_card_body_positive">U testte positief op SARS-CoV-2.</string>
@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Neen</string>
     <string name="submission_test_request_headline">Genereer de code</string>
     <string name="submission_test_request_text">Kies de datum waarop je symptomen begon te krijgen.</string>
-    <string name="submission_test_request_save_text">Laat dit nummer en de datum zien aan de arts of het laboratorium dat de test uitvoert om uw smartphone aan de test te koppelen.</string>
+    <string name="submission_test_request_save_text">Gelieve deze code aan de arts te geven want dit is noodzakelijk om je testresultaat aan de app te linken. Dit gebeurt niet automatisch vanwege het anonieme karakter van de app. Indien je dit vergeet, kan je het webformulier invullen.</string>
     <string name="submission_test_request_save_button_save">Sluit</string>
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als je op een van de onderstaande datums niet in België was en je deze informatie (anoniem) wilt delen, selecteer dan het land dat je op die datum hebt bezocht. Tik op de lijn die je wilt wijzigen.</string>
@@ -626,7 +626,7 @@
     <string name="activity_link_test_error_title">Fout</string>
     <string name="activity_link_test_error_button_positive">Opnieuw proberen</string>
     <string name="activity_link_test_error_button_negative">Annuleren</string>
-    <string name="test_linked_dialog_title">Test succesvol gekoppeld</string>
+    <string name="test_linked_dialog_title"></string>
     <string name="test_linked_dialog_body">Je test is succesvol gekoppeld aan je smartphone. Vanaf nu kan je je testresultaat ontvangen in Coronalert.</string>
     <string name="test_linked_dialog_button_positive">OK</string>
     <string name="submission_done_reset_dialog_title">App Reset</string>
@@ -642,17 +642,17 @@
     <string name="settings_interoperability_title">Transnationale blootstellingsregistratie</string>
     <string name="interoperability_configuration_title">Transnationale blootstellingsregistratie</string>
     <string name="settings_interoperability_subtitle">Deelnemende landen</string>
-    <string name="interoperability_configuration_first_section">Verschillende landen werken samen om transnationale alerts mogelijk te maken via een gezamenlijke uitwisselingsserver. Zo kunnen ook contacten met gebruikers van een officiële coronavirus-app uit andere deelnemende landen in aanmerking worden genomen voor exposure logging.</string>
+    <string name="interoperability_configuration_first_section">Verschillende landen werken samen om transnationale alerts mogelijk te maken. Zo kunnen ook contacten met gebruikers van een officiële coronavirus-app uit andere deelnemende landen meegenomen bij de berekening van jouw besmettingsrisico.</string>
     <string name="interoperability_configuration_list_title">De volgende landen nemen momenteel deel aan transnationale blootstellingsregistratie:</string>
     <string name="interoperability_configuration_information">De privacyverklaring van de app (inclusief informatie over de gegevensverwerking die wordt uitgevoerd voor de transnationale blootstellingsregistratiefunctie) is te vinden in het menu onder \'Informatie app\'> \'Privacyverklaring\'.</string>
     <string name="interoperability_configuration_second_section">Voor dit doel downloadt de app elke dag een lijst met willekeurige ID\'s van alle gebruikers die een positieve test hebben ondergaan en die hebben besloten andere gebruikers te informeren door hun willekeurige ID\'s te delen. Deze lijst wordt vervolgens vergeleken met de willekeurige ID\'s die door uw smartphone zijn geregistreerd. U kunt ervoor kiezen om deze lijst via wifi te downloaden; anders wordt een deel van uw mobiele gegevensbudget verbruikt. Houd er rekening mee dat dit kan leiden tot roamingkosten als u de EU verlaat.</string>
     <string name="interoperability_title">Transnationale blootstellingsregistratie</string>
 
-    <string name="tools_card_body">Ontdek verschillende tools om de huidige COVID-maatregelen te respecteren</string>
+    <string name="tools_card_body">Ontdek verschillende tools in de strijd tegen COVID-19</string>
     <string name="tools_card_title">Toolbox</string>
     <string name="tools_title">Toolbox</string>
 
-    <string name="tools_vaccination_information">Vaccinatie-informatie</string>
+    <string name="tools_vaccination_information">Informatie Vaccinatie</string>
     <string name="tools_test_reservation">Testreservering</string>
     <string name="tools_quarantine_certification">Quarantainecertificaat</string>
     <string name="tools_passenger_locator_form">Passenger Locator Form</string>
@@ -666,9 +666,9 @@
     <string name="tools_declaration_of_honour_title">Verklaring op eer</string>
 
     <string name="tools_epidemiological_situation">COVID-19 Epidemiologische situatie</string>
-    <string name="tools_register_to_be_vaccinated">Registreer om te worden gevaccineerd</string>
+    <string name="tools_register_to_be_vaccinated">Registreer voor de reservelijst</string>
 
-    <string name="tools_book_a_test">Reserveer een test</string>
+    <string name="tools_book_a_test">Reserveer een testmoment</string>
     <string name="tools_book_a_test_in_brussels">Reserveer een test in Brussel</string>
 
     <string name="submission_status_card_body_unregistered_warning">Dit vereist een handmatige handeling vanwege anonimiteitsredenen</string>
@@ -680,6 +680,6 @@
         <item>U heeft of krijgt een sms. Klik op de link en vul het webformulier in.</item>
         <item>Ga direct naar het webformulier om de 2 codes handmatig in te voeren.</item>
     </string-array>
-    <string name="submission_test_request_save_headline">Geef deze code op voor uw COVID-testreservering</string>
+    <string name="submission_test_request_save_headline">Gebruik deze code om jouw test te registreren in de app</string>
     <string name="submission_test_request_save_explanation">Probeer zoveel mogelijk dit nummer door te geven aan de arts die de test voorschrijft, maar wees gerust, als u vergeet, heeft u de middelen om het te doen via een webformulier als u een activatiecode hebt, of per sms als uw test is gerelateerd aan een CPTC-account.</string>
 </resources>
