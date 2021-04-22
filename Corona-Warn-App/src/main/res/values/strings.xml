@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">No</string>
     <string name="submission_test_request_headline">Generate the code</string>
     <string name="submission_test_request_text">Select the date on which you started having symptoms.</string>
-    <string name="submission_test_request_save_text">Please give this code to the doctor. This is necessary to link your test to the app. This requires a manual action due to anonymity of the app. If you have forgotten to give the code, you can use the webform.</string>
+    <string name="submission_test_request_save_text">Please give this code to the doctor. This is necessary to link your test to the app. This requires a manual action due to anonymity of the app. If you have forgotten to give the code, you can use the webform.\n\nhttps://coronalert.be/en/corona-alert-form/</string>
     <string name="submission_test_request_save_button_save">Close</string>
     <string name="submission_countries_selection_headline">Select countries</string>
     <string name="submission_countries_selection_text">For each of the below dates, if you have not been in Belgium and you would like to share this information (anonymously), please select the country you visited on that date by tapping the line you want to change</string>
@@ -704,5 +704,5 @@
         <item>Go directly to the webform to encode the 2 codes manually.</item>
     </string-array>
     <string name="submission_test_request_save_headline">Use this code to register your test into the app</string>
-    <string name="submission_test_request_save_explanation">Try as much as possible to transmit this number to the doctor who prescribes the test, but rest assured, if you forget you will have the means to do it either by webform if you have a CPR code, or by SMS if your test is related to a CPTC account.</string>
+    <string name="submission_test_request_save_explanation">Show this number and date to the doctor or lab performing the test to link your smartphone to the test.</string>
 </resources>

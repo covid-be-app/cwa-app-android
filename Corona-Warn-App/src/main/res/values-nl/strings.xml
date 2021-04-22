@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Neen</string>
     <string name="submission_test_request_headline">Genereer de code</string>
     <string name="submission_test_request_text">Kies de datum waarop je symptomen begon te krijgen.</string>
-    <string name="submission_test_request_save_text">Gelieve deze code aan de arts te geven want dit is noodzakelijk om je testresultaat aan de app te linken. Dit gebeurt niet automatisch vanwege het anonieme karakter van de app. Indien je dit vergeet, kan je het webformulier invullen.</string>
+    <string name="submission_test_request_save_text">Gelieve deze code aan de arts te geven want dit is noodzakelijk om je testresultaat aan de app te linken. Dit gebeurt niet automatisch vanwege het anonieme karakter van de app. Indien je dit vergeet, kan je het webformulier invullen.\n\nhttps://coronalert.be/nl/coronalert-formulier/</string>
     <string name="submission_test_request_save_button_save">Sluit</string>
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als je op een van de onderstaande datums niet in België was en je deze informatie (anoniem) wilt delen, selecteer dan het land dat je op die datum hebt bezocht. Tik op de lijn die je wilt wijzigen.</string>
@@ -679,5 +679,5 @@
         <item>Ga direct naar het webformulier om de 2 codes handmatig in te voeren.</item>
     </string-array>
     <string name="submission_test_request_save_headline">Gebruik deze code om jouw test te registreren in de app</string>
-    <string name="submission_test_request_save_explanation">Probeer zoveel mogelijk dit nummer door te geven aan de arts die de test voorschrijft, maar wees gerust, als u vergeet, heeft u de middelen om het te doen via een webformulier als u een activatiecode hebt, of per sms als uw test is gerelateerd aan een CPTC-account.</string>
+    <string name="submission_test_request_save_explanation">Laat dit nummer en de datum zien aan de arts of het laboratorium dat de test uitvoert om uw smartphone aan de test te koppelen.</string>
 </resources>

@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Non</string>
     <string name="submission_test_request_headline">Générez le code</string>
     <string name="submission_test_request_text">Sélectionnez la date à laquelle vous avez commencé à avoir des symptômes.</string>
-    <string name="submission_test_request_save_text">Veuillez à transmettre ce code au médecin car ceci est nécessaire pour assurer le lien entre votre test et votre application. Le lien ne se fait pas automatiquement dû au caractère anonyme de Coronalert. Si vous oubliez de transmettre le code, vous pouvez remplir le webform suivant.</string>
+    <string name="submission_test_request_save_text">Veuillez à transmettre ce code au médecin car ceci est nécessaire pour assurer le lien entre votre test et votre application. Le lien ne se fait pas automatiquement dû au caractère anonyme de Coronalert. Si vous oubliez de transmettre le code, vous pouvez remplir le webform suivant.\n\nhttps://coronalert.be/fr/formulaire-coronalert/</string>
     <string name="submission_test_request_save_button_save">Fermer</string>
     <string name="submission_countries_selection_headline">Sélectionnez votre pays</string>
     <string name="submission_countries_selection_text">Si vous n\'étiez pas en Belgique à certaines des dates ci-dessous et que vous voulez partager cette information (de façon anonyme), veuillez sélectionner le pays dans lequel vous étiez à ces dates.</string>
@@ -680,5 +680,5 @@
         <item>Rendez-vous directement sur le webform pour encoder les 2 codes manuellement.</item>
     </string-array>
     <string name="submission_test_request_save_headline">Utilisez ce code pour enregistrer votre test dans l’application</string>
-    <string name="submission_test_request_save_explanation">Essayez autant que possible de transmettre ce numéro au médecin qui prescrit le test, mais rassurez-vous, si vous oubliez vous aurez le moyen de le faire soit par webform si vous avec un code CPR, soit par SMS si votre test est lié à un compte CPTC.</string>
+    <string name="submission_test_request_save_explanation">Montrez ce numéro et cette date au médecin ou au laboratoire effectuant le test pour relier votre smartphone au test.</string>
 </resources>

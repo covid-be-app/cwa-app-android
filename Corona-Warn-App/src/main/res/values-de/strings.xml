@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Nein</string>
     <string name="submission_test_request_headline">Generieren Sie den Code</string>
     <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
-    <string name="submission_test_request_save_text">Bitte geben Sie den Code zum Arzt, da dies notwendig ist Ihr Testergebnis für die App zu verknüpfen. Dies geschieht aufgrund der Anonymität der App nicht automatisch. Wenn Sie dies vergessen, können Sie Ihr Webformular ausfüllen.</string>
+    <string name="submission_test_request_save_text">Bitte geben Sie den Code zum Arzt, da dies notwendig ist Ihr Testergebnis für die App zu verknüpfen. Dies geschieht aufgrund der Anonymität der App nicht automatisch. Wenn Sie dies vergessen, können Sie Ihr Webformular ausfüllen.\n\nhttps://coronalert.be/de/coronalert-formular/</string>
     <string name="submission_test_request_save_button_save">Schließen</string>
     <string name="submission_countries_selection_headline">Länder wählen</string>
     <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
@@ -680,5 +680,5 @@
         <item>Gehen Sie direkt zum Webformular, um die 2 Codes manuell zu codieren.</item>
     </string-array>
     <string name="submission_test_request_save_headline">Verwenden Sie diesen Code, um Ihren Test in der App zu registrieren</string>
-    <string name="submission_test_request_save_explanation">Versuchen Sie so viel wie möglich, diese Nummer an den Arzt zu übermitteln, der den Test verschreibt. Seien Sie jedoch versichert, wenn Sie vergessen, dass Sie die Möglichkeit haben, dies entweder per Webformular zu tun, wenn Sie einen CPR-Code haben, oder per SMS, wenn Ihr Test durchgeführt wird im Zusammenhang mit einem CPTC-Konto.</string>
+    <string name="submission_test_request_save_explanation">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführt, um Ihr Smartphone mit dem Test zu verbinden.</string>
 </resources>
