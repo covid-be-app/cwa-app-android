@@ -44,16 +44,9 @@ class ExposureStateUpdateReceiver : BroadcastReceiver() {
                 )
             }
 
-            val token = LocalData.googleApiToken()
-
             val workManager = WorkManager.getInstance(context)
             workManager.enqueue(
                 OneTimeWorkRequest.Builder(ExposureStateUpdateWorker::class.java)
-                    .setInputData(
-                        Data.Builder()
-                            .putString(ExposureNotificationClient.EXTRA_TOKEN, token)
-                            .build()
-                    )
                     .build()
             )
         } catch (e: WrongReceiverException) {

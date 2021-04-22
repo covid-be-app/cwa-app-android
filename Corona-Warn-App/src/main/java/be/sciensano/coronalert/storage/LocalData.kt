@@ -144,3 +144,22 @@ fun LocalData.dataTransfer(value: Boolean) {
 fun LocalData.dataTransfer() =
     getSharedPreferenceInstance().getBoolean("data_transfer", true)
 
+fun LocalData.lastExposureDate(value: Long) {
+    getSharedPreferenceInstance().edit(true) {
+        putLong("last_exposure_date", value)
+    }
+}
+
+fun LocalData.lastExposureDate() =
+    getSharedPreferenceInstance().getLong("last_exposure_date", 0)
+
+
+fun LocalData.matchedKeyCount(value: Int) {
+    getSharedPreferenceInstance().edit(true) {
+        putInt("matched_key_count", value)
+    }
+}
+
+fun LocalData.matchedKeyCount() =
+    getSharedPreferenceInstance().getInt("matched_key_count", 0)
+

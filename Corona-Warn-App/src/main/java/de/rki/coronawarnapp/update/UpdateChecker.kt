@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat.startActivity
 import de.rki.coronawarnapp.BuildConfig
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.exception.ApplicationConfigurationCorruptException
-import de.rki.coronawarnapp.server.protocols.ApplicationConfigurationOuterClass
 import de.rki.coronawarnapp.service.applicationconfiguration.ApplicationConfigurationService
 import de.rki.coronawarnapp.ui.LauncherActivity
 import timber.log.Timber
@@ -69,30 +68,16 @@ class UpdateChecker(private val activity: LauncherActivity) {
         val applicationConfigurationFromServer =
             ApplicationConfigurationService.asyncRetrieveApplicationConfiguration()
 
-        val minVersionFromServer = applicationConfigurationFromServer.appVersion.android.min
-        val minVersionFromServerString =
-            constructSemanticVersionString(minVersionFromServer)
+        val minVersionFromServer = applicationConfigurationFromServer.minVersionCode
 
-        Timber.e(
-            "minVersionStringFromServer:%s", constructSemanticVersionString(
-                minVersionFromServer
-            )
+        Timber.i(
+            "Current app version:%s, server min version: %s",
+            BuildConfig.VERSION_CODE,
+            minVersionFromServer
         )
-        Timber.e("Current app version:%s", BuildConfig.VERSION_NAME)
 
-        val needsImmediateUpdate = VersionComparator.isVersionOlder(
-            BuildConfig.VERSION_NAME,
-            minVersionFromServerString
-        )
+        val needsImmediateUpdate = minVersionFromServer > BuildConfig.VERSION_CODE
         Timber.e("needs update:$needsImmediateUpdate")
         return needsImmediateUpdate
-    }
-
-    private fun constructSemanticVersionString(
-        semanticVersion: ApplicationConfigurationOuterClass.SemanticVersion
-    ): String {
-        return semanticVersion.major.toString() + "." +
-                semanticVersion.minor.toString() + "." +
-                semanticVersion.patch.toString()
     }
 }

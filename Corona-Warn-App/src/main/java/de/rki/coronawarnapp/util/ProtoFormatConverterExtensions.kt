@@ -7,7 +7,6 @@ import de.rki.coronawarnapp.server.protocols.AppleLegacyKeyExchange
 
 object ProtoFormatConverterExtensions {
 
-    private const val ROLLING_PERIOD = 144
     private const val DEFAULT_TRANSMISSION_RISK_LEVEL = 1
     private const val TRANSMISSION_RISK_DAY_0 = 5
     private const val TRANSMISSION_RISK_DAY_1 = 6
@@ -35,17 +34,15 @@ object ProtoFormatConverterExtensions {
     fun List<TemporaryExposureKey>.transformKeyHistoryToExternalFormat() =
         this.sortedWith(compareByDescending { it.rollingStartIntervalNumber })
             .mapIndexed { index, it ->
-                // The latest key we receive is from yesterday (i.e. 1 day ago),
-                // thus we need use index+1
                 val riskValue =
-                    if (index + 1 <= DEFAULT_TRANSMISSION_RISK_VECTOR.lastIndex)
-                        DEFAULT_TRANSMISSION_RISK_VECTOR[index + 1]
+                    if (index <= DEFAULT_TRANSMISSION_RISK_VECTOR.lastIndex)
+                        DEFAULT_TRANSMISSION_RISK_VECTOR[index]
                     else
                         DEFAULT_TRANSMISSION_RISK_LEVEL
                 KeyExportFormat.TemporaryExposureKey.newBuilder()
                     .setKeyData(ByteString.readFrom(it.keyData.inputStream()))
                     .setRollingStartIntervalNumber(it.rollingStartIntervalNumber)
-                    .setRollingPeriod(ROLLING_PERIOD)
+                    .setRollingPeriod(it.rollingPeriod)
                     .setTransmissionRiskLevel(riskValue)
                     .build()
             }

@@ -1,8 +1,11 @@
 package de.rki.coronawarnapp.storage
 
 import androidx.lifecycle.MutableLiveData
+import be.sciensano.coronalert.storage.lastExposureDate
+import be.sciensano.coronalert.storage.matchedKeyCount
 import de.rki.coronawarnapp.risk.RiskLevel
 import de.rki.coronawarnapp.risk.RiskLevelConstants
+import de.rki.coronawarnapp.util.TimeAndDateExtensions
 
 object RiskLevelRepository {
 
@@ -12,6 +15,16 @@ object RiskLevelRepository {
     val riskLevelScore = MutableLiveData(RiskLevelConstants.UNKNOWN_RISK_INITIAL)
     val riskLevelScoreLastSuccessfulCalculated =
         MutableLiveData(LocalData.lastSuccessfullyCalculatedRiskLevel().raw)
+
+
+    val matchedKeyCount = MutableLiveData(LocalData.matchedKeyCount())
+    val daysSinceLastExposure = MutableLiveData(
+        TimeAndDateExtensions.calculateDays(
+            LocalData.lastExposureDate(),
+            System.currentTimeMillis()
+        ).toInt()
+    )
+
 
     /**
      * Set the new calculated [RiskLevel]
@@ -102,4 +115,29 @@ object RiskLevelRepository {
             riskLevelScoreLastSuccessfulCalculated.postValue(riskLevel.raw)
         }
     }
+
+    fun setLastExposureDate(value: Long) {
+        LocalData.lastExposureDate(value)
+
+        daysSinceLastExposure.postValue(
+            TimeAndDateExtensions.calculateDays(
+                value,
+                System.currentTimeMillis()
+            ).toInt()
+        )
+    }
+
+    fun setMatchedKeyCount(value: Int) {
+        LocalData.matchedKeyCount(value)
+        matchedKeyCount.postValue(value)
+    }
+    
+    fun refreshLastExposureDate() {
+        setLastExposureDate(LocalData.lastExposureDate())
+    }
+
+    fun refreshMatchedKeyCount() {
+        setMatchedKeyCount(LocalData.matchedKeyCount())
+    }
+
 }

@@ -28,7 +28,6 @@ import be.sciensano.coronalert.http.service.StatisticsService
 import be.sciensano.coronalert.util.PaddingUtil.getPadding
 import com.google.protobuf.ByteString
 import com.google.protobuf.InvalidProtocolBufferException
-import de.rki.coronawarnapp.exception.ApplicationConfigurationCorruptException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationInvalidException
 import de.rki.coronawarnapp.http.requests.RegistrationRequest
 import de.rki.coronawarnapp.http.requests.RegistrationTokenRequest
@@ -36,7 +35,7 @@ import de.rki.coronawarnapp.http.requests.TanRequestBody
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
 import de.rki.coronawarnapp.http.service.VerificationService
-import de.rki.coronawarnapp.server.protocols.ApplicationConfigurationOuterClass.ApplicationConfiguration
+import de.rki.coronawarnapp.server.protocols.internal.v2.AppConfigAndroid
 import de.rki.coronawarnapp.service.diagnosiskey.DiagnosisKeyConstants
 import de.rki.coronawarnapp.service.submission.KeyType
 import de.rki.coronawarnapp.service.submission.SubmissionConstants
@@ -135,13 +134,14 @@ class WebRequestBuilder(
         return@withContext file
     }
 
-    suspend fun asyncGetApplicationConfigurationFromServer(): ApplicationConfiguration =
+    suspend fun asyncGetApplicationConfigurationFromServer(): AppConfigAndroid.ApplicationConfigurationAndroid =
         withContext(Dispatchers.IO) {
             var exportBinary: ByteArray? = null
             var exportSignature: ByteArray? = null
 
             distributionService.getApplicationConfiguration(
-                DiagnosisKeyConstants.COUNTRY_APPCONFIG_DOWNLOAD_URL
+//                "version/v1/app_config_android"
+                "https://svc90.main.px.t-online.de/version/v2/app_config_android"
             ).byteStream().unzip { entry, entryContent ->
                 if (entry.name == EXPORT_BINARY_FILE_NAME) exportBinary = entryContent.copyOf()
                 if (entry.name == EXPORT_SIGNATURE_FILE_NAME) exportSignature =
@@ -151,12 +151,14 @@ class WebRequestBuilder(
                 throw ApplicationConfigurationInvalidException()
             }
 
-            if (verificationKeys.hasInvalidSignature(exportBinary, exportSignature)) {
-                throw ApplicationConfigurationCorruptException()
-            }
+//            if (verificationKeys.hasInvalidSignature(exportBinary, exportSignature)) {
+//                throw ApplicationConfigurationCorruptException()
+//            }
 
             try {
-                return@withContext ApplicationConfiguration.parseFrom(exportBinary)
+                return@withContext AppConfigAndroid.ApplicationConfigurationAndroid.parseFrom(
+                    exportBinary
+                )
             } catch (e: InvalidProtocolBufferException) {
                 throw ApplicationConfigurationInvalidException()
             }
