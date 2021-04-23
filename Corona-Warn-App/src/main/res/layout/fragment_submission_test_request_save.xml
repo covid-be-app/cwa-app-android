@@ -145,6 +145,7 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="24dp"
                     android:focusable="true"
+                    android:autoLink="web"
                     android:text="@string/submission_test_request_save_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
