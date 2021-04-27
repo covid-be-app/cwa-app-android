@@ -1,6 +1,5 @@
 package de.rki.coronawarnapp.transaction
 
-import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import de.rki.coronawarnapp.nearby.InternalExposureNotificationClient
 import de.rki.coronawarnapp.service.applicationconfiguration.ApplicationConfigurationService
 import de.rki.coronawarnapp.storage.LocalData
@@ -36,8 +35,6 @@ class RetrieveDiagnosisKeysTransactionTest {
         coEvery {
             InternalExposureNotificationClient.asyncProvideDiagnosisKeys(
                 any(),
-                any(),
-                any()
             )
         } returns mockk()
         coEvery { ApplicationConfigurationService.asyncRetrieveExposureConfiguration() } returns mockk()
@@ -77,9 +74,7 @@ class RetrieveDiagnosisKeysTransactionTest {
                 RetrieveDiagnosisKeysTransaction["executeRetrieveRiskScoreParams"]()
                 RetrieveDiagnosisKeysTransaction["executeFetchKeyFilesFromServer"](any<Date>())
                 RetrieveDiagnosisKeysTransaction["executeAPISubmission"](
-                    any<String>(),
                     listOf(file),
-                    any<ExposureConfiguration>()
                 )
                 RetrieveDiagnosisKeysTransaction["executeFetchDateUpdate"](any<Date>())
             }

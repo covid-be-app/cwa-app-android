@@ -86,6 +86,7 @@ class DefaultRiskLevels : RiskLevels {
             .map { it.riskLevel }
             .firstOrNull()
 
+    @Suppress("ReturnCount")
     override fun calculateRisk(
         appConfig: ExposureWindowRiskCalculationConfig,
         exposureWindow: ExposureWindow
@@ -151,6 +152,7 @@ class DefaultRiskLevels : RiskLevels {
         )
     }
 
+    @Suppress("LongMethod")
     override fun aggregateResults(
         appConfig: ExposureWindowRiskCalculationConfig,
         exposureWindowResultMap: Map<ExposureWindow, RiskResult>

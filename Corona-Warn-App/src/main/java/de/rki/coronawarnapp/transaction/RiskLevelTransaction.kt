@@ -17,7 +17,6 @@ import de.rki.coronawarnapp.risk.RiskLevel.NO_CALCULATION_POSSIBLE_TRACING_OFF
 import de.rki.coronawarnapp.risk.RiskLevel.UNDETERMINED
 import de.rki.coronawarnapp.risk.RiskLevel.UNKNOWN_RISK_INITIAL
 import de.rki.coronawarnapp.risk.RiskLevel.UNKNOWN_RISK_OUTDATED_RESULTS
-import de.rki.coronawarnapp.risk.RiskLevel.UNKNOWN_RISK_OUTDATED_RESULTS_MANUAL
 import de.rki.coronawarnapp.risk.TimeVariables
 import de.rki.coronawarnapp.service.applicationconfiguration.ApplicationConfigurationService
 import de.rki.coronawarnapp.storage.LocalData
@@ -187,13 +186,6 @@ object RiskLevelTransaction : Transaction() {
         result = executeCheckUnknownRiskInitialNoKeys()
         if (isValidResult(result)) return@lockAndExecute
 
-        //no longer check for outdated result
-//        /****************************************************
-//         * CHECK [UNKNOWN_RISK_OUTDATED_RESULTS] CONDITIONS
-//         ****************************************************/
-//        result = executeCheckUnknownRiskOutdatedResults()
-//        if (isValidResult(result)) return@lockAndExecute
-
         /****************************************************
          * [CHECK_APP_CONNECTIVITY]
          ****************************************************/
@@ -211,7 +203,6 @@ object RiskLevelTransaction : Transaction() {
         /****************************************************
          * RETRIEVE EXPOSURE SUMMARY
          ****************************************************/
-//        val lastExposureSummary = executeRetrieveExposureSummary()
 
         val exposureWindows = executeRetrieveExposureWindows()
 
@@ -289,40 +280,6 @@ object RiskLevelTransaction : Transaction() {
         return@executeState UNDETERMINED
     }
 
-    /**
-     * Executes the [CHECK_UNKNOWN_RISK_OUTDATED] Transaction State
-     */
-    private suspend fun executeCheckUnknownRiskOutdatedResults(): RiskLevel =
-        executeState(CHECK_UNKNOWN_RISK_OUTDATED) {
-
-            // if the last calculation is longer in the past as the defined threshold we return the stale state
-            val timeSinceLastDiagnosisKeyFetchFromServer =
-                TimeVariables.getTimeSinceLastDiagnosisKeyFetchFromServer()
-                    ?: throw RiskLevelCalculationException(
-                        IllegalArgumentException("time since last exposure calculation is null")
-                    )
-
-            /** we only return outdated risk level if the threshold is reached AND the active tracing time is above the
-            defined threshold because [UNKNOWN_RISK_INITIAL] overrules [UNKNOWN_RISK_OUTDATED_RESULTS] */
-            if (timeSinceLastDiagnosisKeyFetchFromServer.millisecondsToHours() >
-                TimeVariables.getMaxStaleExposureRiskRange() && isActiveTracingTimeAboveThreshold()
-            ) {
-                if (ConnectivityHelper.autoModeEnabled(CoronaWarnApplication.getAppContext())) {
-                    return@executeState UNKNOWN_RISK_OUTDATED_RESULTS.also {
-                        Timber.v("diagnosis keys outdated and active tracing time is above threshold")
-                        Timber.v("manual mode not active (background jobs enabled)")
-                    }
-                } else {
-                    return@executeState UNKNOWN_RISK_OUTDATED_RESULTS_MANUAL.also {
-                        Timber.v("diagnosis keys outdated and active tracing time is above threshold")
-                        Timber.v("manual mode active (background jobs disabled)")
-                    }
-                }
-            }
-
-            Timber.v("$transactionId - CHECK_UNKNOWN_RISK_OUTDATED not applicable")
-            return@executeState UNDETERMINED
-        }
 
     /**
      * Executes the [CHECK_APP_CONNECTIVITY] Transaction State
@@ -355,18 +312,6 @@ object RiskLevelTransaction : Transaction() {
                 .also {
                     Timber.v(TAG, "$transactionId - retrieved configuration from backend")
                 }
-        }
-
-    /**
-     * Executes the [RETRIEVE_EXPOSURE_SUMMARY] Transaction State
-     */
-    private suspend fun executeRetrieveExposureSummary(): ExposureSummary =
-        executeState(RETRIEVE_EXPOSURE_SUMMARY) {
-            val exposureSummary = getNewExposureSummary()
-
-            return@executeState exposureSummary.also {
-                Timber.v(TAG, "$transactionId - get the exposure summary for further calculation")
-            }
         }
 
     private suspend fun executeRetrieveExposureWindows(): List<ExposureWindow> =
@@ -515,24 +460,6 @@ object RiskLevelTransaction : Transaction() {
             )
         }
         RiskLevelRepository.setRiskLevelScore(riskLevel)
-    }
-
-    /**
-     * If there is no persisted exposure summary we try to get a new one with the last persisted
-     * Google API token that was used in the [de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction]
-     *
-     * @return a exposure summary from the Google Exposure Notification API
-     */
-    private suspend fun getNewExposureSummary(): ExposureSummary {
-        val googleToken = LocalData.googleApiToken()
-            ?: throw RiskLevelCalculationException(IllegalStateException("exposure summary is not persisted"))
-
-        val exposureSummary =
-            InternalExposureNotificationClient.asyncGetExposureSummary(googleToken)
-
-        return exposureSummary.also {
-            Timber.v("$transactionId - generated new exposure summary with $googleToken")
-        }
     }
 
 
