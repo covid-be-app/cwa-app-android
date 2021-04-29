@@ -28,6 +28,7 @@ import be.sciensano.coronalert.http.service.StatisticsService
 import be.sciensano.coronalert.util.PaddingUtil.getPadding
 import com.google.protobuf.ByteString
 import com.google.protobuf.InvalidProtocolBufferException
+import de.rki.coronawarnapp.exception.ApplicationConfigurationCorruptException
 import de.rki.coronawarnapp.exception.ApplicationConfigurationInvalidException
 import de.rki.coronawarnapp.http.requests.RegistrationRequest
 import de.rki.coronawarnapp.http.requests.RegistrationTokenRequest
@@ -140,8 +141,7 @@ class WebRequestBuilder(
             var exportSignature: ByteArray? = null
 
             distributionService.getApplicationConfiguration(
-//                "version/v1/app_config_android"
-                "https://svc90.main.px.t-online.de/version/v2/app_config_android"
+                "version/v2/app_config_android"
             ).byteStream().unzip { entry, entryContent ->
                 if (entry.name == EXPORT_BINARY_FILE_NAME) exportBinary = entryContent.copyOf()
                 if (entry.name == EXPORT_SIGNATURE_FILE_NAME) exportSignature =
@@ -151,9 +151,9 @@ class WebRequestBuilder(
                 throw ApplicationConfigurationInvalidException()
             }
 
-//            if (verificationKeys.hasInvalidSignature(exportBinary, exportSignature)) {
-//                throw ApplicationConfigurationCorruptException()
-//            }
+            if (verificationKeys.hasInvalidSignature(exportBinary, exportSignature)) {
+                throw ApplicationConfigurationCorruptException()
+            }
 
             try {
                 return@withContext AppConfigAndroid.ApplicationConfigurationAndroid.parseFrom(
