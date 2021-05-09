@@ -151,7 +151,7 @@
     <string name="risk_card_button_enable_tracing">Activate Exposure Logging</string>
     <string name="risk_card_body_tracing_off">Activate exposure logging to evaluate your risk status today.</string>
     <string name="risk_card_low_risk_headline">Low Risk</string>
-    <string name="risk_card_increased_risk_headline">Higher Risk</string>
+    <string name="risk_card_increased_risk_headline">High Risk</string>
     <plurals name="risk_card_increased_risk_body_contact_last">
         <item quantity="one">%1$s day since the last encounter</item>
         <item quantity="other">%1$s days since the last encounter</item>
@@ -182,7 +182,7 @@
     <string name="main_overview_subtitle_risk">Risk of Infection</string>
     <string name="main_overview_body_risk">If you have had contact within the last 14 days with a person who was diagnosed with COVID-19, the app calculates your personal risk of infection. It does this by measuring duration and proximity of the exposure.</string>
     <string name="main_overview_subtitle_risk_levels">The following risk status can be shown:</string>
-    <string name="main_overview_subtitle_increased_risk">Higher Risk</string>
+    <string name="main_overview_subtitle_increased_risk">High Risk</string>
     <string name="main_overview_subtitle_low_risk">Low Risk</string>
     <string name="main_overview_subtitle_unknown_risk">Unknown Risk</string>
     <string name="main_overview_headline_test">Notifying Other Users</string>
@@ -271,7 +271,7 @@
     <string name="onboarding_notifications_accessibility_title">Onboarding page 5 of 5: Receive warnings and identify risks</string>
     <string name="onboarding_notifications_headline">Receive warnings and identify risks</string>
     <string name="onboarding_notifications_subtitle">The app can notify you automatically about your risk status and warn you about new infections of people you have been exposed to. Allow the app now to notify you.</string>
-    <string name="onboarding_notifications_body">You can then self-isolate to protect others and find out where you can get tested.</string>
+    <string name="onboarding_notifications_body">You can then self-quarantine to protect others and find out where you can get tested.</string>
     <string name="onboarding_notifications_illustration_description">A woman receives a notification from her Coronalert-App.</string>
     <string name="settings_title">Settings</string>
     <string name="settings_on">On</string>
@@ -409,7 +409,7 @@
     <string name="submission_test_result_pending_refresh_button">Update</string>
     <string name="submission_test_result_pending_remove_test_button">Delete Test</string>
     <string name="submission_test_result_negative_steps_negative_heading">Your Test Result</string>
-    <string name="submission_test_result_negative_steps_negative_body">The laboratory result indicates no verification that you have coronavirus SARS-CoV-2.\n\nPlease delete the test from Coronalert, so that you can save a new test code here if necessary.</string>
+    <string name="submission_test_result_negative_steps_negative_body">The laboratory result indicates no verification that you have coronavirus SARS-CoV-2.\n\nPlease delete the test from Coronalert, so that you can save a new test code here if necessary.\The test result will be removed automatically from your smartphone after 48 hours.</string>
     <string name="submission_test_result_negative_remove_test_button">Delete Test</string>
     <string name="submission_test_result_positive_steps_positive_heading">Your Test Result</string>
     <string name="submission_test_result_positive_steps_positive_body">Your test result was verified as positive.</string>
@@ -434,7 +434,7 @@
     <string name="submission_tan_accessibility_title"></string>
     <string name="submission_tan_error"></string>
     <string name="submission_tan_character_error"></string>
-    <string name="submission_intro_title">Receive my test</string>
+    <string name="submission_intro_title">Information</string>
     <string name="submission_intro_headline">This is how the Coronalert-App works</string>
     <string name="submission_intro_text">Since only encrypted random IDs are exchanged, you remain anonymous. You can now proceed as follows:</string>
     <string name="submission_intro_button_next">Next</string>
@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Data being retrieved....</string>
-    <string name="submission_status_card_title_unregistered">Receive your test result in the app</string>
+    <string name="submission_status_card_title_unregistered">Link your COVID-test to the app</string>
     <string name="submission_status_card_title_pending">Your result is not yet available</string>
     <string name="submission_status_card_title_available">Your result is available</string>
     <string name="submission_status_card_title_positive">Positive Diagnosis</string>
     <string name="submission_status_card_subtitle_invalid">Invalid test</string>
     <string name="submission_status_card_subtitle_negative">Negative Diagnosis</string>
     <string name="submission_status_card_body_fetching">You result is being updated</string>
-    <string name="submission_status_card_body_unregistered"></string>
+    <string name="submission_status_card_body_unregistered">Did you do your COVID-test?</string>
     <string name="submission_status_card_body_pending">The evaluation of your test is not yet done.</string>
     <string name="submission_status_card_body_invalid">Your test could not be evaluated.</string>
     <string name="submission_status_card_body_positive">You have been diagnosed positive for SARS-CoV-2.</string>
     <string name="submission_status_card_body_negative">You have been diagnosed negative for SARS-CoV-2.</string>
-    <string name="submission_status_card_button_unregistered">I will do a COVID-test</string>
+    <string name="submission_status_card_button_unregistered">Not yet</string>
     <string name="submission_status_card_button_show_results">Display Test</string>
     <string name="submission_status_card_positive_result_subtitle">Please note:</string>
     <string name="submission_status_card_positive_result_contagious">You are infectious. Isolate yourself from other people.</string>
@@ -575,9 +575,9 @@
     <string name="submission_intro_symptoms_dialog_body">Do you currently have symptoms such as a cough, loss of taste and smell, cold or flu?</string>
     <string name="submission_intro_symptoms_dialog_positive">Yes</string>
     <string name="submission_intro_symptoms_dialog_negative">No</string>
-    <string name="submission_test_request_headline">Generate the code</string>
+    <string name="submission_test_request_headline">Receive the test result</string>
     <string name="submission_test_request_text">Select the date on which you started having symptoms.</string>
-    <string name="submission_test_request_save_text">Please give this code to the doctor. This is necessary to link your test to the app. This requires a manual action due to anonymity of the app. If you have forgotten to give the code, you can use the webform.\n\nhttps://coronalert.be/en/corona-alert-form/</string>
+    <string name="submission_test_request_save_text">Please give this code to the doctor. This is necessary to link your test to the app. This requires a manual action due to the anonymity of the app. If you have forgotten to give the code, you can use the webform.\n\nhttps://coronalert.be/en/corona-alert-form/</string>
     <string name="submission_test_request_save_button_save">Close</string>
     <string name="submission_countries_selection_headline">Select countries</string>
     <string name="submission_countries_selection_text">For each of the below dates, if you have not been in Belgium and you would like to share this information (anonymously), please select the country you visited on that date by tapping the line you want to change</string>
@@ -636,7 +636,7 @@
 
     <string name="information_data_transfer">Downloads</string>
     <string name="information_data_transfer_headline">Use mobile data for random ID downloads.</string>
-    <string name="information_data_transfer_body">"Download random ID's over mobile data. If this option is disabled the ID's will only be downloaded over Wifi. "</string>
+    <string name="information_data_transfer_body">"Download random IDs over mobile data. If this option is disabled the IDs will only be downloaded over Wifi. "</string>
     <string name="information_data_transfer_switch">Use mobile data</string>
     <string name="information_data_transfer_switch_on">Wifi and Mobile Data</string>
     <string name="information_data_transfer_switch_off">Wifi Only</string>
@@ -654,7 +654,7 @@
     <!-- XTXT: First section after the header of the interoperability information/configuration view -->
     <string name="interoperability_configuration_first_section">"Several countries are working together to enable transnational alerts via a joint exchange server. For example, contacts with users of an official coronavirus app from other participating countries can also be taken into account for exposure logging."</string>
     <!-- XTXT: Second section after the header of the interoperability information/configuration view -->
-    <string name="interoperability_configuration_second_section">"For this purpose, the app downloads every day a list of therandom IDs of all users who had a positive test and who have decided to inform other users by sharing their random IDs. This list is then compared with the random IDs recorded by your smartphone.You can chose to download this list over WiFi; otherwise part of your mobile data budget will be consumed. Be aware that this may result inroaming charges if you would leave the EU."</string>
+    <string name="interoperability_configuration_second_section">For this purpose, the app downloads every day a list of the random IDs of all users who had a positive test and who have decided to inform other users by sharing their random IDs. This list is then compared with the random IDs recorded by your smartphone. It is recommended to download this list via WIFI, otherwise mobile data might be consumed. Be aware that this may result in roaming charges if you would leave the EU.</string>
     <!-- XHED: Header right above the country list in the interoperability information/configuration view -->
     <string name="interoperability_configuration_list_title">"The following countries currently participate in transnational exposure logging:"</string>
     <!-- XTXT: Text right under the country list in the interoperability information/configuration view -->
@@ -694,9 +694,9 @@
     <string name="tools_passenger_locator_form_nl" translatable="false">Passenger Locator Form</string>
     <string name="tools_passenger_locator_form_de" translatable="false">Passagier-Lokalisierungsformular</string>
 
-    <string name="submission_status_card_body_unregistered_warning">This requires a manual action due to anonymity of the app</string>
-    <string name="submission_status_card_button_registered">I already did my COVID-test</string>
-    <string name="link_test_info_title">I already did my COVID-test</string>
+    <string name="submission_status_card_body_unregistered_warning">This requires a manual action due to the anonymity of the app</string>
+    <string name="submission_status_card_button_registered">Yes</string>
+    <string name="link_test_info_title">I have taken my COVID-test</string>
     <string name="link_test_info_intro">3 possibilities to link your test</string>
     <string-array name="link_test_info_bullets">
         <item>I did a test and my doctor or laboratory correctly entered the 17 digits of the Coronalert app. You don\'t have to do anything.</item>

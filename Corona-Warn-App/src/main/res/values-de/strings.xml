@@ -434,7 +434,7 @@
     <string name="submission_tan_accessibility_title"></string>
     <string name="submission_tan_error"></string>
     <string name="submission_tan_character_error"></string>
-    <string name="submission_intro_title">Meinen Test erhalten</string>
+    <string name="submission_intro_title">Info</string>
     <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
     <string name="submission_intro_text">Da nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Sie können jetzt wie folgt vorgehen:</string>
     <string name="submission_intro_button_next">Weiter</string>
@@ -455,7 +455,7 @@
     <string name="submission_dispatcher_accessibility_title"></string>
     <string name="submission_positive_other_warning_title">Andere warnen</string>
     <string name="submission_positive_other_warning_headline">Helfen Sie mit!</string>
-    <string name="submission_positive_other_warning_body">Sie können angeben, dass Coronalert Ihre zufälligen IDs der letzten Tage mit anderen teilt. Auf diese Weise können Sie andere Personen warnen und die Infektionskette durchbrechen.\n\nDa nur unpersönliche Zufallscodes erteilt werden, ist Ihre Identität sicher.</string>
+    <string name="submission_positive_other_warning_body">Sie können angeben, dass Coronalert Ihre zufälligen IDs der letzten Tage mit anderen teilt. Auf diese Weise können Sie andere Personen warnen und die Infektionskette durchbrechen.\n\nDa nur anonyme Zufallscodes geteilt werden, bleibt Ihre Identität unbekannt.</string>
     <string name="submission_positive_other_warning_privacy_title">Datenschutz</string>
     <string name="submission_positive_other_warning_privacy_body">Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktiviertem Kontaktlogbuch automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.\n\nDie Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.\n\nSie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
     <string name="submission_positive_other_warning_button">Weiter</string>
@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Datenabruf…</string>
-    <string name="submission_status_card_title_unregistered">Erhalten Sie Ihr Testergebnis in Ihrer App</string>
+    <string name="submission_status_card_title_unregistered">Verknüpfen Sie Ihren COVID-Test mit der App</string>
     <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
     <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
     <string name="submission_status_card_title_positive">Befund positiv</string>
     <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
     <string name="submission_status_card_subtitle_negative">Befund negativ</string>
     <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
-    <string name="submission_status_card_body_unregistered"></string>
+    <string name="submission_status_card_body_unregistered">Haben Sie Ihren COVID-Test gemacht?</string>
     <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
     <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
     <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
     <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
-    <string name="submission_status_card_button_unregistered">Ich werde einen COVID-Test machen</string>
+    <string name="submission_status_card_button_unregistered">Noch nicht</string>
     <string name="submission_status_card_button_show_results">Test anzeigen</string>
     <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
     <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
@@ -575,9 +575,9 @@
     <string name="submission_intro_symptoms_dialog_body">Haben Sie derzeit Symptome wie Husten, Geschmacks- und Geruchsverlust, Erkältung oder Grippe?</string>
     <string name="submission_intro_symptoms_dialog_positive">Ja</string>
     <string name="submission_intro_symptoms_dialog_negative">Nein</string>
-    <string name="submission_test_request_headline">Generieren Sie den Code</string>
+    <string name="submission_test_request_headline">Erhalten Sie den Test</string>
     <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
-    <string name="submission_test_request_save_text">Bitte geben Sie den Code zum Arzt, da dies notwendig ist Ihr Testergebnis für die App zu verknüpfen. Dies geschieht aufgrund der Anonymität der App nicht automatisch. Wenn Sie dies vergessen, können Sie Ihr Webformular ausfüllen.\n\nhttps://coronalert.be/de/coronalert-formular/</string>
+    <string name="submission_test_request_save_text">Versuchen Sie immer, diesen Code an den Arzt zu übermitteln, der den Test verschreibt. Wenn Sie dies vergessen, dann können Sie diesen auch selbst über ein Web-Formular eingeben.\n\nhttps://coronalert.be/de/coronalert-formular/</string>
     <string name="submission_test_request_save_button_save">Schließen</string>
     <string name="submission_countries_selection_headline">Länder wählen</string>
     <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
@@ -671,7 +671,7 @@
     <string name="tools_book_a_test_in_brussels">Testreservierung in Brüssel</string>
 
     <string name="submission_status_card_body_unregistered_warning">Dies erfordert aus Gründen der Anonymität manuelle Maßnahmen</string>
-    <string name="submission_status_card_button_registered">COVID-Test bereits durchgeführt</string>
+    <string name="submission_status_card_button_registered">Ja</string>
     <string name="link_test_info_title">COVID-Test bereits durchgeführt</string>
     <string name="link_test_info_intro">3 Möglichkeiten, Ihren Test zu verknüpfen</string>
     <string-array name="link_test_info_bullets">

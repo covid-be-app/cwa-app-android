@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="submission_done_further_info_bullet_points">
         <item>Votre période de quarantaine est généralement de 7 jours. Veuillez observer vos symptômes et surveiller leur évolution.</item>
         <item>Vous serez invité par votre autorité de santé publique à établir une liste des personnes avec lesquelles vous avez eu des contacts. Cette liste doit inclure toutes les personnes avec lesquelles vous avez été en contact étroit (moins de 2 mètres, conversation en face à face) pendant plus de 15 minutes au cours des deux jours précédant l\'apparition des symptômes.</item>
@@ -7,7 +7,7 @@
         <item>Même lorsque vous n\'avez plus de symptômes et que vous vous sentez bien à nouveau, vous pouvez toujours être contagieux.</item>
     </string-array>
     <string-array name="submission_intro_bullet_points">
-        <item>Nous vous demandons si vous présentez des symptômes tels qu\'une toux, une perte de goût et d\'odeur, un rhume ou une grippe. Si vous présentez des symptômes, on vous demandera la date d\'apparition des symptômes.</item>
+        <item>Nous vous demanderons si vous présentez des symptômes tels qu\'une toux, une perte de goût et d\'odeur, un rhume ou une grippe. Si vous présentez des symptômes, on vous demandera la date d\'apparition des symptômes.</item>
         <item>Vous verrez un code qui peut être utilisé pour obtenir votre résultat de test dans l\'application.</item>
     </string-array>
     <string-array name="test_result_card_negative_further_info_bullet_points">
@@ -171,7 +171,7 @@
     <string name="hint_external_webpage">Vous trouverez ici les réponses aux questions fréquemment posées sur l\'application Coronalert. Vous serez dirigé vers un site web externe.</string>
     <string name="main_share_title">Partager l\'application Coronalert</string>
     <string name="main_share_headline">Luttons ensemble contre le coronavirus !</string>
-    <string name="main_share_body">Plus il y a de personnes qui utilisent l\'application, plus vite nous briserons la chaîne d\'infection. Veuillez inviter votre famille et vos amis à télécharger l\'application.</string>
+    <string name="main_share_body">Plus il y aura de personnes qui utilisent l\'app, plus facilement on pourra gérer le risque d\'infection et briser la chaine de transmission du virus. N\'hésitez pas à inviter votre famille et vos amis à télécharger l\'application.</string>
     <string name="main_share_button">Envoyer le lien de téléchargement</string>
     <string name="main_share_message">Luttons ensemble contre le coronavirus !<xliff:g id="line_break">\n</xliff:g>Je suis dans le coup, vous aussi ?<xliff:g id="line_break">\n</xliff:g><xliff:g id="link_play_store">https://coronalert.be</xliff:g>\n<xliff:g id="line_break">\n</xliff:g></string>
     <string name="main_share_illustration_description">Un homme partage l\'application Coronalert avec quatre autres personnes.</string>
@@ -202,9 +202,9 @@
     <string name="main_title">Page principale du site Coronalert</string>
     <string name="risk_details_title">Votre statut de risque</string>
     <string name="risk_details_headline_behavior">Mesures de prévention</string>
-    <string name="risk_details_subtitle_behavior">Voici ce que vous devez faire</string>
+    <string name="risk_details_subtitle_behavior">Conseils pour continuer à vous protéger du Covid</string>
     <string name="risk_details_behavior_body_stay_home">Si possible, rentrez chez vous et restez-y.</string>
-    <string name="risk_details_behavior_body_contact_doctor">Avez-vous des symptômes qui peuvent indiquer la présence de Covid-19, tels que fatigue, fièvre, toux sèche, maux de tête, perte de goût ou d\'odorat ? Veuillez contacter l\'une des personnes suivantes :</string>
+    <string name="risk_details_behavior_body_contact_doctor">Avez-vous des symptômes qui peuvent indiquer la présence de aCovid-19, tels que fatigue, fièvre, toux sèche, maux de tête, perte de goût ou d\'odorat ? Veuillez contacter l\'une des personnes suivantes :</string>
     <string name="risk_details_behavior_body_wash_hands">Lavez-vous les mains régulièrement et soigneusement avec de l\'eau et du savon.</string>
     <string name="risk_details_behavior_body_wear_mask">Portez un masque nasal et buccal lorsque vous entrez en contact avec d\'autres personnes et si nécessaire.</string>
     <string name="risk_details_behavior_body_stay_away">Tenez-vous à au moins 1,5 m des personnes qui ne sont pas proches de vous.</string>
@@ -240,7 +240,7 @@
     <string name="onboarding_button_back_description">Retour</string>
     <string name="onboarding_onboarding_accessibility_title">Page 1 sur 5 : Luttons ensemble contre le coronavirus !</string>
     <string name="onboarding_headline">Luttons ensemble contre le coronavirus !</string>
-    <string name="onboarding_subtitle">Plus de protection pour vous et pour nous tous. En utilisant l\'application Coronalert, nous pouvons briser les chaînes d\'infection beaucoup plus rapidement.</string>
+    <string name="onboarding_subtitle">Plus de protection pour vous et pour nous tous.  En utilisant Coronalert, nous pouvons apprendre à vivre avec le risque toute en continuant de briser la chaine de transmission du virus rapidement.</string>
     <string name="onboarding_body">Transformez votre appareil en un système d\'alerte au coronavirus. Obtenez un aperçu de votre statut de risque et découvrez si vous avez été en contact étroit avec quelqu\'un positif au COVID-19 au cours des 14 derniers jours.</string>
     <string name="onboarding_body_emphasized">L\'application enregistre les rencontres entre individus en échangeant des identifiants chiffrés et aléatoires entre leurs appareils, sans qu\'aucune donnée personnelle, quelle qu\'elle soit, ne soit consultée.</string>
     <string name="onboarding_illustration_description">Logos officiels du gouvernement fédéral, du gouvernement flamand, de la Région wallonne, de la Région de Bruxelles-Capitale et de la Communauté germanophone.</string>
@@ -265,13 +265,13 @@
     <string name="onboarding_tracing_location_button">Ouvrir les réglages du téléphone</string>
     <string name="onboarding_test_accessibility_title">Page d\'accueil 4 sur 5 : Si vous êtes diagnostiqué positif au COVID-19...</string>
     <string name="onboarding_test_headline">Si vous êtes diagnostiqué positif au COVID-19...</string>
-    <string name="onboarding_test_subtitle">… veuillez le signaler dans cette application. Le partage de vos résultats de test reste toujours volontaire et anonyme. Nous vous encourageons donc à le faire afin de continuer à protéger la santé de tous.</string>
+    <string name="onboarding_test_subtitle">…vous pouvez le signaler de manière anonyme dans cette application. Grâce au partage de vos résultat de test vous protégez les autres du risque d\'infection.</string>
     <string name="onboarding_test_body">Cette information sera toujours traitée de manière anonyme et sécurisée. Votre nom et vos données personnelles ne seront pas partagées. Seuls des identifiants aléatoires seront envoyés vers les téléphones des personnes avec qui vous avez eu un contact rapproché et qui utilisent l\'application. Cela leur permettra de connaître leur risque sans pour autant en connaître l\'origine. Elles recevront également des informations sur les étapes à suivre.</string>
     <string name="onboarding_test_illustration_description">Un diagnostic positif crypté est transmis au système qui avertit alors les autres utilisateurs.</string>
     <string name="onboarding_notifications_accessibility_title">Page d\'accueil 5 sur 5 : Recevoir des avertissements et identifier les risques</string>
     <string name="onboarding_notifications_headline">Recevoir des avertissements et identifier les risques</string>
-    <string name="onboarding_notifications_subtitle">L\'application peut vous informer automatiquement si vous avez été exposé à d\'éventuels risques et vous avertir des nouvelles infections de personnes auxquelles vous avez été exposé. Autorisez l\'application à vous avertir dès maintenant.</string>
-    <string name="onboarding_notifications_body">Vous pouvez alors vous isoler pour protéger les autres et chercher un endroit où vous faire tester.</string>
+    <string name="onboarding_notifications_subtitle">Si vous avez été exposé à un risque d\'infection, l\'application peut vous informer et si vous-même tombez malades du Covid, elle pourra informer les personnes avec qui vous avez été en contact du risque qu\'elles ont prises. Le tout de manière anonyme. Pour cela, autorisez l\'application à vous avertir dès maintenant.</string>
+    <string name="onboarding_notifications_body">Vous devrez alors vous mettre en quarantaine pour protéger les autres d\'un risque d\'infection le temps de faire un test Covid.</string>
     <string name="onboarding_notifications_illustration_description">Une femme reçoit une notification de son application Coronalert.</string>
     <string name="settings_title">Paramètres</string>
     <string name="settings_on">On</string>
@@ -295,7 +295,7 @@
     <string name="settings_tracing_status_connection_body">L\'enregistrement de l\'exposition nécessite une connexion Internet pour calculer les expositions. Veuillez activer le WIFI ou les données mobiles dans les réglages de votre smartphone.</string>
     <string name="settings_tracing_status_connection_button">Ouvrir les réglages du smartphone</string>
     <plurals name="settings_tracing_status_body_active">
-        <item quantity="one">L\'enregistrement de l\'exposition est actif depuis un jour.\nUn contrôle de l\'exposition ne peut être fiable que si l\'enregistrement de l\'exposition est activé en permanence.</item>
+        <item quantity="one" tools:ignore="ImpliedQuantity">L\'enregistrement de l\'exposition est actif depuis un jour.\nUn contrôle de l\'exposition ne peut être fiable que si l\'enregistrement de l\'exposition est activé en permanence.</item>
         <item quantity="other">L\'enregistrement de l\'exposition est actif depuis un jour.\nUn contrôle de l\'exposition ne peut être fiable que si l\'enregistrement de l\'exposition est activé en permanence.</item>
     </plurals>
     <string name="settings_tracing_illustration_description_active">Trois personnes ont activé l\'enregistrement de l\'exposition sur leurs smartphones, ceux-ci enregistreront leurs rencontres les uns avec les autres.</string>
@@ -341,7 +341,7 @@
     <string name="information_about_title">À propos de l\'application</string>
     <string name="information_about_headline">Luttons ensemble contre le coronavirus !</string>
     <string name="information_about_body_emphasized">Sciensano est un organisme fédéral belge de santé publique. Il publie l\'application Coronalert au nom des gouvernements des entités fédérées. L\'application se veut un complément numérique aux mesures de santé publique déjà mises en place.</string>
-    <string name="information_about_body">Quiconque utilise l\'application aide à retracer et à briser les chaînes d\'infection. L\'application enregistre sur votre appareil les rencontres avec d\'autres personnes au niveau local. Vous êtes averti si vous avez rencontré des personnes chez qui le COVID-19 a été diagnostiqué par la suite. Votre identité et votre vie privée sont toujours protégées.</string>
+    <string name="information_about_body">Utiliser cette application permet d\'interrompre plus rapidement la chaine de transmission du virus et prévenir des risques d\'infection. Grâce à Coronalert, vous serez avertis si vous avez croisé des personnes dépistée COVID positives et vous pourrez avertir les autres si vous êtes malade du COVID de manière anonyme.</string>
     <string name="information_about_illustration_description">Un groupe de personnes utilisent leurs smartphones dans toute la ville.</string>
     <string name="information_privacy_title">Données de confidentialité</string>
     <string name="information_privacy_illustration_description">Une femme utilise l\'application Coronalert sur son smartphone. Une icône représentant un cadenas sur fond d\'un bouclier symbolise les données cryptées.</string>
@@ -434,7 +434,7 @@
     <string name="submission_tan_accessibility_title"></string>
     <string name="submission_tan_error"></string>
     <string name="submission_tan_character_error"></string>
-    <string name="submission_intro_title">Recevoir mon test</string>
+    <string name="submission_intro_title">Informations</string>
     <string name="submission_intro_headline">Voici comment fonctionne l\'application Coronalert</string>
     <string name="submission_intro_text">Comme seuls des identifiants aléatoires cryptés sont échangés, vous restez anonyme. Vous pouvez maintenant procéder comme suit :</string>
     <string name="submission_intro_button_next">Suivant</string>
@@ -453,15 +453,15 @@
     <string name="submission_dispatcher_card_tan_tele"></string>
     <string name="submission_dispatcher_tan_tele_card_text"></string>
     <string name="submission_dispatcher_accessibility_title"></string>
-    <string name="submission_positive_other_warning_title">Avertir les autres</string>
+    <string name="submission_positive_other_warning_title">Avertir vos contacts</string>
     <string name="submission_positive_other_warning_headline">Ensemble, luttons contre le virus !</string>
-    <string name="submission_positive_other_warning_body">Vous pouvez indiquer que Coronalert partagera vos identifiants aléatoires des derniers jours avec d\'autres. De cette façon, vous pouvez avertir les autres et aider à briser la chaîne de l\'infection.\n\nPuisque seules des identités aléatoires impersonnelles sont transmises, votre identité restera anonyme.</string>
+    <string name="submission_positive_other_warning_body">Vous pouvez autoriser l\'application à partager vos signaux anonymes avec ceux que vous avez croisé les 14 derniers jours. Ainsi vous les prévenez du risque d\'infection et la chaine de transmission peu être interrompue plus rapidement.\n\nPuisque seules des identités aléatoires impersonnelles sont transmises, votre identité restera anonyme.</string>
     <string name="submission_positive_other_warning_privacy_title">Données de confidentialité</string>
     <string name="submission_positive_other_warning_privacy_body">En appuyant sur « Accepter », vous consentez à ce que l\'application envoie votre résultat de test positif au système serveur de l\'application avec vos identifiants aléatoires des derniers jours, afin que les autres utilisateurs de l\'application qui ont activé la fonction d\'enregistrement des expositions puissent être automatiquement informés qu\'ils peuvent avoir été exposés à un risque d\'infection. Les identifiants aléatoires transmis à cet effet ne contiennent aucune information permettant de déceler votre identité . \n\nLa transmission de votre résultat de test via l\'application est volontaire. Vous ne serez pas pénalisé si vous ne transmettez pas votre résultat de test. Comme il n\'est pas possible de retracer ou de vérifier si et comment vous utilisez l\'application, personne d\'autre que vous ne saura si vous avez transmis l\'information de votre infection. \n\nVous pouvez retirer votre consentement à tout moment en supprimant l\'application. Ce retrait n\'affectera pas la légalité du traitement effectué sur la base du consentement préalable au retrait. Vous trouverez de plus amples informations dans la rubrique « Informations sur la confidentialité des données ».</string>
     <string name="submission_positive_other_warning_button">Suivant</string>
     <string name="submission_positive_other_illustration_description">Un appareil transmet un diagnostic positif crypté au système.</string>
     <string name="submission_done_title">Merci</string>
-    <string name="submission_done_body">Vous avez apporté une contribution précieuse. Grâce à votre soutien, d\'autres personnes peuvent désormais être averties et réagir de manière appropriée.</string>
+    <string name="submission_done_body">Vous avez apporté une contribution précieuse. Grâce à l\'activation du partage de vos signaux anonymes, vos contacts pourront être avertis et ainsi être vigilent à ne pas infecter les autres.</string>
     <string name="submission_done_subtitle">Veuillez noter que :</string>
     <string name="submission_done_contagious">Vous êtes infectieux.</string>
     <string name="submission_done_isolate">Veuillez vous isoler des autres.</string>
@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Données en cours de récupération....</string>
-    <string name="submission_status_card_title_unregistered">Recevez votre test COVID dans l\'app</string>
+    <string name="submission_status_card_title_unregistered">Reliez votre test-COVID à l\'app</string>
     <string name="submission_status_card_title_pending">Votre résultat n\'est pas encore disponible</string>
     <string name="submission_status_card_title_available">Votre résultat est disponible</string>
     <string name="submission_status_card_title_positive">Diagnostic positif</string>
     <string name="submission_status_card_subtitle_invalid">Test non valable</string>
     <string name="submission_status_card_subtitle_negative">Diagnostic négatif</string>
     <string name="submission_status_card_body_fetching">Votre résultat est mis à jour</string>
-    <string name="submission_status_card_body_unregistered"></string>
+    <string name="submission_status_card_body_unregistered">Avez-vous fait votre test COVID?</string>
     <string name="submission_status_card_body_pending">L\'évaluation de votre test n\'est pas encore faite.</string>
     <string name="submission_status_card_body_invalid">Votre test n\'a pas pu être évalué.</string>
     <string name="submission_status_card_body_positive">Vous avez été diagnostiqué positif pour le SRAS-CoV-2.</string>
     <string name="submission_status_card_body_negative">Vous avez été diagnostiqué négatif pour le SRAS-CoV-2.</string>
-    <string name="submission_status_card_button_unregistered">Je vais faire un test COVID</string>
+    <string name="submission_status_card_button_unregistered">Pas encore</string>
     <string name="submission_status_card_button_show_results">Voir mon test</string>
     <string name="submission_status_card_positive_result_subtitle">Veuillez noter :</string>
     <string name="submission_status_card_positive_result_contagious">Vous êtes infectieux. Isolez-vous des autres.</string>
@@ -572,12 +572,12 @@
     <xliff:g id="preference">preference_result_channel</xliff:g>
   </string>
     <string name="submission_intro_symptoms_dialog_title">Vérification des symptômes</string>
-    <string name="submission_intro_symptoms_dialog_body">Présentez-vous actuellement des symptômes tels que toux, perte de goût et d\'odeur, rhume ou grippe ?</string>
+    <string name="submission_intro_symptoms_dialog_body">Présentez-vous actuellement des symptômes tels que toux, nez bouché, maux de tête, perte d\'odorat, symptômes grippaux, fatigue, fièvre sans cause évidente?</string>
     <string name="submission_intro_symptoms_dialog_positive">Oui</string>
     <string name="submission_intro_symptoms_dialog_negative">Non</string>
-    <string name="submission_test_request_headline">Générez le code</string>
+    <string name="submission_test_request_headline">Recevoir le résultat du test</string>
     <string name="submission_test_request_text">Sélectionnez la date à laquelle vous avez commencé à avoir des symptômes.</string>
-    <string name="submission_test_request_save_text">Veuillez à transmettre ce code au médecin car ceci est nécessaire pour assurer le lien entre votre test et votre application. Le lien ne se fait pas automatiquement dû au caractère anonyme de Coronalert. Si vous oubliez de transmettre le code, vous pouvez remplir le webform suivant.\n\nhttps://coronalert.be/fr/formulaire-coronalert/</string>
+    <string name="submission_test_request_save_text">Veuillez à transmettre ce code au médecin car ceci est nécessaire pour assurer le lien entre votre test et votre application. Le lien ne se fait pas automatiquement vu le caractère anonyme de Coronalert. Si vous oubliez de transmettre le code, vous pouvez remplir le webform suivant.\n\nhttps://coronalert.be/fr/formulaire-coronalert/</string>
     <string name="submission_test_request_save_button_save">Fermer</string>
     <string name="submission_countries_selection_headline">Sélectionnez votre pays</string>
     <string name="submission_countries_selection_text">Si vous n\'étiez pas en Belgique à certaines des dates ci-dessous et que vous voulez partager cette information (de façon anonyme), veuillez sélectionner le pays dans lequel vous étiez à ces dates.</string>
@@ -630,9 +630,8 @@
     <string name="test_linked_dialog_body">Votre test a été lié avec succès à votre smartphone. Désormais, vous pourrez recevoir votre résultat de test dans Coronalert.</string>
     <string name="test_linked_dialog_button_positive">OK</string>
     <string name="submission_done_reset_dialog_title">Réinitialisation de l\'app</string>
-    <string name="submission_done_reset_dialog_body">Merci de partager vos données et d\'aider les autres. L\'application va maintenant être réinitialisée et toutes les données seront supprimées. Nous vous recommandons vivement de désactiver l\'application pendant votre période d\'isolement en arrêtant l\'enregistrement de l\'exposition. Après votre période d\'isolement, vous pourrez à nouveau utiliser l\'application.</string>
+    <string name="submission_done_reset_dialog_body">Merci de partager vos signaux anonymes et d\'être solidaire avec les autres. L\'application va maintenant être réinitialisée et toutes les données seront supprimées. Nous vous recommandons vivement de désactiver l\'application pendant votre période d\'isolement en arrêtant l\'enregistrement de l\'exposition. Après votre période d\'isolement, vous pourrez à nouveau utiliser l\'application.</string>
     <string name="submission_done_reset_dialog_button_positive">OK</string>
-
 
     <string name="information_data_transfer">Téléchargements</string>
     <string name="information_data_transfer_headline">Utiliser des réseaux mobiles pour le téléchargement d\'identifiants aléatoires.</string>
@@ -640,14 +639,14 @@
     <string name="information_data_transfer_switch">Utilisez réseaux mobiles</string>
     <string name="information_data_transfer_switch_off">Wifi Uniquement</string>
     <string name="information_data_transfer_switch_on">Wifi et Mobile</string>
-    <string name="settings_interoperability_title">Journalisation des expositions transnationales</string>
-    <string name="interoperability_configuration_title">Journalisation des expositions transnationales</string>
+    <string name="settings_interoperability_title">Journalisation des expositions transfrontalières</string>
+    <string name="interoperability_configuration_title">Journalisation des expositions transfrontalières</string>
     <string name="settings_interoperability_subtitle">Pays participants</string>
-    <string name="interoperability_configuration_first_section">Plusieurs pays travaillent ensemble pour permettre des alertes transnationales via un serveur d\'échange commun. Par exemple, les contacts avec les utilisateurs d\'une application officielle de coronavirus d\'autres pays participants peuvent également être pris en compte pour l\'enregistrement de l\'exposition.</string>
-    <string name="interoperability_configuration_list_title">Les pays suivants participent actuellement à l\'enregistrement des expositions transnationales:</string>
-    <string name="interoperability_configuration_information">L\'avis de confidentialité de l\'application (y compris les informations sur le traitement des données effectué pour la fonction d\'enregistrement des expositions transnationales) se trouve dans le menu sous «Informations sur l\'application»> «Confidentialité des données».</string>
+    <string name="interoperability_configuration_first_section">Plusieurs pays travaillent ensemble pour permettre des alertes transfrontalières via un serveur d\'échange commun. Par exemple, les contacts avec les utilisateurs d\'une application officielle de coronavirus d\'autres pays participants peuvent également être pris en compte pour l\'enregistrement de l\'exposition.</string>
+    <string name="interoperability_configuration_list_title">Les pays suivants participent actuellement à l\'enregistrement des expositions transfrontalières:</string>
+    <string name="interoperability_configuration_information">L\'avis de confidentialité de l\'application (y compris les informations sur le traitement des données effectué pour la fonction d\'enregistrement des expositions transfrontalières) se trouve dans le menu sous «Informations sur l\'application»> «Confidentialité des données».</string>
     <string name="interoperability_configuration_second_section">À cette fin, l\'application télécharge chaque jour une liste d\'identifiants aléatoires de tous les utilisateurs qui ont eu un test positif et qui ont décidé d\'informer les autres utilisateurs en partageant leurs identifiants aléatoires. Cette liste est ensuite comparée aux identifiants aléatoires enregistrés par votre smartphone. Vous pouvez choisir de télécharger cette liste via WiFi; sinon une partie de votre budget de données mobiles sera consommée. Sachez que cela peut entraîner des frais d\'itinérance si vous quittez l\'UE.</string>
-    <string name="interoperability_title">Journalisation des expositions transnationales</string>
+    <string name="interoperability_title">Journalisation des expositions transfrontalières</string>
 
     <string name="tools_card_body">Découvrez plusieurs outils pour lutter contre le COVID-19</string>
     <string name="tools_card_title">Boîte à outils</string>
@@ -665,13 +664,13 @@
     <string name="tools_passenger_locator_form_title">PLF</string>
 
     <string name="tools_epidemiological_situation">Situation épidémiologique du COVID-19</string>
-    <string name="tools_register_to_be_vaccinated">Inscrivez-vous sur la liste de réserve</string>
+    <string name="tools_register_to_be_vaccinated">Inscrivez-vous sur la liste d\'attente</string>
 
     <string name="tools_book_a_test">Réservez un test</string>
     <string name="tools_book_a_test_in_brussels">Réservez un test à Bruxelles</string>
 
-    <string name="submission_status_card_body_unregistered_warning">Ceci nécessite une action manuelle du au caractère anonyme de Coronalert</string>
-    <string name="submission_status_card_button_registered">J\'ai déjà fait mon test COVID</string>
+    <string name="submission_status_card_body_unregistered_warning">Ceci nécessite une action manuelle vu le caractère anonyme de Coronalert</string>
+    <string name="submission_status_card_button_registered">Oui</string>
     <string name="link_test_info_title">J\'ai déjà fait mon test COVID</string>
     <string name="link_test_info_intro">3 possibilités pour relier votre test</string>
     <string-array name="link_test_info_bullets">
