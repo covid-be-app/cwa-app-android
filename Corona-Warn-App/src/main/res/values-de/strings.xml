@@ -681,4 +681,7 @@
     </string-array>
     <string name="submission_test_request_save_headline">Verwenden Sie diesen Code, um Ihren Test in der App zu registrieren</string>
     <string name="submission_test_request_save_explanation">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführt, um Ihr Smartphone mit dem Test zu verbinden.</string>
+    <string name="submission_test_result_warning_others_title">Möchten Sie andere warnen?</string>
+    <string name="submission_test_result_warning_others_positive">Ja</string>
+    <string name="submission_test_result_warning_others_negative">Nein</string>
 </resources>

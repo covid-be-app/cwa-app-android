@@ -220,25 +220,6 @@
             app:destination="@id/submissionContactFragment" />
     </fragment>
     <fragment
-        android:id="@+id/submissionResultPositiveOtherWarningFragment"
-        android:name="de.rki.coronawarnapp.ui.submission.SubmissionResultPositiveOtherWarningFragment"
-        android:label="fragment_submission_result_positive_other_warning"
-        tools:layout="@layout/fragment_submission_positive_other_warning">
-        <action
-            android:id="@+id/action_submissionResultPositiveOtherWarningFragment_to_submissionResultFragment"
-            app:destination="@id/submissionResultFragment"
-            app:popUpTo="@id/submissionResultFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_submissionResultPositiveOtherWarningFragment_to_submissionDoneFragment"
-            app:destination="@id/submissionDoneFragment"
-            app:popUpTo="@id/submissionDoneFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_submissionResultPositiveOtherWarningFragment_to_submissionKeysListFragment"
-            app:destination="@id/submissionKeysListFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/submissionResultFragment"
         android:name="de.rki.coronawarnapp.ui.submission.SubmissionTestResultFragment"
         android:label="fragment_submission_result"
@@ -249,8 +230,10 @@
             app:popUpTo="@id/mainFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_submissionResultFragment_to_submissionResultPositiveOtherWarningFragment"
-            app:destination="@id/submissionResultPositiveOtherWarningFragment" />
+            android:id="@+id/action_submissionResultFragment_to_submissionDoneFragment"
+            app:destination="@id/submissionDoneFragment"
+            app:popUpTo="@id/submissionDoneFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
