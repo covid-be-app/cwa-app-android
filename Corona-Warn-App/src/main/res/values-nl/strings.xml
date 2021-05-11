@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Neen</string>
     <string name="submission_test_request_headline">Ontvang het testresultaat</string>
     <string name="submission_test_request_text">Kies de datum waarop je symptomen begon te krijgen.</string>
-    <string name="submission_test_request_save_text">Gelieve deze code aan de arts te geven want dit is noodzakelijk om je testresultaat aan de app te linken. Dit gebeurt niet automatisch omdat Coronalert anoniem is. Indien je dit vergeet, kan je het webformulier invullen.\n\nhttps://coronalert.be/nl/coronalert-formulier/</string>
+    <string name="submission_test_request_save_text">Gelieve deze code aan de arts te geven want dit is noodzakelijk om je testresultaat aan de app te linken. Dit gebeurt niet automatisch omdat Coronalert anoniem is.</string>
     <string name="submission_test_request_save_button_save">Sluit</string>
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als je op een van de onderstaande datums niet in België was en je deze informatie (anoniem) wilt delen, selecteer dan het land dat je op die datum hebt bezocht. Tik op de lijn die je wilt wijzigen.</string>

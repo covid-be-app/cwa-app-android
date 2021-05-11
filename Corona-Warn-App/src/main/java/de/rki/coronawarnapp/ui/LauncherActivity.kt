@@ -36,29 +36,12 @@ class LauncherActivity : AppCompatActivity() {
         }
     }
 
-    fun launchNextIntent(uri: Uri) = run {
-        val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = uri
-        val resolveInfos = packageManager.queryIntentActivities(intent, 0)
-        for (resolveInfo in resolveInfos) {
-            if (!resolveInfo.activityInfo.packageName.contains(packageName)) {
-                intent.setPackage(resolveInfo.activityInfo.packageName)
-                startActivity(Intent.createChooser(intent, ""))
-                finish()
-                break
-            }
-        }
-    }
-
     fun navigateToActivities() {
         val uri: Uri? = intent?.data
 
         if (uri != null) {
             if (isPcrValid(uri)) {
                 startMainActivityWithTestActivivation(uri.toString())
-            } else {
-                //launch first non-coronalert intent resolver
-                launchNextIntent(uri)
             }
         } else {
             when {

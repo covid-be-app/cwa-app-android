@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Non</string>
     <string name="submission_test_request_headline">Recevoir le résultat du test</string>
     <string name="submission_test_request_text">Sélectionnez la date à laquelle vous avez commencé à avoir des symptômes.</string>
-    <string name="submission_test_request_save_text">Veuillez à transmettre ce code au médecin car ceci est nécessaire pour assurer le lien entre votre test et votre application. Le lien ne se fait pas automatiquement vu le caractère anonyme de Coronalert. Si vous oubliez de transmettre le code, vous pouvez remplir le webform suivant.\n\nhttps://coronalert.be/fr/formulaire-coronalert/</string>
+    <string name="submission_test_request_save_text">Veuillez à transmettre ce code au médecin car ceci est nécessaire pour assurer le lien entre votre test et votre application. Le lien ne se fait pas automatiquement vu le caractère anonyme de Coronalert.</string>
     <string name="submission_test_request_save_button_save">Fermer</string>
     <string name="submission_countries_selection_headline">Sélectionnez votre pays</string>
     <string name="submission_countries_selection_text">Si vous n\'étiez pas en Belgique à certaines des dates ci-dessous et que vous voulez partager cette information (de façon anonyme), veuillez sélectionner le pays dans lequel vous étiez à ces dates.</string>

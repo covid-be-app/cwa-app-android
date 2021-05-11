@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Nein</string>
     <string name="submission_test_request_headline">Erhalten Sie den Test</string>
     <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
-    <string name="submission_test_request_save_text">Versuchen Sie immer, diesen Code an den Arzt zu übermitteln, der den Test verschreibt. Wenn Sie dies vergessen, dann können Sie diesen auch selbst über ein Web-Formular eingeben.\n\nhttps://coronalert.be/de/coronalert-formular/</string>
+    <string name="submission_test_request_save_text">Versuchen Sie immer, diesen Code an den Arzt zu übermitteln, der den Test verschreibt.</string>
     <string name="submission_test_request_save_button_save">Schließen</string>
     <string name="submission_countries_selection_headline">Länder wählen</string>
     <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>

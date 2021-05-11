@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">No</string>
     <string name="submission_test_request_headline">Receive the test result</string>
     <string name="submission_test_request_text">Select the date on which you started having symptoms.</string>
-    <string name="submission_test_request_save_text">Please give this code to the doctor. This is necessary to link your test to the app. This requires a manual action due to the anonymity of the app. If you have forgotten to give the code, you can use the webform.\n\nhttps://coronalert.be/en/corona-alert-form/</string>
+    <string name="submission_test_request_save_text">Please give this code to the doctor. This is necessary to link your test to the app. This requires a manual action due to the anonymity of the app.</string>
     <string name="submission_test_request_save_button_save">Close</string>
     <string name="submission_countries_selection_headline">Select countries</string>
     <string name="submission_countries_selection_text">For each of the below dates, if you have not been in Belgium and you would like to share this information (anonymously), please select the country you visited on that date by tapping the line you want to change</string>
