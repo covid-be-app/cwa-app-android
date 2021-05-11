@@ -64,7 +64,6 @@ class LinkTestActivity : AppCompatActivity() {
         }
 
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.settings.domStorageEnabled = true
 
         @Suppress("MagicNumber")
         binding.webView.webChromeClient = object : WebChromeClient() {

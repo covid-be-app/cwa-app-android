@@ -266,7 +266,7 @@
     <string name="onboarding_test_accessibility_title">Einführung Seite 4 von 5: Wenn bei Ihnen COVID-19 diagnostiziert wird</string>
     <string name="onboarding_test_headline">Wenn bei Ihnen COVID-19 diagnostiziert wird,</string>
     <string name="onboarding_test_subtitle">... bitte melden Sie es in diesem Antrag. Die Weitergabe Ihrer Testergebnisse ist immer freiwillig und anonym. Wir ermutigen Sie daher, dies zu tun, um weiterhin die Gesundheit aller zu schützen.</string>
-    <string name="onboarding_test_body">Diese Informationen werden stets anonym und sicher behandelt. Ihr Name und Ihre persönlichen Daten werden nicht weitergegeben. An die Telefone der Personen, mit denen Sie engen Kontakt hatten und die die Anwendung benutzen, werden nur zufällige Kennungen gesendet. Dies wird es ihnen ermöglichen, ihr Risiko zu kennen, ohne den Ursprung des Risikos zu kennen. Sie werden auch Informationen über die zu befolgenden Schritte erhalten.</string>
+    <string name="onboarding_test_body">Diese Informationen werden stets anonym und sicher behandelt. Ihr Name und Ihre persönlichen Daten werden nicht weitergegeben. An die Telefone der Personen, mit denen Sie engen Kontakt hatten und die die Anwendung benutzen, werden nur Zufallscodes gesendet. Dies wird es ihnen ermöglichen, ihr Risiko zu kennen, ohne den Ursprung des Risikos zu kennen. Sie werden auch Informationen über die zu befolgenden Schritte erhalten.</string>
     <string name="onboarding_test_illustration_description">Eine verschlüsselte positive Testdiagnose wird an das System übertragen, das nun andere Nutzer warnt.</string>
     <string name="onboarding_notifications_accessibility_title">Einführung Seite 5 von 5: Warnungen erhalten, Risiken erkennen</string>
     <string name="onboarding_notifications_headline">Warnungen erhalten, Risiken erkennen</string>
@@ -402,7 +402,7 @@
     <string name="submission_qr_code_scan_body"></string>
     <string name="submission_test_result_headline">Testergebnis</string>
     <string name="submission_test_result_subtitle">Info zum Ablauf:</string>
-    <string name="submission_test_result_steps_added_heading">Test erfolgreich hinzugefügt</string>
+    <string name="submission_test_result_steps_added_heading"></string>
     <string name="submission_test_result_steps_added_body">Ihr Test wurde in Coronalert gespeichert.</string>
     <string name="submission_test_result_pending_steps_waiting_heading">Testergebnis noch nicht verfügbar</string>
     <string name="submission_test_result_pending_steps_waiting_body">Testergebnis noch nicht verfügbar.</string>
@@ -434,7 +434,7 @@
     <string name="submission_tan_accessibility_title"></string>
     <string name="submission_tan_error"></string>
     <string name="submission_tan_character_error"></string>
-    <string name="submission_intro_title">Meinen Test erhalten</string>
+    <string name="submission_intro_title">Info</string>
     <string name="submission_intro_headline">So funktioniert die Coronalert-App</string>
     <string name="submission_intro_text">Da nur verschlüsselte Zufallscodes ausgetauscht werden, bleiben Sie anonym. Sie können jetzt wie folgt vorgehen:</string>
     <string name="submission_intro_button_next">Weiter</string>
@@ -455,7 +455,7 @@
     <string name="submission_dispatcher_accessibility_title"></string>
     <string name="submission_positive_other_warning_title">Andere warnen</string>
     <string name="submission_positive_other_warning_headline">Helfen Sie mit!</string>
-    <string name="submission_positive_other_warning_body">Sie können angeben, dass Coronalert Ihre zufälligen IDs der letzten Tage mit anderen teilt. Auf diese Weise können Sie andere Personen warnen und die Infektionskette durchbrechen.\n\nDa nur unpersönliche Zufallscodes erteilt werden, ist Ihre Identität sicher.</string>
+    <string name="submission_positive_other_warning_body">Sie können angeben, dass Coronalert Ihre zufälligen IDs der letzten Tage mit anderen teilt. Auf diese Weise können Sie andere Personen warnen und die Infektionskette durchbrechen.\n\nDa nur anonyme Zufallscodes geteilt werden, bleibt Ihre Identität unbekannt.</string>
     <string name="submission_positive_other_warning_privacy_title">Datenschutz</string>
     <string name="submission_positive_other_warning_privacy_body">Durch Antippen von „Weiter“ willigen Sie ein, dass die App Ihr positives Testergebnis zusammen mit Ihren Zufalls-IDs der letzten 14 Tage an das Serversystem der App übermittelt, damit andere App-Nutzer mit aktiviertem Kontaktlogbuch automatisch informiert werden können, dass sie möglicherweise einem Infektionsrisiko ausgesetzt waren. Die übermittelten Zufalls-IDs enthalten keine Angaben, die Rückschlüsse auf Ihre Identität oder Ihre Person zulassen.\n\nDie Übermittlung Ihres Testergebnisses per App ist freiwillig. Wenn Sie Ihr Testergebnis nicht übermitteln, entstehen Ihnen keine Nachteile. Da weder nachvollzogen noch kontrolliert werden kann, ob und wie Sie die App verwenden, erfährt außer Ihnen niemand, ob Sie eine Infektion übermittelt haben.\n\nSie können Ihre Einwilligung jederzeit widerrufen, indem Sie die App löschen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. Weitere Informationen finden Sie unter dem Menüpunkt „Datenschutzinformation“.</string>
     <string name="submission_positive_other_warning_button">Weiter</string>
@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Datenabruf…</string>
-    <string name="submission_status_card_title_unregistered">Erhalten Sie Ihr Testergebnis</string>
+    <string name="submission_status_card_title_unregistered">Verknüpfen Sie Ihren COVID-Test mit der App</string>
     <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
     <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
     <string name="submission_status_card_title_positive">Befund positiv</string>
     <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
     <string name="submission_status_card_subtitle_negative">Befund negativ</string>
     <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
-    <string name="submission_status_card_body_unregistered">Generieren Sie den Code, um Ihr Testergebnis auf Ihrem Smartphone zu erhalten</string>
+    <string name="submission_status_card_body_unregistered">Haben Sie Ihren COVID-Test gemacht?</string>
     <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
     <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
     <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
     <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
-    <string name="submission_status_card_button_unregistered">Generieren Sie den Code</string>
+    <string name="submission_status_card_button_unregistered">Noch nicht</string>
     <string name="submission_status_card_button_show_results">Test anzeigen</string>
     <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
     <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
@@ -575,9 +575,9 @@
     <string name="submission_intro_symptoms_dialog_body">Haben Sie derzeit Symptome wie Husten, Geschmacks- und Geruchsverlust, Erkältung oder Grippe?</string>
     <string name="submission_intro_symptoms_dialog_positive">Ja</string>
     <string name="submission_intro_symptoms_dialog_negative">Nein</string>
-    <string name="submission_test_request_headline">Generieren Sie den Code</string>
+    <string name="submission_test_request_headline">Erhalten Sie den Test</string>
     <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
-    <string name="submission_test_request_save_text">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführen wird, um Ihr Smartphone mit dem Test zu verbinden.\nWenn Sie einen PCR-Code erhalten haben, geben Sie diese Nummer und Daten in das Webformular ein.</string>
+    <string name="submission_test_request_save_text">Versuchen Sie immer, diesen Code an den Arzt zu übermitteln, der den Test verschreibt.</string>
     <string name="submission_test_request_save_button_save">Schließen</string>
     <string name="submission_countries_selection_headline">Länder wählen</string>
     <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
@@ -616,7 +616,7 @@
     <string name="statistics_date_range" formatted="false">%s - %s</string>
     <string name="statistics_infected" formatted="false">%d tägliche Infektionen (%+d%%)</string>
     <string name="statistics_hospitalised" formatted="false">%d tägliche Krankenhausaufenthalte (%+d%%)</string>
-    <string name="statistics_deceased" formatted="false">%d tägliche verstorben (%+d%%)</string>
+    <string name="statistics_deceased" formatted="false">%d täglich Verstorben (%+d%%)</string>
     <string name="statistics_last_updated">Zuletzt aktualisiert am %s</string>
     <string name="submission_test_request_save_date_label">Datum der Infektiosität</string>
     <string name="submission_test_request_save_code_label">Code</string>
@@ -637,14 +637,51 @@
     <string name="information_data_transfer_headline">Verwenden Sie mobile Daten für Zufallscode-Downloads.</string>
     <string name="information_data_transfer_body">"Zufallscodes über mobile Daten herunterladen. Wenn diese Option deaktiviert ist, werden die Zufallscodes nur über Wifi heruntergeladen. "</string>
     <string name="information_data_transfer_switch">Mobile Daten verwenden</string>
-  <string name="information_data_transfer_switch_off">Nur Wifi</string>
-  <string name="information_data_transfer_switch_on">Wifi und mobile Daten</string>
+    <string name="information_data_transfer_switch_off">Nur Wifi</string>
+    <string name="information_data_transfer_switch_on">Wifi und mobile Daten</string>
     <string name="settings_interoperability_title">Transnationale Expositionsprotokollierung</string>
-  <string name="interoperability_configuration_title">Transnationale Expositionsprotokollierung</string>
-  <string name="settings_interoperability_subtitle">Teilnehmende Länder</string>
-  <string name="interoperability_configuration_first_section">Mehrere Länder arbeiten zusammen, um transnationale Warnungen über einen gemeinsamen Austauschserver zu ermöglichen. Beispielsweise können Kontakte zu Benutzern einer offiziellen Coronavirus-App aus anderen teilnehmenden Ländern auch für die Expositionsprotokollierung berücksichtigt werden.</string>
+    <string name="interoperability_configuration_title">Transnationale Expositionsprotokollierung</string>
+    <string name="settings_interoperability_subtitle">Teilnehmende Länder</string>
+    <string name="interoperability_configuration_first_section">Mehrere Länder arbeiten zusammen, um transnationale Warnungen über einen gemeinsamen Austauschserver zu ermöglichen. Beispielsweise können Kontakte zu Benutzern einer offiziellen Coronavirus-App aus anderen teilnehmenden Ländern auch für die Expositionsprotokollierung berücksichtigt werden.</string>
     <string name="interoperability_configuration_list_title">Die folgenden Länder beteiligen sich derzeit an der transnationalen Expositionserfassung:</string>
-  <string name="interoperability_configuration_information">Die Datenschutzerklärung der App (einschließlich Informationen zur Datenverarbeitung für die transnationale Expositionsprotokollierungsfunktion) finden Sie im Menü unter \"App-Informationen\"> \"Datenschutz\".</string>
-  <string name="interoperability_configuration_second_section">Zu diesem Zweck lädt die App jeden Tag eine Liste der zufälligen IDs aller Benutzer herunter, die einen positiven Test hatten und beschlossen haben, andere Benutzer durch Weitergabe ihrer zufälligen IDs zu informieren. Diese Liste wird dann mit den zufälligen IDs verglichen, die von Ihrem Smartphone aufgezeichnet wurden. Sie können diese Liste über WLAN herunterladen. Andernfalls wird ein Teil Ihres mobilen Datenbudgets verbraucht. Beachten Sie, dass dies zu Inroaming-Gebühren führen kann, wenn Sie die EU verlassen.</string>
-  <string name="interoperability_title">Transnationale Expositionsprotokollierung</string>
+    <string name="interoperability_configuration_information">Die Datenschutzerklärung der App (einschließlich Informationen zur Datenverarbeitung für die transnationale Expositionsprotokollierungsfunktion) finden Sie im Menü unter \"App-Informationen\"> \"Datenschutz\".</string>
+    <string name="interoperability_configuration_second_section">Zu diesem Zweck lädt die App jeden Tag eine Liste der zufälligen IDs aller Benutzer herunter, die einen positiven Test hatten und beschlossen haben, andere Benutzer durch Weitergabe ihrer zufälligen IDs zu informieren. Diese Liste wird dann mit den zufälligen IDs verglichen, die von Ihrem Smartphone aufgezeichnet wurden. Sie können diese Liste über WLAN herunterladen. Andernfalls wird ein Teil Ihres mobilen Datenbudgets verbraucht. Beachten Sie, dass dies zu Inroaming-Gebühren führen kann, wenn Sie die EU verlassen.</string>
+    <string name="interoperability_title">Transnationale Expositionsprotokollierung</string>
+
+
+    <string name="tools_card_body">Entdecken Sie verschiedene Tools zur Bekämpfung von COVID-19</string>
+    <string name="tools_card_title">Toolbox</string>
+    <string name="tools_title">Toolbox</string>
+
+    <string name="tools_vaccination_information">Informationen zur Impfung</string>
+    <string name="tools_test_reservation">Testreservierung</string>
+    <string name="tools_quarantine_certification">Quarantäne-Zertifikat</string>
+    <string name="tools_passenger_locator_form">Passagier-Lokalisierungsformular</string>
+    <string name="tools_test_center">Finden Sie ein Testzentrum</string>
+
+    <string name="tools_vaccination_information_title">Informationen zur Impfung</string>
+    <string name="tools_test_reservation_title">Testreservierung</string>
+    <string name="tools_quarantine_certification_title">Zertifikat</string>
+    <string name="tools_passenger_locator_form_title">PLF</string>
+
+    <string name="tools_epidemiological_situation">COVID-19 Epidemiologische Situation</string>
+    <string name="tools_register_to_be_vaccinated">Registrieren Sie sich für die Reserveliste</string>
+
+    <string name="tools_book_a_test">Testreservierung</string>
+    <string name="tools_book_a_test_in_brussels">Testreservierung in Brüssel</string>
+
+    <string name="submission_status_card_body_unregistered_warning">Dies erfordert aus Gründen der Anonymität manuelle Maßnahmen</string>
+    <string name="submission_status_card_button_registered">Ja</string>
+    <string name="link_test_info_title">COVID-Test bereits durchgeführt</string>
+    <string name="link_test_info_intro">3 Möglichkeiten, Ihren Test zu verknüpfen</string>
+    <string-array name="link_test_info_bullets">
+        <item>Ich habe einen Test durchgeführt und mein Arzt oder Labor hat die 17 Ziffern der Coronalert-App korrekt eingegeben. Du musst nichts tun.</item>
+        <item>Sie haben eine SMS erhalten oder werden diese erhalten. Klicken Sie auf den Link und füllen Sie das Webformular aus.</item>
+        <item>Gehen Sie direkt zum Webformular, um die 2 Codes manuell zu codieren.</item>
+    </string-array>
+    <string name="submission_test_request_save_headline">Verwenden Sie diesen Code, um Ihren Test in der App zu registrieren</string>
+    <string name="submission_test_request_save_explanation">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführt, um Ihr Smartphone mit dem Test zu verbinden.</string>
+    <string name="submission_test_result_warning_others_title">Möchten Sie andere warnen?</string>
+    <string name="submission_test_result_warning_others_positive">Ja</string>
+    <string name="submission_test_result_warning_others_negative">Nein</string>
 </resources>

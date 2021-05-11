@@ -167,14 +167,16 @@ class SettingsTracingFragment : Fragment(),
                     if (LocalData.initialTracingActivationTimestamp() != null) {
                         internalExposureNotificationPermissionHelper.requestPermissionToStartTracing()
                     } else {
-                        // tracing was never activated
-                        // ask for consent via dialog for initial tracing activation when tracing was not
-                        // activated during onboarding
-//                        showConsentDialog()
+
                         // check if background processing is switched off, if it is, show the manual calculation dialog explanation before turning on.
                         if (!PowerManagementHelper.isIgnoringBatteryOptimizations(requireActivity())) {
                             showManualCheckingRequiredDialog()
                         }
+
+                        // tracing was never activated
+                        // ask for consent via dialog for initial tracing activation when tracing was not
+                        // activated during onboarding
+                        showConsentDialog()
                     }
                 }
             } catch (exception: Exception) {
@@ -205,8 +207,8 @@ class SettingsTracingFragment : Fragment(),
     private fun showConsentDialog() {
         val dialog = DialogHelper.DialogInstance(
             requireActivity(),
-            R.string.onboarding_tracing_headline_consent,
-            R.string.onboarding_tracing_body_consent,
+            R.string.onboarding_tracing_dialog_headline,
+            R.string.onboarding_tracing_dialog_body,
             R.string.onboarding_button_enable,
             R.string.onboarding_button_cancel,
             true, {

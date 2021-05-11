@@ -38,6 +38,7 @@ import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.rollbac
 import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.start
 import de.rki.coronawarnapp.util.CachedKeyFileHolder
 import de.rki.coronawarnapp.util.ConnectivityHelper
+import de.rki.coronawarnapp.worker.BackgroundConstants.DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY
 import de.rki.coronawarnapp.worker.BackgroundWorkHelper
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -127,7 +128,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             DateTimeZone.UTC
         )
         if (LocalData.lastTimeDiagnosisKeysFromServerFetch() == null ||
-            currentDate.withTimeAtStartOfDay() != lastFetch.withTimeAtStartOfDay()
+            lastFetch.isBefore(currentDate.minusHours(DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY))
         ) {
             BackgroundWorkHelper.sendDebugNotification(
                 "Start RetrieveDiagnosisKeysTransaction",
@@ -136,6 +137,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
 
             start()
         }
+
     }
 
     /** initiates the transaction. This suspend function guarantees a successful transaction once completed. */
@@ -205,9 +207,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             if (TOKEN.isInStateStack()) {
                 rollbackToken()
             }
-            if (FILES_FROM_WEB_REQUESTS.isInStateStack()) {
-                rollbackFilesFromWebRequests()
-            }
+            //don't rollback already downloaded files because of data usage
         } catch (e: Exception) {
             // We handle every exception through a RollbackException to make sure that a single EntryPoint
             // is available for the caller.

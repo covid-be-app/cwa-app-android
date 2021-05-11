@@ -332,6 +332,14 @@ class MainFragment : Fragment() {
         binding.mainHeaderOptionsMenu.buttonIcon.setOnClickListener {
             showPopup(it)
         }
+
+        binding.tools.toolsCard.setOnClickListener {
+            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToToolsFragment())
+        }
+
+        binding.mainTestUnregistered.submissionStatusCardRegisteredButton.setOnClickListener {
+            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToLinkTestInfoFragment())
+        }
     }
 
     private fun toSubmissionResult() {
