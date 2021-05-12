@@ -20,7 +20,9 @@ import de.rki.coronawarnapp.ui.submission.ApiRequestState
 import de.rki.coronawarnapp.ui.submission.ScanStatus
 import de.rki.coronawarnapp.util.DeviceUIState
 import de.rki.coronawarnapp.util.Event
+import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import kotlinx.coroutines.launch
+import java.util.Calendar
 import java.util.Date
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
