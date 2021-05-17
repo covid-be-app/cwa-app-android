@@ -36,7 +36,7 @@ import de.rki.coronawarnapp.http.requests.TanRequestBody
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
 import de.rki.coronawarnapp.http.service.VerificationService
-import de.rki.coronawarnapp.server.protocols.ApplicationConfigurationOuterClass.ApplicationConfiguration
+import de.rki.coronawarnapp.server.protocols.internal.v2.AppConfigAndroid
 import de.rki.coronawarnapp.service.diagnosiskey.DiagnosisKeyConstants
 import de.rki.coronawarnapp.service.submission.KeyType
 import de.rki.coronawarnapp.service.submission.SubmissionConstants
@@ -135,13 +135,13 @@ class WebRequestBuilder(
         return@withContext file
     }
 
-    suspend fun asyncGetApplicationConfigurationFromServer(): ApplicationConfiguration =
+    suspend fun asyncGetApplicationConfigurationFromServer(): AppConfigAndroid.ApplicationConfigurationAndroid =
         withContext(Dispatchers.IO) {
             var exportBinary: ByteArray? = null
             var exportSignature: ByteArray? = null
 
             distributionService.getApplicationConfiguration(
-                DiagnosisKeyConstants.COUNTRY_APPCONFIG_DOWNLOAD_URL
+                "version/v2/app_config_android"
             ).byteStream().unzip { entry, entryContent ->
                 if (entry.name == EXPORT_BINARY_FILE_NAME) exportBinary = entryContent.copyOf()
                 if (entry.name == EXPORT_SIGNATURE_FILE_NAME) exportSignature =
@@ -156,7 +156,9 @@ class WebRequestBuilder(
             }
 
             try {
-                return@withContext ApplicationConfiguration.parseFrom(exportBinary)
+                return@withContext AppConfigAndroid.ApplicationConfigurationAndroid.parseFrom(
+                    exportBinary
+                )
             } catch (e: InvalidProtocolBufferException) {
                 throw ApplicationConfigurationInvalidException()
             }

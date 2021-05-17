@@ -9,7 +9,7 @@ class BackgroundWorkHelperTest {
     fun getDiagnosisKeyRetrievalPeriodicWorkTimeInterval() {
         Assert.assertEquals(
             BackgroundWorkHelper.getDiagnosisKeyRetrievalPeriodicWorkTimeInterval(),
-            120
+            360
         )
     }
 
@@ -23,7 +23,7 @@ class BackgroundWorkHelperTest {
 
     @Test
     fun getDiagnosisKeyRetrievalMaximumCalls() {
-        Assert.assertEquals(BackgroundWorkHelper.getDiagnosisKeyRetrievalMaximumCalls(), 12)
+        Assert.assertEquals(BackgroundWorkHelper.getDiagnosisKeyRetrievalMaximumCalls(), 4)
     }
 
     @Test

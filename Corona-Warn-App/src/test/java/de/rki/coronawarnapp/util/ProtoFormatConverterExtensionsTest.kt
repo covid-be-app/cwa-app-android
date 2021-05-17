@@ -53,14 +53,14 @@ class ProtoFormatConverterExtensionsTest {
             DEFAULT_TRANSMISSION_RISK_LEVEL,
             DEFAULT_TRANSMISSION_RISK_LEVEL,
             DEFAULT_TRANSMISSION_RISK_LEVEL,
-            DEFAULT_TRANSMISSION_RISK_LEVEL,
             TRANSMISSION_RISK_DAY_7,
             TRANSMISSION_RISK_DAY_6,
             TRANSMISSION_RISK_DAY_5,
             TRANSMISSION_RISK_DAY_4,
             TRANSMISSION_RISK_DAY_3,
             TRANSMISSION_RISK_DAY_2,
-            TRANSMISSION_RISK_DAY_1
+            TRANSMISSION_RISK_DAY_1,
+            TRANSMISSION_RISK_DAY_0
         )
 
         for (pos in 0 until numKeys) {
@@ -106,7 +106,7 @@ class ProtoFormatConverterExtensionsTest {
         )
 
         val correctRiskLevels = arrayOf(
-            TRANSMISSION_RISK_DAY_1
+            TRANSMISSION_RISK_DAY_0
         )
 
         for (pos in 0 until numKeys) {
