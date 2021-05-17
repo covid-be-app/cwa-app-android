@@ -154,6 +154,16 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
                 app:layout_constraintTop_toBottomOf="@+id/vaccination_info" />
 
+            <include
+                android:id="@+id/news"
+                layout="@layout/include_news_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/tools" />
+
 
             <include
                 android:id="@+id/main_risk"
@@ -164,7 +174,7 @@
                 android:visibility="@{FormatterSubmissionHelper.formatShowRiskStatusCard(submissionViewModel.deviceUiState)}"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
-                app:layout_constraintTop_toBottomOf="@+id/tools"
+                app:layout_constraintTop_toBottomOf="@+id/news"
                 app:settingsViewModel="@{settingsViewModel}"
                 app:showDetails="@{false}"
                 app:tracingViewModel="@{tracingViewModel}" />

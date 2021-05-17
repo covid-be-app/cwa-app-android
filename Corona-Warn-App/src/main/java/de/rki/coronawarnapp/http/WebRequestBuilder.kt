@@ -351,6 +351,10 @@ class WebRequestBuilder(
         dynamicTextsService.getDynamicTexts()
     }
 
+    suspend fun getDynamicNews() = withContext(Dispatchers.IO) {
+        dynamicTextsService.getDynamicNews()
+    }
+
     suspend fun asyncFakeSubmission() = withContext(Dispatchers.IO) {
 
         val randomAdditions = 0 // prepare for random addition of keys
