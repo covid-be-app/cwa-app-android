@@ -684,4 +684,7 @@
     <string name="submission_test_result_warning_others_title">Möchten Sie andere warnen?</string>
     <string name="submission_test_result_warning_others_positive">Ja</string>
     <string name="submission_test_result_warning_others_negative">Nein</string>
+    <string name="vaccination_at_least_1_dose">Mindestens 1 Dosis</string>
+    <string name="vaccination_fully_vaccinated">Vollständig geimpft"</string>
+    <string name="vaccination_title">Impfung</string>
 </resources>

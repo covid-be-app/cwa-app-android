@@ -5,6 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/card"
+        android:id="@+id/statistics_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

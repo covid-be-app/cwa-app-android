@@ -683,4 +683,7 @@
     <string name="submission_test_result_warning_others_title">Voulez-vous avertir vos contacts?</string>
     <string name="submission_test_result_warning_others_positive">Oui</string>
     <string name="submission_test_result_warning_others_negative">Non</string>
+    <string name="vaccination_at_least_1_dose">Au moins 1 dose</string>
+    <string name="vaccination_fully_vaccinated">Entièrement vacciné"</string>
+    <string name="vaccination_title">Vaccination</string>
 </resources>
