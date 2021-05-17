@@ -9,13 +9,13 @@ import be.sciensano.coronalert.storage.resultChannel
 import be.sciensano.coronalert.storage.t0
 import be.sciensano.coronalert.storage.t3
 import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction
-import be.sciensano.coronalert.ui.submission.Country
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.exception.NoRegistrationTokenSetException
 import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.util.formatter.TestResult
 import de.rki.coronawarnapp.worker.BackgroundWorkScheduler
+import java.util.Date
 import de.rki.coronawarnapp.service.submission.SubmissionService as DeSubmissionService
 
 object SubmissionService {
@@ -44,6 +44,13 @@ object SubmissionService {
         SubmitDiagnosisKeysTransaction.start(keys)
     }
 
+    suspend fun asyncSubmitExposureKeysForCovicode(
+        t0: String,
+        onsetSymptomsDate: Date?,
+        covicode: String, keys: List<TemporaryExposureKey>
+    ) {
+        SubmitDiagnosisKeysTransaction.startForCovicode(t0, onsetSymptomsDate, covicode, keys)
+    }
 
     fun submissionSuccessful() {
         BackgroundWorkScheduler.stopWorkScheduler()

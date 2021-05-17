@@ -686,4 +686,15 @@
     <string name="vaccination_at_least_1_dose">Tenminste 1 dosis</string>
     <string name="vaccination_fully_vaccinated">Volledig gevaccineerd"</string>
     <string name="vaccination_title">Vaccinatie</string>
+    <string name="covicode_card_title">Ben je positief en wil je je contacten anoniem informeren?</string>
+    <string name="covicode_title">Gebruik de Covi-code</string>
+    <string name="covicode_subtitle">Help anderen</string>
+    <string name="covicode_explanation">Gebruik de 12-cijferige code van het contactcenter om uw contacten te waarschuwen voor een mogelijk hoog risico</string>
+    <string name="covicode_send">Code verzenden</string>
+    <string name="covicode_dialog_title">Voer uw Covi-code in</string>
+    <string name="covicode_dialog_text">Voer de 12-cijferige Covi-code in die u van het contactcenter hebt ontvangen</string>
+    <string name="covicode_dialog_hint">Covi-Code</string>
+    <string name="covicode_dialog_positive">Ok</string>
+    <string name="covicode_dialog_negative">Annuleren</string>
+    <string name="covicode_error">Ongeldige Covi-Code</string>
 </resources>

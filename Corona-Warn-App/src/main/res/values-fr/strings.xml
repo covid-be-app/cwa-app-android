@@ -686,4 +686,15 @@
     <string name="vaccination_at_least_1_dose">Au moins 1 dose</string>
     <string name="vaccination_fully_vaccinated">Entièrement vacciné"</string>
     <string name="vaccination_title">Vaccination</string>
+    <string name="covicode_card_title">Vous êtes positif et souhaitez informer vos contact de manière anonyme?</string>
+    <string name="covicode_title">Utilisez le Covi-Code</string>
+    <string name="covicode_subtitle">Aider les autres</string>
+    <string name="covicode_explanation">Utilisez le code à 12 chiffres du centre de contact pour avertir vos contacts d\'une exposition potentielle à un risque élevé</string>
+    <string name="covicode_send">Envoyer le code</string>
+    <string name="covicode_dialog_title">Entrez votre Covi-Code</string>
+    <string name="covicode_dialog_text">Entrez le Covi-Code à 12 chiffres que vous avez reçu du centre de contact</string>
+    <string name="covicode_dialog_hint">Covi-Code</string>
+    <string name="covicode_dialog_positive">Envoyer le code</string>
+    <string name="covicode_dialog_negative">Annuler</string>
+    <string name="covicode_error">Mauvais Covi-Code</string>
 </resources>

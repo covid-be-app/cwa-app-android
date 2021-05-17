@@ -361,6 +361,10 @@ class MainFragment : Fragment() {
         binding.mainTestUnregistered.submissionStatusCardRegisteredButton.setOnClickListener {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToLinkTestInfoFragment())
         }
+
+        binding.covicode.covicodeCard.setOnClickListener {
+            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToCovicodeFragment())
+        }
     }
 
     private fun toSubmissionResult() {
