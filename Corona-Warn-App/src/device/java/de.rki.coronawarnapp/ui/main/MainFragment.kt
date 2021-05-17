@@ -15,6 +15,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.http.responses.DynamicNews
 import be.sciensano.coronalert.http.responses.DynamicTexts
 import be.sciensano.coronalert.http.responses.PositiveTestResultCardExplanation
 import be.sciensano.coronalert.http.responses.iconToResMap
@@ -106,6 +107,18 @@ class MainFragment : Fragment() {
         dynamicTextsViewModel.getDynamicTexts(requireContext())
         dynamicTextsViewModel.dynamicTexts.observe(viewLifecycleOwner, Observer {
             addPositiveTestExplanation(it.structure.positiveTestResultCard.explanation, it.texts)
+        })
+
+        dynamicTextsViewModel.getDynamicNews(requireContext())
+        dynamicTextsViewModel.dynamicNews.observe(viewLifecycleOwner, Observer {
+            it?.let { news ->
+                it.structure.news.explanation.getOrNull(0)?.let {
+                    binding.news.newsCard.visibility = View.VISIBLE
+                    binding.news.newsCardTextTitle.text = DynamicNews.getText(it.title, news.texts, Locale.getDefault().language)
+                    binding.news.newsCardTextBody.text = DynamicNews.getText(it.text, news.texts, Locale.getDefault().language)
+                }
+            }
+
         })
     }
 
@@ -248,7 +261,7 @@ class MainFragment : Fragment() {
                 val endDate = android.text.format.DateFormat.format("dd MMM", Date(it.endDate))
 
                 binding.statistics.statisticsCard.visibility = View.VISIBLE
-                binding.vaccinationInfo.view.visibility = View.VISIBLE
+                binding.vaccinationInfo.vaccinationCard.visibility = View.VISIBLE
 
                 binding.statistics.statisticsTextSubtitle.text =
                     getString(R.string.statistics_date_range, startDate, endDate)
@@ -276,7 +289,7 @@ class MainFragment : Fragment() {
                 binding.vaccinationInfo.vaccinationVaccinated.text = DecimalFormat("###,###").format(it.fullyVaccinated).replace(',', ' ')
             } else {
                 binding.statistics.statisticsCard.visibility = View.GONE
-                binding.vaccinationInfo.view.visibility = View.GONE
+                binding.vaccinationInfo.vaccinationCard.visibility = View.GONE
             }
 
         })
