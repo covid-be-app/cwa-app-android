@@ -135,6 +135,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/main_tracing" />
 
             <include
+                android:id="@+id/vaccination_info"
+                layout="@layout/include_vaccination_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/main_tracing_divider" />
+
+            <include
                 android:id="@+id/tools"
                 layout="@layout/include_tools_card"
                 android:layout_width="@dimen/match_constraint"
@@ -142,7 +152,7 @@
                 android:layout_marginTop="@dimen/spacing_small"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
-                app:layout_constraintTop_toBottomOf="@+id/main_tracing_divider" />
+                app:layout_constraintTop_toBottomOf="@+id/vaccination_info" />
 
 
             <include
@@ -307,7 +317,6 @@
                 android:layout_width="@dimen/match_constraint"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
-                android:visibility="gone"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
                 app:layout_constraintTop_toBottomOf="@+id/main_barrier" />

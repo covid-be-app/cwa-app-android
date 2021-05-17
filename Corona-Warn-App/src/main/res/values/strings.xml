@@ -708,4 +708,7 @@
     <string name="submission_test_result_warning_others_title">Do you want to warn others?</string>
     <string name="submission_test_result_warning_others_positive">Yes</string>
     <string name="submission_test_result_warning_others_negative">No</string>
+    <string name="vaccination_at_least_1_dose">At least 1 dose</string>
+    <string name="vaccination_fully_vaccinated">Fully vaccinated</string>
+    <string name="vaccination_title">Vaccination</string>
 </resources>

@@ -683,4 +683,7 @@
     <string name="submission_test_result_warning_others_title">Wil je anderen waarschuwen?</string>
     <string name="submission_test_result_warning_others_positive">Ja</string>
     <string name="submission_test_result_warning_others_negative">Neen</string>
+    <string name="vaccination_at_least_1_dose">Tenminste 1 dosis</string>
+    <string name="vaccination_fully_vaccinated">Volledig gevaccineerd"</string>
+    <string name="vaccination_title">Vaccinatie</string>
 </resources>

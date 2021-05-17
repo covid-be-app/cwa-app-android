@@ -1,61 +1,88 @@
 package be.sciensano.coronalert.service
 
-import be.sciensano.coronalert.http.responses.StatisticsResponse
-import be.sciensano.coronalert.storage.lastAverageDeceased
-import be.sciensano.coronalert.storage.lastAverageDeceasedChangePercent
-import be.sciensano.coronalert.storage.lastAverageHospitalised
-import be.sciensano.coronalert.storage.lastAverageHospitalisedChangePercent
-import be.sciensano.coronalert.storage.lastAverageInfected
-import be.sciensano.coronalert.storage.lastAverageInfectedChangePercent
-import be.sciensano.coronalert.storage.statisticsDate
-import be.sciensano.coronalert.storage.statisticsEndDate
-import be.sciensano.coronalert.storage.statisticsStartDate
+import android.content.Context
 import be.sciensano.coronalert.util.DateUtil
+import com.google.gson.Gson
 import de.rki.coronawarnapp.http.WebRequestBuilder
-import de.rki.coronawarnapp.storage.LocalData
+import de.rki.coronawarnapp.util.TimeAndDateExtensions.millisecondsToHours
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import timber.log.Timber
-import java.util.Date
+import java.io.BufferedReader
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.InputStreamReader
 
 object StatisticsService {
 
-    suspend fun fetchStatistics(): Statistics? {
-        try {
+    private const val CACHE_HOURS = 1
+
+    val gson = Gson()
+
+    private fun readStatisticsFile(file: File): Statistics {
+        val bufferedReader =
+            BufferedReader(InputStreamReader(FileInputStream(file)))
+
+        val statistics = gson.fromJson(
+            bufferedReader,
+            Statistics::class.java
+        )
+        bufferedReader.close()
+        return statistics
+    }
+
+    suspend fun fetchStatisticsAndWrite(file: File): Statistics {
+        return withContext(Dispatchers.IO) {
             val response = WebRequestBuilder.getInstance().getStatistics()
-            storeStatistics(response)
+
+            val statistics =
+                Statistics(response.averageInfected,
+                    response.averageInfectedChangePercentage,
+                    response.averageHospitalised,
+                    response.averageHospitalisedChangePercentage,
+                    response.averageDeceased,
+                    response.averageDeceasedChangePercentage,
+                    response.atLeastPartiallyVaccinated,
+                    response.fullyVaccinated,
+                    DateUtil.parseServerDate(response.startDate).toDate().time,
+                    DateUtil.parseServerDate(response.endDate).toDate().time,
+                    System.currentTimeMillis())
+
+            val json = gson.toJson(statistics)
+            val fileOutputStream = FileOutputStream(file)
+            fileOutputStream.write(json.toByteArray())
+            fileOutputStream.flush()
+            fileOutputStream.close()
+
+            statistics
+        }
+    }
+
+    suspend fun fetchStatistics(context: Context): Statistics? {
+        val file = File("${context.filesDir}/statistics.json")
+
+        return try {
+            if (file.exists()) {
+                if (System.currentTimeMillis()
+                        .millisecondsToHours() - file.lastModified()
+                        .millisecondsToHours() < CACHE_HOURS
+                ) {
+                    readStatisticsFile(file)
+                } else {
+                    fetchStatisticsAndWrite(file)
+                }
+            } else {
+                fetchStatisticsAndWrite(file)
+            }
         } catch (e: Exception) {
             Timber.e(e)
-        }
 
-        return getStatistics()
-    }
-
-    private fun storeStatistics(statistics: StatisticsResponse) {
-        LocalData.statisticsDate(Date().time)
-        LocalData.statisticsStartDate(DateUtil.parseServerDate(statistics.startDate).toDate().time)
-        LocalData.statisticsEndDate(DateUtil.parseServerDate(statistics.endDate).toDate().time)
-        LocalData.lastAverageInfected(statistics.averageInfected)
-        LocalData.lastAverageInfectedChangePercent(statistics.averageInfectedChangePercentage)
-        LocalData.lastAverageHospitalised(statistics.averageHospitalised)
-        LocalData.lastAverageHospitalisedChangePercent(statistics.averageHospitalisedChangePercentage)
-        LocalData.lastAverageDeceased(statistics.averageDeceased)
-        LocalData.lastAverageDeceasedChangePercent(statistics.averageDeceasedChangePercentage)
-    }
-
-    private fun getStatistics(): Statistics? {
-        return if (LocalData.statisticsDate() != -1L) {
-            Statistics(
-                LocalData.lastAverageInfected(),
-                LocalData.lastAverageInfectedChangePercent(),
-                LocalData.lastAverageHospitalised(),
-                LocalData.lastAverageHospitalisedChangePercent(),
-                LocalData.lastAverageDeceased(),
-                LocalData.lastAverageDeceasedChangePercent(),
-                LocalData.statisticsStartDate(),
-                LocalData.statisticsEndDate(),
-                LocalData.statisticsDate()
-            )
-        } else {
-            null
+            if (file.exists()) {
+                readStatisticsFile(file)
+            }  else {
+                null
+            }
         }
     }
 }

@@ -36,11 +36,11 @@ import de.rki.coronawarnapp.ui.viewmodel.SubmissionViewModel
 import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
 import de.rki.coronawarnapp.util.DialogHelper
 import de.rki.coronawarnapp.util.ExternalActionHelper
-import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.DateFormat
+import java.text.DecimalFormat
 import java.util.Date
 import java.util.Locale
 
@@ -232,7 +232,7 @@ class MainFragment : Fragment() {
         TimerHelper.checkManualKeyRetrievalTimer()
         submissionViewModel.refreshDeviceUIState()
         tracingViewModel.refreshLastSuccessfullyCalculatedScore()
-        statisticsViewModel.refreshStatistics()
+        statisticsViewModel.refreshStatistics(requireContext())
         binding.mainScrollview.sendAccessibilityEvent(AccessibilityEvent.TYPE_ANNOUNCEMENT)
     }
 
@@ -247,7 +247,9 @@ class MainFragment : Fragment() {
                     android.text.format.DateFormat.format("dd MMM", Date(it.startDate))
                 val endDate = android.text.format.DateFormat.format("dd MMM", Date(it.endDate))
 
-                statistics.visibility = View.VISIBLE
+                binding.statistics.statisticsCard.visibility = View.VISIBLE
+                binding.vaccinationInfo.view.visibility = View.VISIBLE
+
                 binding.statistics.statisticsTextSubtitle.text =
                     getString(R.string.statistics_date_range, startDate, endDate)
                 binding.statistics.bulletInfectionsText.text = getString(
@@ -267,8 +269,14 @@ class MainFragment : Fragment() {
                 )
                 binding.statistics.statisticsTextFooter.text =
                     getString(R.string.statistics_last_updated, lastUpdatedDate)
+
+                binding.vaccinationInfo.vaccinationUpdateText.text =
+                    getString(R.string.statistics_last_updated, lastUpdatedDate)
+                binding.vaccinationInfo.vaccination1Dose.text = DecimalFormat("###,###").format(it.atLeastPartiallyVaccinated).replace(',', ' ')
+                binding.vaccinationInfo.vaccinationVaccinated.text = DecimalFormat("###,###").format(it.fullyVaccinated).replace(',', ' ')
             } else {
-                statistics.visibility = View.GONE
+                binding.statistics.statisticsCard.visibility = View.GONE
+                binding.vaccinationInfo.view.visibility = View.GONE
             }
 
         })
