@@ -489,7 +489,7 @@
     <string name="submission_status_card_subtitle_invalid">Invalid test</string>
     <string name="submission_status_card_subtitle_negative">Negative Diagnosis</string>
     <string name="submission_status_card_body_fetching">You result is being updated</string>
-    <string name="submission_status_card_body_unregistered">Did you do your COVID-test?</string>
+    <string name="submission_status_card_body_unregistered">Did you take your COVID-test?</string>
     <string name="submission_status_card_body_pending">The evaluation of your test is not yet done.</string>
     <string name="submission_status_card_body_invalid">Your test could not be evaluated.</string>
     <string name="submission_status_card_body_positive">You have been diagnosed positive for SARS-CoV-2.</string>
@@ -711,7 +711,7 @@
     <string name="vaccination_at_least_1_dose">At least 1 dose</string>
     <string name="vaccination_fully_vaccinated">Fully vaccinated</string>
     <string name="vaccination_title">Vaccination</string>
-    <string name="covicode_card_title">Are you positive and want to inform your contacts anonymously?</string>
+    <string name="covicode_card_title">Did you test positive and do you want to inform your contacts anonymously?</string>
     <string name="covicode_title">Use The Covi-Code</string>
     <string name="covicode_subtitle">Help others</string>
     <string name="covicode_explanation">Use the 12-digit code from the contact center to warn your contacts about a potential high risk exposure</string>
