@@ -87,6 +87,18 @@ object DynamicTextsService {
         return dynamicTexts
     }
 
+    private fun readDefaultDynamicNews(context: Context): DynamicNews {
+        val bufferedReader = context.assets.open("dynamicNews.json").bufferedReader()
+        val dynamicNews = gson.fromJson(
+            bufferedReader
+                .use { it.readText() },
+            DynamicNews::class.java
+        )
+
+        bufferedReader.close()
+        return dynamicNews
+    }
+
     suspend fun fetchDynamicNews(context: Context): DynamicNews? {
         val file = File("${context.filesDir}/dynamicNews.json")
 
@@ -109,7 +121,7 @@ object DynamicTextsService {
             if (file.exists()) {
                 readDynamicNewsFile(file)
             } else {
-                return null
+                readDefaultDynamicNews(context)
             }
         }
     }
