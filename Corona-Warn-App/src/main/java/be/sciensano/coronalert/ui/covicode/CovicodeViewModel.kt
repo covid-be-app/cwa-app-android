@@ -45,29 +45,31 @@ class CovicodeViewModel : ViewModel() {
         covicode.value = code
     }
 
+    fun calculateT0(): String {
+        val onsetSymptomsDate = symptomsDate.value
+        val cal = Calendar.getInstance()
+        cal.time = onsetSymptomsDate ?: Date()
+        cal.add(
+            Calendar.DATE,
+            if (onsetSymptomsDate != null) -INFECTIOUS_DAYS_MINUS
+            else -INFECTIOUS_DAYS_MINUS_WITHOUT_SYMPTOMS
+        )
+        return (cal.time).toServerFormat()
+    }
+
     fun beSubmitDiagnosisKeysForCovicode(
-        keys: List<TemporaryExposureKey>
+        keys: List<TemporaryExposureKey>,
+        t0: String
     ) =
         viewModelScope.launch {
             try {
                 _submissionState.value = ApiRequestState.STARTED
-
                 val onsetSymptomsDate = symptomsDate.value
-                val cal = Calendar.getInstance()
-                cal.time = onsetSymptomsDate ?: Date()
-                cal.add(
-                    Calendar.DATE,
-                    if (onsetSymptomsDate != null) -INFECTIOUS_DAYS_MINUS
-                    else -INFECTIOUS_DAYS_MINUS_WITHOUT_SYMPTOMS
-                )
-                val t0 = (cal.time).toServerFormat()
-                val t3 = Date().toServerFormat()
-
                 SubmissionService.asyncSubmitExposureKeysForCovicode(
                     t0,
                     onsetSymptomsDate,
                     covicode.value ?: "",
-                    keys.inT0T3Range(t0, t3)
+                    keys
                 )
                 _submissionState.value = ApiRequestState.SUCCESS
             } catch (err: CwaWebException) {

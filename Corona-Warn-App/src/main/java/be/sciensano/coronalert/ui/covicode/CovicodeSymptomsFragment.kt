@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import be.sciensano.coronalert.util.TemporaryExposureKeyExtensions.inT0T3Range
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentCovicodeSymptomsBinding
@@ -26,6 +27,7 @@ import de.rki.coronawarnapp.ui.main.MainActivity
 import de.rki.coronawarnapp.ui.submission.ApiRequestState
 import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
 import de.rki.coronawarnapp.util.DialogHelper
+import de.rki.coronawarnapp.util.TimeAndDateExtensions.toServerFormat
 import de.rki.coronawarnapp.util.observeEvent
 import java.util.Calendar
 import java.util.Date
@@ -218,8 +220,11 @@ class CovicodeSymptomsFragment : Fragment(), InternalExposureNotificationPermiss
 
     override fun onKeySharePermissionGranted(keys: List<TemporaryExposureKey>) {
         super.onKeySharePermissionGranted(keys)
-        if (keys.isNotEmpty()) {
-            viewModel.beSubmitDiagnosisKeysForCovicode(keys)
+        val t0 = viewModel.calculateT0()
+        val keysToSend = keys.inT0T3Range(viewModel.calculateT0(), Date().toServerFormat())
+
+        if (keysToSend.isNotEmpty()) {
+            viewModel.beSubmitDiagnosisKeysForCovicode(keysToSend, t0)
         } else {
             viewModel.submitWithNoDiagnosisKeys()
             navigateToSubmissionDoneFragment()
