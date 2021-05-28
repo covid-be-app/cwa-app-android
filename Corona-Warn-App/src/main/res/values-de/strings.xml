@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Datenabruf…</string>
-    <string name="submission_status_card_title_unregistered">Verknüpfen Sie Ihren COVID-Test mit der App</string>
+    <string name="submission_status_card_title_unregistered">Ich muss mich testen lassen</string>
     <string name="submission_status_card_title_pending">Ergebnis liegt noch nicht vor</string>
     <string name="submission_status_card_title_available">Ihr Ergebnis liegt vor</string>
     <string name="submission_status_card_title_positive">Befund positiv</string>
     <string name="submission_status_card_subtitle_invalid">Fehlerhafter Test</string>
     <string name="submission_status_card_subtitle_negative">Befund negativ</string>
     <string name="submission_status_card_body_fetching">Das Ergebnis wird aktualisiert</string>
-    <string name="submission_status_card_body_unregistered">Haben Sie Ihren COVID-Test gemacht?</string>
+    <string name="submission_status_card_body_unregistered">Erstellen Sie einen 17-stelligen Code, um Ihren COVID-Test mit dieser Anwendung zu verknüpfen.</string>
     <string name="submission_status_card_body_pending">Die Auswertung Ihres Tests ist noch nicht abgeschlossen.</string>
     <string name="submission_status_card_body_invalid">Ihr Test konnte nicht ausgewertet werden.</string>
     <string name="submission_status_card_body_positive">Sie wurden positiv auf SARS-CoV-2 getestet.</string>
     <string name="submission_status_card_body_negative">Sie wurden negativ auf SARS-CoV-2 getestet.</string>
-    <string name="submission_status_card_button_unregistered">Noch nicht</string>
+    <string name="submission_status_card_button_unregistered">Code erstellen</string>
     <string name="submission_status_card_button_show_results">Test anzeigen</string>
     <string name="submission_status_card_positive_result_subtitle">Bitte beachten:</string>
     <string name="submission_status_card_positive_result_contagious">Sie sind ansteckend. Isolieren Sie sich von anderen Personen.</string>
@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Nein</string>
     <string name="submission_test_request_headline">Erhalten Sie den Test</string>
     <string name="submission_test_request_text">Datum wählen, an dem Symptome entdeckt wurden.</string>
-    <string name="submission_test_request_save_text">Versuchen Sie immer, diesen Code an den Arzt zu übermitteln, der den Test verschreibt.</string>
+    <string name="submission_test_request_save_text">Solange der Test noch nicht erfolgt ist, können Sie den Code weiterhin über einen Link hochladen, den sie per SMS empfangen. Oder Sie tragen den Code in dieses Formular auf der Coronalert-Website https://coronalert.be/de/coronalert-formular/ ein.\n\nWenn keines dieser Verfahren funktionieren sollte, haben Sie auch nach einem positiven Test noch die Möglichkeit Ihre Kontakte anonym zu warnen.</string>
     <string name="submission_test_request_save_button_save">Schließen</string>
     <string name="submission_countries_selection_headline">Länder wählen</string>
     <string name="submission_countries_selection_text">Wenn Sie an allen aufgeführten Daten nicht in Belgien waren und diese Informationen (anonym) weitergeben möchten, bitte in der anzupassenden Zeile das Land, das Sie an diesem Datum besucht haben, antippen.</string>
@@ -680,17 +680,19 @@
         <item>Gehen Sie direkt zum Webformular, um die 2 Codes manuell zu codieren.</item>
     </string-array>
     <string name="submission_test_request_save_headline">Verwenden Sie diesen Code, um Ihren Test in der App zu registrieren</string>
-    <string name="submission_test_request_save_explanation">Zeigen Sie diese Nummer und dieses Datum dem Arzt oder Labor, das den Test durchführt, um Ihr Smartphone mit dem Test zu verbinden.</string>
+    <string name="submission_test_request_save_explanation">Bitte senden Sie diesen Code, wenn Sie sich zum ersten Mal an Ihren Arzt wenden oder wenn Sie einen Test reservieren.</string>
     <string name="submission_test_result_warning_others_title">Möchten Sie andere warnen?</string>
     <string name="submission_test_result_warning_others_positive">Ja</string>
     <string name="submission_test_result_warning_others_negative">Nein</string>
     <string name="vaccination_at_least_1_dose">Mindestens 1 Dosis</string>
     <string name="vaccination_fully_vaccinated">Vollständig geimpft"</string>
     <string name="vaccination_title">Impfung</string>
-    <string name="covicode_card_title">"Sind Sie positiv und möchten Ihre Kontakte anonym informieren?</string>
+    <string name="covicode_card_title">"Ich wurde getestet</string>
     <string name="covicode_title">Covi-Code</string>
     <string name="covicode_subtitle">Anderen helfen</string>
-    <string name="covicode_explanation">Verwenden Sie den 12-stelligen Code aus dem Contact Center, um Ihre Kontakte vor einem möglichen Risiko mit hohem Risiko zu warnen</string>
+    <string name="covicode_card_subtitle">Sie wurden positiv auf COVID-19 getestet und den Test nicht mit Coronalert verbunden? Es ist nicht schlecht, Ihre Kontakte anonym zu benachrichtigen.</string>
+    <string name="covicode_explanation">Verwenden Sie den 12-stelligen Code, den Sie erhalten, wenn Sie den Callcenter anrufen, um Ihre Kontakte über eine Hochrisiko-Begegnung zu informieren. Hier ist die Nummer, die Sie anrufen können: +32 2 214 19 19</string>
+    <string name="covicode_card_button">Benachrichtigen Sie Ihre Kontakte</string>
     <string name="covicode_send">Code senden</string>
     <string name="covicode_dialog_title">Geben Sie Ihren Covi-Code ein</string>
     <string name="covicode_dialog_text">Geben Sie den 12-stelligen Covi-Code ein, den Sie vom Contact Center erhalten haben</string>
@@ -698,4 +700,5 @@
     <string name="covicode_dialog_positive">Ok</string>
     <string name="covicode_dialog_negative">Stornieren</string>
     <string name="covicode_error">Ungültiger Covi-Code</string>
+    <string name="submission_test_result_negative_warning">Dieser Bildschirm kann nicht als COVID-Zertifikat verwendet werden</string>
 </resources>

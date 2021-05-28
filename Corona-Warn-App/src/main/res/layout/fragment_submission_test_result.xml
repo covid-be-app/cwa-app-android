@@ -72,6 +72,18 @@
                     app:registerDate="@{submissionViewModel.testResultReceivedDate}" />
 
                 <TextView
+                    android:id="@+id/submission_test_result_negative_warning"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:accessibilityHeading="true"
+                    android:visibility="gone"
+                    android:text="@string/submission_test_result_negative_warning"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_card" />
+
+                <TextView
                     android:id="@+id/submission_test_result_subtitle"
                     style="@style/headline5"
                     android:layout_width="@dimen/match_constraint"
@@ -81,7 +93,7 @@
                     android:text="@string/submission_test_result_subtitle"
                     app:layout_constraintEnd_toEndOf="@+id/guideline_end"
                     app:layout_constraintStart_toStartOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_card" />
+                    app:layout_constraintTop_toBottomOf="@+id/submission_test_result_negative_warning" />
 
                 <include
                     android:id="@+id/submission_test_result_pending_steps"

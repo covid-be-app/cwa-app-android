@@ -30,5 +30,32 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_covicode" />
 
+        <TextView
+            android:id="@+id/covicode_card_subtitle"
+            style="@style/subtitleMedium"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:focusable="false"
+            android:text="@string/covicode_card_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/covicode_card_text_title" />
+
+
+        <Button
+            android:id="@+id/covicode_card_button"
+            style="@style/buttonPrimary"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="8dp"
+            android:text="@string/covicode_card_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/covicode_card_subtitle" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

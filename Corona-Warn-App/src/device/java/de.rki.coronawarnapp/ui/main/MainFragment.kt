@@ -358,10 +358,6 @@ class MainFragment : Fragment() {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToToolsFragment())
         }
 
-        binding.mainTestUnregistered.submissionStatusCardRegisteredButton.setOnClickListener {
-            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToLinkTestInfoFragment())
-        }
-
         binding.covicode.covicodeCard.setOnClickListener {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToCovicodeFragment())
         }

@@ -211,6 +211,13 @@ class SubmissionTestResultFragment : Fragment(),
             if (uiState == DeviceUIState.PAIRED_REDEEMED) {
                 showRedeemedTokenWarningDialog()
             }
+
+            if (uiState == DeviceUIState.PAIRED_NEGATIVE) {
+                binding.submissionTestResultNegativeWarning.visibility = View.VISIBLE
+            } else {
+                binding.submissionTestResultNegativeWarning.visibility = View.GONE
+            }
+
             dynamicTextsViewModel.getDynamicTexts(requireContext())
         })
 
