@@ -361,6 +361,9 @@ class MainFragment : Fragment() {
         binding.covicode.covicodeCard.setOnClickListener {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToCovicodeFragment())
         }
+        binding.covicode.covicodeCardButton.setOnClickListener {
+            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToCovicodeFragment())
+        }
     }
 
     private fun toSubmissionResult() {
