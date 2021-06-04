@@ -1,9 +1,10 @@
 package de.rki.coronawarnapp.nearby
 
 import com.google.android.gms.nearby.Nearby
-import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
-import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration.ExposureConfigurationBuilder
+import com.google.android.gms.nearby.exposurenotification.DailySummariesConfig
+import com.google.android.gms.nearby.exposurenotification.DailySummary
 import com.google.android.gms.nearby.exposurenotification.ExposureSummary
+import com.google.android.gms.nearby.exposurenotification.ExposureWindow
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.risk.TimeVariables
@@ -100,20 +101,14 @@ object InternalExposureNotificationClient {
      * Verification document that is linked from google.com/covid19/exposurenotifications.
      *
      * @param keyFiles
-     * @param configuration
      * @param token
      * @return
      */
     suspend fun asyncProvideDiagnosisKeys(
         keyFiles: Collection<File>,
-        configuration: ExposureConfiguration?,
-        token: String
     ): Void = suspendCoroutine { cont ->
-        val exposureConfiguration = configuration ?: ExposureConfigurationBuilder().build()
         exposureNotificationClient.provideDiagnosisKeys(
             keyFiles.toList(),
-            exposureConfiguration,
-            token
         )
             .addOnSuccessListener {
                 cont.resume(it)
@@ -154,6 +149,26 @@ object InternalExposureNotificationClient {
     suspend fun asyncGetExposureSummary(token: String): ExposureSummary =
         suspendCoroutine { cont ->
             exposureNotificationClient.getExposureSummary(token)
+                .addOnSuccessListener {
+                    cont.resume(it)
+                }.addOnFailureListener {
+                    cont.resumeWithException(it)
+                }
+        }
+
+    suspend fun asyncGetDailySummary(config: DailySummariesConfig): List<DailySummary> =
+        suspendCoroutine { cont ->
+            exposureNotificationClient.getDailySummaries(config)
+                .addOnSuccessListener {
+                    cont.resume(it)
+                }.addOnFailureListener {
+                    cont.resumeWithException(it)
+                }
+        }
+
+    suspend fun asyncGetExposureWindows(): List<ExposureWindow> =
+        suspendCoroutine { cont ->
+            exposureNotificationClient.exposureWindows
                 .addOnSuccessListener {
                     cont.resume(it)
                 }.addOnFailureListener {

@@ -82,6 +82,9 @@ object DiagnosisKeyConstants {
     fun availableDatesForRegionUrl(region: String) =
         "$DIAGNOSIS_KEYS_DOWNLOAD_URL/$COUNTRY/$region/$DATE"
 
+    fun availableHoursForRegionUrl(region: String, date: String) =
+        "$DIAGNOSIS_KEYS_DOWNLOAD_URL/$COUNTRY/$region/$DATE/$date/$HOUR"
+
 
     const val SERVER_ERROR_CODE_403 = 403
 }

@@ -44,6 +44,15 @@
         <action
             android:id="@+id/action_mainFragment_to_submissionTestRequestFragment"
             app:destination="@id/submissionTestRequestFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_linkTestInfoFragment"
+            app:destination="@id/linkTestInfoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_covicodeFragment"
+            app:destination="@id/covicodeFragment" />
     </fragment>
 
     <fragment
@@ -214,25 +223,6 @@
             app:destination="@id/submissionContactFragment" />
     </fragment>
     <fragment
-        android:id="@+id/submissionResultPositiveOtherWarningFragment"
-        android:name="de.rki.coronawarnapp.ui.submission.SubmissionResultPositiveOtherWarningFragment"
-        android:label="fragment_submission_result_positive_other_warning"
-        tools:layout="@layout/fragment_submission_positive_other_warning">
-        <action
-            android:id="@+id/action_submissionResultPositiveOtherWarningFragment_to_submissionResultFragment"
-            app:destination="@id/submissionResultFragment"
-            app:popUpTo="@id/submissionResultFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_submissionResultPositiveOtherWarningFragment_to_submissionDoneFragment"
-            app:destination="@id/submissionDoneFragment"
-            app:popUpTo="@id/submissionDoneFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_submissionResultPositiveOtherWarningFragment_to_submissionKeysListFragment"
-            app:destination="@id/submissionKeysListFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/submissionResultFragment"
         android:name="de.rki.coronawarnapp.ui.submission.SubmissionTestResultFragment"
         android:label="fragment_submission_result"
@@ -243,8 +233,10 @@
             app:popUpTo="@id/mainFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_submissionResultFragment_to_submissionResultPositiveOtherWarningFragment"
-            app:destination="@id/submissionResultPositiveOtherWarningFragment" />
+            android:id="@+id/action_submissionResultFragment_to_submissionDoneFragment"
+            app:destination="@id/submissionDoneFragment"
+            app:popUpTo="@id/submissionDoneFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -275,22 +267,6 @@
             android:name="skipCodeInformation"
             android:defaultValue="false"
             app:argType="boolean" />
-    </fragment>
-    <fragment
-        android:id="@+id/submissionKeysListFragment"
-        android:name="be.sciensano.coronalert.ui.submission.SubmissionKeysListFragment"
-        android:label="fragment_submission_keys_list"
-        tools:layout="@layout/fragment_submission_keys_list">
-        <action
-            android:id="@+id/action_submissionKeysListFragment_to_submissionResultFragment"
-            app:destination="@id/submissionResultFragment"
-            app:popUpTo="@id/submissionResultFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_submissionKeysListFragment_to_submissionDoneFragment"
-            app:destination="@id/submissionDoneFragment"
-            app:popUpTo="@id/submissionDoneFragment"
-            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/submissionTestRequestSaveFragment"
@@ -377,4 +353,55 @@
             android:id="@+id/action_interopCountryConfigurationFragment_to_settingTracingFragment"
             app:destination="@id/settingsTracingFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="be.sciensano.coronalert.ui.tools.ToolsFragment"
+        android:label="ToolsFragment">
+
+        <action
+            android:id="@+id/action_toolsFragment_to_toolsChildrenFragment"
+            app:destination="@id/toolsChildrenFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsChildrenFragment"
+        android:name="be.sciensano.coronalert.ui.tools.ToolsChildrenFragment"
+        android:label="ToolsFragment">
+
+        <argument
+            android:name="tools"
+            app:argType="be.sciensano.coronalert.ui.tools.Tools" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkTestInfoFragment"
+        android:name="be.sciensano.coronalert.ui.LinkTestInfoFragment"
+        android:label="LinkTestInfoFragment" />
+
+    <fragment
+        android:id="@+id/covicodeFragment"
+        android:name="be.sciensano.coronalert.ui.covicode.CovicodeFragment"
+        android:label="CovicodeFragment" >
+        <action
+            android:id="@+id/action_covicodeFragment_to_covicodeSymptomsFragment"
+            app:destination="@id/covicodeSymptomsFragment" />
+
+        <action
+            android:id="@+id/action_covicodeFragment_to_submissionDoneFragment"
+            app:destination="@id/submissionDoneFragment"
+            app:popUpTo="@id/submissionDoneFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/covicodeSymptomsFragment"
+        android:name="be.sciensano.coronalert.ui.covicode.CovicodeSymptomsFragment"
+        android:label="CovicodeSymptomsFragment" >
+        <action
+            android:id="@+id/action_covicodeSymptoms_to_submissionDoneFragment"
+            app:destination="@id/submissionDoneFragment"
+            app:popUpTo="@id/submissionDoneFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
 </navigation>

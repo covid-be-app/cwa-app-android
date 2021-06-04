@@ -4,13 +4,12 @@ import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.Submit
 import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY
 import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.STORE_SUCCESS
 import be.sciensano.coronalert.transaction.SubmitDiagnosisKeysTransaction.SubmitDiagnosisKeysTransactionState.SUBMIT_KEYS
-import be.sciensano.coronalert.ui.submission.Country
 import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.transaction.Transaction
 import de.rki.coronawarnapp.transaction.TransactionState
 import de.rki.coronawarnapp.util.ProtoFormatConverterExtensions.limitKeyCount
 import de.rki.coronawarnapp.util.ProtoFormatConverterExtensions.transformKeyHistoryToExternalFormat
-import timber.log.Timber
+import java.util.Date
 import be.sciensano.coronalert.service.diagnosiskey.DiagnosisKeyService as BeDiagnosisKeyService
 import be.sciensano.coronalert.service.submission.SubmissionService as BeSubmissionService
 
@@ -67,6 +66,45 @@ object SubmitDiagnosisKeysTransaction : Transaction() {
              ****************************************************/
             executeState(SUBMIT_KEYS) {
                 BeDiagnosisKeyService.asyncSubmitKeys(temporaryExposureKeyList)
+            }
+            /****************************************************
+             * STORE SUCCESS
+             ****************************************************/
+            executeState(STORE_SUCCESS) {
+                BeSubmissionService.submissionSuccessful()
+            }
+            /****************************************************
+             * CLOSE TRANSACTION
+             ****************************************************/
+            executeState(CLOSE) {}
+        }
+
+    suspend fun startForCovicode(
+        t0: String,
+        onsetSymptomsDate: Date?,
+        covicode: String,
+        keys: List<TemporaryExposureKey>
+    ) =
+        lockAndExecuteUnique {
+
+            /****************************************************
+             * RETRIEVE TEMPORARY EXPOSURE KEY HISTORY
+             ****************************************************/
+            val temporaryExposureKeyList = executeState(RETRIEVE_TEMPORARY_EXPOSURE_KEY_HISTORY) {
+                keys.limitKeyCount()
+                    .transformKeyHistoryToExternalFormat()
+            }
+
+            /****************************************************
+             * SUBMIT KEYS
+             ****************************************************/
+            executeState(SUBMIT_KEYS) {
+                BeDiagnosisKeyService.asyncSubmitKeysForCovicode(
+                    t0,
+                    onsetSymptomsDate,
+                    covicode,
+                    temporaryExposureKeyList
+                )
             }
             /****************************************************
              * STORE SUCCESS

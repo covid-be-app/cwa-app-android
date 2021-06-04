@@ -20,7 +20,6 @@
 package de.rki.coronawarnapp.transaction
 
 import be.sciensano.coronalert.storage.dataTransfer
-import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.nearby.InternalExposureNotificationClient
 import de.rki.coronawarnapp.service.applicationconfiguration.ApplicationConfigurationService
@@ -38,6 +37,7 @@ import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.rollbac
 import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction.start
 import de.rki.coronawarnapp.util.CachedKeyFileHolder
 import de.rki.coronawarnapp.util.ConnectivityHelper
+import de.rki.coronawarnapp.worker.BackgroundConstants.DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY
 import de.rki.coronawarnapp.worker.BackgroundWorkHelper
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -127,7 +127,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             DateTimeZone.UTC
         )
         if (LocalData.lastTimeDiagnosisKeysFromServerFetch() == null ||
-            currentDate.withTimeAtStartOfDay() != lastFetch.withTimeAtStartOfDay()
+            lastFetch.isBefore(currentDate.minusHours(DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY))
         ) {
             BackgroundWorkHelper.sendDebugNotification(
                 "Start RetrieveDiagnosisKeysTransaction",
@@ -136,6 +136,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
 
             start()
         }
+
     }
 
     /** initiates the transaction. This suspend function guarantees a successful transaction once completed. */
@@ -182,7 +183,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             /****************************************************
              * SUBMIT FILES TO API
              ****************************************************/
-            executeAPISubmission(token, keyFiles, exposureConfiguration)
+            executeAPISubmission(keyFiles)
         } else {
             Timber.w("no key files, skipping submission to internal API.")
         }
@@ -205,9 +206,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             if (TOKEN.isInStateStack()) {
                 rollbackToken()
             }
-            if (FILES_FROM_WEB_REQUESTS.isInStateStack()) {
-                rollbackFilesFromWebRequests()
-            }
+            //don't rollback already downloaded files because of data usage
         } catch (e: Exception) {
             // We handle every exception through a RollbackException to make sure that a single EntryPoint
             // is available for the caller.
@@ -275,16 +274,12 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
      * Sending all files at once because of google quota
      */
     private suspend fun executeAPISubmission(
-        token: String,
         exportFiles: Collection<File>,
-        exposureConfiguration: ExposureConfiguration?
     ) = executeState(API_SUBMISSION) {
         InternalExposureNotificationClient.asyncProvideDiagnosisKeys(
             exportFiles,
-            exposureConfiguration,
-            token
         )
-        Timber.d("Diagnosis Keys provided successfully, Token: $token")
+        Timber.d("Diagnosis Keys provided successfully")
     }
 
     /**

@@ -135,15 +135,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/main_tracing" />
 
             <include
-                android:id="@+id/statistics"
-                layout="@layout/include_statistics_card"
+                android:id="@+id/vaccination_info"
+                layout="@layout/include_vaccination_card"
                 android:layout_width="@dimen/match_constraint"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
-                android:visibility="gone"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
                 app:layout_constraintTop_toBottomOf="@+id/main_tracing_divider" />
+
+            <include
+                android:id="@+id/tools"
+                layout="@layout/include_tools_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/vaccination_info" />
+
+            <include
+                android:id="@+id/news"
+                layout="@layout/include_news_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/tools" />
+
 
             <include
                 android:id="@+id/main_risk"
@@ -154,7 +174,7 @@
                 android:visibility="@{FormatterSubmissionHelper.formatShowRiskStatusCard(submissionViewModel.deviceUiState)}"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
-                app:layout_constraintTop_toBottomOf="@+id/statistics"
+                app:layout_constraintTop_toBottomOf="@+id/news"
                 app:settingsViewModel="@{settingsViewModel}"
                 app:showDetails="@{false}"
                 app:tracingViewModel="@{tracingViewModel}" />
@@ -302,6 +322,27 @@
                 app:constraint_referenced_ids="main_test_done, main_risk" />
 
             <include
+                android:id="@+id/covicode"
+                layout="@layout/include_covicode_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/main_barrier" />
+
+
+            <include
+                android:id="@+id/statistics"
+                layout="@layout/include_statistics_card"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
+                app:layout_constraintTop_toBottomOf="@+id/covicode" />
+
+            <include
                 android:id="@+id/main_about"
                 layout="@layout/include_main_faq_card"
                 android:layout_width="0dp"
@@ -310,7 +351,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/guideline_bottom"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_card_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_card_start"
-                app:layout_constraintTop_toBottomOf="@+id/main_barrier"
+                app:layout_constraintTop_toBottomOf="@+id/statistics"
                 app:layout_constraintVertical_bias="0.0" />
 
             <include layout="@layout/merge_guidelines_side" />

@@ -10,6 +10,7 @@ import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.webkit.WebViewDatabase
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import be.sciensano.coronalert.util.DateUtil
@@ -64,7 +65,8 @@ class LinkTestActivity : AppCompatActivity() {
         }
 
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.settings.domStorageEnabled = true
+        binding.webView.settings.saveFormData = false
+        binding.webView.clearFormData()
 
         @Suppress("MagicNumber")
         binding.webView.webChromeClient = object : WebChromeClient() {
@@ -166,5 +168,10 @@ class LinkTestActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }
+    }
+
+    override fun onDestroy() {
+        WebViewDatabase.getInstance(this).clearFormData()
+        super.onDestroy()
     }
 }

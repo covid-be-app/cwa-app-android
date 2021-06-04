@@ -1,6 +1,7 @@
 package de.rki.coronawarnapp.ui.submission
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,12 +18,16 @@ import be.sciensano.coronalert.http.responses.Explanation
 import be.sciensano.coronalert.http.responses.iconToResMap
 import be.sciensano.coronalert.ui.DynamicTextsViewModel
 import be.sciensano.coronalert.util.DateUtil
+import com.google.android.gms.nearby.exposurenotification.TemporaryExposureKey
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.databinding.FragmentSubmissionTestResultBinding
 import de.rki.coronawarnapp.databinding.ViewSimpleStepEntryBinding
+import de.rki.coronawarnapp.exception.http.BadRequestException
 import de.rki.coronawarnapp.exception.http.CwaClientError
 import de.rki.coronawarnapp.exception.http.CwaServerError
 import de.rki.coronawarnapp.exception.http.CwaWebException
+import de.rki.coronawarnapp.exception.http.ForbiddenException
+import de.rki.coronawarnapp.nearby.InternalExposureNotificationPermissionHelper
 import de.rki.coronawarnapp.ui.doNavigate
 import de.rki.coronawarnapp.ui.viewmodel.SubmissionViewModel
 import de.rki.coronawarnapp.ui.viewmodel.TracingViewModel
@@ -38,7 +43,8 @@ import java.util.Locale
 /**
  * A simple [Fragment] subclass.
  */
-class SubmissionTestResultFragment : Fragment() {
+class SubmissionTestResultFragment : Fragment(),
+    InternalExposureNotificationPermissionHelper.Callback {
     companion object {
         private val TAG: String? = SubmissionTanFragment::class.simpleName
     }
@@ -50,13 +56,19 @@ class SubmissionTestResultFragment : Fragment() {
     private var _binding: FragmentSubmissionTestResultBinding? = null
     private val binding: FragmentSubmissionTestResultBinding get() = _binding!!
 
+    private lateinit var internalExposureNotificationPermissionHelper:
+            InternalExposureNotificationPermissionHelper
+
     // Overrides default back behaviour
     private val backCallback: OnBackPressedCallback =
         object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                findNavController().doNavigate(
-                    SubmissionTestResultFragmentDirections.actionSubmissionResultFragmentToMainFragment()
-                )
+                if (submissionViewModel.deviceUiState.value == DeviceUIState.PAIRED_POSITIVE) {
+                    showWarningOthersDialog()
+
+                } else {
+                    navigateToMainScreen()
+                }
             }
         }
 
@@ -65,6 +77,8 @@ class SubmissionTestResultFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        internalExposureNotificationPermissionHelper =
+            InternalExposureNotificationPermissionHelper(this, this)
         // get the binding reference by inflating it with the current layout
         _binding = FragmentSubmissionTestResultBinding.inflate(inflater)
         binding.submissionViewModel = submissionViewModel
@@ -81,7 +95,8 @@ class SubmissionTestResultFragment : Fragment() {
     ) {
         binding.submissionTestResultExplanationDynamic.removeAllViewsInLayout()
 
-        val inflater = LayoutInflater.from(binding.submissionTestResultExplanationDynamic.context)
+        val inflater =
+            LayoutInflater.from(binding.submissionTestResultExplanationDynamic.context)
         sections.forEachIndexed { i, section ->
             val newViewBinding = ViewSimpleStepEntryBinding.inflate(
                 inflater,
@@ -119,6 +134,22 @@ class SubmissionTestResultFragment : Fragment() {
 
     private fun buildErrorDialog(exception: CwaWebException): DialogHelper.DialogInstance {
         return when (exception) {
+            is BadRequestException -> DialogHelper.DialogInstance(
+                requireActivity(),
+                R.string.submission_error_dialog_web_paring_invalid_title,
+                R.string.submission_error_dialog_web_paring_invalid_body,
+                R.string.submission_error_dialog_web_paring_invalid_button_positive,
+                null,
+                true,
+            )
+            is ForbiddenException -> DialogHelper.DialogInstance(
+                requireActivity(),
+                R.string.submission_error_dialog_web_tan_invalid_title,
+                R.string.submission_error_dialog_web_tan_invalid_body,
+                R.string.submission_error_dialog_web_tan_invalid_button_positive,
+                null,
+                true,
+            )
             is CwaServerError -> DialogHelper.DialogInstance(
                 requireActivity(),
                 R.string.submission_error_dialog_web_generic_error_title,
@@ -129,7 +160,6 @@ class SubmissionTestResultFragment : Fragment() {
                 R.string.submission_error_dialog_web_generic_error_button_positive,
                 null,
                 true,
-                ::navigateToMainScreen
             )
             is CwaClientError -> DialogHelper.DialogInstance(
                 requireActivity(),
@@ -141,7 +171,6 @@ class SubmissionTestResultFragment : Fragment() {
                 R.string.submission_error_dialog_web_generic_error_button_positive,
                 null,
                 true,
-                ::navigateToMainScreen
             )
             else -> DialogHelper.DialogInstance(
                 requireActivity(),
@@ -150,9 +179,15 @@ class SubmissionTestResultFragment : Fragment() {
                 R.string.submission_error_dialog_web_generic_error_button_positive,
                 null,
                 true,
-                ::navigateToMainScreen
             )
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        this.internalExposureNotificationPermissionHelper.onResolutionComplete(
+            requestCode,
+            resultCode
+        )
     }
 
     override fun onDestroyView() {
@@ -168,11 +203,28 @@ class SubmissionTestResultFragment : Fragment() {
             DialogHelper.showDialog(buildErrorDialog(it))
         }
 
+        submissionViewModel.submissionError.observeEvent(viewLifecycleOwner) {
+            DialogHelper.showDialog(buildErrorDialog(it))
+        }
+
         submissionViewModel.deviceUiState.observe(viewLifecycleOwner, Observer { uiState ->
             if (uiState == DeviceUIState.PAIRED_REDEEMED) {
                 showRedeemedTokenWarningDialog()
             }
+
+            if (uiState == DeviceUIState.PAIRED_NEGATIVE) {
+                binding.submissionTestResultNegativeWarning.visibility = View.VISIBLE
+            } else {
+                binding.submissionTestResultNegativeWarning.visibility = View.GONE
+            }
+
             dynamicTextsViewModel.getDynamicTexts(requireContext())
+        })
+
+        submissionViewModel.submissionState.observe(viewLifecycleOwner, Observer {
+            if (it == ApiRequestState.SUCCESS) {
+                navigateToSubmissionDoneFragment()
+            }
         })
 
         dynamicTextsViewModel.dynamicTexts.observe(viewLifecycleOwner, Observer {
@@ -183,7 +235,6 @@ class SubmissionTestResultFragment : Fragment() {
                 addExplanation(it.structure.positiveTestResult.explanation, it.texts)
             }
         })
-
 
         val uiCode = submissionViewModel.getMobileTestIduiCode()
         val t0 = submissionViewModel.getMobileTestIdt0()
@@ -235,7 +286,7 @@ class SubmissionTestResultFragment : Fragment() {
         }
 
         binding.submissionTestResultButtonPositiveContinue.setOnClickListener {
-            continueIfTracingEnabled()
+            showWarningOthersDialog()
         }
 
         binding.submissionTestResultButtonInvalidRemoveTest.setOnClickListener {
@@ -243,9 +294,12 @@ class SubmissionTestResultFragment : Fragment() {
         }
 
         binding.submissionTestResultHeader.headerButtonBack.buttonIcon.setOnClickListener {
-            findNavController().doNavigate(
-                SubmissionTestResultFragmentDirections.actionSubmissionResultFragmentToMainFragment()
-            )
+            if (submissionViewModel.deviceUiState.value == DeviceUIState.PAIRED_POSITIVE) {
+                showWarningOthersDialog()
+
+            } else {
+                navigateToMainScreen()
+            }
         }
     }
 
@@ -261,10 +315,48 @@ class SubmissionTestResultFragment : Fragment() {
             return
         }
 
+
+        internalExposureNotificationPermissionHelper.requestPermissionToShareKeys()
+    }
+
+    private fun showWarningOthersDialog() {
+        val warningOthersDialog = DialogHelper.DialogInstance(
+            requireActivity(),
+            R.string.submission_test_result_warning_others_title,
+            R.string.submission_positive_other_warning_body,
+            R.string.submission_test_result_warning_others_positive,
+            R.string.submission_test_result_warning_others_negative,
+            false,
+            {
+                continueIfTracingEnabled()
+
+            },
+            {
+                findNavController().doNavigate(
+                    SubmissionTestResultFragmentDirections.actionSubmissionResultFragmentToMainFragment()
+                )
+            }
+        )
+        DialogHelper.showDialog(warningOthersDialog)
+    }
+
+    override fun onFailure(exception: Exception?) {
+    }
+
+    private fun navigateToSubmissionDoneFragment() =
         findNavController().doNavigate(
             SubmissionTestResultFragmentDirections
-                .actionSubmissionResultFragmentToSubmissionResultPositiveOtherWarningFragment()
+                .actionSubmissionResultFragmentToSubmissionDoneFragment()
         )
+
+    override fun onKeySharePermissionGranted(keys: List<TemporaryExposureKey>) {
+        super.onKeySharePermissionGranted(keys)
+        if (keys.isNotEmpty()) {
+            submissionViewModel.beSubmitDiagnosisKeys(keys)
+        } else {
+            submissionViewModel.submitWithNoDiagnosisKeys()
+            navigateToSubmissionDoneFragment()
+        }
     }
 
     private fun removeTestAfterConfirmation() {

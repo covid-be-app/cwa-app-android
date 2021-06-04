@@ -7,7 +7,6 @@ import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.exception.ExceptionCategory.INTERNAL
 import de.rki.coronawarnapp.exception.TransactionException
 import de.rki.coronawarnapp.exception.reporting.report
-import de.rki.coronawarnapp.storage.ExposureSummaryRepository
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.storage.RiskLevelRepository
 import de.rki.coronawarnapp.storage.TracingRepository
@@ -15,6 +14,7 @@ import de.rki.coronawarnapp.timer.TimerHelper
 import de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction
 import de.rki.coronawarnapp.transaction.RiskLevelTransaction
 import de.rki.coronawarnapp.util.ConnectivityHelper
+import de.rki.coronawarnapp.worker.BackgroundConstants.DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY
 import kotlinx.coroutines.launch
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -43,8 +43,8 @@ class TracingViewModel : ViewModel() {
         RiskLevelRepository.riskLevelScoreLastSuccessfulCalculated
 
     // Values from ExposureSummaryRepository
-    val daysSinceLastExposure: LiveData<Int?> = ExposureSummaryRepository.daysSinceLastExposure
-    val matchedKeyCount: LiveData<Int?> = ExposureSummaryRepository.matchedKeyCount
+    val daysSinceLastExposure: LiveData<Int?> = RiskLevelRepository.daysSinceLastExposure
+    val matchedKeyCount: LiveData<Int?> = RiskLevelRepository.matchedKeyCount
 
     // Values from TracingRepository
     val lastTimeDiagnosisKeysFetched: LiveData<Date> =
@@ -70,10 +70,15 @@ class TracingViewModel : ViewModel() {
                     DateTimeZone.UTC
                 )
 
-                // check if the keys were not already retrieved today
-                val keysWereNotRetrievedToday =
-                    LocalData.lastTimeDiagnosisKeysFromServerFetch() == null ||
-                            currentDate.withTimeAtStartOfDay() != lastFetch.withTimeAtStartOfDay()
+                // check if the keys were not already retrieved
+                val keysWereNotRetrieved =
+                    (LocalData.lastTimeDiagnosisKeysFromServerFetch() == null ||
+                            lastFetch.isBefore(
+                                currentDate.minusHours(
+                                    DIAGNOSIS_TEST_RESULT_RETRIEVAL_PER_DAY
+                                )
+                            )
+                            )
 
                 // check if the network is enabled to make the server fetch
                 val isNetworkEnabled =
@@ -84,11 +89,11 @@ class TracingViewModel : ViewModel() {
                 val isBackgroundJobEnabled =
                     ConnectivityHelper.autoModeEnabled(CoronaWarnApplication.getAppContext())
 
-                Timber.v("Keys were not retrieved today $keysWereNotRetrievedToday")
+                Timber.v("Keys were not retrieved $keysWereNotRetrieved")
                 Timber.v("Network is enabled $isNetworkEnabled")
                 Timber.v("Background jobs are enabled $isBackgroundJobEnabled")
 
-                if (keysWereNotRetrievedToday && isNetworkEnabled && isBackgroundJobEnabled) {
+                if (keysWereNotRetrieved && isNetworkEnabled && isBackgroundJobEnabled) {
                     TracingRepository.isRefreshing.value = true
 
                     // start the fetching and submitting of the diagnosis keys
@@ -157,20 +162,8 @@ class TracingViewModel : ViewModel() {
      */
     fun refreshExposureSummary() {
         viewModelScope.launch {
-            try {
-                val token = LocalData.googleApiToken()
-                if (token != null) {
-                    ExposureSummaryRepository.getExposureSummaryRepository()
-                        .getLatestExposureSummary(token)
-                }
-                Timber.v("retrieved latest exposure summary from db")
-            } catch (e: Exception) {
-                e.report(
-                    de.rki.coronawarnapp.exception.ExceptionCategory.EXPOSURENOTIFICATION,
-                    TAG,
-                    null
-                )
-            }
+            RiskLevelRepository.refreshLastExposureDate()
+            RiskLevelRepository.refreshMatchedKeyCount()
         }
     }
 
