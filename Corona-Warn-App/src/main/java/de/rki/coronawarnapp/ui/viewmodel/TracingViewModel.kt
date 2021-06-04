@@ -7,7 +7,6 @@ import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.exception.ExceptionCategory.INTERNAL
 import de.rki.coronawarnapp.exception.TransactionException
 import de.rki.coronawarnapp.exception.reporting.report
-import de.rki.coronawarnapp.storage.ExposureSummaryRepository
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.storage.RiskLevelRepository
 import de.rki.coronawarnapp.storage.TracingRepository
@@ -44,8 +43,8 @@ class TracingViewModel : ViewModel() {
         RiskLevelRepository.riskLevelScoreLastSuccessfulCalculated
 
     // Values from ExposureSummaryRepository
-    val daysSinceLastExposure: LiveData<Int?> = ExposureSummaryRepository.daysSinceLastExposure
-    val matchedKeyCount: LiveData<Int?> = ExposureSummaryRepository.matchedKeyCount
+    val daysSinceLastExposure: LiveData<Int?> = RiskLevelRepository.daysSinceLastExposure
+    val matchedKeyCount: LiveData<Int?> = RiskLevelRepository.matchedKeyCount
 
     // Values from TracingRepository
     val lastTimeDiagnosisKeysFetched: LiveData<Date> =
@@ -163,20 +162,8 @@ class TracingViewModel : ViewModel() {
      */
     fun refreshExposureSummary() {
         viewModelScope.launch {
-            try {
-                val token = LocalData.googleApiToken()
-                if (token != null) {
-                    ExposureSummaryRepository.getExposureSummaryRepository()
-                        .getLatestExposureSummary(token)
-                }
-                Timber.v("retrieved latest exposure summary from db")
-            } catch (e: Exception) {
-                e.report(
-                    de.rki.coronawarnapp.exception.ExceptionCategory.EXPOSURENOTIFICATION,
-                    TAG,
-                    null
-                )
-            }
+            RiskLevelRepository.refreshLastExposureDate()
+            RiskLevelRepository.refreshMatchedKeyCount()
         }
     }
 

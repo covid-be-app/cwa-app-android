@@ -4,7 +4,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/submission_status_card_unregistered"
-        style="@style/cardNoPadding"
+        style="@style/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true">
@@ -15,8 +15,7 @@
             style="@style/headline5"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/card_padding"
-            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_marginStart="8dp"
             android:accessibilityHeading="true"
             android:focusable="false"
             android:text="@string/submission_status_card_title_unregistered"
@@ -30,9 +29,7 @@
             style="@style/subtitleMedium"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_medium"
             android:layout_marginTop="@dimen/spacing_normal"
-            android:layout_marginEnd="@dimen/spacing_medium"
             android:focusable="false"
             android:text="@string/submission_status_card_body_unregistered"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +41,7 @@
             style="@style/subtitleMedium"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/card_padding"
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:layout_marginEnd="@dimen/spacing_medium"
-            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_marginTop="16dp"
             android:focusable="false"
             android:text="@string/submission_status_card_body_unregistered_warning"
             android:textColor="@color/colorSemanticHighRisk"
@@ -59,39 +53,23 @@
         <Button
             android:id="@+id/submission_status_card_unregistered_button"
             style="@style/buttonPrimary"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/card_padding"
             android:layout_marginTop="@dimen/spacing_medium"
-            android:backgroundTint="@color/colorTextTint"
             android:text="@string/submission_status_card_button_unregistered"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submission_status_card_unregistered_body"
-            app:layout_constraintWidth_percent="0.4" />
-
-        <Button
-            android:id="@+id/submission_status_card_registered_button"
-            style="@style/buttonPrimary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_medium"
-            android:layout_marginEnd="@dimen/card_padding"
-            android:text="@string/submission_status_card_button_registered"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/submission_status_card_unregistered_button"
-            app:layout_constraintTop_toTopOf="@+id/submission_status_card_unregistered_button"
-            app:layout_constraintWidth_percent="0.4" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submission_status_card_unregistered_body" />
 
         <ImageView
             android:id="@+id/submission_status_card_unregistered_icon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:importantForAccessibility="no"
             android:tint="@color/colorSemanticLowRisk"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_tools_test_reservation_illustration" />
+            app:srcCompat="@drawable/ic_submission_test" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,10 @@
 package de.rki.coronawarnapp.transaction
 
 import androidx.core.app.NotificationCompat
+import be.sciensano.coronalert.risk.DefaultRiskLevels
+import be.sciensano.coronalert.risk.ExposureWindowRiskCalculationConfig
 import com.google.android.gms.nearby.exposurenotification.ExposureSummary
+import com.google.android.gms.nearby.exposurenotification.ExposureWindow
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.R
 import de.rki.coronawarnapp.exception.RiskLevelCalculationException
@@ -14,10 +17,7 @@ import de.rki.coronawarnapp.risk.RiskLevel.NO_CALCULATION_POSSIBLE_TRACING_OFF
 import de.rki.coronawarnapp.risk.RiskLevel.UNDETERMINED
 import de.rki.coronawarnapp.risk.RiskLevel.UNKNOWN_RISK_INITIAL
 import de.rki.coronawarnapp.risk.RiskLevel.UNKNOWN_RISK_OUTDATED_RESULTS
-import de.rki.coronawarnapp.risk.RiskLevel.UNKNOWN_RISK_OUTDATED_RESULTS_MANUAL
-import de.rki.coronawarnapp.risk.RiskLevelCalculation
 import de.rki.coronawarnapp.risk.TimeVariables
-import de.rki.coronawarnapp.server.protocols.ApplicationConfigurationOuterClass
 import de.rki.coronawarnapp.service.applicationconfiguration.ApplicationConfigurationService
 import de.rki.coronawarnapp.storage.LocalData
 import de.rki.coronawarnapp.storage.RiskLevelRepository
@@ -186,13 +186,6 @@ object RiskLevelTransaction : Transaction() {
         result = executeCheckUnknownRiskInitialNoKeys()
         if (isValidResult(result)) return@lockAndExecute
 
-        //no longer check for outdated result
-//        /****************************************************
-//         * CHECK [UNKNOWN_RISK_OUTDATED_RESULTS] CONDITIONS
-//         ****************************************************/
-//        result = executeCheckUnknownRiskOutdatedResults()
-//        if (isValidResult(result)) return@lockAndExecute
-
         /****************************************************
          * [CHECK_APP_CONNECTIVITY]
          ****************************************************/
@@ -210,12 +203,13 @@ object RiskLevelTransaction : Transaction() {
         /****************************************************
          * RETRIEVE EXPOSURE SUMMARY
          ****************************************************/
-        val lastExposureSummary = executeRetrieveExposureSummary()
+
+        val exposureWindows = executeRetrieveExposureWindows()
 
         /****************************************************
          * CHECK [INCREASED_RISK] CONDITIONS
          ****************************************************/
-        result = executeCheckIncreasedRisk(appConfiguration, lastExposureSummary)
+        result = executeCheckIncreasedRisk(exposureWindows, appConfiguration)
         if (isValidResult(result)) return@lockAndExecute
 
         /****************************************************
@@ -286,40 +280,6 @@ object RiskLevelTransaction : Transaction() {
         return@executeState UNDETERMINED
     }
 
-    /**
-     * Executes the [CHECK_UNKNOWN_RISK_OUTDATED] Transaction State
-     */
-    private suspend fun executeCheckUnknownRiskOutdatedResults(): RiskLevel =
-        executeState(CHECK_UNKNOWN_RISK_OUTDATED) {
-
-            // if the last calculation is longer in the past as the defined threshold we return the stale state
-            val timeSinceLastDiagnosisKeyFetchFromServer =
-                TimeVariables.getTimeSinceLastDiagnosisKeyFetchFromServer()
-                    ?: throw RiskLevelCalculationException(
-                        IllegalArgumentException("time since last exposure calculation is null")
-                    )
-
-            /** we only return outdated risk level if the threshold is reached AND the active tracing time is above the
-            defined threshold because [UNKNOWN_RISK_INITIAL] overrules [UNKNOWN_RISK_OUTDATED_RESULTS] */
-            if (timeSinceLastDiagnosisKeyFetchFromServer.millisecondsToHours() >
-                TimeVariables.getMaxStaleExposureRiskRange() && isActiveTracingTimeAboveThreshold()
-            ) {
-                if (ConnectivityHelper.autoModeEnabled(CoronaWarnApplication.getAppContext())) {
-                    return@executeState UNKNOWN_RISK_OUTDATED_RESULTS.also {
-                        Timber.v("diagnosis keys outdated and active tracing time is above threshold")
-                        Timber.v("manual mode not active (background jobs enabled)")
-                    }
-                } else {
-                    return@executeState UNKNOWN_RISK_OUTDATED_RESULTS_MANUAL.also {
-                        Timber.v("diagnosis keys outdated and active tracing time is above threshold")
-                        Timber.v("manual mode active (background jobs disabled)")
-                    }
-                }
-            }
-
-            Timber.v("$transactionId - CHECK_UNKNOWN_RISK_OUTDATED not applicable")
-            return@executeState UNDETERMINED
-        }
 
     /**
      * Executes the [CHECK_APP_CONNECTIVITY] Transaction State
@@ -346,7 +306,7 @@ object RiskLevelTransaction : Transaction() {
      * @return the values of the application configuration
      */
     private suspend fun executeRetrieveApplicationConfiguration():
-            ApplicationConfigurationOuterClass.ApplicationConfiguration =
+            ExposureWindowRiskCalculationConfig =
         executeState(RETRIEVE_APPLICATION_CONFIG) {
             return@executeState getApplicationConfiguration()
                 .also {
@@ -354,62 +314,47 @@ object RiskLevelTransaction : Transaction() {
                 }
         }
 
-    /**
-     * Executes the [RETRIEVE_EXPOSURE_SUMMARY] Transaction State
-     */
-    private suspend fun executeRetrieveExposureSummary(): ExposureSummary =
+    private suspend fun executeRetrieveExposureWindows(): List<ExposureWindow> =
         executeState(RETRIEVE_EXPOSURE_SUMMARY) {
-            val exposureSummary = getNewExposureSummary()
+            val exposureWindows = getExposureWindows()
 
-            return@executeState exposureSummary.also {
-                Timber.v(TAG, "$transactionId - get the exposure summary for further calculation")
+            return@executeState exposureWindows.also {
+                Timber.v(TAG, "$transactionId - get the exposure windows for further calculation")
             }
         }
 
-    /**
-     * Executes the [CHECK_INCREASED_RISK] Transaction State
-     */
     private suspend fun executeCheckIncreasedRisk(
-        appConfig: ApplicationConfigurationOuterClass.ApplicationConfiguration,
-        exposureSummary: ExposureSummary
-    ): RiskLevel =
-        executeState(CHECK_INCREASED_RISK) {
+        exposureWindows: List<ExposureWindow>, appConfig: ExposureWindowRiskCalculationConfig,
+    ): RiskLevel = executeState(CHECK_INCREASED_RISK) {
 
-            // custom attenuation parameters to weight the attenuation
-            // values provided by the Google API
-            val attenuationParameters = appConfig.attenuationDuration
 
-            // calculate the risk score based on the values collected by the Google EN API and
-            // the backend configuration
-            val riskScore = RiskLevelCalculation.calculateRiskScore(
-                attenuationParameters,
-                exposureSummary
-            ).also {
-                Timber.v(TAG, "calculated risk with the given config: $it")
+        val riskLevels = DefaultRiskLevels()
+
+        val riskResultsPerWindow =
+            exposureWindows.mapNotNull { window ->
+                riskLevels.calculateRisk(appConfig, window)?.let { window to it }
+            }.toMap()
+
+
+        val result = riskLevels.aggregateResults(appConfig, riskResultsPerWindow)
+        if (result.isIncreasedRisk()) {
+            result.mostRecentDateWithHighRisk?.let {
+                RiskLevelRepository.setLastExposureDate(it.millis)
             }
+            RiskLevelRepository.setMatchedKeyCount(result.totalMinimumDistinctEncountersWithHighRisk)
+            return@executeState INCREASED_RISK
 
-            // these are the defined risk classes. They will divide the calculated
-            // risk score into the low and increased risk
-            val riskScoreClassification = appConfig.riskScoreClasses
+        } else if (result.isLowRisk()) {
+            result.mostRecentDateWithLowRisk?.let {
+                RiskLevelRepository.setLastExposureDate(it.millis)
 
-            // get the high risk score class
-            val highRiskScoreClass =
-                riskScoreClassification.riskClassesList.find { it.label == "HIGH" }
-                    ?: throw RiskLevelCalculationException(IllegalStateException("no high risk score class found"))
-
-            // if the calculated risk score is above the defined level threshold we return the high level risk score
-            if (riskScore >= highRiskScoreClass.min && riskScore <= highRiskScoreClass.max) {
-                Timber.v("$riskScore is above the defined min value ${highRiskScoreClass.min}")
-                return@executeState INCREASED_RISK
-            } else if (riskScore > highRiskScoreClass.max) {
-                throw RiskLevelCalculationException(
-                    IllegalStateException("risk score is above the max threshold for score class")
-                )
             }
-
-            Timber.v("$transactionId - INCREASED_RISK not applicable")
-            return@executeState UNDETERMINED
+            RiskLevelRepository.setMatchedKeyCount(result.totalMinimumDistinctEncountersWithLowRisk)
+            return@executeState LOW_LEVEL_RISK
         }
+        return@executeState UNDETERMINED
+
+    }
 
     /**
      * Executes the [CHECK_UNKNOWN_RISK_INITIAL_TRACING_DURATION] Transaction State
@@ -473,11 +418,10 @@ object RiskLevelTransaction : Transaction() {
     /**
      * Make a call to the backend to retrieve the current application configuration values
      *
-     * @return the [ApplicationConfigurationOuterClass.ApplicationConfiguration] from the backend
      */
-    private suspend fun getApplicationConfiguration(): ApplicationConfigurationOuterClass.ApplicationConfiguration =
+    private suspend fun getApplicationConfiguration(): ExposureWindowRiskCalculationConfig =
         withContext(Dispatchers.Default) {
-            return@withContext ApplicationConfigurationService.asyncRetrieveApplicationConfiguration()
+            return@withContext ApplicationConfigurationService.asyncRetrieveExposureConfiguration()
                 .also { Timber.v("configuration from backend: $it") }
         }
 
@@ -489,7 +433,8 @@ object RiskLevelTransaction : Transaction() {
      */
     private fun isActiveTracingTimeAboveThreshold(): Boolean {
         val durationTracingIsActive = TimeVariables.getTimeActiveTracingDuration()
-        val durationTracingIsActiveThreshold = TimeVariables.getMinActivatedTracingTime().toLong()
+        val durationTracingIsActiveThreshold =
+            TimeVariables.getMinActivatedTracingTime().toLong()
 
         val activeTracingDurationInHours = durationTracingIsActive.millisecondsToHours()
 
@@ -517,21 +462,13 @@ object RiskLevelTransaction : Transaction() {
         RiskLevelRepository.setRiskLevelScore(riskLevel)
     }
 
-    /**
-     * If there is no persisted exposure summary we try to get a new one with the last persisted
-     * Google API token that was used in the [de.rki.coronawarnapp.transaction.RetrieveDiagnosisKeysTransaction]
-     *
-     * @return a exposure summary from the Google Exposure Notification API
-     */
-    private suspend fun getNewExposureSummary(): ExposureSummary {
-        val googleToken = LocalData.googleApiToken()
-            ?: throw RiskLevelCalculationException(IllegalStateException("exposure summary is not persisted"))
 
-        val exposureSummary =
-            InternalExposureNotificationClient.asyncGetExposureSummary(googleToken)
+    private suspend fun getExposureWindows(): List<ExposureWindow> {
+        val exposureWindows =
+            InternalExposureNotificationClient.asyncGetExposureWindows()
 
-        return exposureSummary.also {
-            Timber.v("$transactionId - generated new exposure summary with $googleToken")
+        return exposureWindows.also {
+            Timber.v("$transactionId - getted ${it.size} exposureWindows ")
         }
     }
 

@@ -20,7 +20,6 @@
 package de.rki.coronawarnapp.transaction
 
 import be.sciensano.coronalert.storage.dataTransfer
-import com.google.android.gms.nearby.exposurenotification.ExposureConfiguration
 import de.rki.coronawarnapp.CoronaWarnApplication
 import de.rki.coronawarnapp.nearby.InternalExposureNotificationClient
 import de.rki.coronawarnapp.service.applicationconfiguration.ApplicationConfigurationService
@@ -184,7 +183,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
             /****************************************************
              * SUBMIT FILES TO API
              ****************************************************/
-            executeAPISubmission(token, keyFiles, exposureConfiguration)
+            executeAPISubmission(keyFiles)
         } else {
             Timber.w("no key files, skipping submission to internal API.")
         }
@@ -275,16 +274,12 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
      * Sending all files at once because of google quota
      */
     private suspend fun executeAPISubmission(
-        token: String,
         exportFiles: Collection<File>,
-        exposureConfiguration: ExposureConfiguration?
     ) = executeState(API_SUBMISSION) {
         InternalExposureNotificationClient.asyncProvideDiagnosisKeys(
             exportFiles,
-            exposureConfiguration,
-            token
         )
-        Timber.d("Diagnosis Keys provided successfully, Token: $token")
+        Timber.d("Diagnosis Keys provided successfully")
     }
 
     /**

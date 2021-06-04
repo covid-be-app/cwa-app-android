@@ -482,19 +482,19 @@
     <string name="submission_contact_step_1_content"></string>
     <string name="submission_contact_step_2_content"></string>
     <string name="submission_status_card_title_fetching">Gegevens worden opgehaald ...</string>
-    <string name="submission_status_card_title_unregistered">Koppel je COVID-test aan de app</string>
+    <string name="submission_status_card_title_unregistered">Ik moet getest worden</string>
     <string name="submission_status_card_title_pending">Uw resultaat is nog niet beschikbaar</string>
     <string name="submission_status_card_title_available">Uw resultaat is beschikbaar</string>
     <string name="submission_status_card_title_positive">Positieve diagnose</string>
     <string name="submission_status_card_subtitle_invalid">Ongeldige test</string>
     <string name="submission_status_card_subtitle_negative">Negatieve diagnose</string>
     <string name="submission_status_card_body_fetching">Je resultaat wordt bijgewerkt</string>
-    <string name="submission_status_card_body_unregistered">Heb je je COVID-test gedaan?</string>
+    <string name="submission_status_card_body_unregistered">Ontvang een 17-cijferige code om je toekomstige COVID-test aan deze applicatie te koppelen.</string>
     <string name="submission_status_card_body_pending">De evaluatie van je test is nog niet afgerond.</string>
     <string name="submission_status_card_body_invalid">Uw test kon niet geëvalueerd worden.</string>
     <string name="submission_status_card_body_positive">U testte positief op SARS-CoV-2.</string>
     <string name="submission_status_card_body_negative">U testte negatief op SARS-CoV-2.</string>
-    <string name="submission_status_card_button_unregistered">Nog niet</string>
+    <string name="submission_status_card_button_unregistered">Haal je code</string>
     <string name="submission_status_card_button_show_results">Toon de test</string>
     <string name="submission_status_card_positive_result_subtitle">Let op:</string>
     <string name="submission_status_card_positive_result_contagious">U bent besmettelijk. Ga in zelfisolatie.</string>
@@ -577,7 +577,7 @@
     <string name="submission_intro_symptoms_dialog_negative">Neen</string>
     <string name="submission_test_request_headline">Ontvang het testresultaat</string>
     <string name="submission_test_request_text">Kies de datum waarop je symptomen begon te krijgen.</string>
-    <string name="submission_test_request_save_text">Gelieve deze code aan de arts te geven want dit is noodzakelijk om je testresultaat aan de app te linken. Dit gebeurt niet automatisch omdat Coronalert anoniem is.</string>
+    <string name="submission_test_request_save_text">Zolang de test niet is afgenomen, kan je de code nog steeds verzenden via een link die je per sms hebt ontvangen of een formulier dat beschikbaar is op de website https://coronalert.be/nl/coronalert-formulier/\n\nAls geen van deze procedures zou werken, kan je nog altijd je contacten anoniem verwittigen na een positieve test.</string>
     <string name="submission_test_request_save_button_save">Sluit</string>
     <string name="submission_countries_selection_headline">Kies landen</string>
     <string name="submission_countries_selection_text">Als je op een van de onderstaande datums niet in België was en je deze informatie (anoniem) wilt delen, selecteer dan het land dat je op die datum hebt bezocht. Tik op de lijn die je wilt wijzigen.</string>
@@ -679,8 +679,25 @@
         <item>Ga direct naar het webformulier om de 2 codes handmatig in te voeren.</item>
     </string-array>
     <string name="submission_test_request_save_headline">Gebruik deze code om jouw test te registreren in de app</string>
-    <string name="submission_test_request_save_explanation">Laat dit nummer en de datum zien aan de arts of het laboratorium dat de test uitvoert om uw smartphone aan de test te koppelen.</string>
+    <string name="submission_test_request_save_explanation">Geef deze code door wanneer je voor het eerst contact opneemt met je arts of wanneer je boekt bij het testcentrum.</string>
     <string name="submission_test_result_warning_others_title">Wil je anderen waarschuwen?</string>
     <string name="submission_test_result_warning_others_positive">Ja</string>
     <string name="submission_test_result_warning_others_negative">Neen</string>
+    <string name="vaccination_at_least_1_dose">Tenminste 1 dosis</string>
+    <string name="vaccination_fully_vaccinated">Volledig gevaccineerd"</string>
+    <string name="vaccination_title">Vaccinatie</string>
+    <string name="covicode_card_title">Ik ben getest</string>
+    <string name="covicode_title">Gebruik de Covi-code</string>
+    <string name="covicode_subtitle">Help anderen</string>
+    <string name="covicode_card_subtitle">Je testte positief en je had je test niet gekoppeld aan Coronalert? Je kan nog altijd je contacten anoniem op de hoogte stellen.</string>
+    <string name="covicode_explanation">Gebruik de 12-cijferige code die je kan bekomen bij het contactcentrum om je contacten op de hoogte te stellen van een mogelijk hoog-risico blootstelling. Hier is het nummer dat je moet bellen: +32 2 214 19 19</string>
+    <string name="covicode_card_button">Verwittig je contacten</string>
+    <string name="covicode_send">Code verzenden</string>
+    <string name="covicode_dialog_title">Voer uw Covi-code in</string>
+    <string name="covicode_dialog_text">Voer de 12-cijferige Covi-code in die u van het contactcenter hebt ontvangen</string>
+    <string name="covicode_dialog_hint">Covi-Code</string>
+    <string name="covicode_dialog_positive">Ok</string>
+    <string name="covicode_dialog_negative">Annuleren</string>
+    <string name="covicode_error">Ongeldige Covi-Code</string>
+    <string name="submission_test_result_negative_warning">Dit scherm kan niet als COVID-certificaat worden gebruikt</string>
 </resources>

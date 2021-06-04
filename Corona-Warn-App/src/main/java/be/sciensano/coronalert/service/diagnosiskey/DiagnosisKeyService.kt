@@ -12,6 +12,7 @@ import de.rki.coronawarnapp.exception.DiagnosisKeySubmissionException
 import de.rki.coronawarnapp.http.WebRequestBuilder
 import de.rki.coronawarnapp.storage.LocalData
 import timber.log.Timber
+import java.util.Date
 
 /**
  * The Diagnosis Key Service is used to interact with the Server to submit and retrieve keys through
@@ -50,7 +51,21 @@ object DiagnosisKeyService {
 
         WebRequestBuilder.getInstance().beAsyncSubmitKeysToServer(
             k, r0, t0, t3, resultChannel, onsetSymptomsDate,
-            keysToReport,
+            keysToReport
+        )
+    }
+
+    suspend fun asyncSubmitKeysForCovicode(
+        t0: String,
+        onsetSymptomsDate: Date?,
+        covicode: String,
+        keysToReport: List<KeyExportFormat.TemporaryExposureKey>
+    ) {
+        Timber.d("Diagnosis Keys will be submitted.")
+
+        WebRequestBuilder.getInstance().beAsyncSubmitKeysToServerForCovicode(t0,
+            onsetSymptomsDate, covicode,
+            keysToReport
         )
     }
 }

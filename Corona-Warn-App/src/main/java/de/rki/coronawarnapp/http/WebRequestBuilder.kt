@@ -36,7 +36,7 @@ import de.rki.coronawarnapp.http.requests.TanRequestBody
 import de.rki.coronawarnapp.http.service.DistributionService
 import de.rki.coronawarnapp.http.service.SubmissionService
 import de.rki.coronawarnapp.http.service.VerificationService
-import de.rki.coronawarnapp.server.protocols.ApplicationConfigurationOuterClass.ApplicationConfiguration
+import de.rki.coronawarnapp.server.protocols.internal.v2.AppConfigAndroid
 import de.rki.coronawarnapp.service.diagnosiskey.DiagnosisKeyConstants
 import de.rki.coronawarnapp.service.submission.KeyType
 import de.rki.coronawarnapp.service.submission.SubmissionConstants
@@ -59,6 +59,7 @@ import be.sciensano.coronalert.http.service.VerificationService as BeVerificatio
 import be.sciensano.coronalert.service.diagnosiskey.DiagnosisKeyConstants as BeDiagnosisKeyConstants
 import be.sciensano.coronalert.service.submission.SubmissionConstants as BeSubmissionConstants
 
+@Suppress("TooManyFunctions")
 class WebRequestBuilder(
     private val distributionService: DistributionService,
     private val verificationService: VerificationService,
@@ -135,13 +136,13 @@ class WebRequestBuilder(
         return@withContext file
     }
 
-    suspend fun asyncGetApplicationConfigurationFromServer(): ApplicationConfiguration =
+    suspend fun asyncGetApplicationConfigurationFromServer(): AppConfigAndroid.ApplicationConfigurationAndroid =
         withContext(Dispatchers.IO) {
             var exportBinary: ByteArray? = null
             var exportSignature: ByteArray? = null
 
             distributionService.getApplicationConfiguration(
-                DiagnosisKeyConstants.COUNTRY_APPCONFIG_DOWNLOAD_URL
+                "version/v2/app_config_android"
             ).byteStream().unzip { entry, entryContent ->
                 if (entry.name == EXPORT_BINARY_FILE_NAME) exportBinary = entryContent.copyOf()
                 if (entry.name == EXPORT_SIGNATURE_FILE_NAME) exportSignature =
@@ -156,7 +157,9 @@ class WebRequestBuilder(
             }
 
             try {
-                return@withContext ApplicationConfiguration.parseFrom(exportBinary)
+                return@withContext AppConfigAndroid.ApplicationConfigurationAndroid.parseFrom(
+                    exportBinary
+                )
             } catch (e: InvalidProtocolBufferException) {
                 throw ApplicationConfigurationInvalidException()
             }
@@ -279,7 +282,7 @@ class WebRequestBuilder(
         t3: String,
         resultChannel: Int,
         onsetSymptomsDate: String?,
-        keys: List<KeyExportFormat.TemporaryExposureKey>
+        keys: List<KeyExportFormat.TemporaryExposureKey>,
     ) = withContext(Dispatchers.IO) {
         Timber.d("Writing ${keys.size} Keys to the Submission Payload.")
 
@@ -290,11 +293,43 @@ class WebRequestBuilder(
             .setConsentToFederation(true)
             .build()
 
-        Timber.d(submissionPayload.toString())
 
         beSubmissionService.submitKeys(
             BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
-            k, r0, t0, t3, resultChannel, onsetSymptomsDate,
+            k, r0, t0, t3, resultChannel, onsetSymptomsDate, "000000000000",
+            submissionPayload
+        )
+        return@withContext
+    }
+
+    suspend fun beAsyncSubmitKeysToServerForCovicode(
+        t0: String,
+        onsetSymptomsDate: Date?,
+        covicode: String,
+        keys: List<KeyExportFormat.TemporaryExposureKey>,
+    ) = withContext(Dispatchers.IO) {
+        Timber.d("Writing ${keys.size} Keys to the Submission Payload.")
+
+        val covicodeChannel = 3
+
+        val fakeTestId = MobileTestId.generate(onsetSymptomsDate)
+
+        val submissionPayload = KeyExportFormat.SubmissionPayload.newBuilder()
+            .addAllKeys(keys)
+            .setRequestPadding(getPadding(keys.size))
+            .setOrigin("BE")
+            .setConsentToFederation(true)
+            .build()
+
+        beSubmissionService.submitKeys(
+            BeDiagnosisKeyConstants.DIAGNOSIS_KEYS_SUBMISSION_URL,
+            fakeTestId.k,
+            fakeTestId.r0,
+            t0,
+            Date().toServerFormat(),
+            covicodeChannel,
+            onsetSymptomsDate?.toServerFormat(),
+            covicode,
             submissionPayload
         )
         return@withContext
@@ -339,6 +374,7 @@ class WebRequestBuilder(
             fakeTestId.t0,
             0,
             fakeTestId.onsetSymptomsDate,
+            "000000000000",
             submissionPayload
         )
     }
@@ -349,6 +385,10 @@ class WebRequestBuilder(
 
     suspend fun getDynamicTexts() = withContext(Dispatchers.IO) {
         dynamicTextsService.getDynamicTexts()
+    }
+
+    suspend fun getDynamicNews() = withContext(Dispatchers.IO) {
+        dynamicTextsService.getDynamicNews()
     }
 
     suspend fun asyncFakeSubmission() = withContext(Dispatchers.IO) {

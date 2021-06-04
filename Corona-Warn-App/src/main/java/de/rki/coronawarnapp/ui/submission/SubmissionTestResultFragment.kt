@@ -203,10 +203,21 @@ class SubmissionTestResultFragment : Fragment(),
             DialogHelper.showDialog(buildErrorDialog(it))
         }
 
+        submissionViewModel.submissionError.observeEvent(viewLifecycleOwner) {
+            DialogHelper.showDialog(buildErrorDialog(it))
+        }
+
         submissionViewModel.deviceUiState.observe(viewLifecycleOwner, Observer { uiState ->
             if (uiState == DeviceUIState.PAIRED_REDEEMED) {
                 showRedeemedTokenWarningDialog()
             }
+
+            if (uiState == DeviceUIState.PAIRED_NEGATIVE) {
+                binding.submissionTestResultNegativeWarning.visibility = View.VISIBLE
+            } else {
+                binding.submissionTestResultNegativeWarning.visibility = View.GONE
+            }
+
             dynamicTextsViewModel.getDynamicTexts(requireContext())
         })
 

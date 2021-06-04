@@ -1,0 +1,30 @@
+{
+  "structure": {
+    "news": {
+      "explanation": [
+        {
+          "title": "title",
+          "text": "text"
+        }
+      ]
+    }
+  },
+  "texts": {
+    "en": {
+      "title": "Latest News",
+      "text": "The Coronalert app has been updated. You can add your test anonymously."
+    },
+    "nl": {
+      "title": "Laatste Nieuws",
+      "text": "De Coronalert-app is bijgewerkt. U kunt uw test anoniem toevoegen."
+    },
+    "fr": {
+      "title": "Dernière Nouvelle",
+      "text": "Coronalert à été mise à jour. Vous pouvez rajouter votre test de manière anonyme."
+    },
+    "de": {
+      "title": "Letzte Neuigkeiten",
+      "text": "Die Coronalert-App wurde aktualisiert. Sie können Ihren Test anonym hinzufügen."
+    }
+  }
+}

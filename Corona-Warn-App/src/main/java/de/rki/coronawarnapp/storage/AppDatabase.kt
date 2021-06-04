@@ -19,14 +19,13 @@ import net.sqlcipher.database.SupportFactory
 import java.io.File
 
 @Database(
-    entities = [ExposureSummaryEntity::class, KeyCacheEntity::class, TracingIntervalEntity::class],
-    version = 1,
+    entities = [KeyCacheEntity::class, TracingIntervalEntity::class],
+    version = 2,
     exportSchema = true
 )
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun exposureSummaryDao(): ExposureSummaryDao
     abstract fun dateDao(): KeyCacheDao
     abstract fun tracingIntervalDao(): TracingIntervalDao
 
@@ -56,7 +55,6 @@ abstract class AppDatabase : RoomDatabase() {
             // reset also the repo instances
             KeyCacheRepository.resetInstance()
             TracingIntervalRepository.resetInstance()
-            ExposureSummaryRepository.resetInstance()
         }
 
         private fun buildDatabase(context: Context): AppDatabase {
@@ -65,7 +63,7 @@ abstract class AppDatabase : RoomDatabase() {
                  * The fallback behavior is to reset the app as we only store exposure summaries
                  * and cached references that are non-critical to app operation.
                  */
-                .fallbackToDestructiveMigrationFrom()
+                .fallbackToDestructiveMigration()
                 .openHelperFactory(SupportFactory(SecurityHelper.getDBPassword()))
                 .build()
         }
