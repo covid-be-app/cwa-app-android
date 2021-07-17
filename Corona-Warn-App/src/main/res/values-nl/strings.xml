@@ -700,4 +700,10 @@
     <string name="covicode_dialog_negative">Annuleren</string>
     <string name="covicode_error">Ongeldige Covi-Code</string>
     <string name="submission_test_result_negative_warning">Dit scherm kan niet als COVID-certificaat worden gebruikt</string>
+
+  <string name="covidsafe_card_title">Vaccin certificaat</string>
+  <string name="covidsafe_title">Mijn vaccinatiecertificaat</string>
+  <string name="covidsafe_app_title">CovidSafeBE</string>
+  <string name="covidsafe_app_subtitle">Klik hier om de CovidSafe-app te starten</string>
+  <string name="covidsafe_app_button">Begin</string>
 </resources>

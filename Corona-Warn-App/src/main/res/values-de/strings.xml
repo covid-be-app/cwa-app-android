@@ -701,4 +701,9 @@
     <string name="covicode_dialog_negative">Stornieren</string>
     <string name="covicode_error">Ungültiger Covi-Code</string>
     <string name="submission_test_result_negative_warning">Dieser Bildschirm kann nicht als COVID-Zertifikat verwendet werden</string>
+    <string name="covidsafe_card_title">Impfstoffzertifikat</string>
+    <string name="covidsafe_title">Mein Impfausweis</string>
+    <string name="covidsafe_app_title">CovidSafeBE</string>
+    <string name="covidsafe_app_subtitle">Klicken Sie hier, um die CovidSafe-App zu starten</string>
+    <string name="covidsafe_app_button">Start</string>
 </resources>
