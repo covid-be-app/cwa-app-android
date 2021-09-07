@@ -700,4 +700,9 @@
     <string name="covicode_dialog_negative">Annuler</string>
     <string name="covicode_error">Mauvais Covi-Code</string>
     <string name="submission_test_result_negative_warning">Cet écran ne peut pas être utilisé comme certificat COVID</string>
+    <string name="covidsafe_card_title">Certificat vaccinal</string>
+    <string name="covidsafe_title">Mon certificat vaccinal</string>
+    <string name="covidsafe_app_title">CovidSafeBE</string>
+    <string name="covidsafe_app_subtitle">Cliquez ici pour démarrer CovidSafe app</string>
+    <string name="covidsafe_app_button">Démarrer</string>
 </resources>

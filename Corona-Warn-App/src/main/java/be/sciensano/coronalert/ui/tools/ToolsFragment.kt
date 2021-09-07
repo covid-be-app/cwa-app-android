@@ -81,7 +81,7 @@ class ToolsFragment : Fragment() {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://www.google.com/maps/d/u/0/viewer?mid=1GFrpKwhDE97_pplhtikcfDxakEhohXst&ll=50.48641435902384%2C4.395339249999988&z=9")
+                    Uri.parse("https://testcovid.doclr.be/#!/saps")
                 )
             )
         }
