@@ -175,6 +175,11 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
         val exposureConfiguration = executeRetrieveRiskScoreParams()
 
         /****************************************************
+         * Fetch Date Update
+         ****************************************************/
+        executeFetchDateUpdate(currentDate)
+
+        /****************************************************
          * FILES FROM WEB REQUESTS
          ****************************************************/
         val keyFiles = executeFetchKeyFilesFromServer(currentDate)
@@ -187,10 +192,7 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
         } else {
             Timber.w("no key files, skipping submission to internal API.")
         }
-        /****************************************************
-         * Fetch Date Update
-         ****************************************************/
-        executeFetchDateUpdate(currentDate)
+
         /****************************************************
          * CLOSE TRANSACTION
          ****************************************************/
@@ -200,9 +202,6 @@ object RetrieveDiagnosisKeysTransaction : Transaction() {
     override suspend fun rollback() {
         super.rollback()
         try {
-            if (SETUP.isInStateStack()) {
-                rollbackSetup()
-            }
             if (TOKEN.isInStateStack()) {
                 rollbackToken()
             }
