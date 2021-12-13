@@ -58,8 +58,6 @@ class CoronaWarnApplication : Application(), LifecycleObserver,
         super.onCreate()
         instance = this
 
-        WebViewDatabase.getInstance(this).clearFormData()
-
         val configuration = Configuration.Builder()
             .setMinimumLoggingLevel(android.util.Log.DEBUG)
             .build()

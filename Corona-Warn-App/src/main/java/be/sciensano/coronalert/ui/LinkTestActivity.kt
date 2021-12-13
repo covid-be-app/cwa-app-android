@@ -10,7 +10,6 @@ import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.webkit.WebViewDatabase
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import be.sciensano.coronalert.util.DateUtil
@@ -170,8 +169,4 @@ class LinkTestActivity : AppCompatActivity() {
         }
     }
 
-    override fun onDestroy() {
-        WebViewDatabase.getInstance(this).clearFormData()
-        super.onDestroy()
-    }
 }
