@@ -238,9 +238,10 @@ fun formatRiskActiveTracingDaysInRetentionPeriodLogged(
     activeTracingDaysInRetentionPeriod: Long
 ): String {
     val appContext = CoronaWarnApplication.getAppContext()
-        return appContext.getString(
-                R.string.risk_details_information_body_period_logged_assessment)
-            .format(activeTracingDaysInRetentionPeriod)
+    return appContext.getString(
+        R.string.risk_details_information_body_period_logged_assessment
+    )
+        .format(activeTracingDaysInRetentionPeriod)
 }
 
 fun formatRelativeDateTimeString(appContext: Context, date: Date): CharSequence? =
@@ -616,7 +617,8 @@ fun formatVisibilityBehaviorIncreasedRisk(riskLevelScore: Int?): Int =
 fun formatVisibilityBehaviorPeriodLogged(riskLevelScore: Int?): Int =
     formatVisibility(
         riskLevelScore == RiskLevelConstants.INCREASED_RISK ||
-                riskLevelScore == RiskLevelConstants.LOW_LEVEL_RISK)
+                riskLevelScore == RiskLevelConstants.LOW_LEVEL_RISK
+    )
 
 /**
  * Formats the risk details suggested behavior icon color depending on risk level
@@ -672,4 +674,10 @@ fun formatButtonUpdateText(
         val hmsCooldownTime = time.millisecondsToHMS()
         appContext.getString(R.string.risk_card_button_cooldown).format(hmsCooldownTime)
     }
+}
+
+fun formatVisibilityButtonTest(riskLevelScore: Int?): Int {
+    return formatVisibility(
+        riskLevelScore == RiskLevelConstants.INCREASED_RISK
+    )
 }
