@@ -1,5 +1,7 @@
 package de.rki.coronawarnapp.ui.riskdetails
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -138,6 +140,14 @@ class RiskDetailsFragment : Fragment() {
         binding.riskDetailsButtonEnableTracing.setOnClickListener {
             findNavController().doNavigate(
                 RiskDetailsFragmentDirections.actionRiskDetailsFragmentToSettingsTracingFragment()
+            )
+        }
+        binding.riskDetailsRiskCard.riskCardButtonTest.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(requireContext().getString(R.string.risk_card_button_test_link))
+                )
             )
         }
     }

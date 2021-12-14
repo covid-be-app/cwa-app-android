@@ -202,6 +202,18 @@
                 app:tracingViewModel="@{tracingViewModel}" />
 
 
+            <Button
+                android:id="@+id/risk_card_button_test"
+                style="@style/buttonLight"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:text="@string/risk_card_button_test"
+                android:visibility="@{FormatterRiskHelper.formatVisibilityButtonTest(tracingViewModel.riskLevel)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/risk_card_row_time_fetched" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/risk_card_next_update"
                 android:layout_width="@dimen/match_constraint"
@@ -210,7 +222,7 @@
                 android:visibility="@{FormatterHelper.formatVisibilityText(FormatterRiskHelper.formatNextUpdate(tracingViewModel.riskLevel, settingsViewModel.isBackgroundJobEnabled()))}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/risk_card_row_time_fetched">
+                app:layout_constraintTop_toBottomOf="@+id/risk_card_button_test">
 
                 <include
                     android:id="@+id/risk_card_next_update_divider"
