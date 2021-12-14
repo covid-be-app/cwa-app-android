@@ -9,7 +9,6 @@ import android.content.pm.ActivityInfo
 import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.os.PowerManager
-import android.webkit.WebViewDatabase
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
