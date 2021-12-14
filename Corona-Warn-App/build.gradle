@@ -33,8 +33,8 @@ android {
         applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 105
-        versionName "1.14.0"
+        versionCode 106
+        versionName "1.15.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
