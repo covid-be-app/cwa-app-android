@@ -39,10 +39,8 @@ class LauncherActivity : AppCompatActivity() {
     fun navigateToActivities() {
         val uri: Uri? = intent?.data
 
-        if (uri != null) {
-            if (isPcrValid(uri)) {
-                startMainActivityWithTestActivivation(uri.toString())
-            }
+        if (uri != null && isPcrValid(uri)) {
+            startMainActivityWithTestActivivation(uri.toString())
         } else {
             when {
                 LocalData.numberOfSuccessfulSubmissions() > 0 -> {

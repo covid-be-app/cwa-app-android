@@ -26,15 +26,15 @@ apply plugin: 'jacoco'
 
 android {
     ndkVersion "21.2.6472646"
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId 'be.sciensano.coronalert'
         minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 104
-        versionName "1.13.1"
+        targetSdkVersion 30
+        versionCode 106
+        versionName "1.15.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

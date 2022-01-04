@@ -3,6 +3,7 @@ package de.rki.coronawarnapp.ui.main
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -114,8 +115,10 @@ class MainFragment : Fragment() {
             it?.let { news ->
                 it.structure.news.explanation.getOrNull(0)?.let {
                     binding.news.newsCard.visibility = View.VISIBLE
-                    binding.news.newsCardTextTitle.text = DynamicNews.getText(it.title, news.texts, Locale.getDefault().language)
-                    binding.news.newsCardTextBody.text = DynamicNews.getText(it.text, news.texts, Locale.getDefault().language)
+                    binding.news.newsCardTextTitle.text =
+                        DynamicNews.getText(it.title, news.texts, Locale.getDefault().language)
+                    binding.news.newsCardTextBody.text =
+                        DynamicNews.getText(it.text, news.texts, Locale.getDefault().language)
                 }
             }
 
@@ -285,8 +288,10 @@ class MainFragment : Fragment() {
 
                 binding.vaccinationInfo.vaccinationUpdateText.text =
                     getString(R.string.statistics_last_updated, lastUpdatedDate)
-                binding.vaccinationInfo.vaccination1Dose.text = DecimalFormat("###,###").format(it.atLeastPartiallyVaccinated).replace(',', ' ')
-                binding.vaccinationInfo.vaccinationVaccinated.text = DecimalFormat("###,###").format(it.fullyVaccinated).replace(',', ' ')
+                binding.vaccinationInfo.vaccination1Dose.text =
+                    DecimalFormat("###,###").format(it.atLeastPartiallyVaccinated).replace(',', ' ')
+                binding.vaccinationInfo.vaccinationVaccinated.text =
+                    DecimalFormat("###,###").format(it.fullyVaccinated).replace(',', ' ')
             } else {
                 binding.statistics.statisticsCard.visibility = View.GONE
                 binding.vaccinationInfo.vaccinationCard.visibility = View.GONE
@@ -347,6 +352,16 @@ class MainFragment : Fragment() {
                 requireContext().getString(R.string.main_about_link)
             )
         }
+
+        binding.mainRisk.riskCardButtonTest.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(requireContext().getString(R.string.risk_card_button_test_link))
+                )
+            )
+        }
+
         binding.mainHeaderShare.buttonIcon.setOnClickListener {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToMainSharingFragment())
         }
@@ -363,6 +378,9 @@ class MainFragment : Fragment() {
         }
         binding.covicode.covicodeCardButton.setOnClickListener {
             findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToCovicodeFragment())
+        }
+        binding.covidsafe.covidsafeCard.setOnClickListener {
+            findNavController().doNavigate(MainFragmentDirections.actionMainFragmentToCovidsafeFragment())
         }
     }
 

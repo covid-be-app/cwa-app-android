@@ -725,4 +725,11 @@
     <string name="covicode_dialog_negative">Cancel</string>
     <string name="covicode_error">Invalid Covi-Code</string>
     <string name="submission_test_result_negative_warning">This screen cannot be used as a COVID certificate</string>
+    <string name="covidsafe_card_title">Vaccine certificate</string>
+    <string name="covidsafe_title">My vaccine certificate</string>
+    <string name="covidsafe_app_title">CovidSafeBE</string>
+    <string name="covidsafe_app_subtitle">Click here to start the CovidSafe app</string>
+    <string name="covidsafe_app_button">Start</string>
+    <string name="risk_card_button_test">Request a COVID test</string>
+    <string name="risk_card_button_test_link">https://www.myhealth.belgium.be/#/app/covid-19/prescriptions/request/corona-alert</string>
 </resources>

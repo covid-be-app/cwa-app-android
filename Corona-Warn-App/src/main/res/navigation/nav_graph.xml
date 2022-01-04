@@ -53,6 +53,9 @@
         <action
             android:id="@+id/action_mainFragment_to_covicodeFragment"
             app:destination="@id/covicodeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_covidsafeFragment"
+            app:destination="@id/covidsafeFragment" />
     </fragment>
 
     <fragment
@@ -402,6 +405,12 @@
             app:destination="@id/submissionDoneFragment"
             app:popUpTo="@id/submissionDoneFragment"
             app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/covidsafeFragment"
+        android:name="be.sciensano.coronalert.ui.CovidSafeFragment"
+        android:label="CovidSafeFragment" >
     </fragment>
 
 </navigation>
