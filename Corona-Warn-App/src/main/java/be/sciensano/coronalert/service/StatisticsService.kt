@@ -37,7 +37,8 @@ object StatisticsService {
             val response = WebRequestBuilder.getInstance().getStatistics()
 
             val statistics =
-                Statistics(response.averageInfected,
+                Statistics(
+                    response.averageInfected,
                     response.averageInfectedChangePercentage,
                     response.averageHospitalised,
                     response.averageHospitalisedChangePercentage,
@@ -45,9 +46,11 @@ object StatisticsService {
                     response.averageDeceasedChangePercentage,
                     response.atLeastPartiallyVaccinated,
                     response.fullyVaccinated,
+                    response.boosterVaccinated,
                     DateUtil.parseServerDate(response.startDate).toDate().time,
                     DateUtil.parseServerDate(response.endDate).toDate().time,
-                    System.currentTimeMillis())
+                    System.currentTimeMillis()
+                )
 
             val json = gson.toJson(statistics)
             val fileOutputStream = FileOutputStream(file)
@@ -80,7 +83,7 @@ object StatisticsService {
 
             if (file.exists()) {
                 readStatisticsFile(file)
-            }  else {
+            } else {
                 null
             }
         }

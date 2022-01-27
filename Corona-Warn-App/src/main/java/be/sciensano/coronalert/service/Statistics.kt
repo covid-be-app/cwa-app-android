@@ -11,6 +11,7 @@ data class Statistics(
     val averageDeceasedChangePercentage: Int,
     val atLeastPartiallyVaccinated: Long,
     val fullyVaccinated: Long,
+    val boosterVaccinated: Long,
     val startDate: Long,
     val endDate: Long,
     val lastUpdatedDate: Long,
