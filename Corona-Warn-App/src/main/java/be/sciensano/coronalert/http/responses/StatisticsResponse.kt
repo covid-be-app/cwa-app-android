@@ -9,6 +9,7 @@ data class StatisticsResponse(
     val averageDeceasedChangePercentage: Int,
     val atLeastPartiallyVaccinated: Long,
     val fullyVaccinated: Long,
+    val boosterVaccinated: Long,
     val startDate: String,
     val endDate: String,
 )

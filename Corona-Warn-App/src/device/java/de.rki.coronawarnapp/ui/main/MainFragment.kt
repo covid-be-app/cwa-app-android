@@ -290,8 +290,10 @@ class MainFragment : Fragment() {
                     getString(R.string.statistics_last_updated, lastUpdatedDate)
                 binding.vaccinationInfo.vaccination1Dose.text =
                     DecimalFormat("###,###").format(it.atLeastPartiallyVaccinated).replace(',', ' ')
-                binding.vaccinationInfo.vaccinationVaccinated.text =
+                binding.vaccinationInfo.vaccination2Dose.text =
                     DecimalFormat("###,###").format(it.fullyVaccinated).replace(',', ' ')
+                binding.vaccinationInfo.vaccination3Dose.text =
+                    DecimalFormat("###,###").format(it.boosterVaccinated).replace(',', ' ')
             } else {
                 binding.statistics.statisticsCard.visibility = View.GONE
                 binding.vaccinationInfo.vaccinationCard.visibility = View.GONE

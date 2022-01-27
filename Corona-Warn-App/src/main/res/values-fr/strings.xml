@@ -683,8 +683,8 @@
     <string name="submission_test_result_warning_others_title">Voulez-vous avertir vos contacts?</string>
     <string name="submission_test_result_warning_others_positive">Oui</string>
     <string name="submission_test_result_warning_others_negative">Non</string>
-    <string name="vaccination_at_least_1_dose">Au moins 1 dose</string>
-    <string name="vaccination_fully_vaccinated">Entièrement vacciné"</string>
+    <string name="vaccination_1_dose">1 Dose</string>
+    <string name="vaccination_2_dose">2 Doses</string>
     <string name="vaccination_title">Vaccination</string>
     <string name="covicode_card_title">Je me suis fait tester</string>
     <string name="covicode_subtitle">Aider les autres</string>
@@ -707,5 +707,5 @@
     <string name="covidsafe_app_button">Démarrer</string>
     <string name="risk_card_button_test">Demandez un test Covid</string>
     <string name="risk_card_button_test_link">https://sat.info-coronavirus.be/fr/coronalert</string>
-
+    <string name="vaccination_3_dose">3 Doses</string>
 </resources>
